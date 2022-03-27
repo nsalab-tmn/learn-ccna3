@@ -1,9 +1,9 @@
 {
-    "title": "Введение",
+    "title": "Особенности и характеристики OSPF",
     "materialType": "lecture",
     "description": "",
     "difficulty": 3,
-    "duration": "PT0H5M",
+    "duration": "PT0H15M",
     "tags": ["Network", "Cisco"],
     "skills": {},
     "testProjectPath": "./lecture.md",
