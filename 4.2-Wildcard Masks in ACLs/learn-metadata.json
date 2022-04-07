@@ -1,0 +1,11 @@
+{
+    "title": "Шаблонные маски в списках контроля доступа",
+    "materialType": "lecture",
+    "description": "",
+    "difficulty": 3,
+    "duration": "PT0H7M",
+    "tags": ["Network", "Cisco"],
+    "skills": {},
+    "testProjectPath": "./lecture.md",
+    "assetsPath": "assets"
+}
