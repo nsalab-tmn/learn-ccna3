@@ -9,6 +9,7 @@
 Как и стандартные списки ACL, расширенные списки ACL могут быть созданы как:
 
 **Команда глобальной конфигурации расширенного списка ACL** - Created using the **access-list** access-list-number .
+
 **Именованный расширенный список доступа** - Created using the **ip access-list extended** access-list-name.
 
 <!-- 5.4.2 -->
@@ -28,30 +29,39 @@ Router(config)# **access-list** access-list-number {**deny | permit | remark** t
 | **Параметр** | ** 	Описание** |
 | --- | --- |
 | *access-list-number* |     Это десятичное число ACL.
+
 Расширенный диапазон номеров ACL составляет от 100 до 199 и от 2000 до 2699. |
 | **deny** | Запрещает доступ при совпадении условий. |
 | **permit** | Разрешает доступ при совпадении условий. |
 | **remark** text |     (Необязательно) Добавляет текстовую запись для целей документации.
+
 Длина комментария ограничена 100 символами. |
 | *protocol* |     Имя или номер протокола IP.
 Типичные ключевые слова: **ip, tcp, udpи icmp.**
 Ключевое слово **ip** соответствует всем протоколам IP. |
 | *source* |     Определяет исходный адрес сети или узла для фильтрации.
+
 Используйте ключевое слово **any** для определения всех сетей.
+
 Используйте ключевое слово **host** ip-address или просто введите ip-адрес (без ключевого слова **host** ) для идентификации конкретного IP-адреса. |
 | *source-wildcard* | (Опционально). 32-битная шаблонная маска должна применяться к адресу источника. |
 | *destination* |     Это определяет сеть назначения или адрес узла для фильтрации.
+
 Используйте ключевое слово **any** для определения всех сетей.
+
 Используйте **ключевое слово** *ip-address* узла или *ip-address*.  |
 | *destination-wildcard* | (Опционально). 32-битная шаблонная маска должна применяться к адресу получателя. |
 | *operator* |     (Опционально). Сравнивает порты источника и назначения.
 Возможные операнды включают **It** (меньше чем), **gt** (больше чем), **eq** (равно), **neq** (не равно) и **диапазон**(включая диапазон). |
 | *port* | (Опционально). Десятичный номер или имя порта TCP или UDP. |
 | **established** |     (Необязательно) Только для протокола TCP.
+
 Это функция брандмауэра 1-го поколения. |
 | **log** |     (Необязательно) Это ключевое слово генерирует и отправляет информационное сообщение всякий раз, когда ACE совпадает с пакетом.
+
 Это сообщение включает номер ACL, совпадающее условие (т. е. разрешено или запрещено), адрес источника и количество пакетов.
 Сообщение генерируется для первого совпадающего пакета.
+
 Это ключевое слово должно быть реализовано только для устранения неполадок или обеспечения безопасности сети. |
 
 Команда применения расширенного списка ACL IPv4 к интерфейсу аналогична команде, используемой для стандартных списков ACL IPv4.
@@ -208,10 +218,10 @@ R1(config-if)# ip access-group 120 out
 R1(config-if)# end
 R1# show access-lists 
 Extended IP access list 110
-10 permit tcp 192.168.10.0 0.0.0.255 any eq www
-20 permit tcp 192.168.10.0 0.0.0.255 any eq 443 (657 matches)
+    10 permit tcp 192.168.10.0 0.0.0.255 any eq www
+    20 permit tcp 192.168.10.0 0.0.0.255 any eq 443 (657 matches)
 Extended IP access list 120
-10 permit tcp any 192.168.10.0 0.0.0.255 established (1166 matches)
+    10 permit tcp any 192.168.10.0 0.0.0.255 established (1166 matches)
 R1#
 ```
 
@@ -281,16 +291,206 @@ R1#
 
 <!-- 5.4.9 -->
 ## Редактирование расширенных списков контроля доступа
+Как и стандартные списки ACL, расширенный список ACL можно редактировать с помощью текстового редактора, когда требуется много изменений. В противном случае, если редактирование применяется к одному или двум ACE, можно использовать порядковые номера.
 
+Например, предположим, что вы только что ввели списки ACL SURFING и BROWSING и хотите проверить их конфигурацию с помощью команды **show access-lists.**
+
+```
+R1# show access-lists 
+Extended IP access list BROWSING
+    10 permit tcp any 192.168.10.0 0.0.0.255 established 
+Extended IP access list SURFING
+    10 permit tcp 19.168.10.0 0.0.0.255 any eq www
+    20 permit tcp 192.168.10.0 0.0.0.255 any eq 443 
+R1#
+```
+
+Обратите внимание, что номер последовательности ACE 10 в SURFING ACL имеет неверный IP-адрес сети источника.
+
+Чтобы исправить эту ошибку, используя порядковые номера, исходная инструкция удаляется с помощью команды **no** *sequence*\ #_, а исправленная инструкция добавляется заменяющая исходную инструкцию.
+
+```
+R1# configure terminal
+R1(config)# ip access-list extended SURFING 
+R1(config-ext-nacl)# no 10
+R1(config-ext-nacl)# 10 permit tcp 192.168.10.0 0.0.0.255 any eq www
+R1(config-ext-nacl)# end
+```
+
+Выходные данные проверяют изменение конфигурации с помощью команды **show access-lists.**
+
+```
+R1# show access-lists 
+Extended IP access list BROWSING
+    10 permit tcp any 192.168.10.0 0.0.0.255 established 
+Extended IP access list SURFING
+    10 permit tcp 192.168.10.0 0.0.0.255 any eq www 
+    20 permit tcp 192.168.10.0 0.0.0.255 any eq 443
+R1#
+```
 <!-- 5.4.10 -->
 ## Пример другого именованного расширенного списка ACL IPv4
+На рисунке показан другой сценарий реализации именованного расширенного списка ACL IPv4. Предположим, что PC1 во внутренней частной сети разрешен трафик FTP, SSH, Telnet, DNS, HTTP и HTTPS. Тем не менее, всем другим пользователям во внутренней частной сети должен быть отказано в доступе.
 
+Будут созданы два именованных расширенных списка ACL:
+
+**PERMIT-PC1** - Это позволит только PC1 TCP доступ к Интернету и запретить все остальные хосты в частной сети.
+**REPLY-PC1** - Это позволит только возвращать TCP-трафик PC1 неявно отклонять весь остальной трафик.
+
+![](./assets/5.4.10.PNG)
+
+В примере показана конфигурация входящего ACL PERMIT-PC1 и исходящего REPLY-PC1.
+
+**PERMIT-PC1** ACL разрешает PC1 (т. е. 192.168.10.10) TCP-доступ к FTP (т. е. к портам 20 и 21), SSH (22), Telnet (23), DNS (53), HTTP (80) и HTTPS (443) трафика.
+
+**REPLY-PC1** ACL разрешает обратный трафик на PC1.
+
+Существует множество факторов, которые необходимо учитывать при применении ACL, включая:
+
+    Устройство для его применения
+    Интерфейс для его применения
+    Направление применения
+
+Необходимо тщательно рассмотреть, чтобы избежать нежелательных результатов фильтрации. ACL PERMIT-PC1 применяется во входящем направлении, а ACL REPLY-PC1 применяется в исходящем направлении на интерфейсе R1 G0/0/0.
+
+```
+R1(config)# ip access-list extended PERMIT-PC1
+R1(config-ext-nacl)# Remark Permit PC1 TCP access to internet 
+R1(config-ext-nacl)# permit tcp host 192.168.10.10 any eq 20
+R1(config-ext-nacl)# permit tcp host 192.168.10.10 any eq 21
+R1(config-ext-nacl)# permit tcp host 192.168.10.10 any eq 22
+R1(config-ext-nacl)# permit tcp host 192.168.10.10 any eq 23
+R1(config-ext-nacl)# permit udp host 192.168.10.10 any eq 53
+R1(config-ext-nacl)# permit tcp host 192.168.10.10 any eq 53
+R1(config-ext-nacl)# permit tcp host 192.168.10.10 any eq 80
+R1(config-ext-nacl)# permit tcp host 192.168.10.10 any eq 443
+R1(config-ext-nacl)# deny ip 192.168.10.0 0.0.0.255 any 
+R1(config-ext-nacl)# exit
+R1(config)# 
+R1(config)# ip access-list extended REPLY-PC1
+R1(config-ext-nacl)# Remark Only permit returning traffic to PC1 
+R1(config-ext-nacl)# permit tcp any host 192.168.10.10 established
+R1(config-ext-nacl)# exit
+R1(config)# interface g0/0/0
+R1(config-if)# ip access-group PERMIT-PC1 in
+R1(config-if)# ip access-group REPLY-PC1 out
+R1(config-if)# end
+R1#
+```
 <!-- 5.4.11 -->
 ## Проверка расширенных списков контроля доступа
+После того как список контроля доступа настроен и применен на интерфейсе, выполните проверку конфигурации при помощи команд Cisco IOS **show**.
+
+1. **show ip interface**
+
+Команда **show ip interface** используется для проверки списка контроля доступа на интерфейсе и направления, к которому был привязан список.
+
+Команда генерирует довольно много выходных данных, но обратите внимание, как заглавные имена ACL выделяются в выходных данных.
+
+Для уменьшения выходных данных команды используйте методы фильтрации, как показано во второй команде.
+
+```
+R1# show ip interface g0/0/0
+GigabitEthernet0/0/0 is up, line protocol is up (connected)
+  Internet address is 192.168.10.1/24
+  Broadcast address is 255.255.255.255
+  Address determined by setup command
+  MTU is 1500 bytes
+  Helper address is not set
+  Directed broadcast forwarding is disabled
+  Outgoing access list is REPLY-PC1
+  Inbound  access list is PERMIT-PC1
+  Proxy ARP is enabled
+  Security level is default
+  Split horizon is enabled
+  ICMP redirects are always sent
+  ICMP unreachables are always sent
+  ICMP mask replies are never sent
+  IP fast switching is disabled
+  IP fast switching on the same interface is disabled
+  IP Flow switching is disabled
+  IP Fast switching turbo vector
+  IP multicast fast switching is disabled
+  IP multicast distributed fast switching is disabled
+  Router Discovery is disabled
+R1#
+R1# show ip interface g0/0/0 | include access list
+Outgoing access list is REPLY-PC1
+Inbound access list is PERMIT-PC1
+R1#
+```
+
+2. **show access-lists**
+
+Команда **show access-lists** может использоваться для подтверждения того, что списки ACL работают должным образом. Команда отображает счетчики статистики, которые увеличиваются при сопоставлении ACE.
+
+**Примечание:** Трафик должен быть создан для проверки работы ACL.
+
+На рисунке верхний пример показывает команду Cisco IOS для отображения содержимого всех списков контроля доступа.
+
+Обратите внимание, как IOS отображает ключевое слово, даже если были настроены номера портов.
+
+В отличие от стандартных списков контроля доступа, расширенные списки контроля доступа не реализуют ту же внутреннюю логику и функцию расстановки. Выходные данные и порядковые номера, отображаемые в выходных данных команды **show access-lists**, демонстрируют порядок, в котором были введены записи. Записи узла не перечисляются автоматически перед записями диапазона.
+
+```
+R1# show access-lists 
+Extended IP access list PERMIT-PC1
+    10 permit tcp host 192.168.10.10 any eq ftp-data
+    20 permit tcp host 192.168.10.10 any eq ftp
+    30 permit tcp host 192.168.10.10 any eq 22
+    40 permit tcp host 192.168.10.10 any eq telnet
+    50 permit udp host 192.168.10.10 any eq domain
+    60 permit tcp host 192.168.10.10 any eq domain
+    70 permit tcp host 192.168.10.10 any eq www
+    80 permit tcp host 192.168.10.10 any eq 443
+    90 deny ip 192.168.10.0 0.0.0.255 any
+Extended IP access list REPLY-PC1
+    10 permit tcp any host 192.168.10.10 established
+R1#
+```
+
+3. **show running-config**
+
+Команда **show running-config** может использоваться для проверки настроенных параметров. Команда также отображает настроенные замечания.
+
+Команда может быть отфильтрована для отображения только соответствующей информации, как показано ниже.
+
+```
+R1# show running-config | begin ip access-list 
+ip access-list extended PERMIT-PC1
+Remark Permit PC1 TCP access to internet
+permit tcp host 192.168.10.10 any eq 20
+permit tcp host 192.168.10.10 any eq ftp 
+permit tcp host 192.168.10.10 any eq 22 
+permit tcp host 192.168.10.10 any eq telnet
+permit tcp host 192.168.10.10 any eq domain
+permit tcp host 192.168.10.10 any eq www
+permit tcp host 192.168.10.10 any eq 443 
+deny ip 192.168.10.0 0.0.0.255 any
+ip access-list extended REPLY-PC1 
+Remark Only permit returning traffic to PC1
+permit tcp any host 192.168.10.10 established 
+!
+```
 
 <!-- 5.4.12 -->
 ## Packet Tracer. Настройка расширенных списков контроля доступа. Сценарий 1
+В рамках данного упражнения Packet Tracer необходимо решить следующие задачи.
 
+Part 1: Настройка, применение и проверка расширенного нумерованного ACL-списка
+Part 2: Настройка, применение и проверка расширенного именованного ACL-списка
+
+[Настройка расширенных списков контроля доступа](./assets/5.4.12-packet-tracer---configure-extended-ipv4-acls---scenario-1_ru-RU.pdf)
+
+[Скачать файл для Packet Tracer](./assets/5.4.12-packet-tracer---configure-extended-ipv4-acls---scenario-1_ru-RU.pka)
 
 <!-- 5.4.13 -->
 ## Packet Tracer. Настройка расширенных списков контроля доступа. Сценарий 2
+В рамках данного упражнения Packet Tracer необходимо решить следующие задачи.
+
+Part 1: Настройка именованного расширенного списка контроля доступа
+Part 2: Применение и проверка расширенного IPv4 ACL
+
+[Настройка расширенных списков контроля доступа](./assets/5.4.13-packet-tracer---configure-extended-ipv4-acls---scenario-2_ru-RU.pdf)
+
+[Скачать файл для Packet Tracer](./assets/5.4.13-packet-tracer---configure-extended-ipv4-acls---scenario-2_ru-RU.pka)
