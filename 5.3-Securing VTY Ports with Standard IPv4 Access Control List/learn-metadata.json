@@ -1,0 +1,11 @@
+{
+    "title": "Защита портов VTY с помощью стандартного списка контроля доступа для IPv4",
+    "materialType": "lecture",
+    "description": "",
+    "difficulty": 3,
+    "duration": "PT0H15M",
+    "tags": ["Network", "Cisco"],
+    "skills": {},
+    "testProjectPath": "./lecture.md",
+    "assetsPath": "assets"
+}
