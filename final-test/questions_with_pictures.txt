@@ -1,0 +1,505 @@
+
+
+// question: 581  name: 003
+::003::[html]<p dir\="ltr" style\="text-align\: left;">Посмотрите на изображение. Администратор пытается создать резервную копию текущей текущей текущей конфигурации маршрутизатора на USB-накопитель и вводит команду copy usbflash0\: /R1-config running-config в командной строке маршрутизатора. После удаления USB-накопителя и подключения его к ПК администратор обнаруживает, что запущенная конфигурация не была должным образом зарезервирована в файле конфигурации R1-config. В чем может быть причина?<br></p>{
+	~<p dir\="ltr" style\="text-align\: left;">На USB-накопителе не осталось места.<br></p>
+	~<p dir\="ltr" style\="text-align\: left;">USB-накопитель не распознается маршрутизатором.<br></p>
+	=<p dir\="ltr" style\="text-align\: left;">Команда, используемая администратором, была неправильной.<br></p>
+	~<p dir\="ltr" style\="text-align\: left;">Диск не был должным образом отформатирован с файловой системой FAT16.<br></p>
+	~<p dir\="ltr" style\="text-align\: left;">Файл уже существует на USB-накопителе и не может быть перезаписан.<br></p>
+}
+
+
+// question: 582  name: 004
+::004::[html]<p dir\="ltr" style\="text-align\: left;">Посмотрите на изображение. Пользователь настроил сетевой адаптер на ПК, как показано на рисунке, но обнаруживает, что ПК не может получить доступ к Интернету. В чем может быть причина?<br></p>{
+	~<p dir\="ltr" style\="text-align\: left;">Предпочтительный DNS-адрес неверный.<br></p>
+	~<p dir\="ltr" style\="text-align\: left;">Альтернативный DNS-сервер не должен быть.<br></p>
+	~<p dir\="ltr" style\="text-align\: left;">Настройки не были проверены при выходе.<br></p>
+	=<p dir\="ltr" style\="text-align\: left;">Неверный адрес основного шлюза.<br></p>
+}
+
+
+// question: 583  name: 005
+::005::[html]<p dir\="ltr" style\="text-align\: left;">Посмотрите на изображение. Компания решила, что трафик, инициирующий любую другую существующую или будущую сеть, не может быть передан в сеть исследований и разработок. Кроме того, ни один трафик, исходящий из сети исследований и разработок, не может быть передан в любые другие существующие или будущие сети компании. Сетевой администратор решил, что расширенные списки ACL лучше подходят для этих требований. На основании представленной информации, что будет делать администратор сети?<br></p>{
+	~<p dir\="ltr" style\="text-align\: left;">Только нумерованный ACL будет работать в этой ситуации.<br></p>
+	=<p dir\="ltr" style\="text-align\: left;">Два ACL (по одному в каждом направлении) будут размещены на интерфейсе R2 Gi0/0.<br></p>
+	~<p dir\="ltr" style\="text-align\: left;">Один ACL будет размещен на интерфейсе R1 Gi0/0, а один ACL — на интерфейсе R2 Gi0/0.<br></p>
+	~<p dir\="ltr" style\="text-align\: left;">Один ACL будет помещен на интерфейс R2 Gi0/0, а один ACL — на интерфейс R2 S0/0/0.<br></p>
+}
+
+
+// question: 585  name: 006
+::006::[html]<p dir\="ltr" style\="text-align\: left;">Посмотрите на изображение. Какие две конфигурации будут использоваться для создания и применения стандартного списка доступа на R1, чтобы доступ к внутреннему серверу базы данных разрешен только сетевым устройствам 10.0.70.0/25? (Выберите два варианта.)<br></p>{
+	~%50%<p dir\="ltr" style\="text-align\: left;">R1(config)\# interface GigabitEthernet0/0</p><p dir\="ltr" style\="text-align\: left;">R1(config-if)\# ip access-group 5 out<br></p>
+	~<p dir\="ltr" style\="text-align\: left;">R1(config)\# access-list 5 permit any<br></p>
+	~<p dir\="ltr" style\="text-align\: left;">R1(config)\# access-list 5 permit 10.0.54.0 0.0.1.255<br></p>
+	~%50%<p dir\="ltr" style\="text-align\: left;">R1(config)\# access-list 5 permit 10.0.70.0 0.0.0.127<br></p>
+	~<p dir\="ltr" style\="text-align\: left;">R1(config)\# interface Serial0/0/0</p><p dir\="ltr" style\="text-align\: left;">R1(config-if)\# ip access-group 5 in<br></p>
+}
+
+
+// question: 587  name: 007
+::007::[html]<p dir\="ltr" style\="text-align\: left;">Посмотрите на изображение. Администратор сети настраивает ACL на маршрутизаторе. Какое утверждение описывает результат последней записи в показанной конфигурации?<br></p>{
+	~<p dir\="ltr" style\="text-align\: left;">Допускается SSH-соединение с рабочей станцией с IP 172.16.45.16 к устройству с IP 192.168.25.18.<br></p>
+	=<p dir\="ltr" style\="text-align\: left;">Разрешается SSH-соединение с рабочей станцией с IP 192.168.25.18 к устройству с IP 172.16.45.16.<br></p>
+	~<p dir\="ltr" style\="text-align\: left;">Допускается подключение Telnet от рабочей станции с IP 172.16.45.16 к устройству с IP 192.168.25.18.<br></p>
+	~<p dir\="ltr" style\="text-align\: left;">Допускается подключение Telnet от рабочей станции с IP 192.168.25.18 к устройству с IP 172.16.45.16.<br></p>
+}
+
+
+// question: 590  name: 008
+::008::[html]<p dir\="ltr" style\="text-align\: left;">Посмотрите на изображение. Какие два типа устройств подключены к R1? (Выберите два варианта.)<br></p>{
+	~%50%<p dir\="ltr" style\="text-align\: left;">Маршрутизатор<br></p>
+	~%50%<p dir\="ltr" style\="text-align\: left;">Коммутатор<br></p>
+	~<p dir\="ltr" style\="text-align\: left;">Повторитель<br></p>
+	~<p dir\="ltr" style\="text-align\: left;">Концентратор<br></p>
+	~<p dir\="ltr" style\="text-align\: left;">Исходный маршрут моста<br></p>
+}
+
+
+// question: 594  name: 009
+::009::[html]<p dir\="ltr" style\="text-align\: left;">Посмотрите на изображение. Какие три утверждения описывают результаты процесса выборов в&nbsp; OSPF топологии, показанной на примере? (Выберите три варианта.)<br></p>{
+	~%33.33333%<p dir\="ltr" style\="text-align\: left;">R2 будет выбран как&nbsp; DR.<br></p>
+	~<p dir\="ltr" style\="text-align\: left;">R1 будет выбран как BDR.<br></p>
+	~%33.33333%<p dir\="ltr" style\="text-align\: left;">R3 будет выбран как BDR.<br></p>
+	~%33.33333%<p dir\="ltr" style\="text-align\: left;">Идентификатор маршрутизатора R4 — 172.16.1.1.<br></p>
+	~<p dir\="ltr" style\="text-align\: left;">Приоритет R4 FastEthernet 0/0 равен 128.<br></p>
+	~<p dir\="ltr" style\="text-align\: left;">Идентификатор маршрутизатора R2 является loopback интерфейсом.<br></p>
+}
+
+
+// question: 597  name: 010
+::010::[html]<p dir\="ltr" style\="text-align\: left;">Посмотрите на изображение. С точки зрения R1, маршрутизатор NAT, какой адрес является внутренним глобальным адресом?<br></p>{
+	~<p dir\="ltr" style\="text-align\: left;">192.168.0.1<br></p>
+	~<p dir\="ltr" style\="text-align\: left;">192.168.0.10<br></p>
+	=<p dir\="ltr" style\="text-align\: left;">209.165.200.225<br></p>
+	~209.165.200.254
+}
+
+
+// question: 600  name: 011
+::011::[html]<p dir\="ltr" style\="text-align\: left;">Посмотрите на изображение. Учитывая команды, как показано на рисунке, сколько хостов во внутренней локальной сети выключения R1 может иметь одновременное преобразование NAT на R1?<br></p>{
+	=<p dir\="ltr" style\="text-align\: left;">1</p>
+	~<p dir\="ltr" style\="text-align\: left;">10</p>
+	~<p dir\="ltr" style\="text-align\: left;">244</p>
+	~<p dir\="ltr" style\="text-align\: left;">255</p>
+}
+
+
+// question: 606  name: 013
+::013::[html]<p dir\="ltr" style\="text-align\: left;">Посмотрите на изображение. Администратор сети настроил ACL 9, как показано. Пользователи сети 172.31.1.0 /24 не могут пересылать трафик через маршрутизатор CiscoVille. Какова наиболее вероятная причина сбоя трафика?<br></p>{
+	~<p dir\="ltr" style\="text-align\: left;">Инструкция permit указывает неверную шаблонную маску.<br></p>
+	=<p dir\="ltr" style\="text-align\: left;">Неверная последовательность ACE.<br></p>
+	~<p dir\="ltr" style\="text-align\: left;">Не указано ключевое слово established<br></p>
+	~<p dir\="ltr" style\="text-align\: left;">Номер порта для трафика не идентифицирован с помощью ключевого слова eq.<br></p>
+}
+
+
+// question: 608  name: 014
+::014::[html]<p dir\="ltr" style\="text-align\: left;">Посмотрите на изображение. Сетевой администратор просматривает выходные данные команды show ip nat translations. Какая инструкция правильно описывает преобразование NAT, происходящее на маршрутизаторе RT2?<br></p>{
+	~<p dir\="ltr" style\="text-align\: left;">Трафик от исходного адреса IPv4 192.0.2.88 преобразуется маршрутизатором RT2 для достижения адреса IPv4 назначения 192.168.254.253.<br></p>
+	=<p dir\="ltr" style\="text-align\: left;">Трафик от исходного адреса IPv4 192.168.254.253 преобразуется в 192.0.2.88 с помощью статического NAT.<br></p>
+	~<p dir\="ltr" style\="text-align\: left;">Трафик от исходного адреса IPv4 192.168.2.20 преобразуется маршрутизатором RT2 для достижения адреса IPv4 назначения 192.0.2.254.<br></p>
+	~<p dir\="ltr" style\="text-align\: left;">Трафик с исходного публичного адреса IPv4, который исходит трафик в Интернете, сможет достигать частных внутренних адресов IPv4.<br></p>
+}
+
+
+// question: 618  name: 018
+::018::[html]<p dir\="ltr" style\="text-align\: left;">Посмотрите на изображение. R1 настроен для использования&nbsp; статического NAT. Какой IP-адрес будут использовать интернет-хосты для доступа к PC1?<br></p>{
+	~<p dir\="ltr" style\="text-align\: left;">192.168.0.10<br></p>
+	~<p dir\="ltr" style\="text-align\: left;">192.168.0.1<br></p>
+	=<p dir\="ltr" style\="text-align\: left;">209.165.200.225<br></p>
+	~<p dir\="ltr" style\="text-align\: left;">209.165.201.1<br></p>
+}
+
+
+
+// question: 622  name: 020
+::020::[html]<p dir\="ltr" style\="text-align\: left;">Посмотрите на изображение. Какой из трех отображаемых образов Cisco IOS будет загружен в ОЗУ?<br></p>{
+	~<p dir\="ltr" style\="text-align\: left;">Маршрутизатор выбирает образ в зависимости от значения регистра конфигурации.<br></p>
+	~<p dir\="ltr" style\="text-align\: left;">Маршрутизатор выбирает третий образ Cisco IOS, так как это самый последний образ IOS.<br></p>
+	~<p dir\="ltr" style\="text-align\: left;">Маршрутизатор выбирает второй образ Cisco IOS, так как это самый маленький образ IOS.<br></p>
+	=<p dir\="ltr" style\="text-align\: left;">Маршрутизатор выбирает образ в зависимости от команды boot system в конфигурации.<br></p>
+	~<p dir\="ltr" style\="text-align\: left;">Маршрутизатор выбирает третий образ Cisco IOS, поскольку он содержит образ advipservicesk9.<br></p>
+}
+
+
+
+// question: 635  name: 022
+::022::[html]<p dir\="ltr" style\="text-align\: left;">Посмотрите на изображение. Почему маршрутизаторы R1 и R2 не могут установить смежность OSPF?<br></p>{
+	~<p dir\="ltr" style\="text-align\: left;">Значения идентификатора маршрутизатора не совпадают в обоих маршрутизаторах.<br></p>
+	=<p dir\="ltr" style\="text-align\: left;">Последовательные интерфейсы находятся в разных областях.<br></p>
+	~<p dir\="ltr" style\="text-align\: left;">Номера процессов не одинаковы в обоих маршрутизаторах.<br></p>
+	~<p dir\="ltr" style\="text-align\: left;">Магистральный маршрутизатор не может установить смежность с маршрутизатором ABR.<br></p>
+}
+
+
+
+// question: 640  name: 025
+::025::[html]<p dir\="ltr" style\="text-align\: left;">Посмотрите на изображение. Администратор настроил стандартный список ACL на R1 и применил его к интерфейсу serial 0/0/0 в исходящем направлении. Что происходит с трафиком, оставляющим интерфейс serial 0/0/0, который не соответствует настроенным заявлениям ACL?<br></p>{
+	~<p dir\="ltr" style\="text-align\: left;">Результирующее действие определяется IP-адресом назначения.<br></p>
+	~<p dir\="ltr" style\="text-align\: left;">Результирующее действие определяется IP-адресом назначения и номером порта.<br></p>
+	~<p dir\="ltr" style\="text-align\: left;">Проверяется IP-адрес источника, и, если совпадение не найдено, трафик направляется через интерфейс serial 0/0/1.<br></p>
+	=<p dir\="ltr" style\="text-align\: left;">Трафик отбрасывается.<br></p>
+}
+
+
+// question: 641  name: 026
+::026::[html]<p dir\="ltr" style\="text-align\: left;">Посмотрите на изображение. Администратор настраивает следующий список ACL для предотвращения доступа устройств в подсети 192.168.1.0 к серверу в 10.1.1.5\:&nbsp;</p><p dir\="ltr" style\="text-align\: left;">access-list 100 deny ip 192.168.1.0 0.0.0.255 host 10.1.1.5&nbsp;</p><p dir\="ltr" style\="text-align\: left;">access-list 100 permit ip any any</p><p dir\="ltr" style\="text-align\: left;">Где администратор должен разместить этот список ACL для наиболее эффективного использования сетевых ресурсов?<br></p>{
+	=<p dir\="ltr" style\="text-align\: left;">входящий на маршрутизаторе A Fa0/0<br></p>
+	~<p dir\="ltr" style\="text-align\: left;">исходящий на маршрутизаторе A Fa0/1<br></p>
+	~<p dir\="ltr" style\="text-align\: left;">входящий на маршрутизаторе B Fa0/1<br></p>
+	~<p dir\="ltr" style\="text-align\: left;">исходящий на маршрутизаторе B Fa0/0<br></p>
+}
+
+
+
+
+
+
+// question: 644  name: 029
+::029::[html]<p dir\="ltr" style\="text-align\: left;">Посмотрите на изображение. Сначала администратор настроил расширенный список ACL, как показано в выходных данных команды show access-lists . Затем администратор отредактировал этот список доступа, выполнив следующие команды.&nbsp;&nbsp;</p><p dir\="ltr" style\="text-align\: left;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Router(config)\# ip access-list extended 101&nbsp;</p><p dir\="ltr" style\="text-align\: left;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Router(config-ext-nacl)\# no 20</p><p dir\="ltr" style\="text-align\: left;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Router(config-ext-nacl)\# 5 permit tcp any any eq 22</p><p dir\="ltr" style\="text-align\: left;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Router(config-ext-nacl)\# 20 deny udp any any</p><p dir\="ltr" style\="text-align\: left;">&nbsp;Which two conclusions can be drawn from this new configuration?​ (Выберите два варианта.)<br></p>{
+	~%50%<p dir\="ltr" style\="text-align\: left;">Пакеты Ping будут разрешены<br></p>
+	~<p dir\="ltr" style\="text-align\: left;">Пакеты Telnet будут разрешены.<br></p>
+	~<p dir\="ltr" style\="text-align\: left;">Все TCP и UDP пакеты будут отклонены.<br></p>
+	~%50%<p dir\="ltr" style\="text-align\: left;">Пакеты SSH будут разрешены.<br></p>
+	~<p dir\="ltr" style\="text-align\: left;">TFTP-пакеты будут разрешены.<br></p>
+}
+
+
+// question: 645  name: 030
+::030::[html]<p dir\="ltr" style\="text-align\: left;">Посмотрите на изображение. Преобразование NAT сконфигурировано на RT1 и RT2. ПК посылает запрос на веб-сервер. Какой IPv4-адрес является IP-адресом источника в пакете между RT2 и веб-сервером?<br></p>{
+	~<p dir\="ltr" style\="text-align\: left;">192.0.2.2<br></p>
+	~<p dir\="ltr" style\="text-align\: left;">172.16.1.10<br></p>
+	~<p dir\="ltr" style\="text-align\: left;">203.0.113.10<br></p>
+	~<p dir\="ltr" style\="text-align\: left;">172.16.1.254<br></p>
+	~<p dir\="ltr" style\="text-align\: left;">192.168.1.5<br></p>
+	=<p dir\="ltr" style\="text-align\: left;">209.165.200.245<br></p>
+}
+
+
+
+
+
+
+// question: 650  name: 033
+::033::[html]<p dir\="ltr" style\="text-align\: left;">Посмотрите на изображение. Инженер по сети настраивает ACL, предотвращающий доступ к веб-серверу HQ по протоколу Telnet и HTTP для гостевых пользователей в локальной сети филиала. Адрес веб-сервера — 192.168.1.10, и всем гостевым пользователям назначаются адреса в сети 192.168.10.0/24. После внедрения ACL никто не может получить доступ ни к одному из серверов HQ. В чем может быть причина?<br></p>{
+	~<p dir\="ltr" style\="text-align\: left;">Входящие списки ACL должны быть маршрутизированы перед их обработкой.<br></p>
+	=<p dir\="ltr" style\="text-align\: left;">ACL неявно запрещает доступ ко всем серверам.<br></p>
+	~<p dir\="ltr" style\="text-align\: left;">Именованные списки ACL требуют использования номеров портов.<br></p>
+	~<p dir\="ltr" style\="text-align\: left;">ACL применяется к интерфейсу в неправильном направлении.<br></p>
+}
+
+
+// question: 651  name: 034
+::034::[html]<p dir\="ltr" style\="text-align\: left;">Посмотрите на изображение. Если идентификатор маршрутизатора не был настроен вручную, что будет использовать маршрутизатор Branch1 в качестве идентификатора маршрутизатора OSPF?<br></p>{
+	~<p dir\="ltr" style\="text-align\: left;">10.0.0.1<br></p>
+	~<p dir\="ltr" style\="text-align\: left;">10.1.0.1<br></p>
+	=<p dir\="ltr" style\="text-align\: left;">192.168.1.100<br></p>
+	~<p dir\="ltr" style\="text-align\: left;">209.165.201.1<br></p>
+}
+
+
+// question: 652  name: 035
+::035::[html]<p dir\="ltr" style\="text-align\: left;">Посмотрите на изображение. Если идентификатор маршрутизатора не был настроен вручную, что маршрутизатор R1 будет использовать в качестве идентификатора маршрутизатора OSPF?<br></p>{
+	~<p dir\="ltr" style\="text-align\: left;">10.0.0.1<br></p>
+	~<p dir\="ltr" style\="text-align\: left;">10.1.0.1<br></p>
+	=<p dir\="ltr" style\="text-align\: left;">192.168.1.100<br></p>
+	~<p dir\="ltr" style\="text-align\: left;">209.165.201.1<br></p>
+}
+
+
+// question: 653  name: 036
+::036::[html]<p dir\="ltr" style\="text-align\: left;">Посмотрите на изображение. Новая политика сети требует наличия списка управления доступом, запрещающего FTP и Telnet доступ к файловому серверу Corp от всех стажеров. Адрес файлового сервера — 172.16.1.15, и всем интернам назначаются адреса в сети 172.18.200.0/24. После внедрения ACL никто в сети Corp не может получить доступ ни к одному из серверов. В чем может быть причина?<br></p>{
+	~<p dir\="ltr" style\="text-align\: left;">Входящие списки ACL должны быть маршрутизированы перед их обработкой.<br></p>
+	=<p dir\="ltr" style\="text-align\: left;">ACL неявно запрещает доступ ко всем серверам.<br></p>
+	~<p dir\="ltr" style\="text-align\: left;">Именованные списки ACL требуют использования номеров портов.<br></p>
+	~<p dir\="ltr" style\="text-align\: left;">ACL применяется к интерфейсу в неправильном направлении.<br></p>
+}
+
+
+// question: 705  name: 039
+::039::[html]<p dir\="ltr" style\="text-align\: left;">Посмотрите на изображение. Если коммутатор перезагружается и все маршрутизаторы должны восстановить смежность OSPF, какие маршрутизаторы станут новыми DR и BDR?<br></p>{
+	=<p dir\="ltr" style\="text-align\: left;">Маршрутизатор R4 станет DR, а маршрутизатор R1 станет BDR.<br></p>
+	~<p dir\="ltr" style\="text-align\: left;">Маршрутизатор R2 станет DR, а маршрутизатор R3 станет BDR.<br></p>
+	~<p dir\="ltr" style\="text-align\: left;">Маршрутизатор R1 станет DR, а маршрутизатор R2 станет BDR.<br></p>
+	~<p dir\="ltr" style\="text-align\: left;">Маршрутизатор R4 станет DR, а маршрутизатор R3 станет BDR.<br></p>
+}
+
+
+// question: 707  name: 040
+::040::[html]<p dir\="ltr" style\="text-align\: left;">Посмотрите на изображение. Если коммутатор перезагружается и все маршрутизаторы должны восстановить смежность OSPF, какие маршрутизаторы станут новыми DR и BDR?<br></p>{
+	=<p dir\="ltr" style\="text-align\: left;">Маршрутизатор R3 станет DR, а маршрутизатор R1 станет BDR.<br></p>
+	~<p dir\="ltr" style\="text-align\: left;">Маршрутизатор R4 станет DR, а маршрутизатор R3 станет BDR.<br></p>
+	~<p dir\="ltr" style\="text-align\: left;">Маршрутизатор R1 станет DR, а маршрутизатор R2 станет BDR.<br></p>
+	~<p dir\="ltr" style\="text-align\: left;">Маршрутизатор R3 станет DR, а маршрутизатор R2 станет BDR.<br></p>
+}
+
+
+// question: 783  name: 041
+::041::[html]<p dir\="ltr" style\="text-align\: left;">Посмотрите на изображение. Какова стоимость OSPF для доступа к маршрутизатору A LAN 172.16.1.0/24 из B?<br></p>{
+	~<p dir\="ltr" style\="text-align\: left;">782<br></p>
+	~<p dir\="ltr" style\="text-align\: left;">74<br></p>
+	~<p dir\="ltr" style\="text-align\: left;">128<br></p>
+	=<p dir\="ltr" style\="text-align\: left;">65<br></p>
+}
+
+
+// question: 784  name: 042
+::042::[html]<p dir\="ltr" style\="text-align\: left;">Посмотрите на изображение. Какова стоимость OSPF для достижения западной локальной сети 172.16.2.0/24 с востока?<br></p>{
+	~<p dir\="ltr" style\="text-align\: left;">782</p>
+	~<p dir\="ltr" style\="text-align\: left;">74</p>
+	~<p dir\="ltr" style\="text-align\: left;">128</p>
+	=<p dir\="ltr" style\="text-align\: left;">65</p>
+}
+
+
+
+
+// question: 869  name: 047
+::047::[html]<p dir\="ltr" style\="text-align\: left;">Посмотрите на изображение. Какая команда сделала администратору проблему при получения этого вывода?<br></p>{
+	~<p dir\="ltr" style\="text-align\: left;">R1\# show ip ospf<br></p>
+	~<p dir\="ltr" style\="text-align\: left;">R1\# show ip ospf neighbor<br></p>
+	=<p dir\="ltr" style\="text-align\: left;">R1\# show ip ospf interface serial0/0/1<br></p>
+	~<p dir\="ltr" style\="text-align\: left;">R1\# show ip route ospf<br></p>
+}
+
+
+// question: 870  name: 048
+::048::[html]<p dir\="ltr" style\="text-align\: left;">Посмотрите на изображение. Основываясь на показанных выходных данных, какой тип NAT был реализован?&nbsp;<br></p>{
+	~<p dir\="ltr" style\="text-align\: left;">динамический NAT с пулом из двух публичных IP-адресов<br></p>
+	=<p dir\="ltr" style\="text-align\: left;">PAT с использованием внешнего интерфейса<br></p>
+	~<p dir\="ltr" style\="text-align\: left;">статический NAT с одной записью<br></p>
+	~<p dir\="ltr" style\="text-align\: left;">статическая NAT с пулом NAT<br></p>
+}
+
+
+
+// question: 873  name: 051
+::051::[html]<p dir\="ltr" style\="text-align\: left;">Посмотрите на изображение. Какие три вывода можно сделать из отображаемого вывода? (Выберите три варианта.)<br></p>{
+	~%33.33333%<p dir\="ltr" style\="text-align\: left;">DR достижим&nbsp; через интерфейс GigabitEthernet 0/0.<br></p>
+	~<p dir\="ltr" style\="text-align\: left;">Этот интерфейс использует приоритет по умолчанию.<br></p>
+	~<p dir\="ltr" style\="text-align\: left;">У BDR три соседа.<br></p>
+	~<p dir\="ltr" style\="text-align\: left;">Идентификатор маршрутизатора DR — 3.3.3.3<br></p>
+	~%33.33333%<p dir\="ltr" style\="text-align\: left;">Значения идентификатора маршрутизатора не являются критериями, используемыми для выбора DR и BDR.<br></p>
+	~%33.33333%<p dir\="ltr" style\="text-align\: left;">Прошло 9 секунд с момента отправки последнего пакета приветствия.<br></p>
+}
+
+
+
+// question: 875  name: 053
+::053::[html]<p dir\="ltr" style\="text-align\: left;">Посмотрите на изображение. Какие два списка ACL позволят только двум сетям LAN, подключенным к R1, получать доступ к сети, подключенной к интерфейсу R2 G0/1? (Выберите два варианта.)<br></p>{
+	~%50%<p dir\="ltr" style\="text-align\: left;">access-list 1 permit 192.168.10.0 0.0.0.127<br></p>
+	~<p dir\="ltr" style\="text-align\: left;">access-list 2 permit host 192.168.10.9</p><p dir\="ltr" style\="text-align\: left;">access-list 2 permit host 192.168.10.69<br></p>
+	~<p dir\="ltr" style\="text-align\: left;">access-list 3 permit 192.168.10.128 0.0.0.63<br></p>
+	~<p dir\="ltr" style\="text-align\: left;">access-list 4 permit 192.168.10.0 0.0.0.255<br></p>
+	~%50%<p dir\="ltr" style\="text-align\: left;">access-list 5 permit 192.168.10.0 0.0.0.63</p><p dir\="ltr" style\="text-align\: left;">access-list 5 permit 192.168.10.64 0.0.0.63<br></p>
+}
+
+
+// question: 876  name: 054
+::054::[html]<p dir\="ltr" style\="text-align\: left;">Посмотрите на изображение. Администратор сети настроил стандартный список ACL, чтобы разрешить доступ к сети, подключенной к интерфейсу R2 G0/1, только двум сетям LAN, подключенным к R1, но не к интерфейсу G0/0. При выполнении рекомендаций, в каком месте должен применяться стандартный список ACL?<br></p>{
+	~<p dir\="ltr" style\="text-align\: left;">R2 G0/1 входящий<br></p>
+	=<p dir\="ltr" style\="text-align\: left;">R2 G0/0 исходящий<br></p>
+	~<p dir\="ltr" style\="text-align\: left;">R1 S0/0/0 исходящее<br></p>
+	~<p dir\="ltr" style\="text-align\: left;">R1 S0/0/0 входящий<br></p>
+	~<p dir\="ltr" style\="text-align\: left;">R2 S0/0/1 исходящий<br></p>
+}
+
+
+
+
+// question: 880  name: 058
+::058::[html]<p dir\="ltr" style\="text-align\: left;">Посмотрите на изображение. С точки зрения пользователей, стоящих за маршрутизатором NAT, какой тип NAT адреса представляет адрес&nbsp; 209.165.201.1?<br></p>{
+	~<p dir\="ltr" style\="text-align\: left;">Внешний глобальный<br></p>
+	~<p dir\="ltr" style\="text-align\: left;">Внешний локальный<br></p>
+	~<p dir\="ltr" style\="text-align\: left;">Внутренний локальный<br></p>
+	=<p dir\="ltr" style\="text-align\: left;">Внутренний глобальный<br></p>
+}
+
+
+// question: 881  name: 059
+::059::[html]<p dir\="ltr" style\="text-align\: left;">Посмотрите на изображение. Какую последовательность команд следует использовать для настройки маршрутизатора A для OSPF?<br></p>{
+	~<p dir\="ltr" style\="text-align\: left;">router ospf 1</p><p dir\="ltr" style\="text-align\: left;">network 192.168.10.0<br></p>
+	=<p dir\="ltr" style\="text-align\: left;">router ospf 1</p><p dir\="ltr" style\="text-align\: left;">network 192.168.10.64 0.0.0.63 area 0</p><p dir\="ltr" style\="text-align\: left;">network 192.168.10.192 0.0.0.3 area 0<br></p>
+	~<p dir\="ltr" style\="text-align\: left;">router ospf 1</p><p dir\="ltr" style\="text-align\: left;">network 192.168.10.64 255.255.255.192</p><p dir\="ltr" style\="text-align\: left;">network 192.168.10.192 255.255.255.252<br></p>
+	~<p dir\="ltr" style\="text-align\: left;">router ospf 1</p><p dir\="ltr" style\="text-align\: left;">network 192.168.10.0 area 0<br></p>
+}
+
+
+
+
+
+
+
+
+
+// question: 889  name: 067
+::067::[html]<p dir\="ltr" style\="text-align\: left;">Посмотрите на изображение. Сетевой администратор настроил OSPFv2 на двух маршрутизаторах Cisco. Маршрутизаторы не могут сформировать отношения смежности с соседями. Что нужно сделать для решения проблемы на маршрутизаторе R2?<br></p>{
+	=<p dir\="ltr" style\="text-align\: left;">Выполните команду no passive-interface Serial0/1.<br></p>
+	~<p dir\="ltr" style\="text-align\: left;">Выполните команду network 192.168.2.4 0.0.0.3 area 0 на маршрутизаторе R2.<br></p>
+	~<p dir\="ltr" style\="text-align\: left;">Выполните команду network 192.168.3.1 0.0.0.3 area 0 на маршрутизаторе R2.<br></p>
+	~<p dir\="ltr" style\="text-align\: left;">Измените идентификатор маршрутизатора router-id R2 на 2.2.2.2.<br></p>
+}
+
+
+
+
+
+// question: 907  name: 085
+::085::[html]<p dir\="ltr" style\="text-align\: left;">Посмотрите на изображение. Какой формат данных используется для представления данных для приложений автоматизации сети?<br></p>{
+	~<p dir\="ltr" style\="text-align\: left;">XML<br></p>
+	=<p dir\="ltr" style\="text-align\: left;">JSON<br></p>
+	~<p dir\="ltr" style\="text-align\: left;">YAML<br></p>
+	~<p dir\="ltr" style\="text-align\: left;">HTML<br></p>
+}
+
+
+// question: 908  name: 086
+::086::[html]<p dir\="ltr" style\="text-align\: left;">Посмотрите на изображение. Какой формат данных используется для представления данных для приложений автоматизации сети?<br></p>{
+	=<p dir\="ltr" style\="text-align\: left;">XML<br></p>
+	~<p dir\="ltr" style\="text-align\: left;">YAML<br></p>
+	~<p dir\="ltr" style\="text-align\: left;">HTML<br></p>
+	~<p dir\="ltr" style\="text-align\: left;">JSON<br></p>
+}
+
+
+// question: 909  name: 087
+::087::[html]<p dir\="ltr" style\="text-align\: left;">Посмотрите на изображение. В отображаемом представлении данных JSON, какой символ должен использоваться для замены вопросительного знака в строках 2 и 15?<br></p>{
+	~<p dir\="ltr" style\="text-align\: left;">запятые ,<br></p>
+	~<p dir\="ltr" style\="text-align\: left;">фигурные скобки \{\}<br></p>
+	=<p dir\="ltr" style\="text-align\: left;">квадратные скобки [ ]<br></p>
+	~<p dir\="ltr" style\="text-align\: left;">двойные кавычки " "<br></p>
+}
+
+
+// question: 910  name: 088
+::088::[html]<p dir\="ltr" style\="text-align\: left;">Посмотрите на изображение. Что обозначает символ дефиса (—) в структуре данных YAML?<br></p>{
+	~<p dir\="ltr" style\="text-align\: left;">одна пара ключ/значение<br></p>
+	=<p dir\="ltr" style\="text-align\: left;">элемент в массиве<br></p>
+	~<p dir\="ltr" style\="text-align\: left;">строка, используемая как для ключа, так и для значения<br></p>
+	~<p dir\="ltr" style\="text-align\: left;">пара ключ/значение, представляющая IP-адрес<br></p>
+}
+
+// question: 958  name: 136
+::136::[html]<p dir\="ltr" style\="text-align\: left;">Посмотрите на изображение. ПК с MAC-адресом 0800.069d.3841, подключенным к порту Fa0/8, отправляет данные на устройство с MAC-адресом 6400.6a5a.6821. Что сначала будет делать коммутатор для обработки передачи данных?<br></p>{
+	=<p dir\="ltr" style\="text-align\: left;">Коммутатор добавит адрес 0800.069d.3841 в таблицу MAC-адресов.<br></p>
+	~<p dir\="ltr" style\="text-align\: left;">Коммутатор добавит адрес 6400.6151.6821 в таблицу MAC-адресов.<br></p>
+	~<p dir\="ltr" style\="text-align\: left;">Коммутатор отправит кадр на порт Fa0/6.<br></p>
+	~<p dir\="ltr" style\="text-align\: left;">Коммутатор заполнит кадром все порты, кроме порта Fa0/8.<br></p>
+	~<p dir\="ltr" style\="text-align\: left;">Коммутатор отправит кадр на порты Fa0/4 и Fa0/6.<br></p>
+}
+
+
+
+
+// question: 1077  name: 162
+::162::[html]<p dir\="ltr" style\="text-align\: left;">Посмотрите на изображение. Корпоративная сеть использует NTP для синхронизации времени между устройствами. Что можно узнать из выходных данных?<br></p>{
+	~<p dir\="ltr" style\="text-align\: left;">Время Router03 синхронизируется с сервером времени уровня 2.<br></p>
+	~<p dir\="ltr" style\="text-align\: left;">Интерфейс на маршрутизаторе 03, который подключается к временному узлу, имеет IPv4 адрес 209.165.200.225.<br></p>
+	~<p dir\="ltr" style\="text-align\: left;">Время на маршрутизаторе 03 может быть ненадежным, так как оно смещается более чем на 7 секунд для сервера времени.<br></p>
+	=<p dir\="ltr" style\="text-align\: left;">Router03 - это устройство уровня 2, которое может предоставлять услугу NTP другим устройствам в сети.<br></p>
+}
+
+// question: 928  name: 106
+::106::,
+        {
+            "question":  "Откройте упражнение в Packet Tracer. Выполните задачи, описанные в инструкциях к интерактивному заданию, и затем ответьте на вопрос.</p>{"answer": "Какая задача должна быть выполнена на маршрутизаторе 1, чтобы установить смежность OSPF с маршрутизатором 2?",
+            "answerType": "singleChoice",
+            "answers": [
+	~{"answer": "Выполнить команду clear ip ospf process в привилегированном режиме."},
+	~{"answer": "Удалите команду пассивного интерфейса из интерфейса FastEthernet 0/0."},
+	~{"answer": "Добавьте команду network 10.0.1.0 0.0.0.255 area 0 в процесс OSPF."},
+	={"answer": "Измените маску подсети интерфейса FastEthernet 0/0 на 255.255.255.0.", "correct": true},
+}
+
+
+// question: 1136  name: 221
+::221::[html]<p dir\="ltr" style\="text-align\: left;">Посмотрите на изображение. Сеть 192.168.30.0/24 содержит все серверы компании. Политика требует, чтобы трафик с серверов в обе сети 192.168.10.0 и 192.168.11.0 ограничивался ответами на исходные запросы. Каков наилучший тип и размещение списков ACL для использования в этой ситуации?<br></p>{
+	=<p dir\="ltr" style\="text-align\: left;">расширенный входящий список ACL на R3 G0/0<br></p>
+	~<p dir\="ltr" style\="text-align\: left;">расширенный входящий список ACL на R3 S0/0/1<br></p>
+	~<p dir\="ltr" style\="text-align\: left;">стандартный входящий ACL на линиях R1 vty<br></p>
+	~<p dir\="ltr" style\="text-align\: left;">расширенные ACL входящие на R1 G0/0 и G0/1<br></p>
+}
+
+
+// question: 1137  name: 222
+::222::[html]<p dir\="ltr" style\="text-align\: left;">Посмотрите на изображение. Сеть 192.168.30.0/24 содержит все серверы компании. Политика требует, чтобы трафик с серверов в обе сети 192.168.10.0 и 192.168.11.0 ограничивался ответами на исходные запросы. Каков наилучший тип и размещение списков ACL для использования в этой ситуации?<br></p>{
+	=<p dir\="ltr" style\="text-align\: left;">расширенный входящий список ACL на R3 G0/0<br></p>
+	~<p dir\="ltr" style\="text-align\: left;">расширенный входящий список ACL на R1 G0/0<br></p>
+	~<p dir\="ltr" style\="text-align\: left;">стандартный входящий ACL на R1 G0/1<br></p>
+	~<p dir\="ltr" style\="text-align\: left;">стандартный входящий ACL на линиях R1 vty<br></p>
+}
+
+
+// question: 1138  name: 223
+::223::[html]<p dir\="ltr" style\="text-align\: left;">Посмотрите на изображение. Компания предоставила IP-телефоны сотрудникам сети 192.168.10.0/24, и голосовой трафик будет иметь приоритет над трафиком данных. Каков наилучший тип и размещение списков ACL для использования в этой ситуации?<br></p>{
+	=<p dir\="ltr" style\="text-align\: left;">расширенный входящий список ACL на R1 G0/0<br></p>
+	~<p dir\="ltr" style\="text-align\: left;">стандартный входящий ACL на R1 G0/1<br></p>
+	~<p dir\="ltr" style\="text-align\: left;">расширенный входящий список ACL на R3 G0/0<br></p>
+	~<p dir\="ltr" style\="text-align\: left;">стандартный входящий ACL на линиях R1 vty<br></p>
+}
+
+
+// question: 1139  name: 224
+::224::[html]<p dir\="ltr" style\="text-align\: left;">Посмотрите на изображение. Компания предоставила IP-телефоны сотрудникам сети 192.168.10.0/24, и голосовой трафик будет иметь приоритет над трафиком данных. Каков наилучший тип и размещение списков ACL для использования в этой ситуации?<br></p>{
+	=<p dir\="ltr" style\="text-align\: left;">расширенный входящий список ACL на R1 G0/0<br></p>
+	~<p dir\="ltr" style\="text-align\: left;">расширенный список ACL исходящих на R2 S0/0/1<br></p>
+	~<p dir\="ltr" style\="text-align\: left;">расширенный исходящий список ACL на интерфейсе WAN R2 в сторону Интернета<br></p>
+	~<p dir\="ltr" style\="text-align\: left;">расширенные ACL входящие на R1 G0/0 и G0/1<br></p>
+}
+
+
+// question: 1140  name: 225
+::225::[html]<p dir\="ltr" style\="text-align\: left;">Посмотрите на изображение. Сетевой администратор имеет IP-адрес 192.168.11.10 и нуждается в доступе для управления R1. Каков наилучший тип и размещение списков ACL для использования в этой ситуации?<br></p>{
+	=<p dir\="ltr" style\="text-align\: left;">стандартный входящий ACL на линиях R1 vty<br></p>
+	~<p dir\="ltr" style\="text-align\: left;">расширенный список ACL исходящих на R2 S0/0/1<br></p>
+	~<p dir\="ltr" style\="text-align\: left;">расширенный исходящий список ACL на интерфейсе WAN R2 в сторону Интернета<br></p>
+	~<p dir\="ltr" style\="text-align\: left;">расширенные ACL входящие на R1 G0/0 и G0/1<br></p>
+}
+
+
+// question: 1141  name: 226
+::226::[html]<p dir\="ltr" style\="text-align\: left;">Посмотрите на изображение. Сетевой администратор имеет IP-адрес 192.168.11.10 и нуждается в доступе для управления R1. Каков наилучший тип и размещение списков ACL для использования в этой ситуации?<br></p>{
+	=<p dir\="ltr" style\="text-align\: left;">стандартный входящий ACL на линиях R1 vty<br></p>
+	~<p dir\="ltr" style\="text-align\: left;">стандартный входящий ACL на интерфейсе WAN R2, подключившись к Интернету<br></p>
+	~<p dir\="ltr" style\="text-align\: left;">расширенный входящий список ACL на R2 S0/0/0<br></p>
+	~<p dir\="ltr" style\="text-align\: left;">стандартный ACL исходящий на R2 S0/0/0<br></p>
+}
+
+
+// question: 1142  name: 227
+::227::[html]<p dir\="ltr" style\="text-align\: left;">Посмотрите на изображение. Генеральный директор компании требует создать один ACL, чтобы разрешить трафик электронной почты в Интернет и запретить доступ FTP. Каков наилучший тип и размещение списков ACL для использования в этой ситуации?<br></p>{
+	=<p dir\="ltr" style\="text-align\: left;">расширенный исходящий список ACL на интерфейсе WAN R2 в сторону Интернета<br></p>
+	~<p dir\="ltr" style\="text-align\: left;">стандартный входящий ACL на интерфейсе WAN R2, подключившись к Интернету<br></p>
+	~<p dir\="ltr" style\="text-align\: left;">расширенный входящий список ACL на R2 S0/0/0<br></p>
+	~<p dir\="ltr" style\="text-align\: left;">стандартный ACL исходящий на R2 S0/0/0<br></p>
+}
+
+
+// question: 1143  name: 228
+::228::[html]<p dir\="ltr" style\="text-align\: left;">Посмотрите на изображение. Многие сотрудники тратит время компании на доступ к социальным сетям на своих рабочих компьютерах. Компания хочет остановить этот доступ. Каков наилучший тип и размещение списков ACL для использования в этой ситуации?<br></p>{
+	=<p dir\="ltr" style\="text-align\: left;">расширенные ACL входящие на R1 G0/0 и G0/1<br></p>
+	~<p dir\="ltr" style\="text-align\: left;">стандартный ACL исходящий на R2 S0/0/0<br></p>
+	~<p dir\="ltr" style\="text-align\: left;">стандартный исходящий ACL на интерфейсе WAN R2 в сторону Интернета<br></p>
+	~<p dir\="ltr" style\="text-align\: left;">расширенный исходящий список ACL на интерфейсе WAN R2 в сторону Интернета<br></p>
+}
+
+
+// question: 1144  name: 229
+::229::[html]<p dir\="ltr" style\="text-align\: left;">Посмотрите на изображение. Многие сотрудники тратит время компании на доступ к социальным сетям на своих рабочих компьютерах. Компания хочет остановить этот доступ. Каков наилучший тип и размещение списков ACL для использования в этой ситуации?<br></p>{
+	=<p dir\="ltr" style\="text-align\: left;">расширенные ACL входящие на R1 G0/0 и G0/1<br></p>
+	~<p dir\="ltr" style\="text-align\: left;">стандартный исходящий список ACL на R1 G0/0<br></p>
+	~<p dir\="ltr" style\="text-align\: left;">стандартный входящий ACL на R1 G0/0<br></p>
+	~<p dir\="ltr" style\="text-align\: left;">стандартный входящий ACL на интерфейсе WAN R2, подключившись к Интернету<br></p>
+}
+
+
+// question: 1145  name: 230
+::230::[html]<p dir\="ltr" style\="text-align\: left;">Посмотрите на изображение. Права доступа к Интернету для сотрудника были отозваны из-за злоупотреблений, но сотрудник по-прежнему нуждается в доступе к ресурсам компании. Каков наилучший тип и размещение списков ACL для использования в этой ситуации?<br></p>{
+	=<p dir\="ltr" style\="text-align\: left;">стандартный исходящий ACL на интерфейсе WAN R2 в сторону Интернета<br></p>
+	~<p dir\="ltr" style\="text-align\: left;">стандартный исходящий список ACL на R1 G0/0<br></p>
+	~<p dir\="ltr" style\="text-align\: left;">стандартный входящий ACL на R1 G0/0<br></p>
+	~<p dir\="ltr" style\="text-align\: left;">стандартный входящий ACL на интерфейсе WAN R2, подключившись к Интернету<br></p>
+}
+
