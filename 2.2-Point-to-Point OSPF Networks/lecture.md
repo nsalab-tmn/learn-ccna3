@@ -241,6 +241,6 @@ O        10.10.1.0/24 [110/2] via 10.1.1.5, 00:00:30, GigabitEthernet0/0/0
 - Команда **ip ospf** *interface* на R3.
 - Настройте пассивные интерфейсы. Проверьте работу OSPF с помощью **show ip protocols** и **show ip route** .
 
-[конфигурация OSPFv2 для одной области с сетями «точка-точка»](./assets/2.2.13-packet-tracer---point-to-point-single-area-ospfv2-configuration_ru-RU.pdf)
+[Конфигурация OSPFv2 для одной области с сетями «точка-точка»](./assets/2.2.13-packet-tracer---point-to-point-single-area-ospfv2-configuration_ru-RU.pdf)
 
 [Скачать файл для Packet Tracer](./assets/2.2.13-packet-tracer---point-to-point-single-area-ospfv2-configuration_ru-RU.pka)
