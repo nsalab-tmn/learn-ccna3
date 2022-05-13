@@ -34,10 +34,6 @@
 ![](./assets/13.1.3.png)
 <!-- /courses/ensa-dl/ae8eb398-34fd-11eb-ba19-f1886492e0e4/aeb65fd8-34fd-11eb-ba19-f1886492e0e4/assets/c70b5ac3-1c46-11ea-af56-e368b99e9723.svg -->
 
-<!--
-The figure shows 4 stacked text blocks. From top to bottom are SaaS, PaaS, IaaS, and ITaaS.
--->
-
 <!-- 13.1.4 -->
 ## Облачные модели
 
@@ -50,10 +46,6 @@ The figure shows 4 stacked text blocks. From top to bottom are SaaS, PaaS, IaaS,
 
 ![](./assets/13.1.4.png)
 <!-- /courses/ensa-dl/ae8eb398-34fd-11eb-ba19-f1886492e0e4/aeb65fd8-34fd-11eb-ba19-f1886492e0e4/assets/c70ba8e3-1c46-11ea-af56-e368b99e9723.svg -->
-
-<!--
-На рисунке показаны 4 облака с надписью «Гибрид», «Публичный», «Частный» и «Сообщество».
--->
 
 <!-- 13.1.5 -->
 ## Облачные вычисления и центр обработки данных

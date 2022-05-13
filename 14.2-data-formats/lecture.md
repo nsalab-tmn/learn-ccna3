@@ -16,10 +16,6 @@
 
 ![](./assets/14.2.2.png)
 
-<!--
-The figure show an example of HTML code and the output on a webpage. On the left there is HTML code beginning with &lt;html&gt; and &lt;&lt;body&gt; then a heading using &lt;h1&gt; with the text This is a Heading and closing with &lt;/h1&gt;. Below the heading is a paragraph using &lt;p&gt; the text This is a paragraph and closing with &lt;/p&gt;. The code is then closed with &lt;/body&gt; and &lt;/html&gt;. On the right the figure shows the HTML output on a webpage. The webpage has the text This is a Heading and This is a paragraph. 
--->
-
 Вот некоторые распространенные форматы данных, которые используются во многих приложениях, включая автоматизацию сети и программируемость:
 
 * JavaScript Object Notation (JSON) 
