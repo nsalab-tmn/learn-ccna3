@@ -1,5 +1,5 @@
 <!-- 14.6.1 -->
-## Видео. Сети, управляемые на основе намерений
+## Видео: Сети, управляемые на основе намерений
 
 Вы узнали о многих инструментах и программном обеспечении, которые могут помочь вам автоматизировать вашу сеть. Сеть на основе намерений (Intent-Based Networking - IBN) и Центр архитектуры цифровой сети (Digital Network Architecture - DNA) Cisco могут помочь вам собрать все это вместе для создания автоматизированной сети.
 
@@ -102,7 +102,7 @@ The figure shows the DNA Center interface launch page. The DNA launch page gives
 * **Платформа** - Используйте API-интерфейсы для интеграции с предпочитаемыми вами ИТ-системами, чтобы создавать комплексные решения и добавлять поддержку устройств разных производителей.
 
 <!-- 14.6.6 -->
-## Видео - Обзор DNA Центра и API платформы 
+## Видео: Обзор DNA Центра и API платформы 
 
 Это первая часть серии из четырех статей, демонстрирующих DNA-центр Cisco.
 
@@ -113,7 +113,7 @@ The figure shows the DNA Center interface launch page. The DNA launch page gives
 ![youtube](https://www.youtube.com/watch?v=5wsjDRPXfmM)
 
 <!-- 14.6.7 -->
-## Видео - Проектирование DNA Center и обеспечение
+## Видео: Проектирование DNA Center и обеспечение
 
 Это вторая часть серии из четырех статей, демонстрирующих DNA-центр Cisco.
 
@@ -124,7 +124,7 @@ The figure shows the DNA Center interface launch page. The DNA launch page gives
 ![youtube](https://www.youtube.com/watch?v=ALftVi8SAZo)
 
 <!-- 14.6.8 -->
-## Видео - Политики DNA Center и контроль
+## Видео: Политики DNA Center и контроль
 
 Это третья часть серии из четырех статей, демонстрирующих DNA-центр Cisco.
 
@@ -135,7 +135,7 @@ The figure shows the DNA Center interface launch page. The DNA launch page gives
 ![youtube](https://www.youtube.com/watch?v=o8uaZfpkr5A)
 
 <!-- 14.6.9 -->
-## Видео - DNA Center Устранение неполадок при подключении пользователя
+## Видео: DNA Center Устранение неполадок при подключении пользователя
 
 Это четвертая часть серии из четырех статей, демонстрирующих DNA-центр Cisco.
 
