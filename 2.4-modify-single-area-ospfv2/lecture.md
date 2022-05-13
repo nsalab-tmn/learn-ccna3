@@ -304,7 +304,7 @@ R2#
 * Изменение таймеров приветствия OSPF
 * Убедитесь, что изменения точно отражены в маршрутизаторах.
 
-[Изменение OSPFv2 для одной области (pdf)](./assets/2.4.11-packet-tracer---modify-single-area-ospfv2.pdf)
+[Изменение OSPFv2 для одной области (pdf)](./assets/2.4.11-packet-tracer---modify-single-area-ospfv2_ru-RU.pdf)
 
 [Изменение OSPFv2 для одной области (pka)](./assets/2.4.11-packet-tracer---modify-single-area-ospfv2.pka)
 

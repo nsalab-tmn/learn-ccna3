@@ -141,7 +141,7 @@ R1#
 * Part 2: Настройка и проверка стандартных нумерованных ACL-списков и стандартных именованных ACL-списков
 * Part 3: Изменение стандартного ACL-списка
 
-[Настройка и модификация стандартных списков контроля доступа для IPv4 (pdf)](./assets/5.2.7-packet-tracer---configure-and-modify-standard-ipv4-acls.pdf)
+[Настройка и модификация стандартных списков контроля доступа для IPv4 (pdf)](./assets/5.2.7-packet-tracer---configure-and-modify-standard-ipv4-acls_ru-RU.pdf)
 
 [Настройка и модификация стандартных списков контроля доступа для IPv4 (pka)](./assets/5.2.7-packet-tracer---configure-and-modify-standard-ipv4-acls.pka)
 

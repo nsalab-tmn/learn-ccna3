@@ -8,7 +8,7 @@
 * Обнаружение сетевых ресурсов с помощью протокола LLDP
 * Настройка и проверка NTP
 
-[Настройка протоколов CDP, LLDP и NTP (pdf)](./assets/10.8.1-packet-tracer---configure-cdp--lldp--and-ntp-instructions.pdf)
+[Настройка протоколов CDP, LLDP и NTP (pdf)](./assets/10.8.1-packet-tracer---configure-cdp--lldp--and-ntp-instructions_ru-RU.pdf)
 
 [Настройка протоколов CDP, LLDP и NTP (pka)](./assets/10.8.1-packet-tracer---configure-cdp--lldp--and-ntp.pka)
 
@@ -22,4 +22,4 @@
 * Обнаружение сетевых ресурсов с помощью протокола LLDP
 * Настройка и проверка NTP
 
-[Настройка протоколов CDP, LLDP и NTP (lab)](./assets/10.8.2-lab---configure-cdp--lldp--and-ntp.pdf)
+[Настройка протоколов CDP, LLDP и NTP (lab)](./assets/10.8.2-lab---configure-cdp--lldp--and-ntp_ru-RU.pdf)

@@ -145,7 +145,7 @@ R2#
 * Часть 3: Настройка PAT с помощью интерфейса
 * Часть 4: Проверка реализации интерфейса PAT
 
-[Настройка PAT (pdf)](./assets/6.6.7-packet-tracer---configure-pat-instructions.pdf)
+[Настройка PAT (pdf)](./assets/6.6.7-packet-tracer---configure-pat-instructions_ru-RU.pdf)
 
 [Настройка PAT (pka)](./assets/6.6.7-packet-tracer---configure-pat.pka)
 

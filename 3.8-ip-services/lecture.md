@@ -183,5 +183,5 @@ DNS атаки включают в себя:
 * Изучение трафика DNS-запроса
 * Изучение трафика DNS-ответа
 
-[Исследование трафика DNS (lab)](./assets/3.8.8-lab---explore-dns-traffic.pdf)
+[Исследование трафика DNS (lab)](./assets/3.8.8-lab---explore-dns-traffic_ru-RU.pdf)
 

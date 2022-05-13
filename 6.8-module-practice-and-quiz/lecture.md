@@ -6,7 +6,7 @@
 * Настройка динамического NAT с помощью PAT
 * Настройка статического преобразования NAT
 
-[Настройка NAT для IPv4 (pdf)](./assets/6.8.1-packet-tracer---configure-nat-for-ipv4.pdf)
+[Настройка NAT для IPv4 (pdf)](./assets/6.8.1-packet-tracer---configure-nat-for-ipv4_ru-RU.pdf)
 
 [Настройка NAT для IPv4 (pka)](./assets/6.8.1-packet-tracer---configure-nat-for-ipv4.pka)
 
@@ -20,4 +20,4 @@
 * Part 3: Настройка и проверка PAT для IPv4.
 * Part 4: Настройка и проверка статического NAT для IPv4.
 
-[Настройка NAT для IPv4 (lab)](./assets/6.8.2-lab---configure-nat-for-ipv4.pdf)
+[Настройка NAT для IPv4 (lab)](./assets/6.8.2-lab---configure-nat-for-ipv4_ru-RU.pdf)

@@ -247,5 +247,5 @@ The figure displays an example of using the Cisco SNMP navigator to research the
 * Часть 2: Изучение инструментов мониторинга сети
 * Часть 3: Выберите средство мониторинга сети
 
-[Изучение ПО для мониторинга сети (lab)](./assets/10.4.10-lab---research-network-monitoring-software.pdf)
+[Изучение ПО для мониторинга сети (lab)](./assets/10.4.10-lab---research-network-monitoring-software_ru-RU.pdf)
 

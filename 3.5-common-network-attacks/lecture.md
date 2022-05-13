@@ -181,7 +181,7 @@ The figure shows a threat actor with a laptop. an arrow goes from the threat act
 
 В этой лабораторной работе вы изучите методы социальной инженерии, а также способы, которые помогут распознать и предотвратить ее.
 
-[Социальная инженерия (lab)](./assets/3.5.7-lab---social-engineering.pdf)
+[Социальная инженерия (lab)](./assets/3.5.7-lab---social-engineering_ru-RU.pdf)
 
 <!-- 3.5.8 -->
 ## Видео - Атаки типа «отказ в обслуживании»

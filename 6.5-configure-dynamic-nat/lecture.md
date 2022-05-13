@@ -204,7 +204,7 @@ ip nat inside source list 1 pool NAT-POOL1
 * Настройка динамического преобразования NAT
 * Проверьте реализацию NAT
 
-[Настройка динамического NAT (pdf)](./assets/6.5.6-packet-tracer---configure-dynamic-nat.pdf)
+[Настройка динамического NAT (pdf)](./assets/6.5.6-packet-tracer---configure-dynamic-nat_ru-RU.pdf)
 
 [Настройка динамического NAT (pka)](./assets/6.5.6-packet-tracer---configure-dynamic-nat.pka)
 

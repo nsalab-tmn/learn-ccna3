@@ -386,7 +386,7 @@ R1#
 * Затем вам предстоит изменить приоритет для контроля функций и инициировать новый выбор.
 * Наконец, вам нужно будет проверить, выполняют ли маршрутизаторы свои функции.
 
-[Определение DR и BDR (pdf)](./assets/2.3.11-packet-tracer---determine-the-dr-and-bdr.pdf)
+[Определение DR и BDR (pdf)](./assets/2.3.11-packet-tracer---determine-the-dr-and-bdr_ru-RU.pdf)
 
 [Определение DR и BDR (pka)](./assets/2.3.11-packet-tracer---determine-the-dr-and-bdr.pka)
 

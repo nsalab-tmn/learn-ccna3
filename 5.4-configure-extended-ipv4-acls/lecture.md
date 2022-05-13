@@ -495,7 +495,7 @@ permit tcp any host 192.168.10.10 established
 * Часть 1: Настройка, применение и проверка расширенного нумерованного ACL-списка.
 * Часть 2: Настройка, применение и проверка расширенного именованного ACL-списка.
 
-[Настройка расширенных списков контроля доступа (pdf)](./assets/5.4.12-packet-tracer---configure-extended-ipv4-acls---scenario-1.pdf)
+[Настройка расширенных списков контроля доступа (pdf)](./assets/5.4.12-packet-tracer---configure-extended-ipv4-acls---scenario-1_ru-RU.pdf)
 
 [Настройка расширенных списков контроля доступа (pka)](./assets/5.4.12-packet-tracer---configure-extended-ipv4-acls---scenario-1.pka)
 
@@ -507,7 +507,7 @@ permit tcp any host 192.168.10.10 established
 * Часть 1: Настройка именованного расширенного списка контроля доступа
 * Часть 2: Применение и проверка расширенного IPv4 ACL
 
-[Настройка расширенных списков контроля доступа (pdf)](./assets/5.4.13-packet-tracer---configure-extended-ipv4-acls---scenario-2.pdf)
+[Настройка расширенных списков контроля доступа (pdf)](./assets/5.4.13-packet-tracer---configure-extended-ipv4-acls---scenario-2_ru-RU.pdf)
 
 [Настройка расширенных списков контроля доступа (pka)](./assets/5.4.13-packet-tracer---configure-extended-ipv4-acls---scenario-2.pka)
 

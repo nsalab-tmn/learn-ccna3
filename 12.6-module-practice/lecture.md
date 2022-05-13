@@ -10,7 +10,7 @@
 * Обнаружение устройств в сети.
 * Составление топологии сети
 
-[Поиск и устранение неполадок (pdf)](./assets/12.6.1-packet-tracer---troubleshooting-challenge---document-the-network.pdf)
+[Поиск и устранение неполадок (pdf)](./assets/12.6.1-packet-tracer---troubleshooting-challenge---document-the-network_ru-RU.pdf)
 
 [Поиск и устранение неполадок (pka)](./assets/12.6.1-packet-tracer---troubleshooting-challenge---document-the-network.pka)
 
@@ -25,6 +25,6 @@
 * Внедрение решений проблем связи с сетью.
 * Проверьте работу сети.
 
-[Поиск и устранение неполадок (pdf)](./assets/12.6.2-packet-tracer---troubleshooting-challenge---use-documentation-to-solve-issues.pdf)
+[Поиск и устранение неполадок (pdf)](./assets/12.6.2-packet-tracer---troubleshooting-challenge---use-documentation-to-solve-issues_ru-RU.pdf)
 
 [Поиск и устранение неполадок (pka)](./assets/12.6.2-packet-tracer---troubleshooting-challenge---use-documentation-to-solve-issues.pka)

@@ -188,7 +188,7 @@ System image file is "flash:isr4200-universalk9_ias.16.09.04.SPA.bin"
 
 TFTP-сервер может помочь управлять хранением образов IOS и выпусками образов IOS. В любой сети рекомендуется сохранить резервную копию образа ОС Cisco IOS на случай повреждения или случайного удаления образа системы на маршрутизаторе. TFTP-сервер можно также использовать для хранения новых обновлений IOS, чтобы затем развернуть их по всей сети там, где это необходимо. В рамках данного задания необходимо выполнить обновление образов IOS на устройствах Cisco с помощью TFTP-сервера. Также необходимо выполнить резервное копирование образа IOS, используя TFTP-сервер.
 
-[Использование TFTP-сервера для обновления образа Cisco IOS (pdf)](./assets/10.7.6-packet-tracer---use-a-tftp-server-to-upgrade-a-cisco-ios-image.pdf)
+[Использование TFTP-сервера для обновления образа Cisco IOS (pdf)](./assets/10.7.6-packet-tracer---use-a-tftp-server-to-upgrade-a-cisco-ios-image_ru-RU.pdf)
 
 [Использование TFTP-сервера для обновления образа Cisco IOS (pka)](./assets/10.7.6-packet-tracer---use-a-tftp-server-to-upgrade-a-cisco-ios-image.pka)
 
