@@ -8,7 +8,7 @@
 
 [Настройка NAT для IPv4 (pdf)](./assets/6.8.1-packet-tracer---configure-nat-for-ipv4_ru-RU.pdf)
 
-[Настройка NAT для IPv4 (pka)](./assets/6.8.1-packet-tracer---configure-nat-for-ipv4.pka)
+[Настройка NAT для IPv4 (pka)](./assets/6.8.1-packet-tracer---configure-nat-for-ipv4_ru-RU.pka)
 
 <!-- 6.8.2 -->
 ## Лабораторная работа - Настройка NAT для IPv4

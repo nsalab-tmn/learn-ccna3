@@ -143,5 +143,5 @@ Total entries displayed: 2
 
 [Создание карты сети с помощью протокола LLDP (pdf)](./assets/10.2.6-packet-tracer---use-lldp-to-map-a-network_ru-RU.pdf)
 
-[Создание карты сети с помощью протокола LLDP (pka)](./assets/10.2.6--packet-tracer---use-lldp-to-map-a-network.pka)
+[Создание карты сети с помощью протокола LLDP (pka)](./assets/10.2.6--packet-tracer---use-lldp-to-map-a-network_ru-RU.pka)
 

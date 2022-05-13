@@ -418,7 +418,7 @@ R1# reload
 
 [Резервное копирование файлов конфигурации (pdf)](./assets/10.6.10-packet-tracer---back-up-configuration-files_ru-RU.pdf)
 
-[Резервное копирование файлов конфигурации (pka)](./assets/10.6.10-packet-tracer---back-up-configuration-files.pka)
+[Резервное копирование файлов конфигурации (pka)](./assets/10.6.10-packet-tracer---back-up-configuration-files_ru-RU.pka)
 
 <!-- 10.6.11 -->
 ## Лабораторная работа - Управление файлами конфигурации маршрутизатора с помощью программы Tera Term
@@ -445,7 +445,7 @@ R1# reload
 
 [Управление файлами конфигурации устройств с использованием TFTP-сервера, флеш-памяти и USB-накопителя - режим симуляции физического оборудования (pdf)](./assets/10.6.12-packet-tracer---use-tftp-and-flash-to-manage-configuration-files---physical-mode_ru-RU.pdf)
 
-[Управление файлами конфигурации устройств с использованием TFTP-сервера, флеш-памяти и USB-накопителя -режим симуляции физического оборудования (pka)](./assets/10.6.12-packet-tracer---use-tftp-and-flash-to-manage-configuration-files---physical-mode.pka)
+[Управление файлами конфигурации устройств с использованием TFTP-сервера, флеш-памяти и USB-накопителя -режим симуляции физического оборудования (pka)](./assets/10.6.12-packet-tracer---use-tftp-and-flash-to-manage-configuration-files---physical-mode_ru-RU.pka)
 
 **Лабораторное оборудование** 
 
@@ -467,7 +467,7 @@ R1# reload
 
 [Исследование и выполнение процедур восстановления пароля - режим симуляции физического оборудования (pdf)](./assets/10.6.13-packet-tracer---research-and-execute-password-recovery-procedures---physical-mode_ru-RU.pdf)
 
-[Исследование и выполнение процедур восстановления пароля - режим симуляции физического оборудования (pka)](./assets/10.6.13-packet-tracer---research-and-execute-password-recovery-procedures---physical-mode.pka)
+[Исследование и выполнение процедур восстановления пароля - режим симуляции физического оборудования (pka)](./assets/10.6.13-packet-tracer---research-and-execute-password-recovery-procedures---physical-mode_ru-RU.pka)
 
 **Лабораторное оборудование** 
 

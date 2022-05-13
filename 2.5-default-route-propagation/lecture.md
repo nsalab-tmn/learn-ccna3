@@ -110,5 +110,5 @@ R3#
 
 [Распространение маршрута по умолчанию в OSPFv2 (pdf)](./assets/2.5.3-packet-tracer---propagate-a-default-route-in-ospfv2_ru-RU.pdf)
 
-[Распространение маршрута по умолчанию в OSPFv2 (pka)](./assets/2.5.3-packet-tracer---propagate-a-default-route-in-ospfv2.pka)
+[Распространение маршрута по умолчанию в OSPFv2 (pka)](./assets/2.5.3-packet-tracer---propagate-a-default-route-in-ospfv2_ru-RU.pka)
 

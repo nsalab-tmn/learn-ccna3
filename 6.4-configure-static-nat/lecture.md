@@ -120,5 +120,5 @@ Hits: 4  Misses: 1
 
 [Настройка статического преобразования (NAT) (pdf)](./assets/6.4.5-packet-tracer---configure-static-nat_ru-RU.pdf)
 
-[Настройка статического преобразования (NAT) (pka)](./assets/6.4.5-packet-tracer---configure-static-nat.pka)
+[Настройка статического преобразования (NAT) (pka)](./assets/6.4.5-packet-tracer---configure-static-nat_ru-RU.pka)
 

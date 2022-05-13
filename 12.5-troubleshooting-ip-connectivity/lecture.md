@@ -738,5 +738,5 @@ R1#
 
 [Поиск и устранение неполадок в корпоративных сетях (pdf)](./assets/12.5.13-packet-tracer---troubleshoot-enterprise-networks_ru-RU.pdf)
 
-[Поиск и устранение неполадок в корпоративных сетях (pka)](./assets/12.5.13-packet-tracer---troubleshoot-enterprise-networks.pka)
+[Поиск и устранение неполадок в корпоративных сетях (pka)](./assets/12.5.13-packet-tracer---troubleshoot-enterprise-networks_ru-RU.pka)
 

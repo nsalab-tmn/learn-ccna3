@@ -7,7 +7,7 @@
 
 [Конфигурация OSPFv2 для одной области (pdf)](./assets/2.7.1-packet-tracer---single-area-ospfv2-configuration_ru-RU.pdf)
 
-[Конфигурация OSPFv2 для одной области (pka)](./assets/2.7.1-packet-tracer---single-area-ospfv2-configuration.pka)
+[Конфигурация OSPFv2 для одной области (pka)](./assets/2.7.1-packet-tracer---single-area-ospfv2-configuration_ru-RU.pka)
 
 <!-- 2.7.2 -->
 ## Лабораторная работа - Настройка OSPFv2 для одной области
@@ -20,7 +20,7 @@
 
 [Настройка протокола OSPFv2 для одной области - Режим симуляции физического оборудования (pdf)](./assets/2.7.2-packet-tracer---configure-single-area-ospfv2---physical-mode_ru-RU.pdf)
 
-[Настройка протокола OSPFv2 для одной области - Режим симуляции физического оборудования (pka)](./assets/2.7.2-packet-tracer---configure-single-area-ospfv2---physical-mode.pka)
+[Настройка протокола OSPFv2 для одной области - Режим симуляции физического оборудования (pka)](./assets/2.7.2-packet-tracer---configure-single-area-ospfv2---physical-mode_ru-RU.pka)
 
 **Лабораторное оборудование**
 
@@ -37,7 +37,7 @@
 
 [Исследование OSPF для нескольких областей - Режим симуляции физического оборудования (Часть 1) (pdf)](./assets/2.7.3-packet-tracer---multiarea-ospf-exploration---physical-mode--part-1-_ru-RU.pdf)
 
-[Исследование OSPF для нескольких областей - Режим симуляции физического оборудования (Часть 1) (pka)](./assets/2.7.3-packet-tracer---multiarea-ospf-exploration---physical-mode--part-1-.pka)
+[Исследование OSPF для нескольких областей - Режим симуляции физического оборудования (Часть 1) (pka)](./assets/2.7.3-packet-tracer---multiarea-ospf-exploration---physical-mode--part-1-_ru-RU.pka)
 
 **Часть 2: бизнес процветает**
 
@@ -45,7 +45,7 @@
 
 [Исследование OSPF для нескольких областей - Режим симуляции физического оборудования (Часть 2) (pdf)](./assets/2.7.3-packet-tracer---multiarea-ospf-exploration---physical-mode--part-2-_ru-RU.pdf)
 
-[Исследование OSPF для нескольких областей - Режим симуляции физического оборудования (Часть 2) (pka)](./assets/2.7.3-packet-tracer---multiarea-ospf-exploration---physical-mode--part-2-.pka)
+[Исследование OSPF для нескольких областей - Режим симуляции физического оборудования (Часть 2) (pka)](./assets/2.7.3-packet-tracer---multiarea-ospf-exploration---physical-mode--part-2-_ru-RU.pka)
 
 **Часть 3: расширение CRC продолжается**
 
@@ -53,7 +53,7 @@ CRC продолжает расти и откроет новый филиал в
 
 [Исследование OSPF для нескольких областей - Режим симуляции физического оборудования (Часть 3) (pdf)](./assets/2.7.3-packet-tracer---multiarea-ospf-exploration---physical-mode--part-3-_ru-RU.pdf)
 
-[Исследование OSPF для нескольких областей - Режим симуляции физического оборудования (Часть 3) (pka)](./assets/2.7.3-packet-tracer---multiarea-ospf-exploration---physical-mode--part-3-.pka)
+[Исследование OSPF для нескольких областей - Режим симуляции физического оборудования (Часть 3) (pka)](./assets/2.7.3-packet-tracer---multiarea-ospf-exploration---physical-mode--part-3-_ru-RU.pka)
 <!-- 2.7.5 -->
 <!-- quiz -->
 

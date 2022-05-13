@@ -388,5 +388,5 @@ R1#
 
 [Определение DR и BDR (pdf)](./assets/2.3.11-packet-tracer---determine-the-dr-and-bdr_ru-RU.pdf)
 
-[Определение DR и BDR (pka)](./assets/2.3.11-packet-tracer---determine-the-dr-and-bdr.pka)
+[Определение DR и BDR (pka)](./assets/2.3.11-packet-tracer---determine-the-dr-and-bdr_ru-RU.pka)
 

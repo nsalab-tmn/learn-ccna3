@@ -147,5 +147,5 @@ R2#
 
 [Настройка PAT (pdf)](./assets/6.6.7-packet-tracer---configure-pat-instructions_ru-RU.pdf)
 
-[Настройка PAT (pka)](./assets/6.6.7-packet-tracer---configure-pat.pka)
+[Настройка PAT (pka)](./assets/6.6.7-packet-tracer---configure-pat_ru-RU.pka)
 

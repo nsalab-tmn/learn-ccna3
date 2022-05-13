@@ -306,5 +306,5 @@ R2#
 
 [Изменение OSPFv2 для одной области (pdf)](./assets/2.4.11-packet-tracer---modify-single-area-ospfv2_ru-RU.pdf)
 
-[Изменение OSPFv2 для одной области (pka)](./assets/2.4.11-packet-tracer---modify-single-area-ospfv2.pka)
+[Изменение OSPFv2 для одной области (pka)](./assets/2.4.11-packet-tracer---modify-single-area-ospfv2_ru-RU.pka)
 

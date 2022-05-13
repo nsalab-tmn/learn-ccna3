@@ -12,7 +12,7 @@
 
 [Поиск и устранение неполадок (pdf)](./assets/12.6.1-packet-tracer---troubleshooting-challenge---document-the-network_ru-RU.pdf)
 
-[Поиск и устранение неполадок (pka)](./assets/12.6.1-packet-tracer---troubleshooting-challenge---document-the-network.pka)
+[Поиск и устранение неполадок (pka)](./assets/12.6.1-packet-tracer---troubleshooting-challenge---document-the-network_ru-RU.pka)
 
 <!-- 12.6.2 -->
 ## Packet Tracer. Поиск и устранение неполадок. Использование документации для решения проблем
@@ -27,4 +27,4 @@
 
 [Поиск и устранение неполадок (pdf)](./assets/12.6.2-packet-tracer---troubleshooting-challenge---use-documentation-to-solve-issues_ru-RU.pdf)
 
-[Поиск и устранение неполадок (pka)](./assets/12.6.2-packet-tracer---troubleshooting-challenge---use-documentation-to-solve-issues.pka)
+[Поиск и устранение неполадок (pka)](./assets/12.6.2-packet-tracer---troubleshooting-challenge---use-documentation-to-solve-issues_ru-RU.pka)

@@ -212,5 +212,5 @@ S1               Fas 0/1           141              S I   WS-C3560- Fas 0/1
 
 [Создание карты сети с помощью протокола CDP (pdf)](./assets/10.1.5-packet-tracer---use-cdp-to-map-a-network_ru-RU.pdf)
 
-[Создание карты сети с помощью протокола CDP (pka)](./assets/10.1.5-packet-tracer---use-cdp-to-map-a-network.pka)
+[Создание карты сети с помощью протокола CDP (pka)](./assets/10.1.5-packet-tracer---use-cdp-to-map-a-network_ru-RU.pka)
 

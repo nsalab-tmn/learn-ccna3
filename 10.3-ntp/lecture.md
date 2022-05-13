@@ -130,5 +130,5 @@ system poll interval is 128, last update was 178 sec ago.
 
 [Настройка и проверка протокола NTP (pdf)](./assets/10.3.4-packet-tracer---configure-and-verify-ntp_ru-RU.pdf)
 
-[Настройка и проверка протокола NTP (pka)](./assets/10.3.4-packet-tracer---configure-and-verify-ntp.pka)
+[Настройка и проверка протокола NTP (pka)](./assets/10.3.4-packet-tracer---configure-and-verify-ntp_ru-RU.pka)
 

@@ -268,5 +268,5 @@ O        10.10.1.0/24 [110/2] via 10.1.1.5, 00:00:30, GigabitEthernet0/0/0
 
 [конфигурация OSPFv2  для одной области  с сетями «точка-точка» (pdf)](./assets/2.2.13-packet-tracer---point-to-point-single-area-ospfv2-configuration_ru-RU.pdf)
 
-[конфигурация OSPFv2  для одной области  с сетями «точка-точка» (pka)](./assets/2.2.13-packet-tracer---point-to-point-single-area-ospfv2-configuration.pka)
+[конфигурация OSPFv2  для одной области  с сетями «точка-точка» (pka)](./assets/2.2.13-packet-tracer---point-to-point-single-area-ospfv2-configuration_ru-RU.pka)
 

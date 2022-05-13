@@ -10,7 +10,7 @@
 
 [Настройка протоколов CDP, LLDP и NTP (pdf)](./assets/10.8.1-packet-tracer---configure-cdp--lldp--and-ntp-instructions_ru-RU.pdf)
 
-[Настройка протоколов CDP, LLDP и NTP (pka)](./assets/10.8.1-packet-tracer---configure-cdp--lldp--and-ntp.pka)
+[Настройка протоколов CDP, LLDP и NTP (pka)](./assets/10.8.1-packet-tracer---configure-cdp--lldp--and-ntp_ru-RU.pka)
 
 <!-- 10.8.2 -->
 ## Лабораторная работа - Настройка протоколов CDP, LLDP и NTP

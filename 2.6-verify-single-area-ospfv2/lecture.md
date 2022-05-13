@@ -195,5 +195,5 @@ R1#
 
 [проверка OSPFv2 для одной области (pdf)](./assets/2.6.6-packet-tracer---verify-single-area-ospfv2_ru-RU.pdf)
 
-[проверка OSPFv2 для одной области (pka)](./assets/2.6.6-packet-tracer---verify-single-area-ospfv2.pka)
+[проверка OSPFv2 для одной области (pka)](./assets/2.6.6-packet-tracer---verify-single-area-ospfv2_ru-RU.pka)
 

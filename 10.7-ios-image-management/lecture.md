@@ -190,5 +190,5 @@ TFTP-сервер может помочь управлять хранением 
 
 [Использование TFTP-сервера для обновления образа Cisco IOS (pdf)](./assets/10.7.6-packet-tracer---use-a-tftp-server-to-upgrade-a-cisco-ios-image_ru-RU.pdf)
 
-[Использование TFTP-сервера для обновления образа Cisco IOS (pka)](./assets/10.7.6-packet-tracer---use-a-tftp-server-to-upgrade-a-cisco-ios-image.pka)
+[Использование TFTP-сервера для обновления образа Cisco IOS (pka)](./assets/10.7.6-packet-tracer---use-a-tftp-server-to-upgrade-a-cisco-ios-image_ru-RU.pka)
 

@@ -127,5 +127,5 @@ PAT гарантирует, что устройства будут исполь�
 
 [Исследование принципов работы NAT (pdf)](./assets/6.2.7-packet-tracer---investigate-nat-operation_ru-RU.pdf)
 
-[Исследование принципов работы NAT (pka)](./assets/6.2.7-packet-tracer---investigate-nat-operation.pka)
+[Исследование принципов работы NAT (pka)](./assets/6.2.7-packet-tracer---investigate-nat-operation_ru-RU.pka)
 

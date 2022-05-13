@@ -5,4 +5,4 @@
 
 [Cравнение устройств уровня 2 и уровня 3 (pdf)](./assets/11.5.1-packet-tracer---compare-layer-2-and-layer-3-devices_ru-RU.pdf)
 
-[Cравнение устройств уровня 2 и уровня 3 (pka)](./assets/11.5.1-packet-tracer---compare-layer-2-and-layer-3-devices.pka)
+[Cравнение устройств уровня 2 и уровня 3 (pka)](./assets/11.5.1-packet-tracer---compare-layer-2-and-layer-3-devices_ru-RU.pka)

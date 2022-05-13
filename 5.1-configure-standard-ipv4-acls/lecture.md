@@ -235,7 +235,7 @@ R1#
 
 [Настройка нумерованных стандартных списков контроля доступа для IPv4 (pdf)](./assets/5.1.8-packet-tracer---configure-numbered-standard-ipv4-acls_ru-RU.pdf)
 
-[Настройка нумерованных стандартных списков контроля доступа для IPv4 (pka)](./assets/5.1.8-packet-tracer---configure-numbered-standard-ipv4-acls.pka)
+[Настройка нумерованных стандартных списков контроля доступа для IPv4 (pka)](./assets/5.1.8-packet-tracer---configure-numbered-standard-ipv4-acls_ru-RU.pka)
 
 <!-- 5.1.9 -->
 ## Packet Tracer. Настройка именованных стандартных списков контроля доступа (ACL) IPv4.
@@ -244,5 +244,5 @@ R1#
 
 [Настройка именованных стандартных списков контроля доступа (ACL) IPv4 (pdf)](./assets/5.1.9-packet-tracer---configure-named-standard-ipv4-acls_ru-RU.pdf)
 
-[Настройка именованных стандартных списков контроля доступа (ACL) IPv4 (pka)](./assets/5.1.9-packet-tracer---configure-named-standard-ipv4-acls.pka)
+[Настройка именованных стандартных списков контроля доступа (ACL) IPv4 (pka)](./assets/5.1.9-packet-tracer---configure-named-standard-ipv4-acls_ru-RU.pka)
 

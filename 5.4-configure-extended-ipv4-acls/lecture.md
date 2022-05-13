@@ -497,7 +497,7 @@ permit tcp any host 192.168.10.10 established
 
 [Настройка расширенных списков контроля доступа (pdf)](./assets/5.4.12-packet-tracer---configure-extended-ipv4-acls---scenario-1_ru-RU.pdf)
 
-[Настройка расширенных списков контроля доступа (pka)](./assets/5.4.12-packet-tracer---configure-extended-ipv4-acls---scenario-1.pka)
+[Настройка расширенных списков контроля доступа (pka)](./assets/5.4.12-packet-tracer---configure-extended-ipv4-acls---scenario-1_ru-RU.pka)
 
 <!-- 5.4.13 -->
 ## Packet Tracer. Настройка расширенных списков контроля доступа. Сценарий 2
@@ -509,5 +509,5 @@ permit tcp any host 192.168.10.10 established
 
 [Настройка расширенных списков контроля доступа (pdf)](./assets/5.4.13-packet-tracer---configure-extended-ipv4-acls---scenario-2_ru-RU.pdf)
 
-[Настройка расширенных списков контроля доступа (pka)](./assets/5.4.13-packet-tracer---configure-extended-ipv4-acls---scenario-2.pka)
+[Настройка расширенных списков контроля доступа (pka)](./assets/5.4.13-packet-tracer---configure-extended-ipv4-acls---scenario-2_ru-RU.pka)
 
