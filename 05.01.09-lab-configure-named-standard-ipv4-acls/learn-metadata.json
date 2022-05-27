@@ -1,0 +1,30 @@
+{
+    "title": "Работа в симуляторе: Настройка именованных стандартных списков контроля доступа (ACL) IPv4.",
+    "shortName": "lab-5.1.9",
+    "materialType": "lab",
+    "description": "Старший сетевой администратор попросил вас создать стандартный именованный список контроля доступа (ACL) для запрета доступа к файловому серверу. Доступ должен быть запрещен всем клиентам одной сети и определенной рабочей станции другой сети.",
+    "difficulty": 1,
+    "duration": "PT0H22M",
+    "tags": [
+        "Cisco",
+        "Packet Tracer"
+    ],
+    "credentialsSchema": {
+        "userName": {
+            "title": "Имя пользователя",
+            "source": "learn_user"
+        },
+        "password": {
+            "title": "Пароль",
+            "source": "learn_password"
+        },
+        "consoleURL": {
+            "title": "Адрес портала",
+            "value": "https://portal.skillscloud.company"
+        }
+    },
+    "skills": {},
+    "testProjectPath": "./README.md",
+    "deploymentPath": "deploy",
+    "assetsPath": "assets"
+}

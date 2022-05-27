@@ -1,0 +1,30 @@
+{
+    "title": "Работа в симуляторе: Настройка расширенных списков контроля доступа. Сценарий 1",
+    "shortName": "lab-5.4.12",
+    "materialType": "lab",
+    "description": "В рамках данного упражнения Packet Tracer необходимо решить следующие задачи.\n\n* Часть 1: Настройка, применение и проверка расширенного нумерованного ACL-списка.\n* Часть 2: Настройка, применение и проверка расширенного именованного ACL-списка.",
+    "difficulty": 1,
+    "duration": "PT0H22M",
+    "tags": [
+        "Cisco",
+        "Packet Tracer"
+    ],
+    "credentialsSchema": {
+        "userName": {
+            "title": "Имя пользователя",
+            "source": "learn_user"
+        },
+        "password": {
+            "title": "Пароль",
+            "source": "learn_password"
+        },
+        "consoleURL": {
+            "title": "Адрес портала",
+            "value": "https://portal.skillscloud.company"
+        }
+    },
+    "skills": {},
+    "testProjectPath": "./README.md",
+    "deploymentPath": "deploy",
+    "assetsPath": "assets"
+}

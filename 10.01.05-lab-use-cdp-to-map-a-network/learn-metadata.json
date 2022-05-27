@@ -1,0 +1,30 @@
+{
+    "title": "Работа в симуляторе: Создание карты сети с помощью протокола CDP",
+    "shortName": "lab-10.1.5",
+    "materialType": "lab",
+    "description": "Старший администратор сети поручил вам создать карту сети удаленного филиала Remote Branch Office и узнать имя недавно установленного коммутатора, на котором необходимо настроить IPv4-адрес. Ваша задача заключается в том, чтобы создать карту сети филиала. Для создания карты сети нужно использовать удаленный доступ по протоколу SSH и применить протокол Cisco Discovery Protocol (CDP) для получения сведений о соседних сетевых устройствах, таких как маршрутизаторы и коммутаторы.",
+    "difficulty": 1,
+    "duration": "PT0H22M",
+    "tags": [
+        "Cisco",
+        "Packet Tracer"
+    ],
+    "credentialsSchema": {
+        "userName": {
+            "title": "Имя пользователя",
+            "source": "learn_user"
+        },
+        "password": {
+            "title": "Пароль",
+            "source": "learn_password"
+        },
+        "consoleURL": {
+            "title": "Адрес портала",
+            "value": "https://portal.skillscloud.company"
+        }
+    },
+    "skills": {},
+    "testProjectPath": "./README.md",
+    "deploymentPath": "deploy",
+    "assetsPath": "assets"
+}
