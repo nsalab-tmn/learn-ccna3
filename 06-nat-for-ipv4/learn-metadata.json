@@ -1,0 +1,54 @@
+{
+    "title": "NAT для IPv4",
+    "materialType": "course",
+    "tags": {
+        "$ref": "../material-tags.json"
+    },
+    "materials": [
+        {
+            "$ref": "./06.00-introduction/learn-metadata.json"
+        },
+        {
+            "$ref": "./06.01-nat-characteristics/learn-metadata.json"
+        },
+        {
+            "$ref": "./06.02-types-of-nat/learn-metadata.json"
+        },
+        {
+            "$ref": "./06.02.07-lab-investigate-nat-operation/learn-metadata.json"
+        },
+        {
+            "$ref": "./06.03-nat-advantages/learn-metadata.json"
+        },
+        {
+            "$ref": "./06.04-configure-static-nat/learn-metadata.json"
+        },
+        {
+            "$ref": "./06.04.05-lab-configure-static-nat/learn-metadata.json"
+        },
+        {
+            "$ref": "./06.05-configure-dynamic-nat/learn-metadata.json"
+        },
+        {
+            "$ref": "./06.05.06-lab-configure-dynamic-nat/learn-metadata.json"
+        },
+        {
+            "$ref": "./06.06-configure-pat/learn-metadata.json"
+        },
+        {
+            "$ref": "./06.06.07-lab-configure-pat/learn-metadata.json"
+        },
+        {
+            "$ref": "./06.07-nat64/learn-metadata.json"
+        },
+        {
+            "$ref": "./06.08-module-practice-and-quiz/learn-metadata.json"
+        },
+        {
+            "$ref": "./06.08.01-lab-configure-nat-for-ipv4/learn-metadata.json"
+        },
+        {
+            "$ref": "./06.09-summary/learn-metadata.json"
+        }
+    ]
+}

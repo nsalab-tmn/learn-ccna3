@@ -1,0 +1,35 @@
+{
+    "title": "Работа в симуляторе: Настройка NAT для IPv4",
+    "shortName": "lab-6.8.1",
+    "materialType": "lab",
+    "description": "В рамках данного упражнения Packet Tracer необходимо решить следующие задачи:\n\n* Настройка динамического NAT с помощью PAT\n* Настройка статического преобразования NAT",
+    "difficulty": 1,
+    "duration": "PT0H22M",
+    "tags": {
+        "$ref": "../../material-tags.json"
+    },
+    "credentialsSchema": {
+        "userName": {
+            "title": "Имя пользователя",
+            "source": "learn_user"
+        },
+        "password": {
+            "title": "Пароль",
+            "source": "learn_password"
+        },
+        "consoleURL": {
+            "title": "Адрес портала",
+            "value": "https://portal.skillscloud.company"
+        }
+    },
+    "skills": {},
+    "text": {
+        "$ref": "./README.md"
+    },
+    "assets": {
+        "$ref": "./assets"
+    },
+    "deploy": {
+        "$ref": "./deploy"
+    }
+}
