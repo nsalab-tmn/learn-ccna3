@@ -1,0 +1,51 @@
+{
+    "title": "Списки контроля доступа в конфигурациях IPv4",
+    "materialType": "course",
+    "tags": {
+        "$ref": "../material-tags.json"
+    },
+    "materials": [
+        {
+            "$ref": "./05.00-introduction/learn-metadata.json"
+        },
+        {
+            "$ref": "./05.01-configure-standard-ipv4-acls/learn-metadata.json"
+        },
+        {
+            "$ref": "./05.01.08-lab-configure-numbered-standard-ipv4-acls/learn-metadata.json"
+        },
+        {
+            "$ref": "./05.01.09-lab-configure-named-standard-ipv4-acls/learn-metadata.json"
+        },
+        {
+            "$ref": "./05.02-modify-ipv4-acls/learn-metadata.json"
+        },
+        {
+            "$ref": "./05.02.07-lab-configure-and-modify-standard-ipv4-acls/learn-metadata.json"
+        },
+        {
+            "$ref": "./05.03-secure-vty-ports-with-a-standard-ipv4-acl/learn-metadata.json"
+        },
+        {
+            "$ref": "./05.04-configure-extended-ipv4-acls/learn-metadata.json"
+        },
+        {
+            "$ref": "./05.04.12-lab-configure-extended-ipv4-acls-scenario-1/learn-metadata.json"
+        },
+        {
+            "$ref": "./05.04.13-lab-configure-extended-ipv4-acls-scenario-2/learn-metadata.json"
+        },
+        {
+            "$ref": "./05.05-module-practice/learn-metadata.json"
+        },
+        {
+            "$ref": "./05.05.01-lab-ipv4-acl-implementation-challenge/learn-metadata.json"
+        },
+        {
+            "$ref": "./05.05.02-lab-configure-and-verify-extended-ipv4-acls-physical-mode/learn-metadata.json"
+        },
+        {
+            "$ref": "./05.06-summary/learn-metadata.json"
+        }
+    ]
+}

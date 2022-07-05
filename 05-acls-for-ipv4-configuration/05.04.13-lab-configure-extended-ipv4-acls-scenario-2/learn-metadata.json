@@ -1,0 +1,35 @@
+{
+    "title": "Работа в симуляторе: Настройка расширенных списков контроля доступа. Сценарий 2",
+    "shortName": "lab-5.4.13",
+    "materialType": "lab",
+    "description": "В рамках данного упражнения Packet Tracer необходимо решить следующие задачи.\n\n* Часть 1: Настройка именованного расширенного списка контроля доступа\n* Часть 2: Применение и проверка расширенного IPv4 ACL",
+    "difficulty": 1,
+    "duration": "PT0H22M",
+    "tags": {
+        "$ref": "../../material-tags.json"
+    },
+    "credentialsSchema": {
+        "userName": {
+            "title": "Имя пользователя",
+            "source": "learn_user"
+        },
+        "password": {
+            "title": "Пароль",
+            "source": "learn_password"
+        },
+        "consoleURL": {
+            "title": "Адрес портала",
+            "value": "https://portal.skillscloud.company"
+        }
+    },
+    "skills": {},
+    "text": {
+        "$ref": "./README.md"
+    },
+    "assets": {
+        "$ref": "./assets"
+    },
+    "deploy": {
+        "$ref": "./deploy"
+    }
+}

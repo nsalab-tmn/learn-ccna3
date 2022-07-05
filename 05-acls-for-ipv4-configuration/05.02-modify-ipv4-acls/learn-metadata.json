@@ -1,0 +1,17 @@
+{
+    "title": "Изменение списков контроля доступа для IPv4",
+    "materialType": "lecture",
+    "description": "",
+    "difficulty": 3,
+    "duration": "PT0H56M",
+    "tags": {
+        "$ref": "../../material-tags.json"
+    },
+    "skills": {},
+    "text": {
+        "$ref": "./README.md"
+    },
+    "assets": {
+        "$ref": "./assets"
+    }
+}

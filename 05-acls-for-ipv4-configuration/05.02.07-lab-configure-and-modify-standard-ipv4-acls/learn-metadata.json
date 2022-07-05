@@ -1,0 +1,35 @@
+{
+    "title": "Работа в симуляторе: Настройка и модификация стандартных списков контроля доступа для IPv4",
+    "shortName": "lab-5.2.7",
+    "materialType": "lab",
+    "description": "В рамках данного упражнения Packet Tracer необходимо решить следующие задачи.\n\n* Part 1: Настройка устройств и проверка подключения\n* Part 2: Настройка и проверка стандартных нумерованных ACL-списков и стандартных именованных ACL-списков\n* Part 3: Изменение стандартного ACL-списка",
+    "difficulty": 1,
+    "duration": "PT0H22M",
+    "tags": {
+        "$ref": "../../material-tags.json"
+    },
+    "credentialsSchema": {
+        "userName": {
+            "title": "Имя пользователя",
+            "source": "learn_user"
+        },
+        "password": {
+            "title": "Пароль",
+            "source": "learn_password"
+        },
+        "consoleURL": {
+            "title": "Адрес портала",
+            "value": "https://portal.skillscloud.company"
+        }
+    },
+    "skills": {},
+    "text": {
+        "$ref": "./README.md"
+    },
+    "assets": {
+        "$ref": "./assets"
+    },
+    "deploy": {
+        "$ref": "./deploy"
+    }
+}

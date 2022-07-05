@@ -5,6 +5,8 @@
   "materials": [
     { "$ref": "./01-single-area-ospfv2-concepts/learn-metadata.json" },
     { "$ref": "./02-single-area-ospfv2-configuration/learn-metadata.json" },
-    { "$ref": "./03-network-security-concepts/learn-metadata.json" }
+    { "$ref": "./03-network-security-concepts/learn-metadata.json" },
+    { "$ref": "./04-acl-concepts/learn-metadata.json" },
+    { "$ref": "./05-acls-for-ipv4-configuration/learn-metadata.json" }
   ]
 }
