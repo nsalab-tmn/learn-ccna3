@@ -95,4 +95,4 @@
 | &nbsp;     |          |          |
 | &nbsp;     |          |          |
 
-[Скачать файл Packet Tracer для локального запуска](./assets/12.6.2-packet-tracer---troubleshooting-challenge---use-documentation-to-solve-issues_ru-RU.pka)
+[Скачать файл Packet Tracer для локального запуска](./assets/12.6.2-lab.pka)

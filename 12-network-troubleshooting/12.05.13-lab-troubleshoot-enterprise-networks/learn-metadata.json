@@ -5,10 +5,9 @@
     "description": "В этом задании используются различные технологии, с которыми вы столкнулись в ходе изучения CCNA, включая маршрутизацию, безопасность портов, EtherChannel, DHCP и NAT. Ваша задача — изучить требования, найти и устранить все неполадки, а затем задокументировать выполненные действия для проверки соответствия указанным требованиям.",
     "difficulty": 1,
     "duration": "PT0H22M",
-    "tags": [
-        "Cisco",
-        "Packet Tracer"
-    ],
+    "tags": {
+        "$ref": "../../material-tags.json"
+    },
     "credentialsSchema": {
         "userName": {
             "title": "Имя пользователя",
@@ -24,7 +23,13 @@
         }
     },
     "skills": {},
-    "testProjectPath": "./README.md",
-    "deploymentPath": "deploy",
-    "assetsPath": "assets"
+    "text": {
+        "$ref": "./README.md"
+    },
+    "assets": {
+        "$ref": "./assets"
+    },
+    "deploy": {
+        "$ref": "./deploy"
+    }
 }

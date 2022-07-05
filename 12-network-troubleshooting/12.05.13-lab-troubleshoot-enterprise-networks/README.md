@@ -335,4 +335,4 @@
 
 -   PC4 должен иметь возможность выполнять эхо-запрос на TFTP-сервер и внешний хост с использованием протокола IPv6.
 
-[Скачать файл Packet Tracer для локального запуска](./assets/12.5.13-packet-tracer---troubleshoot-enterprise-networks_ru-RU.pka)
+[Скачать файл Packet Tracer для локального запуска](./assets/12.5.13-lab.pka)

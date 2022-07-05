@@ -1,0 +1,42 @@
+{
+    "title": "Поиск и устранение неполадок в сети; отладка сети",
+    "materialType": "course",
+    "tags": {
+        "$ref": "../material-tags.json"
+    },
+    "materials": [
+        {
+            "$ref": "./12.00-introduction/learn-metadata.json"
+        },
+        {
+            "$ref": "./12.01-network-documentation/learn-metadata.json"
+        },
+        {
+            "$ref": "./12.02-troubleshooting-process/learn-metadata.json"
+        },
+        {
+            "$ref": "./12.03-troubleshooting-tools/learn-metadata.json"
+        },
+        {
+            "$ref": "./12.04-symptoms-and-causes-of-network-problems/learn-metadata.json"
+        },
+        {
+            "$ref": "./12.05-troubleshooting-ip-connectivity/learn-metadata.json"
+        },
+        {
+            "$ref": "./12.05.13-lab-troubleshoot-enterprise-networks/learn-metadata.json"
+        },
+        {
+            "$ref": "./12.06-module-practice/learn-metadata.json"
+        },
+        {
+            "$ref": "./12.06.01-lab-troubleshooting-challenge-document-the-network/learn-metadata.json"
+        },
+        {
+            "$ref": "./12.06.02-lab-troubleshooting-challenge-use-documentation-to-solve-issues/learn-metadata.json"
+        },
+        {
+            "$ref": "./12.07-summary/learn-metadata.json"
+        }
+    ]
+}

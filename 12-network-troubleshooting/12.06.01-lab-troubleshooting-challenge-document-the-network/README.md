@@ -113,4 +113,4 @@ C:\> telnet IP_address
 
 **Введите ваш ответ здесь.**
 
-[Скачать файл Packet Tracer для локального запуска](./assets/12.6.1-packet-tracer---troubleshooting-challenge---document-the-network_ru-RU.pka)
+[Скачать файл Packet Tracer для локального запуска](./assets/12.6.1-lab.pka)
