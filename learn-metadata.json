@@ -3,6 +3,7 @@
   "materialType": "course",
   "tags": { "$ref": "./material-tags.json" },
   "materials": [
-    { "$ref": "./01-single-area-ospfv2-concepts/learn-metadata.json" }
+    { "$ref": "./01-single-area-ospfv2-concepts/learn-metadata.json" },
+    { "$ref": "./02-single-area-ospfv2-configuration/learn-metadata.json" }
   ]
 }

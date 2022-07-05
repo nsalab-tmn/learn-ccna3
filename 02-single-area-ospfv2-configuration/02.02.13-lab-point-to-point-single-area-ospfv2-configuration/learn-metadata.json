@@ -1,0 +1,35 @@
+{
+    "title": "Packet tracer — конфигурация OSPFv2  для одной области  с сетями «точка-точка»",
+    "shortName": "lab-2.2.13",
+    "materialType": "lab",
+    "description": "В этом задании Packet Tracer вы настраиваете  OSPFv2  для одной области следующим образом:\n\n* Явная конфигурация Router ID\n* Команда **network**  на R1 с использованием маски подсети, основанной на маске подсети.\n* Команда **network**  на  R2 с использованием шаблонной  маски из четырех нулей.\n* Команда **ip ospf**  interface  на R3.\n* Настройте пассивные интерфейсы.\n* Проверьте работу OSPF с помощью команд **show ip protocols**  и **show ip route** .",
+    "difficulty": 1,
+    "duration": "PT0H22M",
+    "tags": {
+        "$ref": "../../material-tags.json"
+    },
+    "credentialsSchema": {
+        "userName": {
+            "title": "Имя пользователя",
+            "source": "learn_user"
+        },
+        "password": {
+            "title": "Пароль",
+            "source": "learn_password"
+        },
+        "consoleURL": {
+            "title": "Адрес портала",
+            "value": "https://portal.skillscloud.company"
+        }
+    },
+    "skills": {},
+    "text": {
+        "$ref": "./README.md"
+    },
+    "assets": {
+        "$ref": "./assets"
+    },
+    "deploy": {
+        "$ref": "./deploy"
+    }
+}

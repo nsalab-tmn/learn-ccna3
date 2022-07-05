@@ -1,0 +1,35 @@
+{
+    "title": "Работа в симуляторе: проверка OSPFv2 для одной области",
+    "shortName": "lab-2.6.6",
+    "materialType": "lab",
+    "description": "В этом действии Packet Tracer вы будете использовать различные команды для проверки конфигурации OSPFv2 для одной зоны.",
+    "difficulty": 1,
+    "duration": "PT0H22M",
+    "tags": {
+        "$ref": "../../material-tags.json"
+    },
+    "credentialsSchema": {
+        "userName": {
+            "title": "Имя пользователя",
+            "source": "learn_user"
+        },
+        "password": {
+            "title": "Пароль",
+            "source": "learn_password"
+        },
+        "consoleURL": {
+            "title": "Адрес портала",
+            "value": "https://portal.skillscloud.company"
+        }
+    },
+    "skills": {},
+    "text": {
+        "$ref": "./README.md"
+    },
+    "assets": {
+        "$ref": "./assets"
+    },
+    "deploy": {
+        "$ref": "./deploy"
+    }
+}

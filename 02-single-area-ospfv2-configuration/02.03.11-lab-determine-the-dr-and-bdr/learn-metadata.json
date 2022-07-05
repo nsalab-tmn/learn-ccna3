@@ -1,0 +1,35 @@
+{
+    "title": "Работа в симуляторе: Определение DR и BDR",
+    "shortName": "lab-2.3.11",
+    "materialType": "lab",
+    "description": "В этом задании вы выполните следующие действия:\n\n* В этом упражнении вы сможете изучить роли DR и BDR, а также проследить за изменением ролей при изменениях в сети.\n* Затем вам предстоит изменить приоритет для контроля функций и инициировать новый выбор.\n* Наконец, вам нужно будет проверить, выполняют ли маршрутизаторы свои функции.",
+    "difficulty": 1,
+    "duration": "PT0H22M",
+    "tags": {
+        "$ref": "../../material-tags.json"
+    },
+    "credentialsSchema": {
+        "userName": {
+            "title": "Имя пользователя",
+            "source": "learn_user"
+        },
+        "password": {
+            "title": "Пароль",
+            "source": "learn_password"
+        },
+        "consoleURL": {
+            "title": "Адрес портала",
+            "value": "https://portal.skillscloud.company"
+        }
+    },
+    "skills": {},
+    "text": {
+        "$ref": "./README.md"
+    },
+    "assets": {
+        "$ref": "./assets"
+    },
+    "deploy": {
+        "$ref": "./deploy"
+    }
+}

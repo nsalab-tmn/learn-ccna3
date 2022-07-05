@@ -1,0 +1,66 @@
+{
+    "title": "Настройка OSPFv2 для одной области",
+    "materialType": "course",
+    "tags": {
+        "$ref": "../material-tags.json"
+    },
+    "materials": [
+        {
+            "$ref": "./02.00-introduction/learn-metadata.json"
+        },
+        {
+            "$ref": "./02.01-ospf-router-id/learn-metadata.json"
+        },
+        {
+            "$ref": "./02.02-point-to-point-ospf-networks/learn-metadata.json"
+        },
+        {
+            "$ref": "./02.02.13-lab-point-to-point-single-area-ospfv2-configuration/learn-metadata.json"
+        },
+        {
+            "$ref": "./02.03-multiaccess-ospf-networks/learn-metadata.json"
+        },
+        {
+            "$ref": "./02.03.11-lab-determine-the-dr-and-bdr/learn-metadata.json"
+        },
+        {
+            "$ref": "./02.04-modify-single-area-ospfv2/learn-metadata.json"
+        },
+        {
+            "$ref": "./02.04.11-lab-modify-single-area-ospfv2/learn-metadata.json"
+        },
+        {
+            "$ref": "./02.05-default-route-propagation/learn-metadata.json"
+        },
+        {
+            "$ref": "./02.05.03-lab-propagate-a-default-route-in-ospfv2/learn-metadata.json"
+        },
+        {
+            "$ref": "./02.06-verify-single-area-ospfv2/learn-metadata.json"
+        },
+        {
+            "$ref": "./02.06.06-lab-verify-single-area-ospfv2/learn-metadata.json"
+        },
+        {
+            "$ref": "./02.07-module-practice/learn-metadata.json"
+        },
+        {
+            "$ref": "./02.07.01-lab-single-area-ospfv2-configuration/learn-metadata.json"
+        },
+        {
+            "$ref": "./02.07.02-lab-configure-single-area-ospfv2-physical-mode/learn-metadata.json"
+        },
+        {
+            "$ref": "./02.07.03.01-lab-multiarea-ospf-exploration-physical-mode-part-1/learn-metadata.json"
+        },
+        {
+            "$ref": "./02.07.03.02-lab-multiarea-ospf-exploration-physical-mode-part-2/learn-metadata.json"
+        },
+        {
+            "$ref": "./02.07.03.03-lab-multiarea-ospf-exploration-physical-mode-part-3/learn-metadata.json"
+        },
+        {
+            "$ref": "./02.08-summary/learn-metadata.json"
+        }
+    ]
+}
