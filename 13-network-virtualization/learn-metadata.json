@@ -1,0 +1,33 @@
+{
+    "title": "Виртуализация сети",
+    "materialType": "course",
+    "tags": {
+        "$ref": "../material-tags.json"
+    },
+    "materials": [
+        {
+            "$ref": "./13.00-introduction/learn-metadata.json"
+        },
+        {
+            "$ref": "./13.01-cloud-computing/learn-metadata.json"
+        },
+        {
+            "$ref": "./13.02-virtualization/learn-metadata.json"
+        },
+        {
+            "$ref": "./13.03-virtual-network-infrastructure/learn-metadata.json"
+        },
+        {
+            "$ref": "./13.04-software-defined-networking/learn-metadata.json"
+        },
+        {
+            "$ref": "./13.05-controllers/learn-metadata.json"
+        },
+        {
+            "$ref": "./13.06-module-practice-and-quiz/learn-metadata.json"
+        },
+        {
+            "$ref": "./13.07-summary/learn-metadata.json"
+        }
+    ]
+}
