@@ -1,0 +1,30 @@
+{
+    "title": "Принципы создания списков контроля доступа",
+    "materialType": "course",
+    "tags": {
+        "$ref": "../material-tags.json"
+    },
+    "materials": [
+        {
+            "$ref": "./04.00-introduction/learn-metadata.json"
+        },
+        {
+            "$ref": "./04.01-purpose-of-acls/learn-metadata.json"
+        },
+        {
+            "$ref": "./04.01.04-lab-acl-demonstration/learn-metadata.json"
+        },
+        {
+            "$ref": "./04.02-wildcard-masks-in-acls/learn-metadata.json"
+        },
+        {
+            "$ref": "./04.03-guidelines-for-acl-creation/learn-metadata.json"
+        },
+        {
+            "$ref": "./04.04-types-of-ipv4-acls/learn-metadata.json"
+        },
+        {
+            "$ref": "./04.05-summary/learn-metadata.json"
+        }
+    ]
+}
