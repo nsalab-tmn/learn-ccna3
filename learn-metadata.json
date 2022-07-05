@@ -15,6 +15,7 @@
     { "$ref": "./10-network-management/learn-metadata.json" },
     { "$ref": "./11-network-design/learn-metadata.json" },
     { "$ref": "./12-network-troubleshooting/learn-metadata.json" },
-    { "$ref": "./13-network-virtualization/learn-metadata.json" }
+    { "$ref": "./13-network-virtualization/learn-metadata.json" },
+    { "$ref": "./14-network-automation/learn-metadata.json" }
   ]
 }

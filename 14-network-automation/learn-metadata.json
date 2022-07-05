@@ -1,0 +1,33 @@
+{
+    "title": "Автоматизация сети",
+    "materialType": "course",
+    "tags": {
+        "$ref": "../material-tags.json"
+    },
+    "materials": [
+        {
+            "$ref": "./14.00-introduction/learn-metadata.json"
+        },
+        {
+            "$ref": "./14.01-automation-overview/learn-metadata.json"
+        },
+        {
+            "$ref": "./14.02-data-formats/learn-metadata.json"
+        },
+        {
+            "$ref": "./14.03-apis/learn-metadata.json"
+        },
+        {
+            "$ref": "./14.04-rest/learn-metadata.json"
+        },
+        {
+            "$ref": "./14.05-configuration-management/learn-metadata.json"
+        },
+        {
+            "$ref": "./14.06-ibn-and-cisco-dna-center/learn-metadata.json"
+        },
+        {
+            "$ref": "./14.07-summary/learn-metadata.json"
+        }
+    ]
+}
