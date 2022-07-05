@@ -1,0 +1,63 @@
+{
+    "title": "Управление сетями",
+    "materialType": "course",
+    "tags": {
+        "$ref": "../material-tags.json"
+    },
+    "materials": [
+        {
+            "$ref": "./10.00-introduction/learn-metadata.json"
+        },
+        {
+            "$ref": "./10.01-device-discovery-with-cdp/learn-metadata.json"
+        },
+        {
+            "$ref": "./10.01.05-lab-use-cdp-to-map-a-network/learn-metadata.json"
+        },
+        {
+            "$ref": "./10.02-device-discovery-with-lldp/learn-metadata.json"
+        },
+        {
+            "$ref": "./10.02.06-lab-use-lldp-to-map-a-network/learn-metadata.json"
+        },
+        {
+            "$ref": "./10.03-ntp/learn-metadata.json"
+        },
+        {
+            "$ref": "./10.03.04-lab-configure-and-verify-ntp/learn-metadata.json"
+        },
+        {
+            "$ref": "./10.04-snmp/learn-metadata.json"
+        },
+        {
+            "$ref": "./10.05-syslog/learn-metadata.json"
+        },
+        {
+            "$ref": "./10.06-router-and-switch-file-maintenance/learn-metadata.json"
+        },
+        {
+            "$ref": "./10.06.10-lab-back-up-configuration-files/learn-metadata.json"
+        },
+        {
+            "$ref": "./10.06.12-lab-use-tftp-and-flash-to-manage-configuration-files-physical-mode/learn-metadata.json"
+        },
+        {
+            "$ref": "./10.06.13-lab-research-and-execute-password-recovery-procedures-physical-mode/learn-metadata.json"
+        },
+        {
+            "$ref": "./10.07-ios-image-management/learn-metadata.json"
+        },
+        {
+            "$ref": "./10.07.06-lab-use-a-tftp-server-to-upgrade-a-cisco-ios-image/learn-metadata.json"
+        },
+        {
+            "$ref": "./10.08-module-practice/learn-metadata.json"
+        },
+        {
+            "$ref": "./10.08.01-lab-configure-cdp-lldp-and-ntp/learn-metadata.json"
+        },
+        {
+            "$ref": "./10.09-summary/learn-metadata.json"
+        }
+    ]
+}

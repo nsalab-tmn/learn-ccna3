@@ -1,0 +1,35 @@
+{
+    "title": "Работа в симуляторе: Изучение процедур восстановления паролей",
+    "shortName": "lab-10.6.13",
+    "materialType": "lab",
+    "description": "У вас есть возможность попрактиковаться в следующих навыках:\n \n* Часть 1: Изучение регистра конфигурации\n* Часть 2: Описание процедуры восстановления пароля для отдельного маршрутизатора Cisco\n\nВы можете практиковать эти навыки, используя Packet Tracer или лабораторное оборудование, если таковое имеется.",
+    "difficulty": 1,
+    "duration": "PT0H22M",
+    "tags": {
+        "$ref": "../../material-tags.json"
+    },
+    "credentialsSchema": {
+        "userName": {
+            "title": "Имя пользователя",
+            "source": "learn_user"
+        },
+        "password": {
+            "title": "Пароль",
+            "source": "learn_password"
+        },
+        "consoleURL": {
+            "title": "Адрес портала",
+            "value": "https://portal.skillscloud.company"
+        }
+    },
+    "skills": {},
+    "text": {
+        "$ref": "./README.md"
+    },
+    "assets": {
+        "$ref": "./assets"
+    },
+    "deploy": {
+        "$ref": "./deploy"
+    }
+}
