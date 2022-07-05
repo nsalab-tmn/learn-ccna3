@@ -1,0 +1,51 @@
+{
+    "title": "Принципы обеспечения безопасности сети",
+    "materialType": "course",
+    "tags": {
+        "$ref": "../material-tags.json"
+    },
+    "materials": [
+        {
+            "$ref": "./03.00-introduction/learn-metadata.json"
+        },
+        {
+            "$ref": "./03.01-current-state-of-cybersecurity/learn-metadata.json"
+        },
+        {
+            "$ref": "./03.02-intruders/learn-metadata.json"
+        },
+        {
+            "$ref": "./03.03-threat-actor-tools/learn-metadata.json"
+        },
+        {
+            "$ref": "./03.04-malware/learn-metadata.json"
+        },
+        {
+            "$ref": "./03.05-common-network-attacks/learn-metadata.json"
+        },
+        {
+            "$ref": "./03.06-ip-vulnerabilities-and-threats/learn-metadata.json"
+        },
+        {
+            "$ref": "./03.07-tcp-and-udp-vulnerabilities/learn-metadata.json"
+        },
+        {
+            "$ref": "./03.08-ip-services/learn-metadata.json"
+        },
+        {
+            "$ref": "./03.09-network-security-best-practices/learn-metadata.json"
+        },
+        {
+            "$ref": "./03.10-cryptography/learn-metadata.json"
+        },
+        {
+            "$ref": "./03.11-module-practice/learn-metadata.json"
+        },
+        {
+            "$ref": "./03.11.01-lab-network-security-exploration-physical-mode/learn-metadata.json"
+        },
+        {
+            "$ref": "./03.12-summary/learn-metadata.json"
+        }
+    ]
+}
