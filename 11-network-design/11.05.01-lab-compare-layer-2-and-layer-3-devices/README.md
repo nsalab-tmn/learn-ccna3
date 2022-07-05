@@ -118,4 +118,4 @@
 
     **Введите ваш ответ здесь.**
 
-[Скачать файл Packet Tracer для локального запуска](./assets/11.5.1-packet-tracer---compare-layer-2-and-layer-3-devices_ru-RU.pka)
+[Скачать файл Packet Tracer для локального запуска](./assets/11.5.1-lab.pka)

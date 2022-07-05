@@ -5,10 +5,9 @@
     "description": "В рамках этого интерактивного задания вам предстоит использовать различные команды для проверки трех различных топологий коммутации, а также сравнить сходства и различия между коммутаторами 2960 и 3650. Помимо этого, вам предстоит сравнить таблицу маршрутизации маршрутизатора 4321 с аналогичной таблицей коммутатора 3650.",
     "difficulty": 1,
     "duration": "PT0H22M",
-    "tags": [
-        "Cisco",
-        "Packet Tracer"
-    ],
+    "tags": {
+        "$ref": "../../material-tags.json"
+    },
     "credentialsSchema": {
         "userName": {
             "title": "Имя пользователя",
@@ -24,7 +23,13 @@
         }
     },
     "skills": {},
-    "testProjectPath": "./README.md",
-    "deploymentPath": "deploy",
-    "assetsPath": "assets"
+    "text": {
+        "$ref": "./README.md"
+    },
+    "assets": {
+        "$ref": "./assets"
+    },
+    "deploy": {
+        "$ref": "./deploy"
+    }
 }

@@ -1,0 +1,33 @@
+{
+    "title": "Проектирование сетей",
+    "materialType": "course",
+    "tags": {
+        "$ref": "../material-tags.json"
+    },
+    "materials": [
+        {
+            "$ref": "./11.00-introduction/learn-metadata.json"
+        },
+        {
+            "$ref": "./11.01-hierarchical-networks/learn-metadata.json"
+        },
+        {
+            "$ref": "./11.02-scalable-networks/learn-metadata.json"
+        },
+        {
+            "$ref": "./11.03-switch-hardware/learn-metadata.json"
+        },
+        {
+            "$ref": "./11.04-router-hardware/learn-metadata.json"
+        },
+        {
+            "$ref": "./11.05-module-practice/learn-metadata.json"
+        },
+        {
+            "$ref": "./11.05.01-lab-compare-layer-2-and-layer-3-devices/learn-metadata.json"
+        },
+        {
+            "$ref": "./11.06-summary/learn-metadata.json"
+        }
+    ]
+}
