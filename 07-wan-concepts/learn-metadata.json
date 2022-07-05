@@ -1,0 +1,36 @@
+{
+    "title": "Принципы работы WAN",
+    "materialType": "course",
+    "tags": {
+        "$ref": "../material-tags.json"
+    },
+    "materials": [
+        {
+            "$ref": "./07.00-introduction/learn-metadata.json"
+        },
+        {
+            "$ref": "./07.01-purpose-of-wans/learn-metadata.json"
+        },
+        {
+            "$ref": "./07.02-wan-operations/learn-metadata.json"
+        },
+        {
+            "$ref": "./07.03-traditional-wan-connectivity/learn-metadata.json"
+        },
+        {
+            "$ref": "./07.04-modern-wan-connectivity/learn-metadata.json"
+        },
+        {
+            "$ref": "./07.05-internet-based-connectivity/learn-metadata.json"
+        },
+        {
+            "$ref": "./07.06-module-practice/learn-metadata.json"
+        },
+        {
+            "$ref": "./07.06.01-lab-wan-concepts/learn-metadata.json"
+        },
+        {
+            "$ref": "./07.07-summary/learn-metadata.json"
+        }
+    ]
+}
