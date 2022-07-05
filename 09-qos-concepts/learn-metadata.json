@@ -1,0 +1,30 @@
+{
+    "title": "Принципы работы QoS",
+    "materialType": "course",
+    "tags": {
+        "$ref": "../material-tags.json"
+    },
+    "materials": [
+        {
+            "$ref": "./09.00-introduction/learn-metadata.json"
+        },
+        {
+            "$ref": "./09.01-network-transmission-quality/learn-metadata.json"
+        },
+        {
+            "$ref": "./09.02-traffic-characteristics/learn-metadata.json"
+        },
+        {
+            "$ref": "./09.03-queuing-algorithms/learn-metadata.json"
+        },
+        {
+            "$ref": "./09.04-qos-models/learn-metadata.json"
+        },
+        {
+            "$ref": "./09.05-qos-implementation-techniques/learn-metadata.json"
+        },
+        {
+            "$ref": "./09.06-summary/learn-metadata.json"
+        }
+    ]
+}

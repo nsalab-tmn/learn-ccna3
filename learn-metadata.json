@@ -10,6 +10,7 @@
     { "$ref": "./05-acls-for-ipv4-configuration/learn-metadata.json" },
     { "$ref": "./06-nat-for-ipv4/learn-metadata.json" },
     { "$ref": "./07-wan-concepts/learn-metadata.json" },
-    { "$ref": "./08-vpn-and-ipsec-concepts/learn-metadata.json" }
+    { "$ref": "./08-vpn-and-ipsec-concepts/learn-metadata.json" },
+    { "$ref": "./09-qos-concepts/learn-metadata.json" }
   ]
 }
