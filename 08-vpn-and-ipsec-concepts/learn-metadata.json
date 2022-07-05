@@ -1,0 +1,24 @@
+{
+    "title": "Принципы работы VPN и IPsec",
+    "materialType": "course",
+    "tags": {
+        "$ref": "../material-tags.json"
+    },
+    "materials": [
+        {
+            "$ref": "./08.00-introduction/learn-metadata.json"
+        },
+        {
+            "$ref": "./08.01-vpn-technology/learn-metadata.json"
+        },
+        {
+            "$ref": "./08.02-types-of-vpns/learn-metadata.json"
+        },
+        {
+            "$ref": "./08.03-ipsec/learn-metadata.json"
+        },
+        {
+            "$ref": "./08.04-summary/learn-metadata.json"
+        }
+    ]
+}
