@@ -1,6 +1,6 @@
 {
   "title": "Корпоративные сети, безопасность и автоматизация сети v7.2 (ENSA)",
-  "materialType": "course",
+  "materialType": "learning-path",
   "tags": { "$ref": "./material-tags.json" },
   "materials": [
     { "$ref": "./01-single-area-ospfv2-concepts/learn-metadata.json" },
