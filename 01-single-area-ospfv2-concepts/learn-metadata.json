@@ -12,13 +12,25 @@
             "$ref": "./01.01-ospf-features-and-characteristics/learn-metadata.json"
         },
         {
+            "$ref": "./01.01.07-ospf-features-and-characteristics-quiz/learn-metadata.json"
+        },
+        {
             "$ref": "./01.02-ospf-packets/learn-metadata.json"
+        },
+        {
+            "$ref": "./01.02.05-ospf-packets-quiz/learn-metadata.json"
         },
         {
             "$ref": "./01.03-ospf-operation/learn-metadata.json"
         },
         {
+            "$ref": "./01.03.07-ospf-operation-quiz/learn-metadata.json"
+        },
+        {
             "$ref": "./01.04-summary/learn-metadata.json"
+        },
+        {
+            "$ref": "./01.04.02-quiz/learn-metadata.json"
         }
     ]
 }
