@@ -12,6 +12,9 @@
             "$ref": "./02.01-ospf-router-id/learn-metadata.json"
         },
         {
+            "$ref": "./02.01.09-ospf-router-id-quiz/learn-metadata.json"
+        },
+        {
             "$ref": "./02.02-point-to-point-ospf-networks/learn-metadata.json"
         },
         {
@@ -42,9 +45,6 @@
             "$ref": "./02.06.06-lab-verify-single-area-ospfv2/learn-metadata.json"
         },
         {
-            "$ref": "./02.07-module-practice/learn-metadata.json"
-        },
-        {
             "$ref": "./02.07.01-lab-single-area-ospfv2-configuration/learn-metadata.json"
         },
         {
@@ -58,6 +58,9 @@
         },
         {
             "$ref": "./02.07.03.03-lab-multiarea-ospf-exploration-physical-mode-part-3/learn-metadata.json"
+        },
+        {
+            "$ref": "./02.07.05-quiz/learn-metadata.json"
         },
         {
             "$ref": "./02.08-summary/learn-metadata.json"
