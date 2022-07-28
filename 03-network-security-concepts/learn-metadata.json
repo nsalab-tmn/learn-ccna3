@@ -12,22 +12,43 @@
             "$ref": "./03.01-current-state-of-cybersecurity/learn-metadata.json"
         },
         {
+            "$ref": "./03.01.04-current-state-of-cybersecurity-quiz/learn-metadata.json"
+        },
+        {
             "$ref": "./03.02-intruders/learn-metadata.json"
+        },
+        {
+            "$ref": "./03.02.06-intruders-quiz/learn-metadata.json"
         },
         {
             "$ref": "./03.03-threat-actor-tools/learn-metadata.json"
         },
         {
+            "$ref": "./03.03.05-threat-actor-tools-quiz/learn-metadata.json"
+        },
+        {
             "$ref": "./03.04-malware/learn-metadata.json"
+        },
+        {
+            "$ref": "./03.04.04-malware-quiz/learn-metadata.json"
         },
         {
             "$ref": "./03.05-common-network-attacks/learn-metadata.json"
         },
         {
+            "$ref": "./03.05.10-common-network-attacks-quiz/learn-metadata.json"
+        },
+        {
             "$ref": "./03.06-ip-vulnerabilities-and-threats/learn-metadata.json"
         },
         {
+            "$ref": "./03.06.07-ip-vulnerabilities-and-threats-quiz/learn-metadata.json"
+        },
+        {
             "$ref": "./03.07-tcp-and-udp-vulnerabilities/learn-metadata.json"
+        },
+        {
+            "$ref": "./03.07.06-tcp-and-udp-vulnerabilities-quiz/learn-metadata.json"
         },
         {
             "$ref": "./03.08-ip-services/learn-metadata.json"
@@ -36,13 +57,19 @@
             "$ref": "./03.09-network-security-best-practices/learn-metadata.json"
         },
         {
+            "$ref": "./03.09.06-network-security-best-practices-quiz/learn-metadata.json"
+        },
+        {
             "$ref": "./03.10-cryptography/learn-metadata.json"
         },
         {
-            "$ref": "./03.11-module-practice/learn-metadata.json"
+            "$ref": "./03.10.10-cryptography-quiz/learn-metadata.json"
         },
         {
             "$ref": "./03.11.01-lab-network-security-exploration-physical-mode/learn-metadata.json"
+        },
+        {
+            "$ref": "./03.11.03-quiz/learn-metadata.json"
         },
         {
             "$ref": "./03.12-summary/learn-metadata.json"
