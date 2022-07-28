@@ -15,16 +15,31 @@
             "$ref": "./04.01.04-lab-acl-demonstration/learn-metadata.json"
         },
         {
+            "$ref": "./04.01.05-purpose-of-acls-quiz/learn-metadata.json"
+        },
+        {
             "$ref": "./04.02-wildcard-masks-in-acls/learn-metadata.json"
+        },
+        {
+            "$ref": "./04.02.05-wildcard-masks-in-acls-quiz/learn-metadata.json"
         },
         {
             "$ref": "./04.03-guidelines-for-acl-creation/learn-metadata.json"
         },
         {
+            "$ref": "./04.03.03-guidelines-for-acl-creation-quiz/learn-metadata.json"
+        },
+        {
             "$ref": "./04.04-types-of-ipv4-acls/learn-metadata.json"
         },
         {
+            "$ref": "./04.04.06-types-of-ipv4-acls-quiz/learn-metadata.json"
+        },
+        {
             "$ref": "./04.05-summary/learn-metadata.json"
+        },
+        {
+            "$ref": "./04.05.02-quiz/learn-metadata.json"
         }
     ]
 }
