@@ -51,9 +51,6 @@
             "$ref": "./10.07.06-lab-use-a-tftp-server-to-upgrade-a-cisco-ios-image/learn-metadata.json"
         },
         {
-            "$ref": "./10.08-module-practice/learn-metadata.json"
-        },
-        {
             "$ref": "./10.08.01-lab-configure-cdp-lldp-and-ntp/learn-metadata.json"
         },
         {
