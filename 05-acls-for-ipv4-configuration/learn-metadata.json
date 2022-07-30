@@ -36,13 +36,13 @@
             "$ref": "./05.04.13-lab-configure-extended-ipv4-acls-scenario-2/learn-metadata.json"
         },
         {
-            "$ref": "./05.05-module-practice/learn-metadata.json"
-        },
-        {
             "$ref": "./05.05.01-lab-ipv4-acl-implementation-challenge/learn-metadata.json"
         },
         {
             "$ref": "./05.05.02-lab-configure-and-verify-extended-ipv4-acls-physical-mode/learn-metadata.json"
+        },
+        {
+            "$ref": "./05.05.04-quiz/learn-metadata.json"
         },
         {
             "$ref": "./05.06-summary/learn-metadata.json"
