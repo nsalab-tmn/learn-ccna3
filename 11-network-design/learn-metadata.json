@@ -21,9 +21,6 @@
             "$ref": "./11.04-router-hardware/learn-metadata.json"
         },
         {
-            "$ref": "./11.05-module-practice/learn-metadata.json"
-        },
-        {
             "$ref": "./11.05.01-lab-compare-layer-2-and-layer-3-devices/learn-metadata.json"
         },
         {

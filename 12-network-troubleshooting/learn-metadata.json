@@ -27,9 +27,6 @@
             "$ref": "./12.05.13-lab-troubleshoot-enterprise-networks/learn-metadata.json"
         },
         {
-            "$ref": "./12.06-module-practice/learn-metadata.json"
-        },
-        {
             "$ref": "./12.06.01-lab-troubleshooting-challenge-document-the-network/learn-metadata.json"
         },
         {
