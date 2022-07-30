@@ -12,13 +12,25 @@
             "$ref": "./07.01-purpose-of-wans/learn-metadata.json"
         },
         {
+            "$ref": "./07.01.06-purpose-of-wans-quiz/learn-metadata.json"
+        },
+        {
             "$ref": "./07.02-wan-operations/learn-metadata.json"
+        },
+        {
+            "$ref": "./07.02.09-wan-operations-quiz/learn-metadata.json"
         },
         {
             "$ref": "./07.03-traditional-wan-connectivity/learn-metadata.json"
         },
         {
+            "$ref": "./07.03.05-traditional-wan-connectivity-quiz/learn-metadata.json"
+        },
+        {
             "$ref": "./07.04-modern-wan-connectivity/learn-metadata.json"
+        },
+        {
+            "$ref": "./07.04.05-modern-wan-connectivity-quiz/learn-metadata.json"
         },
         {
             "$ref": "./07.05-internet-based-connectivity/learn-metadata.json"
@@ -28,6 +40,9 @@
         },
         {
             "$ref": "./07.06.01-lab-wan-concepts/learn-metadata.json"
+        },
+        {
+            "$ref": "./07.06.03-quiz/learn-metadata.json"
         },
         {
             "$ref": "./07.07-summary/learn-metadata.json"

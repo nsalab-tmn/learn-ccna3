@@ -1,0 +1,105 @@
+{
+    "title": "Тест на понимание темы: Традиционные возможности подключения к глобальной сети",
+    "materialType": "test",
+    "description": "Нажмите ``Начать прохождение`` для отображения вопросов и выберите самый подходящий ответ",
+    "difficulty": 1,
+    "duration": "PT0H30M",
+    "tags": {
+        "$ref": "../../material-tags.json"
+    },
+    "skills": {},
+    "passingScore": 100,
+    "assets": {
+        "$ref": "./assets"
+    },
+    "questions": [
+        {
+            "question": "Какой традиционный вариант подключения WAN использует линии T-Carrier или E-Carrier?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "ATM",
+                    "correct": false,
+                    "comment": "В арендованных линиях используются линии T-Carrier или E-Carrier."
+                },
+                {
+                    "answer": "Frame Relay",
+                    "correct": false,
+                    "comment": "В арендованных линиях используются линии T-Carrier или E-Carrier."
+                },
+                {
+                    "answer": "ISDN",
+                    "correct": false,
+                    "comment": "В арендованных линиях используются линии T-Carrier или E-Carrier."
+                },
+                {
+                    "answer": "Арендованные линии",
+                    "correct": true
+                },
+                {
+                    "answer": "PSTN",
+                    "correct": false,
+                    "comment": "В арендованных линиях используются линии T-Carrier или E-Carrier."
+                }
+            ]
+        },
+        {
+            "question": "Какие два традиционных варианта подключения WAN являются сетью с коммутацией каналов? (Выберите два варианта.)",
+            "answerType": "multiChoice",
+            "answers": [
+                {
+                    "answer": "ATM",
+                    "correct": false,
+                    "comment": "PSTN (ТСОП) и ISDN — это два варианта подключения глобальной сети с коммутацией каналов ."
+                },
+                {
+                    "answer": "Frame Relay",
+                    "correct": false,
+                    "comment": "PSTN (ТСОП) и ISDN — это два варианта подключения глобальной сети с коммутацией каналов ."
+                },
+                {
+                    "answer": "ISDN",
+                    "correct": true
+                },
+                {
+                    "answer": "Арендованные линии",
+                    "correct": false,
+                    "comment": "PSTN (ТСОП) и ISDN — это два варианта подключения глобальной сети с коммутацией каналов ."
+                },
+                {
+                    "answer": "PSTN",
+                    "correct": true
+                }
+            ]
+        },
+        {
+            "question": "Какие два традиционных варианта подключения к глобальной сети с коммутации пакетов? (Выберите два варианта.)",
+            "answerType": "multiChoice",
+            "answers": [
+                {
+                    "answer": "ATM",
+                    "correct": true
+                },
+                {
+                    "answer": "Frame Relay",
+                    "correct": true
+                },
+                {
+                    "answer": "ISDN",
+                    "correct": false,
+                    "comment": "ATM и Frame Relay — это два варианта подключения WAN с коммутацией пакетов."
+                },
+                {
+                    "answer": "Арендованные линии",
+                    "correct": false,
+                    "comment": "ATM и Frame Relay — это два варианта подключения WAN с коммутацией пакетов."
+                },
+                {
+                    "answer": "PSTN",
+                    "correct": false,
+                    "comment": "ATM и Frame Relay — это два варианта подключения WAN с коммутацией пакетов."
+                }
+            ]
+        }
+    ]
+}
