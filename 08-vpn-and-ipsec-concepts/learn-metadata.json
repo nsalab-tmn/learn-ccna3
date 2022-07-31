@@ -12,13 +12,25 @@
             "$ref": "./08.01-vpn-technology/learn-metadata.json"
         },
         {
+            "$ref": "./08.01.05-vpn-technology-quiz/learn-metadata.json"
+        },
+        {
             "$ref": "./08.02-types-of-vpns/learn-metadata.json"
+        },
+        {
+            "$ref": "./08.02.08-types-of-vpns-quiz/learn-metadata.json"
         },
         {
             "$ref": "./08.03-ipsec/learn-metadata.json"
         },
         {
+            "$ref": "./08.03.09-ipsec-quiz/learn-metadata.json"
+        },
+        {
             "$ref": "./08.04-summary/learn-metadata.json"
+        },
+        {
+            "$ref": "./08.04.02-quiz/learn-metadata.json"
         }
     ]
 }
