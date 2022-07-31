@@ -12,22 +12,43 @@
             "$ref": "./14.01-automation-overview/learn-metadata.json"
         },
         {
+            "$ref": "./14.01.04-automation-overview-quiz/learn-metadata.json"
+        },
+        {
             "$ref": "./14.02-data-formats/learn-metadata.json"
+        },
+        {
+            "$ref": "./14.02.09-data-formats-quiz/learn-metadata.json"
         },
         {
             "$ref": "./14.03-apis/learn-metadata.json"
         },
         {
+            "$ref": "./14.03.06-apis-quiz/learn-metadata.json"
+        },
+        {
             "$ref": "./14.04-rest/learn-metadata.json"
+        },
+        {
+            "$ref": "./14.04.07-rest-quiz/learn-metadata.json"
         },
         {
             "$ref": "./14.05-configuration-management/learn-metadata.json"
         },
         {
+            "$ref": "./14.05.06-configuration-management-quiz/learn-metadata.json"
+        },
+        {
             "$ref": "./14.06-ibn-and-cisco-dna-center/learn-metadata.json"
         },
         {
+            "$ref": "./14.06.10-ibn-and-cisco-dna-center-quiz/learn-metadata.json"
+        },
+        {
             "$ref": "./14.07-summary/learn-metadata.json"
+        },
+        {
+            "$ref": "./14.07.02-quiz/learn-metadata.json"
         }
     ]
 }

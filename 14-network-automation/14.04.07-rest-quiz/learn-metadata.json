@@ -1,0 +1,153 @@
+{
+    "title": "Тест на понимание темы: Архитектура REST",
+    "materialType": "test",
+    "description": "Нажмите ``Начать прохождение`` для отображения вопросов и выберите самый подходящий ответ",
+    "difficulty": 1,
+    "duration": "PT0H30M",
+    "tags": {
+        "$ref": "../../material-tags.json"
+    },
+    "skills": {},
+    "passingScore": 100,
+    "assets": {
+        "$ref": "./assets"
+    },
+    "questions": [
+        {
+            "question": "Какие из следующих характеристик должен иметь API, чтобы считаться RESTful? (Выберите три варианта.)",
+            "answerType": "multiChoice",
+            "answers": [
+                {
+                    "answer": "С сохранением состояния",
+                    "correct": false,
+                    "comment": "API является RESTful, если он имеет следующие характеристики: архитектура типа клиент-сервер, без сохранения состояния и кэшируемый"
+                },
+                {
+                    "answer": "Без сохранения состояния",
+                    "correct": true
+                },
+                {
+                    "answer": "Кешируемый",
+                    "correct": true
+                },
+                {
+                    "answer": "Некешируемый",
+                    "correct": false,
+                    "comment": "API является RESTful, если он имеет следующие характеристики: архитектура типа клиент-сервер, без сохранения состояния и кэшируемый"
+                },
+                {
+                    "answer": "Архитектура типа клиент-сервер",
+                    "correct": true
+                },
+                {
+                    "answer": "Архитектура типа сервер-сервер",
+                    "correct": false,
+                    "comment": "API является RESTful, если он имеет следующие характеристики: архитектура типа клиент-сервер, без сохранения состояния и кэшируемый"
+                }
+            ]
+        },
+        {
+            "question": "Что из следующего является URL?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "https://www.cisco.com/c/en/us/solutions/design-zone.html#~all-guides",
+                    "correct": false,
+                    "comment": "URL-адрес определяет местоположение конкретного ресурса в сети без включения каких-либо фрагментов."
+                },
+                {
+                    "answer": "https://www.cisco.com/c/en/us/solutions/design-zone.html",
+                    "correct": true
+                },
+                {
+                    "answer": "www.cisco.com/c/en/us/solutions/design-zone.html",
+                    "correct": false,
+                    "comment": "URL-адрес определяет местоположение конкретного ресурса в сети без включения каких-либо фрагментов."
+                },
+                {
+                    "answer": "#~all-guides",
+                    "correct": false,
+                    "comment": "URL-адрес определяет местоположение конкретного ресурса в сети без включения каких-либо фрагментов."
+                }
+            ]
+        },
+        {
+            "question": "Что из следующего является URN?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "https://www.cisco.com/c/en/us/solutions/design-zone.html#~all-guides ",
+                    "correct": false,
+                    "comment": "URN идентифицирует только пространство имен ресурса без ссылки на протокол."
+                },
+                {
+                    "answer": "https://www.cisco.com/c/en/us/solutions/design-zone.html",
+                    "correct": false,
+                    "comment": "URN идентифицирует только пространство имен ресурса без ссылки на протокол."
+                },
+                {
+                    "answer": "www.cisco.com/c/en/us/solutions/design-zone.html",
+                    "correct": true
+                },
+                {
+                    "answer": "#~all-guides",
+                    "correct": false,
+                    "comment": "URN идентифицирует только пространство имен ресурса без ссылки на протокол."
+                }
+            ]
+        },
+        {
+            "question": "Что из следующего является URI?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "https://www.cisco.com/c/en/us/solutions/design-zone.html#~all-guides",
+                    "correct": true
+                },
+                {
+                    "answer": "https://www.cisco.com/c/en/us/solutions/design-zone.html",
+                    "correct": false,
+                    "comment": "URI включает в себя URN, URL, любую информацию о пути и любые фрагменты. Например, URI может перейти в определенное место на веб-странице, в то время как URL будет загружать верхнюю часть веб-страницы."
+                },
+                {
+                    "answer": "www.cisco.com/c/en/us/solutions/design-zone.html",
+                    "correct": false,
+                    "comment": "URI включает в себя URN, URL, любую информацию о пути и любые фрагменты. Например, URI может перейти в определенное место на веб-странице, в то время как URL будет загружать верхнюю часть веб-страницы."
+                },
+                {
+                    "answer": "#~all-guides",
+                    "correct": false,
+                    "comment": "URI включает в себя URN, URL, любую информацию о пути и любые фрагменты. Например, URI может перейти в определенное место на веб-странице, в то время как URL будет загружать верхнюю часть веб-страницы."
+                }
+            ]
+        },
+        {
+            "question": "Что из следующего составляет часть запроса RESTful? (Выберите три варианта.)",
+            "answerType": "multiChoice",
+            "answers": [
+                {
+                    "answer": "Ключ",
+                    "correct": true
+                },
+                {
+                    "answer": "Формат",
+                    "correct": true
+                },
+                {
+                    "answer": "Параметры",
+                    "correct": true
+                },
+                {
+                    "answer": "Ресурсы",
+                    "correct": false,
+                    "comment": "Части запроса API включают в себя формат данных, ключ аутентификации и параметры запроса."
+                },
+                {
+                    "answer": "API сервер",
+                    "correct": false,
+                    "comment": "Части запроса API включают в себя формат данных, ключ аутентификации и параметры запроса."
+                }
+            ]
+        }
+    ]
+}
