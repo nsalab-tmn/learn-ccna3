@@ -12,19 +12,37 @@
             "$ref": "./09.01-network-transmission-quality/learn-metadata.json"
         },
         {
+            "$ref": "./09.01.05-network-transmission-quality-quiz/learn-metadata.json"
+        },
+        {
             "$ref": "./09.02-traffic-characteristics/learn-metadata.json"
+        },
+        {
+            "$ref": "./09.02.06-traffic-characteristics-quiz/learn-metadata.json"
         },
         {
             "$ref": "./09.03-queuing-algorithms/learn-metadata.json"
         },
         {
+            "$ref": "./09.03.07-queuing-algorithms-quiz/learn-metadata.json"
+        },
+        {
             "$ref": "./09.04-qos-models/learn-metadata.json"
+        },
+        {
+            "$ref": "./09.04.06-qos-models-quiz/learn-metadata.json"
         },
         {
             "$ref": "./09.05-qos-implementation-techniques/learn-metadata.json"
         },
         {
+            "$ref": "./09.05.14-qos-implementation-techniques-quiz/learn-metadata.json"
+        },
+        {
             "$ref": "./09.06-summary/learn-metadata.json"
+        },
+        {
+            "$ref": "./09.06.02-quiz/learn-metadata.json"
         }
     ]
 }
