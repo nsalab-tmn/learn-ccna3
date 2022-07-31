@@ -12,13 +12,25 @@
             "$ref": "./12.01-network-documentation/learn-metadata.json"
         },
         {
+            "$ref": "./12.01.09-network-documentation-quiz/learn-metadata.json"
+        },
+        {
             "$ref": "./12.02-troubleshooting-process/learn-metadata.json"
+        },
+        {
+            "$ref": "./12.02.08-troubleshooting-process-quiz/learn-metadata.json"
         },
         {
             "$ref": "./12.03-troubleshooting-tools/learn-metadata.json"
         },
         {
+            "$ref": "./12.03.05-troubleshooting-tools-quiz/learn-metadata.json"
+        },
+        {
             "$ref": "./12.04-symptoms-and-causes-of-network-problems/learn-metadata.json"
+        },
+        {
+            "$ref": "./12.04.07-symptoms-and-causes-of-network-problems-quiz/learn-metadata.json"
         },
         {
             "$ref": "./12.05-troubleshooting-ip-connectivity/learn-metadata.json"
@@ -31,6 +43,9 @@
         },
         {
             "$ref": "./12.06.02-lab-troubleshooting-challenge-use-documentation-to-solve-issues/learn-metadata.json"
+        },
+        {
+            "$ref": "./12.06.04-quiz/learn-metadata.json"
         },
         {
             "$ref": "./12.07-summary/learn-metadata.json"
