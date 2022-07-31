@@ -18,6 +18,9 @@
             "$ref": "./10.02-device-discovery-with-lldp/learn-metadata.json"
         },
         {
+            "$ref": "./10.02.05-device-discovery-with-lldp-quiz/learn-metadata.json"
+        },
+        {
             "$ref": "./10.02.06-lab-use-lldp-to-map-a-network/learn-metadata.json"
         },
         {
@@ -30,7 +33,13 @@
             "$ref": "./10.04-snmp/learn-metadata.json"
         },
         {
+            "$ref": "./10.04.05-snmp-quiz/learn-metadata.json"
+        },
+        {
             "$ref": "./10.05-syslog/learn-metadata.json"
+        },
+        {
+            "$ref": "./10.05.06-syslog-quiz/learn-metadata.json"
         },
         {
             "$ref": "./10.06-router-and-switch-file-maintenance/learn-metadata.json"
@@ -52,6 +61,9 @@
         },
         {
             "$ref": "./10.08.01-lab-configure-cdp-lldp-and-ntp/learn-metadata.json"
+        },
+        {
+            "$ref": "./10.08.04-quiz/learn-metadata.json"
         },
         {
             "$ref": "./10.09-summary/learn-metadata.json"

@@ -1,0 +1,157 @@
+{
+    "title": "Тест на понимание темы: SNMP",
+    "materialType": "test",
+    "description": "Нажмите ``Начать прохождение`` для отображения вопросов и выберите самый подходящий ответ",
+    "difficulty": 1,
+    "duration": "PT0H30M",
+    "tags": {
+        "$ref": "../../material-tags.json"
+    },
+    "skills": {},
+    "passingScore": 100,
+    "assets": {
+        "$ref": "./assets"
+    },
+    "questions": [
+        {
+            "question": "Какая версия SNMP проверяет подлинность источника сообщений управления?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "Версия 2",
+                    "correct": false,
+                    "comment": "SNMPv3 включает проверку подлинности, чтобы определить, что сообщение получено из допустимого источника."
+                },
+                {
+                    "answer": "Версия 3",
+                    "correct": true
+                },
+                {
+                    "answer": "Обе версии",
+                    "correct": false,
+                    "comment": "SNMPv3 включает проверку подлинности, чтобы определить, что сообщение получено из допустимого источника."
+                }
+            ]
+        },
+        {
+            "question": "Какая версия SNMP предоставляет сервисы для моделей обеспечения безопасности?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "Версия 2",
+                    "correct": false,
+                    "comment": "SNMPv2 и SNMPv3 предоставляют услуги, соответствующие моделям безопасности."
+                },
+                {
+                    "answer": "Версия 3",
+                    "correct": false,
+                    "comment": "SNMPv2 и SNMPv3 предоставляют услуги, соответствующие моделям безопасности."
+                },
+                {
+                    "answer": "Обе версии",
+                    "correct": true
+                }
+            ]
+        },
+        {
+            "question": "Какая версия SNMP не обеспечивает шифрование сообщения управления?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "Версия 2",
+                    "correct": true
+                },
+                {
+                    "answer": "Версия 3",
+                    "correct": false,
+                    "comment": "SNMPv2 не обеспечивает проверку подлинности источника и шифрование сообщений."
+                },
+                {
+                    "answer": "Обе версии",
+                    "correct": false,
+                    "comment": "SNMPv2 не обеспечивает проверку подлинности источника и шифрование сообщений."
+                }
+            ]
+        },
+        {
+            "question": "Какая версия SNMP поддерживается программным обеспечением Cisco IOS?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "Версия 2",
+                    "correct": false,
+                    "comment": "Cisco IOS поддерживает и SNMPv2, и SNMPv3."
+                },
+                {
+                    "answer": "Версия 3",
+                    "correct": false,
+                    "comment": "Cisco IOS поддерживает и SNMPv2, и SNMPv3."
+                },
+                {
+                    "answer": "Обе версии",
+                    "correct": true
+                }
+            ]
+        },
+        {
+            "question": "Какая версия SNMP включает расширенные коды ошибок с типами?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "Версия 2",
+                    "correct": true
+                },
+                {
+                    "answer": "Версия 3",
+                    "correct": false,
+                    "comment": "Коды возврата по ошибке в SNMPv2c включают тип ошибки."
+                },
+                {
+                    "answer": "Обе версии",
+                    "correct": false,
+                    "comment": "Коды возврата по ошибке в SNMPv2c включают тип ошибки."
+                }
+            ]
+        },
+        {
+            "question": "Какая версия SNMP использует формы обеспечения информационной безопасности на основе сообществ?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "Версия 2",
+                    "correct": true
+                },
+                {
+                    "answer": "Версия 3",
+                    "correct": false,
+                    "comment": "В SNMPv1 и SNMPv2 используется модель безопасности на основе сообществ (community)."
+                },
+                {
+                    "answer": "Обе версии",
+                    "correct": false,
+                    "comment": "В SNMPv1 и SNMPv2 используется модель безопасности на основе сообществ (community)."
+                }
+            ]
+        },
+        {
+            "question": "Какая версия SNMP используется для обеспечения совместимости и включает отчеты о целостности сообщений.",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "Версия 2",
+                    "correct": false,
+                    "comment": "SNMPv3 включает целостность сообщений, чтобы гарантировать, что пакет не был изменен во время передачи."
+                },
+                {
+                    "answer": "Версия 3",
+                    "correct": true
+                },
+                {
+                    "answer": "Обе версии",
+                    "correct": false,
+                    "comment": "SNMPv3 включает целостность сообщений, чтобы гарантировать, что пакет не был изменен во время передачи."
+                }
+            ]
+        }
+    ]
+}
