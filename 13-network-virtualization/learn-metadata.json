@@ -12,19 +12,37 @@
             "$ref": "./13.01-cloud-computing/learn-metadata.json"
         },
         {
+            "$ref": "./13.01.06-cloud-computing-quiz/learn-metadata.json"
+        },
+        {
             "$ref": "./13.02-virtualization/learn-metadata.json"
+        },
+        {
+            "$ref": "./13.02.07-virtualization-quiz/learn-metadata.json"
         },
         {
             "$ref": "./13.03-virtual-network-infrastructure/learn-metadata.json"
         },
         {
+            "$ref": "./13.03.04-virtual-network-infrastructure-quiz/learn-metadata.json"
+        },
+        {
             "$ref": "./13.04-software-defined-networking/learn-metadata.json"
+        },
+        {
+            "$ref": "./13.04.05-software-defined-networking-quiz/learn-metadata.json"
         },
         {
             "$ref": "./13.05-controllers/learn-metadata.json"
         },
         {
+            "$ref": "./13.05.08-controllers-quiz/learn-metadata.json"
+        },
+        {
             "$ref": "./13.06-module-practice-and-quiz/learn-metadata.json"
+        },
+        {
+            "$ref": "./13.06.03-quiz/learn-metadata.json"
         },
         {
             "$ref": "./13.07-summary/learn-metadata.json"
