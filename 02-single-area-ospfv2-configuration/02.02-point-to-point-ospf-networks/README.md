@@ -254,19 +254,3 @@ O        10.10.1.0/24 [110/2] via 10.1.1.5, 00:00:30, GigabitEthernet0/0/0
 
 **Примечание:** На момент написания этой статьи Packet Tracer не поддерживает  команду   **ip ospf network point-to-point** на интерфейсах Gigabit Ethernet. Тем не менее, он поддерживается на интерфейсах Loopback.
 
-<!-- 2.2.13 -->
-##  Packet tracer — конфигурация OSPFv2  для одной области  с сетями «точка-точка»
-
-В этом задании Packet Tracer вы настраиваете  OSPFv2  для одной области следующим образом:
-
-* Явная конфигурация Router ID
-* Команда **network**  на R1 с использованием маски подсети, основанной на маске подсети.
-* Команда **network**  на  R2 с использованием шаблонной  маски из четырех нулей.
-* Команда **ip ospf**  interface  на R3.
-* Настройте пассивные интерфейсы.
-* Проверьте работу OSPF с помощью команд **show ip protocols**  и **show ip route** .
-
-[конфигурация OSPFv2  для одной области  с сетями «точка-точка» (pdf)](./assets/2.2.13-packet-tracer---point-to-point-single-area-ospfv2-configuration_ru-RU.pdf)
-
-[конфигурация OSPFv2  для одной области  с сетями «точка-точка» (pka)](./assets/2.2.13-packet-tracer---point-to-point-single-area-ospfv2-configuration_ru-RU.pka)
-

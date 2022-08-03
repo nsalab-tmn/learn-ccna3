@@ -188,12 +188,3 @@ R1#
 <!-- 2.6.5 -->
 <!-- syntax -->
 
-<!-- 2.6.6 -->
-## Работа в симуляторе: проверка OSPFv2 для одной области
-
-В этом действии Packet Tracer вы будете использовать различные команды для проверки конфигурации OSPFv2 для одной зоны.
-
-[проверка OSPFv2 для одной области (pdf)](./assets/2.6.6-packet-tracer---verify-single-area-ospfv2_ru-RU.pdf)
-
-[проверка OSPFv2 для одной области (pka)](./assets/2.6.6-packet-tracer---verify-single-area-ospfv2_ru-RU.pka)
-
