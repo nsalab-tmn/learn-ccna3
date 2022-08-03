@@ -36,9 +36,6 @@
             "$ref": "./07.05-internet-based-connectivity/learn-metadata.json"
         },
         {
-            "$ref": "./07.06-module-practice/learn-metadata.json"
-        },
-        {
             "$ref": "./07.06.01-lab-wan-concepts/learn-metadata.json"
         },
         {
