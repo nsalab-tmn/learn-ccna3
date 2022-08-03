@@ -196,15 +196,3 @@ ip nat pool NAT-POOL1 209.165.200.226 209.165.200.240 netmask 255.255.255.224
 ip nat inside source list 1 pool NAT-POOL1
 ```
 
-<!-- 6.5.6 -->
-## Работа в симуляторе: Настройка динамического NAT
-
-В рамках данного упражнения Packet Tracer необходимо решить следующие задачи:
-
-* Настройка динамического преобразования NAT
-* Проверьте реализацию NAT
-
-[Настройка динамического NAT (pdf)](./assets/6.5.6-packet-tracer---configure-dynamic-nat_ru-RU.pdf)
-
-[Настройка динамического NAT (pka)](./assets/6.5.6-packet-tracer---configure-dynamic-nat_ru-RU.pka)
-
