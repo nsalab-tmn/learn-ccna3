@@ -31,5 +31,21 @@
     },
     "deploy": {
         "$ref": "./deploy"
+    },
+    "answerSchema": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+            "q_1": {
+                "type": "string",
+                "title": "1. Какая команда используется для перехода в режим конфигурации расширенного списка доступа с именем **ACL**?",
+                "placeholder": "Enter your answer here"
+            },
+            "q_2": {
+                "type": "string",
+                "title": "2. На каком интерфейсе должен применяться именованный ACL и в каком направлении?",
+                "placeholder": "Enter your answer here"
+            }
+        }
     }
 }

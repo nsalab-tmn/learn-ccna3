@@ -31,5 +31,56 @@
     },
     "deploy": {
         "$ref": "./deploy"
+    },
+    "answerSchema": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+            "q_1": {
+                "type": "string",
+                "title": "1. Отправьте эхо-запрос от Branch PC на Enterprise Web Server. Была ли проверка успешной? Дайте пояснение.",
+                "placeholder": "Enter your answer here"
+            },
+            "q_2": {
+                "type": "string",
+                "title": "2. Какая инструкция ACL разрешала или отклоняла пинг между этими двумя устройствами? Перечислите имя или номер списка доступа, маршрутизатор, на котором он был применен, и конкретную строку, сопоставляемую трафиком.",
+                "placeholder": "Enter your answer here"
+            },
+            "q_3": {
+                "type": "string",
+                "title": "3. Попытка выполнить эхо-запрос с ПК -1 в локальной сети 1 HQ на сервер филиала. Была ли проверка успешной? Дайте пояснение.",
+                "placeholder": "Enter your answer here"
+            },
+            "q_4": {
+                "type": "string",
+                "title": "4. Какая инструкция ACL разрешала или отклоняла пинг между этими двумя устройствами?",
+                "placeholder": "Enter your answer here"
+            },
+            "q_5": {
+                "type": "string",
+                "title": "5. Откройте веб-браузер на внешнем сервере и попытайтесь открыть веб-страницу, хранящуюся на корпоративном веб-сервере. Успешно? Дайте пояснение.",
+                "placeholder": "Enter your answer here"
+            },
+            "q_6": {
+                "type": "string",
+                "title": "6. Какая инструкция ACL разрешала или отклоняла пинг между этими двумя устройствами?",
+                "placeholder": "Enter your answer here"
+            },
+            "q_7": {
+                "type": "string",
+                "title": "7. В командной строке на компьютере Internet User PC попытайтесь установить FTP-соединение с сервером филиала. Успешно ли FTP-соединение?",
+                "placeholder": "Enter your answer here"
+            },
+            "q_8": {
+                "type": "string",
+                "title": "8. Какой список доступа следует изменить, чтобы пользователи изИнтернета не могли подключаться к серверу филиалов по FTP?",
+                "placeholder": "Enter your answer here"
+            },
+            "q_9": {
+                "type": "string",
+                "title": "9. Какие операторы должны быть добавлены в список доступа, чтобы запретить этот трафик?",
+                "placeholder": "Enter your answer here"
+            }
+        }
     }
 }
