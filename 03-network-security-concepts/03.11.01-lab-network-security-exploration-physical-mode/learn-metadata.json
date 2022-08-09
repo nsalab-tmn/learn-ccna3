@@ -31,5 +31,141 @@
     },
     "deploy": {
         "$ref": "./deploy"
+    },
+    "answerSchema": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+            "q_1": {
+                "type": "string",
+                "title": "1. Как называется маршрутизатор, который находится в стойке?",
+                "placeholder": "Enter your answer here"
+            },
+            "q_2": {
+                "type": "string",
+                "title": "2. Какой тип кабеля используется для подключения **DC_Edge-RTR1** к поставщику услуг Интернета?",
+                "placeholder": "Enter your answer here"
+            },
+            "q_3": {
+                "type": "string",
+                "title": "3. Какое устройство выполняет преобразование частных адресов дата-центра в публичные?",
+                "placeholder": "Enter your answer here"
+            },
+            "q_4": {
+                "type": "string",
+                "title": "4. На каком интерфейсе и в каком направлении применяется этот список доступа?",
+                "placeholder": "Enter your answer here"
+            },
+            "q_5": {
+                "type": "string",
+                "title": "5. Какие устройства в настоящее время используются для защиты сетевого оборудования в центре обработки данных от факторов окружающей среды и физической безопасности?",
+                "placeholder": "Enter your answer here"
+            },
+            "q_6": {
+                "type": "string",
+                "title": "6. Каков текущий уровень влажности?",
+                "placeholder": "Enter your answer here"
+            },
+            "q_7": {
+                "type": "string",
+                "title": "7. При какой температуре будет включаться кондиционер?",
+                "placeholder": "Enter your answer here"
+            },
+            "q_8": {
+                "type": "string",
+                "title": "8. Какой IP-адрес для термостата **Thermostat**?",
+                "placeholder": "Enter your answer here"
+            },
+            "q_9": {
+                "type": "string",
+                "title": "9. Как клиенты подключаются к сети Coffee Shop?",
+                "placeholder": "Enter your answer here"
+            },
+            "q_10": {
+                "type": "string",
+                "title": "10. Какой тип среды используется для подключения кафе к Интернету?",
+                "placeholder": "Enter your answer here"
+            },
+            "q_11": {
+                "type": "string",
+                "title": "11. Какие устройства используются для создания сети **Coffee Shop** ?",
+                "placeholder": "Enter your answer here"
+            },
+            "q_12": {
+                "type": "string",
+                "title": "12. Какие IP-адреса у них?",
+                "placeholder": "Enter your answer here"
+            },
+            "q_13": {
+                "type": "string",
+                "title": "13. Как **Home** подключается к **ISP**?",
+                "placeholder": "Enter your answer here"
+            },
+            "q_14": {
+                "type": "string",
+                "title": "14. Какие устройства требуют подключения внутри дома?",
+                "placeholder": "Enter your answer here"
+            },
+            "q_15": {
+                "type": "string",
+                "title": "15. Какой IP-адрес назначен этому ноутбуку?",
+                "placeholder": "Enter your answer here"
+            },
+            "q_16": {
+                "type": "string",
+                "title": "16. Каков его IP-адрес?",
+                "placeholder": "Enter your answer here"
+            },
+            "q_17": {
+                "type": "string",
+                "title": "17. Какой статус указан в выходных данных команды?",
+                "placeholder": "Enter your answer here"
+            },
+            "q_18": {
+                "type": "string",
+                "title": "18. Какой IP-адрес назначения указан в выходных данных? Можете ли вы определить, к какому устройству принадлежит этот IP-адрес?",
+                "placeholder": "Enter your answer here"
+            },
+            "q_19": {
+                "type": "string",
+                "title": "19. Каково имя файла в списке?",
+                "placeholder": "Enter your answer here"
+            },
+            "q_20": {
+                "type": "string",
+                "title": "20. Какое первое слово в сообщении?",
+                "placeholder": "Enter your answer here"
+            },
+            "q_21": {
+                "type": "string",
+                "title": "21. Была ли проверка успешной? Поясните свой ответ.",
+                "placeholder": "Enter your answer here"
+            },
+            "q_22": {
+                "type": "string",
+                "title": "22. Напишите три примера VPN-сервисов/приложений, которые можно использовать в открытой беспроводной сети для защиты данных",
+                "placeholder": "Enter your answer here"
+            },
+            "q_23": {
+                "type": "string",
+                "title": "23. Получил ли ноутбук IP-адресацию от **Home Router**? Поясните свой ответ.",
+                "placeholder": "Enter your answer here"
+            },
+            "q_24": {
+                "type": "string",
+                "title": "24. Успешно ли выполнены эхо-запросы? Поясните свой ответ.",
+                "placeholder": "Enter your answer here"
+            },
+            "q_25": {
+                "type": "string",
+                "title": "25. Перечислите все различные подходы к обеспечению безопасности, которые использовались в этой ситуации.",
+                "placeholder": "Enter your answer here"
+            },
+            "q_26": {
+                "type": "string",
+                "title": "26. В ситуации, когда используется реальное оборудование, перечислите другие предложения, которые могут быть добавлены в этот сценарий, чтобы сделать его более безопасным.",
+                "placeholder": "Enter your answer here"
+            }
+        }
     }
 }
