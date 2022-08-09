@@ -31,5 +31,16 @@
     },
     "deploy": {
         "$ref": "./deploy"
+    },
+    "answerSchema": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+            "q_1": {
+                "type": "string",
+                "title": "1. Что произойдёт, если более 2 устройств попытаются осуществить доступ к Интернету?",
+                "placeholder": "Enter your answer here"
+            }
+        }
     }
 }

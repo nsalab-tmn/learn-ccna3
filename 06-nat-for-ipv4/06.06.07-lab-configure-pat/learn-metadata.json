@@ -31,5 +31,26 @@
     },
     "deploy": {
         "$ref": "./deploy"
+    },
+    "answerSchema": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+            "q_1": {
+                "type": "string",
+                "title": "1. Все ли соединения были успешными?",
+                "placeholder": "Enter your answer here"
+            },
+            "q_2": {
+                "type": "string",
+                "title": "2. Все ли соединения были успешными?",
+                "placeholder": "Enter your answer here"
+            },
+            "q_3": {
+                "type": "string",
+                "title": "3. Почему **R2** не перечисляет никаких динамических сопоставлений?",
+                "placeholder": "Enter your answer here"
+            }
+        }
     }
 }
