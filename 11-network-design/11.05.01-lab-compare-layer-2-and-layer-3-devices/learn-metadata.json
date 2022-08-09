@@ -31,5 +31,101 @@
     },
     "deploy": {
         "$ref": "./deploy"
+    },
+    "answerSchema": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+            "q_1": {
+                "type": "string",
+                "title": "1. Сколько физических портов установлено в каждом отдельном коммутаторе?",
+                "placeholder": "Enter your answer here"
+            },
+            "q_2": {
+                "type": "string",
+                "title": "2. Сколько портов Fast Ethernet и Gigabit Ethernet имеет каждый из коммутаторов?",
+                "placeholder": "Enter your answer here"
+            },
+            "q_3": {
+                "type": "string",
+                "title": "3. Укажите скорость передачи данных на интерфейсах Fast Ethernet и Gigabit Ethernet каждого коммутатора.",
+                "placeholder": "Enter your answer here"
+            },
+            "q_4": {
+                "type": "string",
+                "title": "4. Является ли какой-либо из коммутаторов модульным?",
+                "placeholder": "Enter your answer here"
+            },
+            "q_5": {
+                "type": "string",
+                "title": "5. В чем заключается различие между коммутатором 2-го уровня и коммутатором 3-го уровня?",
+                "placeholder": "Enter your answer here"
+            },
+            "q_6": {
+                "type": "string",
+                "title": "6. В чем заключается различие между физическим интерфейсом коммутатора и интерфейсом VLAN?",
+                "placeholder": "Enter your answer here"
+            },
+            "q_7": {
+                "type": "string",
+                "title": "7. На каких уровнях действуют коммутаторы 2960 и 3650?",
+                "placeholder": "Enter your answer here"
+            },
+            "q_8": {
+                "type": "string",
+                "title": "8. Заметили ли вы между ними какие-либо различия?",
+                "placeholder": "Enter your answer here"
+            },
+            "q_9": {
+                "type": "string",
+                "title": "9. Как вы думаете, почему команда не работает на **ASw-1** , но работает на **D1**?",
+                "placeholder": "Enter your answer here"
+            },
+            "q_10": {
+                "type": "string",
+                "title": "10. Заметили ли вы какие-либо различия или сходства в этих таблицах?",
+                "placeholder": "Enter your answer here"
+            },
+            "q_11": {
+                "type": "string",
+                "title": "11. Заметили ли вы какие-либо различия или сходства в настройках этих коммутаторов?",
+                "placeholder": "Enter your answer here"
+            },
+            "q_12": {
+                "type": "string",
+                "title": "12. С помощью какой команды можно назначить IP-адрес на одном из физических интерфейсов D1?",
+                "placeholder": "Enter your answer here"
+            },
+            "q_13": {
+                "type": "string",
+                "title": "13. Заметили ли вы какие-либо различия или сходства в этих таблицах?",
+                "placeholder": "Enter your answer here"
+            },
+            "q_14": {
+                "type": "string",
+                "title": "14. Что присутствует сейчас, чего не было в конфигурации R1 и D1?",
+                "placeholder": "Enter your answer here"
+            },
+            "q_15": {
+                "type": "string",
+                "title": "15. Какая сеть находится в таблице маршрутизации D2, которая была извлечена из R2?",
+                "placeholder": "Enter your answer here"
+            },
+            "q_16": {
+                "type": "string",
+                "title": "16. Какое устройство используется для обеспечения связи между сетями?",
+                "placeholder": "Enter your answer here"
+            },
+            "q_17": {
+                "type": "string",
+                "title": "17. Почему отправка эхо-запросов через сети была успешной, несмотря на отсутствие маршрутизаторов в сетях?",
+                "placeholder": "Enter your answer here"
+            },
+            "q_18": {
+                "type": "string",
+                "title": "18. Как это возможно, если коммутаторы являются устройствами уровня 2?",
+                "placeholder": "Enter your answer here"
+            }
+        }
     }
 }
