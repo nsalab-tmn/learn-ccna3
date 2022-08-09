@@ -31,5 +31,26 @@
     },
     "deploy": {
         "$ref": "./deploy"
+    },
+    "answerSchema": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+            "q_1": {
+                "type": "string",
+                "title": "1. Почему ping-запросы прошли успешно?",
+                "placeholder": "Enter your answer here"
+            },
+            "q_2": {
+                "type": "string",
+                "title": "2. Почему возникает сбой при отправке ping-запросов? (**Подсказка**. Для анализа используйте режим моделирования или просмотрите конфигурации маршрутизатора.)",
+                "placeholder": "Enter your answer here"
+            },
+            "q_3": {
+                "type": "string",
+                "title": "3. К какому интерфейсу и в каком направлении применяется ACL?",
+                "placeholder": "Enter your answer here"
+            }
+        }
     }
 }
