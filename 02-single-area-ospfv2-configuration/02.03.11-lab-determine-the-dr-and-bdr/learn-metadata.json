@@ -31,5 +31,56 @@
     },
     "deploy": {
         "$ref": "./deploy"
+    },
+    "answerSchema": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+            "q_1": {
+                "type": "string",
+                "title": "1. Какой маршрутизатор является DR?",
+                "placeholder": "Enter your answer here"
+            },
+            "q_2": {
+                "type": "string",
+                "title": "2. Какой маршрутизатор является BDR?",
+                "placeholder": "Enter your answer here"
+            },
+            "q_3": {
+                "type": "string",
+                "title": "3. Каково состояние OSPF маршрутизатора RA?",
+                "placeholder": "Enter your answer here"
+            },
+            "q_4": {
+                "type": "string",
+                "title": "4. По результатам команды debug определите, какой маршрутизатор был выбран в качестве DR, а какой в качестве BDR?",
+                "placeholder": "Enter your answer here"
+            },
+            "q_5": {
+                "type": "string",
+                "title": "5. Изменились ли роли DR и BDR? Дайте пояснение.",
+                "placeholder": "Enter your answer here"
+            },
+            "q_6": {
+                "type": "string",
+                "title": "6. По результатам команды debug на маршрутизаторе **RA** определите, какой маршрутизатор был выбран в качестве DR, а какой BDR?",
+                "placeholder": "Enter your answer here"
+            },
+            "q_7": {
+                "type": "string",
+                "title": "7. Дождитесь, когда будут выбраны новые DR и BDR. Изменились ли роли DR и BDR? Дайте пояснение.",
+                "placeholder": "Enter your answer here"
+            },
+            "q_8": {
+                "type": "string",
+                "title": "8. Каков статус маршрутизатора RC сейчас?",
+                "placeholder": "Enter your answer here"
+            },
+            "q_9": {
+                "type": "string",
+                "title": "9. Согласно выводу команды **show ip ospf neighbor** на маршрутизаторах, какой маршрутизатор теперь является DR, а какой - BDR?",
+                "placeholder": "Enter your answer here"
+            }
+        }
     }
 }

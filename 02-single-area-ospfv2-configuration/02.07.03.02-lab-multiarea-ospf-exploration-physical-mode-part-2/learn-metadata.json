@@ -31,5 +31,86 @@
     },
     "deploy": {
         "$ref": "./deploy"
+    },
+    "answerSchema": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+            "q_1": {
+                "type": "string",
+                "title": "1. Как сети из области Area 51 отображаются в таблице маршрутизации A1_ABR1?",
+                "placeholder": "Enter your answer here"
+            },
+            "q_2": {
+                "type": "string",
+                "title": "2. Какие области отображаются на маршрутизаторе A1_ABR1?",
+                "placeholder": "Enter your answer here"
+            },
+            "q_3": {
+                "type": "string",
+                "title": "3. Запишите, сколько раз алгоритм SPF выполнялся в каждой области.",
+                "placeholder": "Enter your answer here"
+            },
+            "q_4": {
+                "type": "string",
+                "title": "4. Запишите количество выполнений алгоритма SPF.",
+                "placeholder": "Enter your answer here"
+            },
+            "q_5": {
+                "type": "string",
+                "title": "5. Запишите количество отображаемых маршрутов IA.",
+                "placeholder": "Enter your answer here"
+            },
+            "q_6": {
+                "type": "string",
+                "title": "6. Запишите количество выполнений алгоритма SPF.",
+                "placeholder": "Enter your answer here"
+            },
+            "q_7": {
+                "type": "string",
+                "title": "7. Увеличилось ли число выполнений алгоритма SPF?",
+                "placeholder": "Enter your answer here"
+            },
+            "q_8": {
+                "type": "string",
+                "title": "8. Запишите количество выполнений алгоритма SPF.",
+                "placeholder": "Enter your answer here"
+            },
+            "q_9": {
+                "type": "string",
+                "title": "9. Какие сети отсутствуют в таблице маршрутизации A51_R4?",
+                "placeholder": "Enter your answer here"
+            },
+            "q_10": {
+                "type": "string",
+                "title": "10. Сводный маршрут для Area 51 все еще находится в таблице маршрутизации?",
+                "placeholder": "Enter your answer here"
+            },
+            "q_11": {
+                "type": "string",
+                "title": "11. Увеличено ли значение числа выполнения алгоритма SPF с шага 1g?",
+                "placeholder": "Enter your answer here"
+            },
+            "q_12": {
+                "type": "string",
+                "title": "12. Будет ли успешным **ping** или **tracert** между A1_PC1 (192.168.1.10) и A51_PC1 (10.20.4.10)?",
+                "placeholder": "Enter your answer here"
+            },
+            "q_13": {
+                "type": "string",
+                "title": "13. Если уборщица случайно удалила кабель на A1_R1 (192.168.1.0/24), как это повлияет на маршрутизаторы в Area 51?",
+                "placeholder": "Enter your answer here"
+            },
+            "q_14": {
+                "type": "string",
+                "title": "14. Что можно сделать, чтобы избежать пересчета в Area 51?",
+                "placeholder": "Enter your answer here"
+            },
+            "q_15": {
+                "type": "string",
+                "title": "15. Чем отличаются выходные данные таблицы маршрутизации после суммирования?",
+                "placeholder": "Enter your answer here"
+            }
+        }
     }
 }

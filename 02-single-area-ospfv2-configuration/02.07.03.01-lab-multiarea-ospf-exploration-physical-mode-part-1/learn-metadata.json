@@ -31,5 +31,41 @@
     },
     "deploy": {
         "$ref": "./deploy"
+    },
+    "answerSchema": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+            "q_1": {
+                "type": "string",
+                "title": "1. Запишите, сколько раз был выполнен алгоритм SPF.",
+                "placeholder": "Enter your answer here"
+            },
+            "q_2": {
+                "type": "string",
+                "title": "2. Сколько областей отображается на маршрутизаторе B1_R4?",
+                "placeholder": "Enter your answer here"
+            },
+            "q_3": {
+                "type": "string",
+                "title": "3. Запишите, сколько раз был выполнен алгоритм SPF.",
+                "placeholder": "Enter your answer here"
+            },
+            "q_4": {
+                "type": "string",
+                "title": "4. Запишите, сколько раз был выполнен алгоритм SPF.",
+                "placeholder": "Enter your answer here"
+            },
+            "q_5": {
+                "type": "string",
+                "title": "5. Сколько областей отображается на маршрутизаторе B2_R3?",
+                "placeholder": "Enter your answer here"
+            },
+            "q_6": {
+                "type": "string",
+                "title": "6. Отсутствуют ли две сети в обеих таблицах маршрутизации и увеличены ли счетчики выполнения алгоритма SPF?",
+                "placeholder": "Enter your answer here"
+            }
+        }
     }
 }

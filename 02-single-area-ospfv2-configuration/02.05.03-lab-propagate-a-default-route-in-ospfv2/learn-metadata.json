@@ -31,5 +31,26 @@
     },
     "deploy": {
         "$ref": "./deploy"
+    },
+    "answerSchema": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+            "q_1": {
+                "type": "string",
+                "title": "1. Успешно ли выполнен эхо-запрос?",
+                "placeholder": "Enter your answer here"
+            },
+            "q_2": {
+                "type": "string",
+                "title": "2. Какое сообщение вы получили и какое устройство выдало сообщение?",
+                "placeholder": "Enter your answer here"
+            },
+            "q_3": {
+                "type": "string",
+                "title": "3. Какой оператор присутствует в таблицах маршрутизации, который указывает на то, что эхо-запрос на веб-сервер завершится неудачей?",
+                "placeholder": "Enter your answer here"
+            }
+        }
     }
 }

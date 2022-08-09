@@ -31,5 +31,46 @@
     },
     "deploy": {
         "$ref": "./deploy"
+    },
+    "answerSchema": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+            "q_1": {
+                "type": "string",
+                "title": "1. Сколько инструкций требуется для настройки OSPF для маршрутизации всех сетей, подключенных к маршрутизатору R1?",
+                "placeholder": "Enter your answer here"
+            },
+            "q_2": {
+                "type": "string",
+                "title": "2. LAN, подключенная к маршрутизатору R1, имеет маску /24. Что эквивалентно этой маске в десятичном представлении с точкой разделителем?",
+                "placeholder": "Enter your answer here"
+            },
+            "q_3": {
+                "type": "string",
+                "title": "3. Какое значение получится, если вычесть десятичное представление маски подсети из 255.255.255.255?",
+                "placeholder": "Enter your answer here"
+            },
+            "q_4": {
+                "type": "string",
+                "title": "4. Какой десятичный эквивалент маски подсети /30?",
+                "placeholder": "Enter your answer here"
+            },
+            "q_5": {
+                "type": "string",
+                "title": "5. Вычтите десятичное представление маски /30 из 255.255.255.255. Каков результат?",
+                "placeholder": "Enter your answer here"
+            },
+            "q_6": {
+                "type": "string",
+                "title": "6. Какие интерфейсы на R3 следует настроить с помощью OSPF?",
+                "placeholder": "Enter your answer here"
+            },
+            "q_7": {
+                "type": "string",
+                "title": "7. Какие интерфейсы на R1, R2 и R3 являются интерфейсами LAN?",
+                "placeholder": "Enter your answer here"
+            }
+        }
     }
 }

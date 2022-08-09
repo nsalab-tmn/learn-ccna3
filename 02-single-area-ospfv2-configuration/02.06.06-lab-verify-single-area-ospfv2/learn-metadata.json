@@ -31,5 +31,81 @@
     },
     "deploy": {
         "$ref": "./deploy"
+    },
+    "answerSchema": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+            "q_1": {
+                "type": "string",
+                "title": "1. Как маршрутизатор **R1** получил маршрут по умолчанию?",
+                "placeholder": "Enter your answer here"
+            },
+            "q_2": {
+                "type": "string",
+                "title": "2. От какого маршрутизатора **R1** получил маршрут по умолчанию?",
+                "placeholder": "Enter your answer here"
+            },
+            "q_3": {
+                "type": "string",
+                "title": "3. Как отфильтровать выходные данные **show ip route**, чтобы показать только маршруты, полученные через OSPF?",
+                "placeholder": "Enter your answer here"
+            },
+            "q_4": {
+                "type": "string",
+                "title": "4. Какие маршрутизаторы сформировали смежность с маршрутизатором **R1**?",
+                "placeholder": "Enter your answer here"
+            },
+            "q_5": {
+                "type": "string",
+                "title": "5. Каковы идентификаторы маршрутизатора и состояние маршрутизаторов, показанные в выходных данных команды?",
+                "placeholder": "Enter your answer here"
+            },
+            "q_6": {
+                "type": "string",
+                "title": "6. Все ли соседние маршрутизаторы показаны в выходных данных?",
+                "placeholder": "Enter your answer here"
+            },
+            "q_7": {
+                "type": "string",
+                "title": "7. Как маршрутизатор R2 узнал маршрут по умолчанию к провайдеру услуг Интернета?",
+                "placeholder": "Enter your answer here"
+            },
+            "q_8": {
+                "type": "string",
+                "title": "8. Какой тип сети OSPF подключен к этому интерфейсу?",
+                "placeholder": "Enter your answer here"
+            },
+            "q_9": {
+                "type": "string",
+                "title": "9. Отправляются ли hello пакеты OSPF через этот интерфейс? Дайте пояснение.",
+                "placeholder": "Enter your answer here"
+            },
+            "q_10": {
+                "type": "string",
+                "title": "10. Какие сети маршрутизирует R3?",
+                "placeholder": "Enter your answer here"
+            },
+            "q_11": {
+                "type": "string",
+                "title": "11. Какой приоритет соседа отображается для соседних маршрутизаторов OSPF? Это значение по умолчанию.",
+                "placeholder": "Enter your answer here"
+            },
+            "q_12": {
+                "type": "string",
+                "title": "12. Какой интерфейс настроен так, чтобы не отправлять пакеты обновления OSPF?",
+                "placeholder": "Enter your answer here"
+            },
+            "q_13": {
+                "type": "string",
+                "title": "13. Какое состояние отображается для маршрутизатора **R3**?",
+                "placeholder": "Enter your answer here"
+            },
+            "q_14": {
+                "type": "string",
+                "title": "14. Почему состояние маршрутизатора R4 отличается от состояния R1 и R2?",
+                "placeholder": "Enter your answer here"
+            }
+        }
     }
 }
