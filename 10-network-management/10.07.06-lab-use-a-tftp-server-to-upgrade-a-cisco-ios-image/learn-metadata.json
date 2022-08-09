@@ -31,5 +31,21 @@
     },
     "deploy": {
         "$ref": "./deploy"
+    },
+    "answerSchema": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+            "q_1": {
+                "type": "string",
+                "title": "1. Какие образы IOS, хранящиеся на сервере, совместимы с 1941?",
+                "placeholder": "Enter your answer here"
+            },
+            "q_2": {
+                "type": "string",
+                "title": "2. Сколько образов IOS находится во флеш-памяти?",
+                "placeholder": "Enter your answer here"
+            }
+        }
     }
 }

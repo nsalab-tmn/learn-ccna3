@@ -31,5 +31,26 @@
     },
     "deploy": {
         "$ref": "./deploy"
+    },
+    "answerSchema": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+            "q_1": {
+                "type": "string",
+                "title": "1. Какая еще потенциально конфиденциальная информация содержится в результатах выполнения команды, помимо IP-адреса соседнего устройства?",
+                "placeholder": "Enter your answer here"
+            },
+            "q_2": {
+                "type": "string",
+                "title": "2. Какие сведения отображаются в командной строке после успешного подключения по протоколу SSH?",
+                "placeholder": "Enter your answer here"
+            },
+            "q_3": {
+                "type": "string",
+                "title": "3. Какое имя присвоено коммутатору в сети, которому не назначен IP-адрес?",
+                "placeholder": "Enter your answer here"
+            }
+        }
     }
 }

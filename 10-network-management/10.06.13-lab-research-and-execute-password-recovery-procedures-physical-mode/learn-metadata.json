@@ -31,5 +31,66 @@
     },
     "deploy": {
         "$ref": "./deploy"
+    },
+    "answerSchema": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+            "q_1": {
+                "type": "string",
+                "title": "1. Для чего необходим регистр конфигурации?",
+                "placeholder": "Enter your answer here"
+            },
+            "q_2": {
+                "type": "string",
+                "title": "2. С помощью какой команды можно изменить регистр конфигурации в глобальном режиме конфигурации?",
+                "placeholder": "Enter your answer here"
+            },
+            "q_3": {
+                "type": "string",
+                "title": "3. С помощью какой команды можно изменить регистр конфигурации в ROMMON режиме?",
+                "placeholder": "Enter your answer here"
+            },
+            "q_4": {
+                "type": "string",
+                "title": "4. Чем отличаются эти значения регистра конфигурации?",
+                "placeholder": "Enter your answer here"
+            },
+            "q_5": {
+                "type": "string",
+                "title": "5. Как определить текущий параметр регистра конфигурации?",
+                "placeholder": "Enter your answer here"
+            },
+            "q_6": {
+                "type": "string",
+                "title": "6. Опишите процесс перехода в режим ROMMON.",
+                "placeholder": "Enter your answer here"
+            },
+            "q_7": {
+                "type": "string",
+                "title": "7. Какие команды необходимы для входа в интерфейс ROMMON?",
+                "placeholder": "Enter your answer here"
+            },
+            "q_8": {
+                "type": "string",
+                "title": "8. Какое сообщение должно появиться во время загрузки маршрутизатора?",
+                "placeholder": "Enter your answer here"
+            },
+            "q_9": {
+                "type": "string",
+                "title": "9. Зачем загрузочную конфигурацию необходимо загрузить в текущую?",
+                "placeholder": "Enter your answer here"
+            },
+            "q_10": {
+                "type": "string",
+                "title": "10. Почему важно вернуть исходное значение регистра конфигурации после восстановления пароля",
+                "placeholder": "Enter your answer here"
+            },
+            "q_11": {
+                "type": "string",
+                "title": "11. Почему чрезвычайно важно обеспечить физическую защиту маршрутизатора от несанкционированного доступа?",
+                "placeholder": "Enter your answer here"
+            }
+        }
     }
 }

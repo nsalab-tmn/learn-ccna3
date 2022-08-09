@@ -31,5 +31,31 @@
     },
     "deploy": {
         "$ref": "./deploy"
+    },
+    "answerSchema": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+            "q_1": {
+                "type": "string",
+                "title": "1. Какие изменения были внесены?",
+                "placeholder": "Enter your answer here"
+            },
+            "q_2": {
+                "type": "string",
+                "title": "2. Все ли интерфейсы активны?",
+                "placeholder": "Enter your answer here"
+            },
+            "q_3": {
+                "type": "string",
+                "title": "3. Какой специальный символ неоднократно показывает, что файл IOS успешно копируется на TFTP-сервер?",
+                "placeholder": "Enter your answer here"
+            },
+            "q_4": {
+                "type": "string",
+                "title": "4. Был ли скопирован файл IOS **c1900-universalk9-mz.SPA.151-4.M4.bin** на TFTP-сервер?",
+                "placeholder": "Enter your answer here"
+            }
+        }
     }
 }
