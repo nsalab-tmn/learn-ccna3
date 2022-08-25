@@ -36,6 +36,9 @@
             "$ref": "./03.05-common-network-attacks/learn-metadata.json"
         },
         {
+            "$ref": "./03.05.07-lab-social-engineering/learn-metadata.json"
+        },
+        {
             "$ref": "./03.05.10-common-network-attacks-quiz/learn-metadata.json"
         },
         {
@@ -52,6 +55,9 @@
         },
         {
             "$ref": "./03.08-ip-services/learn-metadata.json"
+        },
+        {
+            "$ref": "./03.08.08-lab-explore-dns-traffic/learn-metadata.json"
         },
         {
             "$ref": "./03.09-network-security-best-practices/learn-metadata.json"

@@ -1,0 +1,63 @@
+{
+    "title": "Лабораторная работа: Социальная инженерия",
+    "shortName": "lab-3.5.7",
+    "materialType": "lab",
+    "description": "**Цель лабораторной работы**: исследование методов социальной инженерии и способов противодействия ей.",
+    "difficulty": 1,
+    "duration": "PT0H22M",
+    "tags": {
+        "$ref": "../../material-tags.json"
+    },
+    "credentialsSchema": {
+        "userName": {
+            "title": "Имя пользователя",
+            "source": "learn_user"
+        },
+        "password": {
+            "title": "Пароль",
+            "source": "learn_password"
+        },
+        "consoleURL": {
+            "title": "Адрес портала",
+            "value": "https://portal.skillscloud.company"
+        }
+    },
+    "skills": {},
+    "text": {
+        "$ref": "./README.md"
+    },
+    "assets": {
+        "$ref": "./assets"
+    },
+    "answerSchema": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+            "q_1": {
+                "type": "string",
+                "title": "1. Обобщите три примера, найденные в вашем исследовании.",
+                "placeholder": "Enter your answer here"
+            },
+            "q_2": {
+                "type": "string",
+                "title": "2. Опишите три примера, найденные в вашем исследовании.",
+                "placeholder": "Enter your answer here"
+            },
+            "q_3": {
+                "type": "string",
+                "title": "3. Есть ли в вашей компании или образовательном учреждении процедуры, помогающие предотвратить социальную инженерию?",
+                "placeholder": "Enter your answer here"
+            },
+            "q_4": {
+                "type": "string",
+                "title": "4. Если да, то каковы некоторые из этих процедур?",
+                "placeholder": "Enter your answer here"
+            },
+            "q_5": {
+                "type": "string",
+                "title": "5. Используйте Интернет для изучения процедур, которые используют другие организации, чтобы помешать социальным инженерам получить доступ к конфиденциальной информации. Перечислите свои выводы.",
+                "placeholder": "Enter your answer here"
+            }
+        }
+    }
+}
