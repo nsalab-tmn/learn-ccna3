@@ -36,6 +36,9 @@
             "$ref": "./10.04.05-snmp-quiz/learn-metadata.json"
         },
         {
+            "$ref": "./10.04.10-lab-research-network-monitoring-software/learn-metadata.json"
+        },
+        {
             "$ref": "./10.05-syslog/learn-metadata.json"
         },
         {
