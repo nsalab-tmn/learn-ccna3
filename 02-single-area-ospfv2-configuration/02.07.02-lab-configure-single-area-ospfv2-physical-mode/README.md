@@ -1,3 +1,12 @@
+
+---
+
+> **ВАЖНО**
+> 
+> Форма для ответов на вопросы будет доступна только при развертывании лабораторной работы 
+
+---
+
 ## Топология
 
 ![This topology has 2 routers, 2 switches, 1 web server and 1 laptop. ](./assets/topology.png)
