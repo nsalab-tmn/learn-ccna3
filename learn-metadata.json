@@ -13,6 +13,7 @@
     { "$ref": "./06-nat-for-ipv4/learn-metadata.json" },
     { "$ref": "./07-wan-concepts/learn-metadata.json" },
     { "$ref": "./08-vpn-and-ipsec-concepts/learn-metadata.json" },
+    { "$ref": "./06-08-exam/learn-metadata.json" },
     { "$ref": "./09-qos-concepts/learn-metadata.json" },
     { "$ref": "./10-network-management/learn-metadata.json" },
     { "$ref": "./11-network-design/learn-metadata.json" },
