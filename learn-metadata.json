@@ -1,5 +1,5 @@
 {
-  "title": "Корпоративные сети, безопасность и автоматизация сети v7.2 (ENSA)",
+  "title": "Корпоративные сети, безопасность и автоматизация сети",
   "materialType": "learning-path",
   "tags": { "$ref": "./material-tags.json" },
   "materials": [
@@ -21,6 +21,7 @@
     { "$ref": "./09-12-exam/learn-metadata.json" },
     { "$ref": "./13-network-virtualization/learn-metadata.json" },
     { "$ref": "./14-network-automation/learn-metadata.json" },
-    { "$ref": "./13-14-exam/learn-metadata.json" }
+    { "$ref": "./13-14-exam/learn-metadata.json" },
+    { "$ref": "./final-exam/learn-metadata.json" }
   ]
 }
