@@ -22,6 +22,7 @@
     { "$ref": "./13-network-virtualization/learn-metadata.json" },
     { "$ref": "./14-network-automation/learn-metadata.json" },
     { "$ref": "./13-14-exam/learn-metadata.json" },
+    { "$ref": "./final-lab/learn-metadata.json" },
     { "$ref": "./final-exam/learn-metadata.json" }
   ]
 }
