@@ -20,6 +20,7 @@
     { "$ref": "./12-network-troubleshooting/learn-metadata.json" },
     { "$ref": "./09-12-exam/learn-metadata.json" },
     { "$ref": "./13-network-virtualization/learn-metadata.json" },
-    { "$ref": "./14-network-automation/learn-metadata.json" }
+    { "$ref": "./14-network-automation/learn-metadata.json" },
+    { "$ref": "./13-14-exam/learn-metadata.json" }
   ]
 }
