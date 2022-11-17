@@ -1,0 +1,51 @@
+Criterions:
+- code: A
+  name: R1
+  subCriterions:
+  - name: NTP Client
+    code: 1
+    aspects:
+    - name: NTP Server Information.Address
+      code: 1
+      description: null
+      skills: NTP
+      max_mark: 10
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."R1"."NTP Client"."NTP Server Information"."Address"."status"'
+              value: Correct
+      result: null
+- code: B
+  name: R2
+  subCriterions:
+  - name: NTP Client
+    code: 1
+    aspects:
+    - name: NTP Server Information.Address
+      code: 1
+      description: null
+      skills: NTP
+      max_mark: 10
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."R2"."NTP Client"."NTP Server Information"."Address"."status"'
+              value: Correct
+      result: null

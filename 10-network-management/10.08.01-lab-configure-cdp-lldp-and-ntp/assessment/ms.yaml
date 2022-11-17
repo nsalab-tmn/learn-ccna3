@@ -1,0 +1,448 @@
+Criterions:
+- code: A
+  name: BR-SW-2
+  subCriterions:
+  - name: Ports
+    code: 1
+    aspects:
+    - name: FastEthernet0/1.CDP Enabled
+      code: 1
+      description: null
+      skills: Configure CDP Interfaces
+      max_mark: 7
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."BR-SW-2"."Ports"."FastEthernet0/1"."CDP Enabled"."status"'
+              value: Correct
+      result: null
+- code: B
+  name: BR-SW-3
+  subCriterions:
+  - name: Ports
+    code: 1
+    aspects:
+    - name: FastEthernet0/1.CDP Enabled
+      code: 1
+      description: null
+      skills: Configure CDP Interfaces
+      max_mark: 7
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."BR-SW-3"."Ports"."FastEthernet0/1"."CDP Enabled"."status"'
+              value: Correct
+      result: null
+- code: C
+  name: Branch
+  subCriterions:
+  - name: CDP
+    code: 1
+    aspects:
+    - name: CDP Enabled
+      code: 1
+      description: null
+      skills: Configure CDP
+      max_mark: 5
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."Branch"."CDP"."CDP Enabled"."status"'
+              value: Correct
+      result: null
+- code: D
+  name: HQ
+  subCriterions:
+  - name: CDP
+    code: 1
+    aspects:
+    - name: CDP Enabled
+      code: 1
+      description: null
+      skills: Configure CDP
+      max_mark: 5
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."HQ"."CDP"."CDP Enabled"."status"'
+              value: Correct
+      result: null
+  - name: LLDP
+    code: 2
+    aspects:
+    - name: Enabled
+      code: 1
+      description: null
+      skills: Configure LLDP
+      max_mark: 5
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."HQ"."LLDP"."Enabled"."status"'
+              value: Correct
+      result: null
+  - name: NTP
+    code: 3
+    aspects:
+    - name: NTP Server Information.Address0
+      code: 1
+      description: null
+      skills: Configure NTP Server
+      max_mark: 8
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."HQ"."NTP"."NTP Server Information"."Address0"."status"'
+              value: Correct
+      result: null
+  - name: Ports
+    code: 4
+    aspects:
+    - name: GigabitEthernet0/0/0.LLDP Receive
+      code: 1
+      description: null
+      skills: Configure LLDP Interfaces
+      max_mark: 4
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."HQ"."Ports"."GigabitEthernet0/0/0"."LLDP
+                Receive"."status"'
+              value: Correct
+      result: null
+    - name: GigabitEthernet0/0/0.LLDP Transmit
+      code: 2
+      description: null
+      skills: Configure LLDP Interfaces
+      max_mark: 4
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."HQ"."Ports"."GigabitEthernet0/0/0"."LLDP
+                Transmit"."status"'
+              value: Correct
+      result: null
+    - name: GigabitEthernet0/0/1.LLDP Receive
+      code: 3
+      description: null
+      skills: Configure LLDP Interfaces
+      max_mark: 4
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."HQ"."Ports"."GigabitEthernet0/0/1"."LLDP
+                Receive"."status"'
+              value: Correct
+      result: null
+    - name: GigabitEthernet0/0/1.LLDP Transmit
+      code: 4
+      description: null
+      skills: Configure LLDP Interfaces
+      max_mark: 4
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."HQ"."Ports"."GigabitEthernet0/0/1"."LLDP
+                Transmit"."status"'
+              value: Correct
+      result: null
+- code: E
+  name: HQ-SW-1
+  subCriterions:
+  - name: CDP
+    code: 1
+    aspects:
+    - name: CDP Enabled
+      code: 1
+      description: null
+      skills: Other
+      max_mark: 5
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."HQ-SW-1"."CDP"."CDP Enabled"."status"'
+              value: Correct
+      result: null
+  - name: LLDP
+    code: 2
+    aspects:
+    - name: Enabled
+      code: 1
+      description: null
+      skills: Configure LLDP
+      max_mark: 5
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."HQ-SW-1"."LLDP"."Enabled"."status"'
+              value: Correct
+      result: null
+  - name: Ports
+    code: 3
+    aspects:
+    - name: FastEthernet0/24.LLDP Receive
+      code: 1
+      description: null
+      skills: Configure LLDP Interfaces
+      max_mark: 4
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."HQ-SW-1"."Ports"."FastEthernet0/24"."LLDP
+                Receive"."status"'
+              value: Correct
+      result: null
+    - name: FastEthernet0/24.LLDP Transmit
+      code: 2
+      description: null
+      skills: Configure LLDP Interfaces
+      max_mark: 4
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."HQ-SW-1"."Ports"."FastEthernet0/24"."LLDP
+                Transmit"."status"'
+              value: Correct
+      result: null
+    - name: GigabitEthernet0/1.LLDP Receive
+      code: 3
+      description: null
+      skills: Configure LLDP Interfaces
+      max_mark: 8
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."HQ-SW-1"."Ports"."GigabitEthernet0/1"."LLDP
+                Receive"."status"'
+              value: Correct
+      result: null
+- code: F
+  name: HQ-SW-2
+  subCriterions:
+  - name: CDP
+    code: 1
+    aspects:
+    - name: CDP Enabled
+      code: 1
+      description: null
+      skills: Other
+      max_mark: 5
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."HQ-SW-2"."CDP"."CDP Enabled"."status"'
+              value: Correct
+      result: null
+  - name: LLDP
+    code: 2
+    aspects:
+    - name: Enabled
+      code: 1
+      description: null
+      skills: Configure LLDP
+      max_mark: 5
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."HQ-SW-2"."LLDP"."Enabled"."status"'
+              value: Correct
+      result: null
+  - name: Ports
+    code: 3
+    aspects:
+    - name: FastEthernet0/1.LLDP Receive
+      code: 1
+      description: null
+      skills: Configure LLDP Interfaces
+      max_mark: 4
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."HQ-SW-2"."Ports"."FastEthernet0/1"."LLDP
+                Receive"."status"'
+              value: Correct
+      result: null
+    - name: FastEthernet0/1.LLDP Transmit
+      code: 2
+      description: null
+      skills: Configure LLDP Interfaces
+      max_mark: 4
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."HQ-SW-2"."Ports"."FastEthernet0/1"."LLDP
+                Transmit"."status"'
+              value: Correct
+      result: null
+    - name: GigabitEthernet0/1.LLDP Receive
+      code: 3
+      description: null
+      skills: Configure LLDP Interfaces
+      max_mark: 8
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."HQ-SW-2"."Ports"."GigabitEthernet0/1"."LLDP
+                Receive"."status"'
+              value: Correct
+      result: null

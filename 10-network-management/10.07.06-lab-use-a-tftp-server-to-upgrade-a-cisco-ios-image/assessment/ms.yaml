@@ -1,0 +1,118 @@
+Criterions:
+- code: A
+  name: R2
+  subCriterions:
+  - name: Boot System Files
+    code: 1
+    aspects:
+    - name: 'flash c1900-universalk9-mz.SPA.155-3.M4a.bin '
+      code: 1
+      description: null
+      skills: Boot System
+      max_mark: 5
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."R2"."Boot System Files"."flash c1900-universalk9-mz"."SPA"."155-3"."M4a"."bin
+                "."status"'
+              value: Correct
+      result: null
+  - name: Flash Files
+    code: 2
+    aspects:
+    - name: c1900-universalk9-mz.SPA.155-3.M4a.bin
+      code: 1
+      description: null
+      skills: TFTP File Transfer
+      max_mark: 20
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."R2"."Flash Files"."c1900-universalk9-mz"."SPA"."155-3"."M4a"."bin"."status"'
+              value: Correct
+      result: null
+- code: B
+  name: S1
+  subCriterions:
+  - name: Flash Files
+    code: 1
+    aspects:
+    - name: c2960-lanbasek9-mz.150-2.SE4.bin
+      code: 1
+      description: null
+      skills: Other
+      max_mark: 20
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."S1"."Flash Files"."c2960-lanbasek9-mz"."150-2"."SE4"."bin"."status"'
+              value: Correct
+      result: null
+- code: C
+  name: TFTP Server
+  subCriterions:
+  - name: TFTP Server
+    code: 1
+    aspects:
+    - name: ServerFiles.isr4300-universalk9.03.16.05.S.155-3.S5-ext.SPA.bin
+      code: 1
+      description: null
+      skills: Ip
+      max_mark: 20
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."TFTP Server"."TFTP Server"."ServerFiles"."isr4300-universalk9"."03"."16"."05"."S"."155-3"."S5-ext"."SPA"."bin"."status"'
+              value: Correct
+      result: null
+    - name: TFTP Enable
+      code: 2
+      description: null
+      skills: IOS Image Management
+      max_mark: 10
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."TFTP Server"."TFTP Server"."TFTP Enable"."status"'
+              value: Correct
+      result: null

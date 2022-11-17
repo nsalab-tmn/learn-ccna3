@@ -1,0 +1,170 @@
+Criterions:
+- code: A
+  name: Router3
+  subCriterions:
+  - name: Console Line
+    code: 1
+    aspects:
+    - name: Password
+      code: 1
+      description: null
+      skills: Other
+      max_mark: 1
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."Router3"."Console Line"."Password"."status"'
+              value: Correct
+      result: null
+  - name: Ports
+    code: 2
+    aspects:
+    - name: GigabitEthernet0/0.Port Status
+      code: 1
+      description: null
+      skills: Physical
+      max_mark: 1
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."Router3"."Ports"."GigabitEthernet0/0"."Port
+                Status"."status"'
+              value: Correct
+      result: null
+    - name: GigabitEthernet0/2.Port Status
+      code: 2
+      description: null
+      skills: Physical
+      max_mark: 1
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."Router3"."Ports"."GigabitEthernet0/2"."Port
+                Status"."status"'
+              value: Correct
+      result: null
+  - name: VTY Lines
+    code: 3
+    aspects:
+    - name: VTY Line 0.Password
+      code: 1
+      description: null
+      skills: Other
+      max_mark: 1
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."Router3"."VTY Lines"."VTY Line 0"."Password"."status"'
+              value: Correct
+      result: null
+  - name: Miscellaneous
+    code: 4
+    aspects:
+    - name: Banner MOTD
+      code: 1
+      description: null
+      skills: Other
+      max_mark: 1
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."Router3"."Banner MOTD"."status"'
+              value: Correct
+      result: null
+    - name: Config-Register
+      code: 2
+      description: null
+      skills: Other
+      max_mark: 1
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."Router3"."Config-Register"."status"'
+              value: Correct
+      result: null
+    - name: Enable Secret
+      code: 3
+      description: null
+      skills: Other
+      max_mark: 1
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."Router3"."Enable Secret"."status"'
+              value: Correct
+      result: null
+    - name: Host Name
+      code: 4
+      description: null
+      skills: Other
+      max_mark: 1
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."Router3"."Host Name"."status"'
+              value: Correct
+      result: null

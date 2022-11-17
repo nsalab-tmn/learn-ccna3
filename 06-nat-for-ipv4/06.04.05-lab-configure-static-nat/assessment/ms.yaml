@@ -1,0 +1,68 @@
+Criterions:
+- code: A
+  name: R1
+  subCriterions:
+  - name: NAT
+    code: 1
+    aspects:
+    - name: Inside Source Static.NAT Source Setting 1
+      code: 1
+      description: null
+      skills: Static NAT Configuration
+      max_mark: 50
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."R1"."NAT"."Inside Source Static"."NAT Source
+                Setting 1"."status"'
+              value: Correct
+      result: null
+  - name: Ports
+    code: 2
+    aspects:
+    - name: GigabitEthernet0/0.NAT Mode
+      code: 1
+      description: null
+      skills: NAT Interface Configuration
+      max_mark: 25
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."R1"."Ports"."GigabitEthernet0/0"."NAT Mode"."status"'
+              value: Correct
+      result: null
+    - name: Serial0/0/0.NAT Mode
+      code: 2
+      description: null
+      skills: NAT Interface Configuration
+      max_mark: 25
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."R1"."Ports"."Serial0/0/0"."NAT Mode"."status"'
+              value: Correct
+      result: null

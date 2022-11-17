@@ -1,0 +1,139 @@
+Criterions:
+- code: A
+  name: Edge
+  subCriterions:
+  - name: CDP
+    code: 1
+    aspects:
+    - name: CDP Enabled
+      code: 1
+      description: null
+      skills: Other
+      max_mark: 10
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."Edge"."CDP"."CDP Enabled"."status"'
+              value: Correct
+      result: null
+  - name: LLDP
+    code: 2
+    aspects:
+    - name: Enabled
+      code: 1
+      description: null
+      skills: Ip
+      max_mark: 1
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."Edge"."LLDP"."Enabled"."status"'
+              value: Correct
+      result: null
+  - name: Ports
+    code: 3
+    aspects:
+    - name: GigabitEthernet0/0.LLDP Transmit
+      code: 1
+      description: null
+      skills: LLDP Configuration
+      max_mark: 10
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."Edge"."Ports"."GigabitEthernet0/0"."LLDP
+                Transmit"."status"'
+              value: Correct
+      result: null
+- code: B
+  name: RBO-Edge
+  subCriterions:
+  - name: LLDP
+    code: 1
+    aspects:
+    - name: Enabled
+      code: 1
+      description: null
+      skills: Ip
+      max_mark: 1
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."RBO-Edge"."LLDP"."Enabled"."status"'
+              value: Correct
+      result: null
+  - name: Ports
+    code: 2
+    aspects:
+    - name: GigabitEthernet0/0.LLDP Receive
+      code: 1
+      description: null
+      skills: LLDP Configuration
+      max_mark: 10
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."RBO-Edge"."Ports"."GigabitEthernet0/0"."LLDP
+                Receive"."status"'
+              value: Correct
+      result: null
+    - name: GigabitEthernet0/0.LLDP Transmit
+      code: 2
+      description: null
+      skills: LLDP Configuration
+      max_mark: 10
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."RBO-Edge"."Ports"."GigabitEthernet0/0"."LLDP
+                Transmit"."status"'
+              value: Correct
+      result: null

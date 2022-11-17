@@ -1,0 +1,177 @@
+Criterions:
+- code: A
+  name: Branch
+  subCriterions:
+  - name: ACL
+    code: 1
+    aspects:
+    - name: branch_to_hq
+      code: 1
+      description: null
+      skills: Configure Named Extended ACL 4
+      max_mark: 25
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."Branch"."ACL"."branch_to_hq"."status"'
+              value: Correct
+      result: null
+  - name: Ports
+    code: 2
+    aspects:
+    - name: Serial0/1/1.Access-group Out
+      code: 1
+      description: null
+      skills: Place Named Extended  ACL 4
+      max_mark: 15
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."Branch"."Ports"."Serial0/1/1"."Access-group
+                Out"."status"'
+              value: Correct
+      result: null
+- code: B
+  name: HQ
+  subCriterions:
+  - name: ACL
+    code: 1
+    aspects:
+    - name: '101'
+      code: 1
+      description: null
+      skills: Configure Extended ACL 1
+      max_mark: 25
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."HQ"."ACL"."101"."status"'
+              value: Correct
+      result: null
+    - name: '111'
+      code: 2
+      description: null
+      skills: Configure Extended ACL 2
+      max_mark: 20
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."HQ"."ACL"."111"."status"'
+              value: Correct
+      result: null
+    - name: vty_block
+      code: 3
+      description: null
+      skills: Configure Named Standard ACL 3
+      max_mark: 15
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."HQ"."ACL"."vty_block"."status"'
+              value: Correct
+      result: null
+  - name: Ports
+    code: 2
+    aspects:
+    - name: GigabitEthernet0/0/0.Access-group In
+      code: 1
+      description: null
+      skills: Place Extended ACL 2
+      max_mark: 10
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."HQ"."Ports"."GigabitEthernet0/0/0"."Access-group
+                In"."status"'
+              value: Correct
+      result: null
+    - name: Serial0/1/0.Access-group In
+      code: 2
+      description: null
+      skills: Place Extended ACL 1
+      max_mark: 10
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."HQ"."Ports"."Serial0/1/0"."Access-group In"."status"'
+              value: Correct
+      result: null
+  - name: VTY Lines
+    code: 3
+    aspects:
+    - name: VTY Line 0.Access Control In
+      code: 1
+      description: null
+      skills: Place Named Standard ACL 3
+      max_mark: 8
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."HQ"."VTY Lines"."VTY Line 0"."Access Control
+                In"."status"'
+              value: Correct
+      result: null

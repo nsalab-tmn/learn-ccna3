@@ -1,0 +1,236 @@
+Criterions:
+- code: A
+  name: R1
+  subCriterions:
+  - name: ACL
+    code: 1
+    aspects:
+    - name: '1'
+      code: 1
+      description: null
+      skills: ACL
+      max_mark: 5
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."R1"."ACL"."1"."status"'
+              value: Correct
+      result: null
+  - name: NAT
+    code: 2
+    aspects:
+    - name: Inside Source List.NAT Source Setting 1
+      code: 1
+      description: null
+      skills: Dynamic PAT Configuration
+      max_mark: 20
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."R1"."NAT"."Inside Source List"."NAT Source
+                Setting 1"."status"'
+              value: Correct
+      result: null
+    - name: Pools.Pool Name 1
+      code: 2
+      description: null
+      skills: Dynamic PAT Configuration
+      max_mark: 20
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."R1"."NAT"."Pools"."Pool Name 1"."status"'
+              value: Correct
+      result: null
+  - name: Ports
+    code: 3
+    aspects:
+    - name: GigabitEthernet0/0/0.NAT Mode
+      code: 1
+      description: null
+      skills: NAT Interface Configuration
+      max_mark: 5
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."R1"."Ports"."GigabitEthernet0/0/0"."NAT Mode"."status"'
+              value: Correct
+      result: null
+    - name: GigabitEthernet0/0/1.NAT Mode
+      code: 2
+      description: null
+      skills: NAT Interface Configuration
+      max_mark: 5
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."R1"."Ports"."GigabitEthernet0/0/1"."NAT Mode"."status"'
+              value: Correct
+      result: null
+    - name: Serial0/1/0.NAT Mode
+      code: 3
+      description: null
+      skills: NAT Interface Configuration
+      max_mark: 5
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."R1"."Ports"."Serial0/1/0"."NAT Mode"."status"'
+              value: Correct
+      result: null
+- code: B
+  name: R2
+  subCriterions:
+  - name: ACL
+    code: 1
+    aspects:
+    - name: '2'
+      code: 1
+      description: null
+      skills: ACL
+      max_mark: 5
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."R2"."ACL"."2"."status"'
+              value: Correct
+      result: null
+  - name: NAT
+    code: 2
+    aspects:
+    - name: Inside Source List.NAT Source Setting 1
+      code: 1
+      description: null
+      skills: PAT Single Address Configuration
+      max_mark: 20
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."R2"."NAT"."Inside Source List"."NAT Source
+                Setting 1"."status"'
+              value: Correct
+      result: null
+  - name: Ports
+    code: 3
+    aspects:
+    - name: GigabitEthernet0/0/0.NAT Mode
+      code: 1
+      description: null
+      skills: NAT Interface Configuration
+      max_mark: 5
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."R2"."Ports"."GigabitEthernet0/0/0"."NAT Mode"."status"'
+              value: Correct
+      result: null
+    - name: GigabitEthernet0/0/1.NAT Mode
+      code: 2
+      description: null
+      skills: NAT Interface Configuration
+      max_mark: 5
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."R2"."Ports"."GigabitEthernet0/0/1"."NAT Mode"."status"'
+              value: Correct
+      result: null
+    - name: Serial0/1/1.NAT Mode
+      code: 3
+      description: null
+      skills: NAT Interface Configuration
+      max_mark: 5
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."R2"."Ports"."Serial0/1/1"."NAT Mode"."status"'
+              value: Correct
+      result: null

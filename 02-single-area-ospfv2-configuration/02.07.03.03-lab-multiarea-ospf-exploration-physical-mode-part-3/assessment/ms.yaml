@@ -1,0 +1,116 @@
+Criterions:
+- code: A
+  name: A2_ABR1
+  subCriterions:
+  - name: OSPF
+    code: 1
+    aspects:
+    - name: Process ID 1.Area Range.Range0
+      code: 1
+      description: null
+      skills: Routing
+      max_mark: 1
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."A2_ABR1"."OSPF"."Process ID 1"."Area Range"."Range0"."status"'
+              value: Correct
+      result: null
+    - name: Process ID 1.Networks.Route0
+      code: 2
+      description: null
+      skills: Routing
+      max_mark: 1
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."A2_ABR1"."OSPF"."Process ID 1"."Networks"."Route0"."status"'
+              value: Correct
+      result: null
+    - name: Process ID 1.Router ID
+      code: 3
+      description: null
+      skills: Routing
+      max_mark: 1
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."A2_ABR1"."OSPF"."Process ID 1"."Router ID"."status"'
+              value: Correct
+      result: null
+- code: B
+  name: WAN_R1
+  subCriterions:
+  - name: Ports
+    code: 1
+    aspects:
+    - name: GigabitEthernet1/0.Link to A1_ABR1.Connects to GigabitEthernet2/0
+      code: 1
+      description: null
+      skills: Physical
+      max_mark: 1
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."WAN_R1"."Ports"."GigabitEthernet1/0"."Link
+                to A1_ABR1"."Connects to GigabitEthernet2/0"."status"'
+              value: Correct
+      result: null
+- code: C
+  name: WAN_R2
+  subCriterions:
+  - name: Ports
+    code: 1
+    aspects:
+    - name: GigabitEthernet1/0.Link to A2_ABR1.Connects to GigabitEthernet0/0
+      code: 1
+      description: null
+      skills: Physical
+      max_mark: 1
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."WAN_R2"."Ports"."GigabitEthernet1/0"."Link
+                to A2_ABR1"."Connects to GigabitEthernet0/0"."status"'
+              value: Correct
+      result: null

@@ -1,0 +1,48 @@
+Criterions:
+- code: A
+  name: Branch-Edge
+  subCriterions:
+  - name: CDP
+    code: 1
+    aspects:
+    - name: CDP Enabled
+      code: 1
+      description: null
+      skills: Other
+      max_mark: 5
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."Branch-Edge"."CDP"."CDP Enabled"."status"'
+              value: Correct
+      result: null
+  - name: Ports
+    code: 2
+    aspects:
+    - name: Serial0/0/1.CDP Enabled
+      code: 1
+      description: null
+      skills: Other
+      max_mark: 5
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."Branch-Edge"."Ports"."Serial0/0/1"."CDP Enabled"."status"'
+              value: Correct
+      result: null

@@ -1,0 +1,97 @@
+Criterions:
+- code: A
+  name: R1
+  subCriterions:
+  - name: ACL
+    code: 1
+    aspects:
+    - name: BRANCH-OFFICE-POLICY
+      code: 1
+      description: null
+      skills: Standard Named ACL Configuration
+      max_mark: 10
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."R1"."ACL"."BRANCH-OFFICE-POLICY"."status"'
+              value: Correct
+      result: null
+  - name: Ports
+    code: 2
+    aspects:
+    - name: GigabitEthernet0/0/0.Access-group Out
+      code: 1
+      description: null
+      skills: ACL Placement
+      max_mark: 10
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."R1"."Ports"."GigabitEthernet0/0/0"."Access-group
+                Out"."status"'
+              value: Correct
+      result: null
+- code: B
+  name: R3
+  subCriterions:
+  - name: ACL
+    code: 1
+    aspects:
+    - name: '1'
+      code: 1
+      description: null
+      skills: Standard Numbered ACL Configuration
+      max_mark: 10
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."R3"."ACL"."1"."status"'
+              value: Correct
+      result: null
+  - name: Ports
+    code: 2
+    aspects:
+    - name: GigabitEthernet0/0/0.Access-group Out
+      code: 1
+      description: null
+      skills: ACL Placement
+      max_mark: 10
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."R3"."Ports"."GigabitEthernet0/0/0"."Access-group
+                Out"."status"'
+              value: Correct
+      result: null

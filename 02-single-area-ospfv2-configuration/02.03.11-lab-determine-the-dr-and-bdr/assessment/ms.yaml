@@ -1,0 +1,76 @@
+Criterions:
+- code: A
+  name: RA
+  subCriterions:
+  - name: Ports
+    code: 1
+    aspects:
+    - name: GigabitEthernet0/0.OSPF Priority
+      code: 1
+      description: null
+      skills: Modify OSPF Interface Priority
+      max_mark: 10
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."RA"."Ports"."GigabitEthernet0/0"."OSPF Priority"."status"'
+              value: Correct
+      result: null
+- code: B
+  name: RB
+  subCriterions:
+  - name: Ports
+    code: 1
+    aspects:
+    - name: GigabitEthernet0/0.OSPF Priority
+      code: 1
+      description: null
+      skills: Modify OSPF Interface Priority
+      max_mark: 10
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."RB"."Ports"."GigabitEthernet0/0"."OSPF Priority"."status"'
+              value: Correct
+      result: null
+- code: C
+  name: RC
+  subCriterions:
+  - name: Ports
+    code: 1
+    aspects:
+    - name: GigabitEthernet0/0.OSPF Priority
+      code: 1
+      description: null
+      skills: Modify OSPF Interface Priority
+      max_mark: 10
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."RC"."Ports"."GigabitEthernet0/0"."OSPF Priority"."status"'
+              value: Correct
+      result: null

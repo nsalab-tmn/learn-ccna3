@@ -1,0 +1,366 @@
+Criterions:
+- code: A
+  name: R1
+  subCriterions:
+  - name: OSPF
+    code: 1
+    aspects:
+    - name: Process ID 10.Networks.Route0
+      code: 1
+      description: null
+      skills: Routing
+      max_mark: 1
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."R1"."OSPF"."Process ID 10"."Networks"."Route0"."status"'
+              value: Correct
+      result: null
+    - name: Process ID 10.Networks.Route1
+      code: 2
+      description: null
+      skills: Routing
+      max_mark: 1
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."R1"."OSPF"."Process ID 10"."Networks"."Route1"."status"'
+              value: Correct
+      result: null
+    - name: Process ID 10.Networks.Route2
+      code: 3
+      description: null
+      skills: Routing
+      max_mark: 1
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."R1"."OSPF"."Process ID 10"."Networks"."Route2"."status"'
+              value: Correct
+      result: null
+    - name: Process ID 10.Passive Interface.GigabitEthernet0/0/0
+      code: 4
+      description: null
+      skills: Routing
+      max_mark: 1
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."R1"."OSPF"."Process ID 10"."Passive Interface"."GigabitEthernet0/0/0"."status"'
+              value: Correct
+      result: null
+    - name: Process ID 10.Router ID
+      code: 5
+      description: null
+      skills: Routing
+      max_mark: 1
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."R1"."OSPF"."Process ID 10"."Router ID"."status"'
+              value: Correct
+      result: null
+- code: B
+  name: R2
+  subCriterions:
+  - name: OSPF
+    code: 1
+    aspects:
+    - name: Process ID 10.Networks.Route0
+      code: 1
+      description: null
+      skills: Routing
+      max_mark: 1
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."R2"."OSPF"."Process ID 10"."Networks"."Route0"."status"'
+              value: Correct
+      result: null
+    - name: Process ID 10.Networks.Route1
+      code: 2
+      description: null
+      skills: Routing
+      max_mark: 1
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."R2"."OSPF"."Process ID 10"."Networks"."Route1"."status"'
+              value: Correct
+      result: null
+    - name: Process ID 10.Networks.Route2
+      code: 3
+      description: null
+      skills: Routing
+      max_mark: 1
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."R2"."OSPF"."Process ID 10"."Networks"."Route2"."status"'
+              value: Correct
+      result: null
+    - name: Process ID 10.Passive Interface.GigabitEthernet0/0/0
+      code: 4
+      description: null
+      skills: Routing
+      max_mark: 1
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."R2"."OSPF"."Process ID 10"."Passive Interface"."GigabitEthernet0/0/0"."status"'
+              value: Correct
+      result: null
+    - name: Process ID 10.Router ID
+      code: 5
+      description: null
+      skills: Routing
+      max_mark: 1
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."R2"."OSPF"."Process ID 10"."Router ID"."status"'
+              value: Correct
+      result: null
+- code: C
+  name: R3
+  subCriterions:
+  - name: OSPF
+    code: 1
+    aspects:
+    - name: Process ID 10.Passive Interface.GigabitEthernet0/0/0
+      code: 1
+      description: null
+      skills: Routing
+      max_mark: 1
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."R3"."OSPF"."Process ID 10"."Passive Interface"."GigabitEthernet0/0/0"."status"'
+              value: Correct
+      result: null
+    - name: Process ID 10.Router ID
+      code: 2
+      description: null
+      skills: Routing
+      max_mark: 1
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."R3"."OSPF"."Process ID 10"."Router ID"."status"'
+              value: Correct
+      result: null
+  - name: Ports
+    code: 2
+    aspects:
+    - name: GigabitEthernet0/0/0.OSPF Area
+      code: 1
+      description: null
+      skills: Routing
+      max_mark: 1
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."R3"."Ports"."GigabitEthernet0/0/0"."OSPF
+                Area"."status"'
+              value: Correct
+      result: null
+    - name: GigabitEthernet0/0/0.OSPF Id
+      code: 2
+      description: null
+      skills: Routing
+      max_mark: 1
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."R3"."Ports"."GigabitEthernet0/0/0"."OSPF
+                Id"."status"'
+              value: Correct
+      result: null
+    - name: Serial0/1/0.OSPF Area
+      code: 3
+      description: null
+      skills: Routing
+      max_mark: 1
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."R3"."Ports"."Serial0/1/0"."OSPF Area"."status"'
+              value: Correct
+      result: null
+    - name: Serial0/1/0.OSPF Id
+      code: 4
+      description: null
+      skills: Routing
+      max_mark: 1
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."R3"."Ports"."Serial0/1/0"."OSPF Id"."status"'
+              value: Correct
+      result: null
+    - name: Serial0/1/1.OSPF Area
+      code: 5
+      description: null
+      skills: Routing
+      max_mark: 1
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."R3"."Ports"."Serial0/1/1"."OSPF Area"."status"'
+              value: Correct
+      result: null
+    - name: Serial0/1/1.OSPF Id
+      code: 6
+      description: null
+      skills: Routing
+      max_mark: 1
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."R3"."Ports"."Serial0/1/1"."OSPF Id"."status"'
+              value: Correct
+      result: null

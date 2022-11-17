@@ -1,0 +1,591 @@
+Criterions:
+- code: A
+  name: PC1
+  subCriterions:
+  - name: Miscellaneous
+    code: 1
+    aspects:
+    - name: Default Gateway
+      code: 1
+      description: null
+      skills: DHCP
+      max_mark: 2
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."PC1"."Default Gateway"."status"'
+              value: Correct
+      result: null
+- code: B
+  name: PC3
+  subCriterions:
+  - name: Miscellaneous
+    code: 1
+    aspects:
+    - name: Default Gateway
+      code: 1
+      description: null
+      skills: DHCP
+      max_mark: 2
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."PC3"."Default Gateway"."status"'
+              value: Correct
+      result: null
+- code: C
+  name: PC4
+  subCriterions:
+  - name: Miscellaneous
+    code: 1
+    aspects:
+    - name: Default Gateway
+      code: 1
+      description: null
+      skills: DHCP
+      max_mark: 2
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."PC4"."Default Gateway"."status"'
+              value: Correct
+      result: null
+- code: D
+  name: R1
+  subCriterions:
+  - name: Ports
+    code: 1
+    aspects:
+    - name: GigabitEthernet0/0/0.OSPF Cost
+      code: 1
+      description: null
+      skills: WAN
+      max_mark: 6
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."R1"."Ports"."GigabitEthernet0/0/0"."OSPF
+                Cost"."status"'
+              value: Correct
+      result: null
+- code: E
+  name: R2
+  subCriterions:
+  - name: OSPF
+    code: 1
+    aspects:
+    - name: Process ID 1.Default Information
+      code: 1
+      description: null
+      skills: IPv4 Routing
+      max_mark: 5
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."R2"."OSPF"."Process ID 1"."Default Information"."status"'
+              value: Correct
+      result: null
+  - name: OSPFv6
+    code: 2
+    aspects:
+    - name: OSPFv6 1.Default Information
+      code: 1
+      description: null
+      skills: IPv6 Routing
+      max_mark: 5
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."R2"."OSPFv6"."OSPFv6 1"."Default Information"."status"'
+              value: Correct
+      result: null
+  - name: Ports
+    code: 3
+    aspects:
+    - name: Serial0/0/0.NAT Mode
+      code: 1
+      description: null
+      skills: NAT
+      max_mark: 6
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."R2"."Ports"."Serial0/0/0"."NAT Mode"."status"'
+              value: Correct
+      result: null
+- code: F
+  name: R3
+  subCriterions:
+  - name: DHCP Server
+    code: 1
+    aspects:
+    - name: Pools.Pool LAN40.Default Gateway
+      code: 1
+      description: null
+      skills: DHCP
+      max_mark: 5
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."R3"."DHCP Server"."Pools"."Pool LAN40"."Default
+                Gateway"."status"'
+              value: Correct
+      result: null
+    - name: Pools.Pool LAN50.Default Gateway
+      code: 2
+      description: null
+      skills: DHCP
+      max_mark: 5
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."R3"."DHCP Server"."Pools"."Pool LAN50"."Default
+                Gateway"."status"'
+              value: Correct
+      result: null
+  - name: OSPF
+    code: 2
+    aspects:
+    - name: Process ID 1.Passive Interface.GigabitEthernet0/1.30
+      code: 1
+      description: null
+      skills: IPv4 Routing
+      max_mark: 2
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."R3"."OSPF"."Process ID 1"."Passive Interface"."GigabitEthernet0/1"."30"."status"'
+              value: Correct
+      result: null
+    - name: Process ID 1.Passive Interface.GigabitEthernet0/1.40
+      code: 2
+      description: null
+      skills: IPv4 Routing
+      max_mark: 2
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."R3"."OSPF"."Process ID 1"."Passive Interface"."GigabitEthernet0/1"."40"."status"'
+              value: Correct
+      result: null
+    - name: Process ID 1.Passive Interface.GigabitEthernet0/1.50
+      code: 3
+      description: null
+      skills: IPv4 Routing
+      max_mark: 2
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."R3"."OSPF"."Process ID 1"."Passive Interface"."GigabitEthernet0/1"."50"."status"'
+              value: Correct
+      result: null
+  - name: Ports
+    code: 3
+    aspects:
+    - name: GigabitEthernet0/1/0.OSPF Cost
+      code: 1
+      description: null
+      skills: WAN
+      max_mark: 6
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."R3"."Ports"."GigabitEthernet0/1/0"."OSPF
+                Cost"."status"'
+              value: Correct
+      result: null
+- code: G
+  name: S1
+  subCriterions:
+  - name: Ports
+    code: 1
+    aspects:
+    - name: FastEthernet0/3.Port Security.Enabled
+      code: 1
+      description: null
+      skills: Switch Security
+      max_mark: 2
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."S1"."Ports"."FastEthernet0/3"."Port Security"."Enabled"."status"'
+              value: Correct
+      result: null
+    - name: FastEthernet0/3.Port Security.Port Security Violation
+      code: 2
+      description: null
+      skills: Switch Security
+      max_mark: 2
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."S1"."Ports"."FastEthernet0/3"."Port Security"."Port
+                Security Violation"."status"'
+              value: Correct
+      result: null
+    - name: FastEthernet0/3.Port Security.Sticky Enabled
+      code: 3
+      description: null
+      skills: Switch Security
+      max_mark: 4
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."S1"."Ports"."FastEthernet0/3"."Port Security"."Sticky
+                Enabled"."status"'
+              value: Correct
+      result: null
+    - name: GigabitEthernet0/1.Access VLAN
+      code: 4
+      description: null
+      skills: Switching
+      max_mark: 5
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."S1"."Ports"."GigabitEthernet0/1"."Access
+                VLAN"."status"'
+              value: Correct
+      result: null
+- code: H
+  name: S2
+  subCriterions:
+  - name: Ports
+    code: 1
+    aspects:
+    - name: GigabitEthernet0/1.Native VLAN
+      code: 1
+      description: null
+      skills: Switching
+      max_mark: 4
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."S2"."Ports"."GigabitEthernet0/1"."Native
+                VLAN"."status"'
+              value: Correct
+      result: null
+  - name: STP
+    code: 2
+    aspects:
+    - name: VLANs.1.Priority
+      code: 1
+      description: null
+      skills: Switching
+      max_mark: 2
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."S2"."STP"."VLANs"."1"."Priority"."status"'
+              value: Correct
+      result: null
+    - name: VLANs.30.Priority
+      code: 2
+      description: null
+      skills: Switching
+      max_mark: 2
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."S2"."STP"."VLANs"."30"."Priority"."status"'
+              value: Correct
+      result: null
+    - name: VLANs.40.Priority
+      code: 3
+      description: null
+      skills: Switching
+      max_mark: 2
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."S2"."STP"."VLANs"."40"."Priority"."status"'
+              value: Correct
+      result: null
+    - name: VLANs.50.Priority
+      code: 4
+      description: null
+      skills: Switching
+      max_mark: 2
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."S2"."STP"."VLANs"."50"."Priority"."status"'
+              value: Correct
+      result: null
+    - name: VLANs.99.Priority
+      code: 5
+      description: null
+      skills: Switching
+      max_mark: 2
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."S2"."STP"."VLANs"."99"."Priority"."status"'
+              value: Correct
+      result: null
+- code: I
+  name: S3
+  subCriterions:
+  - name: Ports
+    code: 1
+    aspects:
+    - name: FastEthernet0/1.Channel Group
+      code: 1
+      description: null
+      skills: EtherChannel
+      max_mark: 4
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."S3"."Ports"."FastEthernet0/1"."Channel Group"."status"'
+              value: Correct
+      result: null
+    - name: FastEthernet0/1.Channel Mode
+      code: 2
+      description: null
+      skills: EtherChannel
+      max_mark: 4
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."S3"."Ports"."FastEthernet0/1"."Channel Mode"."status"'
+              value: Correct
+      result: null
+    - name: FastEthernet0/2.Channel Group
+      code: 3
+      description: null
+      skills: EtherChannel
+      max_mark: 4
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."S3"."Ports"."FastEthernet0/2"."Channel Group"."status"'
+              value: Correct
+      result: null
+    - name: FastEthernet0/2.Channel Mode
+      code: 4
+      description: null
+      skills: EtherChannel
+      max_mark: 4
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."S3"."Ports"."FastEthernet0/2"."Channel Mode"."status"'
+              value: Correct
+      result: null

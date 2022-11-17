@@ -1,0 +1,49 @@
+Criterions:
+- code: A
+  name: R1
+  subCriterions:
+  - name: ACL
+    code: 1
+    aspects:
+    - name: File_Server_Restrictions
+      code: 1
+      description: null
+      skills: IPv4 Standard ACL Implementation
+      max_mark: 80
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."R1"."ACL"."File_Server_Restrictions"."status"'
+              value: Correct
+      result: null
+  - name: Ports
+    code: 2
+    aspects:
+    - name: FastEthernet0/1.Access-group Out
+      code: 1
+      description: null
+      skills: IPv4 Standard ACL Implementation
+      max_mark: 20
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."R1"."Ports"."FastEthernet0/1"."Access-group
+                Out"."status"'
+              value: Correct
+      result: null

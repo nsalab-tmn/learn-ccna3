@@ -1,0 +1,48 @@
+Criterions:
+- code: A
+  name: R2
+  subCriterions:
+  - name: OSPF
+    code: 1
+    aspects:
+    - name: Process ID 1.Default Information
+      code: 1
+      description: null
+      skills: OSPFv2 Default Route Propagation
+      max_mark: 50
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."R2"."OSPF"."Process ID 1"."Default Information"."status"'
+              value: Correct
+      result: null
+  - name: Routes
+    code: 2
+    aspects:
+    - name: Static Routes.Route0
+      code: 1
+      description: null
+      skills: IPv4 Static Default Route Configuration
+      max_mark: 50
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."R2"."Routes"."Static Routes"."Route0"."status"'
+              value: Correct
+      result: null
