@@ -20,52 +20,52 @@
                 {
                     "answer": "ATM",
                     "correct": false,
-                    "comment": "Metro Ethernet основана на технологии Ethernet LAN."
+                    "comment": "Metro Ethernet основана на технологии Ethernet LAN"
                 },
                 {
-                    "answer": "Кабельные системы",
+                    "answer": "кабельные системы",
                     "correct": false,
-                    "comment": "Metro Ethernet основана на технологии Ethernet LAN."
+                    "comment": "Metro Ethernet основана на технологии Ethernet LAN"
                 },
                 {
                     "answer": "DSL",
                     "correct": false,
-                    "comment": "Metro Ethernet основана на технологии Ethernet LAN."
+                    "comment": "Metro Ethernet основана на технологии Ethernet LAN"
                 },
                 {
-                    "answer": "Сети Metro Ethernet",
+                    "answer": "сети Metro Ethernet",
                     "correct": true
                 },
                 {
                     "answer": "MPLS",
                     "correct": false,
-                    "comment": "Metro Ethernet основана на технологии Ethernet LAN."
+                    "comment": "Metro Ethernet основана на технологии Ethernet LAN"
                 }
             ]
         },
         {
-            "question": "Какое вариант является решением сервисного провайдера WAN, который использует метки для направления потока пакетов через сеть провайдера?",
+            "question": "Какой вариант является решением сервисного провайдера WAN, который использует метки для направления потока пакетов через сеть провайдера?",
             "answerType": "singleChoice",
             "answers": [
                 {
                     "answer": "ATM",
                     "correct": false,
-                    "comment": "MPLS — это решение WAN сервисного провайдера, использующее метки для направления потока пакетов через сеть провайдера."
+                    "comment": "MPLS — это решение WAN сервисного провайдера, использующее метки для направления потока пакетов через сеть провайдера"
                 },
                 {
                     "answer": "Кабельные системы",
                     "correct": false,
-                    "comment": "MPLS — это решение WAN сервисного провайдера, использующее метки для направления потока пакетов через сеть провайдера."
+                    "comment": "MPLS — это решение WAN сервисного провайдера, использующее метки для направления потока пакетов через сеть провайдера"
                 },
                 {
                     "answer": "DSL",
                     "correct": false,
-                    "comment": "MPLS — это решение WAN сервисного провайдера, использующее метки для направления потока пакетов через сеть провайдера."
+                    "comment": "MPLS — это решение WAN сервисного провайдера, использующее метки для направления потока пакетов через сеть провайдера"
                 },
                 {
                     "answer": "Сети Metro Ethernet",
                     "correct": false,
-                    "comment": "MPLS — это решение WAN сервисного провайдера, использующее метки для направления потока пакетов через сеть провайдера."
+                    "comment": "MPLS — это решение WAN сервисного провайдера, использующее метки для направления потока пакетов через сеть провайдера"
                 },
                 {
                     "answer": "MPLS",
