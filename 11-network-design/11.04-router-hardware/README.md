@@ -24,7 +24,7 @@
 ![](./assets/11.4.2-1.png)
 
 <!--
-The figure displays seven branch routers.
+На рисунке показаны семь маршрутизаторов филиалов.
 -->
 
 **Граничные маршрутизаторы сети**
@@ -34,7 +34,7 @@ The figure displays seven branch routers.
 ![](./assets/11.4.2-2.png)
 
 <!--
-The figure displays seven network edge routers.
+На рисунке показаны семь граничных маршрутизаторов сети.
 -->
 
 **Маршрутизаторы операторов связи**
@@ -45,7 +45,7 @@ The figure displays seven network edge routers.
 <!-- /courses/ensa-dl/ae8eb394-34fd-11eb-ba19-f1886492e0e4/aeb638c4-34fd-11eb-ba19-f1886492e0e4/assets/c6da1190-1c46-11ea-af56-e368b99e9723.svg -->
 
 <!--
-На рисунке показан маршрутизатор поставщика услуг с открытой и закрытой дверью.
+На рисунке показан маршрутизатор оператора связи с открытой и закрытой дверью.
 -->
 
 **Промышленные решения**
@@ -55,7 +55,7 @@ The figure displays seven network edge routers.
 ![](./assets/11.4.2-4.jpg)
 
 <!--
-The figure displays Cisco 1100 Series Industrial Integrated Services routers.
+На рисунке показаны маршрутизаторы Cisco Industrial Integrated Services серии 1100.
 -->
 
 <!-- 11.4.3 -->
@@ -69,7 +69,7 @@ The figure displays Cisco 1100 Series Industrial Integrated Services routers.
 ![](./assets/11.4.3-1.png)
 
 <!--
-The figure displays a Cisco 900 series router.
+На рисунке показан маршрутизатор Cisco серии 900.
 -->
 
 **ASR серии 9000 и 1000**
@@ -79,7 +79,7 @@ The figure displays a Cisco 900 series router.
 ![](./assets/11.4.3-2.png)
 
 <!--
-The figure displays seven Cisco ASR 9000 and 1000 series aggregation service routers.
+На рисунке показаны семь маршрутизаторов службы агрегации Cisco ASR серий 9000 и 1000.
 -->
 
 **Серия 5500**
@@ -89,7 +89,7 @@ The figure displays seven Cisco ASR 9000 and 1000 series aggregation service rou
 ![](./assets/11.4.3-3.png)
 
 <!--
-The figure displays Cisco Network Convergence System 5500 Series routers.
+На рисунке показаны маршрутизаторы Cisco Network Convergence System 5500 Series.
 -->
 
 **Cisco 800**
@@ -99,7 +99,7 @@ The figure displays Cisco Network Convergence System 5500 Series routers.
 ![](./assets/11.4.3-4.png)
 
 <!--
-The figure displays a Cisco 800 Industrial Integrated Services router.
+На рисунке показан маршрутизатор Cisco 800 Industrial Integrated Services.
 -->
 
 Маршрутизаторы также могут иметь фиксированную или модульную конфигурацию. Маршрутизаторы фиксированной конфигурации поставляются со встроенными интерфейсами. Модульные маршрутизаторы предлагаются с несколькими слотами, которые позволяют администратору менять интерфейсы маршрутизатора. Маршрутизаторы поставляются с разными интерфейсами, такими как Fast Ethernet, Gigabit Ethernet, последовательный и оптоволоконный.
