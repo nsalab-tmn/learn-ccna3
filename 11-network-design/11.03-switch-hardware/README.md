@@ -12,7 +12,7 @@
 ![](./assets/11.3.1-1.png)
 
 <!--
-The figure displays four switches stacked on top of one another.
+На рисунке показаны четыре коммутатора, расположенные друг над другом.
 -->
 
 **Коммутаторы с облачным управлением**
@@ -22,7 +22,7 @@ The figure displays four switches stacked on top of one another.
 ![](./assets/11.3.1-2.jpg)
 
 <!--
-The figure displays a Meraki switch.
+На рисунке показан переключатель Meraki.
 -->
 
 **Коммутаторы для центров обработки данных**
@@ -32,7 +32,7 @@ The figure displays a Meraki switch.
 ![](./assets/11.3.1-3.png)
 
 <!--
-The figure displays eight data center switches.
+На рисунке показаны восемь коммутаторов центра обработки данных.
 -->
 
 **Коммутаторы операторов связи**
@@ -42,7 +42,7 @@ The figure displays eight data center switches.
 ![](./assets/11.3.1-4.png)
 
 <!--
-The figure displays six enterprise switches.
+На рисунке показаны шесть корпоративных коммутаторов.
 -->
 
 **Виртуальные сети**
@@ -52,7 +52,7 @@ The figure displays six enterprise switches.
 ![](./assets/11.3.1-5.png)
 
 <!--
-The figure displays the back of a switch.
+На рисунке показана задняя часть переключателя.
 -->
 
 <!-- 11.3.2 -->
@@ -67,7 +67,7 @@ The figure displays the back of a switch.
 ![](./assets/11.3.2-1.jpg)
 
 <!--
-The figure displays four fixed configuration switches stacked on top of one another.
+На рисунке показаны четыре коммутатора с фиксированной конфигурацией, расположенные друг над другом.
 -->
 
 **Коммутаторы с модульной конфигурацией**
@@ -77,7 +77,7 @@ The figure displays four fixed configuration switches stacked on top of one anot
 ![](./assets/11.3.2-2.png)
 
 <!--
-The figure displays six different modular switches from enterprise to small business.
+На рисунке показаны шесть различных модульных коммутаторов для предприятий малого и среднего бизнеса.
 -->
 
 **Коммутаторы со стекируемой конфигурацией**
@@ -87,7 +87,7 @@ The figure displays six different modular switches from enterprise to small busi
 ![](./assets/11.3.2-3.png)
 
 <!--
-The figure displays the back of eight switches stacked on top of one another and connected with cables.
+На рисунке показана задняя часть восьми коммутаторов, установленных друг над другом и соединенных кабелями.
 -->
 
 **Толщина**
@@ -97,7 +97,7 @@ The figure displays the back of eight switches stacked on top of one another and
 ![](./assets/11.3.2-4.png)
 
 <!--
-The figure displays four switches stacked on top of one another.
+На рисунке показаны четыре коммутатора, расположенные друг над другом.
 -->
 
 <!-- 11.3.3 -->
@@ -112,7 +112,7 @@ The figure displays four switches stacked on top of one another.
 ![](./assets/11.3.3-1.jpg)
 
 <!--
-The figure displays four Cisco Catalyst 3850 switches stacked on top of one another.
+На рисунке показаны четыре коммутатора Cisco Catalyst 3850, установленные друг над другом.
 -->
 
 Модульные коммутаторы поддерживают очень высокую плотность портов за счет добавления нескольких линейных плат портов коммутатора. Модульный коммутатор Catalyst 9400, показанный на следующем рисунке, поддерживает 384 коммутационных порта.
@@ -150,7 +150,7 @@ The figure displays four Cisco Catalyst 3850 switches stacked on top of one anot
 <!-- /courses/ensa-dl/ae8eb394-34fd-11eb-ba19-f1886492e0e4/aeb638c2-34fd-11eb-ba19-f1886492e0e4/assets/c6d50881-1c46-11ea-af56-e368b99e9723.svg -->
 
 <!--
-На рисунке указывается порт PoE на контроллере беспроводной локальной сети Cisco 520.
+На рисунке показан порт PoE на контроллере беспроводной локальной сети Cisco 520.
 -->
 
 **IP-телефон**
@@ -159,7 +159,7 @@ The figure displays four Cisco Catalyst 3850 switches stacked on top of one anot
 <!-- /courses/ensa-dl/ae8eb394-34fd-11eb-ba19-f1886492e0e4/aeb638c2-34fd-11eb-ba19-f1886492e0e4/assets/c6d556a1-1c46-11ea-af56-e368b99e9723.svg -->
 
 <!--
-На рисунке указывается внешний источник питания и порты PoE на задней панели IP-телефона.
+На рисунке показан внешний источник питания и порты PoE на задней панели IP-телефона.
 -->
 
 **WAP**
@@ -170,7 +170,7 @@ The figure displays four Cisco Catalyst 3850 switches stacked on top of one anot
 <!-- /courses/ensa-dl/ae8eb394-34fd-11eb-ba19-f1886492e0e4/aeb638c2-34fd-11eb-ba19-f1886492e0e4/assets/c6d5cbd2-1c46-11ea-af56-e368b99e9723.svg -->
 
 <!--
-Рисунок указывает на порт PoE на задней стороне точки беспроводного доступа.
+На рисунке показан порт PoE на задней стороне точки беспроводного доступа.
 -->
 
 **Cisco Catalyst 2960-C**
@@ -196,7 +196,7 @@ The figure displays four Cisco Catalyst 3850 switches stacked on top of one anot
 ![](./assets/11.3.6.png)
 
 <!--
-The figure displays five Cisco Catalyst 2960 switches stacked on top of each other.
+На рисунке показаны пять коммутаторов Cisco Catalyst 2960, установленных друг над другом.
 -->
 
 <!-- 11.3.7 -->
