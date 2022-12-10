@@ -3,7 +3,7 @@
 
 Как вы только что узнали, REST — самый широко используемый API. Эта тема описывает REST более подробно.
 
-Нажмите кнопку воспроизведения в видео, чтобы узнать подробнее о REST.
+Нажмите кнопку «Воспроизведение», чтобы узнать подробнее о REST.
 
 ![youtube](https://www.youtube.com/watch?v=_sUxEZzjirg)
 
@@ -16,7 +16,7 @@
 <!-- /courses/ensa-dl/ae8eb39a-34fd-11eb-ba19-f1886492e0e4/aeb686ee-34fd-11eb-ba19-f1886492e0e4/assets/c7346692-1c46-11ea-af56-e368b99e9723.svg -->
 
 <!--
-На рисунке показан клиент, использующий запрос GET для веб-сайта и ответ веб-сервера. Клиентский ПК отправляет GET-запрос на веб-сервер для домашней страницы cisco.com. Запрос GET /index.html HTTP/1.1. Затем сервер отправляет данные домашней страницы обратно клиенту. Ответ HTTP 200 OK <html>.
+На рисунке показан клиент, использующий запрос GET для сайта, и ответ сервера. Клиентский ПК отправляет GET-запрос на веб-сервер для домашней страницы cisco.com. Запрос GET /index.html HTTP/1.1. Затем сервер отправляет данные домашней страницы обратно клиенту. Ответ HTTP 200 OK <html>.
 -->
 
 REST — это архитектурный стиль для разработки приложений веб-сервисов. Это относится к стилю веб-архитектуры со множеством базовых характеристик. Она управляет поведением клиентов и серверов. Проще говоря, REST API — это API, который работает поверх протокола HTTP. Он определяет набор функций, которые разработчики могут использовать для выполнения запросов и получения ответов по протоколу HTTP, например, GET и POST.
@@ -52,14 +52,14 @@ API RESTful используют общие методы HTTP, включая PO
 <!-- /courses/ensa-dl/ae8eb39a-34fd-11eb-ba19-f1886492e0e4/aeb686ee-34fd-11eb-ba19-f1886492e0e4/assets/c734b4b4-1c46-11ea-af56-e368b99e9723.svg -->
 
 <!--
-The figure shows JSON data from a smartphone map app. The figure is driving directions from San Jose, California for a map application in JSON format. The code lists the latitude and longitude, whether the route has toll roads, bridges or tunnels. It also lists the time, fuel used and the narration text.
+На рисунке показаны маршруты проезда из Сан-Хосе, штат Калифорния, для картографического приложения в формате JSON. В коде указаны широта и долгота, независимо от того, есть ли на маршруте платные дороги, мосты или туннели. В нем также указано время, использованное топливо и текст комментария.
 -->
 
 ![](./assets/14.4.3-2.png)
 <!-- /courses/ensa-dl/ae8eb39a-34fd-11eb-ba19-f1886492e0e4/aeb686ee-34fd-11eb-ba19-f1886492e0e4/assets/c734dbc2-1c46-11ea-af56-e368b99e9723.svg -->
 
 <!--
-На рисунке показан клиент, использующий запрос GET для веб-сайта и ответ веб-сервера. Клиентский ПК отправляет GET-запрос на веб-сервер для домашней страницы cisco.com. Запрос GET /index.html HTTP/1.1. Затем сервер отправляет данные домашней страницы обратно клиенту. Ответ HTTP 200 OK <html>.
+На рисунке показан клиент, использующий запрос GET для сайта, и ответ сервера. Клиентский ПК отправляет GET-запрос на веб-сервер для домашней страницы cisco.com. Запрос GET /index.html HTTP/1.1. Затем сервер отправляет данные домашней страницы обратно клиенту. Ответ HTTP 200 OK <html>.
 -->
 
 <!-- 14.4.4 -->
@@ -83,7 +83,7 @@ The figure shows JSON data from a smartphone map app. The figure is driving dire
 <!-- /courses/ensa-dl/ae8eb39a-34fd-11eb-ba19-f1886492e0e4/aeb686ee-34fd-11eb-ba19-f1886492e0e4/assets/c73529e3-1c46-11ea-af56-e368b99e9723.svg -->
 
 <!--
-На рисунке показаны части универсального идентификатора ресурса (URI). На рисунке показан URI https://www.example.com/author/book.html#page155. URL  - универсального идентификатора ресурса (URI): https://www.example.com/author/book.html. URN часть: example.com/author/book.html#page155. Фрагмент: #page155.
+На рисунке показан URI https://www.example.com/author/book.html#page155. URL универсального идентификатора ресурса (URI): https://www.example.com/author/book.html. URN-часть: example.com/author/book.html#page155. Фрагмент: #page155.
 -->
 
 <!-- 14.4.5 -->
@@ -97,7 +97,7 @@ The figure shows JSON data from a smartphone map app. The figure is driving dire
 <!-- /courses/ensa-dl/ae8eb39a-34fd-11eb-ba19-f1886492e0e4/aeb686ee-34fd-11eb-ba19-f1886492e0e4/assets/c735c622-1c46-11ea-af56-e368b99e9723.svg -->
 
 <!--
-На рисунке показаны части запроса API. На рисунке используется URI http://www.mapquestapi.com/directions/v2/route?outFormat=json&key=KEY&from=San+Jose,Ca&to=Monterey,Ca. Серверная часть API URI:: http://www.mapquestapi.com. Ресурсная часть URI:: directions/v2/route. Часть запроса URI: ?outFormat=json&key=KEY&from=San+Jose,Ca&to=Monterey,Ca. Формат: outFormat=json&. Ключ: key=KEY& and the parameters is from=San+Jose,Ca&to=Monterey,Ca.
+На рисунке показаны части запроса API. На рисунке используется URI http://www.mapquestapi.com/directions/v2/route?outFormat=json&key=KEY&from=San+Jose,Ca&to=Monterey,Ca. Серверная часть API URI:: http://www.mapquestapi.com. Ресурсная часть URI:: directions/v2/route. Часть запроса URI: ?outFormat=json&key=KEY&from=San+Jose,Ca&to=Monterey,Ca. Формат: outFormat=json&. Ключ: key=KEY&. Параметры: from=San+Jose,Ca&to=Monterey,Ca.
 -->
 
 На рисунке показана часть ответа API. В этом примере это направление MapQuest из Сан-Хосе в Монтерей в формате JSON.
@@ -107,7 +107,7 @@ The figure shows JSON data from a smartphone map app. The figure is driving dire
 ![](./assets/14.4.5-2.png)
 
 <!--
-The figure shows MapQuest directions from San Jose to Monterey in JSON format. The code lists the latitude and longitude, whether the route has toll roads, bridges or tunnels. It also lists the time, fuel used and the narration text.
+На рисунке показано направление MapQuest из Сан-Хосе в Монтерей в формате JSON. В коде указаны широта и долгота, независимо от того, есть ли на маршруте платные дороги, мосты или туннели. В нем также указано время, использованное топливо и текст комментария.
 -->
 
 Частии запроса API:
