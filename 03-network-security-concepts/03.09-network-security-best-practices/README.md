@@ -13,7 +13,7 @@
 
 **Триада информационной безопасности CIA**
 
-![](./assets/3.9.1.png)
+![](./assets/3.9.1.svg)
 <!-- /courses/ensa-dl/ae8e8c80-34fd-11eb-ba19-f1886492e0e4/aeb3eeda-34fd-11eb-ba19-f1886492e0e4/assets/c5f13833-1c46-11ea-af56-e368b99e9723.svg -->
 
 <!--
@@ -27,7 +27,7 @@ The figure shows the C I A Triad consisting of Confidentiality, Integrity, and A
 
 **Защита от сетевых атак**
 
-![](./assets/3.9.2.png)
+![](./assets/3.9.2.svg)
 <!-- /courses/ensa-dl/ae8e8c80-34fd-11eb-ba19-f1886492e0e4/aeb3eeda-34fd-11eb-ba19-f1886492e0e4/assets/c5f1d473-1c46-11ea-af56-e368b99e9723.svg -->
 
 Для защиты пользователей и активов организации от угроз TCP/IP реализовано несколько устройств и служб безопасности.
@@ -93,7 +93,7 @@ The figure shows the C I A Triad consisting of Confidentiality, Integrity, and A
 
 **Действие системы предотвращения вторжений (IPS)**
 
-![](./assets/3.9.4.png)
+![](./assets/3.9.4.svg)
 <!-- /courses/ensa-dl/ae8e8c80-34fd-11eb-ba19-f1886492e0e4/aeb3eeda-34fd-11eb-ba19-f1886492e0e4/assets/c5f41e63-1c46-11ea-af56-e368b99e9723.svg -->
 
 На рисунке показано, как IPS управляет запрещенным трафиком.
@@ -120,7 +120,7 @@ Cisco ESA — устройство, предназначенное для мон
 
 На рисунке злоумышленник посылает фишинговое электронное письмо.
 
-![](./assets/3.9.5-1.png)
+![](./assets/3.9.5-1.svg)
 <!-- /courses/ensa-dl/ae8e8c80-34fd-11eb-ba19-f1886492e0e4/aeb3eeda-34fd-11eb-ba19-f1886492e0e4/assets/c5f4baa1-1c46-11ea-af56-e368b99e9723.svg -->
 
 1.  Хакер отправляет фишинговую атаку на важный хост в сети.
@@ -139,7 +139,7 @@ Cisco WSA обеспечивает полный контроль над дост
 
 На рисунке внутренний корпоративный сотрудник попытаться подключиться к помещенному в черный список сайту.
 
-![](./assets/3.9.5-2.png)
+![](./assets/3.9.5-2.svg)
 <!-- /courses/ensa-dl/ae8e8c80-34fd-11eb-ba19-f1886492e0e4/aeb3eeda-34fd-11eb-ba19-f1886492e0e4/assets/c5f508c1-1c46-11ea-af56-e368b99e9723.svg -->
 
 1.  Пользователь пытается подключиться к веб-сайту.
