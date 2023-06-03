@@ -18,7 +18,7 @@
 
 **Использование очередей для приоритетных коммуникаций**
 
-![](./assets/9.1.2.png)
+![](./assets/9.1.2.svg)
 <!-- /courses/ensa-dl/ae8eb390-34fd-11eb-ba19-f1886492e0e4/aeb59c8a-34fd-11eb-ba19-f1886492e0e4/assets/c680f510-1c46-11ea-af56-e368b99e9723.svg -->
 
 <!--
@@ -34,7 +34,7 @@
 
 **Примеры точек затора**
 
-![](./assets/9.1.3.png)
+![](./assets/9.1.3.svg)
 <!-- /courses/ensa-dl/ae8eb390-34fd-11eb-ba19-f1886492e0e4/aeb59c8a-34fd-11eb-ba19-f1886492e0e4/assets/c6819153-1c46-11ea-af56-e368b99e9723.svg -->
 
 <!--
@@ -67,7 +67,7 @@
 
 **Буфер задержки воспроизведения компенсирует джиттер.**
 
-![](./assets/9.1.4-1.png)
+![](./assets/9.1.4-1.svg)
 <!-- /courses/ensa-dl/ae8eb390-34fd-11eb-ba19-f1886492e0e4/aeb59c8a-34fd-11eb-ba19-f1886492e0e4/assets/c6822d93-1c46-11ea-af56-e368b99e9723.svg -->
 
 <!--
@@ -78,7 +78,7 @@
 
 **Пакет отбрасывается из-за чрезмерного джиттера.**
 
-![](./assets/9.1.4-2.png)
+![](./assets/9.1.4-2.svg)
 <!-- /courses/ensa-dl/ae8eb390-34fd-11eb-ba19-f1886492e0e4/aeb59c8a-34fd-11eb-ba19-f1886492e0e4/assets/c6827bb0-1c46-11ea-af56-e368b99e9723.svg -->
 
 <!--
