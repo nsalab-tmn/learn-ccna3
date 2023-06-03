@@ -28,7 +28,7 @@ R1(config-line)# access-class {access-list-number | access-list-name} { in | out
 
 **Примечание**. Telnet используется здесь только для демонстрационных целей. SSH следует использовать в производственной среде.
 
-![](./assets/5.3.2.png)
+![](./assets/5.3.2.svg)
 <!-- /courses/ensa-dl/ae8e8c84-34fd-11eb-ba19-f1886492e0e4/aeb46402-34fd-11eb-ba19-f1886492e0e4/assets/c6223342-1c46-11ea-af56-e368b99e9723.svg -->
 
 <!--
