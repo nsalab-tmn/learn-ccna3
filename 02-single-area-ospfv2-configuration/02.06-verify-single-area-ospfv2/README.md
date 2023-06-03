@@ -19,7 +19,7 @@
 
 **Топология OSPFv2**
 
-![](./assets/2.6.1.png)
+![](./assets/2.6.1.svg)
 <!-- /courses/ensa-dl/ae8e6570-34fd-11eb-ba19-f1886492e0e4/aeb3a0b0-34fd-11eb-ba19-f1886492e0e4/assets/c5c0d962-1c46-11ea-af56-e368b99e9723.svg -->
 
 <!--
