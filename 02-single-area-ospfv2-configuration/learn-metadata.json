@@ -1,13 +1,13 @@
 {
-    "title": "Настройка OSPFv2 для одной области",
+    "title": "Настройка OSPF для одной области",
     "materialType": "course",
     "tags": {
         "$ref": "../material-tags.json"
     },
+    "description": {
+        "$ref": "./README.md"
+    },
     "materials": [
-        {
-            "$ref": "./02.00-introduction/learn-metadata.json"
-        },
         {
             "$ref": "./02.01-ospf-router-id/learn-metadata.json"
         },
@@ -60,10 +60,10 @@
             "$ref": "./02.07.03.03-lab-multiarea-ospf-exploration-physical-mode-part-3/learn-metadata.json"
         },
         {
-            "$ref": "./02.07.05-quiz/learn-metadata.json"
+            "$ref": "./02.08-summary/learn-metadata.json"
         },
         {
-            "$ref": "./02.08-summary/learn-metadata.json"
+            "$ref": "./02.07.05-quiz/learn-metadata.json"
         }
     ]
 }
