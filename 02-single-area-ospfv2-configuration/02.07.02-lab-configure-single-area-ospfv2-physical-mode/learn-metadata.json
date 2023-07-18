@@ -4,7 +4,7 @@
     "materialType": "lab",
     "description": "Цели лабораторной работы:\r\r* Создать сеть и настроить основные параметры устройства.\r* Настроить и проверить базовую работу протокола OSPFv2 для одной области.\r* Оптимизировать и проверить конфигурацию OSPFv2 для одной области.",
     "difficulty": 1,
-    "duration": "PT0H22M",
+    "duration": "PT0H25M",
     "tags": {
         "$ref": "../../material-tags.json"
     },
@@ -29,8 +29,12 @@
     "assets": {
         "$ref": "./assets"
     },
-    "assessment": { "$ref": "./assessment.json" },
-    "deploy": { "$ref": "./deploy" },
+    "assessment": {
+        "$ref": "./assessment.json"
+    },
+    "deploy": {
+        "$ref": "./deploy"
+    },
     "answerSchema": {
         "type": "object",
         "additionalProperties": false,

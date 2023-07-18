@@ -4,7 +4,7 @@
     "materialType": "lab",
     "description": "Цели лабораторной работы:\r\r* Определить и проверить состояния соседей OSPF.\r* Определить способ изучения маршрутов в сети.\r* Объяснить, как определяется состояние соседа.\r* Проверить параметры идентификатора процесса OSPF.\r* Добавить новую локальную сеть в существующую сеть OSPF и проверить подключение.",
     "difficulty": 1,
-    "duration": "PT0H22M",
+    "duration": "PT0H21M",
     "tags": {
         "$ref": "../../material-tags.json"
     },
@@ -29,8 +29,12 @@
     "assets": {
         "$ref": "./assets"
     },
-    "assessment": { "$ref": "./assessment.json" },
-    "deploy": { "$ref": "./deploy" },
+    "assessment": {
+        "$ref": "./assessment.json"
+    },
+    "deploy": {
+        "$ref": "./deploy"
+    },
     "answerSchema": {
         "type": "object",
         "additionalProperties": false,

@@ -3,7 +3,7 @@
     "materialType": "lecture",
     "description": "Какие метрики использует OSPF и как они расчитываются? Что такое Hello-пакеты и как часто они отправляются?",
     "difficulty": 3,
-    "duration": "PT0H36M",
+    "duration": "PT0H20M",
     "tags": {
         "$ref": "../../material-tags.json"
     },

@@ -3,7 +3,7 @@
     "materialType": "lecture",
     "description": "Какими бывают типы сетей в контексте OSPF? Что такое выделенный маршрутизатор и какую роль он выполняет? Как настроить и проверить приоритеты маршрутизаторов?",
     "difficulty": 3,
-    "duration": "PT0H47M",
+    "duration": "PT0H25M",
     "tags": {
         "$ref": "../../material-tags.json"
     },

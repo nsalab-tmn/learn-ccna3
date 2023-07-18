@@ -3,7 +3,7 @@
     "materialType": "lecture",
     "description": "Что такое Router ID и для чего он нужен? Как задать идентификатор явно и с помощью интерфейса типа \"петля\"?",
     "difficulty": 3,
-    "duration": "PT0H12M",
+    "duration": "PT0H11M",
     "tags": {
         "$ref": "../../material-tags.json"
     },

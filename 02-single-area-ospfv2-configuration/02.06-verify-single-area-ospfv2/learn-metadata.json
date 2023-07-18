@@ -3,7 +3,7 @@
     "materialType": "lecture",
     "description": "Как проверить корректность работы OSPF на маршрутизаторе?",
     "difficulty": 3,
-    "duration": "PT0H35M",
+    "duration": "PT0H10M",
     "tags": {
         "$ref": "../../material-tags.json"
     },

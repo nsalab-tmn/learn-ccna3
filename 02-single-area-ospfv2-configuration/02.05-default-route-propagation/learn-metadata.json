@@ -3,7 +3,7 @@
     "materialType": "lecture",
     "description": "Зачем нужна передача статических маршрутов через OSPF? Как проверить, что маршрут распространяется правитьно?",
     "difficulty": 3,
-    "duration": "PT0H18M",
+    "duration": "PT0H6M",
     "tags": {
         "$ref": "../../material-tags.json"
     },

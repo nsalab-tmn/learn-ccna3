@@ -3,7 +3,7 @@
     "materialType": "lecture",
     "description": "Как объявить сеть в протоколе OSPF? Что такое шаблонная маска и для чего она нужна? Для чего нужен пассивный интерфейс? Чем в контексте OSPF характерны сети типа \"точка-точка\"",
     "difficulty": 3,
-    "duration": "PT0H31M",
+    "duration": "PT0H14M",
     "tags": {
         "$ref": "../../material-tags.json"
     },
