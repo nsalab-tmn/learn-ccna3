@@ -122,4 +122,4 @@ Router(config-router)# passive-interface interface
 
 Используйте команду **show** для проверки конфигурации сети и пассивного интерфейса процесса OSPF на каждом устройстве.
 
-[Скачать файл Packet Tracer для локального запуска](./assets/2.2.13-lab.pka)
+<!-- [Скачать файл Packet Tracer для локального запуска](./assets/2.2.13-lab.pka) -->

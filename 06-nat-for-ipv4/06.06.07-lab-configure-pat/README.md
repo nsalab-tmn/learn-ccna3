@@ -112,4 +112,4 @@ R2(config)# ip nat inside source list 2 interface s0/1/1 overload
 
 - Ответьте на вопрос №3
 
-[Скачать файл Packet Tracer для локального запуска](./assets/6.6.7-lab.pka)
+<!-- [Скачать файл Packet Tracer для локального запуска](./assets/6.6.7-lab.pka) -->

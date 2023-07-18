@@ -74,4 +74,4 @@
 
 [Открыть описание в PDF](./assets/1.0.5-packet-tracer---logical-and-physical-mode-exploration_ru-RU.pdf)
 
-[Скачать файл для Packet Tracer](./assets/1.0.5-packet-tracer---logical-and-physical-mode-exploration_ru-RU.pka)
+<!-- [Скачать файл Packet Tracer](./assets/1.0.5-packet-tracer---logical-and-physical-mode-exploration_ru-RU.pka) -->

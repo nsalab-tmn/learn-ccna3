@@ -164,4 +164,4 @@
         20 permit any (8 match(es))
     ```
 
-[Скачать файл Packet Tracer для локального запуска](./assets/5.1.8-lab.pka)
+<!-- [Скачать файл Packet Tracer для локального запуска](./assets/5.1.8-lab.pka) -->

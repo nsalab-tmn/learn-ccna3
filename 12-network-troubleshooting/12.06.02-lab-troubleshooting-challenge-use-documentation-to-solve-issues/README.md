@@ -104,4 +104,4 @@
 | &nbsp;     |          |          |
 | &nbsp;     |          |          |
 
-[Скачать файл Packet Tracer для локального запуска](./assets/12.6.2-lab.pka)
+<!-- [Скачать файл Packet Tracer для локального запуска](./assets/12.6.2-lab.pka) -->

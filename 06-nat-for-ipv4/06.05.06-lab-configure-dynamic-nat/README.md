@@ -55,4 +55,4 @@
 R2# show ip nat translations
 ```
 
-[Скачать файл Packet Tracer для локального запуска](./assets/6.5.6-lab.pka)
+<!-- [Скачать файл Packet Tracer для локального запуска](./assets/6.5.6-lab.pka) -->

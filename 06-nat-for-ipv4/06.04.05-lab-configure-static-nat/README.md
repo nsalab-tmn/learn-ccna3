@@ -92,4 +92,4 @@ show ip nat translations
 show ip nat statistics
 ```
 
-[Скачать файл Packet Tracer для локального запуска](./assets/6.4.5-lab.pka)
+<!-- [Скачать файл Packet Tracer для локального запуска](./assets/6.4.5-lab.pka) -->
