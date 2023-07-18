@@ -3,7 +3,7 @@
     "materialType": "lecture",
     "description": "Что такое протокол OSPF и как он помогает находить кратчайшие маршруты? Какими типами пакетов оперирует OSPF? В чем заключается принцип работы OSPF и в каких состояниях он может находится?",
     "difficulty": 3,
-    "duration": "PT0H7M",
+    "duration": "PT0H6M",
     "tags": {
         "$ref": "../../material-tags.json"
     },
