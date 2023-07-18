@@ -1,5 +1,5 @@
 {
-    "title": "Принципы OSPFv2",
+    "title": "Принципы работы протокола маршрутизации OSPF",
     "materialType": "course",
     "tags": {
         "$ref": "../material-tags.json"
