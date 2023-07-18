@@ -1,13 +1,13 @@
 {
-    "title": "Принципы OSPFv2 для одной области",
+    "title": "Принципы OSPFv2",
     "materialType": "course",
     "tags": {
         "$ref": "../material-tags.json"
     },
+    "description": {
+        "$ref": "./README.md"
+    },
     "materials": [
-        {
-            "$ref": "./01.00-introduction/learn-metadata.json"
-        },
         {
             "$ref": "./01.01-ospf-features-and-characteristics/learn-metadata.json"
         },
