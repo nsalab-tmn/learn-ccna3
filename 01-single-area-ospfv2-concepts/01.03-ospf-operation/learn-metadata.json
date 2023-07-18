@@ -1,7 +1,7 @@
 {
     "title": "Принципы работы OSPF",
     "materialType": "lecture",
-    "description": "",
+    "description": "В каких состояниях может находиться протокол OSPF? Как OSPF устанавливает отношения смежности с соседями? Как происходит синхронизация баз данных OSPF?",
     "difficulty": 3,
     "duration": "PT0H23M",
     "tags": {
