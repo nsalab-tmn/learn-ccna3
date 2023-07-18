@@ -1,7 +1,7 @@
 {
-    "title": "Изменение OSPFv2 для одной области",
+    "title": "Управление метриками и таймерами OSPF",
     "materialType": "lecture",
-    "description": "",
+    "description": "Какие метрики использует OSPF и как они расчитываются? Что такое Hello-пакеты и как часто они отправляются?",
     "difficulty": 3,
     "duration": "PT0H36M",
     "tags": {

@@ -1,7 +1,7 @@
 {
     "title": "Идентификатор маршрутизатора OSPF",
     "materialType": "lecture",
-    "description": "",
+    "description": "Что такое Router ID и для чего он нужен? Как задать идентификатор явно и с помощью интерфейса типа \"петля\"?",
     "difficulty": 3,
     "duration": "PT0H12M",
     "tags": {
