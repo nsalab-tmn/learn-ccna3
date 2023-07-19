@@ -3,7 +3,7 @@
     "materialType": "lecture",
     "description": "Что такое списки контроля доступа, для чего они нужны и как они работают?",
     "difficulty": 3,
-    "duration": "PT0H26M",
+    "duration": "PT0H7M",
     "tags": {
         "$ref": "../../material-tags.json"
     },
