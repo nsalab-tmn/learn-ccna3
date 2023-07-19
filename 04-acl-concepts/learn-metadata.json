@@ -4,10 +4,10 @@
     "tags": {
         "$ref": "../material-tags.json"
     },
+    "description": {
+        "$ref": "./README.md"
+    },
     "materials": [
-        {
-            "$ref": "./04.00-introduction/learn-metadata.json"
-        },
         {
             "$ref": "./04.01-purpose-of-acls/learn-metadata.json"
         },
