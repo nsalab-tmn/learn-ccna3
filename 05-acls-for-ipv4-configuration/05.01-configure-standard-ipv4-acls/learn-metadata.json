@@ -3,7 +3,7 @@
     "materialType": "lecture",
     "description": "Как создать список контроля доступа и как применить его на интерфейсе маршрутизатора для пакетной фильтрации?",
     "difficulty": 3,
-    "duration": "PT0H49M",
+    "duration": "PT0H11M",
     "tags": {
         "$ref": "../../material-tags.json"
     },

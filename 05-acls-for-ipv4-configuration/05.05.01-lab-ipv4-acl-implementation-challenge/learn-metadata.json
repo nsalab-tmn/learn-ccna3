@@ -4,7 +4,7 @@
     "materialType": "lab",
     "description": "Цели лабораторной работы:\r\r* Настроить роутер со стандартными именованными ACL.\r* Настроить роутер с расширенными именованными ACL.\r* Настроить роутер с расширенными ACL в соответствии с конкретными требованиями.\r* Настроить ACL для управления доступом к линиям терминалов сетевого устройства.\r* Настроить соответствующие интерфейсы роутера с ACL в соответствующем направлении.\r* Проверить работу настроенных списков ACL.",
     "difficulty": 1,
-    "duration": "PT0H22M",
+    "duration": "PT1H0M",
     "tags": {
         "$ref": "../../material-tags.json"
     },
@@ -29,8 +29,12 @@
     "assets": {
         "$ref": "./assets"
     },
-    "assessment": { "$ref": "./assessment.json" },
-    "deploy": { "$ref": "./deploy" },
+    "assessment": {
+        "$ref": "./assessment.json"
+    },
+    "deploy": {
+        "$ref": "./deploy"
+    },
     "answerSchema": {
         "type": "object",
         "additionalProperties": false,

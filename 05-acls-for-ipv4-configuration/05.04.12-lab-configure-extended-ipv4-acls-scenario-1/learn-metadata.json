@@ -4,7 +4,7 @@
     "materialType": "lab",
     "description": "Цели лабораторной работы:\r\r* Настроить, применить и проверить расширенный нумерованный список контроля доступа.\r* Настроить, применить и проверить расширенный именованный список контроля доступа.",
     "difficulty": 1,
-    "duration": "PT0H22M",
+    "duration": "PT0H29M",
     "tags": {
         "$ref": "../../material-tags.json"
     },
@@ -26,8 +26,12 @@
     "text": {
         "$ref": "./README.md"
     },
-    "assessment": { "$ref": "./assessment.json" },
-    "deploy": { "$ref": "./deploy" },
+    "assessment": {
+        "$ref": "./assessment.json"
+    },
+    "deploy": {
+        "$ref": "./deploy"
+    },
     "assets": {
         "$ref": "./assets"
     }

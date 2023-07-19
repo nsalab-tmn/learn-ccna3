@@ -3,7 +3,7 @@
     "materialType": "lecture",
     "description": "Что такое расширенные списки контроля доступа? В каких случаях следует их использовать и какой функционал они предоставляют?",
     "difficulty": 3,
-    "duration": "PT1H35M",
+    "duration": "PT0H25M",
     "tags": {
         "$ref": "../../material-tags.json"
     },
