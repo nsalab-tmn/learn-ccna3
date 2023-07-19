@@ -1,7 +1,7 @@
 {
-    "title": "Уязвимости IP и угрозы",
+    "title": "Сетевые уязвимости и угрозы",
     "materialType": "lecture",
-    "description": "",
+    "description": "Какими уязвимости эксплоатируют распространенные сетевые атаки?",
     "difficulty": 3,
     "duration": "PT0H16M",
     "tags": {

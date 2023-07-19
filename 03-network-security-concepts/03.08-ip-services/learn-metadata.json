@@ -1,7 +1,7 @@
 {
-    "title": "IP-сервисы",
+    "title": "Атаки на IP-сервисы",
     "materialType": "lecture",
-    "description": "",
+    "description": "Какие существуют распространенные атаки на протоколы ARP, DNS и DHCP?",
     "difficulty": 3,
     "duration": "PT1H21M",
     "tags": {

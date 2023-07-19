@@ -1,7 +1,7 @@
 {
-    "title": "Уязвимости TCP и UDP",
+    "title": "Уязвимости протоколов TCP и UDP",
     "materialType": "lecture",
-    "description": "",
+    "description": "Какие механизмы протоколов TCP и UDP подвержены атакам злоумышленников?",
     "difficulty": 3,
     "duration": "PT0H10M",
     "tags": {
