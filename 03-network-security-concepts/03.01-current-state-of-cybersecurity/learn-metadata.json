@@ -3,7 +3,7 @@
     "materialType": "lecture",
     "description": "Какие существуют типы сетевых атак? Чем отличаются уязвимости, угрозы, эксплойты и риски?",
     "difficulty": 3,
-    "duration": "PT0H7M",
+    "duration": "PT0H6M",
     "tags": {
         "$ref": "../../material-tags.json"
     },

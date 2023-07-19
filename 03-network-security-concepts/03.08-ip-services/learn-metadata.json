@@ -3,7 +3,7 @@
     "materialType": "lecture",
     "description": "Какие существуют распространенные атаки на протоколы ARP, DNS и DHCP?",
     "difficulty": 3,
-    "duration": "PT1H21M",
+    "duration": "PT0H17M",
     "tags": {
         "$ref": "../../material-tags.json"
     },

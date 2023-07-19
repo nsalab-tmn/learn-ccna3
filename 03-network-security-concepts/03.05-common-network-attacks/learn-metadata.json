@@ -3,7 +3,7 @@
     "materialType": "lecture",
     "description": "Какими бывают типы сетевых атак? Что такое социальная инженерия?",
     "difficulty": 3,
-    "duration": "PT0H39M",
+    "duration": "PT0H21M",
     "tags": {
         "$ref": "../../material-tags.json"
     },

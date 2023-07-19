@@ -3,7 +3,7 @@
     "materialType": "lecture",
     "description": "Кто такие хакеры и какими они бывают?",
     "difficulty": 3,
-    "duration": "PT0H6M",
+    "duration": "PT0H5M",
     "tags": {
         "$ref": "../../material-tags.json"
     },
