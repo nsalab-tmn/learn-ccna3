@@ -4,10 +4,10 @@
     "tags": {
         "$ref": "../material-tags.json"
     },
+    "description": {
+        "$ref": "./README.md"
+    },
     "materials": [
-        {
-            "$ref": "./03.00-introduction/learn-metadata.json"
-        },
         {
             "$ref": "./03.01-current-state-of-cybersecurity/learn-metadata.json"
         },
@@ -75,10 +75,10 @@
             "$ref": "./03.11.01-lab-network-security-exploration-physical-mode/learn-metadata.json"
         },
         {
-            "$ref": "./03.11.03-quiz/learn-metadata.json"
+            "$ref": "./03.12-summary/learn-metadata.json"
         },
         {
-            "$ref": "./03.12-summary/learn-metadata.json"
+            "$ref": "./03.11.03-quiz/learn-metadata.json"
         }
     ]
 }
