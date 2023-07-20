@@ -1,13 +1,13 @@
 {
-    "title": "Принципы работы VPN и IPsec",
+    "title": "Принципы работы виртуальных частных сетей",
     "materialType": "course",
     "tags": {
         "$ref": "../material-tags.json"
     },
+    "description": {
+        "$ref": "./README.md"
+    },
     "materials": [
-        {
-            "$ref": "./08.00-introduction/learn-metadata.json"
-        },
         {
             "$ref": "./08.01-vpn-technology/learn-metadata.json"
         },
