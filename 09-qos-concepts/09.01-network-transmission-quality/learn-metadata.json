@@ -3,7 +3,7 @@
     "materialType": "lecture",
     "description": "Зачем нужна приоритизация различных типов сетевого трафика?",
     "difficulty": 3,
-    "duration": "PT0H12M",
+    "duration": "PT0H11M",
     "tags": {
         "$ref": "../../material-tags.json"
     },
