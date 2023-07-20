@@ -3,7 +3,7 @@
     "materialType": "lecture",
     "description": "Как настроить статическое преобразование адресов и как проверить его работу?",
     "difficulty": 3,
-    "duration": "PT0H20M",
+    "duration": "PT0H7M",
     "tags": {
         "$ref": "../../material-tags.json"
     },

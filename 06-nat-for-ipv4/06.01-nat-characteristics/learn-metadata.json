@@ -3,7 +3,7 @@
     "materialType": "lecture",
     "description": "Чем ограничивается адресное пространство IPv4? Что такое NAT, для чего он нужен и как он работает?",
     "difficulty": 3,
-    "duration": "PT0H11M",
+    "duration": "PT0H10M",
     "tags": {
         "$ref": "../../material-tags.json"
     },

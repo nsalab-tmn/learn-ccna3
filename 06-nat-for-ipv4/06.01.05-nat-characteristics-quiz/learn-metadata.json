@@ -3,7 +3,7 @@
     "materialType": "test",
     "description": "Проверьте свои знания по теме \"Характеристики технологии NAT\"",
     "difficulty": 1,
-    "duration": "PT0H30M",
+    "duration": "PT0H4M",
     "tags": {
         "$ref": "../../material-tags.json"
     },
@@ -34,7 +34,7 @@
                 {
                     "answer": "внутренний глобальный",
                     "correct": false,
-                    "comment": "IPv4-адрес PC1 является внутренним локальным адресом NAT.
+                    "comment": "IPv4-адрес PC1 является внутренним локальным адресом NAT"
                 }
             ]
         },

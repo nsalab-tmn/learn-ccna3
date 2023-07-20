@@ -4,7 +4,7 @@
     "materialType": "lab",
     "description": "Цели лабораторной работы:\r\r* Настроить динамический NAT с перегрузкой.\r* Проверить динамический NAT с реализацией перегрузки.\r* Настроить PAT с помощью интерфейса.\r* Проверить реализацию PAT.",
     "difficulty": 1,
-    "duration": "PT0H22M",
+    "duration": "PT0H30M",
     "tags": {
         "$ref": "../../material-tags.json"
     },
@@ -29,8 +29,12 @@
     "assets": {
         "$ref": "./assets"
     },
-    "assessment": { "$ref": "./assessment.json" },
-    "deploy": { "$ref": "./deploy" },
+    "assessment": {
+        "$ref": "./assessment.json"
+    },
+    "deploy": {
+        "$ref": "./deploy"
+    },
     "answerSchema": {
         "type": "object",
         "additionalProperties": false,
