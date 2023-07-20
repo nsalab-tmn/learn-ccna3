@@ -1,7 +1,7 @@
 {
-    "title": "PAT",
+    "title": "Настройка динамической трансляции портов для IPv4",
     "materialType": "lecture",
-    "description": "",
+    "description": "Как настроить динамическую трансляцию портов (PAT) и как проверить ее работу?",
     "difficulty": 3,
     "duration": "PT0H27M",
     "tags": {

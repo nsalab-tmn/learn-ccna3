@@ -1,7 +1,7 @@
 {
     "title": "Характеристики технологии NAT",
     "materialType": "lecture",
-    "description": "",
+    "description": "Чем ограничивается адресное пространство IPv4? Что такое NAT, для чего он нужен и как он работает?",
     "difficulty": 3,
     "duration": "PT0H11M",
     "tags": {

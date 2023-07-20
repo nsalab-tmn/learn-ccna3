@@ -1,7 +1,7 @@
 {
     "title": "NAT64",
     "materialType": "lecture",
-    "description": "",
+    "description": "Нужна ли трансляция сетевых адресов в сетях IPv6?",
     "difficulty": 3,
     "duration": "PT0H3M",
     "tags": {
