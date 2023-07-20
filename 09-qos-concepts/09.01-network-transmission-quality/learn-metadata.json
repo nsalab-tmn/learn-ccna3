@@ -1,7 +1,7 @@
 {
     "title": "Качество передачи данных по сети",
     "materialType": "lecture",
-    "description": "",
+    "description": "Зачем нужна приоритизация различных типов сетевого трафика?",
     "difficulty": 3,
     "duration": "PT0H12M",
     "tags": {
