@@ -4,7 +4,7 @@
     "materialType": "lab",
     "description": "Цель лабораторной работы: исследование вариантов широкополосного доступа в Интернет.",
     "difficulty": 1,
-    "duration": "PT0H22M",
+    "duration": "PT0H30M",
     "tags": {
         "$ref": "../../material-tags.json"
     },

@@ -3,7 +3,7 @@
     "materialType": "lecture",
     "description": "Чем отличаются локальные и глобальные вычислительные сети? Какими бывают топологии глобальных сетей и как они взаимодействуют с провайдерами связи?",
     "difficulty": 3,
-    "duration": "PT0H16M",
+    "duration": "PT0H15M",
     "tags": {
         "$ref": "../../material-tags.json"
     },

@@ -3,7 +3,7 @@
     "materialType": "lecture",
     "description": "Какие проводные и беспроводные способы подкючения к сети Интернет являются наиболее распространенными?",
     "difficulty": 3,
-    "duration": "PT0H39M",
+    "duration": "PT0H21M",
     "tags": {
         "$ref": "../../material-tags.json"
     },
