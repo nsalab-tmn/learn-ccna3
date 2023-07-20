@@ -36,9 +36,6 @@
             "$ref": "./10.04.05-snmp-quiz/learn-metadata.json"
         },
         {
-            "$ref": "./10.04.10-lab-research-network-monitoring-software/learn-metadata.json"
-        },
-        {
             "$ref": "./10.05-syslog/learn-metadata.json"
         },
         {
@@ -52,9 +49,6 @@
         },
         {
             "$ref": "./10.06.12-lab-use-tftp-and-flash-to-manage-configuration-files-physical-mode/learn-metadata.json"
-        },
-        {
-            "$ref": "./10.06.13-lab-research-and-execute-password-recovery-procedures-physical-mode/learn-metadata.json"
         },
         {
             "$ref": "./10.07-ios-image-management/learn-metadata.json"
