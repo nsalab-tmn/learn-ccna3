@@ -3,7 +3,7 @@
     "materialType": "lecture",
     "description": "Что такое IPsec и как он используется в построении виртуальных частных сетей? Из каких компонентов и протоколов состоит IPsec?",
     "difficulty": 3,
-    "duration": "PT0H28M",
+    "duration": "PT0H26M",
     "tags": {
         "$ref": "../../material-tags.json"
     },

@@ -3,7 +3,7 @@
     "materialType": "lecture",
     "description": "Для чего нужны виртуальные частные сети и в чем заключаются их приемущества? Какие есть основные типы VPN-подключений?",
     "difficulty": 3,
-    "duration": "PT0H7M",
+    "duration": "PT0H6M",
     "tags": {
         "$ref": "../../material-tags.json"
     },
