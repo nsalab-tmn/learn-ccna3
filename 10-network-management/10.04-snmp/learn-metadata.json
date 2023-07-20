@@ -3,7 +3,7 @@
     "materialType": "lecture",
     "description": "Какие задачи по управлению сетью помогает решать протокол SNMP? Из каких компонентов он состоит и как эти компоненты взаимодействуют друг с другом?",
     "difficulty": 3,
-    "duration": "PT0H28M",
+    "duration": "PT0H18M",
     "tags": {
         "$ref": "../../material-tags.json"
     },

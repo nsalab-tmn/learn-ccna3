@@ -3,7 +3,7 @@
     "materialType": "lecture",
     "description": "Что такое журналирование системных сообщений и для чего оно нужно в контексте управления сетью? Как протокол Syslog помогает справится с этой задачей?",
     "difficulty": 3,
-    "duration": "PT0H10M",
+    "duration": "PT0H9M",
     "tags": {
         "$ref": "../../material-tags.json"
     },

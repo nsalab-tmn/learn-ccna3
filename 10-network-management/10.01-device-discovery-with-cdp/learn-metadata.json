@@ -3,7 +3,7 @@
     "materialType": "lecture",
     "description": "Почему важно уметь обнаруживать соседние устройства в сети? Как протокол CDP помгает справится с этой задачей?",
     "difficulty": 3,
-    "duration": "PT0H36M",
+    "duration": "PT0H10M",
     "tags": {
         "$ref": "../../material-tags.json"
     },

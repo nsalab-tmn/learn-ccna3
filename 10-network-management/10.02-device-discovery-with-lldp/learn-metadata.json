@@ -3,7 +3,7 @@
     "materialType": "lecture",
     "description": "Как протокол LLDP помгает искать соседние устройства в сети? Чем LLDP отличается от CDP?",
     "difficulty": 3,
-    "duration": "PT0H39M",
+    "duration": "PT0H6M",
     "tags": {
         "$ref": "../../material-tags.json"
     },

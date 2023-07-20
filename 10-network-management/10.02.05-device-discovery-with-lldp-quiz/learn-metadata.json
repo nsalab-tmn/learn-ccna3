@@ -3,7 +3,7 @@
     "materialType": "test",
     "description": "Проверьте свои знания по теме \"Обнаружение устройств с помощью протокола LLDP\"",
     "difficulty": 1,
-    "duration": "PT0H30M",
+    "duration": "PT0H2M",
     "tags": {
         "$ref": "../../material-tags.json"
     },

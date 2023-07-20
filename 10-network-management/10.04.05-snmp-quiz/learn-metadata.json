@@ -3,7 +3,7 @@
     "materialType": "test",
     "description": "Проверьте свои знания по теме \"Простой протокол управления сетью (SNMP)\"",
     "difficulty": 1,
-    "duration": "PT0H30M",
+    "duration": "PT0H8M",
     "tags": {
         "$ref": "../../material-tags.json"
     },

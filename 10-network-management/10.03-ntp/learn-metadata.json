@@ -3,7 +3,7 @@
     "materialType": "lecture",
     "description": "Зачем нужна синхрониация времени на сетевых устройствах? Как работает протокол NTP и как настроить его работу?",
     "difficulty": 3,
-    "duration": "PT0H22M",
+    "duration": "PT0H9M",
     "tags": {
         "$ref": "../../material-tags.json"
     },
