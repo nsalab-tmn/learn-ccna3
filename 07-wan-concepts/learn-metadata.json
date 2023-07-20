@@ -1,5 +1,5 @@
 {
-    "title": "Принципы работы WAN",
+    "title": "Принципы работы глобальных сетей",
     "materialType": "course",
     "tags": {
         "$ref": "../material-tags.json"
