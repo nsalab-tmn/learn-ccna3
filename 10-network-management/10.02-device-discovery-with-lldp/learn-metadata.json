@@ -1,7 +1,7 @@
 {
     "title": "Обнаружение устройств с помощью протокола LLDP",
     "materialType": "lecture",
-    "description": "",
+    "description": "Как протокол LLDP помгает искать соседние устройства в сети? Чем LLDP отличается от CDP?",
     "difficulty": 3,
     "duration": "PT0H39M",
     "tags": {
