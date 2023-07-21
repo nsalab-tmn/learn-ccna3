@@ -1,7 +1,7 @@
 {
-    "title": "Контроллеры",
+    "title": "Контроллеры в программно-определяемых сетях",
     "materialType": "lecture",
-    "description": "",
+    "description": "Что такое SDN-контроллер и зачем он нужен в программно-определяемой сети?",
     "difficulty": 3,
     "duration": "PT0H19M",
     "tags": {
