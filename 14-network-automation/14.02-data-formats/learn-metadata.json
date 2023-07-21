@@ -3,7 +3,7 @@
     "materialType": "lecture",
     "description": "Какие форматы данных часто используются в системах автоматизации?",
     "difficulty": 3,
-    "duration": "PT0H17M",
+    "duration": "PT0H16M",
     "tags": {
         "$ref": "../../material-tags.json"
     },

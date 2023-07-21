@@ -3,7 +3,7 @@
     "materialType": "lecture",
     "description": "Что такое API и для чего они нужны?",
     "difficulty": 3,
-    "duration": "PT0H15M",
+    "duration": "PT0H14M",
     "tags": {
         "$ref": "../../material-tags.json"
     },

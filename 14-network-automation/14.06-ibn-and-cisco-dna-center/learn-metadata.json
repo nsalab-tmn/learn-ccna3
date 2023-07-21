@@ -3,7 +3,7 @@
     "materialType": "lecture",
     "description": "Как искуственный интеллект может помочь в упавлении сетью? Какие существуют примеры реализации таких инструментов?",
     "difficulty": 3,
-    "duration": "PT0H34M",
+    "duration": "PT0H33M",
     "tags": {
         "$ref": "../../material-tags.json"
     },
