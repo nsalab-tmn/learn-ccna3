@@ -3,7 +3,7 @@
     "materialType": "lecture",
     "description": "Какие программные и аппаратные инструменты помогают в сборе информации о проблемах в сети?",
     "difficulty": 3,
-    "duration": "PT0H12M",
+    "duration": "PT0H10M",
     "tags": {
         "$ref": "../../material-tags.json"
     },

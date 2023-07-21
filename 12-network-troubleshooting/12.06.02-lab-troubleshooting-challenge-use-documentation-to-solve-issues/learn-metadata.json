@@ -4,7 +4,7 @@
     "materialType": "lab",
     "description": "Цели лабораторной работы:\r\r* Использование различных инструментов для выявления проблем связности.\r* Использование документации как руководства по поиску и устранению неисправностей.\r* Определение конкретных проблемы в сети.\r* Решение проблем и проверка связности.",
     "difficulty": 1,
-    "duration": "PT0H22M",
+    "duration": "PT0H30M",
     "tags": {
         "$ref": "../../material-tags.json"
     },
@@ -26,8 +26,12 @@
     "text": {
         "$ref": "./README.md"
     },
-    "assessment": { "$ref": "./assessment.json" },
-    "deploy": { "$ref": "./deploy" },
+    "assessment": {
+        "$ref": "./assessment.json"
+    },
+    "deploy": {
+        "$ref": "./deploy"
+    },
     "assets": {
         "$ref": "./assets"
     }

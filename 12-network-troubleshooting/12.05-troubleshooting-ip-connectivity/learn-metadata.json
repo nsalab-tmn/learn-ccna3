@@ -3,7 +3,7 @@
     "materialType": "lecture",
     "description": "Как выглядит типовой процесс диагностики неполадок, связанных с доступностью ресурсов в сети?",
     "difficulty": 3,
-    "duration": "PT1H31M",
+    "duration": "PT0H43M",
     "tags": {
         "$ref": "../../material-tags.json"
     },

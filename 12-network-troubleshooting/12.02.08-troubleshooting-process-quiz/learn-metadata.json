@@ -3,7 +3,7 @@
     "materialType": "test",
     "description": "Проверьте свои знания по теме \"Процедура поиска и устранения неисправностей\"",
     "difficulty": 1,
-    "duration": "PT0H30M",
+    "duration": "PT0H9M",
     "tags": {
         "$ref": "../../material-tags.json"
     },

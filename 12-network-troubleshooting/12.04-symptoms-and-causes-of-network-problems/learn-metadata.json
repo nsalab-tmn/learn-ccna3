@@ -3,7 +3,7 @@
     "materialType": "lecture",
     "description": "Какие проблемы могут возникать на различных уровнях стека TCP/IP? Как диагностировать проблемы на различных уровнях?",
     "difficulty": 3,
-    "duration": "PT0H32M",
+    "duration": "PT0H30M",
     "tags": {
         "$ref": "../../material-tags.json"
     },

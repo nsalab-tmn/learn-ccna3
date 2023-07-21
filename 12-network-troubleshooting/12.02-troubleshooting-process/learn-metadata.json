@@ -3,7 +3,7 @@
     "materialType": "lecture",
     "description": "Как выглядит типовая процедура поиска и устранения неисправностей? Откуда следует начинать этот процесс?",
     "difficulty": 3,
-    "duration": "PT0H19M",
+    "duration": "PT0H18M",
     "tags": {
         "$ref": "../../material-tags.json"
     },
