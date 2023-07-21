@@ -1,13 +1,13 @@
 {
-    "title": "Поиск и устранение неполадок в сети; отладка сети",
+    "title": "Поиск и устранение неполадок в сети",
     "materialType": "course",
     "tags": {
         "$ref": "../material-tags.json"
     },
+    "description": {
+        "$ref": "./README.md"
+    },
     "materials": [
-        {
-            "$ref": "./12.00-introduction/learn-metadata.json"
-        },
         {
             "$ref": "./12.01-network-documentation/learn-metadata.json"
         },
@@ -45,10 +45,10 @@
             "$ref": "./12.06.02-lab-troubleshooting-challenge-use-documentation-to-solve-issues/learn-metadata.json"
         },
         {
-            "$ref": "./12.06.04-quiz/learn-metadata.json"
+            "$ref": "./12.07-summary/learn-metadata.json"
         },
         {
-            "$ref": "./12.07-summary/learn-metadata.json"
+            "$ref": "./12.06.04-quiz/learn-metadata.json"
         }
     ]
 }
