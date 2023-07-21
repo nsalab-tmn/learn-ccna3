@@ -4,10 +4,10 @@
     "tags": {
         "$ref": "../material-tags.json"
     },
+    "description": {
+        "$ref": "./README.md"
+    },
     "materials": [
-        {
-            "$ref": "./11.00-introduction/learn-metadata.json"
-        },
         {
             "$ref": "./11.01-hierarchical-networks/learn-metadata.json"
         },
@@ -36,10 +36,10 @@
             "$ref": "./11.05.01-lab-compare-layer-2-and-layer-3-devices/learn-metadata.json"
         },
         {
-            "$ref": "./11.05.03-quiz/learn-metadata.json"
+            "$ref": "./11.06-summary/learn-metadata.json"
         },
         {
-            "$ref": "./11.06-summary/learn-metadata.json"
+            "$ref": "./11.05.03-quiz/learn-metadata.json"
         }
     ]
 }
