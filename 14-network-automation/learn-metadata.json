@@ -1,5 +1,5 @@
 {
-    "title": "Автоматизация сети",
+    "title": "Автоматизация управления сетью",
     "materialType": "course",
     "tags": {
         "$ref": "../material-tags.json"

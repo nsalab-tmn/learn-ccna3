@@ -1,7 +1,7 @@
 {
     "title": "Архитектура REST",
     "materialType": "lecture",
-    "description": "",
+    "description": "Почему архитектурный стиль REST является часто используемым в современных веб-приложениях?",
     "difficulty": 3,
     "duration": "PT0H16M",
     "tags": {

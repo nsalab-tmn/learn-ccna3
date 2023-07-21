@@ -1,7 +1,7 @@
 {
-    "title": "⁪API-интерфейсы",
+    "title": "Интерфейсы прикладного программирования (API)",
     "materialType": "lecture",
-    "description": "",
+    "description": "Что такое API и для чего они нужны?",
     "difficulty": 3,
     "duration": "PT0H15M",
     "tags": {
