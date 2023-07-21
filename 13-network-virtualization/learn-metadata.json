@@ -4,6 +4,9 @@
     "tags": {
         "$ref": "../material-tags.json"
     },
+    "description": {
+        "$ref": "./README.md"
+    },
     "materials": [
         {
             "$ref": "./13.00-introduction/learn-metadata.json"
@@ -42,10 +45,10 @@
             "$ref": "./13.06-module-practice-and-quiz/learn-metadata.json"
         },
         {
-            "$ref": "./13.06.03-quiz/learn-metadata.json"
+            "$ref": "./13.07-summary/learn-metadata.json"
         },
         {
-            "$ref": "./13.07-summary/learn-metadata.json"
+            "$ref": "./13.06.03-quiz/learn-metadata.json"
         }
     ]
 }
