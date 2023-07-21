@@ -3,7 +3,7 @@
     "materialType": "lecture",
     "description": "Что такое SDN-контроллер и зачем он нужен в программно-определяемой сети?",
     "difficulty": 3,
-    "duration": "PT0H19M",
+    "duration": "PT0H18M",
     "tags": {
         "$ref": "../../material-tags.json"
     },

@@ -3,7 +3,7 @@
     "materialType": "lecture",
     "description": "Что такое облачные вычисления и для чего они нужны? Какими бывают типы облачных сервисов? Какими бывают модели предоставления облачных инфраструктур?",
     "difficulty": 3,
-    "duration": "PT0H12M",
+    "duration": "PT0H11M",
     "tags": {
         "$ref": "../../material-tags.json"
     },

@@ -3,7 +3,7 @@
     "materialType": "lecture",
     "description": "Как виртуальные машины взаимодействуют между собой по сети в рамках одного гипервизора и между разными гипервизорами?",
     "difficulty": 3,
-    "duration": "PT0H8M",
+    "duration": "PT0H7M",
     "tags": {
         "$ref": "../../material-tags.json"
     },
