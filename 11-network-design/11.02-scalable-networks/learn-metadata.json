@@ -3,7 +3,7 @@
     "materialType": "lecture",
     "description": "Какая сеть называется масштабируемой? Какую роль играет резервирование? Что такое домен сбоя и как его ограничивать?",
     "difficulty": 3,
-    "duration": "PT0H18M",
+    "duration": "PT0H17M",
     "tags": {
         "$ref": "../../material-tags.json"
     },
