@@ -108,7 +108,7 @@
     <td>G0/0/0</td>
     <td colspan="2">Подключается к SVR-1</td>
     <td>10.0.0.1/30</td>
-    <td>2001:db8:acad:1።1/64</td>
+    <td>2001:db8:acad:1::1/64</td>
     <td>a03d.6fe1.e180</td>
     <td>OSPF</td>
   </tr>
@@ -132,7 +132,7 @@
     <td>S0/1/1</td>
     <td colspan="2">Подключается к Branch-2</td>
     <td>10.1.1.2/24</td>
-    <td>2001:db8:acad:2።1/64</td>
+    <td>2001:db8:acad:2::1/64</td>
     <td>Н/Д (недоступно)</td>
     <td>OSPFv3</td>
   </tr>
@@ -338,8 +338,8 @@
   </tr>
   <tr>
     <td>2001:db8:acad:1::2/64</td>
-    <td>2001:db8:acad:1።1</td>
-    <td>2001:db8:acad:1።1</td>
+    <td>2001:db8:acad:1::1</td>
+    <td>2001:db8:acad:1::1</td>
   </tr>
   <tr>
     <td rowspan="2"><b>SRV2</b></td>
@@ -366,8 +366,8 @@
   </tr>
   <tr>
     <td>2001:db8:acad:1::251/64</td>
-    <td>2001:db8:acad:1።1</td>
-    <td>2001:db8:acad:1።1</td>
+    <td>2001:db8:acad:1::1</td>
+    <td>2001:db8:acad:1::1</td>
   </tr>
   <tr>
     <td><b>…</b></td>
