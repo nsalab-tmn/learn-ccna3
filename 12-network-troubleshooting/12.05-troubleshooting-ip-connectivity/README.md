@@ -111,7 +111,7 @@ Received 25 broadcasts (0 IP multicasts)
 0 input errors, 0 CRC, 0 frame, 0 overrun, 0 ignored 
 0 watchdog, 5 multicast, 0 pause input 
 10112 packets output, 922864 bytes, 0 underruns 
-0 output errors, 0 collisions, l interface resets 
+0 output errors, 0 collisions, 1 interface resets 
 11 unknown protocol drops 
 0 babbles, 0 late collision, 0 deferred 
 0 lost carrier, 0 no carrier, 0 pause output 
@@ -298,9 +298,9 @@ C:\> arp -a
 Interface: 10.1.10.100 --- 0xd
   Internet Address Physical Address Type
   224.0.0.22 01-00-5e-00-00-16 static
-  224.0.0.251 01-00-5e-00-00-00-fb static
+  224.0.0.251 01-00-5e-00-00-fb static
   239.255.255.250 01-00-5e-7f-ff-fa static
-  255.255.255.255 ff-ff-ff-ff-ff static
+  255.255.255.255 ff-ff-ff-ff-ff-ff static
 C:\ >
 ```
 
@@ -447,7 +447,7 @@ R1#
 
 **Правильная маршрутизация R1 IPv6**
 
-R1 включен как маршрутизатор IPv6 с помощью команды **ipv6 unicast-routing**. Теперь команда **show ipv6 interface GigabitEthernet 0/0/0**show ipv6 interface GigabitEthernet 0/0 **show ipv6 interface GigabitEthernet 0/0/0** показывает, что R1 — член группы многоадресной рассылки All-IPv6-Routers (FF02::2).
+R1 включен как маршрутизатор IPv6 с помощью команды **ipv6 unicast-routing**. Теперь команда **show ipv6 interface GigabitEthernet 0/0/0** показывает, что R1 — член группы многоадресной рассылки All-IPv6-Routers (FF02::2).
 
 ```
 R1(config)# ipv6 unicast-routing
