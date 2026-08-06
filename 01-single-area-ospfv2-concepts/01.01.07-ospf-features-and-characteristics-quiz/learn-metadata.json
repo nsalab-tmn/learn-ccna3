@@ -18,7 +18,7 @@
             "answerType": "singleChoice",
             "answers": [
                 {
-                    "answer": "алгоритм Дийкстры",
+                    "answer": "алгоритм Дейкстры",
                     "correct": false,
                     "comment": "База данных смежности отвечает за создание таблицы соседей"
                 },
@@ -48,7 +48,7 @@
             "answerType": "singleChoice",
             "answers": [
                 {
-                    "answer": "алгоритм Дийкстры",
+                    "answer": "алгоритм Дейкстры",
                     "correct": true
                 },
                 {
@@ -78,7 +78,7 @@
             "answerType": "singleChoice",
             "answers": [
                 {
-                    "answer": "алгоритм Дийкстры",
+                    "answer": "алгоритм Дейкстры",
                     "correct": false,
                     "comment": "База данных состояний каналов отвечает за создание таблицы топологии"
                 },
@@ -108,7 +108,7 @@
             "answerType": "singleChoice",
             "answers": [
                 {
-                    "answer": "алгоритм Дийкстры",
+                    "answer": "алгоритм Дейкстры",
                     "correct": false,
                     "comment": "База данных пересылки отвечает за создание таблицы маршрутизации"
                 },

@@ -344,7 +344,7 @@ R1#
 *Jun  5 03:47:41.569: %OSPF-5-ADJCHG: Process 10, Nbr 3.3.3.3 on GigabitEthernet0/0/0 from LOADING to FULL, Loading Done
 ```
 
-Выходные данные команды **show in ospf interface g0/0/0** на R1 подтверждают, что он является DR с приоритетом 255, и идентифицируют новые соседние смежности с R1.
+Выходные данные команды **show ip ospf interface g0/0/0** на R1 подтверждают, что он является DR с приоритетом 255, и идентифицируют новые соседние смежности с R1.
 
 ```
 R1# show ip ospf interface GigabitEthernet 0/0/0

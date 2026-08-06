@@ -107,7 +107,7 @@ Interface: 192.168.1.10 --- 0x4
   224.0.0.252 01-00-5e-00-00-fc static
   239.255.255.250 01-00-5e-7f-ff-fa static
   255.255.255.255 ff-ff-ff-ff-ff-ff static 
-C:\Users\Studuent> ipconfig /all 
+C:\Users\Student> ipconfig /all 
 Настройка IP для Windows
    Host Name . . . . . . . . . . . . : DESKTOP 
    Основной DNS-суффикс. . . . . . . :
@@ -160,7 +160,7 @@ Ethernet adapter Ethernet:
 
    - Ответьте на вопрос №7
 
-## Ответьте на слудедующие вопросы:
+## Ответьте на следующие вопросы:
 
 - вопрос №8
 

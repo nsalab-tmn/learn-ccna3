@@ -331,7 +331,7 @@
             ]
         },
         {
-            "question": "Зачем сетевой администратор ввёл на маршрутизаторе команду `show cdp neigbors`?",
+            "question": "Зачем сетевой администратор ввёл на маршрутизаторе команду `show cdp neighbors`?",
             "answerType": "singleChoice",
             "answers": [
                 {

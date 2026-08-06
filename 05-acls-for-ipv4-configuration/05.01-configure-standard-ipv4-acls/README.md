@@ -115,7 +115,7 @@ Standard IP access list 10
 R1(config)#
 ```
 
-Apply ACL 10 outbound on the Serial 0/1/0 interface.
+Примените ACL 10 в исходящем направлении на интерфейсе Serial 0/1/0.
 
 ```
 R1(config)# interface Serial 0/1/0
