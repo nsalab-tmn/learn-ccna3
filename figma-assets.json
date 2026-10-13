@@ -1165,43 +1165,55 @@
   },
   {
    "id": "ccna3-qxw7mh3",
-   "kind": "illustration",
+   "kind": "animation",
    "display": {
     "key": "3.5.9-1"
    },
    "figma": {
     "nodeId": "4191:452900",
-    "page": "CCNA3 · 03 network-security-concepts"
+    "page": "CCNA3 · 03 network-security-concepts",
+    "motion": {
+     "sectionId": "4627:2",
+     "animId": "4671:3"
+    }
    },
    "out": {
-    "path": "03-network-security-concepts/03.05-common-network-attacks/assets/3.5.9-1.png",
-    "format": "svg"
+    "path": "03-network-security-concepts/03.05-common-network-attacks/assets/3.5.9-1.svg",
+    "format": "animated-svg",
+    "fallback": "03-network-security-concepts/03.05-common-network-attacks/assets/3.5.9-1.png"
    },
    "status": "pending",
+   "spec": "animations/ccna3-qxw7mh3/spec.json",
    "provenance": {
     "legacy": "3.5.9-1.png"
    },
-   "notes": "[на исходном листе слой назван «3.5.9-2»; анимация (APNG); DoS-атака · пара: закреплена]"
+   "notes": "[на исходном листе слой назван «3.5.9-2»; анимация (APNG); DoS-атака · пара: закреплена] · kind corrected to animation (Motion build exists; APNG in git is the legacy render)"
   },
   {
    "id": "ccna3-rdjvm4g",
-   "kind": "illustration",
+   "kind": "animation",
    "display": {
     "key": "3.5.9-2"
    },
    "figma": {
     "nodeId": "4191:452939",
-    "page": "CCNA3 · 03 network-security-concepts"
+    "page": "CCNA3 · 03 network-security-concepts",
+    "motion": {
+     "sectionId": "4628:2",
+     "animId": "4674:3"
+    }
    },
    "out": {
-    "path": "03-network-security-concepts/03.05-common-network-attacks/assets/3.5.9-2.png",
-    "format": "svg"
+    "path": "03-network-security-concepts/03.05-common-network-attacks/assets/3.5.9-2.svg",
+    "format": "animated-svg",
+    "fallback": "03-network-security-concepts/03.05-common-network-attacks/assets/3.5.9-2.png"
    },
    "status": "pending",
+   "spec": "animations/ccna3-rdjvm4g/spec.json",
    "provenance": {
     "legacy": "3.5.9-2.png"
    },
-   "notes": "[на исходном листе слой назван «3.5.9-1»; анимация (APNG); DDoS-атака, ботнет · пара: закреплена]"
+   "notes": "[на исходном листе слой назван «3.5.9-1»; анимация (APNG); DDoS-атака, ботнет · пара: закреплена] · kind corrected to animation (Motion build exists; APNG in git is the legacy render)"
   },
   {
    "id": "ccna3-fvdlbpc",
@@ -4519,23 +4531,29 @@
   },
   {
    "id": "ccna3-cibygmy",
-   "kind": "illustration",
+   "kind": "animation",
    "display": {
     "key": "10.4.6"
    },
    "figma": {
     "nodeId": "4191:462029",
-    "page": "CCNA3 · 10 network-management"
+    "page": "CCNA3 · 10 network-management",
+    "motion": {
+     "sectionId": "4648:2",
+     "animId": "4689:3"
+    }
    },
    "out": {
-    "path": "10-network-management/10.04-snmp/assets/10.4.6.png",
-    "format": "svg"
+    "path": "10-network-management/10.04-snmp/assets/10.4.6.svg",
+    "format": "animated-svg",
+    "fallback": "10-network-management/10.04-snmp/assets/10.4.6.png"
    },
    "status": "pending",
+   "spec": "animations/ccna3-cibygmy/spec.json",
    "provenance": {
     "legacy": "10.4.6.png"
    },
-   "notes": "[на исходном листе слой назван «Frame»; анимация (APNG) · пара: закреплена]"
+   "notes": "[на исходном листе слой назван «Frame»; анимация (APNG) · пара: закреплена] · kind corrected to animation (Motion build exists; APNG in git is the legacy render)"
   },
   {
    "id": "ccna3-fsdmmwx",
