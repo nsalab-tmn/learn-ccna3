@@ -1,0 +1,101 @@
+# CCNA3 — встроенные видео: классификация и сценарии пересборки
+
+32 видео, встроенных в материалы курса как ссылки на YouTube, разобраны по одному: класс, цель для обучающегося, посценный сценарий (что на экране / что говорится / роль), предложение по пересборке и полный транскрипт — по документу на видео в этой папке (`<модуль>/<тема>--<videoId>.md`). Классы: **marketing** — убрать; **explainer** — объяснение концепции (пересборка в анимацию / видео с голосом / текст + иллюстрация); **cli-basics** и **lab-demo** — сессии CLI/GUI, пригодные для обучающих видео нашего симулятора.
+
+| класс | видео |
+|---|---|
+| marketing | 2 |
+| explainer | 21 |
+| lab-demo | 9 |
+
+## Таблица
+
+| videoId | module/topic | Название (EN) | Длит. | Класс | Предложение по пересборке | Документ |
+|---|---|---|---|---|---|---|
+| EKLYuwycPQM | 01/01.02-ospf-packets | OSPF Packet Types | 5:49 | explainer | видео с генер. голосом ~2:30 (или 2 анимации) | [doc](01-single-area-ospfv2-concepts/01.02-ospf-packets--EKLYuwycPQM.md) |
+| yNiUGbVP2Xc | 01/01.03-ospf-operation | OSPF Operation | 7:43 | explainer | видео с генер. голосом ~3:30 + анимация DR | [doc](01-single-area-ospfv2-concepts/01.03-ospf-operation--yNiUGbVP2Xc.md) |
+| gDohT7qGeSs | 03/03.03-threat-actor-tools | Threat Actor Tools | 6:46 | explainer | текст + иллюстрация (или код-рендер ≤ 1:30) | [doc](03-network-security-concepts/03.03-threat-actor-tools--gDohT7qGeSs.md) |
+| s1Zb4Si9glY | 03/03.05-common-network-attacks | Reconnaissance Attacks | 2:58 | explainer | текст + иллюстрация (≤ 1:00) | [doc](03-network-security-concepts/03.05-common-network-attacks--s1Zb4Si9glY.md) |
+| zSvQp2erbbY | 03/03.05-common-network-attacks | Access and Social Engineering Attacks | 3:36 | explainer | текст + иллюстрация (≤ 1:30, защитный акцент) | [doc](03-network-security-concepts/03.05-common-network-attacks--zSvQp2erbbY.md) |
+| aHUs-Q95deY | 03/03.05-common-network-attacks | Denial of Service Attacks | 2:03 | explainer | анимация Figma (≤ 60 с) | [doc](03-network-security-concepts/03.05-common-network-attacks--aHUs-Q95deY.md) |
+| qgM_6SJwwP8 | 03/03.06-ip-vulnerabilities-and-threats | Common IP and ICMP Attacks | 4:33 | explainer | текст + иллюстрация (≤ 1:30) | [doc](03-network-security-concepts/03.06-ip-vulnerabilities-and-threats--qgM_6SJwwP8.md) |
+| NbmzS--sOyU | 03/03.06-ip-vulnerabilities-and-threats | Amplification, Reflection and Spoofing Attacks | 3:29 | explainer | 2 анимации Figma (Smurf + CAM-спуфинг) | [doc](03-network-security-concepts/03.06-ip-vulnerabilities-and-threats--NbmzS--sOyU.md) |
+| Y08C_0jFERY | 03/03.08-ip-services | ARP Spoofing | 5:21 | **lab-demo** | видео с генер. голосом ~2:30 + сценарий для симулятора | [doc](03-network-security-concepts/03.08-ip-services--Y08C_0jFERY.md) |
+| YNfNWEeukWQ | 03/03.10-cryptography | Cryptography | 4:29 | explainer | видео с генер. голосом ~2:30 + текст | [doc](03-network-security-concepts/03.10-cryptography--YNfNWEeukWQ.md) |
+| kPV8JZzD5iQ | 08/08.03-ipsec | IPsec Concepts | 6:39 | explainer | видео с генер. голосом ~3:00 (осовременить параметры) | [doc](08-vpn-and-ipsec-concepts/08.03-ipsec--kPV8JZzD5iQ.md) |
+| mRSTH3Daj6E | 08/08.03-ipsec | IPsec Transport and Tunnel Modes | 1:51 | explainer | анимация Figma (≤ 60 с) | [doc](08-vpn-and-ipsec-concepts/08.03-ipsec--mRSTH3Daj6E.md) |
+| s_4r5MBW_Uc | 09/09.01-network-transmission-quality | The Purpose of QoS | 3:06 | explainer | анимация Figma (≤ 60 с) / текст + иллюстрация | [doc](09-qos-concepts/09.01-network-transmission-quality--s_4r5MBW_Uc.md) |
+| T9HlXNYJNdg | 09/09.02-traffic-characteristics | Traffic Characteristics | 2:49 | explainer | текст + иллюстрация (≤ 1:30) | [doc](09-qos-concepts/09.02-traffic-characteristics--T9HlXNYJNdg.md) |
+| rmxOlo93MWo | 09/09.03-queuing-algorithms | QoS Algorithms | 1:35 | explainer | анимация Figma (≤ 60 с) | [doc](09-qos-concepts/09.03-queuing-algorithms--rmxOlo93MWo.md) |
+| jdzgForIwzY | 09/09.04-qos-models | QoS Models | 4:29 | explainer | текст + иллюстрация (≤ 1:30) | [doc](09-qos-concepts/09.04-qos-models--jdzgForIwzY.md) |
+| vL-ZYGViSJs | 09/09.05-qos-implementation-techniques | QoS Implementation Techniques | 8:32 | explainer | 2–3 анимации Figma / код-рендер ~3:30 | [doc](09-qos-concepts/09.05-qos-implementation-techniques--vL-ZYGViSJs.md) |
+| `nsmyx7XLAPo` | 10-network-management / 10.07-ios-image-management | Обновление образа IOS на маршрутизаторе Cisco через TFTP (PuTTY, Tftpd64, Cisco 1941) | 6:49 | lab-demo | видео с генерированным голосом (код-рендер), ~3:30 + сессия IOS для симулятора | [10.07 — nsmyx7XLAPo](10-network-management/10.07-ios-image-management--nsmyx7XLAPo.md) |
+| `bvv3U0BkiL0` | 11-network-design / 11.01-hierarchical-networks | Трёхуровневая модель проектирования сети (топология Packet Tracer) | 2:06 | explainer | анимация Figma ≤ 60 с (минимум — текст + иллюстрация) | [11.01 — bvv3U0BkiL0](11-network-design/11.01-hierarchical-networks--bvv3U0BkiL0.md) |
+| `zly4n5wU-bU` | 13-network-virtualization / 13.01-cloud-computing | Облако и виртуализация (ЦОД, SaaS/PaaS/IaaS, гипервизоры типа 1/2, Nexus 1000V) | 5:06 | explainer | облачная часть — текст + иллюстрация; гипервизоры — анимация Figma ≤ 60 с (ссылку поставить в 13.2.6/13.3.1) | [13.01 — zly4n5wU-bU](13-network-virtualization/13.01-cloud-computing--zly4n5wU-bU.md) |
+| `_ivjNF93RcE` | 13-network-virtualization / 13.04-software-defined-networking | Сетевое программирование, SDN и контроллеры | 5:06 | explainer | анимация Figma ≤ 60 с (разделение уровней + контроллер) + таблица инструментов текстом; **видеодорожка в скачанном файле повреждена** | [13.04 — _ivjNF93RcE](13-network-virtualization/13.04-software-defined-networking--_ivjNF93RcE.md) |
+| `UlQEjsoNIGM` | 13-network-virtualization / 13.05-controllers | Основы Cisco ACI (ролик TechWiseTV) | 5:59 | **marketing** | убрать; одна фраза в 13.5.2 | [13.05 — UlQEjsoNIGM](13-network-virtualization/13.05-controllers--UlQEjsoNIGM.md) |
+| `nVxWyrzuaBY` | 14-network-automation / 14.01-automation-overview | «Автоматизация повсюду» (рекламный IoT-монтаж Cisco) | 1:26 | **marketing** | убрать; одна фраза с примерами IoT в 14.1.1 | [14.01 — nVxWyrzuaBY](14-network-automation/14.01-automation-overview--nVxWyrzuaBY.md) |
+| `2AduRqyW8Qc` | 14-network-automation / 14.02-data-formats | Форматы данных: HTML, XML, JSON, YAML | 5:07 | explainer | видео с генерированным голосом (код-рендер), ~2:30, на примере из текста курса | [14.02 — 2AduRqyW8Qc](14-network-automation/14.02-data-formats--2AduRqyW8Qc.md) |
+| `jaBySHLTV-Q` | 14-network-automation / 14.03-apis | API: определение, SOAP/REST/NETCONF/RESTCONF, вызов NASA APOD в браузере, Postman и JavaScript | 5:07 | lab-demo | видео с генерированным голосом (код-рендер), ~3:00 + сессия HTTP/Python для симулятора | [14.03 — jaBySHLTV-Q](14-network-automation/14.03-apis--jaBySHLTV-Q.md) |
+| `_sUxEZzjirg` | 14-network-automation / 14.04-rest | REST: методы/CRUD, анатомия URI, один GET к ipinfo.io из браузера, curl, JavaScript и Python | 4:26 | lab-demo | видео с генерированным голосом (код-рендер), ~3:00 + сессия для симулятора; **видеодорожка повреждена** (слайды 0:00–2:32 отсутствуют) | [14.04 — _sUxEZzjirg](14-network-automation/14.04-rest--_sUxEZzjirg.md) |
+| `-EHtbTcC_G4` | 14-network-automation / 14.05-configuration-management | Инструменты управления конфигурацией; разбор и запуск Ansible-playbook | 5:37 | lab-demo | видео с генерированным голосом (код-рендер), ~3:30 + сессия Ansible (Linux-хост как в видео и сетевой вариант `ios_facts`) | [14.05 — -EHtbTcC_G4](14-network-automation/14.05-configuration-management---EHtbTcC_G4.md) |
+| `aiimnEwcfFA` | 14-network-automation / 14.06-ibn-and-cisco-dna-center | Сети на основе намерений и ИИ (у доски, Cisco) | 3:12 | explainer | анимация Figma ≤ 60 с (цикл intent → translate → activate → infra → assurance, ИИ в центре) | [14.06 — aiimnEwcfFA](14-network-automation/14.06-ibn-and-cisco-dna-center--aiimnEwcfFA.md) |
+| `5wsjDRPXfmM` | 14-network-automation / 14.06-ibn-and-cisco-dna-center | Обзор Cisco DNA Center и API платформы (часть 1/4) | 4:20 | lab-demo | видео с генерированным голосом (макет GUI контроллера), ~2:30 + API-сессия (auth, site-health, assign device) | [14.06 — 5wsjDRPXfmM](14-network-automation/14.06-ibn-and-cisco-dna-center--5wsjDRPXfmM.md) |
+| `ALftVi8SAZo` | 14-network-automation / 14.06-ibn-and-cisco-dna-center | DNA Center: Design и Provision (часть 2/4) | 3:00 | lab-demo | видео (макет GUI), ~2:30 + API-сессия обновления образа и CLI-эквивалент сетевых настроек | [14.06 — ALftVi8SAZo](14-network-automation/14.06-ibn-and-cisco-dna-center--ALftVi8SAZo.md) |
+| `o8uaZfpkr5A` | 14-network-automation / 14.06-ibn-and-cisco-dna-center | DNA Center: Policy и Assurance (часть 3/4) | 3:03 | lab-demo | видео (макет GUI + терминал), ~2:30 + CLI-сессия `show ip route / cef / eigrp neighbors` для симулятора | [14.06 — o8uaZfpkr5A](14-network-automation/14.06-ibn-and-cisco-dna-center--o8uaZfpkr5A.md) |
+| `bNG9z5NQc44` | 14-network-automation / 14.06-ibn-and-cisco-dna-center | DNA Center: диагностика подключения пользователя (часть 4/4) | 7:04 | lab-demo (хвост 5:13–6:55 — marketing) | видео (макет Client 360 + терминал WLC), ~3:30; ROI-таблицу убрать; CLI-сессия Catalyst 9800 | [14.06 — bNG9z5NQc44](14-network-automation/14.06-ibn-and-cisco-dna-center--bNG9z5NQc44.md) |
+
+## Сводка — модули 01, 03, 08, 09
+
+**Всего:** 17 видео. **По классам:** `explainer` — 16, `lab-demo` — 1, `marketing` — 0, `cli-basics` — 0, `other` — 0.
+
+**Маркетинговых видео нет** — удалять ничего не требуется. Все 17 — технические (концепции с диаграммами/слайдами либо, в одном случае, демонстрация в Packet Tracer). Все подлежат пересборке как анимация / код-рендер с генерированным голосом.
+
+**Самое ценное для симулятора:**
+- **Y08C_0jFERY (ARP Spoofing, 03.08)** — единственный lab-demo: полный разбор в Packet Tracer с реальными командами ПК (`ipconfig /all`, `arp -a`, `ping`), командой коммутатора (`show mac address-table dynamic`), настройкой интерфейса и встроенным анализатором. Документ содержит готовый сценарий сессии с фактическими адресами/MAC и добавленными контрмерами (DHCP Snooping + Dynamic ARP Inspection, Port Security) — прямое семя тренинга.
+- Косвенно питают CLI-лабы (семена сессий добавлены в документы): **NbmzS--sOyU** (MAC/CAM-спуфинг → Port Security), **rmxOlo93MWo** (CBWFQ/LLQ через MQC), **vL-ZYGViSJs** (классификация/маркировка DSCP, шейпинг через MQC), **kPV8JZzD5iQ** (пролог к настройке site-to-site IPsec VPN). Сами по себе эти ролики — explainer без CLI; CLI-материал вынесен в предложения по пересборке.
+
+**Самые ценные для контент-библиотеки (чистые концепты, хорошо лягут в анимацию):** OSPF-пакеты и работа OSPF (01.02/01.03), транспортный/туннельный режим IPsec (08.03 mRSTH3Daj6E), алгоритмы очередей (09.03), последовательность QoS и маркировка DSCP (09.05).
+
+**Фактические неточности в оригиналах (исправить при пересборке):**
+- **EKLYuwycPQM (01.02):** на слайде LSA строка «тип 6» ошибочно содержит текст «Acknowledges the other packet types» (копия описания LSAck); правильно тип 6 — MOSPF. Диктор говорит, что LSAck подтверждает «всё, кроме Hello и Ack» — точнее «LSAck подтверждает LSU/LSA». Текст темы 1.2.2 говорит «7 типов LSA», верно — 11.
+- **yNiUGbVP2Xc (01.03):** в анимации лавины LSA источник подписан R3, а диктор говорит «R2»; ExStart в таблице помечен «on point-to-point» (неточно); слайд «The Need for a DR» использует 4 роутера (6 смежностей), текст — 5 (10). Router ID назван «IP-адресом».
+- **s1Zb4Si9glY (03.05) и zSvQp2erbbY (03.05):** демонстрации построены на реальном бренде/домене **Cisco** (whois cisco.com; фишинг «от Cisco HR» с покупкой похожего домена) — при пересборке заменить на вымышленную организацию и усилить защитный акцент.
+- **NbmzS--sOyU (03.06):** классический Smurf использует directed broadcast, а не multicast (в ролике «multicast or broadcast»). Современные amplification/reflection — на DNS/NTP (есть в тексте 3.6.5, нет в видео).
+- **qgM_6SJwwP8 (03.06):** видео не упоминает DNS/NTP-умножение (есть в тексте).
+- **Y08C_0jFERY (03.08):** демонстрируется не классическое отравление ARP-кеша gratuitous-ARP, а отравление таблицы MAC (CAM) коммутатора поддельным source-MAC (автор прямо оговаривает, что gratuitous ARP в Packet Tracer недоступен); защита (DAI/DHCP Snooping) не показана.
+- **kPV8JZzD5iQ (08.03):** устаревшие параметры — DH 1/2/5, MD5/SHA-1, 3DES (текст 8.3.5/8.3.7 рекомендует SHA-256+, AES, DH14+/DH24).
+- **rmxOlo93MWo (09.03):** на слайде LLQ порядок выхода подписан «2 1 3 4 V V» — голос должен выходить **первым** («V V 4 3 1 2», как в тексте 9.3.6).
+- **vL-ZYGViSJs (09.05) и T9HlXNYJNdg (09.02):** без ошибок, но видео опускают детали из текста (DSCP BE/EF/AF и формулу AFxy; полные пороги задержки/джиттера для голоса/видео).
+
+**Дефекты загрузки (сказать оператору, не критично для пересборки):**
+- **YNfNWEeukWQ (03.10, Cryptography):** видеодорожка MP4 обрывается на ~2:06, аудио/субтитры идут до 4:29; концовка (расшифровка + сводка четырёх элементов) восстановлена по транскрипту.
+- **T9HlXNYJNdg (09.02, Traffic Characteristics):** видеодорожка дефектна — один статичный слайд «Data Traffic Factors» на все 2:49 (все кадры байт-в-байт идентичны); слайды о голосе/видео/графиках в дорожке отсутствуют, восстановлены по транскрипту и SVG курса.
+- **mRSTH3Daj6E (08.03):** видеодорожка до ~1:49 при аудио 1:51 — содержание не теряется.
+
+## Сводка — фрагмент индекса B
+
+**По классам:** lab-demo — 8 (`nsmyx7XLAPo`, `jaBySHLTV-Q`, `_sUxEZzjirg`, `-EHtbTcC_G4`, `5wsjDRPXfmM`, `ALftVi8SAZo`, `o8uaZfpkr5A`, `bNG9z5NQc44`); explainer — 5 (`bvv3U0BkiL0`, `zly4n5wU-bU`, `_ivjNF93RcE`, `2AduRqyW8Qc`, `aiimnEwcfFA`); marketing — 2 (`UlQEjsoNIGM`, `nVxWyrzuaBY`); cli-basics — 0; other — 0.
+
+**Убрать (marketing):** `UlQEjsoNIGM` (TechWiseTV про ACI — всё полезное уже в 13.5.3–13.5.4) и `nVxWyrzuaBY` (IoT-реклама Cisco без технического содержания). Плюс маркетинговый хвост `bNG9z5NQc44` (таблица «The Cost of Troubleshooting 800 Users»).
+
+**Самое ценное для симулятора (готовые сессии в документах):**
+1. `nsmyx7XLAPo` — полный цикл обновления IOS: `ping` → `show flash` → `copy tftp flash` (диалог и прогресс) → `show flash` (два образа) → `boot system flash:` → `copy run start` → `reload` → `show version`; реальный вывод Cisco 1941 / IOS 15.7(3)M5.
+2. `-EHtbTcC_G4` — Ansible-playbook с разбором plays/tasks/modules/parameters/variables и полным выводом `ansible-playbook`; в документе также сетевой вариант (`cisco.ios.ios_facts`, `ios_command`) для маршрутизатора.
+3. `_sUxEZzjirg` + `jaBySHLTV-Q` — один и тот же REST GET четырьмя способами (адресная строка, `curl`, JavaScript, Python) с полным JSON; для симулятора нужна локальная заглушка API, не зависящая от Интернета.
+4. `o8uaZfpkr5A` — контроллер выполняет `show ip route`, `show ip cef`, `show isis neighbors`, `show ospf neighbor`, `show eigrp address-family ipv4 neighbors` на коммутаторе фабрики; отличное упражнение «прочитай вывод и сделай вывод сам» (в видео диктор трактует пустой вывод как успех).
+5. `5wsjDRPXfmM` / `ALftVi8SAZo` — Intent API контроллера (аутентификация, здоровье сайтов, назначение устройства сайту, распространение/активация образа) и CLI-эквивалент сетевых настроек сайта.
+
+**Повреждённые исходники (восстановлено по озвучке и материалам курса):** `_ivjNF93RcE` — 58,8 с видео на 305,6 с звука, слайды идут с ~5-кратным ускорением, слайды 8 (onePK) и 10 (OpenDaylight) отсутствуют; `_sUxEZzjirg` — 100 с видео на 266 с звука, сохранилась только демонстрация и слайд URI, слайды 0:00–2:32 отсутствуют. В `nsmyx7XLAPo` хвост имени старого образа (`c1900-universalk9-mz.SPA.154-3.M?.bin`) скрыт краем окна PuTTY; в `bNG9z5NQc44` таблицы iOS Analytics (2:45) не читаются из-за разрешения.
+
+**Фактические неточности оригиналов, которые стоит исправить при пересборке:**
+- `nsmyx7XLAPo`: полностью выключается брандмауэр Windows (лучше правило для UDP/69); пропущена проверка свободного места во флеше и резервная копия старого образа; платформа (1941 / IOS 15.x) не совпадает с текстом (ISR 4200 / IOS XE 16.9).
+- `bvv3U0BkiL0`: единственные `Core1` и `Edge1` — точка отказа вопреки принципу отказоустойчивости из 11.1.4.
+- `zly4n5wU-bU`: «VMware vSphere» и «Red Hat RHEV» названы гипервизорами типа 1 (это управляющие пакеты); только две модели облака вместо четырёх; «Cisco» в ряду облачных провайдеров; устаревшие продукты (Virtual PC).
+- `_ivjNF93RcE`: «сетевой контроллер — аппаратное устройство»; OpenFlow показан южным интерфейсом APIC-EM/ACI (там OpFlex/CLI/NETCONF); onePK и APIC-EM сняты с производства; смешение ACI (ЦОД) и APIC-EM (кампус).
+- `2AduRqyW8Qc`: `xmlns="network interfaces"` (пространство имён с пробелом); отступ YAML в один пробел; «YAML новее XML и JSON»; пример не совпадает с примером текста (14.2.5–14.2.8).
+- `jaBySHLTV-Q`: «SOAP — стандарт Microsoft» (стандарт W3C при участии Microsoft); `XMLHttpRequest` устарел.
+- `_sUxEZzjirg`: заголовок «URI **Universal** Resource Identifier» (правильно Uniform); описание PUT/PATCH; `ipinfo.io` без токена отвечает ограниченно.
+- `-EHtbTcC_G4`: единица описания SaltStack — states (SLS), а не pillar (та же ошибка в таблице 14.5.5 текста); «netstack» вместо `netstat`; пример против Linux-хоста, а не сетевого устройства.
+- `aiimnEwcfFA`: термины доски (Activated/Assurance) не совпадают с текстом (активация/контроль); «assurance» ↔ «insurance» в речи.
+- `5wsjDRPXfmM`, `ALftVi8SAZo`, `o8uaZfpkr5A`, `bNG9z5NQc44`: продукт переименован в Catalyst Center, интерфейс и пути API изменились (в документах — пути Intent API версии 1.3, 2019 г.); «firewalls» среди управляемых устройств; «server provider» вместо service provider; «ISIS exists, OSPF good to go» при пустом выводе; «2.45 GHz»; гипотеза о дальности при RSSI −46 dBm; «DNA Center can run in the cloud» (в 2019 — только appliance).
