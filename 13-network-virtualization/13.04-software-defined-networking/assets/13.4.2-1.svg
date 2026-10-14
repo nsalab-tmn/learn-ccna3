@@ -1,5 +1,6 @@
 <svg width="1450" height="686" viewBox="0 0 1450 686" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 <g data-node-id="4191:465928">
+<rect width="1449.51" height="685.474" transform="scale(1.00034)" fill="white"/>
 <g data-node-id="4191:465929">
 <path data-node-id="4191:465930" d="M1329.96 464.838L1349.97 476.389L1329.96 487.94V464.838Z" fill="#FFBD6E"/>
 <path data-node-id="4191:465931" d="M1329.96 438.325L1349.97 449.876L1329.96 461.427V438.325Z" fill="#FFBD6E"/>
@@ -52,53 +53,53 @@
 </g>
 <g data-node-id="4275:80379">
 <g data-node-id="I4275:80379;4274:406">
-<rect data-node-id="I4275:80379;4274:407" width="10.0155" height="15.1866" transform="matrix(0.866067 0.50061 -0.866067 0.50061 740.778 248.304)" fill="#8B8B8B"/>
+<rect data-node-id="I4275:80379;4274:407" width="10.0155" height="15.1866" transform="matrix(0.866067 0.50061 -0.866067 0.50061 768.168 248.304)" fill="#FAEBB5"/>
 </g>
 <g data-node-id="I4275:80379;4274:408">
-<rect data-node-id="I4275:80379;4274:409" width="15.1867" height="3.34179" transform="matrix(0.866067 -0.500785 2.20045e-08 1.00034 736.3 260.922)" fill="#737373"/>
+<rect data-node-id="I4275:80379;4274:409" width="15.1867" height="3.34179" transform="matrix(0.866067 -0.500785 2.20045e-08 1.00034 763.689 260.922)" fill="#DFC276"/>
 <g data-node-id="I4275:80379;4274:410" style="mix-blend-mode:multiply">
-<rect width="15.1867" height="3.34179" transform="matrix(0.866067 -0.500785 2.20045e-08 1.00034 736.3 260.928)" fill="url(#pattern2_4191_465928)"/>
+<rect width="15.1867" height="3.34179" transform="matrix(0.866067 -0.500785 2.20045e-08 1.00034 763.689 260.928)" fill="url(#pattern2_4191_465928)"/>
 </g>
 <g data-node-id="I4275:80379;4274:411" opacity="0.3" style="mix-blend-mode:multiply">
-<rect width="15.1864" height="3.54712" transform="matrix(0.866067 -0.500786 0.612348 0.353457 736.309 264.253)" fill="url(#pattern3_4191_465928)"/>
+<rect width="15.1864" height="3.54712" transform="matrix(0.866067 -0.500786 0.612348 0.353457 763.698 264.253)" fill="url(#pattern3_4191_465928)"/>
 </g>
 </g>
 <g data-node-id="I4275:80379;4274:412">
-<rect data-node-id="I4275:80379;4274:413" width="10.0319" height="3.34179" transform="matrix(0.866067 0.500785 2.20045e-08 -1.00034 727.625 259.247)" fill="#737373"/>
+<rect data-node-id="I4275:80379;4274:413" width="10.0319" height="3.34179" transform="matrix(0.866067 0.500785 2.20045e-08 -1.00034 755.015 259.247)" fill="#DFC276"/>
 </g>
 </g>
 <g data-node-id="4275:80388">
 <g data-node-id="I4275:80388;4274:406">
-<rect data-node-id="I4275:80388;4274:407" width="10.0158" height="15.1871" transform="matrix(0.866067 0.50061 -0.866067 0.50061 750.686 237.439)" fill="#8B8B8B"/>
+<rect data-node-id="I4275:80388;4274:407" width="10.0158" height="15.1871" transform="matrix(0.866067 0.50061 -0.866067 0.50061 787.978 237.439)" fill="#FAEBB5"/>
 </g>
 <g data-node-id="I4275:80388;4274:408">
-<rect data-node-id="I4275:80388;4274:409" width="15.1871" height="3.34189" transform="matrix(0.866067 -0.500785 2.20045e-08 1.00034 746.207 250.057)" fill="#737373"/>
+<rect data-node-id="I4275:80388;4274:409" width="15.1871" height="3.34189" transform="matrix(0.866067 -0.500785 2.20045e-08 1.00034 783.5 250.057)" fill="#DFC276"/>
 <g data-node-id="I4275:80388;4274:410" style="mix-blend-mode:multiply">
-<rect width="15.1871" height="3.34189" transform="matrix(0.866067 -0.500785 2.20045e-08 1.00034 746.207 250.063)" fill="url(#pattern4_4191_465928)"/>
+<rect width="15.1871" height="3.34189" transform="matrix(0.866067 -0.500785 2.20045e-08 1.00034 783.5 250.063)" fill="url(#pattern4_4191_465928)"/>
 </g>
 <g data-node-id="I4275:80388;4274:411" opacity="0.3" style="mix-blend-mode:multiply">
-<rect width="15.1869" height="3.54722" transform="matrix(0.866067 -0.500786 0.612348 0.353457 746.217 253.388)" fill="url(#pattern5_4191_465928)"/>
+<rect width="15.1869" height="3.54722" transform="matrix(0.866067 -0.500786 0.612348 0.353457 783.509 253.388)" fill="url(#pattern5_4191_465928)"/>
 </g>
 </g>
 <g data-node-id="I4275:80388;4274:412">
-<rect data-node-id="I4275:80388;4274:413" width="10.0322" height="3.34189" transform="matrix(0.866067 0.500785 2.20045e-08 -1.00034 737.533 248.382)" fill="#737373"/>
+<rect data-node-id="I4275:80388;4274:413" width="10.0322" height="3.34189" transform="matrix(0.866067 0.500785 2.20045e-08 -1.00034 774.825 248.382)" fill="#DFC276"/>
 </g>
 </g>
 <g data-node-id="4275:80397">
 <g data-node-id="I4275:80397;4274:406">
-<rect data-node-id="I4275:80397;4274:407" width="10.0158" height="15.1871" transform="matrix(0.866067 0.50061 -0.866067 0.50061 761.598 224.666)" fill="#8B8B8B"/>
+<rect data-node-id="I4275:80397;4274:407" width="10.0158" height="15.1871" transform="matrix(0.866067 0.50061 -0.866067 0.50061 809.804 224.666)" fill="#FAEBB5"/>
 </g>
 <g data-node-id="I4275:80397;4274:408">
-<rect data-node-id="I4275:80397;4274:409" width="15.1871" height="3.34189" transform="matrix(0.866067 -0.500785 2.20045e-08 1.00034 757.119 237.284)" fill="#737373"/>
+<rect data-node-id="I4275:80397;4274:409" width="15.1871" height="3.34189" transform="matrix(0.866067 -0.500785 2.20045e-08 1.00034 805.326 237.284)" fill="#DFC276"/>
 <g data-node-id="I4275:80397;4274:410" style="mix-blend-mode:multiply">
-<rect width="15.1871" height="3.34189" transform="matrix(0.866067 -0.500785 2.20045e-08 1.00034 757.119 237.29)" fill="url(#pattern6_4191_465928)"/>
+<rect width="15.1871" height="3.34189" transform="matrix(0.866067 -0.500785 2.20045e-08 1.00034 805.326 237.29)" fill="url(#pattern6_4191_465928)"/>
 </g>
 <g data-node-id="I4275:80397;4274:411" opacity="0.3" style="mix-blend-mode:multiply">
-<rect width="15.1869" height="3.54722" transform="matrix(0.866067 -0.500786 0.612348 0.353457 757.129 240.615)" fill="url(#pattern7_4191_465928)"/>
+<rect width="15.1869" height="3.54722" transform="matrix(0.866067 -0.500786 0.612348 0.353457 805.335 240.615)" fill="url(#pattern7_4191_465928)"/>
 </g>
 </g>
 <g data-node-id="I4275:80397;4274:412">
-<rect data-node-id="I4275:80397;4274:413" width="10.0322" height="3.34189" transform="matrix(0.866067 0.500785 2.20045e-08 -1.00034 748.445 235.61)" fill="#737373"/>
+<rect data-node-id="I4275:80397;4274:413" width="10.0322" height="3.34189" transform="matrix(0.866067 0.500785 2.20045e-08 -1.00034 796.651 235.61)" fill="#DFC276"/>
 </g>
 </g>
 </g>
