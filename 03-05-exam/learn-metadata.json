@@ -933,7 +933,7 @@
             "answerType": "singleChoice",
             "answers": [
                 {
-                    "answer": "access-list 101 permit tcp host 192.168.1.1 any eq 80",
+                    "answer": "access-list 101 permit tcp host 192.168.1.1 eq 80 any",
                     "comment": "",
                     "correct": false
                 },
