@@ -566,7 +566,6 @@
     "fallback": "01-single-area-ospfv2-concepts/01.03-ospf-operation/assets/1.3.6-1.png"
    },
    "status": "pending",
-   "spec": "animations/ccna3-nhz3qqm/spec.json",
    "provenance": {
     "legacy": "1.3.6-1.png"
    },
@@ -593,7 +592,6 @@
     "fallback": "01-single-area-ospfv2-concepts/01.03-ospf-operation/assets/1.3.6-2.png"
    },
    "status": "pending",
-   "spec": "animations/ccna3-dzon5d4/spec.json",
    "provenance": {
     "legacy": "1.3.6-2.png"
    },
@@ -793,7 +791,6 @@
     "fallback": "02-single-area-ospfv2-configuration/02.03-multiaccess-ospf-networks/assets/2.3.2.png"
    },
    "status": "pending",
-   "spec": "animations/ccna3-5pqnhxm/spec.json",
    "provenance": {
     "legacy": "2.3.2.png"
    },
@@ -1148,7 +1145,6 @@
     "fallback": "03-network-security-concepts/03.03-threat-actor-tools/assets/3.3.2.png"
    },
    "status": "pending",
-   "spec": "animations/ccna3-eiweqq4/spec.json",
    "provenance": {
     "legacy": "3.3.2.png"
    },
@@ -1175,7 +1171,6 @@
     "fallback": "03-network-security-concepts/03.04-malware/assets/3.4.1.png"
    },
    "status": "pending",
-   "spec": "animations/ccna3-t5zktob/spec.json",
    "provenance": {
     "legacy": "3.4.1.png"
    },
@@ -1202,7 +1197,6 @@
     "fallback": "03-network-security-concepts/03.05-common-network-attacks/assets/3.5.3-1.png"
    },
    "status": "pending",
-   "spec": "animations/ccna3-evkbyha/spec.json",
    "provenance": {
     "legacy": "3.5.3-1.png"
    },
@@ -1229,7 +1223,6 @@
     "fallback": "03-network-security-concepts/03.05-common-network-attacks/assets/3.5.3-2.png"
    },
    "status": "pending",
-   "spec": "animations/ccna3-fugrkdl/spec.json",
    "provenance": {
     "legacy": "3.5.3-2.png"
    },
@@ -1256,7 +1249,6 @@
     "fallback": "03-network-security-concepts/03.05-common-network-attacks/assets/3.5.3-3.png"
    },
    "status": "pending",
-   "spec": "animations/ccna3-fzzkmvv/spec.json",
    "provenance": {
     "legacy": "3.5.3-3.png"
    },
@@ -1283,7 +1275,6 @@
     "fallback": "03-network-security-concepts/03.05-common-network-attacks/assets/3.5.5-1.png"
    },
    "status": "pending",
-   "spec": "animations/ccna3-qfbmpbd/spec.json",
    "provenance": {
     "legacy": "3.5.5-1.png"
    },
@@ -1412,7 +1403,6 @@
     "fallback": "03-network-security-concepts/03.05-common-network-attacks/assets/3.5.9-1.png"
    },
    "status": "pending",
-   "spec": "animations/ccna3-qxw7mh3/spec.json",
    "provenance": {
     "legacy": "3.5.9-1.png"
    },
@@ -1439,7 +1429,6 @@
     "fallback": "03-network-security-concepts/03.05-common-network-attacks/assets/3.5.9-2.png"
    },
    "status": "pending",
-   "spec": "animations/ccna3-rdjvm4g/spec.json",
    "provenance": {
     "legacy": "3.5.9-2.png"
    },
@@ -1668,7 +1657,6 @@
     "fallback": "03-network-security-concepts/03.08-ip-services/assets/3.8.1.png"
    },
    "status": "pending",
-   "spec": "animations/ccna3-fod5pw5/spec.json",
    "provenance": {
     "legacy": "3.8.1.png"
    },
@@ -1948,7 +1936,6 @@
     "fallback": "03-network-security-concepts/03.09-network-security-best-practices/assets/3.9.3.png"
    },
    "status": "pending",
-   "spec": "animations/ccna3-ayllzwv/spec.json",
    "provenance": {
     "legacy": "3.9.3.png"
    },
@@ -2759,7 +2746,6 @@
     "fallback": "06-nat-for-ipv4/06.01-nat-characteristics/assets/6.1.3.png"
    },
    "status": "pending",
-   "spec": "animations/ccna3-6ltk5h3/spec.json",
    "provenance": {
     "legacy": "6.1.3.png"
    },
@@ -2862,7 +2848,6 @@
     "fallback": "06-nat-for-ipv4/06.02-types-of-nat/assets/6.2.3.png"
    },
    "status": "pending",
-   "spec": "animations/ccna3-qqppwgy/spec.json",
    "provenance": {
     "legacy": "6.2.3.png"
    },
@@ -2889,7 +2874,6 @@
     "fallback": "06-nat-for-ipv4/06.02-types-of-nat/assets/6.2.4.png"
    },
    "status": "pending",
-   "spec": "animations/ccna3-e3yamdq/spec.json",
    "provenance": {
     "legacy": "6.2.4.png"
    },
@@ -3564,7 +3548,6 @@
     "fallback": "07-wan-concepts/07.02-wan-operations/assets/7.2.5.png"
    },
    "status": "pending",
-   "spec": "animations/ccna3-wrpudll/spec.json",
    "provenance": {
     "legacy": "7.2.5.png"
    },
@@ -3591,7 +3574,6 @@
     "fallback": "07-wan-concepts/07.02-wan-operations/assets/7.2.6.png"
    },
    "status": "pending",
-   "spec": "animations/ccna3-rs4xlzy/spec.json",
    "provenance": {
     "legacy": "7.2.6.png"
    },
@@ -3618,7 +3600,6 @@
     "fallback": "07-wan-concepts/07.02-wan-operations/assets/7.2.7.png"
    },
    "status": "pending",
-   "spec": "animations/ccna3-dxpi2yo/spec.json",
    "provenance": {
     "legacy": "7.2.7.png"
    },
@@ -5543,7 +5524,6 @@
     "fallback": "10-network-management/10.04-snmp/assets/10.4.6.png"
    },
    "status": "pending",
-   "spec": "animations/ccna3-cibygmy/spec.json",
    "provenance": {
     "legacy": "10.4.6.png"
    },
@@ -5775,7 +5755,6 @@
     "fallback": "11-network-design/11.01-hierarchical-networks/assets/11.1.2.png"
    },
    "status": "pending",
-   "spec": "animations/ccna3-yj5mq5y/spec.json",
    "provenance": {
     "legacy": "11.1.2.png"
    },
