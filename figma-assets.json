@@ -465,7 +465,8 @@
    "provenance": {
     "legacy": "1.3.6-1.png"
    },
-   "notes": "[APNG в git (анимация) · анимация (APNG в git); оригинал — RECTANGLE «1.3 1» в зоне анимаций · пара: закреплена]"
+   "notes": "[APNG в git (анимация) · анимация (APNG в git); оригинал — RECTANGLE «1.3 1» в зоне анимаций · пара: закреплена]",
+   "tracks": "animations/ccna3-nhz3qqm/tracks.json"
   },
   {
    "id": "ccna3-dzon5d4",
@@ -491,7 +492,8 @@
    "provenance": {
     "legacy": "1.3.6-2.png"
    },
-   "notes": "[APNG в git (анимация) · анимация (APNG в git); оригинал — RECTANGLE «1.3 2», лежит внутри держателя 1162:99042 · пара: закреплена]"
+   "notes": "[APNG в git (анимация) · анимация (APNG в git); оригинал — RECTANGLE «1.3 2», лежит внутри держателя 1162:99042 · пара: закреплена]",
+   "tracks": "animations/ccna3-dzon5d4/tracks.json"
   },
   {
    "id": "ccna3-ue4ixvl",
@@ -660,7 +662,8 @@
    "provenance": {
     "legacy": "2.3.2.png"
    },
-   "notes": "[APNG в git (анимация) · Анимация: перерисовка 1920x1286 в зоне анимаций (1169:102112), оригинал — RECTANGLE «2.3 1» (1162:99058) в держателе 1162:99043. В git APNG 2.3.2.png — сверка с рендером невозможна. · пара: закреплена]"
+   "notes": "[APNG в git (анимация) · Анимация: перерисовка 1920x1286 в зоне анимаций (1169:102112), оригинал — RECTANGLE «2.3 1» (1162:99058) в держателе 1162:99043. В git APNG 2.3.2.png — сверка с рендером невозможна. · пара: закреплена]",
+   "tracks": "animations/ccna3-5pqnhxm/tracks.json"
   },
   {
    "id": "ccna3-g5tuj4e",
@@ -949,7 +952,8 @@
    "provenance": {
     "legacy": "3.3.2.png"
    },
-   "notes": "[APNG в git (анимация) · анимация; в git и .gif, и APNG (1920x860 = рамка перерисовки); оригинал — растр «3.3 1» в держателе · пара: закреплена]"
+   "notes": "[APNG в git (анимация) · анимация; в git и .gif, и APNG (1920x860 = рамка перерисовки); оригинал — растр «3.3 1» в держателе · пара: закреплена]",
+   "tracks": "animations/ccna3-eiweqq4/tracks.json"
   },
   {
    "id": "ccna3-t5zktob",
@@ -975,7 +979,8 @@
    "provenance": {
     "legacy": "3.4.1.png"
    },
-   "notes": "[APNG в git (анимация) · анимация; оригинала-держателя нет, взят одиночный растр «3.4» 290x132 — проверить · пара: закреплена]"
+   "notes": "[APNG в git (анимация) · анимация; оригинала-держателя нет, взят одиночный растр «3.4» 290x132 — проверить · пара: закреплена]",
+   "tracks": "animations/ccna3-t5zktob/tracks.json"
   },
   {
    "id": "ccna3-evkbyha",
@@ -1001,7 +1006,8 @@
    "provenance": {
     "legacy": "3.5.3-1.png"
    },
-   "notes": "[APNG в git (анимация) · анимация; оригинал — растр «3.5» слева (dy -219) · пара: закреплена]"
+   "notes": "[APNG в git (анимация) · анимация; оригинал — растр «3.5» слева (dy -219) · пара: закреплена]",
+   "tracks": "animations/ccna3-evkbyha/tracks.json"
   },
   {
    "id": "ccna3-fugrkdl",
@@ -1027,7 +1033,8 @@
    "provenance": {
     "legacy": "3.5.3-2.png"
    },
-   "notes": "[APNG в git (анимация) · анимация; оригинал — растр «3.5» слева (dy -6) · пара: закреплена]"
+   "notes": "[APNG в git (анимация) · анимация; оригинал — растр «3.5» слева (dy -6) · пара: закреплена]",
+   "tracks": "animations/ccna3-fugrkdl/tracks.json"
   },
   {
    "id": "ccna3-fzzkmvv",
@@ -1053,7 +1060,8 @@
    "provenance": {
     "legacy": "3.5.3-3.png"
    },
-   "notes": "[APNG в git (анимация) · анимация; оригинал — растр «3.5» слева (dy -14) · пара: закреплена]"
+   "notes": "[APNG в git (анимация) · анимация; оригинал — растр «3.5» слева (dy -14) · пара: закреплена]",
+   "tracks": "animations/ccna3-fzzkmvv/tracks.json"
   },
   {
    "id": "ccna3-qfbmpbd",
@@ -1079,7 +1087,8 @@
    "provenance": {
     "legacy": "3.5.5-1.png"
    },
-   "notes": "[APNG в git (анимация) · анимация; оригинал — растр «3.5» слева (dy -18) · пара: закреплена]"
+   "notes": "[APNG в git (анимация) · анимация; оригинал — растр «3.5» слева (dy -18) · пара: закреплена]",
+   "tracks": "animations/ccna3-qfbmpbd/tracks.json"
   },
   {
    "id": "ccna3-ngvjzbr",
@@ -1187,7 +1196,8 @@
    "provenance": {
     "legacy": "3.5.9-1.png"
    },
-   "notes": "[на исходном листе слой назван «3.5.9-2»; анимация (APNG); DoS-атака · пара: закреплена] · kind corrected to animation (Motion build exists; APNG in git is the legacy render)"
+   "notes": "[на исходном листе слой назван «3.5.9-2»; анимация (APNG); DoS-атака · пара: закреплена] · kind corrected to animation (Motion build exists; APNG in git is the legacy render)",
+   "tracks": "animations/ccna3-qxw7mh3/tracks.json"
   },
   {
    "id": "ccna3-rdjvm4g",
@@ -1213,7 +1223,8 @@
    "provenance": {
     "legacy": "3.5.9-2.png"
    },
-   "notes": "[на исходном листе слой назван «3.5.9-1»; анимация (APNG); DDoS-атака, ботнет · пара: закреплена] · kind corrected to animation (Motion build exists; APNG in git is the legacy render)"
+   "notes": "[на исходном листе слой назван «3.5.9-1»; анимация (APNG); DDoS-атака, ботнет · пара: закреплена] · kind corrected to animation (Motion build exists; APNG in git is the legacy render)",
+   "tracks": "animations/ccna3-rdjvm4g/tracks.json"
   },
   {
    "id": "ccna3-fvdlbpc",
@@ -1401,7 +1412,8 @@
    "provenance": {
     "legacy": "3.8.1.png"
    },
-   "notes": "[APNG в git (анимация) · анимация; оригинал внутри держателя ошибочно назван «3.5» · пара: закреплена]"
+   "notes": "[APNG в git (анимация) · анимация; оригинал внутри держателя ошибочно назван «3.5» · пара: закреплена]",
+   "tracks": "animations/ccna3-fod5pw5/tracks.json"
   },
   {
    "id": "ccna3-dttpwy2",
@@ -1630,7 +1642,8 @@
    "provenance": {
     "legacy": "3.9.3.png"
    },
-   "notes": "[APNG в git (анимация) · анимация; оригинал «3.9 1» в держателе, APNG 1920x790 = рамка 1920x791 · пара: закреплена]"
+   "notes": "[APNG в git (анимация) · анимация; оригинал «3.9 1» в держателе, APNG 1920x790 = рамка 1920x791 · пара: закреплена]",
+   "tracks": "animations/ccna3-ayllzwv/tracks.json"
   },
   {
    "id": "ccna3-jmfiycx",
@@ -2290,7 +2303,8 @@
    "provenance": {
     "legacy": "6.1.3.png"
    },
-   "notes": "· вариант 2   [APNG в git (анимация) · анимация (APNG в git); оригинал — растр «6.1 1» в держателе 1162:99113; две версии перерисовки, финал по рендеру. · пара: закреплена]"
+   "notes": "· вариант 2   [APNG в git (анимация) · анимация (APNG в git); оригинал — растр «6.1 1» в держателе 1162:99113; две версии перерисовки, финал по рендеру. · пара: закреплена]",
+   "tracks": "animations/ccna3-6ltk5h3/tracks.json"
   },
   {
    "id": "ccna3-k2fzuuj",
@@ -2377,7 +2391,8 @@
    "provenance": {
     "legacy": "6.2.3.png"
    },
-   "notes": "[APNG в git (анимация) · анимация (APNG); оригинал — растр «6.2 1» в держателе «6.2.3.gif». · пара: закреплена]"
+   "notes": "[APNG в git (анимация) · анимация (APNG); оригинал — растр «6.2 1» в держателе «6.2.3.gif». · пара: закреплена]",
+   "tracks": "animations/ccna3-qqppwgy/tracks.json"
   },
   {
    "id": "ccna3-e3yamdq",
@@ -2403,7 +2418,8 @@
    "provenance": {
     "legacy": "6.2.4.png"
    },
-   "notes": "[APNG в git (анимация) · анимация (APNG); оригинал — растр «6.2 2» в держателе «6.2.4.gif». · пара: закреплена]"
+   "notes": "[APNG в git (анимация) · анимация (APNG); оригинал — растр «6.2 2» в держателе «6.2.4.gif». · пара: закреплена]",
+   "tracks": "animations/ccna3-e3yamdq/tracks.json"
   },
   {
    "id": "ccna3-hinugcs",
@@ -2952,7 +2968,8 @@
    "provenance": {
     "legacy": "7.2.5.png"
    },
-   "notes": "[APNG в git (анимация) · анимация (APNG); оригинал 7.2.5.gif, он же в drops как ложная перерисовка · пара: закреплена]"
+   "notes": "[APNG в git (анимация) · анимация (APNG); оригинал 7.2.5.gif, он же в drops как ложная перерисовка · пара: закреплена]",
+   "tracks": "animations/ccna3-wrpudll/tracks.json"
   },
   {
    "id": "ccna3-rs4xlzy",
@@ -2978,7 +2995,8 @@
    "provenance": {
     "legacy": "7.2.6.png"
    },
-   "notes": "[APNG в git (анимация) · анимация (APNG); держатель оригинала назван '7.2.6' без .gif · пара: закреплена]"
+   "notes": "[APNG в git (анимация) · анимация (APNG); держатель оригинала назван '7.2.6' без .gif · пара: закреплена]",
+   "tracks": "animations/ccna3-rs4xlzy/tracks.json"
   },
   {
    "id": "ccna3-dxpi2yo",
@@ -3004,7 +3022,8 @@
    "provenance": {
     "legacy": "7.2.7.png"
    },
-   "notes": "[APNG в git (анимация) · анимация (APNG); оригинал 7.2.7.gif · пара: закреплена]"
+   "notes": "[APNG в git (анимация) · анимация (APNG); оригинал 7.2.7.gif · пара: закреплена]",
+   "tracks": "animations/ccna3-dxpi2yo/tracks.json"
   },
   {
    "id": "ccna3-q6vtcd5",
@@ -4553,7 +4572,8 @@
    "provenance": {
     "legacy": "10.4.6.png"
    },
-   "notes": "[на исходном листе слой назван «Frame»; анимация (APNG) · пара: закреплена] · kind corrected to animation (Motion build exists; APNG in git is the legacy render)"
+   "notes": "[на исходном листе слой назван «Frame»; анимация (APNG) · пара: закреплена] · kind corrected to animation (Motion build exists; APNG in git is the legacy render)",
+   "tracks": "animations/ccna3-cibygmy/tracks.json"
   },
   {
    "id": "ccna3-fsdmmwx",
@@ -4744,7 +4764,8 @@
    "provenance": {
     "legacy": "11.1.2.png"
    },
-   "notes": "[APNG в git (анимация) · анимация: оригинал — растр «11.1 1» внутри держателя 1163:99154; в git APNG 2026x1322 = размер фрейма перерисовки; два идентичных кадра (1187:118836 / 1866:144763) · пара: закреплена]"
+   "notes": "[APNG в git (анимация) · анимация: оригинал — растр «11.1 1» внутри держателя 1163:99154; в git APNG 2026x1322 = размер фрейма перерисовки; два идентичных кадра (1187:118836 / 1866:144763) · пара: закреплена]",
+   "tracks": "animations/ccna3-yj5mq5y/tracks.json"
   },
   {
    "id": "ccna3-o6ldlon",
