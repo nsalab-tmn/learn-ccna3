@@ -565,9 +565,15 @@
     "format": "animated-svg",
     "fallback": "01-single-area-ospfv2-concepts/01.03-ospf-operation/assets/1.3.6-1.png"
    },
-   "status": "pending",
+   "status": "synced",
    "provenance": {
-    "legacy": "1.3.6-1.png"
+    "legacy": "1.3.6-1.png",
+    "synced": {
+     "figmaVersion": "2409982897191414088",
+     "at": "2026-10-14T00:29:40Z",
+     "sha256": "605d11a60b310c4700fee094ca127b2f17578f778b69026f1210c66d3eec2dd8",
+     "tracksSha256": "886a8d3cc167e0b7cdc65f6debc929cf5af75480fa4203a7d1aceeaac32f5fa1"
+    }
    },
    "notes": "[APNG в git (анимация) · анимация (APNG в git); оригинал — RECTANGLE «1.3 1» в зоне анимаций · пара: закреплена]",
    "tracks": "animations/ccna3-nhz3qqm/tracks.json"
@@ -591,9 +597,15 @@
     "format": "animated-svg",
     "fallback": "01-single-area-ospfv2-concepts/01.03-ospf-operation/assets/1.3.6-2.png"
    },
-   "status": "pending",
+   "status": "synced",
    "provenance": {
-    "legacy": "1.3.6-2.png"
+    "legacy": "1.3.6-2.png",
+    "synced": {
+     "figmaVersion": "2409982897191414088",
+     "at": "2026-10-14T00:29:40Z",
+     "sha256": "60778a47fc05f4308faf7644dd5ef4a3a5d146d72133efa3033ad318c9d42446",
+     "tracksSha256": "8b3116773bbe7f0cb7fbf71725d92428af207eb392e85d4e24bcb402de4d4c6d"
+    }
    },
    "notes": "[APNG в git (анимация) · анимация (APNG в git); оригинал — RECTANGLE «1.3 2», лежит внутри держателя 1162:99042 · пара: закреплена]",
    "tracks": "animations/ccna3-dzon5d4/tracks.json"
@@ -790,9 +802,15 @@
     "format": "animated-svg",
     "fallback": "02-single-area-ospfv2-configuration/02.03-multiaccess-ospf-networks/assets/2.3.2.png"
    },
-   "status": "pending",
+   "status": "synced",
    "provenance": {
-    "legacy": "2.3.2.png"
+    "legacy": "2.3.2.png",
+    "synced": {
+     "figmaVersion": "2409982897191414088",
+     "at": "2026-10-14T00:29:40Z",
+     "sha256": "e300beccedb69106234a84b9c08cec6f2f33d2f5dc1730acd81e72cff57011bc",
+     "tracksSha256": "49580862bb2b212a745a6e3dd65b197bcbf2db47a6896c603330375b49c59ca2"
+    }
    },
    "notes": "[APNG в git (анимация) · Анимация: перерисовка 1920x1286 в зоне анимаций (1169:102112), оригинал — RECTANGLE «2.3 1» (1162:99058) в держателе 1162:99043. В git APNG 2.3.2.png — сверка с рендером невозможна. · пара: закреплена]",
    "tracks": "animations/ccna3-5pqnhxm/tracks.json"
@@ -1144,9 +1162,15 @@
     "format": "animated-svg",
     "fallback": "03-network-security-concepts/03.03-threat-actor-tools/assets/3.3.2.png"
    },
-   "status": "pending",
+   "status": "synced",
    "provenance": {
-    "legacy": "3.3.2.png"
+    "legacy": "3.3.2.png",
+    "synced": {
+     "figmaVersion": "2409982897191414088",
+     "at": "2026-10-14T00:29:40Z",
+     "sha256": "dfdfe79569eca5b05558e271733971a761c7dd8d5f6fe3f42f6213253105a520",
+     "tracksSha256": "3af28487b1a9f8a975bc8df0a4acf16d5c7dddaadc0962f4b0a41351effcd95f"
+    }
    },
    "notes": "[APNG в git (анимация) · анимация; в git и .gif, и APNG (1920x860 = рамка перерисовки); оригинал — растр «3.3 1» в держателе · пара: закреплена]",
    "tracks": "animations/ccna3-eiweqq4/tracks.json"
@@ -1170,9 +1194,15 @@
     "format": "animated-svg",
     "fallback": "03-network-security-concepts/03.04-malware/assets/3.4.1.png"
    },
-   "status": "pending",
+   "status": "synced",
    "provenance": {
-    "legacy": "3.4.1.png"
+    "legacy": "3.4.1.png",
+    "synced": {
+     "figmaVersion": "2409982897191414088",
+     "at": "2026-10-14T00:29:40Z",
+     "sha256": "2c3db6998e586a0bcfd1100453b3d7aa971d849098bf186e2af75a1460fa7110",
+     "tracksSha256": "9a63fc26cd559547d5789a6a2708c34399d4b7628061996405d7f3211f15fb0a"
+    }
    },
    "notes": "[APNG в git (анимация) · анимация; оригинала-держателя нет, взят одиночный растр «3.4» 290x132 — проверить · пара: закреплена]",
    "tracks": "animations/ccna3-t5zktob/tracks.json"
@@ -1196,9 +1226,15 @@
     "format": "animated-svg",
     "fallback": "03-network-security-concepts/03.05-common-network-attacks/assets/3.5.3-1.png"
    },
-   "status": "pending",
+   "status": "synced",
    "provenance": {
-    "legacy": "3.5.3-1.png"
+    "legacy": "3.5.3-1.png",
+    "synced": {
+     "figmaVersion": "2409982897191414088",
+     "at": "2026-10-14T00:29:40Z",
+     "sha256": "28d3e949feab648ae508741343afe67933f6bac196db589ef01d2aa6e746332a",
+     "tracksSha256": "6c0f59954d6b8b86fc11acf7f1e2c4a80251a0a79b899ba28681d1b707a15c4d"
+    }
    },
    "notes": "[APNG в git (анимация) · анимация; оригинал — растр «3.5» слева (dy -219) · пара: закреплена]",
    "tracks": "animations/ccna3-evkbyha/tracks.json"
@@ -1222,9 +1258,15 @@
     "format": "animated-svg",
     "fallback": "03-network-security-concepts/03.05-common-network-attacks/assets/3.5.3-2.png"
    },
-   "status": "pending",
+   "status": "synced",
    "provenance": {
-    "legacy": "3.5.3-2.png"
+    "legacy": "3.5.3-2.png",
+    "synced": {
+     "figmaVersion": "2409982897191414088",
+     "at": "2026-10-14T00:29:40Z",
+     "sha256": "8f19fcb7b0323066226d5304eeca3beb433c9d84277e1617200bd65e5e76c47b",
+     "tracksSha256": "f3cf2727180081d23e1e781765e293d4e3aa90cd2a453684660e9bc3abc86f9c"
+    }
    },
    "notes": "[APNG в git (анимация) · анимация; оригинал — растр «3.5» слева (dy -6) · пара: закреплена]",
    "tracks": "animations/ccna3-fugrkdl/tracks.json"
@@ -1248,9 +1290,15 @@
     "format": "animated-svg",
     "fallback": "03-network-security-concepts/03.05-common-network-attacks/assets/3.5.3-3.png"
    },
-   "status": "pending",
+   "status": "synced",
    "provenance": {
-    "legacy": "3.5.3-3.png"
+    "legacy": "3.5.3-3.png",
+    "synced": {
+     "figmaVersion": "2409982897191414088",
+     "at": "2026-10-14T00:29:40Z",
+     "sha256": "10927409e03fc9737f4b6bb6d5f64f46409c2c061428ba2a0b44c82aa86cb1f3",
+     "tracksSha256": "947b67f76998b0306138beea03c36b5029f08e0f8de7d80b67346181cafdc3d9"
+    }
    },
    "notes": "[APNG в git (анимация) · анимация; оригинал — растр «3.5» слева (dy -14) · пара: закреплена]",
    "tracks": "animations/ccna3-fzzkmvv/tracks.json"
@@ -1274,9 +1322,15 @@
     "format": "animated-svg",
     "fallback": "03-network-security-concepts/03.05-common-network-attacks/assets/3.5.5-1.png"
    },
-   "status": "pending",
+   "status": "synced",
    "provenance": {
-    "legacy": "3.5.5-1.png"
+    "legacy": "3.5.5-1.png",
+    "synced": {
+     "figmaVersion": "2409982897191414088",
+     "at": "2026-10-14T00:29:40Z",
+     "sha256": "48fd6b74cec622f0c8035dd1f94e408e80f5db725555db5c8c0f823abab6be25",
+     "tracksSha256": "0219964f88db0229e0614a5795d6287352d44f5e5b826152265740f34f0a2046"
+    }
    },
    "notes": "[APNG в git (анимация) · анимация; оригинал — растр «3.5» слева (dy -18) · пара: закреплена]",
    "tracks": "animations/ccna3-qfbmpbd/tracks.json"
@@ -1402,9 +1456,15 @@
     "format": "animated-svg",
     "fallback": "03-network-security-concepts/03.05-common-network-attacks/assets/3.5.9-1.png"
    },
-   "status": "pending",
+   "status": "synced",
    "provenance": {
-    "legacy": "3.5.9-1.png"
+    "legacy": "3.5.9-1.png",
+    "synced": {
+     "figmaVersion": "2409982897191414088",
+     "at": "2026-10-14T00:29:40Z",
+     "sha256": "1467ed9fa90b7583fa2a68e98e2a7c69c64942b3dee4a3234969054946502bc2",
+     "tracksSha256": "23e9cd2db07a1fab4a37f02ad277c3e2bef5962f68b5c5659d118827a3ba207c"
+    }
    },
    "notes": "[на исходном листе слой назван «3.5.9-2»; анимация (APNG); DoS-атака · пара: закреплена] · kind corrected to animation (Motion build exists; APNG in git is the legacy render)",
    "tracks": "animations/ccna3-qxw7mh3/tracks.json"
@@ -1428,9 +1488,15 @@
     "format": "animated-svg",
     "fallback": "03-network-security-concepts/03.05-common-network-attacks/assets/3.5.9-2.png"
    },
-   "status": "pending",
+   "status": "synced",
    "provenance": {
-    "legacy": "3.5.9-2.png"
+    "legacy": "3.5.9-2.png",
+    "synced": {
+     "figmaVersion": "2409982897191414088",
+     "at": "2026-10-14T00:29:40Z",
+     "sha256": "338854345707b0a31772d47017100827d62109e94c1f8162a01b36e23ff05b3e",
+     "tracksSha256": "4a9abdec69ad40ed4ca49953c7470eeba3679ac52dc822b98db029d14f0b0367"
+    }
    },
    "notes": "[на исходном листе слой назван «3.5.9-1»; анимация (APNG); DDoS-атака, ботнет · пара: закреплена] · kind corrected to animation (Motion build exists; APNG in git is the legacy render)",
    "tracks": "animations/ccna3-rdjvm4g/tracks.json"
@@ -1656,9 +1722,15 @@
     "format": "animated-svg",
     "fallback": "03-network-security-concepts/03.08-ip-services/assets/3.8.1.png"
    },
-   "status": "pending",
+   "status": "synced",
    "provenance": {
-    "legacy": "3.8.1.png"
+    "legacy": "3.8.1.png",
+    "synced": {
+     "figmaVersion": "2409982897191414088",
+     "at": "2026-10-14T00:29:40Z",
+     "sha256": "2c3ba2313fbc168b3be8d3b30ab2ab6a5602efbc80d5299701025e1076ef8ece",
+     "tracksSha256": "bf4ae222fe4d8c9115f60f39c83c11d2588a9617a897b60e7666cda16675af0e"
+    }
    },
    "notes": "[APNG в git (анимация) · анимация; оригинал внутри держателя ошибочно назван «3.5» · пара: закреплена]",
    "tracks": "animations/ccna3-fod5pw5/tracks.json"
@@ -1935,9 +2007,15 @@
     "format": "animated-svg",
     "fallback": "03-network-security-concepts/03.09-network-security-best-practices/assets/3.9.3.png"
    },
-   "status": "pending",
+   "status": "synced",
    "provenance": {
-    "legacy": "3.9.3.png"
+    "legacy": "3.9.3.png",
+    "synced": {
+     "figmaVersion": "2409982897191414088",
+     "at": "2026-10-14T00:29:40Z",
+     "sha256": "5a9fbd8745fbf0d3b49c8936a1141bdb3e425cdd98a58ae7ec7119cd04f97614",
+     "tracksSha256": "2266d6dfaf03a005d6255275c9fc8ae14d92e46344b35926ef7048fe65e23512"
+    }
    },
    "notes": "[APNG в git (анимация) · анимация; оригинал «3.9 1» в держателе, APNG 1920x790 = рамка 1920x791 · пара: закреплена]",
    "tracks": "animations/ccna3-ayllzwv/tracks.json"
@@ -2745,9 +2823,15 @@
     "format": "animated-svg",
     "fallback": "06-nat-for-ipv4/06.01-nat-characteristics/assets/6.1.3.png"
    },
-   "status": "pending",
+   "status": "synced",
    "provenance": {
-    "legacy": "6.1.3.png"
+    "legacy": "6.1.3.png",
+    "synced": {
+     "figmaVersion": "2409982897191414088",
+     "at": "2026-10-14T00:29:40Z",
+     "sha256": "f876081a925123337c512088f88d681498a2b2d70be34dde2086ebcb20446d63",
+     "tracksSha256": "030d0d477c164fbf081363977b2e7f9abf5150d2f0caa149019b593f8d3a0ca1"
+    }
    },
    "notes": "· вариант 2   [APNG в git (анимация) · анимация (APNG в git); оригинал — растр «6.1 1» в держателе 1162:99113; две версии перерисовки, финал по рендеру. · пара: закреплена]",
    "tracks": "animations/ccna3-6ltk5h3/tracks.json"
@@ -2847,9 +2931,15 @@
     "format": "animated-svg",
     "fallback": "06-nat-for-ipv4/06.02-types-of-nat/assets/6.2.3.png"
    },
-   "status": "pending",
+   "status": "synced",
    "provenance": {
-    "legacy": "6.2.3.png"
+    "legacy": "6.2.3.png",
+    "synced": {
+     "figmaVersion": "2409982897191414088",
+     "at": "2026-10-14T00:29:40Z",
+     "sha256": "49f662cafcf86370f2ac0bc726c06a29f2c527e5f54596f66323f4d228c6dcb4",
+     "tracksSha256": "a281cb02c514356f930c21cf3cc1f7e4b63a5459b4b857e4369692cc08f4c115"
+    }
    },
    "notes": "[APNG в git (анимация) · анимация (APNG); оригинал — растр «6.2 1» в держателе «6.2.3.gif». · пара: закреплена]",
    "tracks": "animations/ccna3-qqppwgy/tracks.json"
@@ -2873,9 +2963,15 @@
     "format": "animated-svg",
     "fallback": "06-nat-for-ipv4/06.02-types-of-nat/assets/6.2.4.png"
    },
-   "status": "pending",
+   "status": "synced",
    "provenance": {
-    "legacy": "6.2.4.png"
+    "legacy": "6.2.4.png",
+    "synced": {
+     "figmaVersion": "2409982897191414088",
+     "at": "2026-10-14T00:29:40Z",
+     "sha256": "18cfcc71f1439e16c2d312f282a368a74d2cf59af921b17ab992aa8db1e1e80a",
+     "tracksSha256": "5a5692a89a1ad10cad3b128564dfd76c857e93007e2916742e3a7b48c9814478"
+    }
    },
    "notes": "[APNG в git (анимация) · анимация (APNG); оригинал — растр «6.2 2» в держателе «6.2.4.gif». · пара: закреплена]",
    "tracks": "animations/ccna3-e3yamdq/tracks.json"
@@ -3547,9 +3643,15 @@
     "format": "animated-svg",
     "fallback": "07-wan-concepts/07.02-wan-operations/assets/7.2.5.png"
    },
-   "status": "pending",
+   "status": "synced",
    "provenance": {
-    "legacy": "7.2.5.png"
+    "legacy": "7.2.5.png",
+    "synced": {
+     "figmaVersion": "2409982897191414088",
+     "at": "2026-10-14T00:29:40Z",
+     "sha256": "8b45a61ebabb06f8d6c8261ecb92f2cb0b2d4c3fef714ee104054ba136f5921f",
+     "tracksSha256": "92bcd1113b1c9808c0a741196e13da99bd27b63b72fc8ccde52adc8956448415"
+    }
    },
    "notes": "[APNG в git (анимация) · анимация (APNG); оригинал 7.2.5.gif, он же в drops как ложная перерисовка · пара: закреплена]",
    "tracks": "animations/ccna3-wrpudll/tracks.json"
@@ -3573,9 +3675,15 @@
     "format": "animated-svg",
     "fallback": "07-wan-concepts/07.02-wan-operations/assets/7.2.6.png"
    },
-   "status": "pending",
+   "status": "synced",
    "provenance": {
-    "legacy": "7.2.6.png"
+    "legacy": "7.2.6.png",
+    "synced": {
+     "figmaVersion": "2409982897191414088",
+     "at": "2026-10-14T00:29:40Z",
+     "sha256": "03c25d95b89d059ba39cff0f773e77a97b2364554ca0143a545fae510ca5b019",
+     "tracksSha256": "f837dd5b007b99c5015b30e6b44a05864fc5b59d0cbdd8db3161ba51e1c612ae"
+    }
    },
    "notes": "[APNG в git (анимация) · анимация (APNG); держатель оригинала назван '7.2.6' без .gif · пара: закреплена]",
    "tracks": "animations/ccna3-rs4xlzy/tracks.json"
@@ -3599,9 +3707,15 @@
     "format": "animated-svg",
     "fallback": "07-wan-concepts/07.02-wan-operations/assets/7.2.7.png"
    },
-   "status": "pending",
+   "status": "synced",
    "provenance": {
-    "legacy": "7.2.7.png"
+    "legacy": "7.2.7.png",
+    "synced": {
+     "figmaVersion": "2409982897191414088",
+     "at": "2026-10-14T00:29:40Z",
+     "sha256": "46da87021550516a1ca03fce54bf257fc9d60c273e913f239393ee80e710c1b9",
+     "tracksSha256": "c690a53712f663646fa316ae6c18c2b5ac51c443ca902317cc36fa6ea1150f37"
+    }
    },
    "notes": "[APNG в git (анимация) · анимация (APNG); оригинал 7.2.7.gif · пара: закреплена]",
    "tracks": "animations/ccna3-dxpi2yo/tracks.json"
@@ -5523,9 +5637,15 @@
     "format": "animated-svg",
     "fallback": "10-network-management/10.04-snmp/assets/10.4.6.png"
    },
-   "status": "pending",
+   "status": "synced",
    "provenance": {
-    "legacy": "10.4.6.png"
+    "legacy": "10.4.6.png",
+    "synced": {
+     "figmaVersion": "2409982897191414088",
+     "at": "2026-10-14T00:29:40Z",
+     "sha256": "298690f8950109c2e0b9c5a2647fb3f32ae5034d05eb996eeb1c0abf8beb198a",
+     "tracksSha256": "1bf206fc20483128bf200a3e695ff2ff94b7faa4d51d93a934e7acf728139e42"
+    }
    },
    "notes": "[на исходном листе слой назван «Frame»; анимация (APNG) · пара: закреплена] · kind corrected to animation (Motion build exists; APNG in git is the legacy render)",
    "tracks": "animations/ccna3-cibygmy/tracks.json"
@@ -5754,9 +5874,15 @@
     "format": "animated-svg",
     "fallback": "11-network-design/11.01-hierarchical-networks/assets/11.1.2.png"
    },
-   "status": "pending",
+   "status": "synced",
    "provenance": {
-    "legacy": "11.1.2.png"
+    "legacy": "11.1.2.png",
+    "synced": {
+     "figmaVersion": "2409982897191414088",
+     "at": "2026-10-14T00:29:40Z",
+     "sha256": "a96222cc5422c3a7f56a4951af47309ac1c4ef18b5837ff2f1ae1397d02a898e",
+     "tracksSha256": "ee7e3c8eb58ca533fd5ccf25f0a292701c825c3d6c5dfe9841614112c48a78e6"
+    }
    },
    "notes": "[APNG в git (анимация) · анимация: оригинал — растр «11.1 1» внутри держателя 1163:99154; в git APNG 2026x1322 = размер фрейма перерисовки; два идентичных кадра (1187:118836 / 1866:144763) · пара: закреплена]",
    "tracks": "animations/ccna3-yj5mq5y/tracks.json"
