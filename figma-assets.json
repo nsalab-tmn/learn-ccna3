@@ -561,8 +561,7 @@
    },
    "out": {
     "path": "01-single-area-ospfv2-concepts/01.03-ospf-operation/assets/1.3.6-1.svg",
-    "format": "animated-svg",
-    "fallback": "01-single-area-ospfv2-concepts/01.03-ospf-operation/assets/1.3.6-1.png"
+    "format": "animated-svg"
    },
    "status": "synced",
    "provenance": {
@@ -592,8 +591,7 @@
    },
    "out": {
     "path": "01-single-area-ospfv2-concepts/01.03-ospf-operation/assets/1.3.6-2.svg",
-    "format": "animated-svg",
-    "fallback": "01-single-area-ospfv2-concepts/01.03-ospf-operation/assets/1.3.6-2.png"
+    "format": "animated-svg"
    },
    "status": "synced",
    "provenance": {
@@ -796,8 +794,7 @@
    },
    "out": {
     "path": "02-single-area-ospfv2-configuration/02.03-multiaccess-ospf-networks/assets/2.3.2.svg",
-    "format": "animated-svg",
-    "fallback": "02-single-area-ospfv2-configuration/02.03-multiaccess-ospf-networks/assets/2.3.2.png"
+    "format": "animated-svg"
    },
    "status": "synced",
    "provenance": {
@@ -1155,8 +1152,7 @@
    },
    "out": {
     "path": "03-network-security-concepts/03.03-threat-actor-tools/assets/3.3.2.svg",
-    "format": "animated-svg",
-    "fallback": "03-network-security-concepts/03.03-threat-actor-tools/assets/3.3.2.png"
+    "format": "animated-svg"
    },
    "status": "synced",
    "provenance": {
@@ -1186,8 +1182,7 @@
    },
    "out": {
     "path": "03-network-security-concepts/03.04-malware/assets/3.4.1.svg",
-    "format": "animated-svg",
-    "fallback": "03-network-security-concepts/03.04-malware/assets/3.4.1.png"
+    "format": "animated-svg"
    },
    "status": "synced",
    "provenance": {
@@ -1217,8 +1212,7 @@
    },
    "out": {
     "path": "03-network-security-concepts/03.05-common-network-attacks/assets/3.5.3-1.svg",
-    "format": "animated-svg",
-    "fallback": "03-network-security-concepts/03.05-common-network-attacks/assets/3.5.3-1.png"
+    "format": "animated-svg"
    },
    "status": "synced",
    "provenance": {
@@ -1248,8 +1242,7 @@
    },
    "out": {
     "path": "03-network-security-concepts/03.05-common-network-attacks/assets/3.5.3-2.svg",
-    "format": "animated-svg",
-    "fallback": "03-network-security-concepts/03.05-common-network-attacks/assets/3.5.3-2.png"
+    "format": "animated-svg"
    },
    "status": "synced",
    "provenance": {
@@ -1279,8 +1272,7 @@
    },
    "out": {
     "path": "03-network-security-concepts/03.05-common-network-attacks/assets/3.5.3-3.svg",
-    "format": "animated-svg",
-    "fallback": "03-network-security-concepts/03.05-common-network-attacks/assets/3.5.3-3.png"
+    "format": "animated-svg"
    },
    "status": "synced",
    "provenance": {
@@ -1310,8 +1302,7 @@
    },
    "out": {
     "path": "03-network-security-concepts/03.05-common-network-attacks/assets/3.5.5-1.svg",
-    "format": "animated-svg",
-    "fallback": "03-network-security-concepts/03.05-common-network-attacks/assets/3.5.5-1.png"
+    "format": "animated-svg"
    },
    "status": "synced",
    "provenance": {
@@ -1443,8 +1434,7 @@
    },
    "out": {
     "path": "03-network-security-concepts/03.05-common-network-attacks/assets/3.5.9-1.svg",
-    "format": "animated-svg",
-    "fallback": "03-network-security-concepts/03.05-common-network-attacks/assets/3.5.9-1.png"
+    "format": "animated-svg"
    },
    "status": "synced",
    "provenance": {
@@ -1474,8 +1464,7 @@
    },
    "out": {
     "path": "03-network-security-concepts/03.05-common-network-attacks/assets/3.5.9-2.svg",
-    "format": "animated-svg",
-    "fallback": "03-network-security-concepts/03.05-common-network-attacks/assets/3.5.9-2.png"
+    "format": "animated-svg"
    },
    "status": "synced",
    "provenance": {
@@ -1707,8 +1696,7 @@
    },
    "out": {
     "path": "03-network-security-concepts/03.08-ip-services/assets/3.8.1.svg",
-    "format": "animated-svg",
-    "fallback": "03-network-security-concepts/03.08-ip-services/assets/3.8.1.png"
+    "format": "animated-svg"
    },
    "status": "synced",
    "provenance": {
@@ -1991,8 +1979,7 @@
    },
    "out": {
     "path": "03-network-security-concepts/03.09-network-security-best-practices/assets/3.9.3.svg",
-    "format": "animated-svg",
-    "fallback": "03-network-security-concepts/03.09-network-security-best-practices/assets/3.9.3.png"
+    "format": "animated-svg"
    },
    "status": "synced",
    "provenance": {
@@ -2806,8 +2793,7 @@
    },
    "out": {
     "path": "06-nat-for-ipv4/06.01-nat-characteristics/assets/6.1.3.svg",
-    "format": "animated-svg",
-    "fallback": "06-nat-for-ipv4/06.01-nat-characteristics/assets/6.1.3.png"
+    "format": "animated-svg"
    },
    "status": "synced",
    "provenance": {
@@ -2913,8 +2899,7 @@
    },
    "out": {
     "path": "06-nat-for-ipv4/06.02-types-of-nat/assets/6.2.3.svg",
-    "format": "animated-svg",
-    "fallback": "06-nat-for-ipv4/06.02-types-of-nat/assets/6.2.3.png"
+    "format": "animated-svg"
    },
    "status": "synced",
    "provenance": {
@@ -2944,8 +2929,7 @@
    },
    "out": {
     "path": "06-nat-for-ipv4/06.02-types-of-nat/assets/6.2.4.svg",
-    "format": "animated-svg",
-    "fallback": "06-nat-for-ipv4/06.02-types-of-nat/assets/6.2.4.png"
+    "format": "animated-svg"
    },
    "status": "synced",
    "provenance": {
@@ -3623,8 +3607,7 @@
    },
    "out": {
     "path": "07-wan-concepts/07.02-wan-operations/assets/7.2.5.svg",
-    "format": "animated-svg",
-    "fallback": "07-wan-concepts/07.02-wan-operations/assets/7.2.5.png"
+    "format": "animated-svg"
    },
    "status": "synced",
    "provenance": {
@@ -3654,8 +3637,7 @@
    },
    "out": {
     "path": "07-wan-concepts/07.02-wan-operations/assets/7.2.6.svg",
-    "format": "animated-svg",
-    "fallback": "07-wan-concepts/07.02-wan-operations/assets/7.2.6.png"
+    "format": "animated-svg"
    },
    "status": "synced",
    "provenance": {
@@ -3685,8 +3667,7 @@
    },
    "out": {
     "path": "07-wan-concepts/07.02-wan-operations/assets/7.2.7.svg",
-    "format": "animated-svg",
-    "fallback": "07-wan-concepts/07.02-wan-operations/assets/7.2.7.png"
+    "format": "animated-svg"
    },
    "status": "synced",
    "provenance": {
@@ -5614,8 +5595,7 @@
    },
    "out": {
     "path": "10-network-management/10.04-snmp/assets/10.4.6.svg",
-    "format": "animated-svg",
-    "fallback": "10-network-management/10.04-snmp/assets/10.4.6.png"
+    "format": "animated-svg"
    },
    "status": "synced",
    "provenance": {
@@ -5850,8 +5830,7 @@
    },
    "out": {
     "path": "11-network-design/11.01-hierarchical-networks/assets/11.1.2.svg",
-    "format": "animated-svg",
-    "fallback": "11-network-design/11.01-hierarchical-networks/assets/11.1.2.png"
+    "format": "animated-svg"
    },
    "status": "synced",
    "provenance": {
