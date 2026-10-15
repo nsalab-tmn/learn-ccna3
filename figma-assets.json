@@ -1166,10 +1166,10 @@
    "provenance": {
     "legacy": "3.3.2.png",
     "synced": {
-     "figmaVersion": "2410325910918669022",
-     "at": "2026-10-14T21:48:21Z",
-     "sha256": "da05888c09f732e236b8f7d1dc1da0cf9bab1c5267e35532f04f2b1748f01032",
-     "tracksSha256": "3af28487b1a9f8a975bc8df0a4acf16d5c7dddaadc0962f4b0a41351effcd95f"
+     "figmaVersion": "2410527842016861316",
+     "at": "2026-10-15T09:53:07Z",
+     "sha256": "51a5a6bf562d8630595b80d50411924eb2c5b2d81c2167505a377fddf5e5ce06",
+     "tracksSha256": "e2cbccb61fd595b0fdfedd9758bdcbab3e517d3a51221102c7d7ab4623c1b4e9"
     }
    },
    "notes": "[APNG в git (анимация) · анимация; в git и .gif, и APNG (1920x860 = рамка перерисовки); оригинал — растр «3.3 1» в держателе · пара: закреплена]",
@@ -1326,10 +1326,10 @@
    "provenance": {
     "legacy": "3.5.5-1.png",
     "synced": {
-     "figmaVersion": "2410325910918669022",
-     "at": "2026-10-14T21:48:21Z",
-     "sha256": "1dc8dd44f8cc3a33c3f989cc932f71b832cb56f4ab84a694be07a2b4f3278db0",
-     "tracksSha256": "0219964f88db0229e0614a5795d6287352d44f5e5b826152265740f34f0a2046"
+     "figmaVersion": "2410527842016861316",
+     "at": "2026-10-15T09:53:07Z",
+     "sha256": "820fc77665bdf515ddaf50e008445bb9d5cce81f76b5e0285e4780df50db5e6f",
+     "tracksSha256": "39ef61d63b80f368874c2d419a063f122f15cdf6e35c254b93659987b31e0011"
     }
    },
    "notes": "[APNG в git (анимация) · анимация; оригинал — растр «3.5» слева (dy -18) · пара: закреплена]",
@@ -2935,10 +2935,10 @@
    "provenance": {
     "legacy": "6.2.3.png",
     "synced": {
-     "figmaVersion": "2410325910918669022",
-     "at": "2026-10-14T21:48:21Z",
-     "sha256": "64df610d19005ee97bf43a090a8adb0691906e7ac60223946576ecfa73e46b6e",
-     "tracksSha256": "a281cb02c514356f930c21cf3cc1f7e4b63a5459b4b857e4369692cc08f4c115"
+     "figmaVersion": "2410527842016861316",
+     "at": "2026-10-15T09:53:07Z",
+     "sha256": "d75c72711f37214ad89db8657107eacac11b84290a4221a9bc26bee0c50e66c0",
+     "tracksSha256": "ed65cd382cb013c33284e33d77ea9768d53f8530cda2519f5edb476c7b78c4e8"
     }
    },
    "notes": "[APNG в git (анимация) · анимация (APNG); оригинал — растр «6.2 1» в держателе «6.2.3.gif». · пара: закреплена]",

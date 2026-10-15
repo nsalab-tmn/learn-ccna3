@@ -396,8 +396,9 @@
 </g></g>
 </g>
 <g data-node-id="4687:246" clip-path="url(#clip0_4687_3)">
-<g data-anim-for="4687:26"><animate attributeName="opacity" dur="12s" repeatCount="indefinite" keyTimes="0;0.487;0.496;1" values="0;0;1;1" calcMode="linear" href="#fx-4687-26" xlink:href="#fx-4687-26"/><animateTransform attributeName="transform" type="translate" additive="sum" dur="12s" repeatCount="indefinite" keyTimes="0;0.487;0.571;1" values="0 -240.798;0 -240.798;0 -35.116;0 -35.116" calcMode="linear"/><g id="fx-4687-26" data-node-id="4687:26" opacity="0.01">
-<path data-node-id="I4687:26;120:11018" d="M936.681 787.695L936.681 561.11L945.042 561.11L945.042 787.695L936.681 787.695Z" fill="#FFBD6E"/>
+<g data-anim-for="4687:26"><animate attributeName="opacity" dur="12s" repeatCount="indefinite" keyTimes="0;0.487;0.496;1" values="0;0;1;1" calcMode="linear" href="#fx-4687-26" xlink:href="#fx-4687-26"/><animateTransform attributeName="transform" type="translate" additive="sum" dur="12s" repeatCount="indefinite" keyTimes="0;0.487;0.571;1" values="0 -205.682;0 -205.682;0 0;0 0" calcMode="linear"/><g id="fx-4687-26" data-node-id="4687:26" opacity="0.01">
+<path data-node-id="I4687:26;120:11018" d="M936.681 752.579L936.681 525.994L945.042 525.994L945.042 752.579L936.681 752.579Z" fill="#FFBD6E"/>
+<path data-node-id="I4687:26;120:11019" d="M950.516 752.579L940.861 769.301L931.207 752.579L950.516 752.579Z" fill="#FFBD6E"/>
 </g></g>
 </g>
 <g data-anim-for="4687:261"><animate attributeName="opacity" dur="12s" repeatCount="indefinite" keyTimes="0;0.008;0.033;0.375;0.403;1" values="0;0;1;1;0;0" calcMode="linear" href="#fx-4687-261" xlink:href="#fx-4687-261"/><animateTransform attributeName="transform" type="translate" additive="sum" dur="12s" repeatCount="indefinite" keyTimes="0;0.117;0.194;0.248;0.355;1" values="0 0;0 0;195.649 0;207.354 107.021;473.235 107.021;473.235 107.021" calcMode="linear"/><g id="fx-4687-261" data-node-id="4687:261" opacity="0.01">
