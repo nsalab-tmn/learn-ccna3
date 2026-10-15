@@ -553,10 +553,9 @@
     "key": "1.3.6-1"
    },
    "figma": {
-    "nodeId": "4191:451332",
+    "nodeId": "4680:3",
     "page": "CCNA3 · 01 single-area-ospfv2-concepts",
     "motion": {
-     "sectionId": "4633:2",
      "animId": "4680:3"
     }
    },
@@ -585,10 +584,9 @@
     "key": "1.3.6-2"
    },
    "figma": {
-    "nodeId": "4191:451387",
+    "nodeId": "4683:3",
     "page": "CCNA3 · 01 single-area-ospfv2-concepts",
     "motion": {
-     "sectionId": "4634:2",
      "animId": "4683:3"
     }
    },
@@ -790,10 +788,9 @@
     "key": "2.3.2"
    },
    "figma": {
-    "nodeId": "4191:451780",
+    "nodeId": "4693:3",
     "page": "CCNA3 · 02 single-area-ospfv2-configuration",
     "motion": {
-     "sectionId": "4636:2",
      "animId": "4693:3"
     }
    },
@@ -1150,10 +1147,9 @@
     "key": "3.3.2"
    },
    "figma": {
-    "nodeId": "4191:452528",
+    "nodeId": "4622:4",
     "page": "CCNA3 · 03 network-security-concepts",
     "motion": {
-     "sectionId": "4622:2",
      "animId": "4622:4"
     }
    },
@@ -1182,10 +1178,9 @@
     "key": "3.4.1"
    },
    "figma": {
-    "nodeId": "4191:452568",
+    "nodeId": "4623:119183",
     "page": "CCNA3 · 03 network-security-concepts",
     "motion": {
-     "sectionId": "4623:119181",
      "animId": "4623:119183"
     }
    },
@@ -1214,10 +1209,9 @@
     "key": "3.5.3-1"
    },
    "figma": {
-    "nodeId": "4191:452586",
+    "nodeId": "4669:3",
     "page": "CCNA3 · 03 network-security-concepts",
     "motion": {
-     "sectionId": "4623:2",
      "animId": "4669:3"
     }
    },
@@ -1246,10 +1240,9 @@
     "key": "3.5.3-2"
    },
    "figma": {
-    "nodeId": "4191:452645",
+    "nodeId": "4653:123131",
     "page": "CCNA3 · 03 network-security-concepts",
     "motion": {
-     "sectionId": "4625:119238",
      "animId": "4653:123131"
     }
    },
@@ -1278,10 +1271,9 @@
     "key": "3.5.3-3"
    },
    "figma": {
-    "nodeId": "4191:452662",
+    "nodeId": "4654:3",
     "page": "CCNA3 · 03 network-security-concepts",
     "motion": {
-     "sectionId": "4626:2",
      "animId": "4654:3"
     }
    },
@@ -1310,10 +1302,9 @@
     "key": "3.5.5-1"
    },
    "figma": {
-    "nodeId": "4191:452681",
+    "nodeId": "4670:3",
     "page": "CCNA3 · 03 network-security-concepts",
     "motion": {
-     "sectionId": "4626:196407",
      "animId": "4670:3"
     }
    },
@@ -1444,10 +1435,9 @@
     "key": "3.5.9-1"
    },
    "figma": {
-    "nodeId": "4191:452900",
+    "nodeId": "4671:3",
     "page": "CCNA3 · 03 network-security-concepts",
     "motion": {
-     "sectionId": "4627:2",
      "animId": "4671:3"
     }
    },
@@ -1476,10 +1466,9 @@
     "key": "3.5.9-2"
    },
    "figma": {
-    "nodeId": "4191:452939",
+    "nodeId": "4674:3",
     "page": "CCNA3 · 03 network-security-concepts",
     "motion": {
-     "sectionId": "4628:2",
      "animId": "4674:3"
     }
    },
@@ -1710,10 +1699,9 @@
     "key": "3.8.1"
    },
    "figma": {
-    "nodeId": "4191:453371",
+    "nodeId": "4698:3",
     "page": "CCNA3 · 03 network-security-concepts",
     "motion": {
-     "sectionId": "4630:2",
      "animId": "4698:3"
     }
    },
@@ -1995,10 +1983,9 @@
     "key": "3.9.3"
    },
    "figma": {
-    "nodeId": "4191:454468",
+    "nodeId": "4658:3",
     "page": "CCNA3 · 03 network-security-concepts",
     "motion": {
-     "sectionId": "4632:2",
      "animId": "4658:3"
     }
    },
@@ -2811,10 +2798,9 @@
     "key": "6.1.3"
    },
    "figma": {
-    "nodeId": "4191:456174",
+    "nodeId": "4662:3",
     "page": "CCNA3 · 06 nat-for-ipv4",
     "motion": {
-     "sectionId": "4637:2",
      "animId": "4662:3"
     }
    },
@@ -2919,10 +2905,9 @@
     "key": "6.2.3"
    },
    "figma": {
-    "nodeId": "4191:456508",
+    "nodeId": "4687:3",
     "page": "CCNA3 · 06 nat-for-ipv4",
     "motion": {
-     "sectionId": "4638:2",
      "animId": "4687:3"
     }
    },
@@ -2951,10 +2936,9 @@
     "key": "6.2.4"
    },
    "figma": {
-    "nodeId": "4191:456574",
+    "nodeId": "4695:3",
     "page": "CCNA3 · 06 nat-for-ipv4",
     "motion": {
-     "sectionId": "4639:2",
      "animId": "4695:3"
     }
    },
@@ -3631,10 +3615,9 @@
     "key": "7.2.5"
    },
    "figma": {
-    "nodeId": "4191:458199",
+    "nodeId": "4697:3",
     "page": "CCNA3 · 07 wan-concepts",
     "motion": {
-     "sectionId": "4642:486",
      "animId": "4697:3"
     }
    },
@@ -3663,10 +3646,9 @@
     "key": "7.2.6"
    },
    "figma": {
-    "nodeId": "4191:458313",
+    "nodeId": "4665:674",
     "page": "CCNA3 · 07 wan-concepts",
     "motion": {
-     "sectionId": "4642:2",
      "animId": "4665:674"
     }
    },
@@ -3695,10 +3677,9 @@
     "key": "7.2.7"
    },
    "figma": {
-    "nodeId": "4191:458364",
+    "nodeId": "4666:3",
     "page": "CCNA3 · 07 wan-concepts",
     "motion": {
-     "sectionId": "4643:2",
      "animId": "4666:3"
     }
    },
@@ -5625,10 +5606,9 @@
     "key": "10.4.6"
    },
    "figma": {
-    "nodeId": "4191:462029",
+    "nodeId": "4689:3",
     "page": "CCNA3 · 10 network-management",
     "motion": {
-     "sectionId": "4648:2",
      "animId": "4689:3"
     }
    },
@@ -5862,10 +5842,9 @@
     "key": "11.1.2"
    },
    "figma": {
-    "nodeId": "4191:462332",
+    "nodeId": "4690:3",
     "page": "CCNA3 · 11 network-design",
     "motion": {
-     "sectionId": "4649:2",
      "animId": "4690:3"
     }
    },
