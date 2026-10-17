@@ -1,0 +1,3 @@
+path,asset_or_figure,what_is_shown,should_become,reason
+13-network-virtualization/13.03-virtual-network-infrastructure/README.md,assets/13.3.2-2.jpg,"скриншот GUI Cisco UCS Manager (дерево оборудования, Fault Summary)",нейтральный макет консоли управления серверами (или удалить),растр; текст 13.3.2 исправлен в этом PR
+13-network-virtualization/13.05-controllers/README.md,assets/13.5.5-1.svg (figma 4191:466349),подпись «OnePK» слева от блока «Приложение»,«SDK производителя» (как в тексте 13.5.5),иллюстрация; текст 13.5.5 исправлен в этом PR
