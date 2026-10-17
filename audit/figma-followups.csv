@@ -1,0 +1,2 @@
+path,asset_or_figure,what_is_shown,should_become,reason
+03-network-security-concepts/03.05-common-network-attacks/README.md,"assets/3.5.3-1 (анимация, figma 4669:3)","карточка «WHOIS RECORD FOR cisco.com · Registrant: Cisco Technology, Inc.» в кадрах ~4–7 с","вымышленный домен и регистрант (например xyzbank.com, как в 3.5.9)",анимация (audit ccna3-vm-0318)
