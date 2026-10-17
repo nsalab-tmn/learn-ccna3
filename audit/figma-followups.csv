@@ -1,0 +1,2 @@
+path,asset_or_figure,what_is_shown,should_become,reason
+06-nat-for-ipv4/06.01.05-nat-characteristics-quiz/learn-metadata.json,assets/6.1.5.png,"растровая схема из оригинального курса NetAcad: бирюзовые иконки маршрутизаторов, коммутаторов и ПК в фирменном стиле",перерисовать в Figma библиотекой курса (после решения ADR о библиотеке иконок),изображение (audit ccna3-vm-0558); открытый пункт ADR о библиотеке иконок
