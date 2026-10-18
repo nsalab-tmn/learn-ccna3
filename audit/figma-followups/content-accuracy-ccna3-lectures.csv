@@ -1,0 +1,2 @@
+path,asset_or_figure,what_is_shown,should_become,reason
+14-network-automation/14.04-rest/README.md,"assets/14.4.4.svg (figma 4715:57852, ccna3-sypkuzg)","схема «части URI»: скобка «URN» над www.example.com/author/book.html (часть адреса без схемы)","скобку «URN» убрать: часть адреса без схемы не является URN (RFC 8141). По желанию рядом отдельный пример URN: urn:ietf:params:netconf:base:1.1","текст 14.4.4 исправлен в этом PR: URN — постоянное имя в пространстве имен со схемой urn:, а не адрес без протокола"
