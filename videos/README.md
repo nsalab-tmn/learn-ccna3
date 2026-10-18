@@ -12,7 +12,7 @@
 
 Колонка «Видеоряд (Figma)» в таблице фиксирует прогресс пересборки: по каким видео собран новый видеоряд — анимация Figma Motion на нашей дизайн-системе, тем же методом, что в CCNA1 и CCNA2. Голосовая дорожка — отдельный трек, пока не начат ни для одного видео.
 
-**Готово: 0 из 32** (explainer — 0 из 21) · собрано и ждёт приёмки (Motion): 0. Шесть explainer-роликов модуля 3 о том, как проводятся атаки (`gDohT7qGeSs`, `s1Zb4Si9glY`, `zSvQp2erbbY`, `aHUs-Q95deY`, `qgM_6SJwwP8`, `NbmzS--sOyU`), в цепочку пересборки 2026-10-18 не вошли — решение по ним за оператором.
+**Готово: 0 из 32** (explainer — 0 из 21) · собрано и ждёт приёмки (Motion): 1. Шесть explainer-роликов модуля 3 о том, как проводятся атаки (`gDohT7qGeSs`, `s1Zb4Si9glY`, `zSvQp2erbbY`, `aHUs-Q95deY`, `qgM_6SJwwP8`, `NbmzS--sOyU`), в цепочку пересборки 2026-10-18 не вошли — решение по ним за оператором.
 
 | статус | значит |
 |---|---|
@@ -26,7 +26,7 @@
 
 | videoId | module/topic | Название (EN) | Длит. | Класс | Предложение по пересборке | Видеоряд (Figma) | Документ |
 |---|---|---|---|---|---|---|---|
-| EKLYuwycPQM | 01/01.02-ospf-packets | OSPF Packet Types | 5:49 | explainer | видео с генер. голосом ~2:30 (или 2 анимации) | — | [doc](01-single-area-ospfv2-concepts/01.02-ospf-packets--EKLYuwycPQM.md) |
+| EKLYuwycPQM | 01/01.02-ospf-packets | OSPF Packet Types | 5:49 | explainer | видео с генер. голосом ~2:30 (или 2 анимации) | Motion · 1:36 · [Figma](https://www.figma.com/design/3FtCg22qFubpLBPOetQU03/CCNA-Design?node-id=5222-7133) | [doc](01-single-area-ospfv2-concepts/01.02-ospf-packets--EKLYuwycPQM.md) |
 | yNiUGbVP2Xc | 01/01.03-ospf-operation | OSPF Operation | 7:43 | explainer | видео с генер. голосом ~3:30 + анимация DR | — | [doc](01-single-area-ospfv2-concepts/01.03-ospf-operation--yNiUGbVP2Xc.md) |
 | gDohT7qGeSs | 03/03.03-threat-actor-tools | Threat Actor Tools | 6:46 | explainer | текст + иллюстрация (или код-рендер ≤ 1:30) | — | [doc](03-network-security-concepts/03.03-threat-actor-tools--gDohT7qGeSs.md) |
 | s1Zb4Si9glY | 03/03.05-common-network-attacks | Reconnaissance Attacks | 2:58 | explainer | текст + иллюстрация (≤ 1:00) | — | [doc](03-network-security-concepts/03.05-common-network-attacks--s1Zb4Si9glY.md) |
