@@ -51,16 +51,16 @@
             "answerType": "singleChoice",
             "answers": [
                 {
-                    "answer": "https://www.cisco.com/c/en/us/solutions/design-zone.html#~all-guides",
+                    "answer": "https://www.ya.ru/c/en/us/solutions/design-zone.html#~all-guides",
                     "correct": false,
                     "comment": "URL-адрес определяет местоположение конкретного ресурса в сети без включения каких-либо фрагментов."
                 },
                 {
-                    "answer": "https://www.cisco.com/c/en/us/solutions/design-zone.html",
+                    "answer": "https://www.ya.ru/c/en/us/solutions/design-zone.html",
                     "correct": true
                 },
                 {
-                    "answer": "www.cisco.com/c/en/us/solutions/design-zone.html",
+                    "answer": "www.ya.ru/c/en/us/solutions/design-zone.html",
                     "correct": false,
                     "comment": "URL-адрес определяет местоположение конкретного ресурса в сети без включения каких-либо фрагментов."
                 },
@@ -76,23 +76,23 @@
             "answerType": "singleChoice",
             "answers": [
                 {
-                    "answer": "https://www.cisco.com/c/en/us/solutions/design-zone.html#~all-guides ",
+                    "answer": "https://www.ya.ru/c/en/us/solutions/design-zone.html#~all-guides ",
                     "correct": false,
-                    "comment": "URN идентифицирует только пространство имен ресурса без ссылки на протокол."
+                    "comment": "URN начинается со схемы urn: и называет ресурс внутри пространства имен, не указывая ни его местоположение, ни протокол доступа. Варианты с https:// — это URL, а #~all-guides — только фрагмент."
                 },
                 {
-                    "answer": "https://www.cisco.com/c/en/us/solutions/design-zone.html",
+                    "answer": "https://www.ya.ru/c/en/us/solutions/design-zone.html",
                     "correct": false,
-                    "comment": "URN идентифицирует только пространство имен ресурса без ссылки на протокол."
+                    "comment": "URN начинается со схемы urn: и называет ресурс внутри пространства имен, не указывая ни его местоположение, ни протокол доступа. Варианты с https:// — это URL, а #~all-guides — только фрагмент."
                 },
                 {
-                    "answer": "www.cisco.com/c/en/us/solutions/design-zone.html",
+                    "answer": "urn:ietf:params:netconf:base:1.1",
                     "correct": true
                 },
                 {
                     "answer": "#~all-guides",
                     "correct": false,
-                    "comment": "URN идентифицирует только пространство имен ресурса без ссылки на протокол."
+                    "comment": "URN начинается со схемы urn: и называет ресурс внутри пространства имен, не указывая ни его местоположение, ни протокол доступа. Варианты с https:// — это URL, а #~all-guides — только фрагмент."
                 }
             ]
         },
@@ -101,16 +101,16 @@
             "answerType": "singleChoice",
             "answers": [
                 {
-                    "answer": "https://www.cisco.com/c/en/us/solutions/design-zone.html#~all-guides",
+                    "answer": "https://www.ya.ru/c/en/us/solutions/design-zone.html#~all-guides",
                     "correct": true
                 },
                 {
-                    "answer": "https://www.cisco.com/c/en/us/solutions/design-zone.html",
+                    "answer": "https://www.ya.ru/c/en/us/solutions/design-zone.html",
                     "correct": false,
                     "comment": "URI включает в себя URN, URL, любую информацию о пути и любые фрагменты. Например, URI может перейти в определенное место на веб-странице, в то время как URL будет загружать верхнюю часть веб-страницы."
                 },
                 {
-                    "answer": "www.cisco.com/c/en/us/solutions/design-zone.html",
+                    "answer": "www.ya.ru/c/en/us/solutions/design-zone.html",
                     "correct": false,
                     "comment": "URI включает в себя URN, URL, любую информацию о пути и любые фрагменты. Например, URI может перейти в определенное место на веб-странице, в то время как URL будет загружать верхнюю часть веб-страницы."
                 },

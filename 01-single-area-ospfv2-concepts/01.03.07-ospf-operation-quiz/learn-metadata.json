@@ -174,38 +174,38 @@
             ]
         },
         {
-            "question": "Во время этого состояния OSPF роутеры имеют сошедшиеся базы данных состояния канала.",
+            "question": "В этом состоянии OSPF соседи полностью синхронизировали свои LSDB.",
             "answerType": "singleChoice",
             "answers": [
                 {
                     "answer": "состояние Down",
                     "correct": false,
-                    "comment": "В состоянии Full роутеры имеют сошедшиеся LSDB"
+                    "comment": "В состоянии Full соседи полностью синхронизировали свои LSDB"
                 },
                 {
                     "answer": "состояние Init",
                     "correct": false,
-                    "comment": "В состоянии Full роутеры имеют сошедшиеся LSDB"
+                    "comment": "В состоянии Full соседи полностью синхронизировали свои LSDB"
                 },
                 {
                     "answer": "состояние Two-Way",
                     "correct": false,
-                    "comment": "В состоянии Full роутеры имеют сошедшиеся LSDB"
+                    "comment": "В состоянии Full соседи полностью синхронизировали свои LSDB"
                 },
                 {
                     "answer": "состояние ExStart",
                     "correct": false,
-                    "comment": "В состоянии Full роутеры имеют сошедшиеся LSDB"
+                    "comment": "В состоянии Full соседи полностью синхронизировали свои LSDB"
                 },
                 {
                     "answer": "состояние Exchange",
                     "correct": false,
-                    "comment": "В состоянии Full роутеры имеют сошедшиеся LSDB"
+                    "comment": "В состоянии Full соседи полностью синхронизировали свои LSDB"
                 },
                 {
                     "answer": "состояние Loading",
                     "correct": false,
-                    "comment": "В состоянии Full роутеры имеют сошедшиеся LSDB"
+                    "comment": "В состоянии Full соседи полностью синхронизировали свои LSDB"
                 },
                 {
                     "answer": "состояние Full",
@@ -214,7 +214,7 @@
             ]
         },
         {
-            "question": "Во время этого состояния OSPF пакеты приветсвия (hello) не принимаются.",
+            "question": "Во время этого состояния OSPF пакеты приветствия (hello) не принимаются.",
             "answerType": "singleChoice",
             "answers": [
                 {
