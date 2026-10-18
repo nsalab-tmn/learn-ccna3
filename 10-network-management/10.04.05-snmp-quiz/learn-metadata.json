@@ -74,18 +74,18 @@
             ]
         },
         {
-            "question": "Какая версия SNMP поддерживается программным обеспечением Cisco IOS?",
+            "question": "Какая версия SNMP поддерживается ОС?",
             "answerType": "singleChoice",
             "answers": [
                 {
                     "answer": "Версия 2",
                     "correct": false,
-                    "comment": "Cisco IOS поддерживает и SNMPv2, и SNMPv3."
+                    "comment": "ОС поддерживает и SNMPv2, и SNMPv3."
                 },
                 {
                     "answer": "Версия 3",
                     "correct": false,
-                    "comment": "Cisco IOS поддерживает и SNMPv2, и SNMPv3."
+                    "comment": "ОС поддерживает и SNMPv2, и SNMPv3."
                 },
                 {
                     "answer": "Обе версии",
