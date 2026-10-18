@@ -45,12 +45,12 @@
                 {
                     "answer": "IFMGR",
                     "correct": false,
-                    "comment": "Формат сообщения syslog: seq no: timestamp: %facility-severity-MNEMONIC: description Поэтому мнемоникой в этом сообщении является NO_IFINDEX_FILE."
+                    "comment": "Формат сообщения syslog: seq no: timestamp: %facility-severity-MNEMONIC: description. Поэтому мнемоникой в этом сообщении является NO_IFINDEX_FILE."
                 },
                 {
                     "answer": "Unable to open nvram",
                     "correct": false,
-                    "comment": "Формат сообщения syslog: seq no: timestamp: %facility-severity-MNEMONIC: description Поэтому мнемоникой в этом сообщении является NO_IFINDEX_FILE."
+                    "comment": "Формат сообщения syslog: seq no: timestamp: %facility-severity-MNEMONIC: description. Поэтому мнемоникой в этом сообщении является NO_IFINDEX_FILE."
                 },
                 {
                     "answer": "NO_IFINDEX_FILE",
@@ -59,7 +59,7 @@
                 {
                     "answer": "ifIndex-table",
                     "correct": false,
-                    "comment": "Формат сообщения syslog: seq no: timestamp: %facility-severity-MNEMONIC: description Поэтому мнемоникой в этом сообщении является NO_IFINDEX_FILE."
+                    "comment": "Формат сообщения syslog: seq no: timestamp: %facility-severity-MNEMONIC: description. Поэтому мнемоникой в этом сообщении является NO_IFINDEX_FILE."
                 }
             ]
         },
@@ -74,17 +74,17 @@
                 {
                     "answer": "NO_IFINDEX_FILE",
                     "correct": false,
-                    "comment": "Формат сообщения syslog: seq no: timestamp: %facility-severity-MNEMONIC: description. Таким образом объектом в этом сообщении является IFMGR."
+                    "comment": "Формат сообщения syslog: seq no: timestamp: %facility-severity-MNEMONIC: description. Таким образом, объектом в этом сообщении является IFMGR."
                 },
                 {
                     "answer": "IFMGR-7",
                     "correct": false,
-                    "comment": "Формат сообщения syslog: seq no: timestamp: %facility-severity-MNEMONIC: description. Таким образом объектом в этом сообщении является IFMGR."
+                    "comment": "Формат сообщения syslog: seq no: timestamp: %facility-severity-MNEMONIC: description. Таким образом, объектом в этом сообщении является IFMGR."
                 },
                 {
                     "answer": "ifIndex-table",
                     "correct": false,
-                    "comment": "Формат сообщения syslog: seq no: timestamp: %facility-severity-MNEMONIC: description. Таким образом объектом в этом сообщении является IFMGR."
+                    "comment": "Формат сообщения syslog: seq no: timestamp: %facility-severity-MNEMONIC: description. Таким образом, объектом в этом сообщении является IFMGR."
                 }
             ]
         }

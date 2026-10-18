@@ -1,0 +1,3 @@
+path,asset_or_figure,what_is_shown,should_become,reason
+06-08-exam/learn-metadata.json,06-08-exam/assets/11.PNG (вопрос 16),вывод show ip nat statistics с пулом «NAT-POOL1»,"имя пула «corp», как в конфигурации вопроса (access-list 1 pool corp)",изображение расходится с конфигурацией в тексте вопроса и с комментарием; kb#275
+06-08-exam/learn-metadata.json,06-08-exam/assets/14.png (вопрос 38),подписи Inside Global = 209.165.200.254 и Outside Local = 209.165.200.225,Inside Global = 209.165.200.225 (S0/0/0 маршрутизатора R1); 209.165.200.254 — адрес провайдера,подписи противоречат ключу и комментарию; kb#275
