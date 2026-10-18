@@ -211,7 +211,7 @@
   </tr>
   <tr>
     <td>Fa0/1</td>
-    <td colspan="2">Port Channel 1 транк до S2 Fa0/1</td>
+    <td colspan="2">Port Channel 1, магистральный канал до S2 Fa0/1</td>
     <td>-</td>
     <td colspan="2">-</td>
     <td>Да</td>
@@ -221,7 +221,7 @@
   </tr>
   <tr>
     <td>Fa0/2</td>
-    <td colspan="2">Port Channel 1 транк до S2 Fa0/2</td>
+    <td colspan="2">Port Channel 1, магистральный канал до S2 Fa0/2</td>
     <td>-</td>
     <td colspan="2">-</td>
     <td>Да</td>
@@ -291,7 +291,7 @@
   </tr>
   <tr>
     <td>G0/1</td>
-    <td colspan="2">Транк до Branch-1</td>
+    <td colspan="2">Магистральный канал до Branch-1</td>
     <td>-</td>
     <td colspan="2">-</td>
     <td>Да</td>
