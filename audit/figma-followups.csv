@@ -1,4 +1,4 @@
 path,asset_or_figure,what_is_shown,should_become,reason
-03-network-security-concepts/03.09-network-security-best-practices/README.md,assets/3.9.2.svg (figma 4191:453861),подпись «ESA/WSA» у иконки устройства в схеме сети предприятия,«Шлюзы почты и веба» (как в тексте 3.9.2),иллюстрация (audit ccna3-vm-0386); текст исправлен в этом PR
+03-network-security-concepts/03.09-network-security-best-practices/README.md,assets/3.9.2.svg (figma 4191:453861),подпись «ESA/WSA» у иконки устройства в схеме сети предприятия,«Шлюзы безопасности почты и веб-трафика» (как в тексте 3.9.2),иллюстрация (audit ccna3-vm-0386); текст исправлен в этом PR
 03-network-security-concepts/03.09-network-security-best-practices/README.md,assets/3.9.5-1.svg (figma 4191:454547),подпись «ESA» над иконкой шлюза почты,«Шлюз безопасности почты»,иллюстрация (audit ccna3-vm-0387); текст исправлен в этом PR
 03-network-security-concepts/03.09-network-security-best-practices/README.md,assets/3.9.5-2.svg (figma 4191:454602),подпись «WSA» над иконкой веб-прокси,«Шлюз веб-безопасности»,иллюстрация (audit ccna3-vm-0388); текст исправлен в этом PR
