@@ -76,7 +76,7 @@
                 {
                     "answer": "Истина",
                     "correct": false,
-                    "comment": "Сетевые администраторы используют такие приложения, как Secure Shell (SSH), Trivial File Transfer Protocol (TFTP), Secure FTP и Secure Hypertext Transfer Protocol (HTTPS) для доступа к плоскости уровню управления (control plane) и настройки устройства."
+                    "comment": "Сетевые администраторы используют такие приложения, как Secure Shell (SSH), Trivial File Transfer Protocol (TFTP), Secure FTP и Secure Hypertext Transfer Protocol (HTTPS), для доступа к уровню администрирования (management plane) и настройки устройства. Уровень управления (control plane) — мозг устройства: на нем принимаются решения о пересылке данных."
                 },
                 {
                     "answer": "Ложь",

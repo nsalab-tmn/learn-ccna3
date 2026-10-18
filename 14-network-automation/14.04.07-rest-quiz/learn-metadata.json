@@ -78,21 +78,21 @@
                 {
                     "answer": "https://www.ya.ru/c/en/us/solutions/design-zone.html#~all-guides ",
                     "correct": false,
-                    "comment": "URN идентифицирует только пространство имен ресурса без ссылки на протокол."
+                    "comment": "URN начинается со схемы urn: и называет ресурс внутри пространства имен, не указывая ни его местоположение, ни протокол доступа. Варианты с https:// — это URL, а #~all-guides — только фрагмент."
                 },
                 {
                     "answer": "https://www.ya.ru/c/en/us/solutions/design-zone.html",
                     "correct": false,
-                    "comment": "URN идентифицирует только пространство имен ресурса без ссылки на протокол."
+                    "comment": "URN начинается со схемы urn: и называет ресурс внутри пространства имен, не указывая ни его местоположение, ни протокол доступа. Варианты с https:// — это URL, а #~all-guides — только фрагмент."
                 },
                 {
-                    "answer": "www.ya.ru/c/en/us/solutions/design-zone.html",
+                    "answer": "urn:ietf:params:netconf:base:1.1",
                     "correct": true
                 },
                 {
                     "answer": "#~all-guides",
                     "correct": false,
-                    "comment": "URN идентифицирует только пространство имен ресурса без ссылки на протокол."
+                    "comment": "URN начинается со схемы urn: и называет ресурс внутри пространства имен, не указывая ни его местоположение, ни протокол доступа. Варианты с https:// — это URL, а #~all-guides — только фрагмент."
                 }
             ]
         },
