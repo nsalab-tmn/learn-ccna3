@@ -1,6 +1,6 @@
 # CCNA3 quiz and exam review (kb#275)
 
-> **Status:** review done on 2026-10-18. The findings were rebuilt on learn-ccna3 `origin/main` `f4c5c2a` after the kb#280 tier-3 rewrites were merged. Fixes are in the PRs listed below. By the operator's decision on kb#275 (comment 6250372119), which applies to CCNA3 as it did to CCNA1 and CCNA2, the doubtful items are reworded in CCNA3 §1/§2 PRs, and lecture errors are fixed first in learn-ccna3#57.
+> **Status:** review done on 2026-10-18. The findings were rebuilt on learn-ccna3 `origin/main` `f4c5c2a` after the kb#280 tier-3 rewrites were merged. Fixes are in the PRs listed below. By the operator's decision on kb#275 (comment 6250372119), which applies to CCNA3 as it did to CCNA1 and CCNA2, the doubtful items are reworded in CCNA3 §1/§2 PRs, and the lecture errors are fixed in learn-ccna3#57 (merged).
 
 ## What
 
@@ -31,10 +31,10 @@ The quizzes and exams are translations of the vendor's question banks. The de-ma
 4. **Rebuild:** the review ran before the kb#280 tier-3 rewrites (learn-ccna3#55, #56 and their learn-ccna1 bank twins) were merged. Every finding was rebuilt on the current `origin/main`; step 7 lists the ones that no longer apply.
 5. **Fix PRs:** one per module block, so no two open PRs share a line. The bank copies live in learn-ccna1, so each exam block has a paired PR there with the same wording.
 6. **Doubtful items** are not changed in the fix PRs:
-   - two defensible answers, or content the course does not teach: a CCNA3 §1/§2 PR rewords each one until exactly one answer can be defended from the lecture text (the operator's decision of 2026-10-18). Items that rest on a lecture error follow learn-ccna3#57, which fixes the lecture first;
+   - two defensible answers, or content the course does not teach: a CCNA3 §1/§2 PR rewords each one until exactly one answer can be defended from the lecture text (the operator's decision of 2026-10-18). Items that rest on a lecture error follow learn-ccna3#57, which has fixed the lecture (merged). Where the corrected fact alone settles the question, the fix PRs took the item after review: 03.10.10 q1 and q4 (#58), 09.01.05 q1 (#59), 13.04.05 q3 and 14.04.07 q3 (#60);
    - exhibits that disagree with their text are logged in each exam PR's `audit/figma-followups/<branch>.csv`;
-   - the `.pka` questions wait for the lab rework, and the structural items (an empty bank question, a matching placeholder) stay.
-7. **Held back:** findings whose text the kb#280 rewrites replaced, findings that learn-ccna3#54 already carries, 09.01.05 q1 (it waits for learn-ccna3#57) and 03.11.03 q10 (domain shadowing goes to the kb#276 pass, kb#284).
+   - the `.pka` questions wait for the lab rework. The two structural items stay: by the operator's decision 4 (kb#271 comment 6251488237), only those that fit the current JSON shape are fixed in the rewording pass, and these two don't.
+7. **Held back:** findings whose text the kb#280 rewrites replaced, findings that learn-ccna3#54 already carries, and 03.11.03 q10 (domain shadowing goes to the kb#276 pass, kb#284).
 
 Severity follows kb#275:
 - `error`: a wrong key, a distractor that is actually right, a wrong statement in a question or comment, or a comment copied from another question;
@@ -71,12 +71,12 @@ Findings are counted per file. A bank copy's finding counts separately from its 
 |---|---|---|---|---|
 | error | 33 | 31 | 51 | 115 |
 | style | 171 | 124 | 164 | 459 |
-| unclear | 25 | 9 | 10 | 44 |
-| **fixed** | 190 | 144 | 199 | 533 |
-| **doubtful** (§1/§2, follow-up or structural) | 27 | 15 | 21 | 63 |
-| **held back** | 12 | 5 | 5 | 22 |
+| unclear | 26 | 9 | 10 | 45 |
+| **fixed** | 198 | 144 | 199 | 541 |
+| **doubtful** (§1/§2, follow-up or structural) | 22 | 15 | 21 | 58 |
+| **held back** | 10 | 5 | 5 | 20 |
 | **rejected** | 0 | 0 | 0 | 0 |
-| **total findings** | 229 | 164 | 225 | 618 |
+| **total findings** | 230 | 164 | 225 | 619 |
 
 The fix PRs are listed in *Fix PRs* above. *How*, step 6, says how the doubtful items are handled, and step 7 why some findings are held back.
 
@@ -132,10 +132,10 @@ The fix PRs are listed in *Fix PRs* above. *How*, step 6, says how the doubtful 
 | 03.06.07-ip-vulnerabilities-and-threats-quiz | 3 | unclear | The stem («одновременную скоординированную атаку из нескольких компьютеров-источников») is the course definition of DDoS, not of amplification and reflection, w… | §1/§2 rephrasing (kb#275) |
 | 03.07.06-tcp-and-udp-vulnerabilities-quiz | 2 | error | The stem describes the normal four-way FIN/ACK close as what the attack uses. The TCP reset attack sends a forged segment with RST, which tears the connection d… | #58 → «Какая атака разрывает TCP-соединение с помощью поддельного сегмента RST, минуя обычный четырехсторонний обмен флагами FI…» |
 | 03.07.06-tcp-and-udp-vulnerabilities-quiz | 2 | error | The comment repeats the error (reset attack «с использованием пары сегментов FIN и ACK от каждой конечной точки»). Rewritten from the module text; it now also s… | #58 → «Атака сброса TCP разрывает соединение между двумя узлами: злоумышленник отправляет одному или обоим оконечным устройства…» |
-| 03.10.10-cryptography-quiz | 1 | unclear | The stem and comment call 3DES «очень надежным» with short key lifetimes, following the course table. This is outdated: NIST deprecated three-key TDEA and disal… | §1/§2 rephrasing (kb#275) |
+| 03.10.10-cryptography-quiz | 1 | unclear | The stem and comment call 3DES «очень надежным» with short key lifetimes, following the course table. This is outdated: NIST deprecated three-key TDEA and disal… | #58 → «Какой метод шифрования трижды повторяет процесс алгоритма DES и долгое время считался надежным…»; comments on Sweet32 and NIST (after learn-ccna3#57) |
 | 03.10.10-cryptography-quiz | 2 | unclear | Two defensible answers by the course itself: RC4, the most used Rivest cipher, is a stream cipher, and Q4 of this quiz marks «Rivest Cipher — это потоковый шифр… | §1/§2 rephrasing (kb#275) |
 | 03.10.10-cryptography-quiz | 3 | style | The key starts with a Latin «c» («cимметричное»), which breaks search and spell-checking. | #58 → «симметричное» |
-| 03.10.10-cryptography-quiz | 4 | unclear | RC4 is prohibited in TLS (RFC 7465, 2015), so «используется для защиты веб-трафика в SSL и TLS» is outdated, in the course table as well. Operator: rephrase as … | §1/§2 rephrasing (kb#275) |
+| 03.10.10-cryptography-quiz | 4 | unclear | RC4 is prohibited in TLS (RFC 7465, 2015), so «используется для защиты веб-трафика в SSL и TLS» is outdated, in the course table as well. Operator: rephrase as … | #58 → «…является потоковым шифром и раньше использовался для защиты веб-трафика в SSL и TLS?»; comments cite RFC 7465 (after learn-ccna3#57) |
 | 03.11.03-quiz | 2 | style | Dangling gerund: «Посылая слишком много данных ..., смежные области памяти перезаписываются». | #58 → «Если записать в буфер больше данных, чем он может вместить, лишние байты затирают соседние участки,» |
 | 03.11.03-quiz | 3 | error | Comment says «Хеш-функция — это еще один способ обеспечения конфиденциальности»; hash functions provide integrity, not confidentiality. Rewritten to explain the… | #58 → «Тема 3.10.0 — Шифрование преобразует данные так, чтобы прочитать сообщение могли только авторизованные получатели, то ес…» |
 | 03.11.03-quiz | 3 | error | The third comment is a different translation of the same wrong text (hash functions «обеспечения конфиденциальности»); same rewrite, so all wrong answers carry … | #58 → «Тема 3.10.0 — Шифрование преобразует данные так, чтобы прочитать сообщение могли только авторизованные получатели, то ес…» |
@@ -202,8 +202,8 @@ The fix PRs are listed in *Fix PRs* above. *How*, step 6, says how the doubtful 
 | 08.04.02-quiz | 10 | style | "протокол инфраструктуры IPsec" mistranslates "IPsec framework"; the module says «структура IPsec». | #59 → «Какой протокол в структуре IPsec» |
 | 08.04.02-quiz | 12 | error | Lost superscript: "1019 лет" should be 10^19 years; as written the comment says a 128-bit key falls in about a thousand years. Note: the space in the raw `old` … | #59 → «— около 10 квинтиллионов лет» |
 | 08.04.02-quiz | 12 | style | Calque "сломать" (break) for cracking a key; the comment and the module say «взломать». | #59 → «тем сложнее его взломать» |
-| 09.01.05-network-transmission-quality-quiz | 1 | unclear | The question hinges on propagation delay being «переменная». The course table says so, but propagation delay is fixed for a given path (distance / signal speed)… | §1/§2 rephrasing (kb#275) |
-| 09.01.05-network-transmission-quality-quiz | 1 | style | Stem is a calque: «переменное количество времени» (variable amount of time) and «назначение» used for destination; the module says «получатель». | held back: 09.01.05 q1 is reworked in the §1/§2 block after learn-ccna3#57 fixes 09.01:56 |
+| 09.01.05-network-transmission-quality-quiz | 1 | unclear | The question hinges on propagation delay being «переменная». The course table says so, but propagation delay is fixed for a given path (distance / signal speed)… | #59 → «Как называется время, за которое кадр проходит по каналу от источника к получателю?»; comments: propagation delay is fixed for a given path (after learn-ccna3#57) |
+| 09.01.05-network-transmission-quality-quiz | 1 | style | Stem is a calque: «переменное количество времени» (variable amount of time) and «назначение» used for destination; the module says «получатель». | #59 → «…от источника к получателю?» (the same rewrite) |
 | 09.01.05-network-transmission-quality-quiz | 2 | error | Tautological stem («Что происходит, когда происходит …»), and as asked the distractor «Джиттер» is also a consequence of congestion by the course text. Narrow t… | #59 → «Что происходит при перегрузке, если очередь в памяти устройства переполнена?» |
 | 09.01.05-network-transmission-quality-quiz | 4 | style | Calque «изменением в задержке» (variation in delay). | #59 → «Что вызвано изменением задержки?» |
 | 09.02.06-traffic-characteristics-quiz | 1 | error | With «как правило, потребляет большую часть» the key «Данные» contradicts the module, which says video is 70–82% of all traffic. The comment and the module only… | #59 → «Какой тип трафика может занять всю полосу пропускания канала связи?» |
@@ -239,12 +239,12 @@ The fix PRs are listed in *Fix PRs* above. *How*, step 6, says how the doubtful 
 | 11.01.08-hierarchical-networks-quiz | 1 | style | Typo in the key: «Отказоустойчая». | held back: learn-ccna3#54 makes this fix (kb#280) |
 | 11.01.08-hierarchical-networks-quiz | 5 | style | Comment is a statement but ends with «?» (copied from the stem). | held back: learn-ccna3#54 makes this fix (kb#280) |
 | 11.01.08-hierarchical-networks-quiz | 6 | style | MT artefact «интегрируется с магистралью и пользователями для обеспечения …» (a layer does not «integrate with users»); the module describes the distribution la… | #60 → «Какой уровень сети связывает магистраль с пользователями и обеспечивает интеллектуальную коммутацию, маршрутизацию и без…» |
-| 11.01.08-hierarchical-networks-quiz | 6 | style | Same MT wording as the stem, and the statement ends with «?». | held back: learn-ccna3#54 makes this fix (kb#280) |
+| 11.01.08-hierarchical-networks-quiz | 6 | style | Same MT wording as the stem, and the statement ends with «?». | #60 → «Уровень распределения связывает магистраль с пользователями и обеспечивает интеллектуальную коммутацию, маршрутизацию и безопасность.» (after learn-ccna3#54) |
 | 11.03.08-switch-hardware-quiz | 3 | style | Agreement: the stem asks «Как называют коммутаторы …» (plural) but the key is singular «Стекируемый» while «Модульные» is plural. | #60 → «"Стекируемые"» |
 | 11.03.08-switch-hardware-quiz | 3 | style | Same agreement problem: «Многоуровневый» should be plural. | #60 → «"Многоуровневые"» |
 | 11.03.08-switch-hardware-quiz | 6 | style | Calque «интегральные схемы для конкретных приложений (ASIC)»; the module term is «специализированные интегральные микросхемы (ASIC)». | #60 → «специализированные интегральные микросхемы (ASIC)» |
 | 11.04.04-router-hardware-quiz | 0 | style | Capital letter after the colon; every other quiz title in the course uses lower case there. | #60 → «"Тест на понимание темы: оборудование для маршрутизации"» |
-| 11.05.03-quiz | 5 | style | «свойство модели» mistranslates «design feature»; no model is named. Q13–Q14 of the same quiz say «решение при проектировании». | #60 → «Какое решение при проектировании ограничит» |
+| 11.05.03-quiz | 5 | style | «свойство модели» mistranslates «design feature»; no model is named. Q13–Q14 of the same quiz say «решение при проектировании». | #60 → «Какое решение при проектировании ограничит размер домена отказов»; key «Развертывание блоков коммутации» (kb#283) |
 | 11.05.03-quiz | 7 | style | Wrong term «сквозной доступ PoE» (PoE pass-through) and the collocation «роль выполняет»; the module says «сквозное питание PoE». | #60 → «Какую функцию выполняет сквозное питание PoE?» |
 | 11.05.03-quiz | 7 | style | Wrong term «Сквозная коммутация PoE»; the module says «сквозное питание PoE». | #60 → «Сквозное питание PoE позволяет» |
 | 11.05.03-quiz | 11 | error | Garbled comment: «Коммутаторы уровня распространения получают доступ к коммутаторам уровня доступа» is meaningless and wrong; «функции переключения» mistranslat… | held back: learn-ccna3#54 makes this fix (kb#280) |
@@ -282,10 +282,11 @@ The fix PRs are listed in *Fix PRs* above. *How*, step 6, says how the doubtful 
 | 13.04.05-software-defined-networking-quiz | 1 | style | Number mismatch: «Какая характеристика лучше всего описывает … (Выберите три варианта.)» — three answers are asked for. | #60 → «Какие характеристики лучше всего описывают уровень управления» |
 | 13.04.05-software-defined-networking-quiz | 2 | style | The comment mixes three names for the planes inside one question («плоскость пересылки данных», «плоскость контроля», «плоскость данных») against the module's «… | #60 → «Уровень передачи данных (data plane) также называется уровнем пересылки. Обычно это коммутационная структура, соединяюща…» |
 | 13.04.05-software-defined-networking-quiz | 2 | style | Same mixed plane terms as the answer 1 comment (a slightly different copy); both comments get one text. | #60 → «Уровень передачи данных (data plane) также называется уровнем пересылки. Обычно это коммутационная структура, соединяюща…» |
-| 13.04.05-software-defined-networking-quiz | 3 | error | The question tests the control plane vs management plane distinction, which the Russian course text does not make: it calls both «уровень управления». The comme… | §1/§2 rephrasing (kb#275) |
+| 13.04.05-software-defined-networking-quiz | 3 | error | The question tests the control plane vs management plane distinction, which the Russian course text does not make: it calls both «уровень управления». The comme… | #60 → «Истина» comment: SSH, TFTP, SFTP and HTTPS reach the «уровень администрирования (management plane)» (after learn-ccna3#57) |
 | 13.04.05-software-defined-networking-quiz | 6 | style | Garbled stem: «Что используется стандартизированными запросами контроллера SDN …» (APIs are themselves the "set of standardized requests"), ending with a period… | #60 → «Что использует контроллер SDN для определения поведения уровня передачи данных на нисходящих коммутаторах и маршрутизато…» |
 | 13.05.08-controllers-quiz | 3 | style | Calque «Централизованное расположение этого типа SDN отвечает за управление устройствами» — a "location" cannot manage devices. (Policy-based SDN also has a cen… | #60 → «В этом типе SDN приложения взаимодействуют с централизованным контроллером, который знает обо всех устройствах в сети и …» |
 | 13.05.08-controllers-quiz | 3 | style | Same calque «централизованное расположение» in the comment. | #60 → «Так работает SDN на основе контроллера. В этом типе SDN централизованный контроллер знает обо всех устройствах сети и уп…» |
+| 13.05.08-controllers-quiz | 3 | unclear | Found in kb's review of #60: the rewritten stem also fitted policy-based SDN, which 13.05 README:115 calls «аналогичен SDN на базе контроллера, где централизованный контроллер знает обо всех устройствах в сети». | #60 → «…а приложения взаимодействуют с ним напрямую, без дополнительного уровня политик.» |
 | 13.05.08-controllers-quiz | 4 | style | Typo «устройста». | #60 → «программировать устройства.» |
 | 13.05.08-controllers-quiz | 5 | style | Mistranslation «задачи дополнительной настройки» ("advanced configuration tasks"); the module and the comment say «задачи настройки». | #60 → «автоматизируют задачи настройки» |
 | 13.06.03-quiz | 1 | error | False absolute claim «Технологии BaaS не существует» (BaaS is a known term: Backend as a Service, and browser-as-a-service offerings exist). What makes the opti… | #60 → «Тема 13.1.0 — Браузер как услуга (BaaS) не входит в число основных типов облачных сервисов.» |
@@ -299,7 +300,7 @@ The fix PRs are listed in *Fix PRs* above. *How*, step 6, says how the doubtful 
 | 13.06.03-quiz | 13 | style | Case error: «Уровня управления на каждом устройстве подключается» (subject must be nominative). | #60 → «Уровень управления на каждом устройстве подключается» |
 | 14.02.09-data-formats-quiz | 5 | style | «Этот формат информативен благодаря структуре данных» is a loose rendering of "self-descriptive" that fits every listed format; the module and the comment use «… | #60 → «Этот формат данных самоописательный.» |
 | 14.03.06-apis-quiz | 3 | unclear | After de-branding ("used by Cisco to give students lab access" → «учебная платформа … студентам»), the key «Открытые или публичные API» is hard to defend: acces… | §1/§2 rephrasing (kb#275) |
-| 14.04.07-rest-quiz | 3 | error | By the standards the key is wrong: «www.ya.ru/c/en/us/solutions/design-zone.html» is not a URN (a URN has the form urn:<NID>:<NSS>; a string without a scheme is… | §1/§2 rephrasing (kb#275) |
+| 14.04.07-rest-quiz | 3 | error | By the standards the key is wrong: «www.ya.ru/c/en/us/solutions/design-zone.html» is not a URN (a URN has the form urn:<NID>:<NSS>; a string without a scheme is… | #60 → key «urn:ietf:params:netconf:base:1.1», the lecture example (after learn-ccna3#57) |
 | 14.04.07-rest-quiz | 4 | unclear | Two defensible answers: option 2 «https://www.ya.ru/c/en/us/solutions/design-zone.html» is a URL, and every URL is a URI, both by RFC 3986 and by the course tex… | §1/§2 rephrasing (kb#275) |
 | 14.04.07-rest-quiz | 5 | unclear | Ambiguous stem: «Что из перечисленного составляет часть запроса RESTful?» — the course lists five parts of an API request, including the two distractors «API се… | §1/§2 rephrasing (kb#275) |
 | 14.05.06-configuration-management-quiz | 2 | style | Calque: «Какой термин описывает инструмент управления конфигурацией: Программное выполнение задачи …» says the term describes a tool (automation is not a tool);… | #60 → «Какой термин управления конфигурацией описывает программное выполнение задачи в системе, например настройку интерфейса и…» |
@@ -593,14 +594,14 @@ The bank copies live in learn-ccna1 and have extra questions, so their numbering
 
 ## Course text found on the way
 
-Errors in the lecture text that the review ran into. The quiz PRs don't change them, because the lectures are outside kb#275. By the operator's decision, the factual errors are fixed in learn-ccna3#57, each with its source, and the questions that rest on them are reworded after it.
+Errors in the lecture text that the review ran into. The quiz PRs don't change them, because the lectures are outside kb#275. By the operator's decision, the factual errors were fixed in learn-ccna3#57 (merged), each with its source, and the questions that rest on them are reworded after it.
 
 | Lecture | Problem | Where |
 |---|---|---|
 | `01-single-area-ospfv2-concepts/01.03-ospf-operation/README.md:24`, `02-single-area-ospfv2-configuration/02.06-verify-single-area-ospfv2/README.md:150` | DR and BDR elected on «multiaccess» wording that reads as all networks; they are elected on multiaccess networks only | learn-ccna3#57 |
 | `02-single-area-ospfv2-configuration/02.01-ospf-router-id/README.md:66` | the router that sends DBD packets first: it is the one with the higher router ID | learn-ccna3#57 |
 | `02-single-area-ospfv2-configuration/02.04-modify-single-area-ospfv2/README.md:31` | OSPF cost «rounded» to the nearest integer; the fraction is dropped and the minimum is 1 (01-02-exam Q26 and final Q8 rely on it) | learn-ccna3#57 |
-| `03-network-security-concepts/03.10-cryptography/README.md:178`, `:181` | 3DES and RC4 presented as current; both are retired (NIST SP 800-131A, RFC 7465). Quiz 03.10.10 q1, q2, q4 follow | learn-ccna3#57 |
+| `03-network-security-concepts/03.10-cryptography/README.md:178`, `:179`, `:181` | 3DES and RC4 presented as current; both are retired (NIST SP 800-131A, RFC 7465). AES given 128-, 192- and 256-bit blocks; that is Rijndael, AES fixes the block at 128 bits (FIPS 197). Quiz 03.10.10 q1, q2, q4 follow | learn-ccna3#57 |
 | `09-qos-concepts/09.01-network-transmission-quality/README.md:56` | propagation delay called variable; it is fixed for a given path (ITU-T G.114). Quiz 09.01.05 q1 follows | learn-ccna3#57 |
 | `13-network-virtualization/13.04-software-defined-networking/README.md:38-41` | the management plane named like the control plane; kb#284 names it «уровень администрирования». Quiz 13.04.05 q3 and 13-14 Q8 follow | learn-ccna3#57 |
 | `14-network-automation/14.04-rest/README.md:68` | the URN defined as a namespace; a URN is a persistent name (RFC 8141). Quiz 14.04.07 q3 follows | learn-ccna3#57 |
@@ -611,5 +612,5 @@ Errors in the lecture text that the review ran into. The quiz PRs don't change t
 
 - **Images:** CiscoVille prompts (03-05 Q23, final Q21), an invalid address 209.265.200.200 (final Q22), swapped NAT labels (06-08 Q38, final Q25), a pool name that disagrees with the configuration (06-08 Q16) and five bank questions that point to the wrong image (bank 06-08 Q16, Q17, Q38–Q40). Each is logged in its exam PR's `audit/figma-followups/<branch>.csv`.
 - **Packet Tracer items:** bank 01-02 Q58 and bank 06-08 Q46 are `.pka` activities. They stay until the lab rework.
-- **Structural items:** bank 06-08 Q37 has an empty question text, and 09-12 Q9 (with its bank twin) has a matching placeholder with key 0. Both need changes to the JSON structure, which kb#275 does not make.
+- **Structural items:** bank 06-08 Q37 has an empty question text, and its answers duplicate Q36. 09-12 Q9, with its bank twin, has a matching item keyed «0». Neither fits the current JSON shape, so by the operator's decision 4 (kb#271 comment 6251488237) both stay for the question rework, like CCNA2 bank 07-09 Q32 and final Q44.
 - **Term alignment:** existing «роутер», «хост», «транк» and «затор» are left to the kb#276 alignment PRs, which start after this course's kb#275 PRs are merged. So is domain shadowing (03.08 and quiz 03.11.03, kb#284). The kb#275 PRs change a term only where they rewrite the sentence.
