@@ -12,7 +12,7 @@
 
 Колонка «Видеоряд (Figma)» в таблице фиксирует прогресс пересборки: по каким видео собран новый видеоряд — анимация Figma Motion на нашей дизайн-системе, тем же методом, что в CCNA1 и CCNA2. Голосовая дорожка — отдельный трек, пока не начат ни для одного видео.
 
-**Готово: 0 из 32** (explainer — 0 из 21) · собрано и ждёт приёмки (Motion): 8. Шесть explainer-роликов модуля 3 о том, как проводятся атаки (`gDohT7qGeSs`, `s1Zb4Si9glY`, `zSvQp2erbbY`, `aHUs-Q95deY`, `qgM_6SJwwP8`, `NbmzS--sOyU`), в цепочку пересборки 2026-10-18 не вошли — решение по ним за оператором.
+**Готово: 0 из 32** (explainer — 0 из 21) · собрано и ждёт приёмки (Motion): 9. Шесть explainer-роликов модуля 3 о том, как проводятся атаки (`gDohT7qGeSs`, `s1Zb4Si9glY`, `zSvQp2erbbY`, `aHUs-Q95deY`, `qgM_6SJwwP8`, `NbmzS--sOyU`), в цепочку пересборки 2026-10-18 не вошли — решение по ним за оператором.
 
 | статус | значит |
 |---|---|
@@ -41,7 +41,7 @@
 | s_4r5MBW_Uc | 09/09.01-network-transmission-quality | The Purpose of QoS | 3:06 | explainer | анимация Figma (≤ 60 с) / текст + иллюстрация | Motion · 1:24 · [Figma](https://www.figma.com/design/3FtCg22qFubpLBPOetQU03/CCNA-Design?node-id=5253-7241) | [doc](09-qos-concepts/09.01-network-transmission-quality--s_4r5MBW_Uc.md) |
 | T9HlXNYJNdg | 09/09.02-traffic-characteristics | Traffic Characteristics | 2:49 | explainer | текст + иллюстрация (≤ 1:30) | Motion · 1:24 · [Figma](https://www.figma.com/design/3FtCg22qFubpLBPOetQU03/CCNA-Design?node-id=5257-7009) | [doc](09-qos-concepts/09.02-traffic-characteristics--T9HlXNYJNdg.md) |
 | rmxOlo93MWo | 09/09.03-queuing-algorithms | QoS Algorithms | 1:35 | explainer | анимация Figma (≤ 60 с) | Motion · 1:18 · [Figma](https://www.figma.com/design/3FtCg22qFubpLBPOetQU03/CCNA-Design?node-id=5261-7009) | [doc](09-qos-concepts/09.03-queuing-algorithms--rmxOlo93MWo.md) |
-| jdzgForIwzY | 09/09.04-qos-models | QoS Models | 4:29 | explainer | текст + иллюстрация (≤ 1:30) | — | [doc](09-qos-concepts/09.04-qos-models--jdzgForIwzY.md) |
+| jdzgForIwzY | 09/09.04-qos-models | QoS Models | 4:29 | explainer | текст + иллюстрация (≤ 1:30) | Motion · 1:24 · [Figma](https://www.figma.com/design/3FtCg22qFubpLBPOetQU03/CCNA-Design?node-id=5265-7269) | [doc](09-qos-concepts/09.04-qos-models--jdzgForIwzY.md) |
 | vL-ZYGViSJs | 09/09.05-qos-implementation-techniques | QoS Implementation Techniques | 8:32 | explainer | 2–3 анимации Figma / код-рендер ~3:30 | — | [doc](09-qos-concepts/09.05-qos-implementation-techniques--vL-ZYGViSJs.md) |
 | `nsmyx7XLAPo` | 10-network-management / 10.07-ios-image-management | Обновление образа IOS на маршрутизаторе Cisco через TFTP (PuTTY, Tftpd64, Cisco 1941) | 6:49 | lab-demo | видео с генерированным голосом (код-рендер), ~3:30 + сессия IOS для симулятора | — | [10.07 — nsmyx7XLAPo](10-network-management/10.07-ios-image-management--nsmyx7XLAPo.md) |
 | `bvv3U0BkiL0` | 11-network-design / 11.01-hierarchical-networks | Трёхуровневая модель проектирования сети (топология Packet Tracer) | 2:06 | explainer | анимация Figma ≤ 60 с (минимум — текст + иллюстрация) | — | [11.01 — bvv3U0BkiL0](11-network-design/11.01-hierarchical-networks--bvv3U0BkiL0.md) |
