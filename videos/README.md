@@ -12,7 +12,7 @@
 
 Колонка «Видеоряд (Figma)» в таблице фиксирует прогресс пересборки: по каким видео собран новый видеоряд — анимация Figma Motion на нашей дизайн-системе, тем же методом, что в CCNA1 и CCNA2. Голосовая дорожка — отдельный трек, пока не начат ни для одного видео.
 
-**Готово: 0 из 32** (explainer — 0 из 21) · собрано и ждёт приёмки (Motion): 5. Шесть explainer-роликов модуля 3 о том, как проводятся атаки (`gDohT7qGeSs`, `s1Zb4Si9glY`, `zSvQp2erbbY`, `aHUs-Q95deY`, `qgM_6SJwwP8`, `NbmzS--sOyU`), в цепочку пересборки 2026-10-18 не вошли — решение по ним за оператором.
+**Готово: 0 из 32** (explainer — 0 из 21) · собрано и ждёт приёмки (Motion): 6. Шесть explainer-роликов модуля 3 о том, как проводятся атаки (`gDohT7qGeSs`, `s1Zb4Si9glY`, `zSvQp2erbbY`, `aHUs-Q95deY`, `qgM_6SJwwP8`, `NbmzS--sOyU`), в цепочку пересборки 2026-10-18 не вошли — решение по ним за оператором.
 
 | статус | значит |
 |---|---|
@@ -38,7 +38,7 @@
 | YNfNWEeukWQ | 03/03.10-cryptography | Cryptography | 4:29 | explainer | видео с генер. голосом ~2:30 + текст | Motion · 2:24 · [Figma](https://www.figma.com/design/3FtCg22qFubpLBPOetQU03/CCNA-Design?node-id=5238-7289) | [doc](03-network-security-concepts/03.10-cryptography--YNfNWEeukWQ.md) |
 | kPV8JZzD5iQ | 08/08.03-ipsec | IPsec Concepts | 6:39 | explainer | видео с генер. голосом ~3:00 (осовременить параметры) | Motion · 2:40 · [Figma](https://www.figma.com/design/3FtCg22qFubpLBPOetQU03/CCNA-Design?node-id=5245-7307) | [doc](08-vpn-and-ipsec-concepts/08.03-ipsec--kPV8JZzD5iQ.md) |
 | mRSTH3Daj6E | 08/08.03-ipsec | IPsec Transport and Tunnel Modes | 1:51 | explainer | анимация Figma (≤ 60 с) | Motion · 1:16 · [Figma](https://www.figma.com/design/3FtCg22qFubpLBPOetQU03/CCNA-Design?node-id=5248-7079) | [doc](08-vpn-and-ipsec-concepts/08.03-ipsec--mRSTH3Daj6E.md) |
-| s_4r5MBW_Uc | 09/09.01-network-transmission-quality | The Purpose of QoS | 3:06 | explainer | анимация Figma (≤ 60 с) / текст + иллюстрация | — | [doc](09-qos-concepts/09.01-network-transmission-quality--s_4r5MBW_Uc.md) |
+| s_4r5MBW_Uc | 09/09.01-network-transmission-quality | The Purpose of QoS | 3:06 | explainer | анимация Figma (≤ 60 с) / текст + иллюстрация | Motion · 1:24 · [Figma](https://www.figma.com/design/3FtCg22qFubpLBPOetQU03/CCNA-Design?node-id=5253-7241) | [doc](09-qos-concepts/09.01-network-transmission-quality--s_4r5MBW_Uc.md) |
 | T9HlXNYJNdg | 09/09.02-traffic-characteristics | Traffic Characteristics | 2:49 | explainer | текст + иллюстрация (≤ 1:30) | — | [doc](09-qos-concepts/09.02-traffic-characteristics--T9HlXNYJNdg.md) |
 | rmxOlo93MWo | 09/09.03-queuing-algorithms | QoS Algorithms | 1:35 | explainer | анимация Figma (≤ 60 с) | — | [doc](09-qos-concepts/09.03-queuing-algorithms--rmxOlo93MWo.md) |
 | jdzgForIwzY | 09/09.04-qos-models | QoS Models | 4:29 | explainer | текст + иллюстрация (≤ 1:30) | — | [doc](09-qos-concepts/09.04-qos-models--jdzgForIwzY.md) |
