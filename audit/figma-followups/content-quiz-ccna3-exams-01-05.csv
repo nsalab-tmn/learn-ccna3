@@ -1,0 +1,2 @@
+path,asset_or_figure,what_is_shown,should_become,reason
+03-05-exam/learn-metadata.json,03-05-exam/assets/4.png (вопрос 23),приглашение «CiscoVille(config)#» в выводе команд ACL,«Kostroma(config)#»; остальной вывод без изменений,"текст вопроса и комментарий называют маршрутизатор Kostroma; имя вендора на изображении, kb#275"
