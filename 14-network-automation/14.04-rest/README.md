@@ -71,7 +71,7 @@ API RESTful используют общие методы HTTP, включая PO
 На рисунке показаны части URI:
 
 * **Протокол/Схема - (Protocol/scheme)** – HTTPS или другие протоколы, такие как FTP, SFTP, mailto и NNTP
-* **Имя хоста** — www.ya.ru
+* **Имя узла** — www.ya.ru
 * **Путь и имя файла** — /author/book.html
 * **Фрагмент** — #page155
 

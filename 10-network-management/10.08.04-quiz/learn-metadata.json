@@ -47,7 +47,7 @@
             "answerType": "singleChoice",
             "answers": [
                 {
-                    "answer": "Имя хоста соседа",
+                    "answer": "Имя соседнего устройства",
                     "correct": false,
                     "comment": "Тема 10.1.0 — Команда show cdp neighbors detail отобразит IP-адрес соседнего узла. Команда show cdp neighbors отображает платформу, возможности и имя соседних узлов, но без указания IP-адресов."
                 },
