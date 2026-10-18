@@ -1,0 +1,4 @@
+path,asset_or_figure,what_is_shown,should_become,reason
+final-exam/learn-metadata.json,final-exam/assets/7.png (вопрос 21),приглашение «CiscoVille» во всех строках вывода,«Kostroma»; остальной вывод без изменений,"текст вопроса и комментарий называют маршрутизатор Kostroma; имя вендора на изображении, kb#275"
+final-exam/learn-metadata.json,final-exam/assets/8.JPG (вопрос 22),адрес интернет-сервера 209.265.200.200 (октет 265),"209.165.200.200, как в варианте ответа 2",недопустимый IPv4-адрес на изображении; kb#275
+final-exam/learn-metadata.json,final-exam/assets/9.png (вопрос 25),подписи Outside Local = 209.165.200.225 и Inside Global = 209.165.200.254,Inside Global = 209.165.200.225 (S0/0/0 маршрутизатора R1); 209.165.200.254 — адрес провайдера,подписи противоречат ключу и комментарию; kb#275
