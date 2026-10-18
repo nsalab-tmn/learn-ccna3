@@ -3069,7 +3069,7 @@
             "answerType": "singleChoice",
             "answers": [
                 {
-                    "answer": "основной шлюз"
+                    "answer": "шлюз по умолчанию"
                 },
                 {
                     "answer": "DHCP"
