@@ -52,7 +52,7 @@
             ]
         },
         {
-            "question": "На что меняется подсказка CLI после ввода команды **ip access-list standard aaa** из режима глобальной конфигурации?",
+            "question": "На что меняется приглашение CLI после ввода команды **ip access-list standard aaa** из режима глобальной конфигурации?",
             "answerType": "singleChoice",
             "answers": [
                 {
