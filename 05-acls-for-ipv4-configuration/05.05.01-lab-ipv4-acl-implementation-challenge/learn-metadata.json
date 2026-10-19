@@ -8,32 +8,25 @@
     "tags": {
         "$ref": "../../material-tags.json"
     },
+    "compute": {
+        "local": {
+            "$ref": "./compute/local"
+        }
+    },
     "credentialsSchema": {
-        "userName": {
-            "title": "Имя пользователя",
-            "source": "learn_user"
-        },
-        "password": {
-            "title": "Пароль",
-            "source": "learn_password"
-        },
         "consoleURL": {
-            "title": "Адрес портала",
-            "value": "https://portal.skillscloud.company"
+            "title": "Адрес лаборатории",
+            "source": "URL"
         }
     },
     "skills": {},
     "text": {
         "$ref": "./README.md"
     },
-    "assets": {
-        "$ref": "./assets"
-    },
     "assessment": {
-        "$ref": "./assessment.json"
-    },
-    "deploy": {
-        "$ref": "./deploy"
+        "local": {
+            "$ref": "./assessment"
+        }
     },
     "answerSchema": {
         "type": "object",
@@ -41,47 +34,47 @@
         "properties": {
             "q_1": {
                 "type": "string",
-                "title": "1. Отправьте эхо-запрос от Branch PC на Enterprise Web Server. Была ли проверка успешной? Дайте пояснение.",
+                "title": "1. Выполняются ли эхо-запросы от компьютера Branch-PC к серверу Enterprise-Web-Server? Почему?",
                 "placeholder": "Enter your answer here"
             },
             "q_2": {
                 "type": "string",
-                "title": "2. Какая инструкция ACL разрешала или отклоняла пинг между этими двумя устройствами? Перечислите имя или номер списка доступа, маршрутизатор, на котором он был применен, и конкретную строку, сопоставляемую трафиком.",
+                "title": "2. Какая запись списка контроля доступа разрешила или запретила эхо-запросы от Branch-PC к Enterprise-Web-Server? Укажите номер или имя списка, маршрутизатор, на котором он применен, и запись, с которой совпали пакеты.",
                 "placeholder": "Enter your answer here"
             },
             "q_3": {
                 "type": "string",
-                "title": "3. Попытка выполнить эхо-запрос с ПК -1 в локальной сети 1 HQ на сервер филиала. Была ли проверка успешной? Дайте пояснение.",
+                "title": "3. Выполняются ли эхо-запросы от компьютера PC-1 локальной сети HQ LAN 1 к серверу Branch-Server? Почему?",
                 "placeholder": "Enter your answer here"
             },
             "q_4": {
                 "type": "string",
-                "title": "4. Какая инструкция ACL разрешала или отклоняла пинг между этими двумя устройствами?",
+                "title": "4. Какая запись списка контроля доступа разрешила или запретила эхо-запросы от PC-1 к Branch-Server?",
                 "placeholder": "Enter your answer here"
             },
             "q_5": {
                 "type": "string",
-                "title": "5. Откройте веб-браузер на внешнем сервере и попытайтесь открыть веб-страницу, хранящуюся на корпоративном веб-сервере. Успешно? Дайте пояснение.",
+                "title": "5. Открывается ли в веб-браузере сервера External-Web-Server веб-страница сервера Enterprise-Web-Server? Почему?",
                 "placeholder": "Enter your answer here"
             },
             "q_6": {
                 "type": "string",
-                "title": "6. Какая инструкция ACL разрешала или отклоняла пинг между этими двумя устройствами?",
+                "title": "6. Какая запись списка контроля доступа разрешила или запретила этот веб-трафик?",
                 "placeholder": "Enter your answer here"
             },
             "q_7": {
                 "type": "string",
-                "title": "7. В командной строке на компьютере Internet User PC попытайтесь установить FTP-соединение с сервером филиала. Успешно ли FTP-соединение?",
+                "title": "7. Пропустят ли списки контроля доступа FTP-соединение компьютера Internet-User с сервером Branch-Server? Почему?",
                 "placeholder": "Enter your answer here"
             },
             "q_8": {
                 "type": "string",
-                "title": "8. Какой список доступа следует изменить, чтобы пользователи изИнтернета не могли подключаться к серверу филиалов по FTP?",
+                "title": "8. Какой список контроля доступа нужно изменить, чтобы пользователи из Интернета не могли подключаться к серверу Branch-Server по FTP?",
                 "placeholder": "Enter your answer here"
             },
             "q_9": {
                 "type": "string",
-                "title": "9. Какие операторы должны быть добавлены в список доступа, чтобы запретить этот трафик?",
+                "title": "9. Какую запись нужно добавить в этот список, чтобы запретить этот трафик?",
                 "placeholder": "Enter your answer here"
             }
         }
