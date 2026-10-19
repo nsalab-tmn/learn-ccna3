@@ -1,9 +1,10 @@
 {
     "title": "Виртуализация сетевых функций",
-    "materialType": "lecture",
+    "shortName": "ccna3.network-virtualization.virtual-network-infrastructure",
+    "type": "scored-lecture",
     "description": "Как виртуальные машины взаимодействуют между собой по сети в рамках одного гипервизора и между разными гипервизорами?",
     "difficulty": 3,
-    "duration": "PT0H7M",
+    "duration": "PT0H11M",
     "tags": {
         "$ref": "../../material-tags.json"
     },
@@ -13,5 +14,86 @@
     },
     "assets": {
         "$ref": "./assets"
-    }
+    },
+    "competency": {
+        "produces": {
+            "id": "ksa.ccna3.network-virtualization.virtual-network-infrastructure",
+            "kind": "K",
+            "bloom": "understand",
+            "objective": "Identify which statements about type 1 hypervisors, management consoles, resource oversubscription and east-west traffic are true."
+        },
+        "requires": [
+            "ksa.ccna3.network-virtualization.virtualization"
+        ],
+        "measurement": {
+            "mode": "test",
+            "grader": "test-auto",
+            "aligned_bloom": "understand",
+            "passes_when": "All embedded questions answered correctly (100%, unlimited attempts): type 1 hypervisors, management consoles, oversubscription, east-west traffic.",
+            "calibration": "operator-judge"
+        }
+    },
+    "passingScore": 100,
+    "questions": [
+        {
+            "question": "Верно ли утверждение? Гипервизор типа 1 устанавливается поверх существующей ОС и называется размещенным подходом.",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "Истина",
+                    "correct": false,
+                    "comment": "Гипервизор типа 1 устанавливается непосредственно на серверное или сетевое оборудование и называется «bare metal»."
+                },
+                {
+                    "answer": "Ложь",
+                    "correct": true
+                }
+            ]
+        },
+        {
+            "question": "Верно ли утверждение? Для управления гипервизорами типа 1 требуется «консоль управления».",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "Истина",
+                    "correct": true
+                },
+                {
+                    "answer": "Ложь",
+                    "correct": false,
+                    "comment": "При загрузке гипервизора типа 1 отображается только основная информация, такая как версия ОС, объем оперативной памяти и IP-адрес. Используйте консоль управления для доступа к гипервизорам типа 1."
+                }
+            ]
+        },
+        {
+            "question": "Верно ли утверждение? Консоли управления не допускают переподписку ресурсов сервера.",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "Истина",
+                    "correct": false,
+                    "comment": "Некоторые консоли управления позволяют серверу настраивать переподписку ресурсов. Она возникает, когда установлено несколько экземпляров операционной системы и в сумме им выделено больше памяти, чем физически есть на сервере. Это обычная практика, потому что экземпляры ОС очень редко одновременно используют весь отведенный им объем памяти."
+                },
+                {
+                    "answer": "Ложь",
+                    "correct": true
+                }
+            ]
+        },
+        {
+            "question": "Верно ли утверждение? Трафик типа 'Восток-запад' возникает между виртуальными серверами в одном центре обработки данных.",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "Истина",
+                    "correct": true
+                },
+                {
+                    "answer": "Ложь",
+                    "correct": false,
+                    "comment": "Трафик Восток-Запад проходит между серверами и может изменяться по размещению и интенсивности с течением времени."
+                }
+            ]
+        }
+    ]
 }
