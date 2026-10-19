@@ -115,7 +115,7 @@ devices:
   config: |-
     ipconfig 10.10.10.2 255.255.255.0 10.10.10.1
     service http on
-    http file index.html <html><head><title>Центральный офис</title></head><body><h1>Центральный офис</h1><p>Сайт центрального офиса: вы пришли через NAT роутера R2.</p></body></html>
+    http file index.html <html><head><title>Центральный офис</title></head><body><h1>Центральный офис</h1><p>Сайт центрального офиса: вы пришли через NAT маршрутизатора R2.</p></body></html>
     service dns on
     dns record centralserver.local a 64.100.100.2
     dns record branchserver.local a 64.100.200.1
