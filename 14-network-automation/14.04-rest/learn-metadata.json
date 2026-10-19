@@ -1,9 +1,10 @@
 {
     "title": "Архитектура REST",
-    "materialType": "lecture",
+    "shortName": "ccna3.network-automation.rest",
+    "type": "scored-lecture",
     "description": "Почему архитектурный стиль REST является часто используемым в современных веб-приложениях?",
     "difficulty": 3,
-    "duration": "PT0H15M",
+    "duration": "PT0H23M",
     "tags": {
         "$ref": "../../material-tags.json"
     },
@@ -13,5 +14,167 @@
     },
     "assets": {
         "$ref": "./assets"
-    }
+    },
+    "competency": {
+        "produces": {
+            "id": "ksa.ccna3.network-automation.rest",
+            "kind": "K",
+            "bloom": "understand",
+            "objective": "Name the constraints a RESTful API meets, tell a URL, a URN and a URI with a fragment apart, and list what the query part of a RESTful request may contain."
+        },
+        "requires": [
+            "ksa.ccna3.network-automation.apis"
+        ],
+        "measurement": {
+            "mode": "test",
+            "grader": "test-auto",
+            "aligned_bloom": "understand",
+            "passes_when": "All embedded questions answered correctly (100%, unlimited attempts): RESTful constraints, URL, URN, fragment, query part of a request.",
+            "calibration": "operator-judge"
+        }
+    },
+    "passingScore": 100,
+    "questions": [
+        {
+            "question": "Какие характеристики должен иметь API, чтобы считаться RESTful? (Выберите три варианта.)",
+            "answerType": "multiChoice",
+            "answers": [
+                {
+                    "answer": "С сохранением состояния",
+                    "correct": false,
+                    "comment": "API является RESTful, если он имеет следующие характеристики: архитектура типа клиент-сервер, без сохранения состояния и кэшируемый"
+                },
+                {
+                    "answer": "Без сохранения состояния",
+                    "correct": true
+                },
+                {
+                    "answer": "Кешируемый",
+                    "correct": true
+                },
+                {
+                    "answer": "Некешируемый",
+                    "correct": false,
+                    "comment": "API является RESTful, если он имеет следующие характеристики: архитектура типа клиент-сервер, без сохранения состояния и кэшируемый"
+                },
+                {
+                    "answer": "Архитектура типа клиент-сервер",
+                    "correct": true
+                },
+                {
+                    "answer": "Архитектура типа сервер-сервер",
+                    "correct": false,
+                    "comment": "API является RESTful, если он имеет следующие характеристики: архитектура типа клиент-сервер, без сохранения состояния и кэшируемый"
+                }
+            ]
+        },
+        {
+            "question": "Что из перечисленного — URL?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "urn:ietf:params:netconf:base:1.1",
+                    "correct": false,
+                    "comment": "Это URN: он начинается со схемы urn: и называет ресурс внутри пространства имен, не указывая его местоположение. URL же задает сетевое местоположение ресурса."
+                },
+                {
+                    "answer": "https://www.ya.ru/c/en/us/solutions/design-zone.html",
+                    "correct": true,
+                    "comment": "URL указывает сетевое местоположение ресурса: здесь схема https, имя узла www.ya.ru и путь к странице."
+                },
+                {
+                    "answer": "www.ya.ru/c/en/us/solutions/design-zone.html",
+                    "correct": false,
+                    "comment": "Без схемы (протокола) строка не является URL: в ней только имя узла и путь, а способ доступа к ресурсу не указан."
+                },
+                {
+                    "answer": "#~all-guides",
+                    "correct": false,
+                    "comment": "#~all-guides — только фрагмент, часть URI после знака «#»; местоположения ресурса он не задает."
+                }
+            ]
+        },
+        {
+            "question": "Что из перечисленного — URN?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "https://www.ya.ru/c/en/us/solutions/design-zone.html#~all-guides ",
+                    "correct": false,
+                    "comment": "URN начинается со схемы urn: и называет ресурс внутри пространства имен, не указывая ни его местоположение, ни протокол доступа. Варианты с https:// — это URL, а #~all-guides — только фрагмент."
+                },
+                {
+                    "answer": "https://www.ya.ru/c/en/us/solutions/design-zone.html",
+                    "correct": false,
+                    "comment": "URN начинается со схемы urn: и называет ресурс внутри пространства имен, не указывая ни его местоположение, ни протокол доступа. Варианты с https:// — это URL, а #~all-guides — только фрагмент."
+                },
+                {
+                    "answer": "urn:ietf:params:netconf:base:1.1",
+                    "correct": true
+                },
+                {
+                    "answer": "#~all-guides",
+                    "correct": false,
+                    "comment": "URN начинается со схемы urn: и называет ресурс внутри пространства имен, не указывая ни его местоположение, ни протокол доступа. Варианты с https:// — это URL, а #~all-guides — только фрагмент."
+                }
+            ]
+        },
+        {
+            "question": "Какой вариант содержит фрагмент?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "https://www.ya.ru/c/en/us/solutions/design-zone.html#~all-guides",
+                    "correct": true,
+                    "comment": "Фрагмент — часть URI после знака «#», здесь это #~all-guides. Остальное — схема https, имя узла www.ya.ru и путь к странице."
+                },
+                {
+                    "answer": "https://www.ya.ru/c/en/us/solutions/design-zone.html",
+                    "correct": false,
+                    "comment": "Это URL со схемой https, именем узла и путем; фрагмента (части после «#») в нем нет."
+                },
+                {
+                    "answer": "www.ya.ru/c/en/us/solutions/design-zone.html",
+                    "correct": false,
+                    "comment": "Здесь только имя узла и путь к странице; ни схемы, ни знака «#» с фрагментом в строке нет."
+                },
+                {
+                    "answer": "https://www.ya.ru/c/en/us/solutions/design-zone.html?view=all-guides",
+                    "correct": false,
+                    "comment": "Часть после «?» — запрос; фрагмент же отделяется знаком «#», которого в строке нет."
+                }
+            ]
+        },
+        {
+            "question": "Что может входить в часть «Запрос» в URI для RESTful API? (Выберите три варианта.)",
+            "answerType": "multiChoice",
+            "answers": [
+                {
+                    "answer": "Ключ",
+                    "correct": true,
+                    "comment": "Ключ авторизации, если API его требует, передается в части «Запрос», например key=KEY."
+                },
+                {
+                    "answer": "Формат",
+                    "correct": true,
+                    "comment": "Формат данных (обычно JSON, иногда YAML или XML) задается в части «Запрос», например outFormat=json."
+                },
+                {
+                    "answer": "Параметры",
+                    "correct": true,
+                    "comment": "Параметры передают сведения, относящиеся к запросу, например from=San+Jose,Ca и to=Monterey,Ca."
+                },
+                {
+                    "answer": "Ресурсы",
+                    "correct": false,
+                    "comment": "Ресурсы — отдельная часть URI, которая определяет запрашиваемый API; в «Запрос» они не входят."
+                },
+                {
+                    "answer": "Сервер API",
+                    "correct": false,
+                    "comment": "Сервер API — первая часть URI: адрес службы, которая отвечает на запросы REST. В «Запрос» он не входит."
+                }
+            ]
+        }
+    ]
 }

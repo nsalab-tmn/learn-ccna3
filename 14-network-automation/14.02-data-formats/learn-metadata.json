@@ -1,9 +1,10 @@
 {
     "title": "Форматы данных",
-    "materialType": "lecture",
+    "shortName": "ccna3.network-automation.data-formats",
+    "type": "scored-lecture",
     "description": "Какие форматы данных часто используются в системах автоматизации?",
     "difficulty": 3,
-    "duration": "PT0H16M",
+    "duration": "PT0H22M",
     "tags": {
         "$ref": "../../material-tags.json"
     },
@@ -13,5 +14,141 @@
     },
     "assets": {
         "$ref": "./assets"
-    }
+    },
+    "competency": {
+        "produces": {
+            "id": "ksa.ccna3.network-automation.data-formats",
+            "kind": "K",
+            "bloom": "understand",
+            "objective": "Identify HTML, XML and YAML from their typical use and traits, describe a key/value pair, and state whether whitespace matters in JSON."
+        },
+        "requires": [
+            "ksa.ccna3.network-automation.automation-overview"
+        ],
+        "measurement": {
+            "mode": "test",
+            "grader": "test-auto",
+            "aligned_bloom": "understand",
+            "passes_when": "All embedded questions answered correctly (100%, unlimited attempts): HTML, XML and YAML, key/value pairs, whitespace in JSON.",
+            "calibration": "operator-judge"
+        }
+    },
+    "passingScore": 100,
+    "questions": [
+        {
+            "question": "Какой из форматов данных обычно используется для отображения веб-страниц?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "HTML",
+                    "correct": true
+                },
+                {
+                    "answer": "XML",
+                    "correct": false,
+                    "comment": "Хотя аспекты других форматов также могут быть встроены, HTML — это формат данных, используемый для отображения веб-страниц."
+                },
+                {
+                    "answer": "JSON",
+                    "correct": false,
+                    "comment": "Хотя аспекты других форматов также могут быть встроены, HTML — это формат данных, используемый для отображения веб-страниц."
+                },
+                {
+                    "answer": "YAML",
+                    "correct": false,
+                    "comment": "Хотя аспекты других форматов также могут быть встроены, HTML — это формат данных, используемый для отображения веб-страниц."
+                }
+            ]
+        },
+        {
+            "question": "Что описывает пару ключ/значение?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "Ключ — это строка, а значение — список",
+                    "correct": false,
+                    "comment": "Ключ обычно находится слева, он идентифицирует или описывает данные. Значение справа — сами данные в виде символа, строки, числа, списка или данных другого типа."
+                },
+                {
+                    "answer": "Пара ключ/значение — это другое название массива",
+                    "correct": false,
+                    "comment": "Ключ обычно находится слева, он идентифицирует или описывает данные. Значение справа — сами данные в виде символа, строки, числа, списка или данных другого типа."
+                },
+                {
+                    "answer": "Ключ идентифицирует данные, а значение — это сами данные",
+                    "correct": true
+                },
+                {
+                    "answer": "Пара ключ/значение используется только в JSON",
+                    "correct": false,
+                    "comment": "Ключ обычно находится слева, он идентифицирует или описывает данные. Значение справа — сами данные в виде символа, строки, числа, списка или данных другого типа."
+                }
+            ]
+        },
+        {
+            "question": "Верно ли утверждение? Пробел в формате JSON имеет значение и должен быть правильно отформатирован.",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "Истина",
+                    "correct": false,
+                    "comment": "В формате данных JSON пробел не имеет значения. Однако для удобства чтения JSON часто отображается в формате с отступом."
+                },
+                {
+                    "answer": "Ложь",
+                    "correct": true
+                }
+            ]
+        },
+        {
+            "question": "Минималистский формат данных, который очень легко читается и считается надмножеством другого формата данных.",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "HTML",
+                    "correct": false,
+                    "comment": "YAML очень легко читается и считается надмножеством JSON."
+                },
+                {
+                    "answer": "XML",
+                    "correct": false,
+                    "comment": "YAML очень легко читается и считается надмножеством JSON."
+                },
+                {
+                    "answer": "JSON",
+                    "correct": false,
+                    "comment": "YAML очень легко читается и считается надмножеством JSON."
+                },
+                {
+                    "answer": "YAML",
+                    "correct": true
+                }
+            ]
+        },
+        {
+            "question": "Этот формат данных самоописательный.",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "HTML",
+                    "correct": false,
+                    "comment": "XML самоописательный. Он заключает данные в связанный набор тегов."
+                },
+                {
+                    "answer": "XML",
+                    "correct": true
+                },
+                {
+                    "answer": "JSON",
+                    "correct": false,
+                    "comment": "XML самоописательный. Он заключает данные в связанный набор тегов."
+                },
+                {
+                    "answer": "YAML",
+                    "correct": false,
+                    "comment": "XML самоописательный. Он заключает данные в связанный набор тегов."
+                }
+            ]
+        }
+    ]
 }
