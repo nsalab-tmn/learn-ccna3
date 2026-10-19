@@ -151,12 +151,10 @@ scenario:
         Router(config)#interface g0/0
         Router(config-if)#ip address 172.16.1.1 255.255.255.0
         Router(config-if)#no shutdown
-        Router(config-if)#
-        *Mar  1 00:00:54.164: %LINK-3-UPDOWN: Interface GigabitEthernet0/0, changed state to up
-        Router(config-if)#
-        *Mar  1 00:00:55.164: %LINEPROTO-5-UPDOWN: Line protocol on Interface GigabitEthernet0/0, changed state to up
+        *Mar  1 00:11:59.000: %LINK-3-UPDOWN: Interface GigabitEthernet0/0, changed state to up
+        *Mar  1 00:12:00.000: %LINEPROTO-5-UPDOWN: Line protocol on Interface GigabitEthernet0/0, changed state to up
         Router(config-if)#end
-        *Mar  1 00:00:58.181: %SYS-5-CONFIG_I: Configured from console by console
+        *Mar  1 00:14:03.000: %SYS-5-CONFIG_I: Configured from console by console
         ```
 
         **Шаг 5.** Проверьте связь с TFTP-сервером командой **ping 172.16.1.2**. Первый эхо-запрос остается без ответа (точка), пока маршрутизатор определяет MAC-адрес сервера по протоколу ARP, а на остальные приходят ответы (восклицательные знаки).
@@ -178,13 +176,13 @@ scenario:
         Router#copy tftp running-config
         Address or name of remote host []? 172.16.1.2
         Source filename []? RTA-confg
-        Destination filename [running-config]? 
+        Destination filename [running-config]?
         Accessing tftp://172.16.1.2/RTA-confg...
         Loading RTA-confg from 172.16.1.2: !
         [OK - 215 bytes]
 
         215 bytes copied in 0.001 secs (215000 bytes/sec)
-        *Mar  1 00:01:24.775: %SYS-5-CONFIG_I: Configured from console by console
+        *Mar  1 00:18:41.014: %SYS-5-CONFIG_I: Configured from console by console
         ```
 
         **Примечание.** Команда copy с назначением running-config объединяет файл с текущей конфигурацией: команды из файла выполняются так, как если бы их ввели в режиме глобальной конфигурации. Параметры, которые задает файл, меняются, а остальные остаются прежними.
@@ -244,12 +242,10 @@ scenario:
         Enter configuration commands, one per line.  End with CNTL/Z.
         RTA(config)#interface g0/1
         RTA(config-if)#no shutdown
-        RTA(config-if)#
-        *Mar  1 00:01:40.930: %LINK-3-UPDOWN: Interface GigabitEthernet0/1, changed state to up
-        RTA(config-if)#
-        *Mar  1 00:01:41.930: %LINEPROTO-5-UPDOWN: Line protocol on Interface GigabitEthernet0/1, changed state to up
+        *Mar  1 00:25:26.014: %LINK-3-UPDOWN: Interface GigabitEthernet0/1, changed state to up
+        *Mar  1 00:25:27.014: %LINEPROTO-5-UPDOWN: Line protocol on Interface GigabitEthernet0/1, changed state to up
         RTA(config-if)#end
-        *Mar  1 00:01:44.951: %SYS-5-CONFIG_I: Configured from console by console
+        *Mar  1 00:28:00.014: %SYS-5-CONFIG_I: Configured from console by console
         ```
 
         **Примечание.** На порту G0/1 коммутатора SW2 режим PortFast не включен, поэтому после включения интерфейса маршрутизатора протокол STP около 30 секунд проверяет порт, прежде чем он начнет передавать кадры. Дождитесь, когда индикаторы соединения между RTA и SW2 загорятся зеленым («Соединение активно» в условных обозначениях).
@@ -293,9 +289,9 @@ scenario:
         Enter configuration commands, one per line.  End with CNTL/Z.
         RTA(config)#hostname RTA-1
         RTA-1(config)#end
-        *Mar  1 00:02:44.677: %SYS-5-CONFIG_I: Configured from console by console
+        *Mar  1 00:37:23.521: %SYS-5-CONFIG_I: Configured from console by console
         RTA-1#copy running-config startup-config
-        Destination filename [startup-config]? 
+        Destination filename [startup-config]?
         Building configuration...
         [OK]
         ```
@@ -305,7 +301,7 @@ scenario:
         ```
         RTA-1#copy running-config tftp:
         Address or name of remote host []? 172.16.1.2
-        Destination filename [rta-1-confg]? 
+        Destination filename [rta-1-confg]?
         Writing running-config...!
         [OK - 324 bytes]
 
@@ -329,7 +325,7 @@ scenario:
         RTA-1#copy flash: tftp:
         Source filename []? nr01-netos-0.1.0.bin
         Address or name of remote host []? 172.16.1.2
-        Destination filename [nr01-netos-0.1.0.bin]? 
+        Destination filename [nr01-netos-0.1.0.bin]?
         Writing nr01-netos-0.1.0.bin...!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
         [OK - 33591768 bytes]
 
@@ -359,6 +355,39 @@ scenario:
             2  -rw-         324          <no date>  RTA-1-running-config-backup
 
         255744000 bytes total (222151908 bytes free)
+        ```
+
+        **Шаг 3.** Проверьте, что из копии можно восстановить конфигурацию: временно измените имя устройства — **configure terminal**, **hostname RTA-TEMP**, **end**. Приглашение меняется на RTA-TEMP#.
+
+        ```
+        RTA-1#configure terminal
+        Enter configuration commands, one per line.  End with CNTL/Z.
+        RTA-1(config)#hostname RTA-TEMP
+        RTA-TEMP(config)#end
+        *Mar  1 00:49:58.522: %SYS-5-CONFIG_I: Configured from console by console
+        ```
+
+        **Шаг 4.** Восстановите конфигурацию из копии во флеш-памяти командой **copy flash: running-config**: на вопрос об имени файла источника (Source filename) введите **RTA-1-running-config-backup**, а на вопрос об имени файла назначения нажмите Enter. Команды файла объединяются с текущей конфигурацией, и имя устройства снова RTA-1.
+
+        ```
+        RTA-TEMP#copy flash: running-config
+        Source filename []? RTA-1-running-config-backup
+        Destination filename [running-config]?
+        324 bytes copied in 0.144 secs (2268 bytes/sec)
+        *Mar  1 00:52:18.522: %SYS-5-CONFIG_I: Configured from console by console
+        ```
+
+        **Примечание.** Восстановление в running-config объединяет файл с текущей конфигурацией, как и копирование с TFTP-сервера: команды из файла выполняются поверх текущих настроек, а то, чего в файле нет, остается без изменений.
+
+        **Шаг 5.** Скопируйте файл из флеш-памяти в загрузочную конфигурацию командой **copy flash: startup-config** (имя файла источника — **RTA-1-running-config-backup**, на вопрос об имени файла назначения нажмите Enter): файл заменяет содержимое NVRAM целиком, и после перезагрузки маршрутизатор запустится с этой конфигурацией. Убедитесь командой **show startup-config | include hostname**, что в загрузочной конфигурации имя устройства — RTA-1.
+
+        ```
+        RTA-1#copy flash: startup-config
+        Source filename []? RTA-1-running-config-backup
+        Destination filename [startup-config]?
+        324 bytes copied in 0.144 secs (2268 bytes/sec)
+        RTA-1#show startup-config | include hostname
+        hostname RTA-1
         ```
     - title: "Проверка резервных копий на TFTP-сервере"
       body: |
