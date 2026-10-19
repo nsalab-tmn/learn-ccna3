@@ -1,10 +1,37 @@
 {
     "title": "Экзамен по основам протокола OSPF",
+    "shortName": "ccna3.01-02-exam",
+    "type": "exam",
     "description": "Проверьте свои знания по темам:\r\r* Принципы работы протокола маршрутизации OSPF\r* Настройка OSPF для одной области",
     "difficulty": 1,
     "duration": "PT1H15M",
-    "materialType": "test-exam",
-    "passingScore": 100,
+    "tags": {
+        "$ref": "../material-tags.json"
+    },
+    "skills": {},
+    "assets": {
+        "$ref": "./assets"
+    },
+    "competency": {
+        "produces": {
+            "id": "ksa.ccna3.01-02-exam",
+            "kind": "K",
+            "bloom": "apply",
+            "objective": "Across modules 1–2, identify the OSPF packet, state, database or DR function a scenario describes, work out the wildcard mask, network statement or interface cost a configuration needs, and choose the OSPFv2 configuration or verification command it calls for."
+        },
+        "requires": [
+            "ksa.ccna3.single-area-ospfv2-concepts.summary",
+            "ksa.ccna3.single-area-ospfv2-configuration.summary"
+        ],
+        "measurement": {
+            "mode": "exam",
+            "grader": "test-auto",
+            "aligned_bloom": "apply",
+            "passes_when": "Learner scores at least 80% on the exam's 47 questions covering modules 1–2, including the wildcard-mask and cost calculations; attempts unlimited.",
+            "calibration": "operator-judge"
+        }
+    },
+    "passingScore": 80,
     "questions": [
         {
             "answerType": "singleChoice",
@@ -1364,12 +1391,5 @@
             ],
             "question": "Укажите причину, по которой администратор сети изменил значение эталонной полосы пропускания по умолчанию при настройке OSPF?"
         }
-    ],
-    "tags": {
-        "$ref": "../material-tags.json"
-    },
-    "skills": {},
-    "assets": {
-        "$ref": "./assets"
-    }
+    ]
 }

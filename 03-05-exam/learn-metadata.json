@@ -1,10 +1,38 @@
 {
     "title": "Экзамен по сетевой безопасности",
+    "shortName": "ccna3.03-05-exam",
+    "type": "exam",
     "description": "Проверьте свои знания по темам:\r\r* Принципы обеспечения безопасности сети\r* Принципы создания списков контроля доступа\r* Списки контроля доступа в конфигурациях IPv4",
     "difficulty": 1,
     "duration": "PT1H38M",
-    "materialType": "test-exam",
-    "passingScore": 100,
+    "tags": {
+        "$ref": "../material-tags.json"
+    },
+    "skills": {},
+    "assets": {
+        "$ref": "./assets"
+    },
+    "competency": {
+        "produces": {
+            "id": "ksa.ccna3.03-05-exam",
+            "kind": "K",
+            "bloom": "apply",
+            "objective": "Across modules 3–5, identify the attack, threat actor or security device a scenario describes, work out the wildcard mask that matches a set of addresses, and build or choose the standard or extended IPv4 ACL entry, its placement and the command that applies it."
+        },
+        "requires": [
+            "ksa.ccna3.network-security-concepts.summary",
+            "ksa.ccna3.acl-concepts.summary",
+            "ksa.ccna3.acls-for-ipv4-configuration.summary"
+        ],
+        "measurement": {
+            "mode": "exam",
+            "grader": "test-auto",
+            "aligned_bloom": "apply",
+            "passes_when": "Learner scores at least 80% on the exam's 63 questions covering modules 3–5, including the wildcard-mask and ACL-entry tasks; attempts unlimited.",
+            "calibration": "operator-judge"
+        }
+    },
+    "passingScore": 80,
     "questions": [
         {
             "answerType": "singleChoice",
@@ -1729,12 +1757,5 @@
             ],
             "question": "Техническому специалисту поручено использовать списки ACL для защиты маршрутизатора. Для чего техник будет использовать команду **no ip access-list 101**?"
         }
-    ],
-    "tags": {
-        "$ref": "../material-tags.json"
-    },
-    "skills": {},
-    "assets": {
-        "$ref": "./assets"
-    }
+    ]
 }

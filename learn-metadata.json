@@ -2,6 +2,11 @@
   "title": "Корпоративные сети, безопасность и автоматизация сети",
   "materialType": "learning-path",
   "tags": { "$ref": "./material-tags.json" },
+  "path": {
+    "goal": "Учащийся настраивает OSPFv2 для одной области, списки ACL и NAT для IPv4, описывает технологии WAN, VPN, QoS, виртуализации и автоматизации сети, управляет устройствами и находит неполадки в корпоративной сети.",
+    "prerequisites": [],
+    "targets": [ "ksa.ccna3.final-exam" ]
+  },
   "materials": [
     { "$ref": "./01-single-area-ospfv2-concepts/learn-metadata.json" },
     { "$ref": "./02-single-area-ospfv2-configuration/learn-metadata.json" },
