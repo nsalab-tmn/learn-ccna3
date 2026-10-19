@@ -178,10 +178,10 @@ ip access-list extended ACL
     **Примечание**. Чтобы очистить счетчики в списке доступа, используйте команду **clear access-list counters**.
 
     ```
-    RT1#show ip access-lists
+    RT1# show ip access-lists
     Extended IP access list ACL
-        10 deny tcp host 172.31.1.101 host 64.101.255.254 eq www (12 match(es))
-        20 deny tcp host 172.31.1.101 host 64.101.255.254 eq 443 (12 match(es))
+        10 deny tcp host 172.31.1.101 host 64.101.255.254 eq www (12 matches)
+        20 deny tcp host 172.31.1.101 host 64.101.255.254 eq 443 (12 matches)
         30 deny tcp host 172.31.1.101 host 64.103.255.254 eq www
         40 deny tcp host 172.31.1.101 host 64.103.255.254 eq 443
         50 deny tcp host 172.31.1.102 host 64.101.255.254 eq ftp
@@ -193,7 +193,7 @@ ip access-list extended ACL
 
 2.  Войдите в сервис FTP серверов **Server1** и **Server2** с помощью узла **PC1**. Имя пользователя и пароль — **cisco**.
 
-    > **В симуляторе** службы FTP пока нет: этот шаг выполняется только в Packet Tracer.
+    > **В симуляторе** службы FTP пока нет: этот шаг пропустите.
 
 3.  От узла **PC1** отправьте ping-запросы на серверы **Server1** и **Server2**.
 
