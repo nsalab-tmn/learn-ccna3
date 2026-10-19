@@ -11,9 +11,9 @@ devices:
   hostname: Hub
   config: |-
     hostname Hub
-    enable password class
+    enable password Ch4llengeEna
     line vty 0 4
-     password cisco
+     password Ch4llengeVty
      login
     interface GigabitEthernet0/0/0
      ip address 192.168.1.1 255.255.255.0
@@ -55,9 +55,9 @@ devices:
   hostname: Branch-1
   config: |-
     hostname Branch-1
-    enable password class
+    enable password Ch4llengeEna
     line vty 0 4
-     password cisco
+     password Ch4llengeVty
      login
     interface GigabitEthernet0/0/0
      ip address 192.168.2.1 255.255.255.0
@@ -84,9 +84,9 @@ devices:
   hostname: Branch-2
   config: |-
     hostname Branch-2
-    enable password class
+    enable password Ch4llengeEna
     line vty 0 4
-     password cisco
+     password Ch4llengeVty
      login
     interface GigabitEthernet0/0/0
      ip address 192.168.3.1 255.255.255.0
@@ -109,9 +109,9 @@ devices:
   hostname: Factory
   config: |-
     hostname Factory
-    enable password class
+    enable password Ch4llengeEna
     line vty 0 4
-     password cisco
+     password Ch4llengeVty
      login
     interface GigabitEthernet0/0/0
      ip address 10.10.3.2 255.255.255.252
@@ -415,11 +415,11 @@ scenario:
         | Медный | Branch-2 | G0/0/0 | SW-B2 | G0/1 |
         | Медный | Factory | G0/0/1 | SW-F | G0/1 |
 
-        Маршрутизация: на Hub, Branch-1, Branch-2 и Factory — процесс OSPF 10 для всех их сетей, интерфейсы локальных сетей пассивные; Hub имеет статический маршрут по умолчанию к ISP и распространяет его в OSPF. Трансляция NAT: Hub транслирует адреса сетей 192.168.0.0/16 (список доступа 1) в адрес интерфейса S0/1/0 с перегрузкой; внешний интерфейс — S0/1/0, внутренние — G0/0/0, S0/1/1 и S0/2/0. Доступ к маршрутизаторам: Telnet с паролем cisco, пароль привилегированного режима class.
+        Маршрутизация: на Hub, Branch-1, Branch-2 и Factory — процесс OSPF 10 для всех их сетей, интерфейсы локальных сетей пассивные; Hub имеет статический маршрут по умолчанию к ISP и распространяет его в OSPF. Трансляция NAT: Hub транслирует адреса сетей 192.168.0.0/16 (список доступа 1) в адрес интерфейса S0/1/0 с перегрузкой; внешний интерфейс — S0/1/0, внутренние — G0/0/0, S0/1/1 и S0/2/0. Доступ к маршрутизаторам: Telnet с паролем Ch4llengeVty, пароль привилегированного режима Ch4llengeEna.
     - title: "Начальное состояние"
       body: |
         - Устройства настроены по документации, но в настройках сети есть неполадки. Сколько их и на каких устройствах они находятся, вам предстоит выяснить.
-        - Консоли маршрутизаторов со схемы не открываются: к ним подключаются по протоколу Telnet из приложения «Командная строка» компьютеров (пароль cisco, пароль привилегированного режима class).
+        - Консоли маршрутизаторов со схемы не открываются: к ним подключаются по протоколу Telnet из приложения «Командная строка» компьютеров (пароль Ch4llengeVty, пароль привилегированного режима Ch4llengeEna).
 
         В начальном состоянии компьютер PC1 не получает ответов от сервера Internet-Server (**ping 203.0.113.27**), компьютеры PC5 и PC7 сообщают, что сервер недостижим, а компьютер PC6 не достигает компьютера PC7 (**ping 192.168.4.10**):
 
@@ -575,7 +575,7 @@ scenario:
             Minimum = 2ms, Maximum = 3ms, Average = 2ms
         ```
 
-        **Шаг 2.** В приложении «Командная строка» компьютера PC1 подключитесь к маршрутизатору Hub командой **telnet 192.168.1.1** (пароль cisco), перейдите в привилегированный режим командой **enable** (пароль class) и выведите маршруты OSPF командой **show ip route ospf**: в таблице есть сети всех трех филиалов — 192.168.2.0/24, 192.168.3.0/24 и 192.168.4.0/24. Команда **show ip nat statistics** показывает внешний интерфейс Serial0/1/0 и внутренние G0/0/0, S0/1/1 и S0/2/0, а также попадания (Hits) трансляций. Завершите сеанс командой **exit**.
+        **Шаг 2.** В приложении «Командная строка» компьютера PC1 подключитесь к маршрутизатору Hub командой **telnet 192.168.1.1** (пароль Ch4llengeVty), перейдите в привилегированный режим командой **enable** (пароль Ch4llengeEna) и выведите маршруты OSPF командой **show ip route ospf**: в таблице есть сети всех трех филиалов — 192.168.2.0/24, 192.168.3.0/24 и 192.168.4.0/24. Команда **show ip nat statistics** показывает внешний интерфейс Serial0/1/0 и внутренние G0/0/0, S0/1/1 и S0/2/0, а также попадания (Hits) трансляций. Завершите сеанс командой **exit**.
 
         ```
         C:\>telnet 192.168.1.1
@@ -622,7 +622,7 @@ scenario:
         [Connection to 192.168.1.1 closed by foreign host]
         ```
 
-        **Шаг 3.** С компьютера PC7 подключитесь к маршрутизатору Factory командой **telnet 192.168.4.1** (пароль cisco, **enable**, пароль class): команда **show ip interface brief** показывает оба интерфейса в состоянии up/up, а **show ip ospf neighbor** — соседа Branch-1 (192.168.2.1) в состоянии FULL. Завершите сеанс командой **exit**.
+        **Шаг 3.** С компьютера PC7 подключитесь к маршрутизатору Factory командой **telnet 192.168.4.1** (пароль Ch4llengeVty, **enable**, пароль Ch4llengeEna): команда **show ip interface brief** показывает оба интерфейса в состоянии up/up, а **show ip ospf neighbor** — соседа Branch-1 (192.168.2.1) в состоянии FULL. Завершите сеанс командой **exit**.
 
         ```
         C:\>telnet 192.168.4.1
