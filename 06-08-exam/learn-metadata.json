@@ -1,10 +1,38 @@
 {
     "title": "Экзамен по технологиям глобальных сетей",
+    "shortName": "ccna3.06-08-exam",
+    "type": "exam",
     "description": "Проверьте свои знания по темам:\r\r* Трансляция сетевых адресов в сетях IPv4\r* Принципы работы глобальных сетей\r* Принципы работы виртуальных частных сетей",
     "difficulty": 1,
     "duration": "PT1H39M",
-    "materialType": "test-exam",
-    "passingScore": 100,
+    "tags": {
+        "$ref": "../material-tags.json"
+    },
+    "skills": {},
+    "assets": {
+        "$ref": "./assets"
+    },
+    "competency": {
+        "produces": {
+            "id": "ksa.ccna3.06-08-exam",
+            "kind": "K",
+            "bloom": "understand",
+            "objective": "Across modules 6–8, identify the NAT address type or variant and choose its configuration or verification command, choose the WAN topology or connection option a business scenario calls for, and identify the VPN type or IPsec component it describes."
+        },
+        "requires": [
+            "ksa.ccna3.nat-for-ipv4.summary",
+            "ksa.ccna3.wan-concepts.summary",
+            "ksa.ccna3.vpn-and-ipsec-concepts.summary"
+        ],
+        "measurement": {
+            "mode": "exam",
+            "grader": "test-auto",
+            "aligned_bloom": "understand",
+            "passes_when": "Learner scores at least 80% on the exam's 57 questions covering modules 6–8; attempts unlimited.",
+            "calibration": "operator-judge"
+        }
+    },
+    "passingScore": 80,
     "questions": [
         {
             "answerType": "singleChoice",
@@ -1611,12 +1639,5 @@
             ],
             "question": "Какой тип VPN маршрутизирует пакеты через интерфейсы виртуального туннеля для шифрования и пересылки?"
         }
-    ],
-    "tags": {
-        "$ref": "../material-tags.json"
-    },
-    "skills": {},
-    "assets": {
-        "$ref": "./assets"
-    }
+    ]
 }

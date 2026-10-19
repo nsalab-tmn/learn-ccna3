@@ -1,10 +1,39 @@
 {
     "title": "Экзамен по оптимизации, проектированию и управлению сетью",
+    "shortName": "ccna3.09-12-exam",
+    "type": "exam",
     "description": "Проверьте свои знания по темам:\r\r* Принципы работы качества обслуживания (QoS)\r* Принципы управления сетью\r* Концепции проектирования сетей\r* Поиск и устранение неполадок в сети",
     "difficulty": 1,
     "duration": "PT1H41M",
-    "materialType": "test-exam",
-    "passingScore": 100,
+    "tags": {
+        "$ref": "../material-tags.json"
+    },
+    "skills": {},
+    "assets": {
+        "$ref": "./assets"
+    },
+    "competency": {
+        "produces": {
+            "id": "ksa.ccna3.09-12-exam",
+            "kind": "K",
+            "bloom": "understand",
+            "objective": "Across modules 9–12, identify the QoS mechanism, the network-management protocol or command, the design layer or hardware feature a scenario describes, and choose the troubleshooting method, tool or likely cause it points to."
+        },
+        "requires": [
+            "ksa.ccna3.qos-concepts.summary",
+            "ksa.ccna3.network-management.summary",
+            "ksa.ccna3.network-design.summary",
+            "ksa.ccna3.network-troubleshooting.summary"
+        ],
+        "measurement": {
+            "mode": "exam",
+            "grader": "test-auto",
+            "aligned_bloom": "understand",
+            "passes_when": "Learner scores at least 80% on the exam's 63 questions covering modules 9–12; attempts unlimited.",
+            "calibration": "operator-judge"
+        }
+    },
+    "passingScore": 80,
     "questions": [
         {
             "answerType": "singleChoice",
@@ -1724,12 +1753,5 @@
             ],
             "question": "Сетевой менеджер хочет просмотреть объем доступной и свободной памяти, тип файловой системы и ее разрешения. Какую команду следует использовать администратору?"
         }
-    ],
-    "tags": {
-        "$ref": "../material-tags.json"
-    },
-    "skills": {},
-    "assets": {
-        "$ref": "./assets"
-    }
+    ]
 }

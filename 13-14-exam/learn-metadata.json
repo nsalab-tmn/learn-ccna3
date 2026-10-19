@@ -1,10 +1,37 @@
 {
     "title": "Экзамен по виртуализации и автоматизации сетей",
+    "shortName": "ccna3.13-14-exam",
+    "type": "exam",
     "description": "Проверьте свои знания по темам:\r\r* Виртуализация сети\r* Автоматизация управления сетью",
     "difficulty": 1,
     "duration": "PT0H56M",
-    "materialType": "test-exam",
-    "passingScore": 100,
+    "tags": {
+        "$ref": "../material-tags.json"
+    },
+    "skills": {},
+    "assets": {
+        "$ref": "./assets"
+    },
+    "competency": {
+        "produces": {
+            "id": "ksa.ccna3.13-14-exam",
+            "kind": "K",
+            "bloom": "understand",
+            "objective": "Across modules 13–14, identify the cloud or virtualization model, SDN plane or component a scenario describes, and the data format, API type, RESTful element or configuration-management tool it involves."
+        },
+        "requires": [
+            "ksa.ccna3.network-virtualization.summary",
+            "ksa.ccna3.network-automation.summary"
+        ],
+        "measurement": {
+            "mode": "exam",
+            "grader": "test-auto",
+            "aligned_bloom": "understand",
+            "passes_when": "Learner scores at least 80% on the exam's 38 questions covering modules 13–14; attempts unlimited.",
+            "calibration": "operator-judge"
+        }
+    },
+    "passingScore": 80,
     "questions": [
         {
             "answerType": "singleChoice",
@@ -1054,12 +1081,5 @@
             ],
             "question": "Сетевому администратору было поручено создать план аварийного восстановления. В рамках этого плана администратор ищет резервную площадку для всех данных с серверов компании. Какие услуги или технологии будут поддерживать это требование?"
         }
-    ],
-    "tags": {
-        "$ref": "../material-tags.json"
-    },
-    "skills": {},
-    "assets": {
-        "$ref": "./assets"
-    }
+    ]
 }
