@@ -45,18 +45,6 @@
             "$ref": "./02.07.01-lab-single-area-ospfv2-configuration/learn-metadata.json"
         },
         {
-            "$ref": "./02.07.02-lab-configure-single-area-ospfv2-physical-mode/learn-metadata.json"
-        },
-        {
-            "$ref": "./02.07.03.01-lab-multiarea-ospf-exploration-physical-mode-part-1/learn-metadata.json"
-        },
-        {
-            "$ref": "./02.07.03.02-lab-multiarea-ospf-exploration-physical-mode-part-2/learn-metadata.json"
-        },
-        {
-            "$ref": "./02.07.03.03-lab-multiarea-ospf-exploration-physical-mode-part-3/learn-metadata.json"
-        },
-        {
             "$ref": "./02.08-summary/learn-metadata.json"
         }
     ]
