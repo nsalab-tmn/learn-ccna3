@@ -2,38 +2,31 @@
     "title": "Работа в симуляторе: обновление операционной системы с помощью TFTP",
     "shortName": "lab-10.7.6",
     "materialType": "lab",
-    "description": "Цели лабораторной работы:\r\r* Обновление образа IOS на устройстве Cisco.\r* Создание резервной копии образа IOS на TFTP-сервере.",
+    "description": "Цели лабораторной работы:\r\r* Обновление образа ОС на сетевом устройстве.\r* Создание резервной копии образа ОС на TFTP-сервере.",
     "difficulty": 1,
     "duration": "PT0H30M",
     "tags": {
         "$ref": "../../material-tags.json"
     },
+    "compute": {
+        "local": {
+            "$ref": "./compute/local"
+        }
+    },
     "credentialsSchema": {
-        "userName": {
-            "title": "Имя пользователя",
-            "source": "learn_user"
-        },
-        "password": {
-            "title": "Пароль",
-            "source": "learn_password"
-        },
         "consoleURL": {
-            "title": "Адрес портала",
-            "value": "https://portal.skillscloud.company"
+            "title": "Адрес лаборатории",
+            "source": "URL"
         }
     },
     "skills": {},
     "text": {
         "$ref": "./README.md"
     },
-    "assets": {
-        "$ref": "./assets"
-    },
     "assessment": {
-        "$ref": "./assessment.json"
-    },
-    "deploy": {
-        "$ref": "./deploy"
+        "local": {
+            "$ref": "./assessment"
+        }
     },
     "answerSchema": {
         "type": "object",
@@ -41,12 +34,12 @@
         "properties": {
             "q_1": {
                 "type": "string",
-                "title": "1. Какие образы IOS, хранящиеся на сервере, совместимы с 1941?",
+                "title": "1. Какой образ ОС на сервере TFTP-Server подходит для модели маршрутизатора R2?",
                 "placeholder": "Enter your answer here"
             },
             "q_2": {
                 "type": "string",
-                "title": "2. Сколько образов IOS находится во флеш-памяти?",
+                "title": "2. Сколько образов ОС находится во флеш-памяти маршрутизатора R2 после копирования?",
                 "placeholder": "Enter your answer here"
             }
         }
