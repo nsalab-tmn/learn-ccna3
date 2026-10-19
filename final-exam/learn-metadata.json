@@ -20,7 +20,8 @@
             "objective": "Across all modules of the course, identify the routing, security, WAN, management, design or automation mechanism a scenario describes, and choose the configuration, verification or troubleshooting step it calls for."
         },
         "requires": [
-            "ksa.ccna3.01-02-exam",
+            "ksa.ccna3.single-area-ospfv2-concepts.exam",
+            "ksa.ccna3.single-area-ospfv2-configuration.exam",
             "ksa.ccna3.03-05-exam",
             "ksa.ccna3.06-08-exam",
             "ksa.ccna3.09-12-exam",
