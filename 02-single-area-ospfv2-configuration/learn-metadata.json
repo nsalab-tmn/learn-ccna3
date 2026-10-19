@@ -45,7 +45,7 @@
             "$ref": "./02.07.01-lab-single-area-ospfv2-configuration/learn-metadata.json"
         },
         {
-            "$ref": "./02.08-summary/learn-metadata.json"
+            "$ref": "./02.08-exam/learn-metadata.json"
         }
     ]
 }
