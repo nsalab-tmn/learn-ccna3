@@ -360,6 +360,23 @@ Criterions:
             command: show interfaces GigabitEthernet0/1 switchport
             expr: 'Access Mode VLAN: 10 \('
             match: true
+    - code: S1.PORTS.G0-1-PORTFAST
+      name: GigabitEthernet0/1.PortFast
+      description: 'G0/1: PortFast'
+      skills:
+      - Switching
+      max_mark: 1
+      steps:
+      - name: 'show running-config interface GigabitEthernet0/1: matches (?m)^ spanning-tree portfast\s*$'
+        code: check
+        type: check
+        device: S1
+        action_chain:
+        - action: verify_output_regex
+          action_vars:
+            command: show running-config interface GigabitEthernet0/1
+            expr: (?m)^ spanning-tree portfast\s*$
+            match: true
 - code: S2
   name: S2
   subCriterions:
