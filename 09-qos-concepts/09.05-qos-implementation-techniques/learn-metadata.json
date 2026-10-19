@@ -1,9 +1,10 @@
 {
     "title": "Способы обеспечения качества обслуживания",
-    "materialType": "lecture",
+    "shortName": "ccna3.qos-concepts.qos-implementation-techniques",
+    "type": "scored-lecture",
     "description": "Какие механизмы на сетевых устройствах реализуют качество обслуживания и приоритизацию определенного типа трафика? Чем отличается маркировка кадров от маркировки пакетов?",
     "difficulty": 3,
-    "duration": "PT0H34M",
+    "duration": "PT0H40M",
     "tags": {
         "$ref": "../../material-tags.json"
     },
@@ -13,5 +14,127 @@
     },
     "assets": {
         "$ref": "./assets"
-    }
+    },
+    "competency": {
+        "produces": {
+            "id": "ksa.ccna3.qos-concepts.qos-implementation-techniques",
+            "kind": "K",
+            "bloom": "understand",
+            "objective": "Distinguish classification, marking, congestion avoidance with WRED, traffic shaping and traffic policing by what each one does to packets."
+        },
+        "requires": [
+            "ksa.ccna3.qos-concepts.queuing-algorithms",
+            "ksa.ccna3.qos-concepts.qos-models"
+        ],
+        "measurement": {
+            "mode": "test",
+            "grader": "test-auto",
+            "aligned_bloom": "understand",
+            "passes_when": "All embedded questions answered correctly (100%, unlimited attempts): classification, marking, WRED, shaping, policing.",
+            "calibration": "operator-judge"
+        }
+    },
+    "passingScore": 100,
+    "questions": [
+        {
+            "question": "Что определяет, когда скорость трафика достигает заданного максимального значения, и отбрасывает лишний трафик?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "Ограничение трафика",
+                    "correct": true
+                },
+                {
+                    "answer": "Шейпинг трафика",
+                    "correct": false,
+                    "comment": "Ограничение трафика отбрасывает избыточный трафик, когда он достигает заданной максимальной скорости."
+                },
+                {
+                    "answer": "Классификация",
+                    "correct": false,
+                    "comment": "Ограничение трафика отбрасывает избыточный трафик, когда он достигает заданной максимальной скорости."
+                }
+            ]
+        },
+        {
+            "question": "Что определяет, какому классу трафика принадлежит пакет или кадр?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "Маркировка.",
+                    "correct": false,
+                    "comment": "Классификация определяет класс трафика, к которому относятся пакеты или кадры."
+                },
+                {
+                    "answer": "Классификация",
+                    "correct": true
+                },
+                {
+                    "answer": "Шейпинг трафика",
+                    "correct": false,
+                    "comment": "Классификация определяет класс трафика, к которому относятся пакеты или кадры."
+                }
+            ]
+        },
+        {
+            "question": "Что добавляет значение в заголовок пакета?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "Маркировка",
+                    "correct": true
+                },
+                {
+                    "answer": "Классификация",
+                    "correct": false,
+                    "comment": "Механизм маркировки QoS добавляет значение в заголовок пакета."
+                },
+                {
+                    "answer": "802.1Q",
+                    "correct": false,
+                    "comment": "Механизм маркировки QoS добавляет значение в заголовок пакета."
+                }
+            ]
+        },
+        {
+            "question": "Что обеспечивает управление буферами и позволяет ограничить трафик TCP до того, как буферы переполнятся?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "Ограничение трафика",
+                    "correct": false,
+                    "comment": "Алгоритм WRED уменьшает поток TCP, прежде чем буферы переполнятся."
+                },
+                {
+                    "answer": "802.1Q",
+                    "correct": false,
+                    "comment": "Алгоритм WRED уменьшает поток TCP, прежде чем буферы переполнятся."
+                },
+                {
+                    "answer": "WRED",
+                    "correct": true
+                }
+            ]
+        },
+        {
+            "question": "Что сохраняет лишние пакеты в очереди, а затем планирует последующую передачу этих пакетов через определенные промежутки времени?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "WRED",
+                    "correct": false,
+                    "comment": "Шейпинг трафика сохраняет лишние пакеты в очереди, а затем планирует последующую передачу этих пакетов через определенные промежутки времени."
+                },
+                {
+                    "answer": "Ограничение трафика",
+                    "correct": false,
+                    "comment": "Шейпинг трафика сохраняет лишние пакеты в очереди, а затем планирует последующую передачу этих пакетов через определенные промежутки времени."
+                },
+                {
+                    "answer": "Шейпинг трафика",
+                    "correct": true
+                }
+            ]
+        }
+    ]
 }
