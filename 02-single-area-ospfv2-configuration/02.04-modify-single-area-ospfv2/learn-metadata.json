@@ -1,9 +1,10 @@
 {
     "title": "Управление метриками и таймерами OSPF",
-    "materialType": "lecture",
+    "shortName": "ccna3.single-area-ospfv2-configuration.modify-single-area-ospfv2",
+    "type": "scored-lecture",
     "description": "Какие метрики использует OSPF и как они рассчитываются? Что такое Hello-пакеты и как часто они отправляются?",
     "difficulty": 3,
-    "duration": "PT0H20M",
+    "duration": "PT0H26M",
     "tags": {
         "$ref": "../../material-tags.json"
     },
@@ -13,5 +14,152 @@
     },
     "assets": {
         "$ref": "./assets"
-    }
+    },
+    "competency": {
+        "produces": {
+            "id": "ksa.ccna3.single-area-ospfv2-configuration.modify-single-area-ospfv2",
+            "kind": "K",
+            "bloom": "understand",
+            "objective": "Explain how OSPF computes interface cost and cumulative route cost, choose the reference-bandwidth setting for 10 Gigabit Ethernet links, and predict the effect of mismatched hello intervals on an adjacency."
+        },
+        "requires": [
+            "ksa.ccna3.single-area-ospfv2-configuration.point-to-point-ospf-networks",
+            "ksa.ccna3.single-area-ospfv2-concepts.ospf-packets"
+        ],
+        "measurement": {
+            "mode": "test",
+            "grader": "test-auto",
+            "aligned_bloom": "understand",
+            "passes_when": "All embedded questions answered correctly (100%, unlimited attempts): the cost formula, equal costs of fast interfaces, auto-cost reference-bandwidth, cumulative cost, mismatched hello intervals.",
+            "calibration": "operator-judge"
+        }
+    },
+    "passingScore": 100,
+    "questions": [
+        {
+            "question": "Как OSPF вычисляет стоимость интерфейса?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "Делит опорную пропускную способность на пропускную способность интерфейса",
+                    "correct": true
+                },
+                {
+                    "answer": "Делит пропускную способность интерфейса на опорную пропускную способность",
+                    "correct": false,
+                    "comment": "Деление выполняется наоборот: стоимость = опорная пропускная способность / пропускная способность интерфейса. Поэтому чем выше пропускная способность, тем ниже стоимость."
+                },
+                {
+                    "answer": "Считает число переходов до сети назначения",
+                    "correct": false,
+                    "comment": "Число переходов OSPF в качестве метрики не использует. Стоимость интерфейса = опорная пропускная способность / пропускная способность интерфейса."
+                },
+                {
+                    "answer": "Складывает задержки всех каналов на пути",
+                    "correct": false,
+                    "comment": "Задержка в расчете стоимости OSPF не участвует. Стоимость интерфейса = опорная пропускная способность / пропускная способность интерфейса."
+                }
+            ]
+        },
+        {
+            "question": "Почему при опорной пропускной способности по умолчанию интерфейсы Fast Ethernet, Gigabit Ethernet и 10 Gigabit Ethernet получают одинаковую стоимость OSPF?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "Стоимость должна быть целым числом не меньше 1, а для интерфейсов быстрее 100 Мбит/с частное меньше 1 и повышается до 1",
+                    "correct": true
+                },
+                {
+                    "answer": "OSPF не учитывает пропускную способность интерфейса",
+                    "correct": false,
+                    "comment": "Учитывает: стоимость обратно пропорциональна пропускной способности. Но стоимость — целое число не меньше 1, поэтому для интерфейсов быстрее 100 Мбит/с частное повышается до 1."
+                },
+                {
+                    "answer": "Опорная пропускная способность по умолчанию равна 10 Гбит/с",
+                    "correct": false,
+                    "comment": "По умолчанию опорная пропускная способность равна 100 000 000 бит/с (100 Мбит/с). Для более быстрых интерфейсов частное меньше 1 и повышается до 1."
+                },
+                {
+                    "answer": "Администратор задал этим интерфейсам одинаковую стоимость командой ip ospf cost",
+                    "correct": false,
+                    "comment": "Стоимость одинакова и без ручной настройки: она должна быть целым числом не меньше 1, а для интерфейсов быстрее 100 Мбит/с частное меньше 1 и повышается до 1."
+                }
+            ]
+        },
+        {
+            "question": "В домене OSPF есть каналы 10 Gigabit Ethernet. Какую команду следует ввести на всех маршрутизаторах OSPF, чтобы стоимость 10 Gigabit Ethernet была равна 1, а Gigabit Ethernet — 10?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "auto-cost reference-bandwidth 10000",
+                    "correct": true
+                },
+                {
+                    "answer": "auto-cost reference-bandwidth 1000",
+                    "correct": false,
+                    "comment": "При опорной пропускной способности 1000 Мбит/с стоимость Gigabit Ethernet равна 1, и 10 Gigabit Ethernet получит ту же стоимость 1. Нужна команда auto-cost reference-bandwidth 10000."
+                },
+                {
+                    "answer": "auto-cost reference-bandwidth 100",
+                    "correct": false,
+                    "comment": "Эта команда возвращает опорную пропускную способность по умолчанию, при которой Gigabit Ethernet и 10 Gigabit Ethernet имеют одинаковую стоимость 1. Нужна команда auto-cost reference-bandwidth 10000."
+                },
+                {
+                    "answer": "ip ospf cost 10",
+                    "correct": false,
+                    "comment": "Эта команда вручную задает стоимость только того интерфейса, на котором ее ввели. Пересчитать стоимость всех интерфейсов позволяет команда auto-cost reference-bandwidth 10000."
+                }
+            ]
+        },
+        {
+            "question": "Стоимость канала от R1 до R2 равна 10, стоимость интерфейса loopback R2 с сетью 10.10.2.0/24 равна 1. Почему в таблице маршрутизации R1 метрика маршрута к этой сети равна 11?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "Стоимость маршрута OSPF накапливается: стоимости на пути до сети назначения складываются",
+                    "correct": true
+                },
+                {
+                    "answer": "К стоимости канала прибавляется число переходов до сети назначения",
+                    "correct": false,
+                    "comment": "Число переходов в метрику OSPF не входит. Стоимость маршрута накапливается: 10 (канал до R2) + 1 (loopback R2) = 11."
+                },
+                {
+                    "answer": "Метрика равна наибольшей стоимости на пути плюс 1",
+                    "correct": false,
+                    "comment": "Совпадение случайно: стоимость маршрута OSPF — сумма стоимостей на пути, 10 + 1 = 11."
+                },
+                {
+                    "answer": "R1 прибавляет к стоимости канала 1 для любой удаленной сети",
+                    "correct": false,
+                    "comment": "Такого правила нет. Стоимость маршрута накапливается: 10 (канал до R2) + 1 (стоимость loopback-интерфейса R2) = 11."
+                }
+            ]
+        },
+        {
+            "question": "На интерфейсе R1, обращенном к R2, интервал приветствия изменили на 5 секунд, а на R2 оставили значение по умолчанию. Что произойдет со смежностью между ними?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "Смежность будет потеряна, когда истечет интервал простоя: интервалы приветствия соседей должны совпадать",
+                    "correct": true
+                },
+                {
+                    "answer": "R2 автоматически изменит свой интервал приветствия на 5 секунд",
+                    "correct": false,
+                    "comment": "Интервал на соседе сам не меняется: его нужно настроить на R2 вручную. До этого смежность будет потеряна, потому что интервалы приветствия должны совпадать."
+                },
+                {
+                    "answer": "Смежность сохранится, а R1 будет отправлять пакеты приветствия чаще",
+                    "correct": false,
+                    "comment": "Интервалы приветствия и простоя соседей должны совпадать, иначе отношения смежности не установятся. Смежность будет потеряна, когда истечет интервал простоя."
+                },
+                {
+                    "answer": "Смежность сохранится, потому что интервал простоя на R1 автоматически станет 20 секунд",
+                    "correct": false,
+                    "comment": "Интервал простоя действительно автоматически становится равным четырем интервалам приветствия, но интервалы на R1 и R2 все равно не совпадут. Смежность будет потеряна."
+                }
+            ]
+        }
+    ]
 }

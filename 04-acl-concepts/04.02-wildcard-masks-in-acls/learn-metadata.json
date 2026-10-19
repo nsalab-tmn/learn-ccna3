@@ -1,9 +1,10 @@
 {
     "title": "Шаблонные маски в списках контроля доступа",
-    "materialType": "lecture",
+    "shortName": "ccna3.acl-concepts.wildcard-masks-in-acls",
+    "type": "scored-lecture",
     "description": "Что такое шаблонная маска и для чего она нужна? Как правильно расчитывать шаблонную маску?",
     "difficulty": 3,
-    "duration": "PT0H10M",
+    "duration": "PT0H14M",
     "tags": {
         "$ref": "../../material-tags.json"
     },
@@ -11,7 +12,145 @@
     "text": {
         "$ref": "./README.md"
     },
-    "assets": {
-        "$ref": "./assets"
-    }
+    "competency": {
+        "produces": {
+            "id": "ksa.ccna3.acl-concepts.wildcard-masks-in-acls",
+            "kind": "K",
+            "bloom": "apply",
+            "objective": "Work out the wildcard mask that matches a single host, all hosts of a /24 or /16 network, or any address."
+        },
+        "requires": [
+            "ksa.ccna3.acl-concepts.purpose-of-acls"
+        ],
+        "measurement": {
+            "mode": "test",
+            "grader": "test-auto",
+            "aligned_bloom": "apply",
+            "passes_when": "All embedded questions answered correctly (100%, unlimited attempts): wildcard masks for a host, a /24 network, a /16 network and any address.",
+            "calibration": "operator-judge"
+        }
+    },
+    "passingScore": 100,
+    "questions": [
+        {
+            "question": "Какая шаблонная маска разрешает только узел 10.10.10.1?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "0.0.0.0",
+                    "correct": true
+                },
+                {
+                    "answer": "0.0.0.31",
+                    "correct": false,
+                    "comment": "Шаблонная маска, разрешающая только узел 10.10.10.1, равна 0.0.0.0"
+                },
+                {
+                    "answer": "0.0.0.255",
+                    "correct": false,
+                    "comment": "Шаблонная маска, разрешающая только узел 10.10.10.1, равна 0.0.0.0"
+                },
+                {
+                    "answer": "0.0.255.255",
+                    "correct": false,
+                    "comment": "Шаблонная маска, разрешающая только узел 10.10.10.1, равна 0.0.0.0"
+                },
+                {
+                    "answer": "255.255.255.255",
+                    "correct": false,
+                    "comment": "Шаблонная маска, разрешающая только узел 10.10.10.1, равна 0.0.0.0"
+                }
+            ]
+        },
+        {
+            "question": "Какая шаблонная маска разрешает только узлы из сети 10.10.0.0/16?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "0.0.0.0",
+                    "correct": false,
+                    "comment": "Шаблонная маска, разрешающая только узлы из сети 10.10.0.0/16, равна 0.0.255.255"
+                },
+                {
+                    "answer": "0.0.0.31",
+                    "correct": false,
+                    "comment": "Шаблонная маска, разрешающая только узлы из сети 10.10.0.0/16, равна 0.0.255.255"
+                },
+                {
+                    "answer": "0.0.0.255",
+                    "correct": false,
+                    "comment": "Шаблонная маска, разрешающая только узлы из сети 10.10.0.0/16, равна 0.0.255.255"
+                },
+                {
+                    "answer": "0.0.255.255",
+                    "correct": true
+                },
+                {
+                    "answer": "255.255.255.255",
+                    "correct": false,
+                    "comment": "Шаблонная маска, разрешающая только узлы из сети 10.10.0.0/16, равна 0.0.255.255"
+                }
+            ]
+        },
+        {
+            "question": "Какая шаблонная маска разрешает любые узлы?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "0.0.0.0",
+                    "correct": false,
+                    "comment": "Шаблонная маска, разрешающая все узлы, — 255.255.255.255"
+                },
+                {
+                    "answer": "0.0.0.31",
+                    "correct": false,
+                    "comment": "Шаблонная маска, разрешающая все узлы, — 255.255.255.255"
+                },
+                {
+                    "answer": "0.0.0.255",
+                    "correct": false,
+                    "comment": "Шаблонная маска, разрешающая все узлы, — 255.255.255.255"
+                },
+                {
+                    "answer": "0.0.255.255",
+                    "correct": false,
+                    "comment": "Шаблонная маска, разрешающая все узлы, — 255.255.255.255"
+                },
+                {
+                    "answer": "255.255.255.255",
+                    "correct": true
+                }
+            ]
+        },
+        {
+            "question": "Какая шаблонная маска разрешает все узлы из сети 192.168.10.0/24?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "0.0.0.0",
+                    "correct": false,
+                    "comment": "Шаблонная маска, разрешающая все узлы из сети 192.168.10.0/24, равна 0.0.0.255"
+                },
+                {
+                    "answer": "0.0.0.31",
+                    "correct": false,
+                    "comment": "Шаблонная маска, разрешающая все узлы из сети 192.168.10.0/24, равна 0.0.0.255"
+                },
+                {
+                    "answer": "0.0.0.255",
+                    "correct": true
+                },
+                {
+                    "answer": "0.0.255.255",
+                    "correct": false,
+                    "comment": "Шаблонная маска, разрешающая все узлы из сети 192.168.10.0/24, равна 0.0.0.255"
+                },
+                {
+                    "answer": "255.255.255.255",
+                    "correct": false,
+                    "comment": "Шаблонная маска, разрешающая все узлы из сети 192.168.10.0/24, равна 0.0.0.255"
+                }
+            ]
+        }
+    ]
 }

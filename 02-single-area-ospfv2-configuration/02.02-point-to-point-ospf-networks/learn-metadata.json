@@ -1,9 +1,10 @@
 {
     "title": "Сети OSPF типа «точка-точка»",
-    "materialType": "lecture",
+    "shortName": "ccna3.single-area-ospfv2-configuration.point-to-point-ospf-networks",
+    "type": "scored-lecture",
     "description": "Как объявить сеть в протоколе OSPF? Что такое шаблонная маска и для чего она нужна? Для чего нужен пассивный интерфейс? Чем в контексте OSPF характерны сети типа \"точка-точка\"",
     "difficulty": 3,
-    "duration": "PT0H14M",
+    "duration": "PT0H20M",
     "tags": {
         "$ref": "../../material-tags.json"
     },
@@ -13,5 +14,147 @@
     },
     "assets": {
         "$ref": "./assets"
-    }
+    },
+    "competency": {
+        "produces": {
+            "id": "ksa.ccna3.single-area-ospfv2-configuration.point-to-point-ospf-networks",
+            "kind": "K",
+            "bloom": "understand",
+            "objective": "Interpret the network command's wildcard mask and the effect of the passive-interface command, the point-to-point network type and default loopback advertisement on an OSPFv2 point-to-point network."
+        },
+        "requires": [
+            "ksa.ccna3.single-area-ospfv2-configuration.ospf-router-id",
+            "ksa.ccna3.single-area-ospfv2-concepts.ospf-operation"
+        ],
+        "measurement": {
+            "mode": "test",
+            "grader": "test-auto",
+            "aligned_bloom": "understand",
+            "passes_when": "All embedded questions answered correctly (100%, unlimited attempts): wildcard mask bits, the network command with a 0.0.0.0 mask, passive interfaces, the point-to-point network type, loopback host routes.",
+            "calibration": "operator-judge"
+        }
+    },
+    "passingScore": 100,
+    "questions": [
+        {
+            "question": "Что означает бит 1 в шаблонной маске команды network?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "Соответствующий бит адреса игнорируется",
+                    "correct": true
+                },
+                {
+                    "answer": "Соответствующий бит адреса должен совпадать",
+                    "correct": false,
+                    "comment": "Совпадение требует бит 0 шаблонной маски. Бит 1 означает, что соответствующий бит адреса игнорируется."
+                },
+                {
+                    "answer": "Интерфейс с этим адресом становится пассивным",
+                    "correct": false,
+                    "comment": "Пассивный интерфейс задается командой passive-interface, а не шаблонной маской. Бит 1 шаблонной маски означает, что соответствующий бит адреса игнорируется."
+                },
+                {
+                    "answer": "Бит относится к идентификатору области OSPF",
+                    "correct": false,
+                    "comment": "Идентификатор области задается аргументом area, а не шаблонной маской. Бит 1 шаблонной маски означает, что соответствующий бит адреса игнорируется."
+                }
+            ]
+        },
+        {
+            "question": "Интерфейсу R1 назначен адрес 10.1.1.5/30. Администратор ввел на R1 в режиме конфигурации OSPF команду network 10.1.1.5 0.0.0.0 area 0. Каков результат?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "OSPFv2 включается на интерфейсе с адресом 10.1.1.5, и маршрутизатор объявляет подключенную к нему сеть 10.1.1.4/30",
+                    "correct": true
+                },
+                {
+                    "answer": "OSPFv2 включается на всех интерфейсах, адреса которых входят в сеть 10.0.0.0/8",
+                    "correct": false,
+                    "comment": "Шаблонная маска из четырех нулей требует точного совпадения всех битов адреса. OSPFv2 включается только на интерфейсе с адресом 10.1.1.5, и маршрутизатор объявляет подключенную к нему сеть 10.1.1.4/30."
+                },
+                {
+                    "answer": "Маршрутизатор отклонит команду: шаблонная маска из четырех нулей недопустима",
+                    "correct": false,
+                    "comment": "Шаблонная маска из четырех нулей допустима: она указывает точный адрес интерфейса, и рассчитывать маску не нужно. OSPFv2 включается на интерфейсе с адресом 10.1.1.5, и маршрутизатор объявляет сеть 10.1.1.4/30."
+                },
+                {
+                    "answer": "Маршрутизатор объявит адрес 10.1.1.5/32, но не включит OSPFv2 на интерфейсе",
+                    "correct": false,
+                    "comment": "Команда network включает OSPFv2 на интерфейсе, адрес которого ей соответствует. В результате процесс OSPFv2 объявляет сеть, подключенную к этому интерфейсу, — 10.1.1.4/30."
+                }
+            ]
+        },
+        {
+            "question": "Что произойдет после ввода команды passive-interface loopback 0 в режиме конфигурации OSPF?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "Сообщения OSPF перестанут отправляться через интерфейс Loopback 0, но его сеть по-прежнему будет объявляться другим маршрутизаторам",
+                    "correct": true
+                },
+                {
+                    "answer": "Сеть интерфейса Loopback 0 перестанет объявляться соседям",
+                    "correct": false,
+                    "comment": "Сеть пассивного интерфейса по-прежнему включается в обновления OSPFv2. Команда только запрещает отправку сообщений OSPF через этот интерфейс."
+                },
+                {
+                    "answer": "Интерфейс Loopback 0 будет отключен",
+                    "correct": false,
+                    "comment": "Команда не отключает интерфейс. Она запрещает отправку сообщений OSPF через него, а его сеть по-прежнему объявляется другим маршрутизаторам."
+                },
+                {
+                    "answer": "Через интерфейс Loopback 0 начнут отправляться пакеты приветствия для поиска соседей",
+                    "correct": false,
+                    "comment": "Все наоборот: пассивный интерфейс не отправляет сообщения OSPF, хотя его сеть по-прежнему объявляется другим маршрутизаторам."
+                }
+            ]
+        },
+        {
+            "question": "Как изменится работа OSPF на канале Ethernet между двумя маршрутизаторами после ввода на их интерфейсах команды ip ospf network point-to-point?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "Тип сети станет POINT_TO_POINT, и выбор DR и BDR на этом канале выполняться не будет",
+                    "correct": true
+                },
+                {
+                    "answer": "Маршрутизатор с наивысшим идентификатором станет DR, а второй — BDR",
+                    "correct": false,
+                    "comment": "Так OSPF работает на интерфейсах Ethernet по умолчанию, с типом сети BROADCAST. После команды тип сети станет POINT_TO_POINT, и выбор DR и BDR выполняться не будет."
+                },
+                {
+                    "answer": "Интерфейсы станут пассивными и перестанут отправлять пакеты приветствия",
+                    "correct": false,
+                    "comment": "Пассивный интерфейс задается командой passive-interface. Команда ip ospf network point-to-point меняет тип сети на POINT_TO_POINT, и выбор DR и BDR не выполняется."
+                },
+                {
+                    "answer": "Смежность между маршрутизаторами больше не установится",
+                    "correct": false,
+                    "comment": "Смежность лишь кратковременно сбрасывается и снова переходит в состояние FULL. Меняется тип сети: он становится POINT_TO_POINT, и выбор DR и BDR не выполняется."
+                }
+            ]
+        },
+        {
+            "question": "Интерфейсу Loopback 0 маршрутизатора R1 назначен адрес 10.10.1.1/24. Как R1 по умолчанию объявит эту сеть другим маршрутизаторам OSPF?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "Как маршрут узла 10.10.1.1/32",
+                    "correct": true
+                },
+                {
+                    "answer": "Как сеть 10.10.1.0/24",
+                    "correct": false,
+                    "comment": "Полную сеть 10.10.1.0/24 R1 объявит только после команды ip ospf network point-to-point на интерфейсе Loopback 0. По умолчанию интерфейсы loopback объявляются как маршруты узлов /32: 10.10.1.1/32."
+                },
+                {
+                    "answer": "Как маршрут по умолчанию 0.0.0.0/0",
+                    "correct": false,
+                    "comment": "Интерфейс loopback не порождает маршрут по умолчанию. По умолчанию он объявляется как маршрут узла /32: 10.10.1.1/32."
+                }
+            ]
+        }
+    ]
 }

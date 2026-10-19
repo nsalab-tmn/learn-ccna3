@@ -1,9 +1,10 @@
 {
     "title": "Типы списков контроля доступа для IPv4",
-    "materialType": "lecture",
+    "shortName": "ccna3.acl-concepts.types-of-ipv4-acls",
+    "type": "scored-lecture",
     "description": "Чем стандартные списки контроля доступа отличаются от расширенных? Чем нумерованные списки контроля доступа отличаются от именованных?",
     "difficulty": 3,
-    "duration": "PT0H14M",
+    "duration": "PT0H19M",
     "tags": {
         "$ref": "../../material-tags.json"
     },
@@ -13,5 +14,118 @@
     },
     "assets": {
         "$ref": "./assets"
-    }
+    },
+    "competency": {
+        "produces": {
+            "id": "ksa.ccna3.acl-concepts.types-of-ipv4-acls",
+            "kind": "K",
+            "bloom": "understand",
+            "objective": "Distinguish standard from extended and numbered from named IPv4 ACLs, and state where each of standard and extended ACLs should be placed."
+        },
+        "requires": [
+            "ksa.ccna3.acl-concepts.purpose-of-acls",
+            "ksa.ccna3.acl-concepts.wildcard-masks-in-acls",
+            "ksa.ccna3.acl-concepts.guidelines-for-acl-creation"
+        ],
+        "measurement": {
+            "mode": "test",
+            "grader": "test-auto",
+            "aligned_bloom": "understand",
+            "passes_when": "All embedded questions answered correctly (100%, unlimited attempts): filtering on TCP ports, named and numbered ACLs, placement of standard and extended ACLs.",
+            "calibration": "operator-judge"
+        }
+    },
+    "passingScore": 100,
+    "questions": [
+        {
+            "question": "Какой список ACL способен фильтровать на основе номера порта TCP?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "расширенный ACL",
+                    "correct": true
+                },
+                {
+                    "answer": "стандартный ACL",
+                    "correct": false,
+                    "comment": "Стандартные ACL фильтруют только на основе IPv4-адреса источника. Расширенный ACL фильтрует на основе IPv4-адреса источника и назначения, типа протокола и TCP/UDP-портов"
+                }
+            ]
+        },
+        {
+            "question": "Какое утверждение об ACL является верным?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "расширенные списки ACL нумеруются от 1300 до 2699",
+                    "correct": false,
+                    "comment": "Именованные списки ACL могут быть стандартными или расширенными"
+                },
+                {
+                    "answer": "именованные списки ACL могут быть стандартными или расширенными",
+                    "correct": true
+                },
+                {
+                    "answer": "нумерованные списки ACL являются предпочтительным методом для использования при настройке списков ACL",
+                    "correct": false,
+                    "comment": "Именованные списки ACL могут быть стандартными или расширенными"
+                },
+                {
+                    "answer": "стандартные списки ACL имеют нумерацию от 1 до 199",
+                    "correct": false,
+                    "comment": "Именованные списки ACL могут быть стандартными или расширенными"
+                }
+            ]
+        },
+        {
+            "question": "Где должен быть размещен стандартный список ACL?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "расположение стандартного ACL не имеет значения",
+                    "correct": false,
+                    "comment": "Стандартные списки контроля доступа следует размещать как можно ближе к месту назначения"
+                },
+                {
+                    "answer": "стандартные ACL должны быть расположены как можно ближе к месту назначения",
+                    "correct": true
+                },
+                {
+                    "answer": "стандартные ACL должны быть расположены как можно ближе к источнику",
+                    "correct": false,
+                    "comment": "Стандартные списки контроля доступа следует размещать как можно ближе к месту назначения"
+                },
+                {
+                    "answer": "стандартные списки ACL должны размещаться на последовательных интерфейсах",
+                    "correct": false,
+                    "comment": "Стандартные списки контроля доступа следует размещать как можно ближе к месту назначения"
+                }
+            ]
+        },
+        {
+            "question": "Где должен быть размещен расширенный список ACL?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "расположение расширенного ACL не имеет значения",
+                    "correct": false,
+                    "comment": "Расширенный ACL должен быть расположен как можно ближе к источнику"
+                },
+                {
+                    "answer": "расширенные списки ACL должны быть расположены как можно ближе к месту назначения",
+                    "correct": false,
+                    "comment": "Расширенный ACL должен быть расположен как можно ближе к источнику"
+                },
+                {
+                    "answer": "расширенный ACL должен быть расположен как можно ближе к источнику",
+                    "correct": true
+                },
+                {
+                    "answer": "расширенные списки ACL должны располагаться на последовательных интерфейсах",
+                    "correct": false,
+                    "comment": "Расширенный ACL должен быть расположен как можно ближе к источнику"
+                }
+            ]
+        }
+    ]
 }
