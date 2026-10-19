@@ -24,7 +24,7 @@
             "$ref": "./04.04-types-of-ipv4-acls/learn-metadata.json"
         },
         {
-            "$ref": "./04.05-summary/learn-metadata.json"
+            "$ref": "./04.05-exam/learn-metadata.json"
         }
     ]
 }
