@@ -45,7 +45,7 @@
             "$ref": "./06.08.01-lab-configure-nat-for-ipv4/learn-metadata.json"
         },
         {
-            "$ref": "./06.09-summary/learn-metadata.json"
+            "$ref": "./06.09-exam/learn-metadata.json"
         }
     ]
 }
