@@ -39,7 +39,7 @@
             "$ref": "./03.10-cryptography/learn-metadata.json"
         },
         {
-            "$ref": "./03.12-summary/learn-metadata.json"
+            "$ref": "./03.12-exam/learn-metadata.json"
         }
     ]
 }
