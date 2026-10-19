@@ -1,0 +1,22 @@
+# Not generated (see ms.yaml): D1 over its per-device SSH port.
+testbed:
+  name: netsim-11.5.1
+devices:
+  D1:
+    os: iosxe
+    type: router
+    credentials:
+      default:
+        username: '%ENV{ssh_user}'
+        password: '%ENV{ssh_password}'  # ggignore - a placeholder, filled at grading time
+    connections:
+      cli:
+        protocol: ssh
+        ip: '%ENV{lab_ip}'
+        port: '%ENV{ssh_port_D1}'
+        ssh_options: -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -o PubkeyAuthentication=no
+        arguments:
+          connection_timeout: 30
+          learn_hostname: true
+        settings:
+          HA_INIT_CONFIG_COMMANDS: []

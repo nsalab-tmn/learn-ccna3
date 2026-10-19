@@ -22,5 +22,10 @@
     "skills": {},
     "text": {
         "$ref": "./README.md"
+    },
+    "assessment": {
+        "local": {
+            "$ref": "./assessment"
+        }
     }
 }
