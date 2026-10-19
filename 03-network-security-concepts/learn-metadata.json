@@ -39,9 +39,6 @@
             "$ref": "./03.10-cryptography/learn-metadata.json"
         },
         {
-            "$ref": "./03.11.01-lab-network-security-exploration-physical-mode/learn-metadata.json"
-        },
-        {
             "$ref": "./03.12-summary/learn-metadata.json"
         }
     ]
