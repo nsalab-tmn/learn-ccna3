@@ -4,7 +4,7 @@
     "type": "scored-lecture",
     "description": "Какими стандартами оперируют глобальные сети? Какие устройства обеспечивают их работу? Чем отличается последовательная и параллельная передача данных? Что такое коммутация каналов и коммутация пакетов?",
     "difficulty": 3,
-    "duration": "PT0H28M",
+    "duration": "PT0H30M",
     "tags": {
         "$ref": "../../material-tags.json"
     },
@@ -20,7 +20,7 @@
             "id": "ksa.ccna3.wan-concepts.wan-operations",
             "kind": "K",
             "bloom": "understand",
-            "objective": "Place WAN standards at OSI layer 1, match WAN terms and devices (point of presence, DSL and cable modems, serial communication) to their roles, and classify WAN technologies as circuit-switched or packet-switched."
+            "objective": "Place WAN standards at OSI layer 1, match WAN terms and devices (point of presence, DSL and cable modems, serial communication) to their roles, name the media each broadband modem uses to reach the WAN, and classify WAN technologies as circuit-switched or packet-switched."
         },
         "requires": [
             "ksa.ccna3.wan-concepts.purpose-of-wans"
@@ -29,7 +29,7 @@
             "mode": "test",
             "grader": "test-auto",
             "aligned_bloom": "understand",
-            "passes_when": "All embedded questions answered correctly (100%, unlimited attempts): layer 1 WAN standards, the POP, broadband modems, serial communication, circuit and packet switching, DWDM.",
+            "passes_when": "All embedded questions answered correctly (100%, unlimited attempts): layer 1 WAN standards, the POP, broadband modems and their WAN media, serial communication, circuit and packet switching, DWDM.",
             "calibration": "operator-judge"
         }
     },
@@ -115,6 +115,35 @@
                     "answer": "голосовой модем",
                     "correct": false,
                     "comment": "Кабельный и DSL модемы работают аналогично модему для передачи по телефонным каналам, однако используют более высокие частоты и скорости передачи"
+                }
+            ]
+        },
+        {
+            "question": "Через какую среду передачи широкополосные модемы подключаются к глобальной сети? (верны два варианта)",
+            "answerType": "multiChoice",
+            "answers": [
+                {
+                    "answer": "DSL-модем — через телефонную линию",
+                    "correct": true
+                },
+                {
+                    "answer": "кабельный модем — через коаксиальную линию",
+                    "correct": true
+                },
+                {
+                    "answer": "DSL-модем — через коаксиальную линию",
+                    "correct": false,
+                    "comment": "Через коаксиальную линию к глобальной сети подключается кабельный модем. DSL-модем подключается через телефонную линию."
+                },
+                {
+                    "answer": "кабельный модем — через телефонную линию",
+                    "correct": false,
+                    "comment": "Через телефонную линию к глобальной сети подключается DSL-модем. Кабельный модем подключается через коаксиальную линию."
+                },
+                {
+                    "answer": "оба модема — через Ethernet",
+                    "correct": false,
+                    "comment": "По Ethernet широкополосные модемы подключаются к маршрутизатору абонента (DTE). К глобальной сети DSL-модем подключается через телефонную линию, а кабельный модем — через коаксиальную."
                 }
             ]
         },
