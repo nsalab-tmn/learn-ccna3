@@ -8,32 +8,25 @@
     "tags": {
         "$ref": "../../material-tags.json"
     },
+    "compute": {
+        "local": {
+            "$ref": "./compute/local"
+        }
+    },
     "credentialsSchema": {
-        "userName": {
-            "title": "Имя пользователя",
-            "source": "learn_user"
-        },
-        "password": {
-            "title": "Пароль",
-            "source": "learn_password"
-        },
         "consoleURL": {
-            "title": "Адрес портала",
-            "value": "https://portal.skillscloud.company"
+            "title": "Адрес лаборатории",
+            "source": "URL"
         }
     },
     "skills": {},
     "text": {
         "$ref": "./README.md"
     },
-    "assets": {
-        "$ref": "./assets"
-    },
     "assessment": {
-        "$ref": "./assessment.json"
-    },
-    "deploy": {
-        "$ref": "./deploy"
+        "local": {
+            "$ref": "./assessment"
+        }
     },
     "answerSchema": {
         "type": "object",
@@ -41,17 +34,17 @@
         "properties": {
             "q_1": {
                 "type": "string",
-                "title": "1. Почему ping-запросы прошли успешно?",
+                "title": "1. Почему эхо-запросы от PC1 к PC2 и к PC3 выполняются успешно?",
                 "placeholder": "Enter your answer here"
             },
             "q_2": {
                 "type": "string",
-                "title": "2. Почему возникает сбой при отправке ping-запросов? (**Подсказка**. Для анализа используйте режим моделирования или просмотрите конфигурации маршрутизатора.)",
+                "title": "2. Почему эхо-запросы от PC1 к PC4 и к серверу DNS-Server не выполняются?",
                 "placeholder": "Enter your answer here"
             },
             "q_3": {
                 "type": "string",
-                "title": "3. К какому интерфейсу и в каком направлении применяется ACL?",
+                "title": "3. К какому интерфейсу маршрутизатора R1 и в каком направлении применен список контроля доступа 11?",
                 "placeholder": "Enter your answer here"
             }
         }
