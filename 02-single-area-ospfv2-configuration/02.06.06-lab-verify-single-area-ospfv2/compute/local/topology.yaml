@@ -264,3 +264,424 @@ links:
     device: R4
     port: GigabitEthernet0/0/1
   cable: copper
+scenario:
+  pages:
+    - title: "Топология и адресация"
+      body: |
+        | Кабель | Устройство | Порт | Устройство | Порт |
+        |---|---|---|---|---|
+        | Последовательный | R1 | S0/0/0 | R2 | S0/0/0 |
+        | Последовательный | R1 | S0/0/1 | R3 | S0/0/0 |
+        | Последовательный | R2 | S0/0/1 | R3 | S0/0/1 |
+        | Медный | R1 | G0/1 | ISP-Router | G0/0 |
+        | Медный | R1 | G0/0 | S1 | G0/1 |
+        | Медный | R2 | G0/0 | S2 | G0/1 |
+        | Медный | R3 | G0/0 | S3 | G0/2 |
+        | Медный | PC1 | F0 | S1 | F0/1 |
+        | Медный | PC2 | F0 | S2 | F0/1 |
+        | Медный | PC3 | F0 | S3 | F0/1 |
+        | Медный | Laptop | F0 | R4 | G0/0/1 |
+
+        Соединение R4 G0/0/0 — S3 G0/1 вы создадите в ходе работы.
+
+        | Устройство | Интерфейс | IP-адрес | Маска подсети | Шлюз по умолчанию |
+        |---|---|---|---|---|
+        | R1 | G0/0 | 172.16.1.1 | 255.255.255.0 | — |
+        | R1 | G0/1 | 64.100.54.6 | 255.255.255.252 | — |
+        | R1 | S0/0/0 | 172.16.3.1 | 255.255.255.252 | — |
+        | R1 | S0/0/1 | 192.168.10.5 | 255.255.255.252 | — |
+        | R2 | G0/0 | 172.16.2.1 | 255.255.255.0 | — |
+        | R2 | S0/0/0 | 172.16.3.2 | 255.255.255.252 | — |
+        | R2 | S0/0/1 | 192.168.10.9 | 255.255.255.252 | — |
+        | R3 | G0/0 | 192.168.1.1 | 255.255.255.0 | — |
+        | R3 | G0/1 | 192.168.11.1 | 255.255.255.0 | — |
+        | R3 | S0/0/0 | 192.168.10.6 | 255.255.255.252 | — |
+        | R3 | S0/0/1 | 192.168.10.10 | 255.255.255.252 | — |
+        | R4 | G0/0/0 | 192.168.1.3 | 255.255.255.0 | — |
+        | R4 | G0/0/1 | 192.168.12.1 | 255.255.255.0 | — |
+        | ISP-Router | G0/0 | 64.100.54.5 | 255.255.255.252 | — |
+        | PC1 | NIC | 172.16.1.2 | 255.255.255.0 | 172.16.1.1 |
+        | PC2 | NIC | 172.16.2.2 | 255.255.255.0 | 172.16.2.1 |
+        | PC3 | NIC | 192.168.1.2 | 255.255.255.0 | 192.168.1.1 |
+        | Laptop | NIC | DHCP | DHCP | DHCP |
+    - title: "Начальное состояние"
+      body: |
+        - На маршрутизаторах R1, R2, R3 и R4 заданы IP-адреса интерфейсов по таблице адресации и настроен протокол OSPF с идентификатором процесса 10: команды network включают сети каждого маршрутизатора в область 0.
+        - На маршрутизаторе R1 настроен статический маршрут по умолчанию к провайдеру через маршрутизатор ISP-Router (64.100.54.5).
+        - Консоль маршрутизаторов R1 и R2 запрашивает вход: имя пользователя BranchAdmin, пароль Branch1234. По сценарию эти маршрутизаторы корпоративной сети вы только проверяете и ничего на них не меняете. На маршрутизаторах R3 и R4 вход не требуется.
+        - Маршрутизатор R4 настроен, но его интерфейс G0/0/0 не подключен к сети. Ноутбук Laptop получает IP-адрес по DHCP от маршрутизатора R4 в сети 192.168.12.0/24.
+        - На маршрутизаторе ISP-Router провайдера настроены маршруты к сетям 172.16.0.0/16 и 192.168.0.0/16 через маршрутизатор R1.
+        - На коммутаторах задано только имя устройства.
+
+        **Шаг 1.** Дождитесь, когда индикаторы всех соединений на схеме загорятся зеленым. После запуска лабораторной работы маршрутизаторам нужно около минуты, чтобы установить смежность OSPF и обменяться маршрутами.
+
+        **Шаг 2.** Откройте окно ноутбука Laptop и на вкладке «Рабочий стол» запустите приложение «Командная строка». Проверьте связь с компьютером PC2 командой **ping 172.16.2.2**. Эхо-запросы не выполняются: ответ «Destination host unreachable» присылает шлюз ноутбука, маршрутизатор R4 (192.168.12.1). Маршрутизатор R4 еще не подключен к сети OSPF, и маршрута к сети 172.16.2.0/24 у него нет.
+
+        ```
+        C:\>ping 172.16.2.2
+
+        Pinging 172.16.2.2 with 32 bytes of data:
+
+        Reply from 192.168.12.1: Destination host unreachable.
+        Reply from 192.168.12.1: Destination host unreachable.
+        Reply from 192.168.12.1: Destination host unreachable.
+        Reply from 192.168.12.1: Destination host unreachable.
+
+        Ping statistics for 172.16.2.2:
+            Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),
+        ```
+    - title: "Проверка OSPF на маршрутизаторе R1"
+      body: |
+        **Шаг 1.** Откройте консоль маршрутизатора R1 и нажмите Enter. Консоль запросит имя пользователя и пароль: введите имя пользователя BranchAdmin и пароль Branch1234. При вводе пароль не отображается.
+
+        **Шаг 2.** Выведите таблицу маршрутизации командой **show ip route**. Найдите в ней маршрут по умолчанию 0.0.0.0/0 и маршруты с кодом O — маршруты, полученные по протоколу OSPF.
+
+        ```
+        Username: BranchAdmin
+        Password: 
+        R1>show ip route
+        Codes: L - local, C - connected, S - static, R - RIP, M - mobile, B - BGP
+               D - EIGRP, EX - EIGRP external, O - OSPF, IA - OSPF inter area
+               N1 - OSPF NSSA external type 1, N2 - OSPF NSSA external type 2
+               E1 - OSPF external type 1, E2 - OSPF external type 2, E - EGP
+               i - IS-IS, L1 - IS-IS level-1, L2 - IS-IS level-2, ia - IS-IS inter area
+               * - candidate default, U - per-user static route, o - ODR
+               P - periodic downloaded static route
+
+        Gateway of last resort is 64.100.54.5 to network 0.0.0.0
+
+        S*    0.0.0.0/0 [1/0] via 64.100.54.5
+              64.0.0.0/8 is variably subnetted, 2 subnets, 2 masks
+        C        64.100.54.4/30 is directly connected, GigabitEthernet0/1
+        L        64.100.54.6/32 is directly connected, GigabitEthernet0/1
+              172.16.0.0/16 is variably subnetted, 5 subnets, 3 masks
+        C        172.16.1.0/24 is directly connected, GigabitEthernet0/0
+        L        172.16.1.1/32 is directly connected, GigabitEthernet0/0
+        O        172.16.2.0/24 [110/65] via 172.16.3.2, 00:01:17, Serial0/0/0
+        C        172.16.3.0/30 is directly connected, Serial0/0/0
+        L        172.16.3.1/32 is directly connected, Serial0/0/0
+        O     192.168.1.0/24 [110/65] via 192.168.10.6, 00:01:17, Serial0/0/1
+              192.168.10.0/24 is variably subnetted, 3 subnets, 2 masks
+        C        192.168.10.4/30 is directly connected, Serial0/0/1
+        L        192.168.10.5/32 is directly connected, Serial0/0/1
+        O        192.168.10.8/30 [110/128] via 172.16.3.2, 00:01:17, Serial0/0/0
+                                 [110/128] via 192.168.10.6, 00:01:17, Serial0/0/1
+        ```
+
+        **Шаг 3.** Ответьте на вопросы 1 и 2 в форме ответов.
+
+        **Шаг 4.** Выведите только маршруты, полученные по OSPF, командой **show ip route ospf**.
+
+        ```
+        R1>show ip route ospf
+        Codes: L - local, C - connected, S - static, R - RIP, M - mobile, B - BGP
+               D - EIGRP, EX - EIGRP external, O - OSPF, IA - OSPF inter area
+               N1 - OSPF NSSA external type 1, N2 - OSPF NSSA external type 2
+               E1 - OSPF external type 1, E2 - OSPF external type 2, E - EGP
+               i - IS-IS, L1 - IS-IS level-1, L2 - IS-IS level-2, ia - IS-IS inter area
+               * - candidate default, U - per-user static route, o - ODR
+               P - periodic downloaded static route
+
+        Gateway of last resort is 64.100.54.5 to network 0.0.0.0
+
+              172.16.0.0/16 is variably subnetted, 5 subnets, 3 masks
+        O        172.16.2.0/24 [110/65] via 172.16.3.2, 00:01:19, Serial0/0/0
+        O     192.168.1.0/24 [110/65] via 192.168.10.6, 00:01:19, Serial0/0/1
+              192.168.10.0/24 is variably subnetted, 3 subnets, 2 masks
+        O        192.168.10.8/30 [110/128] via 172.16.3.2, 00:01:19, Serial0/0/0
+                                 [110/128] via 192.168.10.6, 00:01:19, Serial0/0/1
+        ```
+
+        **Шаг 5.** Ответьте на вопрос 3 в форме ответов.
+
+        **Шаг 6.** Выведите список соседей OSPF командой **show ip ospf neighbor**. В столбце «Neighbor ID» указан идентификатор маршрутизатора каждого соседа, в столбце «State» — состояние смежности с ним, а в столбце «Interface» — интерфейс R1, через который подключен сосед.
+
+        ```
+        R1>show ip ospf neighbor
+
+        Neighbor ID     Pri   State           Dead Time   Address         Interface
+        192.168.10.9      0   FULL/  -        00:00:39    172.16.3.2      Serial0/0/0
+        192.168.11.1      0   FULL/  -        00:00:39    192.168.10.6    Serial0/0/1
+        ```
+
+        **Примечание.** Состояние FULL означает полную смежность: маршрутизаторы обменялись сведениями о каналах, и их базы данных состояния каналов совпадают. Идентификатор маршрутизатора OSPF — 32-битное число, записанное как IPv4-адрес. Если он не задан командой, маршрутизатор берет наибольший IPv4-адрес своих интерфейсов.
+
+        **Шаг 7.** Ответьте на вопросы 4, 5 и 6 в форме ответов.
+
+        **Шаг 8.** Откройте окно компьютера PC1 и в приложении «Командная строка» проверьте связь с маршрутизатором провайдера командой **ping 64.100.54.5**. Эхо-запросы выполняются. Первый запрос может остаться без ответа: в это время узлы определяют MAC-адреса по протоколу ARP.
+
+        ```
+        C:\>ping 64.100.54.5
+
+        Pinging 64.100.54.5 with 32 bytes of data:
+
+        Request timed out.
+        Reply from 64.100.54.5: bytes=32 time=1ms TTL=254
+        Reply from 64.100.54.5: bytes=32 time=1ms TTL=254
+        Reply from 64.100.54.5: bytes=32 time=1ms TTL=254
+
+        Ping statistics for 64.100.54.5:
+            Packets: Sent = 4, Received = 3, Lost = 1 (25% loss),
+        Approximate round trip times in milli-seconds:
+            Minimum = 1ms, Maximum = 1ms, Average = 1ms
+        ```
+    - title: "Проверка OSPF на маршрутизаторе R2"
+      body: |
+        **Шаг 1.** Откройте консоль маршрутизатора R2, нажмите Enter и войдите с именем пользователя BranchAdmin и паролем Branch1234.
+
+        **Шаг 2.** Выведите таблицу маршрутизации командой **show ip route**. Убедитесь, что в ней есть маршруты ко всем сетям топологии и маршрут по умолчанию 0.0.0.0/0.
+
+        ```
+        Username: BranchAdmin
+        Password: 
+        R2>show ip route
+        Codes: L - local, C - connected, S - static, R - RIP, M - mobile, B - BGP
+               D - EIGRP, EX - EIGRP external, O - OSPF, IA - OSPF inter area
+               N1 - OSPF NSSA external type 1, N2 - OSPF NSSA external type 2
+               E1 - OSPF external type 1, E2 - OSPF external type 2, E - EGP
+               i - IS-IS, L1 - IS-IS level-1, L2 - IS-IS level-2, ia - IS-IS inter area
+               * - candidate default, U - per-user static route, o - ODR
+               P - periodic downloaded static route
+
+        Gateway of last resort is 172.16.3.1 to network 0.0.0.0
+
+        O*E2  0.0.0.0/0 [110/1] via 172.16.3.1, 00:01:41, Serial0/0/0
+              172.16.0.0/16 is variably subnetted, 5 subnets, 3 masks
+        O        172.16.1.0/24 [110/65] via 172.16.3.1, 00:01:41, Serial0/0/0
+        C        172.16.2.0/24 is directly connected, GigabitEthernet0/0
+        L        172.16.2.1/32 is directly connected, GigabitEthernet0/0
+        C        172.16.3.0/30 is directly connected, Serial0/0/0
+        L        172.16.3.2/32 is directly connected, Serial0/0/0
+        O     192.168.1.0/24 [110/65] via 192.168.10.10, 00:01:41, Serial0/0/1
+              192.168.10.0/24 is variably subnetted, 3 subnets, 2 masks
+        O        192.168.10.4/30 [110/128] via 172.16.3.1, 00:01:41, Serial0/0/0
+                                 [110/128] via 192.168.10.10, 00:01:41, Serial0/0/1
+        C        192.168.10.8/30 is directly connected, Serial0/0/1
+        L        192.168.10.9/32 is directly connected, Serial0/0/1
+        ```
+
+        **Шаг 3.** Ответьте на вопрос 7 в форме ответов.
+
+        **Шаг 4.** Выведите параметры OSPF интерфейса G0/0 командой **show ip ospf interface g0/0**. Строка «Network Type» показывает тип сети OSPF этого интерфейса, а строки после «Timer intervals configured» — как интерфейс отправляет пакеты приветствия.
+
+        ```
+        R2>show ip ospf interface g0/0
+        GigabitEthernet0/0 is up, line protocol is up
+          Internet Address 172.16.2.1/24, Area 0, Attached via Network Statement
+          Process ID 10, Router ID 192.168.10.9, Network Type BROADCAST, Cost: 1
+          Topology-MTID    Cost    Disabled    Shutdown      Topology Name
+                0           1         no          no            Base
+          Transmit Delay is 1 sec, State DR, Priority 1
+          Designated Router (ID) 192.168.10.9, Interface address 172.16.2.1
+          No backup designated router on this network
+          Timer intervals configured, Hello 10, Dead 40, Wait 40, Retransmit 5
+            oob-resync timeout 40
+            No Hellos (Passive interface)
+        …
+        ```
+
+        **Примечание.** Пассивный интерфейс OSPF (команда **passive-interface**) не отправляет пакеты приветствия, поэтому через него маршрутизатор не устанавливает смежность, но сеть этого интерфейса по-прежнему объявляется соседям. Пассивными делают интерфейсы в сторону компьютеров: маршрутизаторов OSPF там нет, а пакеты OSPF узлам не нужны.
+
+        **Шаг 5.** Ответьте на вопросы 8 и 9 в форме ответов.
+
+        **Шаг 6.** Откройте окно компьютера PC2 и в приложении «Командная строка» проверьте связь с интерфейсом S0/0/1 маршрутизатора R3 командой **ping 192.168.10.10**. Эхо-запросы выполняются.
+
+        ```
+        C:\>ping 192.168.10.10
+
+        Pinging 192.168.10.10 with 32 bytes of data:
+
+        Reply from 192.168.10.10: bytes=32 time=2ms TTL=254
+        Reply from 192.168.10.10: bytes=32 time=1ms TTL=254
+        Reply from 192.168.10.10: bytes=32 time=1ms TTL=254
+        Reply from 192.168.10.10: bytes=32 time=1ms TTL=254
+
+        Ping statistics for 192.168.10.10:
+            Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),
+        Approximate round trip times in milli-seconds:
+            Minimum = 1ms, Maximum = 2ms, Average = 1ms
+        ```
+    - title: "Проверка OSPF на маршрутизаторе R3"
+      body: |
+        **Шаг 1.** Откройте консоль маршрутизатора R3 и нажмите Enter. Вход на этом маршрутизаторе не требуется.
+
+        **Шаг 2.** Выведите параметры протоколов маршрутизации командой **show ip protocols**. В разделе «Routing for Networks» перечислены сети, заданные командами network, а в разделе «Passive Interface(s)» — пассивные интерфейсы.
+
+        ```
+        R3>show ip protocols
+        *** IP Routing is NSF aware ***
+
+        Routing Protocol is "ospf 10"
+          Outgoing update filter list for all interfaces is not set
+          Incoming update filter list for all interfaces is not set
+          Router ID 192.168.11.1
+          Number of areas in this router is 1. 1 normal 0 stub 0 nssa
+          Maximum path: 4
+          Routing for Networks:
+            192.168.1.0 0.0.0.255 area 0
+            192.168.11.0 0.0.0.255 area 0
+            192.168.10.4 0.0.0.3 area 0
+            192.168.10.8 0.0.0.3 area 0
+          Passive Interface(s):
+            GigabitEthernet0/1
+          Routing Information Sources:
+            Gateway         Distance      Last Update
+            192.168.10.5         110      00:01:58
+            192.168.10.9         110      00:01:58
+          Distance: (default is 110)
+        ```
+
+        **Шаг 3.** Ответьте на вопрос 10 в форме ответов.
+
+        **Шаг 4.** Выведите подробные сведения о соседях OSPF командой **show ip ospf neighbor detail**. Строка «Neighbor priority» показывает приоритет соседа: по приоритету в сети с множественным доступом выбирают назначенный маршрутизатор.
+
+        ```
+        R3>show ip ospf neighbor detail
+         Neighbor 192.168.10.5, interface address 192.168.10.5
+            In the area 0 via interface Serial0/0/0
+            Neighbor priority is 1, State is FULL, 3 state changes
+            DR is 0.0.0.0 BDR is 0.0.0.0
+        …
+            Neighbor is up for 00:01:59
+        …
+         Neighbor 192.168.10.9, interface address 192.168.10.9
+            In the area 0 via interface Serial0/0/1
+            Neighbor priority is 1, State is FULL, 3 state changes
+            DR is 0.0.0.0 BDR is 0.0.0.0
+        …
+            Neighbor is up for 00:01:59
+        …
+        ```
+
+        **Шаг 5.** Ответьте на вопрос 11 в форме ответов.
+
+        **Шаг 6.** Откройте окно компьютера PC3 и в приложении «Командная строка» проверьте связь с маршрутизатором провайдера командой **ping 64.100.54.5**. Эхо-запросы выполняются.
+
+        ```
+        C:\>ping 64.100.54.5
+
+        Pinging 64.100.54.5 with 32 bytes of data:
+
+        Reply from 64.100.54.5: bytes=32 time=2ms TTL=253
+        Reply from 64.100.54.5: bytes=32 time=1ms TTL=253
+        Reply from 64.100.54.5: bytes=32 time=1ms TTL=253
+        Reply from 64.100.54.5: bytes=32 time=1ms TTL=253
+
+        Ping statistics for 64.100.54.5:
+            Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),
+        Approximate round trip times in milli-seconds:
+            Minimum = 1ms, Maximum = 2ms, Average = 1ms
+        ```
+    - title: "Подключение маршрутизатора R4"
+      body: |
+        **Шаг 1.** Откройте консоль маршрутизатора R4, нажмите Enter и перейдите в привилегированный режим EXEC командой **enable**.
+
+        **Шаг 2.** Выведите настройки OSPF из текущей конфигурации командой **show running-config | begin router ospf**. Убедитесь, что командами network в область 0 включены обе сети маршрутизатора R4: 192.168.1.0/24 (интерфейс G0/0/0) и 192.168.12.0/24 (интерфейс G0/0/1).
+
+        ```
+        R4>enable
+        R4#show running-config | begin router ospf
+        router ospf 10
+         passive-interface GigabitEthernet0/0/1
+         network 192.168.1.0 0.0.0.255 area 0
+         network 192.168.12.0 0.0.0.255 area 0
+        …
+        ```
+
+        **Шаг 3.** Ответьте на вопрос 12 в форме ответов.
+
+        **Шаг 4.** Выведите состояние интерфейсов командой **show ip interface brief** и список соседей OSPF командой **show ip ospf neighbor**. Интерфейс G0/0/0 выключен (down): к нему не подключен кабель, поэтому соседей OSPF у R4 нет и список пуст.
+
+        ```
+        R4#show ip interface brief
+        Interface                  IP-Address      OK? Method Status                Protocol
+        GigabitEthernet0/0/0       192.168.1.3     YES manual down                  down
+        GigabitEthernet0/0/1       192.168.12.1    YES manual up                    up
+        R4#show ip ospf neighbor
+
+        Neighbor ID     Pri   State           Dead Time   Address         Interface
+        ```
+
+        **Шаг 5.** Наведите указатель на маршрутизатор R4 на схеме и в панели действий над ним нажмите «Соединить», а затем щелкните коммутатор S3. Откроется окно выбора кабеля.
+
+        **Шаг 6.** В окне выбора кабеля оставьте тип «Медный прямой» и в списке «Порт R4» — порт G0/0/0. В списке «Порт S3» выберите порт G0/1 и нажмите «Соединить».
+
+        **Примечание.** Маршрутизатор и коммутатор соединяют прямым медным кабелем, а перекрестный нужен между однотипными устройствами, например между двумя маршрутизаторами. Если выбрать не тот тип кабеля, окно предупредит, что соединение не установится.
+
+        **Шаг 7.** Следите за консолью маршрутизатора R4. Через пару секунд интерфейс G0/0/0 переходит в состояние up, а примерно через 30 секунд появляется сообщение OSPF-5-ADJCHG: маршрутизатор R4 установил полную смежность (FULL) с соседом 192.168.11.1 — маршрутизатором R3.
+
+        ```
+        *Mar  1 00:02:21.071: %LINK-3-UPDOWN: Interface GigabitEthernet0/0/0, changed state to up
+        R4#
+        *Mar  1 00:02:22.071: %LINEPROTO-5-UPDOWN: Line protocol on Interface GigabitEthernet0/0/0, changed state to up
+        R4#
+        *Mar  1 00:02:52.191: %OSPF-5-ADJCHG: Process 10, Nbr 192.168.11.1 on GigabitEthernet0/0/0 from LOADING to FULL, Loading Done
+        ```
+    - title: "Проверка смежности и связи"
+      body: |
+        **Шаг 1.** На маршрутизаторе R4 выведите список соседей OSPF командой **show ip ospf neighbor**.
+
+        ```
+        R4#show ip ospf neighbor
+
+        Neighbor ID     Pri   State           Dead Time   Address         Interface
+        192.168.11.1      1   FULL/DR         00:00:31    192.168.1.1     GigabitEthernet0/0/0
+        ```
+
+        **Шаг 2.** Ответьте на вопрос 13 в форме ответов.
+
+        **Шаг 3.** На маршрутизаторе R3 выведите список соседей OSPF командой **show ip ospf neighbor**. Теперь у R3 три соседа: R4 через интерфейс G0/0 и маршрутизаторы R1 и R2 через последовательные интерфейсы. Сравните значения в столбце «State».
+
+        ```
+        R3>show ip ospf neighbor
+
+        Neighbor ID     Pri   State           Dead Time   Address         Interface
+        192.168.12.1      1   FULL/BDR        00:00:30    192.168.1.3     GigabitEthernet0/0
+        192.168.10.5      0   FULL/  -        00:00:30    192.168.10.5    Serial0/0/0
+        192.168.10.9      0   FULL/  -        00:00:30    192.168.10.9    Serial0/0/1
+        ```
+
+        **Примечание.** В сети с множественным доступом, такой как Ethernet, маршрутизаторы OSPF выбирают назначенный маршрутизатор (DR) и резервный назначенный маршрутизатор (BDR): остальные маршрутизаторы сегмента обмениваются сведениями о каналах через них. На последовательном канале точка-точка всего два маршрутизатора, поэтому DR и BDR там не выбираются, и в столбце «State» после FULL стоит прочерк.
+
+        **Шаг 4.** Ответьте на вопрос 14 в форме ответов.
+
+        **Шаг 5.** На маршрутизаторе R1 выведите маршруты OSPF командой **show ip route ospf**. В таблице появился маршрут к новой сети 192.168.12.0/24 через маршрутизатор R3: маршрутизатор R4 объявил эту сеть по OSPF.
+
+        ```
+        R1>show ip route ospf
+        Codes: L - local, C - connected, S - static, R - RIP, M - mobile, B - BGP
+               D - EIGRP, EX - EIGRP external, O - OSPF, IA - OSPF inter area
+               N1 - OSPF NSSA external type 1, N2 - OSPF NSSA external type 2
+               E1 - OSPF external type 1, E2 - OSPF external type 2, E - EGP
+               i - IS-IS, L1 - IS-IS level-1, L2 - IS-IS level-2, ia - IS-IS inter area
+               * - candidate default, U - per-user static route, o - ODR
+               P - periodic downloaded static route
+
+        Gateway of last resort is 64.100.54.5 to network 0.0.0.0
+
+              172.16.0.0/16 is variably subnetted, 5 subnets, 3 masks
+        O        172.16.2.0/24 [110/65] via 172.16.3.2, 00:03:10, Serial0/0/0
+        O     192.168.1.0/24 [110/65] via 192.168.10.6, 00:03:10, Serial0/0/1
+              192.168.10.0/24 is variably subnetted, 3 subnets, 2 masks
+        O        192.168.10.8/30 [110/128] via 172.16.3.2, 00:03:10, Serial0/0/0
+                                 [110/128] via 192.168.10.6, 00:03:10, Serial0/0/1
+        O     192.168.12.0/24 [110/66] via 192.168.10.6, 00:00:19, Serial0/0/1
+        ```
+
+        **Шаг 6.** В приложении «Командная строка» ноутбука Laptop снова проверьте связь с компьютером PC2 командой **ping 172.16.2.2**. Теперь эхо-запросы выполняются: маршруты новой локальной сети распространились по OSPF. Первый запрос может остаться без ответа, пока узлы определяют MAC-адреса.
+
+        ```
+        C:\>ping 172.16.2.2
+
+        Pinging 172.16.2.2 with 32 bytes of data:
+
+        Request timed out.
+        Reply from 172.16.2.2: bytes=32 time=2ms TTL=125
+        Reply from 172.16.2.2: bytes=32 time=2ms TTL=125
+        Reply from 172.16.2.2: bytes=32 time=2ms TTL=125
+
+        Ping statistics for 172.16.2.2:
+            Packets: Sent = 4, Received = 3, Lost = 1 (25% loss),
+        Approximate round trip times in milli-seconds:
+            Minimum = 2ms, Maximum = 2ms, Average = 2ms
+        ```

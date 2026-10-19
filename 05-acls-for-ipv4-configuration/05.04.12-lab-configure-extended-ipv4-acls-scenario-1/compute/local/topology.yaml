@@ -118,3 +118,336 @@ links:
     device: S3
     port: FastEthernet0/1
   cable: copper
+scenario:
+  pages:
+    - title: "Топология и адресация"
+      body: |
+        | Кабель | Устройство | Порт | Устройство | Порт |
+        |---|---|---|---|---|
+        | Медный | R1 | G0/0 | S1 | G0/1 |
+        | Медный | PC1 | F0 | S1 | F0/1 |
+        | Медный | R1 | G0/1 | S2 | G0/1 |
+        | Медный | PC2 | F0 | S2 | F0/1 |
+        | Медный | R1 | G0/2 | S3 | G0/1 |
+        | Медный | Server | F0 | S3 | F0/1 |
+
+        | Устройство | Интерфейс | IP-адрес | Маска подсети | Шлюз по умолчанию |
+        |---|---|---|---|---|
+        | R1 | G0/0 | 172.22.34.65 | 255.255.255.224 | — |
+        | R1 | G0/1 | 172.22.34.97 | 255.255.255.240 | — |
+        | R1 | G0/2 | 172.22.34.1 | 255.255.255.192 | — |
+        | Server | NIC | 172.22.34.62 | 255.255.255.192 | 172.22.34.1 |
+        | PC1 | NIC | 172.22.34.66 | 255.255.255.224 | 172.22.34.65 |
+        | PC2 | NIC | 172.22.34.98 | 255.255.255.240 | 172.22.34.97 |
+    - title: "Начальное состояние"
+      body: |
+        - На маршрутизаторе R1 заданы имя устройства и IP-адреса интерфейсов G0/0, G0/1 и G0/2 по таблице адресации. Списков контроля доступа на маршрутизаторе нет.
+        - На коммутаторах S1, S2 и S3 задано только имя устройства.
+        - На компьютерах и сервере заданы IP-адреса, маски подсети и шлюзы по умолчанию по таблице адресации.
+        - На сервере работает веб-сайт, доступный по протоколам HTTP и HTTPS. Службы FTP на сервере нет: запись списка, разрешающую FTP, вы проверите по выводу команды **show access-lists**, а работу списков — эхо-запросами и веб-браузером.
+
+        **Шаг 1.** Откройте окно компьютера PC1 и на вкладке «Рабочий стол» запустите приложение «Командная строка». Проверьте связь с сервером командой **ping 172.22.34.62**. Эхо-запросы выполняются. Первый из них может остаться без ответа: в это время маршрутизатор R1 определяет MAC-адрес сервера по протоколу ARP.
+
+        ```
+        C:\>ping 172.22.34.62
+
+        Pinging 172.22.34.62 with 32 bytes of data:
+
+        Request timed out.
+        Reply from 172.22.34.62: bytes=32 time=1ms TTL=127
+        Reply from 172.22.34.62: bytes=32 time=1ms TTL=127
+        Reply from 172.22.34.62: bytes=32 time=1ms TTL=127
+
+        Ping statistics for 172.22.34.62:
+            Packets: Sent = 4, Received = 3, Lost = 1 (25% loss),
+        Approximate round trip times in milli-seconds:
+            Minimum = 1ms, Maximum = 1ms, Average = 1ms
+        ```
+
+        **Шаг 2.** Проверьте связь с компьютером PC2 командой **ping 172.22.34.98**. Эхо-запросы тоже выполняются: списков контроля доступа пока нет, и маршрутизатор пересылает весь трафик между сетями.
+
+        ```
+        C:\>ping 172.22.34.98
+
+        Pinging 172.22.34.98 with 32 bytes of data:
+
+        Request timed out.
+        Reply from 172.22.34.98: bytes=32 time=1ms TTL=127
+        Reply from 172.22.34.98: bytes=32 time=1ms TTL=127
+        Reply from 172.22.34.98: bytes=32 time=1ms TTL=127
+
+        Ping statistics for 172.22.34.98:
+            Packets: Sent = 4, Received = 3, Lost = 1 (25% loss),
+        Approximate round trip times in milli-seconds:
+            Minimum = 1ms, Maximum = 1ms, Average = 1ms
+        ```
+
+        **Шаг 3.** На вкладке «Рабочий стол» компьютера PC1 запустите приложение «Веб-браузер», введите адрес **http://172.22.34.62** и нажмите «Перейти». Открывается веб-сайт сервера с заголовком «Server» и текстом «Веб-сайт сервера.».
+    - title: "Настройка нумерованного списка контроля доступа"
+      body: |
+        **Шаг 1.** Откройте консоль маршрутизатора R1 и нажмите Enter. Перейдите в привилегированный режим EXEC командой **enable**, а затем в режим глобальной конфигурации командой **configure terminal**.
+
+        **Шаг 2.** Введите **access-list ?**. Знак вопроса выводит справку сразу, без нажатия Enter, а введенная часть команды остается в строке. Справка показывает диапазоны номеров списков: номера 100–199 — расширенные списки, поэтому первый номер расширенного списка — 100.
+
+        **Шаг 3.** Допишите к команде номер списка и знак вопроса: **100 ?**. Запись списка разрешает пакет (permit) или запрещает его (deny).
+
+        **Шаг 4.** Допишите **permit ?**. В списке протоколов есть icmp, но нет ftp: FTP — протокол прикладного уровня, который передается по TCP, поэтому трафик FTP разрешают записью для протокола tcp.
+
+        ```
+        R1>enable
+        R1#configure terminal
+        Enter configuration commands, one per line.  End with CNTL/Z.
+        R1(config)#access-list ?
+          <1-99>       IP standard access list
+          <100-199>    IP extended access list
+          <1300-1999>  IP standard access list (expanded range)
+          <2000-2699>  IP extended access list (expanded range)
+
+        R1(config)#access-list 100 ?
+          deny    Specify packets to reject
+          permit  Specify packets to forward
+          remark  Access list entry comment
+
+        R1(config)#access-list 100 permit ?
+          <0-255>  An IP protocol number
+          ahp      Authentication Header Protocol
+          eigrp    EIGRP routing protocol
+          esp      Encapsulation Security Payload
+          gre      Generic Routing Encapsulation Protocol
+          icmp     Internet Control Message Protocol
+          igmp     Internet Gateway Message Protocol
+          ip       Any Internet Protocol
+          ospf     OSPF routing protocol
+          pim      Protocol Independent Multicast
+          tcp      Transmission Control Protocol
+          udp      User Datagram Protocol
+        ```
+
+        **Примечание.** Шаблонная маска показывает, какие биты адреса сравнивать: бит 0 — сравнивать, бит 1 — не сравнивать. Это двоичная инверсия маски подсети: маска 255.255.255.224 сети PC1 — 27 единиц и 5 нулей, а шаблонная маска — 27 нулей и 5 единиц, то есть 0.0.0.31. Запись с адресом 172.22.34.64 и шаблонной маской 0.0.0.31 подходит любому узлу сети 172.22.34.64/27.
+
+        **Шаг 5.** Допишите протокол и адрес источника — сеть компьютера PC1 — со знаком вопроса: **tcp 172.22.34.64 ?**. Маршрутизатор ожидает шаблонную маску источника.
+
+        **Шаг 6.** Допишите шаблонную маску: **0.0.0.31 ?**. Теперь маршрутизатор ожидает адрес назначения.
+
+        **Шаг 7.** Допишите адрес назначения — сервер — с ключевым словом host: **host 172.22.34.62 ?**. Вариант `<cr>` означает, что команду уже можно ввести клавишей Enter, но тогда запись разрешила бы к серверу весь трафик TCP.
+
+        **Шаг 8.** Чтобы разрешить только FTP, допишите **eq ?** и найдите в списке портов ftp (порт 21). Допишите **ftp** и нажмите Enter.
+
+        ```
+        R1(config)#access-list 100 permit tcp 172.22.34.64 ?
+          A.B.C.D  Source wildcard bits
+
+        R1(config)#access-list 100 permit tcp 172.22.34.64 0.0.0.31 ?
+          A.B.C.D  Destination address
+          any      Any destination host
+          eq       Match only packets on a given port number
+          gt       Match only packets with a greater port number
+          host     A single destination host
+          lt       Match only packets with a lower port number
+          neq      Match only packets not on a given port number
+          range    Match only packets in the range of port numbers
+
+        R1(config)#access-list 100 permit tcp 172.22.34.64 0.0.0.31 host 172.22.34.62 ?
+          eq           Match only packets on a given port number
+          established  Match established connections
+          gt           Match only packets with a greater port number
+          log          Log matches against this entry
+          lt           Match only packets with a lower port number
+          neq          Match only packets not on a given port number
+          range        Match only packets in the range of port numbers
+          <cr>
+
+        R1(config)#access-list 100 permit tcp 172.22.34.64 0.0.0.31 host 172.22.34.62 eq ?
+          <0-65535>  Port number
+        …
+          ftp        File Transfer Protocol (21)
+          ftp-data   FTP data connections (20)
+        …
+          www        World Wide Web (HTTP) (80)
+
+        R1(config)#access-list 100 permit tcp 172.22.34.64 0.0.0.31 host 172.22.34.62 eq ftp
+        ```
+
+        **Шаг 9.** Создайте вторую запись, разрешающую трафик ICMP от сети PC1 к серверу, командой **access-list 100 permit icmp 172.22.34.64 0.0.0.31 host 172.22.34.62**. Номер списка тот же, а тип сообщений ICMP указывать не нужно. Вернитесь в привилегированный режим EXEC командой **end**.
+
+        **Шаг 10.** Убедитесь с помощью команды **show access-lists**, что список 100 содержит две записи в этом порядке. Записи deny any в выводе нет: она неявная и действует в конце любого списка.
+
+        ```
+        R1(config)#access-list 100 permit icmp 172.22.34.64 0.0.0.31 host 172.22.34.62
+        R1(config)#end
+        *Mar  1 00:00:51.346: %SYS-5-CONFIG_I: Configured from console by console
+        R1#show access-lists
+        Extended IP access list 100
+            10 permit tcp 172.22.34.64 0.0.0.31 host 172.22.34.62 eq ftp
+            20 permit icmp 172.22.34.64 0.0.0.31 host 172.22.34.62
+        ```
+    - title: "Применение нумерованного списка контроля доступа"
+      body: |
+        **Примечание.** Список применяют к интерфейсу в одном направлении. Трафик сети PC1 входит в маршрутизатор через интерфейс G0/0, поэтому список 100 применяют к нему как входящий (in): маршрутизатор проверяет пакет до того, как переслать его. Расширенный список размещают ближе к источнику трафика, чтобы запрещенные пакеты не проходили по сети дальше. В работающей сети к интерфейсу применяют только проверенный список: ошибка в записи вместе с неявной записью deny any сразу отрежет нужный трафик.
+
+        **Шаг 1.** На маршрутизаторе R1 перейдите в режим глобальной конфигурации командой **configure terminal**, а затем к настройке интерфейса G0/0 командой **interface g0/0**.
+
+        **Шаг 2.** Примените список 100 к входящему трафику интерфейса командой **ip access-group 100 in** и вернитесь в привилегированный режим EXEC командой **end**.
+
+        ```
+        R1#configure terminal
+        Enter configuration commands, one per line.  End with CNTL/Z.
+        R1(config)#interface g0/0
+        R1(config-if)#ip access-group 100 in
+        R1(config-if)#end
+        *Mar  1 00:00:59.379: %SYS-5-CONFIG_I: Configured from console by console
+        ```
+
+        **Шаг 3.** В приложении «Командная строка» компьютера PC1 снова проверьте связь с сервером командой **ping 172.22.34.62**. Эхо-запросы выполняются: их разрешает вторая запись списка 100.
+
+        ```
+        C:\>ping 172.22.34.62
+
+        Pinging 172.22.34.62 with 32 bytes of data:
+
+        Reply from 172.22.34.62: bytes=32 time=1ms TTL=127
+        Reply from 172.22.34.62: bytes=32 time=1ms TTL=127
+        Reply from 172.22.34.62: bytes=32 time=1ms TTL=127
+        Reply from 172.22.34.62: bytes=32 time=1ms TTL=127
+
+        Ping statistics for 172.22.34.62:
+            Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),
+        Approximate round trip times in milli-seconds:
+            Minimum = 1ms, Maximum = 1ms, Average = 1ms
+        ```
+
+        **Шаг 4.** Проверьте связь с компьютером PC2 командой **ping 172.22.34.98**. Эхо-запросы не выполняются: ни одна запись списка 100 не разрешает трафик к компьютеру PC2, и его отбрасывает неявная запись deny any. Сообщение «Destination host unreachable» отправляет маршрутизатор R1 с адреса 172.22.34.65.
+
+        ```
+        C:\>ping 172.22.34.98
+
+        Pinging 172.22.34.98 with 32 bytes of data:
+
+        Reply from 172.22.34.65: Destination host unreachable.
+        Reply from 172.22.34.65: Destination host unreachable.
+        Reply from 172.22.34.65: Destination host unreachable.
+        Reply from 172.22.34.65: Destination host unreachable.
+
+        Ping statistics for 172.22.34.98:
+            Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),
+        ```
+
+        **Шаг 5.** В приложении «Веб-браузер» компьютера PC1 снова откройте адрес **http://172.22.34.62**. Теперь страница не открывается: браузер показывает «× Страница не открылась» и «Код: время ожидания истекло». Запрос HTTP идет на порт 80 TCP, а список 100 разрешает к серверу только FTP (порт 21) и ICMP.
+
+        **Шаг 6.** На маршрутизаторе R1 снова выведите списки командой **show access-lists**. У записи ICMP появился счетчик совпадений (matches): с ней совпал каждый эхо-запрос компьютера PC1 к серверу. Число совпадений у вас может быть другим.
+
+        ```
+        R1#show access-lists
+        Extended IP access list 100
+            10 permit tcp 172.22.34.64 0.0.0.31 host 172.22.34.62 eq ftp
+            20 permit icmp 172.22.34.64 0.0.0.31 host 172.22.34.62 (4 matches)
+        ```
+    - title: "Настройка именованного списка контроля доступа"
+      body: |
+        **Шаг 1.** На маршрутизаторе R1 перейдите в режим глобальной конфигурации командой **configure terminal** и введите **ip access-list ?**. Именованный список бывает стандартным (standard) и расширенным (extended).
+
+        **Шаг 2.** Создайте расширенный именованный список HTTP_ONLY командой **ip access-list extended HTTP_ONLY**. Имя чувствительно к регистру, поэтому вводите его точно так, как оно написано. Приглашение меняется на `R1(config-ext-nacl)#`: в этом режиме записи списка вводятся без команды access-list и номера.
+
+        ```
+        R1#configure terminal
+        Enter configuration commands, one per line.  End with CNTL/Z.
+        R1(config)#ip access-list ?
+          extended    Extended Access List
+          resequence  Resequence Access List
+          standard    Standard Access List
+
+        R1(config)#ip access-list extended HTTP_ONLY
+        ```
+
+        **Примечание.** Шаблонную маску можно получить и вычитанием маски подсети из 255.255.255.255: для сети PC2 172.22.34.96/28 это 255.255.255.255 − 255.255.255.240 = 0.0.0.15.
+
+        **Шаг 3.** Введите адрес сети PC2 со знаком вопроса: **permit tcp 172.22.34.96 ?**. Затем допишите шаблонную маску, адрес сервера и порт: **0.0.0.15 host 172.22.34.62 eq www** — и нажмите Enter. Запись разрешает сети PC2 трафик HTTP (www, порт 80) к серверу.
+
+        **Шаг 4.** Создайте вторую запись, разрешающую трафик ICMP от сети PC2 к серверу, командой **permit icmp 172.22.34.96 0.0.0.15 host 172.22.34.62**. Вернитесь в привилегированный режим EXEC командой **end**.
+
+        ```
+        R1(config-ext-nacl)#permit tcp 172.22.34.96 ?
+          A.B.C.D  Source wildcard bits
+
+        R1(config-ext-nacl)#permit tcp 172.22.34.96 0.0.0.15 host 172.22.34.62 eq www
+        R1(config-ext-nacl)#permit icmp 172.22.34.96 0.0.0.15 host 172.22.34.62
+        R1(config-ext-nacl)#end
+        *Mar  1 00:01:35.817: %SYS-5-CONFIG_I: Configured from console by console
+        ```
+
+        **Шаг 5.** Убедитесь с помощью команды **show access-lists**, что список HTTP_ONLY содержит две записи в этом порядке.
+
+        ```
+        R1#show access-lists
+        Extended IP access list 100
+            10 permit tcp 172.22.34.64 0.0.0.31 host 172.22.34.62 eq ftp
+            20 permit icmp 172.22.34.64 0.0.0.31 host 172.22.34.62 (4 matches)
+        Extended IP access list HTTP_ONLY
+            10 permit tcp 172.22.34.96 0.0.0.15 host 172.22.34.62 eq www
+            20 permit icmp 172.22.34.96 0.0.0.15 host 172.22.34.62
+        ```
+    - title: "Применение именованного списка контроля доступа"
+      body: |
+        **Шаг 1.** На маршрутизаторе R1 перейдите в режим глобальной конфигурации командой **configure terminal**, а затем к настройке интерфейса G0/1, через который в маршрутизатор входит трафик сети PC2, командой **interface g0/1**.
+
+        **Шаг 2.** Примените список HTTP_ONLY к входящему трафику интерфейса командой **ip access-group HTTP_ONLY in** и вернитесь в привилегированный режим EXEC командой **end**.
+
+        ```
+        R1#configure terminal
+        Enter configuration commands, one per line.  End with CNTL/Z.
+        R1(config)#interface g0/1
+        R1(config-if)#ip access-group HTTP_ONLY in
+        R1(config-if)#end
+        *Mar  1 00:01:43.851: %SYS-5-CONFIG_I: Configured from console by console
+        ```
+    - title: "Проверка списков контроля доступа"
+      body: |
+        **Шаг 1.** Откройте окно компьютера PC2 и на вкладке «Рабочий стол» запустите приложение «Командная строка». Проверьте связь с сервером командой **ping 172.22.34.62**. Эхо-запросы выполняются: их разрешает вторая запись списка HTTP_ONLY.
+
+        ```
+        C:\>ping 172.22.34.62
+
+        Pinging 172.22.34.62 with 32 bytes of data:
+
+        Reply from 172.22.34.62: bytes=32 time=1ms TTL=127
+        Reply from 172.22.34.62: bytes=32 time=1ms TTL=127
+        Reply from 172.22.34.62: bytes=32 time=1ms TTL=127
+        Reply from 172.22.34.62: bytes=32 time=1ms TTL=127
+
+        Ping statistics for 172.22.34.62:
+            Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),
+        Approximate round trip times in milli-seconds:
+            Minimum = 1ms, Maximum = 1ms, Average = 1ms
+        ```
+
+        **Шаг 2.** На вкладке «Рабочий стол» компьютера PC2 запустите приложение «Веб-браузер» и откройте адрес **http://172.22.34.62**. Открывается веб-сайт сервера: трафик HTTP (порт 80) разрешает первая запись списка HTTP_ONLY.
+
+        **Шаг 3.** Откройте адрес **https://172.22.34.62**. Страница не открывается («× Страница не открылась», «Код: время ожидания истекло»): протокол HTTPS использует порт 443 TCP, а список HTTP_ONLY разрешает только порт 80.
+
+        **Шаг 4.** В приложении «Командная строка» компьютера PC2 проверьте связь с компьютером PC1 командой **ping 172.22.34.66**. Эхо-запросы не выполняются: их отбрасывает неявная запись deny any списка HTTP_ONLY, и маршрутизатор R1 отвечает сообщением «Destination host unreachable» с адреса 172.22.34.97.
+
+        ```
+        C:\>ping 172.22.34.66
+
+        Pinging 172.22.34.66 with 32 bytes of data:
+
+        Reply from 172.22.34.97: Destination host unreachable.
+        Reply from 172.22.34.97: Destination host unreachable.
+        Reply from 172.22.34.97: Destination host unreachable.
+        Reply from 172.22.34.97: Destination host unreachable.
+
+        Ping statistics for 172.22.34.66:
+            Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),
+        ```
+
+        **Шаг 5.** На маршрутизаторе R1 выведите списки командой **show access-lists**. Счетчики совпадений показывают, какие записи сработали: эхо-запросы компьютеров PC1 и PC2 к серверу и трафик HTTP компьютера PC2. Записи FTP совпадений нет: трафика FTP в этой сети не было.
+
+        ```
+        R1#show access-lists
+        Extended IP access list 100
+            10 permit tcp 172.22.34.64 0.0.0.31 host 172.22.34.62 eq ftp
+            20 permit icmp 172.22.34.64 0.0.0.31 host 172.22.34.62 (4 matches)
+        Extended IP access list HTTP_ONLY
+            10 permit tcp 172.22.34.96 0.0.0.15 host 172.22.34.62 eq www (4 matches)
+            20 permit icmp 172.22.34.96 0.0.0.15 host 172.22.34.62 (4 matches)
+        ```
