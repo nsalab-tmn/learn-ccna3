@@ -186,7 +186,7 @@ scenario:
 
         Pinging 209.165.201.2 with 32 bytes of data:
 
-        Reply from 209.165.201.2: bytes=32 time=2ms TTL=254
+        Reply from 209.165.201.2: bytes=32 time=1ms TTL=254
         Reply from 209.165.201.2: bytes=32 time=1ms TTL=254
         Reply from 209.165.201.2: bytes=32 time=1ms TTL=254
         Reply from 209.165.201.2: bytes=32 time=1ms TTL=254
@@ -194,7 +194,7 @@ scenario:
         Ping statistics for 209.165.201.2:
             Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),
         Approximate round trip times in milli-seconds:
-            Minimum = 1ms, Maximum = 2ms, Average = 1ms
+            Minimum = 1ms, Maximum = 1ms, Average = 1ms
         ```
 
         **Шаг 3.** Проверьте связь с сервером Server1 по его частному адресу командой **ping 172.16.16.1**. Эхо-запросы не выполняются: сообщение «Destination host unreachable» присылает маршрутизатор Internet (10.0.37.1), у которого нет маршрута к частной сети 172.16.16.0/28.
@@ -272,7 +272,7 @@ scenario:
         R1(config-if)#interface s0/0/0
         R1(config-if)#ip nat outside
         R1(config-if)#end
-        *Mar  1 00:00:55.527: %SYS-5-CONFIG_I: Configured from console by console
+        *Mar  1 00:01:04.278: %SYS-5-CONFIG_I: Configured from console by console
         ```
     - title: "Проверка доступа к серверу"
       body: |
