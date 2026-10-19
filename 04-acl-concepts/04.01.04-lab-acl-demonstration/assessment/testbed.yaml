@@ -13,7 +13,7 @@ devices:
       cli:
         protocol: ssh
         ip: '%ENV{lab_ip}'
-        port: '%ENV{ssh_port_R2}'
+        port: '%ENV{ssh_port_R1}'
         ssh_options: -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -o PubkeyAuthentication=no
         arguments:
           connection_timeout: 30
