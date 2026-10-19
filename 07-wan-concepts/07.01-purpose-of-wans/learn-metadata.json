@@ -1,9 +1,10 @@
 {
     "title": "Назначение глобальных сетей",
-    "materialType": "lecture",
+    "shortName": "ccna3.wan-concepts.purpose-of-wans",
+    "type": "scored-lecture",
     "description": "Чем отличаются локальные и глобальные вычислительные сети? Какими бывают топологии глобальных сетей и как они взаимодействуют с провайдерами связи?",
     "difficulty": 3,
-    "duration": "PT0H15M",
+    "duration": "PT0H21M",
     "tags": {
         "$ref": "../../material-tags.json"
     },
@@ -13,5 +14,123 @@
     },
     "assets": {
         "$ref": "./assets"
-    }
+    },
+    "competency": {
+        "produces": {
+            "id": "ksa.ccna3.wan-concepts.purpose-of-wans",
+            "kind": "K",
+            "bloom": "understand",
+            "objective": "Identify the characteristics that set a WAN apart from a LAN and the topology type that describes a virtual connection, and choose the WAN topology and carrier connection that give the most fault tolerance and redundancy."
+        },
+        "requires": [],
+        "measurement": {
+            "mode": "test",
+            "grader": "test-auto",
+            "aligned_bloom": "understand",
+            "passes_when": "All embedded questions answered correctly (100%, unlimited attempts): WAN compared with LAN, logical topology, fully meshed topology, dual-carrier connections.",
+            "calibration": "operator-judge"
+        }
+    },
+    "passingScore": 100,
+    "questions": [
+        {
+            "question": "Какие варианты описывают глобальную сеть? (верны два варианта)",
+            "answerType": "multiChoice",
+            "answers": [
+                {
+                    "answer": "WAN находится в собственности и под управлением организации или домашнего пользователя",
+                    "correct": false,
+                    "comment": "WAN предоставляет сетевые услуги в крупных географических районах за отдельную плату"
+                },
+                {
+                    "answer": "WAN предоставляет сетевые услуги в крупных географических районах",
+                    "correct": true
+                },
+                {
+                    "answer": "услуги WAN предоставляются за отдельную плату",
+                    "correct": true
+                },
+                {
+                    "answer": "поставщики WAN предлагают низкую пропускную способность на коротких расстояниях",
+                    "correct": false,
+                    "comment": "WAN предоставляет сетевые услуги в крупных географических районах за отдельную плату"
+                },
+                {
+                    "answer": "WAN гарантируют безопасность между конечными точками",
+                    "correct": false,
+                    "comment": "WAN предоставляет сетевые услуги в крупных географических районах за отдельную плату"
+                }
+            ]
+        },
+        {
+            "question": "Какой тип топологии описывает виртуальное соединение между источником и назначением?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "кабельная топология",
+                    "correct": false,
+                    "comment": "Логическая топология описывает виртуальное соединение между источником и назначением"
+                },
+                {
+                    "answer": "физическая топология",
+                    "correct": false,
+                    "comment": "Логическая топология описывает виртуальное соединение между источником и назначением"
+                },
+                {
+                    "answer": "логическая топология",
+                    "correct": true
+                },
+                {
+                    "answer": "проводная топология",
+                    "correct": false,
+                    "comment": "Логическая топология описывает виртуальное соединение между источником и назначением"
+                }
+            ]
+        },
+        {
+            "question": "Какая модель сети WAN является наиболее отказоустойчивой?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "топология с двумя интерфейсами (Dual-homed)",
+                    "correct": false,
+                    "comment": "Полносвязная топология является наиболее отказоустойчивой топологией WAN"
+                },
+                {
+                    "answer": "полносвязная топология (Fully Meshed)",
+                    "correct": true
+                },
+                {
+                    "answer": "топология типа «звезда» (Hub-and-Spoke)",
+                    "correct": false,
+                    "comment": "Полносвязная топология является наиболее отказоустойчивой топологией WAN"
+                },
+                {
+                    "answer": "частичносвязанная топология (Partially Meshed)",
+                    "correct": false,
+                    "comment": "Полносвязная топология является наиболее отказоустойчивой топологией WAN"
+                },
+                {
+                    "answer": "топология «точка-точка» (Point-to-Point)",
+                    "correct": false,
+                    "comment": "Полносвязная топология является наиболее отказоустойчивой топологией WAN"
+                }
+            ]
+        },
+        {
+            "question": "Какой тип WAN-соединения обеспечивает избыточность?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "WAN-соединение с двумя каналами (Dual-carrier)",
+                    "correct": true
+                },
+                {
+                    "answer": "WAN-соединение с одним каналом (Single-carrier)",
+                    "correct": false,
+                    "comment": "WAN-соединение с двумя каналами (Dual-carrier) обеспечивает избыточность"
+                }
+            ]
+        }
+    ]
 }

@@ -1,9 +1,10 @@
 {
     "title": "Подключение к глобальным сетям через Интернет",
-    "materialType": "lecture",
+    "shortName": "ccna3.wan-concepts.internet-based-connectivity",
+    "type": "scored-lecture",
     "description": "Какие проводные и беспроводные способы подкючения к сети Интернет являются наиболее распространенными?",
     "difficulty": 3,
-    "duration": "PT0H21M",
+    "duration": "PT0H27M",
     "tags": {
         "$ref": "../../material-tags.json"
     },
@@ -13,5 +14,152 @@
     },
     "assets": {
         "$ref": "./assets"
-    }
+    },
+    "competency": {
+        "produces": {
+            "id": "ksa.ccna3.wan-concepts.internet-based-connectivity",
+            "kind": "K",
+            "bloom": "understand",
+            "objective": "Describe how DSL and PPPoE connections reach the provider and how DSL differs from cable, identify the site-to-site VPN, and choose the ISP connection design that gives a required level of redundancy."
+        },
+        "requires": [
+            "ksa.ccna3.wan-concepts.traditional-wan-connectivity",
+            "ksa.ccna3.wan-concepts.modern-wan-connectivity"
+        ],
+        "measurement": {
+            "mode": "test",
+            "grader": "test-auto",
+            "aligned_bloom": "understand",
+            "passes_when": "All embedded questions answered correctly (100%, unlimited attempts): DSL compared with cable, the DSLAM, a router as PPPoE client, ISP connection designs, site-to-site VPN.",
+            "calibration": "operator-judge"
+        }
+    },
+    "passingScore": 100,
+    "questions": [
+        {
+            "question": "В чем преимущество DSL по сравнению с кабельной технологией?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "Каждый абонент DSL имеет отдельное прямое подключение к DSLAM, и среда передачи не используется коллективно",
+                    "correct": true
+                },
+                {
+                    "answer": "Все разновидности DSL обеспечивают одинаковую пропускную способность в обоих направлениях",
+                    "correct": false,
+                    "comment": "Одинаковую пропускную способность в обоих направлениях дает только SDSL, а ADSL быстрее в нисходящем направлении. Преимущество DSL — отдельное прямое подключение каждого абонента к DSLAM."
+                },
+                {
+                    "answer": "Скорость DSL не зависит от длины местной линии",
+                    "correct": false,
+                    "comment": "Зависит: скорость определяется длиной местной линии, а также типом и состоянием кабелей. Преимущество DSL — отдельное прямое подключение каждого абонента к DSLAM."
+                },
+                {
+                    "answer": "DSL использует гибридную волоконно-коаксиальную сеть",
+                    "correct": false,
+                    "comment": "Гибридную волоконно-коаксиальную сеть (HFC) используют операторы кабельной связи, а DSL работает по телефонным линиям на основе витой пары. Преимущество DSL — отдельное прямое подключение каждого абонента к DSLAM."
+                }
+            ]
+        },
+        {
+            "question": "Как называется устройство в центральном офисе поставщика, которое собирает подключения нескольких абонентов DSL?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "Мультиплексор доступа DSL (DSLAM)",
+                    "correct": true
+                },
+                {
+                    "answer": "Система терминации кабельных модемов (CMTS)",
+                    "correct": false,
+                    "comment": "CMTS отвечает за связь с кабельными модемами в кабельной сети. Подключения абонентов DSL собирает мультиплексор доступа DSL (DSLAM)."
+                },
+                {
+                    "answer": "Оптический узел",
+                    "correct": false,
+                    "comment": "Оптический узел преобразует сигналы в гибридной волоконно-коаксиальной сети кабельного оператора. Подключения абонентов DSL собирает DSLAM."
+                },
+                {
+                    "answer": "DSL-модем",
+                    "correct": false,
+                    "comment": "DSL-модем стоит у абонента и преобразует сигналы Ethernet в сигнал DSL. Подключения абонентов собирает DSLAM в центральном офисе поставщика."
+                }
+            ]
+        },
+        {
+            "question": "Для DSL-подключения маршрутизатор настроен как клиент PPPoE. Какое утверждение верно для этой топологии?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "Несколько клиентов могут совместно использовать DSL-подключение, взаимодействуя с маршрутизатором только по Ethernet",
+                    "correct": true
+                },
+                {
+                    "answer": "Подключение может использовать только один клиент",
+                    "correct": false,
+                    "comment": "Так бывает, когда клиент PPPoE запускается на самом узле. Если клиентом PPPoE является маршрутизатор, DSL-подключение могут совместно использовать несколько клиентов."
+                },
+                {
+                    "answer": "Каждый узел должен запускать собственный клиент PPPoE",
+                    "correct": false,
+                    "comment": "Клиентом PPPoE является маршрутизатор, а узлы взаимодействуют с ним только по Ethernet и не знают о DSL-подключении."
+                },
+                {
+                    "answer": "Узлы получают конфигурацию напрямую от сервера PPPoE поставщика",
+                    "correct": false,
+                    "comment": "Конфигурацию от поставщика получает маршрутизатор как клиент PPPoE. Узлы взаимодействуют с ним только по Ethernet и не знают о DSL-подключении."
+                }
+            ]
+        },
+        {
+            "question": "Доступ к Интернету критически важен для организации. Ей нужна максимально возможная избыточность — резервные каналы к нескольким интернет-провайдерам. Какой вариант подключения выбрать?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "Dual-multihomed (с несколькими подключениями к нескольким сетям)",
+                    "correct": true
+                },
+                {
+                    "answer": "Single-homed (одно подключение к сети)",
+                    "correct": false,
+                    "comment": "Один канал к одному провайдеру не обеспечивает избыточности. Максимально возможную избыточность дает вариант dual-multihomed — избыточные каналы к нескольким провайдерам."
+                },
+                {
+                    "answer": "Dual-homed (с двумя интерфейсами)",
+                    "correct": false,
+                    "comment": "Оба канала ведут к одному провайдеру, и при его отключении организация теряет доступ к Интернету. Максимально возможную избыточность дает вариант dual-multihomed."
+                },
+                {
+                    "answer": "Multihomed (с несколькими подключениями к сети)",
+                    "correct": false,
+                    "comment": "Multihomed дает повышенную избыточность, но наиболее устойчивая топология с максимально возможной избыточностью — dual-multihomed, с избыточными каналами к нескольким провайдерам."
+                }
+            ]
+        },
+        {
+            "question": "Как называется вариант VPN, который настраивается на маршрутизаторах так, что клиенты не знают о шифровании своих данных?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "Site-to-site VPN (от узла до узла)",
+                    "correct": true
+                },
+                {
+                    "answer": "VPN удаленного доступа",
+                    "correct": false,
+                    "comment": "При удаленном доступе пользователь знает о подключении и сам его инициирует. Site-to-site VPN настраивается на маршрутизаторах, и клиенты не знают о шифровании."
+                },
+                {
+                    "answer": "PPPoE",
+                    "correct": false,
+                    "comment": "PPPoE передает PPP по Ethernet при DSL-подключении и вариантом VPN не является. Site-to-site VPN обеспечивает шифрование, о котором клиенты не знают."
+                },
+                {
+                    "answer": "Городская сеть Wi-Fi",
+                    "correct": false,
+                    "comment": "Это вариант беспроводного доступа к Интернету, а не VPN. Site-to-site VPN обеспечивает шифрование, о котором клиенты не знают."
+                }
+            ]
+        }
+    ]
 }

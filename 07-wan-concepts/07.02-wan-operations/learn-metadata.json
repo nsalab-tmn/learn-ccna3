@@ -1,9 +1,10 @@
 {
     "title": "Принципы работы глобальных сетей",
-    "materialType": "lecture",
+    "shortName": "ccna3.wan-concepts.wan-operations",
+    "type": "scored-lecture",
     "description": "Какими стандартами оперируют глобальные сети? Какие устройства обеспечивают их работу? Чем отличается последовательная и параллельная передача данных? Что такое коммутация каналов и коммутация пакетов?",
     "difficulty": 3,
-    "duration": "PT0H16M",
+    "duration": "PT0H28M",
     "tags": {
         "$ref": "../../material-tags.json"
     },
@@ -13,5 +14,207 @@
     },
     "assets": {
         "$ref": "./assets"
-    }
+    },
+    "competency": {
+        "produces": {
+            "id": "ksa.ccna3.wan-concepts.wan-operations",
+            "kind": "K",
+            "bloom": "understand",
+            "objective": "Place WAN standards at OSI layer 1, match WAN terms and devices (point of presence, DSL and cable modems, serial communication) to their roles, and classify WAN technologies as circuit-switched or packet-switched."
+        },
+        "requires": [
+            "ksa.ccna3.wan-concepts.purpose-of-wans"
+        ],
+        "measurement": {
+            "mode": "test",
+            "grader": "test-auto",
+            "aligned_bloom": "understand",
+            "passes_when": "All embedded questions answered correctly (100%, unlimited attempts): layer 1 WAN standards, the POP, broadband modems, serial communication, circuit and packet switching, DWDM.",
+            "calibration": "operator-judge"
+        }
+    },
+    "passingScore": 100,
+    "questions": [
+        {
+            "question": "Какие утверждения о глобальных сетях на уровне 1 OSI являются верными? (верны два варианта)",
+            "answerType": "multiChoice",
+            "answers": [
+                {
+                    "answer": "он описывает, как данные будут инкапсулированы в кадр",
+                    "correct": false,
+                    "comment": "Уровень 1 OSI WAN описывает электрические, механические и рабочие компоненты, необходимые для передачи битов, и включает такие протоколы, как SDH, SONET и DWDM"
+                },
+                {
+                    "answer": "в нем описываются электрические, механические и эксплуатационные компоненты, необходимые для передачи битов",
+                    "correct": true
+                },
+                {
+                    "answer": "он включает такие протоколы, как PPP, HDLC и Ethernet",
+                    "correct": false,
+                    "comment": "Уровень 1 OSI WAN описывает электрические, механические и рабочие компоненты, необходимые для передачи битов, и включает такие протоколы, как SDH, SONET и DWDM"
+                },
+                {
+                    "answer": "он включает такие протоколы, как SDH, SONET и DWDM",
+                    "correct": true
+                }
+            ]
+        },
+        {
+            "question": "Какой термин глобальной сети определяет точку подключения абонента к сети поставщиков услуг?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "телекоммуникационное оборудование заказчика (CPE)",
+                    "correct": false,
+                    "comment": "POP определяет точку подключения абонента к сети поставщика услуг"
+                },
+                {
+                    "answer": "оборудование передачи данных (DCE)",
+                    "correct": false,
+                    "comment": "POP определяет точку подключения абонента к сети поставщика услуг"
+                },
+                {
+                    "answer": "точка разграничения",
+                    "correct": false,
+                    "comment": "POP определяет точку подключения абонента к сети поставщика услуг"
+                },
+                {
+                    "answer": "местная линия",
+                    "correct": false,
+                    "comment": "POP определяет точку подключения абонента к сети поставщика услуг"
+                },
+                {
+                    "answer": "точка присутствия (POP)",
+                    "correct": true
+                }
+            ]
+        },
+        {
+            "question": "Какие устройства работают аналогично модему голосового диапазона, но используют более высокие частоты широкополосного доступа и скорости передачи? (верны два варианта)",
+            "answerType": "multiChoice",
+            "answers": [
+                {
+                    "answer": "кабельный модем",
+                    "correct": true
+                },
+                {
+                    "answer": "устройство CSU/DSU",
+                    "correct": false,
+                    "comment": "Кабельный и DSL модемы работают аналогично модему для передачи по телефонным каналам, однако используют более высокие частоты и скорости передачи"
+                },
+                {
+                    "answer": "модем DSL",
+                    "correct": true
+                },
+                {
+                    "answer": "оптический конвертор",
+                    "correct": false,
+                    "comment": "Кабельный и DSL модемы работают аналогично модему для передачи по телефонным каналам, однако используют более высокие частоты и скорости передачи"
+                },
+                {
+                    "answer": "голосовой модем",
+                    "correct": false,
+                    "comment": "Кабельный и DSL модемы работают аналогично модему для передачи по телефонным каналам, однако используют более высокие частоты и скорости передачи"
+                }
+            ]
+        },
+        {
+            "question": "Какой метод связи используется во всех WAN соединениях?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "коммутация каналов",
+                    "correct": false,
+                    "comment": "Методы связи с последовательной передачей используются во всех WAN соединениях"
+                },
+                {
+                    "answer": "пакетная коммутация",
+                    "correct": false,
+                    "comment": "Методы связи с последовательной передачей используются во всех WAN соединениях"
+                },
+                {
+                    "answer": "параллельная передача",
+                    "correct": false,
+                    "comment": "Методы связи с последовательной передачей используются во всех WAN соединениях"
+                },
+                {
+                    "answer": "последовательная передача",
+                    "correct": true
+                }
+            ]
+        },
+        {
+            "question": "Какие варианты подключения WAN являются технологиями с коммутацией каналов? (верны два варианта)",
+            "answerType": "multiChoice",
+            "answers": [
+                {
+                    "answer": "ATM",
+                    "correct": false,
+                    "comment": "PSTN (ТСОП) и ISDN — это два варианта подключения глобальной сети с коммутацией каналов"
+                },
+                {
+                    "answer": "WAN на основе Ethernet",
+                    "correct": false,
+                    "comment": "PSTN (ТСОП) и ISDN — это два варианта подключения глобальной сети с коммутацией каналов"
+                },
+                {
+                    "answer": "Frame Relay",
+                    "correct": false,
+                    "comment": "PSTN (ТСОП) и ISDN — это два варианта подключения глобальной сети с коммутацией каналов"
+                },
+                {
+                    "answer": "ISDN",
+                    "correct": true
+                },
+                {
+                    "answer": "PSTN",
+                    "correct": true
+                }
+            ]
+        },
+        {
+            "question": "Какие варианты подключения WAN представляют собой технологии коммутации пакетов? (верны два варианта)",
+            "answerType": "multiChoice",
+            "answers": [
+                {
+                    "answer": "WAN на основе Ethernet",
+                    "correct": true
+                },
+                {
+                    "answer": "Frame Relay",
+                    "correct": true
+                },
+                {
+                    "answer": "ISDN",
+                    "correct": false,
+                    "comment": "Ethernet WAN и Frame Relay — это два варианта подключения WAN с коммутацией пакетов"
+                },
+                {
+                    "answer": "PSTN",
+                    "correct": false,
+                    "comment": "Ethernet WAN и Frame Relay — это два варианта подключения WAN с коммутацией пакетов"
+                }
+            ]
+        },
+        {
+            "question": "Какая волоконно-оптическая технология увеличивает пропускную способность, используя разные длины волн?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "DWDM",
+                    "correct": true
+                },
+                {
+                    "answer": "SDH",
+                    "correct": false,
+                    "comment": "DWDM является оптоволоконной технологией, которая увеличивает пропускную способность за счёт использования различных длин волн"
+                },
+                {
+                    "answer": "SONET",
+                    "correct": false,
+                    "comment": "DWDM является оптоволоконной технологией, которая увеличивает пропускную способность за счёт использования различных длин волн"
+                }
+            ]
+        }
+    ]
 }

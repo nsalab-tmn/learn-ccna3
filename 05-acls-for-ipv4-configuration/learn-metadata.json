@@ -43,9 +43,6 @@
         },
         {
             "$ref": "./05.06-summary/learn-metadata.json"
-        },
-        {
-            "$ref": "./05.05.04-quiz/learn-metadata.json"
         }
     ]
 }

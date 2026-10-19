@@ -1,9 +1,10 @@
 {
     "title": "Настройка статической трансляции IPv4-адресов",
-    "materialType": "lecture",
+    "shortName": "ccna3.nat-for-ipv4.configure-static-nat",
+    "type": "scored-lecture",
     "description": "Как настроить статическое преобразование адресов и как проверить его работу?",
     "difficulty": 3,
-    "duration": "PT0H7M",
+    "duration": "PT0H12M",
     "tags": {
         "$ref": "../../material-tags.json"
     },
@@ -13,5 +14,127 @@
     },
     "assets": {
         "$ref": "./assets"
-    }
+    },
+    "competency": {
+        "produces": {
+            "id": "ksa.ccna3.nat-for-ipv4.configure-static-nat",
+            "kind": "K",
+            "bloom": "understand",
+            "objective": "Choose the commands that configure a static NAT mapping and the inside and outside interfaces, trace how static NAT handles a connection started from outside, and interpret the static entry in the NAT translation table."
+        },
+        "requires": [
+            "ksa.ccna3.nat-for-ipv4.nat-characteristics",
+            "ksa.ccna3.nat-for-ipv4.types-of-nat"
+        ],
+        "measurement": {
+            "mode": "test",
+            "grader": "test-auto",
+            "aligned_bloom": "understand",
+            "passes_when": "All embedded questions answered correctly (100%, unlimited attempts): ip nat inside source static, ip nat inside and outside, translating an inbound packet, show ip nat translations for static NAT.",
+            "calibration": "operator-judge"
+        }
+    },
+    "passingScore": 100,
+    "questions": [
+        {
+            "question": "Какой командой на R2 создать статическое соответствие между внутренним локальным адресом веб-сервера 192.168.10.254 и внутренним глобальным адресом 209.165.201.5?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "ip nat inside source static 192.168.10.254 209.165.201.5",
+                    "correct": true
+                },
+                {
+                    "answer": "ip nat inside source static 209.165.201.5 192.168.10.254",
+                    "correct": false,
+                    "comment": "В команде сначала указывают внутренний локальный адрес, затем внутренний глобальный: ip nat inside source static 192.168.10.254 209.165.201.5."
+                },
+                {
+                    "answer": "ip nat outside source static 192.168.10.254 209.165.201.5",
+                    "correct": false,
+                    "comment": "Преобразуется адрес внутреннего устройства — веб-сервера, поэтому соответствие создают командой ip nat inside source static 192.168.10.254 209.165.201.5."
+                },
+                {
+                    "answer": "ip nat inside 192.168.10.254 209.165.201.5",
+                    "correct": false,
+                    "comment": "Команда ip nat inside только помечает интерфейс как внутренний. Соответствие создают командой ip nat inside source static 192.168.10.254 209.165.201.5."
+                }
+            ]
+        },
+        {
+            "question": "Статическое соответствие на R2 уже создано. Что еще нужно настроить, чтобы преобразование заработало?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "Пометить интерфейс, подключенный к внутренней сети, командой ip nat inside, а интерфейс, подключенный к внешней сети, — командой ip nat outside",
+                    "correct": true
+                },
+                {
+                    "answer": "Создать пул публичных адресов NAT",
+                    "correct": false,
+                    "comment": "Для статического NAT пул не нужен: внутренний глобальный адрес задан в самом соответствии. Вторая задача — настроить интерфейсы командами ip nat inside и ip nat outside."
+                },
+                {
+                    "answer": "Очистить статистику командой clear ip nat statistics",
+                    "correct": false,
+                    "comment": "Очищать статистику рекомендуется перед проверкой, но это не включает преобразование. Нужно настроить интерфейсы командами ip nat inside и ip nat outside."
+                },
+                {
+                    "answer": "Пометить оба интерфейса командой ip nat inside",
+                    "correct": false,
+                    "comment": "Интерфейс, подключенный к внешней сети, помечают командой ip nat outside: в примере Serial 0/1/0 — внутренний интерфейс, а Serial 0/1/1 — внешний."
+                }
+            ]
+        },
+        {
+            "question": "Клиент из Интернета отправил пакет на адрес 209.165.201.5 — внутренний глобальный адрес веб-сервера. Что сделает R2, получив этот пакет на внешнем интерфейсе?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "Найдет адрес в таблице NAT, заменит его внутренним локальным адресом 192.168.10.254 и перешлет пакет веб-серверу",
+                    "correct": true
+                },
+                {
+                    "answer": "Отбросит пакет: статический NAT не позволяет внешним устройствам начинать подключение",
+                    "correct": false,
+                    "comment": "Статический NAT как раз позволяет внешним устройствам подключаться к внутренним по постоянному публичному адресу. R2 заменит 209.165.201.5 на 192.168.10.254 и перешлет пакет."
+                },
+                {
+                    "answer": "Перешлет пакет веб-серверу, не меняя адрес назначения",
+                    "correct": false,
+                    "comment": "Адрес 209.165.201.5 не назначен веб-серверу во внутренней сети. R2 заменит его внутренним локальным адресом 192.168.10.254 и перешлет пакет."
+                },
+                {
+                    "answer": "Заменит адрес источника клиента адресом 192.168.10.254",
+                    "correct": false,
+                    "comment": "Адрес источника клиента не меняется. R2 заменяет адрес назначения 209.165.201.5 внутренним локальным адресом 192.168.10.254."
+                }
+            ]
+        },
+        {
+            "question": "Какое утверждение о выводе команды show ip nat translations при статическом NAT верно?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "Статическое преобразование присутствует в таблице всегда, а во время активного сеанса появляется еще запись с адресом внешнего устройства",
+                    "correct": true
+                },
+                {
+                    "answer": "Статическое преобразование появляется в таблице только во время активного сеанса",
+                    "correct": false,
+                    "comment": "Статическое преобразование присутствует в таблице всегда, независимо от активных взаимодействий. Во время сеанса добавляется запись с адресом внешнего устройства."
+                },
+                {
+                    "answer": "Команда выводит суммарное число активных преобразований, интерфейсы NAT и счетчики совпадений",
+                    "correct": false,
+                    "comment": "Эти сведения выводит show ip nat statistics. Команда show ip nat translations показывает сами преобразования: статическое — всегда, а во время сеанса — и запись с адресом внешнего устройства."
+                },
+                {
+                    "answer": "Статическое преобразование удаляется из таблицы командой clear ip nat statistics",
+                    "correct": false,
+                    "comment": "Эта команда очищает статистику, а не таблицу преобразований. Статическое преобразование присутствует в таблице всегда."
+                }
+            ]
+        }
+    ]
 }
