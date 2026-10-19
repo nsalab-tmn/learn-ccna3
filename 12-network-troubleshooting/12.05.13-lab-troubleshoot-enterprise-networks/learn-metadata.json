@@ -8,32 +8,25 @@
     "tags": {
         "$ref": "../../material-tags.json"
     },
+    "compute": {
+        "local": {
+            "$ref": "./compute/local"
+        }
+    },
     "credentialsSchema": {
-        "userName": {
-            "title": "Имя пользователя",
-            "source": "learn_user"
-        },
-        "password": {
-            "title": "Пароль",
-            "source": "learn_password"
-        },
         "consoleURL": {
-            "title": "Адрес портала",
-            "value": "https://portal.skillscloud.company"
+            "title": "Адрес лаборатории",
+            "source": "URL"
         }
     },
     "skills": {},
     "text": {
         "$ref": "./README.md"
     },
-    "assets": {
-        "$ref": "./assets"
-    },
     "assessment": {
-        "$ref": "./assessment.json"
-    },
-    "deploy": {
-        "$ref": "./deploy"
+        "local": {
+            "$ref": "./assessment"
+        }
     },
     "answerSchema": {
         "type": "object",
@@ -41,57 +34,57 @@
         "properties": {
             "q_1": {
                 "type": "string",
-                "title": "1. Какие порты в настоящее время назначены VLAN 10?",
+                "title": "1. Какие порты коммутатора S1 входят в сеть VLAN 10 после исправления?",
                 "placeholder": "Enter your answer here"
             },
             "q_2": {
                 "type": "string",
-                "title": "2. Назначены ли в данный момент IP-адрес ПК?",
+                "title": "2. Получил ли компьютер PC1 адрес по DHCP после исправления? Какой адрес и шлюз по умолчанию?",
                 "placeholder": "Enter your answer here"
             },
             "q_3": {
                 "type": "string",
-                "title": "3. Были ли проблемы с EtherChannel?",
+                "title": "3. Какая неполадка была в агрегированных каналах между коммутаторами S2, S3 и S4?",
                 "placeholder": "Enter your answer here"
             },
             "q_4": {
                 "type": "string",
-                "title": "4. Были ли проблемы с транкингом?",
+                "title": "4. Какая неполадка была в магистральных каналах коммутаторов?",
                 "placeholder": "Enter your answer here"
             },
             "q_5": {
                 "type": "string",
-                "title": "5. У всех ли есть правильная адресация?",
+                "title": "5. У всех ли компьютеров после исправлений верная адресация: адрес из своей сети и шлюз по умолчанию?",
                 "placeholder": "Enter your answer here"
             },
             "q_6": {
                 "type": "string",
-                "title": "6. Существуют ли какие-либо проблемы с конфигурациями DHCP?",
+                "title": "6. Какие неполадки были в настройках DHCP-сервера маршрутизатора R3?",
                 "placeholder": "Enter your answer here"
             },
             "q_7": {
                 "type": "string",
-                "title": "7. Удалось ли вам получить эхо-запрос на все адреса IPv4?",
+                "title": "7. Получают ли все компьютеры ответы на эхо-запросы по IPv4 к серверу TFTP-Server и внешнему узлу Outside-Host?",
                 "placeholder": "Enter your answer here"
             },
             "q_8": {
                 "type": "string",
-                "title": "8. Все ли сети отображаются на всех маршрутизаторах?",
+                "title": "8. Есть ли все сети, включая маршрут по умолчанию, в таблицах маршрутизации всех трех маршрутизаторов?",
                 "placeholder": "Enter your answer here"
             },
             "q_9": {
                 "type": "string",
-                "title": "9. Успешно ли выполнен эхо-запрос?",
+                "title": "9. Успешен ли эхо-запрос с маршрутизатора R2 к внешнему узлу 64.100.100.10?",
                 "placeholder": "Enter your answer here"
             },
             "q_10": {
                 "type": "string",
-                "title": "10. Существуют ли маршруты, использующие последовательный канал?",
+                "title": "10. Какие маршруты в таблице маршрутизации R1 шли через последовательный канал до исправления и почему?",
                 "placeholder": "Enter your answer here"
             },
             "q_11": {
                 "type": "string",
-                "title": "11. Успешно ли выполнена проверка связи?",
+                "title": "11. Успешен ли эхо-запрос с маршрутизатора R1 к внешнему узлу, когда канал R3—R2 выключен и трафик идет по резервному последовательному каналу?",
                 "placeholder": "Enter your answer here"
             }
         }
