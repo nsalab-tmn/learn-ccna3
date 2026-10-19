@@ -1,9 +1,10 @@
 {
     "title": "Настройка динамической трансляции портов для IPv4",
-    "materialType": "lecture",
+    "shortName": "ccna3.nat-for-ipv4.configure-pat",
+    "type": "scored-lecture",
     "description": "Как настроить динамическую трансляцию портов (PAT) и как проверить ее работу?",
     "difficulty": 3,
-    "duration": "PT0H14M",
+    "duration": "PT0H20M",
     "tags": {
         "$ref": "../../material-tags.json"
     },
@@ -13,5 +14,153 @@
     },
     "assets": {
         "$ref": "./assets"
-    }
+    },
+    "competency": {
+        "produces": {
+            "id": "ksa.ccna3.nat-for-ipv4.configure-pat",
+            "kind": "K",
+            "bloom": "understand",
+            "objective": "Choose the overload configuration that enables PAT with a single interface address or a pool, trace how PAT assigns and reverses source ports for two hosts, and pick the command that shows pool usage."
+        },
+        "requires": [
+            "ksa.ccna3.nat-for-ipv4.types-of-nat",
+            "ksa.ccna3.nat-for-ipv4.configure-static-nat",
+            "ksa.ccna3.nat-for-ipv4.configure-dynamic-nat"
+        ],
+        "measurement": {
+            "mode": "test",
+            "grader": "test-auto",
+            "aligned_bloom": "understand",
+            "passes_when": "All embedded questions answered correctly (100%, unlimited attempts): the overload keyword, PAT on an interface address, port assignment for two hosts, return-traffic lookup, show ip nat statistics.",
+            "calibration": "operator-judge"
+        }
+    },
+    "passingScore": 100,
+    "questions": [
+        {
+            "question": "Какое ключевое слово нужно добавить в команду ip nat inside source, чтобы включить PAT?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "overload",
+                    "correct": true
+                },
+                {
+                    "answer": "static",
+                    "correct": false,
+                    "comment": "Ключевое слово static создает статическое соответствие «один к одному». PAT включается ключевым словом overload."
+                },
+                {
+                    "answer": "verbose",
+                    "correct": false,
+                    "comment": "Ключевое слово verbose добавляет подробности в вывод show ip nat translations. PAT включается ключевым словом overload."
+                },
+                {
+                    "answer": "netmask",
+                    "correct": false,
+                    "comment": "Ключевое слово netmask задает маску пула в команде ip nat pool. PAT включается ключевым словом overload."
+                }
+            ]
+        },
+        {
+            "question": "Поставщик услуг Интернета выделил организации один публичный адрес — адрес интерфейса Serial 0/1/1 маршрутизатора R2. Какая команда включит PAT для узлов, разрешенных ACL 1?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "ip nat inside source list 1 interface serial 0/1/1 overload",
+                    "correct": true
+                },
+                {
+                    "answer": "ip nat inside source list 1 interface serial 0/1/1",
+                    "correct": false,
+                    "comment": "Без ключевого слова overload PAT не включается: именно с ним потоки трафика определяются номерами портов в таблице NAT."
+                },
+                {
+                    "answer": "ip nat inside source static 192.168.0.0 209.165.200.225",
+                    "correct": false,
+                    "comment": "Статическое соответствие сопоставляет один адрес одному. PAT на адресе интерфейса включает команда ip nat inside source list 1 interface serial 0/1/1 overload."
+                },
+                {
+                    "answer": "ip nat outside source list 1 interface serial 0/1/1 overload",
+                    "correct": false,
+                    "comment": "Преобразуются адреса внутренних узлов, поэтому команда начинается с ip nat inside source: ip nat inside source list 1 interface serial 0/1/1 overload."
+                }
+            ]
+        },
+        {
+            "question": "ПК 1 (192.168.10.10) и ПК 2 (192.168.11.10) одновременно отправляют пакеты с одним и тем же портом TCP источника 1444, и R2 преобразует оба адреса в 209.165.200.225. Пакет ПК 1 пришел первым. С какими портами источника пакеты выйдут из R2?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "ПК 1 — 1444, ПК 2 — 1445",
+                    "correct": true
+                },
+                {
+                    "answer": "Оба — 1444",
+                    "correct": false,
+                    "comment": "Тогда записи в таблице NAT не были бы уникальными. PAT сохраняет порт 1444 для ПК 1 и увеличивает порт для ПК 2 до 1445."
+                },
+                {
+                    "answer": "ПК 1 — 1445, ПК 2 — 1444",
+                    "correct": false,
+                    "comment": "Пакет ПК 1 пришел первым, и порт 1444 был свободен, поэтому PAT его сохранил. ПК 2 получает следующий порт — 1445."
+                },
+                {
+                    "answer": "Оба — 1444, но ПК 2 получает другой внутренний глобальный адрес",
+                    "correct": false,
+                    "comment": "В этой настройке PAT использует для всех преобразований один адрес 209.165.200.225. ПК 2 получает порт 1445."
+                }
+            ]
+        },
+        {
+            "question": "Как R2 определяет, какому внутреннему узлу переслать ответный пакет сервера, адресованный 209.165.200.225?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "Находит уникальную запись в таблице NAT по адресу и порту назначения пакета",
+                    "correct": true
+                },
+                {
+                    "answer": "Пересылает пакет всем узлам, адреса которых преобразуются в 209.165.200.225",
+                    "correct": false,
+                    "comment": "R2 пересылает пакет одному узлу: по адресу и порту назначения он находит уникальную запись в таблице NAT."
+                },
+                {
+                    "answer": "Выбирает узел по MAC-адресу назначения кадра",
+                    "correct": false,
+                    "comment": "MAC-адреса в преобразовании не участвуют. Адресу 209.165.200.225 соответствует несколько записей, но порт назначения у каждой уникален."
+                },
+                {
+                    "answer": "Выбирает узел, который последним отправлял пакеты через R2",
+                    "correct": false,
+                    "comment": "Порядок отправки здесь ни при чем. R2 находит уникальную запись в таблице NAT по адресу и порту назначения пакета."
+                }
+            ]
+        },
+        {
+            "question": "Какой командой проверить, сколько адресов пула NAT-POOL2 выделено для преобразований PAT?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "show ip nat statistics",
+                    "correct": true
+                },
+                {
+                    "answer": "show ip nat translations",
+                    "correct": false,
+                    "comment": "Эта команда выводит сами преобразования с адресами и портами. Число адресов в пуле и число выделенных адресов показывает show ip nat statistics."
+                },
+                {
+                    "answer": "show access-lists",
+                    "correct": false,
+                    "comment": "Эта команда выводит записи ACL и их счетчики. Число адресов в пуле и число выделенных адресов показывает show ip nat statistics."
+                },
+                {
+                    "answer": "clear ip nat translation *",
+                    "correct": false,
+                    "comment": "Эта команда удаляет динамические записи. Число адресов в пуле и число выделенных адресов показывает show ip nat statistics."
+                }
+            ]
+        }
+    ]
 }

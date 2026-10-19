@@ -1,9 +1,10 @@
 {
     "title": "Настройка расширенных списков контроля доступа",
-    "materialType": "lecture",
+    "shortName": "ccna3.acls-for-ipv4-configuration.configure-extended-ipv4-acls",
+    "type": "scored-lecture",
     "description": "Что такое расширенные списки контроля доступа? В каких случаях следует их использовать и какой функционал они предоставляют?",
     "difficulty": 3,
-    "duration": "PT0H25M",
+    "duration": "PT0H31M",
     "tags": {
         "$ref": "../../material-tags.json"
     },
@@ -13,5 +14,154 @@
     },
     "assets": {
         "$ref": "./assets"
-    }
+    },
+    "competency": {
+        "produces": {
+            "id": "ksa.ccna3.acls-for-ipv4-configuration.configure-extended-ipv4-acls",
+            "kind": "K",
+            "bloom": "understand",
+            "objective": "Describe what extended IPv4 ACLs filter on, choose the ACE that permits a given TCP service from a network, explain what the established keyword permits and why SSH needs a port number, and interpret which ACLs an interface uses in each direction."
+        },
+        "requires": [
+            "ksa.ccna3.acls-for-ipv4-configuration.configure-standard-ipv4-acls",
+            "ksa.ccna3.acls-for-ipv4-configuration.modify-ipv4-acls",
+            "ksa.ccna3.acls-for-ipv4-configuration.secure-vty-ports-with-a-standard-ipv4-acl",
+            "ksa.ccna3.network-security-concepts.tcp-and-udp-vulnerabilities"
+        ],
+        "measurement": {
+            "mode": "test",
+            "grader": "test-auto",
+            "aligned_bloom": "understand",
+            "passes_when": "All embedded questions answered correctly (100%, unlimited attempts): extended ACL criteria and numbering, an ACE for HTTPS, the established keyword, port names and numbers, show ip interface output.",
+            "calibration": "operator-judge"
+        }
+    },
+    "passingScore": 100,
+    "questions": [
+        {
+            "question": "Какое утверждение о расширенных ACL IPv4 верно?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "Они могут фильтровать по адресам источника и назначения, протоколу и номеру порта",
+                    "correct": true
+                },
+                {
+                    "answer": "Они фильтруют только по адресу источника",
+                    "correct": false,
+                    "comment": "Только по адресу источника фильтруют стандартные ACL. Расширенные ACL фильтруют по адресам источника и назначения, протоколу и номеру порта."
+                },
+                {
+                    "answer": "Их записи для отдельных узлов автоматически выводятся перед записями диапазона",
+                    "correct": false,
+                    "comment": "Такое упорядочение применяется только к стандартным ACL. Записи расширенного ACL отображаются и обрабатываются в порядке ввода."
+                },
+                {
+                    "answer": "Их номера лежат в диапазонах от 1 до 99 и от 1300 до 1999",
+                    "correct": false,
+                    "comment": "Это диапазоны стандартных ACL. Расширенные нумерованные ACL используют номера от 100 до 199 и от 2000 до 2699."
+                }
+            ]
+        },
+        {
+            "question": "Нужно разрешить трафик HTTPS из сети 192.168.10.0/24 в любую сеть. Какая запись подходит?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "access-list 110 permit tcp 192.168.10.0 0.0.0.255 any eq 443",
+                    "correct": true
+                },
+                {
+                    "answer": "access-list 110 permit udp 192.168.10.0 0.0.0.255 any eq 443",
+                    "correct": false,
+                    "comment": "HTTPS использует порт TCP 443, поэтому в записи нужен протокол tcp: access-list 110 permit tcp 192.168.10.0 0.0.0.255 any eq 443."
+                },
+                {
+                    "answer": "access-list 110 permit tcp any 192.168.10.0 0.0.0.255 eq 443",
+                    "correct": false,
+                    "comment": "Здесь сеть 192.168.10.0/24 указана как назначение. Источник указывают первым: access-list 110 permit tcp 192.168.10.0 0.0.0.255 any eq 443."
+                },
+                {
+                    "answer": "access-list 10 permit tcp 192.168.10.0 0.0.0.255 any eq 443",
+                    "correct": false,
+                    "comment": "Номер 10 относится к стандартным ACL, которые не фильтруют по протоколу и порту. Расширенному ACL нужен номер от 100 до 199 или от 2000 до 2699, например 110."
+                }
+            ]
+        },
+        {
+            "question": "Что разрешает запись access-list 120 permit tcp any 192.168.10.0 0.0.0.255 established?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "Только ответный TCP-трафик на соединения, начатые из сети 192.168.10.0/24: сегменты с установленным флагом ACK или RST",
+                    "correct": true
+                },
+                {
+                    "answer": "Любой TCP-трафик к узлам сети 192.168.10.0/24, в том числе новые соединения из внешней сети",
+                    "correct": false,
+                    "comment": "С ключевым словом established TCP-трафик, который начинает внешний узел, отклоняется. Разрешается только ответный трафик на соединения, начатые из сети 192.168.10.0/24."
+                },
+                {
+                    "answer": "Только TCP-трафик, исходящий из сети 192.168.10.0/24",
+                    "correct": false,
+                    "comment": "В записи сеть 192.168.10.0/24 указана как назначение. Разрешается ответный TCP-трафик, который возвращается в эту сеть по соединениям, начатым из нее."
+                },
+                {
+                    "answer": "Любой трафик IP к сети 192.168.10.0/24, включая UDP и ICMP",
+                    "correct": false,
+                    "comment": "Ключевое слово established применяется только к протоколу TCP. Разрешается ответный TCP-трафик на соединения, начатые из сети 192.168.10.0/24."
+                }
+            ]
+        },
+        {
+            "question": "Почему в записи расширенного ACL для SSH указывают номер порта eq 22, а не имя?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "В списке имен портов нет имени для SSH, поэтому нужно указать номер порта",
+                    "correct": true
+                },
+                {
+                    "answer": "Имена портов в расширенных ACL не поддерживаются",
+                    "correct": false,
+                    "comment": "Поддерживаются: например, eq www и eq 80 дают одинаковый результат. Номер нужен, когда в списке нет имени протокола, как для SSH."
+                },
+                {
+                    "answer": "Номер порта маршрутизатор обрабатывает быстрее имени",
+                    "correct": false,
+                    "comment": "Скорость обработки здесь ни при чем: номер нужен, потому что в списке имен портов нет имени для SSH."
+                },
+                {
+                    "answer": "SSH работает по UDP, а имена есть только у портов TCP",
+                    "correct": false,
+                    "comment": "SSH указывают в записи с протоколом tcp (permit tcp ... eq 22), а имена есть и у портов UDP. Номер нужен, потому что в списке имен портов нет имени для SSH."
+                }
+            ]
+        },
+        {
+            "question": "Команда show ip interface g0/0/0 | include access list выводит строки Outgoing access list is REPLY-PC1 и Inbound access list is PERMIT-PC1. Что они означают?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "На интерфейсе G0/0/0 ACL PERMIT-PC1 применен к входящему трафику, а REPLY-PC1 — к исходящему",
+                    "correct": true
+                },
+                {
+                    "answer": "ACL PERMIT-PC1 применен к исходящему трафику, а REPLY-PC1 — к входящему",
+                    "correct": false,
+                    "comment": "Наоборот: строка Inbound относится к входящему трафику, Outgoing — к исходящему. PERMIT-PC1 применен на вход, REPLY-PC1 — на выход."
+                },
+                {
+                    "answer": "Оба ACL настроены на маршрутизаторе, но к интерфейсу не применены",
+                    "correct": false,
+                    "comment": "Команда show ip interface показывает именно ACL, примененные к интерфейсу, и их направление: PERMIT-PC1 — на вход, REPLY-PC1 — на выход."
+                },
+                {
+                    "answer": "Записи обоих ACL сработали хотя бы один раз",
+                    "correct": false,
+                    "comment": "Счетчики совпадений выводит команда show access-lists. Здесь показано, что PERMIT-PC1 применен к входящему трафику интерфейса, а REPLY-PC1 — к исходящему."
+                }
+            ]
+        }
+    ]
 }

@@ -12,9 +12,6 @@
             "$ref": "./06.01-nat-characteristics/learn-metadata.json"
         },
         {
-            "$ref": "./06.01.05-nat-characteristics-quiz/learn-metadata.json"
-        },
-        {
             "$ref": "./06.02-types-of-nat/learn-metadata.json"
         },
         {
@@ -22,9 +19,6 @@
         },
         {
             "$ref": "./06.03-nat-advantages/learn-metadata.json"
-        },
-        {
-            "$ref": "./06.03.03-nat-advantages-quiz/learn-metadata.json"
         },
         {
             "$ref": "./06.04-configure-static-nat/learn-metadata.json"
@@ -52,9 +46,6 @@
         },
         {
             "$ref": "./06.09-summary/learn-metadata.json"
-        },
-        {
-            "$ref": "./06.08.04-quiz/learn-metadata.json"
         }
     ]
 }
