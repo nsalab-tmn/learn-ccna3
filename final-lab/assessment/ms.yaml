@@ -963,6 +963,36 @@ Criterions:
             assert_tags:
             - service password-encryption
             tags_are_present: true
+  - code: R1.NAT
+    name: NAT
+    aspects:
+    - code: R1.NAT.NAT-STATIC-1
+      name: Inside Source Static.NAT Source Setting 1
+      description: Статический NAT 192.168.20.10 → 10.0.0.5
+      skills:
+      - Nat
+      max_mark: 1
+      steps:
+      - name: 'show running-config: matches (?m)^ip nat inside source static 192\.168\.20\.10 10\.0\.0\.5\s*$'
+        code: check
+        type: check
+        device: R1
+        action_chain:
+        - action: verify_output_regex
+          action_vars:
+            command: show running-config
+            expr: (?m)^ip nat inside source static 192\.168\.20\.10 10\.0\.0\.5\s*$
+            match: true
+      - name: 'show ip nat translations: matches (?m)^--- 10\.0\.0\.5\s+192\.168\.20\.10\s+---\s+---\s*$'
+        code: check
+        type: check
+        device: R1
+        action_chain:
+        - action: verify_output_regex
+          action_vars:
+            command: show ip nat translations
+            expr: (?m)^--- 10\.0\.0\.5\s+192\.168\.20\.10\s+---\s+---\s*$
+            match: true
 - code: R2
   name: R2
   subCriterions:
@@ -1481,6 +1511,21 @@ Criterions:
             command: show running-config interface GigabitEthernet0/0/0
             expr: (?m)^ ip nat outside\s*$
             match: true
+    - code: R2.PORTS.G0-0-1-NAT
+      name: GigabitEthernet0/0/1.NAT Mode
+      description: 'G0/0/1: ip nat inside'
+      max_mark: 1
+      steps:
+      - name: 'show running-config interface GigabitEthernet0/0/1: matches (?m)^ ip nat inside\s*$'
+        code: check
+        type: check
+        device: R2
+        action_chain:
+        - action: verify_output_regex
+          action_vars:
+            command: show running-config interface GigabitEthernet0/0/1
+            expr: (?m)^ ip nat inside\s*$
+            match: true
     - code: R2.PORTS.G0-0-0-ACL-IN
       name: GigabitEthernet0/0/0.Access-group In
       description: 'G0/0/0: список R2-SECURITY применён (in)'
@@ -1854,6 +1899,28 @@ Criterions:
             command: show running-config
             expr: (?m)^hostname S1\s*$
             match: true
+  - code: S1.ACL
+    name: ACL
+    aspects:
+    - code: S1.ACL.ACL-S1-VTY
+      name: S1-VTY
+      description: 'Список доступа S1-VTY: 1 записей по порядку'
+      skills:
+      - Acl
+      max_mark: 1
+      steps:
+      - name: 'show access-lists S1-VTY: matches (?m)^Standard IP access list S1\-VTY\s*$\s*\n\s+\d+ permit\ 192\.168\.10\.10(?:
+          \(\d+ match(?:es)?\))?\s*$(?![\s\S]*^\s+\d+ (?:permit|deny) )'
+        code: check
+        type: check
+        device: S1
+        action_chain:
+        - action: verify_output_regex
+          action_vars:
+            command: show access-lists S1-VTY
+            expr: '(?m)^Standard IP access list S1\-VTY\s*$\s*\n\s+\d+ permit\ 192\.168\.10\.10(?: \(\d+ match(?:es)?\))?\s*$(?![\s\S]*^\s+\d+
+              (?:permit|deny) )'
+            match: true
   - code: S1.VTY
     name: VTY Lines
     aspects:
@@ -2046,6 +2113,28 @@ Criterions:
           action_vars:
             command: show running-config
             expr: (?m)^hostname S3\s*$
+            match: true
+  - code: S3.ACL
+    name: ACL
+    aspects:
+    - code: S3.ACL.ACL-S3-VTY
+      name: S3-VTY
+      description: 'Список доступа S3-VTY: 1 записей по порядку'
+      skills:
+      - Acl
+      max_mark: 1
+      steps:
+      - name: 'show access-lists S3-VTY: matches (?m)^Standard IP access list S3\-VTY\s*$\s*\n\s+\d+ permit\ 192\.168\.30\.0,\
+          wildcard\ bits\ 0\.0\.0\.255(?: \(\d+ match(?:es)?\))?\s*$(?![\s\S]*^\s+\d+ (?:permit|deny) )'
+        code: check
+        type: check
+        device: S3
+        action_chain:
+        - action: verify_output_regex
+          action_vars:
+            command: show access-lists S3-VTY
+            expr: '(?m)^Standard IP access list S3\-VTY\s*$\s*\n\s+\d+ permit\ 192\.168\.30\.0,\ wildcard\ bits\
+              0\.0\.0\.255(?: \(\d+ match(?:es)?\))?\s*$(?![\s\S]*^\s+\d+ (?:permit|deny) )'
             match: true
   - code: S3.VTY
     name: VTY Lines
