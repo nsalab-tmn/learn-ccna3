@@ -1,9 +1,10 @@
 {
     "title": "Технологии виртуальных частных сетей",
-    "materialType": "lecture",
+    "shortName": "ccna3.vpn-and-ipsec-concepts.vpn-technology",
+    "type": "scored-lecture",
     "description": "Для чего нужны виртуальные частные сети и в чем заключаются их приемущества? Какие есть основные типы VPN-подключений?",
     "difficulty": 3,
-    "duration": "PT0H6M",
+    "duration": "PT0H13M",
     "tags": {
         "$ref": "../../material-tags.json"
     },
@@ -13,5 +14,159 @@
     },
     "assets": {
         "$ref": "./assets"
-    }
+    },
+    "competency": {
+        "produces": {
+            "id": "ksa.ccna3.vpn-and-ipsec-concepts.vpn-technology",
+            "kind": "K",
+            "bloom": "understand",
+            "objective": "Match each VPN benefit (cost savings, security, scalability, compatibility) to its description, choose a remote-access VPN for a mobile user, and tell the enterprise-managed VPN solutions (IPsec, SSL, DMVPN) from provider-managed ones (MPLS, Frame Relay)."
+        },
+        "requires": [
+            "ksa.ccna3.wan-concepts.internet-based-connectivity"
+        ],
+        "measurement": {
+            "mode": "test",
+            "grader": "test-auto",
+            "aligned_bloom": "understand",
+            "passes_when": "All embedded questions answered correctly (100%, unlimited attempts): VPN benefits, remote-access VPN for mobile users, enterprise-managed VPN solutions.",
+            "calibration": "operator-judge"
+        }
+    },
+    "passingScore": 100,
+    "questions": [
+        {
+            "question": "Какое преимущество VPN позволяет предприятию легко добавлять больше пользователей в сеть?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "сокращение затрат",
+                    "correct": false,
+                    "comment": "VPN обеспечивают масштабируемость, которая позволяет организациям использовать Интернет, чтобы легко добавлять новых пользователей"
+                },
+                {
+                    "answer": "информационная безопасность",
+                    "correct": false,
+                    "comment": "VPN обеспечивают масштабируемость, которая позволяет организациям использовать Интернет, чтобы легко добавлять новых пользователей"
+                },
+                {
+                    "answer": "масштабируемость",
+                    "correct": true
+                },
+                {
+                    "answer": "совместимость",
+                    "correct": false,
+                    "comment": "VPN обеспечивают масштабируемость, которая позволяет организациям использовать Интернет, чтобы легко добавлять новых пользователей"
+                }
+            ]
+        },
+        {
+            "question": "Какое преимущество VPN позволяет предприятию увеличить пропускную способность для удаленных сайтов без добавления дополнительного оборудования или каналов глобальной сети?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "сокращение затрат",
+                    "correct": true
+                },
+                {
+                    "answer": "информационная безопасность",
+                    "correct": false,
+                    "comment": "VPN сокращают затраты на подключение для удаленных сайтов и пользователей, одновременно увеличивая пропускную способность удаленного подключения"
+                },
+                {
+                    "answer": "масштабируемость",
+                    "correct": false,
+                    "comment": "VPN сокращают затраты на подключение для удаленных сайтов и пользователей, одновременно увеличивая пропускную способность удаленного подключения"
+                },
+                {
+                    "answer": "совместимость",
+                    "correct": false,
+                    "comment": "VPN сокращают затраты на подключение для удаленных сайтов и пользователей, одновременно увеличивая пропускную способность удаленного подключения"
+                }
+            ]
+        },
+        {
+            "question": "Какое преимущество VPN защищает данные от несанкционированного доступа благодаря усовершенствованным протоколам шифрования и аутентификации?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "сокращение затрат",
+                    "correct": false,
+                    "comment": "Подключения VPN обеспечивают высокий уровень безопасности с помощью усовершенствованных механизмов шифрования и протоколов аутентификации, которые защищают данные от несанкционированного доступа"
+                },
+                {
+                    "answer": "информационная безопасность",
+                    "correct": true
+                },
+                {
+                    "answer": "масштабируемость",
+                    "correct": false,
+                    "comment": "Подключения VPN обеспечивают высокий уровень безопасности с помощью усовершенствованных механизмов шифрования и протоколов аутентификации, которые защищают данные от несанкционированного доступа"
+                },
+                {
+                    "answer": "совместимость",
+                    "correct": false,
+                    "comment": "Подключения VPN обеспечивают высокий уровень безопасности с помощью усовершенствованных механизмов шифрования и протоколов аутентификации, которые защищают данные от несанкционированного доступа"
+                }
+            ]
+        },
+        {
+            "question": "Какой тип VPN используется для подключения мобильного пользователя?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "Site-to-site (межузловые или межфилиальные)",
+                    "correct": false,
+                    "comment": "VPN с удаленным доступом создается динамически, чтобы безопасно соединить клиента (мобильного пользователя) и оконечное устройство VPN"
+                },
+                {
+                    "answer": "Remote-access (удаленный доступ)",
+                    "correct": true
+                },
+                {
+                    "answer": "GRE",
+                    "correct": false,
+                    "comment": "VPN с удаленным доступом создается динамически, чтобы безопасно соединить клиента (мобильного пользователя) и оконечное устройство VPN"
+                },
+                {
+                    "answer": "протокол IPsec",
+                    "correct": false,
+                    "comment": "VPN с удаленным доступом создается динамически, чтобы безопасно соединить клиента (мобильного пользователя) и оконечное устройство VPN"
+                }
+            ]
+        },
+        {
+            "question": "Какие решения VPN обычно используются на предприятии? (верны три варианта)",
+            "answerType": "multiChoice",
+            "answers": [
+                {
+                    "answer": "MPLS VPN уровня 2",
+                    "correct": false,
+                    "comment": "К VPN, которыми управляет само предприятие, относятся IPsec, GRE через IPsec, DMVPN, VTI, клиентский IPsec и SSL без клиента"
+                },
+                {
+                    "answer": "MPLS VPN уровня 3",
+                    "correct": false,
+                    "comment": "К VPN, которыми управляет само предприятие, относятся IPsec, GRE через IPsec, DMVPN, VTI, клиентский IPsec и SSL без клиента"
+                },
+                {
+                    "answer": "протокол IPsec",
+                    "correct": true
+                },
+                {
+                    "answer": "SSL",
+                    "correct": true
+                },
+                {
+                    "answer": "Frame Relay.",
+                    "correct": false,
+                    "comment": "К VPN, которыми управляет само предприятие, относятся IPsec, GRE через IPsec, DMVPN, VTI, клиентский IPsec и SSL без клиента"
+                },
+                {
+                    "answer": "DMVPN",
+                    "correct": true
+                }
+            ]
+        }
+    ]
 }

@@ -1,9 +1,10 @@
 {
     "title": "Поддержка файловой системы на сетевом оборудовании",
-    "materialType": "lecture",
+    "shortName": "ccna3.network-management.router-and-switch-file-maintenance",
+    "type": "scored-lecture",
     "description": "Где сетевые устройства хранят конфигурацию и образы операционных систем? Какие протоколы используются для взаимодействия с файловыми системами сетевого оборудования? Как выглядит типовая процедура восстановления пароля на сетевом устройстве?",
     "difficulty": 3,
-    "duration": "PT0H20M",
+    "duration": "PT0H26M",
     "tags": {
         "$ref": "../../material-tags.json"
     },
@@ -13,5 +14,144 @@
     },
     "assets": {
         "$ref": "./assets"
-    }
+    },
+    "competency": {
+        "produces": {
+            "id": "ksa.ccna3.network-management.router-and-switch-file-maintenance",
+            "kind": "K",
+            "bloom": "understand",
+            "objective": "Interpret the file-system list of a router (default file system, boot disk, location of the startup configuration) and choose how to back up and restore a configuration with a text file or a USB drive."
+        },
+        "requires": [],
+        "measurement": {
+            "mode": "test",
+            "grader": "test-auto",
+            "aligned_bloom": "understand",
+            "passes_when": "All embedded questions answered correctly (100%, unlimited attempts): default and boot file system, where startup-config is stored, checking a USB drive, restoring from USB, preparing a text configuration file.",
+            "calibration": "operator-judge"
+        }
+    },
+    "passingScore": 100,
+    "questions": [
+        {
+            "question": "В выводе команды show file systems перед файловой системой флеш-памяти стоит звездочка (*), а после ее префикса — символ решетки (#). Что они означают?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "Флеш-память — текущая файловая система по умолчанию и загрузочный диск",
+                    "correct": true
+                },
+                {
+                    "answer": "Флеш-память доступна только для чтения",
+                    "correct": false,
+                    "comment": "Разрешения показывает столбец Flags (ro, wo, rw). Звездочка обозначает файловую систему по умолчанию, а решетка — загрузочный диск."
+                },
+                {
+                    "answer": "Флеш-память — сетевая файловая система, как tftp:",
+                    "correct": false,
+                    "comment": "Флеш-память — память самого устройства, а сетевые файловые системы отмечены в столбце Type как network. Звездочка обозначает файловую систему по умолчанию, а решетка — загрузочный диск."
+                },
+                {
+                    "answer": "Во флеш-памяти не осталось свободного места",
+                    "correct": false,
+                    "comment": "Общий и свободный объем памяти показывают столбцы Size и Free. Звездочка обозначает файловую систему по умолчанию, а решетка — загрузочный диск."
+                }
+            ]
+        },
+        {
+            "question": "В какой файловой системе маршрутизатора хранится файл загрузочной конфигурации (startup-config)?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "NVRAM",
+                    "correct": true
+                },
+                {
+                    "answer": "Флеш-память",
+                    "correct": false,
+                    "comment": "Во флеш-памяти размещена загружаемая ОС. Файл загрузочной конфигурации хранится в NVRAM."
+                },
+                {
+                    "answer": "tftp:",
+                    "correct": false,
+                    "comment": "tftp: — сетевая файловая система: через нее файлы копируют на TFTP-сервер и обратно. Файл загрузочной конфигурации хранится в NVRAM."
+                },
+                {
+                    "answer": "usbflash0:",
+                    "correct": false,
+                    "comment": "usbflash0: — USB-накопитель, на который можно сохранить резервную копию конфигурации. Сам файл загрузочной конфигурации хранится в NVRAM."
+                }
+            ]
+        },
+        {
+            "question": "Администратор подключил USB-накопитель к маршрутизатору, чтобы сохранить на него текущую конфигурацию. Какую команду рекомендуется выполнить сначала, чтобы убедиться, что накопитель обнаружен, и узнать его имя?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "show file systems",
+                    "correct": true
+                },
+                {
+                    "answer": "copy running-config tftp",
+                    "correct": false,
+                    "comment": "Эта команда копирует текущую конфигурацию на TFTP-сервер, а не на USB-накопитель. Наличие накопителя и его имя показывает команда show file systems."
+                },
+                {
+                    "answer": "pwd",
+                    "correct": false,
+                    "comment": "Команда pwd показывает только текущий рабочий каталог. Наличие USB-накопителя и его имя показывает команда show file systems."
+                },
+                {
+                    "answer": "show running-config",
+                    "correct": false,
+                    "comment": "Эта команда выводит текущую конфигурацию, но не список файловых систем. Наличие USB-накопителя и его имя показывает команда show file systems."
+                }
+            ]
+        },
+        {
+            "question": "Какая команда восстанавливает текущую конфигурацию маршрутизатора из файла R1-Config, сохраненного на USB-накопителе usbflash0:?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "copy usbflash0:/R1-Config running-config",
+                    "correct": true
+                },
+                {
+                    "answer": "copy running-config usbflash0:",
+                    "correct": false,
+                    "comment": "Эта команда копирует текущую конфигурацию на USB-накопитель, то есть создает резервную копию. Для восстановления источником должен быть файл на накопителе: copy usbflash0:/R1-Config running-config."
+                },
+                {
+                    "answer": "more usbflash0:/R1-Config",
+                    "correct": false,
+                    "comment": "Команда more только выводит содержимое файла на экран. Восстанавливает конфигурацию команда copy usbflash0:/R1-Config running-config."
+                },
+                {
+                    "answer": "copy tftp running-config",
+                    "correct": false,
+                    "comment": "Эта команда восстанавливает конфигурацию с TFTP-сервера, а не с USB-накопителя. Для файла на накопителе нужна команда copy usbflash0:/R1-Config running-config."
+                }
+            ]
+        },
+        {
+            "question": "Почему текстовый файл с сохраненной конфигурацией редактируют перед тем, как вставить его на устройство?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "ОС выполняет каждую строку файла как команду, поэтому из него удаляют служебные сообщения и текст, не являющийся командами",
+                    "correct": true
+                },
+                {
+                    "answer": "ОС принимает конфигурацию только с зашифрованными паролями",
+                    "correct": false,
+                    "comment": "Наоборот: зашифрованные пароли в файле нужно привести к текстовому виду. Файл редактируют потому, что ОС выполняет каждую его строку как команду."
+                },
+                {
+                    "answer": "Файл нужно сократить до размера одного экрана терминала",
+                    "correct": false,
+                    "comment": "Размер файла одним экраном не ограничен. Файл редактируют потому, что ОС выполняет каждую его строку как команду, и служебный текст, например --More--, нужно удалить."
+                }
+            ]
+        }
+    ]
 }

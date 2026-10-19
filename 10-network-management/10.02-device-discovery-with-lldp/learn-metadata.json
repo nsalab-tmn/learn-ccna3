@@ -1,9 +1,10 @@
 {
     "title": "Обнаружение устройств с помощью протокола LLDP",
-    "materialType": "lecture",
+    "shortName": "ccna3.network-management.device-discovery-with-lldp",
+    "type": "scored-lecture",
     "description": "Как протокол LLDP помогает искать соседние устройства в сети? Чем LLDP отличается от CDP?",
     "difficulty": 3,
-    "duration": "PT0H6M",
+    "duration": "PT0H8M",
     "tags": {
         "$ref": "../../material-tags.json"
     },
@@ -13,5 +14,56 @@
     },
     "assets": {
         "$ref": "./assets"
-    }
+    },
+    "competency": {
+        "produces": {
+            "id": "ksa.ccna3.network-management.device-discovery-with-lldp",
+            "kind": "K",
+            "bloom": "understand",
+            "objective": "Distinguish CDP, a proprietary neighbor-discovery protocol, from LLDP, which works with network devices from different vendors."
+        },
+        "requires": [
+            "ksa.ccna3.network-management.device-discovery-with-cdp"
+        ],
+        "measurement": {
+            "mode": "test",
+            "grader": "test-auto",
+            "aligned_bloom": "understand",
+            "passes_when": "All embedded questions answered correctly (100%, unlimited attempts): CDP versus LLDP.",
+            "calibration": "operator-judge"
+        }
+    },
+    "passingScore": 100,
+    "questions": [
+        {
+            "question": "Какой проприетарный протокол служит для сбора информации о соседних устройствах, использующих один и тот же канал передачи данных?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "CDP",
+                    "correct": true
+                },
+                {
+                    "answer": "LLDP",
+                    "correct": false,
+                    "comment": "CDP — это проприетарный протокол уровня 2, который на поддерживающих его устройствах обычно включен по умолчанию и используется для сбора информации о соседних устройствах."
+                }
+            ]
+        },
+        {
+            "question": "Какой протокол работает с сетевыми устройствами разных производителей, такими как маршрутизаторы, коммутаторы, точки доступа к беспроводной сети?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "CDP",
+                    "correct": false,
+                    "comment": "LLDP - это независимый от производителя протокол обнаружения соседей, который объявляет идентичность и возможности устройства и получает информацию от других физически подключенных устройств уровня 2."
+                },
+                {
+                    "answer": "LLDP",
+                    "correct": true
+                }
+            ]
+        }
+    ]
 }

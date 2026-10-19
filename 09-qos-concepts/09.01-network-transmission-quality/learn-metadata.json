@@ -1,9 +1,10 @@
 {
     "title": "Качество передачи данных по сети",
-    "materialType": "lecture",
+    "shortName": "ccna3.qos-concepts.network-transmission-quality",
+    "type": "scored-lecture",
     "description": "Зачем нужна приоритизация различных типов сетевого трафика?",
     "difficulty": 3,
-    "duration": "PT0H11M",
+    "duration": "PT0H15M",
     "tags": {
         "$ref": "../../material-tags.json"
     },
@@ -13,5 +14,104 @@
     },
     "assets": {
         "$ref": "./assets"
-    }
+    },
+    "competency": {
+        "produces": {
+            "id": "ksa.ccna3.qos-concepts.network-transmission-quality",
+            "kind": "K",
+            "bloom": "understand",
+            "objective": "Match serialization delay, propagation delay, jitter and packet loss to their descriptions, distinguishing them from coding delay and congestion."
+        },
+        "requires": [],
+        "measurement": {
+            "mode": "test",
+            "grader": "test-auto",
+            "aligned_bloom": "understand",
+            "passes_when": "All embedded questions answered correctly (100%, unlimited attempts): serialization and propagation delay, jitter, packet loss on a full queue.",
+            "calibration": "operator-judge"
+        }
+    },
+    "passingScore": 100,
+    "questions": [
+        {
+            "question": "Как называется время, за которое кадр проходит по каналу от источника к получателю?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "Задержка сериализации",
+                    "correct": false,
+                    "comment": "Задержка распространения — фиксированное для данного пути время, за которое кадр проходит по каналу от источника к получателю; оно зависит от расстояния и среды передачи. Задержка сериализации — время, за которое кадр передается в канал, а задержка кодирования — время на сжатие данных в источнике перед передачей."
+                },
+                {
+                    "answer": "Задержка распространения",
+                    "correct": true
+                },
+                {
+                    "answer": "Задержка кодирования",
+                    "correct": false,
+                    "comment": "Задержка распространения — фиксированное для данного пути время, за которое кадр проходит по каналу от источника к получателю; оно зависит от расстояния и среды передачи. Задержка сериализации — время, за которое кадр передается в канал, а задержка кодирования — время на сжатие данных в источнике перед передачей."
+                }
+            ]
+        },
+        {
+            "question": "Что происходит при перегрузке, если очередь в памяти устройства переполнена?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "Потеря пакетов",
+                    "correct": true
+                },
+                {
+                    "answer": "Джиттер",
+                    "correct": false,
+                    "comment": "Результат чрезмерной перегрузки сети — потеря пакетов."
+                },
+                {
+                    "answer": "Задержка кодирования",
+                    "correct": false,
+                    "comment": "Результат чрезмерной перегрузки сети — потеря пакетов."
+                }
+            ]
+        },
+        {
+            "question": "Какое фиксированное время требуется для передачи кадра с сетевого адаптера в провод?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "Задержка сериализации",
+                    "correct": true
+                },
+                {
+                    "answer": "Джиттер",
+                    "correct": false,
+                    "comment": "Задержка сериализации — это фиксированное время, необходимое для передачи кадра с сетевого адаптера в провод."
+                },
+                {
+                    "answer": "Задержка кодирования",
+                    "correct": false,
+                    "comment": "Задержка сериализации — это фиксированное время, необходимое для передачи кадра с сетевого адаптера в провод."
+                }
+            ]
+        },
+        {
+            "question": "Что вызвано изменением задержки?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "Перегрузка",
+                    "correct": false,
+                    "comment": "Джиттер — это явление, вызванное изменением времени задержки."
+                },
+                {
+                    "answer": "Потеря пакетов",
+                    "correct": false,
+                    "comment": "Джиттер — это явление, вызванное изменением времени задержки."
+                },
+                {
+                    "answer": "Джиттер",
+                    "correct": true
+                }
+            ]
+        }
+    ]
 }
