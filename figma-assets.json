@@ -8000,51 +8000,41 @@
   },
   {
    "id": "ccna3-3orrab4",
-   "kind": "native",
+   "kind": "illustration",
    "display": {
     "key": "11.3.1-1"
    },
-   "out": {
-    "path": "11-network-design/11.03-switch-hardware/assets/11.3.1-1.png",
-    "format": "native"
+   "figma": {
+    "nodeId": "5495:14898",
+    "page": "CCNA3 · 11 network-design"
    },
-   "status": "manual"
+   "out": {
+    "path": "11-network-design/11.03-switch-hardware/assets/11.3.1-1.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "11.3.1-1.png"
+   }
   },
   {
    "id": "ccna3-hpvudhe",
-   "kind": "native",
+   "kind": "illustration",
    "display": {
     "key": "11.3.1-2"
    },
-   "out": {
-    "path": "11-network-design/11.03-switch-hardware/assets/11.3.1-2.jpg",
-    "format": "native"
-   },
-   "status": "manual"
-  },
-  {
-   "id": "ccna3-aegvqua",
-   "kind": "native",
-   "display": {
-    "key": "11.3.1-3"
+   "figma": {
+    "nodeId": "5495:26243",
+    "page": "CCNA3 · 11 network-design"
    },
    "out": {
-    "path": "11-network-design/11.03-switch-hardware/assets/11.3.1-3.png",
-    "format": "native"
+    "path": "11-network-design/11.03-switch-hardware/assets/11.3.1-2.svg",
+    "format": "svg"
    },
-   "status": "manual"
-  },
-  {
-   "id": "ccna3-gixwt3c",
-   "kind": "native",
-   "display": {
-    "key": "11.3.1-4"
-   },
-   "out": {
-    "path": "11-network-design/11.03-switch-hardware/assets/11.3.1-4.png",
-    "format": "native"
-   },
-   "status": "manual"
+   "status": "pending",
+   "provenance": {
+    "legacy": "11.3.1-2.jpg"
+   }
   },
   {
    "id": "ccna3-3p6y6wb",
@@ -8060,92 +8050,137 @@
   },
   {
    "id": "ccna3-fpufprq",
-   "kind": "native",
+   "kind": "illustration",
    "display": {
     "key": "11.3.2-1"
    },
-   "out": {
-    "path": "11-network-design/11.03-switch-hardware/assets/11.3.2-1.jpg",
-    "format": "native"
+   "figma": {
+    "nodeId": "5495:27927",
+    "page": "CCNA3 · 11 network-design"
    },
-   "status": "manual"
+   "out": {
+    "path": "11-network-design/11.03-switch-hardware/assets/11.3.2-1.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "11.3.2-1.jpg"
+   }
   },
   {
    "id": "ccna3-6xkxrtj",
-   "kind": "native",
+   "kind": "illustration",
    "display": {
     "key": "11.3.2-2"
    },
-   "out": {
-    "path": "11-network-design/11.03-switch-hardware/assets/11.3.2-2.png",
-    "format": "native"
+   "figma": {
+    "nodeId": "5495:28688",
+    "page": "CCNA3 · 11 network-design"
    },
-   "status": "manual"
+   "out": {
+    "path": "11-network-design/11.03-switch-hardware/assets/11.3.2-2.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "11.3.2-2.png"
+   }
   },
   {
    "id": "ccna3-g5q6oqh",
-   "kind": "native",
+   "kind": "illustration",
    "display": {
     "key": "11.3.2-3"
    },
-   "out": {
-    "path": "11-network-design/11.03-switch-hardware/assets/11.3.2-3.png",
-    "format": "native"
+   "figma": {
+    "nodeId": "5495:33264",
+    "page": "CCNA3 · 11 network-design"
    },
-   "status": "manual"
+   "out": {
+    "path": "11-network-design/11.03-switch-hardware/assets/11.3.2-3.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "11.3.2-3.png"
+   }
   },
   {
    "id": "ccna3-wfz7gsm",
-   "kind": "native",
+   "kind": "illustration",
    "display": {
     "key": "11.3.2-4"
    },
-   "out": {
-    "path": "11-network-design/11.03-switch-hardware/assets/11.3.2-4.png",
-    "format": "native"
+   "figma": {
+    "nodeId": "5495:33436",
+    "page": "CCNA3 · 11 network-design"
    },
-   "status": "manual"
+   "out": {
+    "path": "11-network-design/11.03-switch-hardware/assets/11.3.2-4.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "11.3.2-4.png"
+   }
   },
   {
    "id": "ccna3-j2rz6jz",
-   "kind": "native",
+   "kind": "illustration",
    "display": {
     "key": "11.3.3-1"
    },
-   "out": {
-    "path": "11-network-design/11.03-switch-hardware/assets/11.3.3-1.jpg",
-    "format": "native"
+   "figma": {
+    "nodeId": "5496:34273",
+    "page": "CCNA3 · 11 network-design"
    },
-   "status": "manual"
+   "out": {
+    "path": "11-network-design/11.03-switch-hardware/assets/11.3.3-1.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "11.3.3-1.jpg"
+   }
   },
   {
    "id": "ccna3-fdzgppn",
-   "kind": "native",
+   "kind": "illustration",
    "display": {
     "key": "11.3.3-2"
    },
-   "out": {
-    "path": "11-network-design/11.03-switch-hardware/assets/11.3.3-2.png",
-    "format": "native"
+   "figma": {
+    "nodeId": "5496:35284",
+    "page": "CCNA3 · 11 network-design"
    },
-   "status": "manual",
+   "out": {
+    "path": "11-network-design/11.03-switch-hardware/assets/11.3.3-2.svg",
+    "format": "svg"
+   },
+   "status": "pending",
    "provenance": {
-    "netacad": "c6d44531-1c46-11ea-af56-e368b99e9723"
+    "netacad": "c6d44531-1c46-11ea-af56-e368b99e9723",
+    "legacy": "11.3.3-2.png"
    }
   },
   {
    "id": "ccna3-tnrykg2",
-   "kind": "native",
+   "kind": "illustration",
    "display": {
     "key": "11.3.5-1"
    },
-   "out": {
-    "path": "11-network-design/11.03-switch-hardware/assets/11.3.5-1.png",
-    "format": "native"
+   "figma": {
+    "nodeId": "5496:39369",
+    "page": "CCNA3 · 11 network-design"
    },
-   "status": "manual",
+   "out": {
+    "path": "11-network-design/11.03-switch-hardware/assets/11.3.5-1.svg",
+    "format": "svg"
+   },
+   "status": "pending",
    "provenance": {
-    "netacad": "c6d50881-1c46-11ea-af56-e368b99e9723"
+    "netacad": "c6d50881-1c46-11ea-af56-e368b99e9723",
+    "legacy": "11.3.5-1.png"
    }
   },
   {
@@ -8194,115 +8229,119 @@
    }
   },
   {
-   "id": "ccna3-uq3wu2p",
-   "kind": "native",
-   "display": {
-    "key": "11.3.6"
-   },
-   "out": {
-    "path": "11-network-design/11.03-switch-hardware/assets/11.3.6.png",
-    "format": "native"
-   },
-   "status": "manual"
-  },
-  {
-   "id": "ccna3-mnzow2l",
-   "kind": "native",
-   "display": {
-    "key": "11.4.2-1"
-   },
-   "out": {
-    "path": "11-network-design/11.04-router-hardware/assets/11.4.2-1.png",
-    "format": "native"
-   },
-   "status": "manual"
-  },
-  {
-   "id": "ccna3-vjmadwl",
-   "kind": "native",
-   "display": {
-    "key": "11.4.2-2"
-   },
-   "out": {
-    "path": "11-network-design/11.04-router-hardware/assets/11.4.2-2.png",
-    "format": "native"
-   },
-   "status": "manual"
-  },
-  {
    "id": "ccna3-scaoed3",
-   "kind": "native",
+   "kind": "illustration",
    "display": {
     "key": "11.4.2-3"
    },
-   "out": {
-    "path": "11-network-design/11.04-router-hardware/assets/11.4.2-3.png",
-    "format": "native"
+   "figma": {
+    "nodeId": "5498:40932",
+    "page": "CCNA3 · 11 network-design"
    },
-   "status": "manual",
+   "out": {
+    "path": "11-network-design/11.04-router-hardware/assets/11.4.2-3.svg",
+    "format": "svg"
+   },
+   "status": "pending",
    "provenance": {
-    "netacad": "c6da1190-1c46-11ea-af56-e368b99e9723"
+    "netacad": "c6da1190-1c46-11ea-af56-e368b99e9723",
+    "legacy": "11.4.2-3.png"
    }
   },
   {
    "id": "ccna3-3vo226w",
-   "kind": "native",
+   "kind": "illustration",
    "display": {
     "key": "11.4.2-4"
    },
-   "out": {
-    "path": "11-network-design/11.04-router-hardware/assets/11.4.2-4.jpg",
-    "format": "native"
+   "figma": {
+    "nodeId": "5498:41341",
+    "page": "CCNA3 · 11 network-design"
    },
-   "status": "manual"
+   "out": {
+    "path": "11-network-design/11.04-router-hardware/assets/11.4.2-4.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "11.4.2-4.jpg"
+   }
   },
   {
    "id": "ccna3-7h23rv5",
-   "kind": "native",
+   "kind": "illustration",
    "display": {
     "key": "11.4.3-1"
    },
-   "out": {
-    "path": "11-network-design/11.04-router-hardware/assets/11.4.3-1.png",
-    "format": "native"
+   "figma": {
+    "nodeId": "5498:41480",
+    "page": "CCNA3 · 11 network-design"
    },
-   "status": "manual"
+   "out": {
+    "path": "11-network-design/11.04-router-hardware/assets/11.4.3-1.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "11.4.3-1.png"
+   }
   },
   {
    "id": "ccna3-otvdxw2",
-   "kind": "native",
+   "kind": "illustration",
    "display": {
     "key": "11.4.3-2"
    },
-   "out": {
-    "path": "11-network-design/11.04-router-hardware/assets/11.4.3-2.png",
-    "format": "native"
+   "figma": {
+    "nodeId": "5498:41607",
+    "page": "CCNA3 · 11 network-design"
    },
-   "status": "manual"
+   "out": {
+    "path": "11-network-design/11.04-router-hardware/assets/11.4.3-2.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "11.4.3-2.png"
+   }
   },
   {
    "id": "ccna3-ozcfpab",
-   "kind": "native",
+   "kind": "illustration",
    "display": {
     "key": "11.4.3-3"
    },
-   "out": {
-    "path": "11-network-design/11.04-router-hardware/assets/11.4.3-3.png",
-    "format": "native"
+   "figma": {
+    "nodeId": "5498:41839",
+    "page": "CCNA3 · 11 network-design"
    },
-   "status": "manual"
+   "out": {
+    "path": "11-network-design/11.04-router-hardware/assets/11.4.3-3.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "11.4.3-3.png"
+   }
   },
   {
    "id": "ccna3-aj7h6cu",
-   "kind": "native",
+   "kind": "illustration",
    "display": {
     "key": "11.4.3-4"
    },
-   "out": {
-    "path": "11-network-design/11.04-router-hardware/assets/11.4.3-4.png",
-    "format": "native"
+   "figma": {
+    "nodeId": "5498:42240",
+    "page": "CCNA3 · 11 network-design"
    },
-   "status": "manual"
+   "out": {
+    "path": "11-network-design/11.04-router-hardware/assets/11.4.3-4.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "11.4.3-4.png"
+   }
   },
   {
    "id": "ccna3-3n2r6ze",
