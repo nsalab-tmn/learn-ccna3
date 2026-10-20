@@ -34,29 +34,35 @@
     "passingScore": 100,
     "questions": [
         {
+            "questionId": "q01",
             "question": "Описывает ли следующий сценарий автоматизацию?\n\nДля оплаты счета используется онлайн-банк.",
             "answerType": "singleChoice",
             "answers": [
                 {
+                    "answerId": "q01-a1",
                     "answer": "Автоматизация",
                     "correct": false,
                     "comment": "Оплата счетов в Интернете требует взаимодействия с человеком"
                 },
                 {
+                    "answerId": "q01-a2",
                     "answer": "Не автоматизация",
                     "correct": true
                 }
             ]
         },
         {
+            "questionId": "q02",
             "question": "Описывает ли следующий сценарий автоматизацию?\n\nОбъемы производства автоматически подстраиваются под спрос, чтобы не изготавливать ненужные изделия и меньше вредить окружающей среде.",
             "answerType": "singleChoice",
             "answers": [
                 {
+                    "answerId": "q02-a1",
                     "answer": "Автоматизация",
                     "correct": true
                 },
                 {
+                    "answerId": "q02-a2",
                     "answer": "Не автоматизация",
                     "correct": false,
                     "comment": ""
@@ -64,14 +70,17 @@
             ]
         },
         {
+            "questionId": "q03",
             "question": "Описывает ли следующий сценарий автоматизацию?\n\nGPS-навигатор строит оптимальный маршрут до места назначения с учетом текущей ситуации на дорогах.",
             "answerType": "singleChoice",
             "answers": [
                 {
+                    "answerId": "q03-a1",
                     "answer": "Автоматизация",
                     "correct": true
                 },
                 {
+                    "answerId": "q03-a2",
                     "answer": "Не автоматизация",
                     "correct": false,
                     "comment": ""
@@ -79,14 +88,17 @@
             ]
         },
         {
+            "questionId": "q04",
             "question": "Описывает ли следующий сценарий автоматизацию?\n\nТемпература и освещение в доме регулируются в зависимости от вашей повседневной жизни.",
             "answerType": "singleChoice",
             "answers": [
                 {
+                    "answerId": "q04-a1",
                     "answer": "Автоматизация",
                     "correct": true
                 },
                 {
+                    "answerId": "q04-a2",
                     "answer": "Не автоматизация",
                     "correct": false,
                     "comment": ""
@@ -94,14 +106,17 @@
             ]
         },
         {
+            "questionId": "q05",
             "question": "Описывает ли следующий сценарий автоматизацию?\n\nХолодильник определяет, что у вас нет молока, и заказывает его в Интернете.",
             "answerType": "singleChoice",
             "answers": [
                 {
+                    "answerId": "q05-a1",
                     "answer": "Автоматизация",
                     "correct": true
                 },
                 {
+                    "answerId": "q05-a2",
                     "answer": "Не автоматизация",
                     "correct": false,
                     "comment": ""
@@ -109,29 +124,35 @@
             ]
         },
         {
+            "questionId": "q06",
             "question": "Описывает ли следующий сценарий автоматизацию?\n\nУровень громкости на телевизоре регулируется с помощью пульта дистанционного управления.",
             "answerType": "singleChoice",
             "answers": [
                 {
+                    "answerId": "q06-a1",
                     "answer": "Автоматизация",
                     "correct": false,
                     "comment": "Регулировка громкости на телевизоре с помощью пульта дистанционного управления требует взаимодействия с человеком"
                 },
                 {
+                    "answerId": "q06-a2",
                     "answer": "Не автоматизация",
                     "correct": true
                 }
             ]
         },
         {
+            "questionId": "q07",
             "question": "Описывает ли следующий сценарий автоматизацию?\n\nРоботы используются в опасных условиях, чтобы снизить риск для жизни людей.",
             "answerType": "singleChoice",
             "answers": [
                 {
+                    "answerId": "q07-a1",
                     "answer": "Автоматизация",
                     "correct": true
                 },
                 {
+                    "answerId": "q07-a2",
                     "answer": "Не автоматизация",
                     "correct": false,
                     "comment": ""
@@ -139,15 +160,18 @@
             ]
         },
         {
+            "questionId": "q08",
             "question": "Описывает ли следующий сценарий автоматизацию?\n\nВы открываете дверь своей машины пультом дистанционного управления.",
             "answerType": "singleChoice",
             "answers": [
                 {
+                    "answerId": "q08-a1",
                     "answer": "Автоматизация",
                     "correct": false,
                     "comment": "Открытие автомобиля пультом дистанционного управления требует взаимодействия с человеком"
                 },
                 {
+                    "answerId": "q08-a2",
                     "answer": "Не автоматизация",
                     "correct": true
                 }

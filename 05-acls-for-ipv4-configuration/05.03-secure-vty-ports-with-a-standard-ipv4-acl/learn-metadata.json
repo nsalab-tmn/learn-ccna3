@@ -36,24 +36,29 @@
     "passingScore": 100,
     "questions": [
         {
+            "questionId": "q01",
             "question": "Какой командой применить ACL ADMIN-HOST к входящему трафику линий VTY?",
             "answerType": "singleChoice",
             "answers": [
                 {
+                    "answerId": "q01-a1",
                     "answer": "access-class ADMIN-HOST in в режиме конфигурации линий VTY",
                     "correct": true
                 },
                 {
+                    "answerId": "q01-a2",
                     "answer": "ip access-group ADMIN-HOST in в режиме конфигурации линий VTY",
                     "correct": false,
                     "comment": "Команда ip access-group применяет ACL к интерфейсу. К линиям VTY ACL применяется командой access-class ADMIN-HOST in."
                 },
                 {
+                    "answerId": "q01-a3",
                     "answer": "access-class ADMIN-HOST out в режиме конфигурации линий VTY",
                     "correct": false,
                     "comment": "Параметр out фильтрует исходящий трафик VTY и применяется редко. Для входящего трафика нужна команда access-class ADMIN-HOST in."
                 },
                 {
+                    "answerId": "q01-a4",
                     "answer": "ip access-list standard ADMIN-HOST in в режиме глобальной конфигурации",
                     "correct": false,
                     "comment": "Команда ip access-list standard создает именованный ACL. К линиям VTY его применяют командой access-class ADMIN-HOST in."
@@ -61,24 +66,29 @@
             ]
         },
         {
+            "questionId": "q02",
             "question": "Какое утверждение о защите линий VTY с помощью ACL верно?",
             "answerType": "singleChoice",
             "answers": [
                 {
+                    "answerId": "q02-a1",
                     "answer": "Одинаковые ограничения нужно установить на все линии VTY, потому что пользователь может подключиться к любой из них",
                     "correct": true
                 },
                 {
+                    "answerId": "q02-a2",
                     "answer": "К линиям VTY можно применять только нумерованные ACL",
                     "correct": false,
                     "comment": "К линиям VTY можно применять и именованные, и нумерованные ACL. Ограничения нужно установить на все линии VTY, так как пользователь может подключиться к любой из них."
                 },
                 {
+                    "answerId": "q02-a3",
                     "answer": "ACL достаточно применить к одной линии VTY",
                     "correct": false,
                     "comment": "Пользователь может подключиться к любой линии VTY, поэтому одинаковые ограничения нужно установить на все линии."
                 },
                 {
+                    "answerId": "q02-a4",
                     "answer": "Для линий VTY чаще всего используют параметр out",
                     "correct": false,
                     "comment": "Чаще всего используют параметр in для фильтрации входящего трафика, а out применяется редко. Ограничения нужно установить на все линии VTY."
@@ -86,24 +96,29 @@
             ]
         },
         {
+            "questionId": "q03",
             "question": "После настройки ACL ADMIN-HOST на линиях VTY команда show access-lists выводит строки 10 permit 192.168.10.10 (2 matches) и 20 deny any (2 matches). Что показывают эти данные?",
             "answerType": "singleChoice",
             "answers": [
                 {
+                    "answerId": "q03-a1",
                     "answer": "Узлу 192.168.10.10 дважды разрешили подключиться к линиям VTY, а две попытки подключения с других узлов были отклонены",
                     "correct": true
                 },
                 {
+                    "answerId": "q03-a2",
                     "answer": "Через интерфейсы маршрутизатора прошли два пакета от узла 192.168.10.10, а два пакета других узлов были отброшены",
                     "correct": false,
                     "comment": "ACL применен к линиям VTY командой access-class и ограничивает удаленный административный доступ к самому маршрутизатору, а не транзитный трафик. Совпадения — подключения узла 192.168.10.10 и отклоненные попытки других узлов."
                 },
                 {
+                    "answerId": "q03-a3",
                     "answer": "Запись deny any добавлена автоматически и показывает совпадения неявного запрета",
                     "correct": false,
                     "comment": "Запись deny any настроена вручную, чтобы подсчитывать, сколько раз доступ был запрещен. Ее совпадения — отклоненные попытки подключения других узлов."
                 },
                 {
+                    "answerId": "q03-a4",
                     "answer": "К маршрутизатору успешно подключились четыре узла",
                     "correct": false,
                     "comment": "Успешные подключения — только совпадения строки permit (узел 192.168.10.10). Совпадения строки deny any — отклоненные попытки других узлов."
@@ -111,19 +126,23 @@
             ]
         },
         {
+            "questionId": "q04",
             "question": "Какой протокол следует разрешить на линиях VTY в производственной среде командой transport input?",
             "answerType": "singleChoice",
             "answers": [
                 {
+                    "answerId": "q04-a1",
                     "answer": "SSH",
                     "correct": true
                 },
                 {
+                    "answerId": "q04-a2",
                     "answer": "Telnet",
                     "correct": false,
                     "comment": "Telnet в примере используется только для демонстрации. В производственной среде на линиях VTY следует разрешать только SSH: transport input ssh."
                 },
                 {
+                    "answerId": "q04-a3",
                     "answer": "Telnet и SSH одновременно",
                     "correct": false,
                     "comment": "В производственной среде на линиях VTY следует разрешать только SSH: transport input ssh."

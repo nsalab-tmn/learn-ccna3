@@ -37,39 +37,47 @@
     "passingScore": 100,
     "questions": [
         {
+            "questionId": "q01",
             "question": "Во время этого состояния OSPF в сетях с множественным доступом устройства выбирают назначенный (DR) и резервный назначенный маршрутизаторы (BDR).",
             "answerType": "singleChoice",
             "answers": [
                 {
+                    "answerId": "q01-a1",
                     "answer": "состояние Down",
                     "correct": false,
                     "comment": "В состоянии Two-Way в сетях с множественным доступом устройства выбирают назначенный (DR) и резервный назначенный маршрутизаторы (BDR)"
                 },
                 {
+                    "answerId": "q01-a2",
                     "answer": "состояние Init",
                     "correct": false,
                     "comment": "В состоянии Two-Way в сетях с множественным доступом устройства выбирают назначенный (DR) и резервный назначенный маршрутизаторы (BDR)"
                 },
                 {
+                    "answerId": "q01-a3",
                     "answer": "состояние Two-Way",
                     "correct": true
                 },
                 {
+                    "answerId": "q01-a4",
                     "answer": "состояние ExStart",
                     "correct": false,
                     "comment": "В состоянии Two-Way в сетях с множественным доступом устройства выбирают назначенный (DR) и резервный назначенный маршрутизаторы (BDR)"
                 },
                 {
+                    "answerId": "q01-a5",
                     "answer": "состояние Exchange",
                     "correct": false,
                     "comment": "В состоянии Two-Way в сетях с множественным доступом устройства выбирают назначенный (DR) и резервный назначенный маршрутизаторы (BDR)"
                 },
                 {
+                    "answerId": "q01-a6",
                     "answer": "состояние Loading",
                     "correct": false,
                     "comment": "В состоянии Two-Way в сетях с множественным доступом устройства выбирают назначенный (DR) и резервный назначенный маршрутизаторы (BDR)"
                 },
                 {
+                    "answerId": "q01-a7",
                     "answer": "состояние Full",
                     "correct": false,
                     "comment": "В состоянии Two-Way в сетях с множественным доступом устройства выбирают назначенный (DR) и резервный назначенный маршрутизаторы (BDR)"
@@ -77,39 +85,47 @@
             ]
         },
         {
+            "questionId": "q02",
             "question": "Во время этого состояния OSPF маршрутизаторы обмениваются пакетами DBD, которые содержат заголовки записей LSA из их LSDB.",
             "answerType": "singleChoice",
             "answers": [
                 {
+                    "answerId": "q02-a1",
                     "answer": "состояние Down",
                     "correct": false,
                     "comment": "В состоянии Down маршрутизатор еще не получил от соседа ни одного пакета приветствия. Обмен DBD начнется намного позже, в состоянии Exchange"
                 },
                 {
+                    "answerId": "q02-a2",
                     "answer": "состояние Init",
                     "correct": false,
                     "comment": "В состоянии Init маршрутизатор только начал принимать от соседа пакеты приветствия с идентификатором отправителя. Базы данных на этом этапе еще не сравниваются"
                 },
                 {
+                    "answerId": "q02-a3",
                     "answer": "состояние Two-Way",
                     "correct": false,
                     "comment": "В состоянии Two-Way связь становится двунаправленной, а в сетях с множественным доступом выбираются DR и BDR. Синхронизация баз данных начнется позже"
                 },
                 {
+                    "answerId": "q02-a4",
                     "answer": "состояние ExStart",
                     "correct": false,
                     "comment": "В состоянии ExStart маршрутизаторы лишь определяют, какой из них первым передаст описание своей базы и каким будет исходный номер последовательности пакетов DBD. Заголовки записей LSA появляются в DBD только в состоянии Exchange"
                 },
                 {
+                    "answerId": "q02-a5",
                     "answer": "состояние Exchange",
                     "correct": true
                 },
                 {
+                    "answerId": "q02-a6",
                     "answer": "состояние Loading",
                     "correct": false,
                     "comment": "В состоянии Loading маршрутизатор запрашивает недостающие записи через LSR и получает их в LSU. Обмен DBD к этому моменту уже завершен"
                 },
                 {
+                    "answerId": "q02-a7",
                     "answer": "состояние Full",
                     "correct": false,
                     "comment": "В состоянии Full LSDB соседей полностью синхронизированы, и обмен DBD уже завершен"
@@ -117,39 +133,47 @@
             ]
         },
         {
+            "questionId": "q03",
             "question": "Маршрутизатор OSPF переходит в это состояние, когда он получил пакет Hello от соседа, содержащий идентификатор отправляющего устройства.",
             "answerType": "singleChoice",
             "answers": [
                 {
+                    "answerId": "q03-a1",
                     "answer": "состояние Down",
                     "correct": false,
                     "comment": "В состоянии Init от соседей принимаются пакеты Hello, содержащие идентификатор отправляющего устройства"
                 },
                 {
+                    "answerId": "q03-a2",
                     "answer": "состояние Init",
                     "correct": true
                 },
                 {
+                    "answerId": "q03-a3",
                     "answer": "состояние Two-Way",
                     "correct": false,
                     "comment": "В состоянии Init от соседей принимаются пакеты Hello, содержащие идентификатор отправляющего устройства"
                 },
                 {
+                    "answerId": "q03-a4",
                     "answer": "состояние ExStart",
                     "correct": false,
                     "comment": "В состоянии Init от соседей принимаются пакеты Hello, содержащие идентификатор отправляющего устройства"
                 },
                 {
+                    "answerId": "q03-a5",
                     "answer": "состояние Exchange",
                     "correct": false,
                     "comment": "В состоянии Init от соседей принимаются пакеты Hello, содержащие идентификатор отправляющего устройства"
                 },
                 {
+                    "answerId": "q03-a6",
                     "answer": "состояние Loading",
                     "correct": false,
                     "comment": "В состоянии Init от соседей принимаются пакеты Hello, содержащие идентификатор отправляющего устройства"
                 },
                 {
+                    "answerId": "q03-a7",
                     "answer": "состояние Full",
                     "correct": false,
                     "comment": "В состоянии Init от соседей принимаются пакеты Hello, содержащие идентификатор отправляющего устройства"
@@ -157,39 +181,47 @@
             ]
         },
         {
+            "questionId": "q04",
             "question": "Во время этого состояния OSPF в сетях точка-точка маршрутизаторы решают, какой из них инициирует обмен пакетами DBD.",
             "answerType": "singleChoice",
             "answers": [
                 {
+                    "answerId": "q04-a1",
                     "answer": "состояние Down",
                     "correct": false,
                     "comment": "В состоянии ExStart в сетях точка-точка маршрутизаторы определяют, какой из них инициирует обмен пакетами DBD"
                 },
                 {
+                    "answerId": "q04-a2",
                     "answer": "состояние Init",
                     "correct": false,
                     "comment": "В состоянии ExStart в сетях точка-точка маршрутизаторы определяют, какой из них инициирует обмен пакетами DBD"
                 },
                 {
+                    "answerId": "q04-a3",
                     "answer": "состояние Two-Way",
                     "correct": false,
                     "comment": "В состоянии ExStart в сетях точка-точка маршрутизаторы определяют, какой из них инициирует обмен пакетами DBD"
                 },
                 {
+                    "answerId": "q04-a4",
                     "answer": "состояние ExStart",
                     "correct": true
                 },
                 {
+                    "answerId": "q04-a5",
                     "answer": "состояние Exchange",
                     "correct": false,
                     "comment": "В состоянии ExStart в сетях точка-точка маршрутизаторы определяют, какой из них инициирует обмен пакетами DBD"
                 },
                 {
+                    "answerId": "q04-a6",
                     "answer": "состояние Loading",
                     "correct": false,
                     "comment": "В состоянии ExStart в сетях точка-точка маршрутизаторы определяют, какой из них инициирует обмен пакетами DBD"
                 },
                 {
+                    "answerId": "q04-a7",
                     "answer": "состояние Full",
                     "correct": false,
                     "comment": "В состоянии ExStart в сетях точка-точка маршрутизаторы определяют, какой из них инициирует обмен пакетами DBD"
@@ -197,79 +229,95 @@
             ]
         },
         {
+            "questionId": "q05",
             "question": "В этом состоянии OSPF соседи полностью синхронизировали свои LSDB.",
             "answerType": "singleChoice",
             "answers": [
                 {
+                    "answerId": "q05-a1",
                     "answer": "состояние Down",
                     "correct": false,
                     "comment": "В состоянии Full соседи полностью синхронизировали свои LSDB"
                 },
                 {
+                    "answerId": "q05-a2",
                     "answer": "состояние Init",
                     "correct": false,
                     "comment": "В состоянии Full соседи полностью синхронизировали свои LSDB"
                 },
                 {
+                    "answerId": "q05-a3",
                     "answer": "состояние Two-Way",
                     "correct": false,
                     "comment": "В состоянии Full соседи полностью синхронизировали свои LSDB"
                 },
                 {
+                    "answerId": "q05-a4",
                     "answer": "состояние ExStart",
                     "correct": false,
                     "comment": "В состоянии Full соседи полностью синхронизировали свои LSDB"
                 },
                 {
+                    "answerId": "q05-a5",
                     "answer": "состояние Exchange",
                     "correct": false,
                     "comment": "В состоянии Full соседи полностью синхронизировали свои LSDB"
                 },
                 {
+                    "answerId": "q05-a6",
                     "answer": "состояние Loading",
                     "correct": false,
                     "comment": "В состоянии Full соседи полностью синхронизировали свои LSDB"
                 },
                 {
+                    "answerId": "q05-a7",
                     "answer": "состояние Full",
                     "correct": true
                 }
             ]
         },
         {
+            "questionId": "q06",
             "question": "Во время этого состояния OSPF пакеты приветствия (hello) не принимаются.",
             "answerType": "singleChoice",
             "answers": [
                 {
+                    "answerId": "q06-a1",
                     "answer": "состояние Down",
                     "correct": true
                 },
                 {
+                    "answerId": "q06-a2",
                     "answer": "состояние Init",
                     "correct": false,
                     "comment": "В состоянии «Down» пакеты приветствия не принимаются"
                 },
                 {
+                    "answerId": "q06-a3",
                     "answer": "состояние Two-Way",
                     "correct": false,
                     "comment": "В состоянии «Down» пакеты приветствия не принимаются"
                 },
                 {
+                    "answerId": "q06-a4",
                     "answer": "состояние ExStart",
                     "correct": false,
                     "comment": "В состоянии «Down» пакеты приветствия не принимаются"
                 },
                 {
+                    "answerId": "q06-a5",
                     "answer": "состояние Exchange",
                     "correct": false,
                     "comment": "В состоянии «Down» пакеты приветствия не принимаются"
                 },
                 {
+                    "answerId": "q06-a6",
                     "answer": "состояние Loading",
                     "correct": false,
                     "comment": "В состоянии «Down» пакеты приветствия не принимаются"
                 },
                 {
+                    "answerId": "q06-a7",
                     "answer": "состояние Full",
                     "correct": false,
                     "comment": "В состоянии «Down» пакеты приветствия не принимаются"
@@ -277,39 +325,47 @@
             ]
         },
         {
+            "questionId": "q07",
             "question": "В этом состоянии OSPF маршруты обрабатываются с использованием алгоритма SPF.",
             "answerType": "singleChoice",
             "answers": [
                 {
+                    "answerId": "q07-a1",
                     "answer": "состояние Down",
                     "correct": false,
                     "comment": "В состоянии Loading маршруты обрабатываются с использованием алгоритма SPF"
                 },
                 {
+                    "answerId": "q07-a2",
                     "answer": "состояние Init",
                     "correct": false,
                     "comment": "В состоянии Loading маршруты обрабатываются с использованием алгоритма SPF"
                 },
                 {
+                    "answerId": "q07-a3",
                     "answer": "состояние Two-Way",
                     "correct": false,
                     "comment": "В состоянии Loading маршруты обрабатываются с использованием алгоритма SPF"
                 },
                 {
+                    "answerId": "q07-a4",
                     "answer": "состояние ExStart",
                     "correct": false,
                     "comment": "В состоянии Loading маршруты обрабатываются с использованием алгоритма SPF"
                 },
                 {
+                    "answerId": "q07-a5",
                     "answer": "состояние Exchange",
                     "correct": false,
                     "comment": "В состоянии Loading маршруты обрабатываются с использованием алгоритма SPF"
                 },
                 {
+                    "answerId": "q07-a6",
                     "answer": "состояние Loading",
                     "correct": true
                 },
                 {
+                    "answerId": "q07-a7",
                     "answer": "состояние Full",
                     "correct": false,
                     "comment": "В состоянии Loading маршруты обрабатываются с использованием алгоритма SPF"

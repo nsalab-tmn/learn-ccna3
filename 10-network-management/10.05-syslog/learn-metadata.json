@@ -36,49 +36,59 @@
     "passingScore": 100,
     "questions": [
         {
+            "questionId": "q01",
             "question": "Посмотрите на вывод системного журнала.\n\n`*Jun 12 17:46:01.619: %IFMGR-7-NO_IFINDEX_FILE: Unable to open nvram:/ifIndex-table No such file or directory`\n\nКакой уровень серьезности у сгенерированного сообщения?",
             "answerType": "singleChoice",
             "answers": [
                 {
+                    "answerId": "q01-a1",
                     "answer": "Ошибка",
                     "correct": false,
                     "comment": "Уровень серьезности этого сообщения системного журнала — 7, он соответствует отладке."
                 },
                 {
+                    "answerId": "q01-a2",
                     "answer": "Информационный",
                     "correct": false,
                     "comment": "Уровень серьезности этого сообщения системного журнала — 7, он соответствует отладке."
                 },
                 {
+                    "answerId": "q01-a3",
                     "answer": "Предупреждение",
                     "correct": false,
                     "comment": "Уровень серьезности этого сообщения системного журнала — 7, он соответствует отладке."
                 },
                 {
+                    "answerId": "q01-a4",
                     "answer": "Отладка",
                     "correct": true
                 }
             ]
         },
         {
+            "questionId": "q02",
             "question": "Посмотрите на вывод системного журнала.\n\n`*Jun 12 17:46:01.619: %IFMGR-7-NO_IFINDEX_FILE: Unable to open nvram:/ifIndex-table No such file or directory`\n\nКакова мнемоника этого сообщения системного журнала?",
             "answerType": "singleChoice",
             "answers": [
                 {
+                    "answerId": "q02-a1",
                     "answer": "IFMGR",
                     "correct": false,
                     "comment": "Формат сообщения syslog: seq no: timestamp: %facility-severity-MNEMONIC: description. Поэтому мнемоникой в этом сообщении является NO_IFINDEX_FILE."
                 },
                 {
+                    "answerId": "q02-a2",
                     "answer": "Unable to open nvram",
                     "correct": false,
                     "comment": "Формат сообщения syslog: seq no: timestamp: %facility-severity-MNEMONIC: description. Поэтому мнемоникой в этом сообщении является NO_IFINDEX_FILE."
                 },
                 {
+                    "answerId": "q02-a3",
                     "answer": "NO_IFINDEX_FILE",
                     "correct": true
                 },
                 {
+                    "answerId": "q02-a4",
                     "answer": "ifIndex-table",
                     "correct": false,
                     "comment": "Формат сообщения syslog: seq no: timestamp: %facility-severity-MNEMONIC: description. Поэтому мнемоникой в этом сообщении является NO_IFINDEX_FILE."
@@ -86,24 +96,29 @@
             ]
         },
         {
+            "questionId": "q03",
             "question": "Посмотрите на вывод системного журнала.\n\n`*Jun 12 17:46:01.619: %IFMGR-7-NO_IFINDEX_FILE: Unable to open nvram:/ifIndex-table No such file or directory`\n\nЧто является объектом этого сообщения системного журнала?",
             "answerType": "singleChoice",
             "answers": [
                 {
+                    "answerId": "q03-a1",
                     "answer": "IFMGR",
                     "correct": true
                 },
                 {
+                    "answerId": "q03-a2",
                     "answer": "NO_IFINDEX_FILE",
                     "correct": false,
                     "comment": "Формат сообщения syslog: seq no: timestamp: %facility-severity-MNEMONIC: description. Таким образом, объектом в этом сообщении является IFMGR."
                 },
                 {
+                    "answerId": "q03-a3",
                     "answer": "IFMGR-7",
                     "correct": false,
                     "comment": "Формат сообщения syslog: seq no: timestamp: %facility-severity-MNEMONIC: description. Таким образом, объектом в этом сообщении является IFMGR."
                 },
                 {
+                    "answerId": "q03-a4",
                     "answer": "ifIndex-table",
                     "correct": false,
                     "comment": "Формат сообщения syslog: seq no: timestamp: %facility-severity-MNEMONIC: description. Таким образом, объектом в этом сообщении является IFMGR."

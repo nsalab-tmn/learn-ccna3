@@ -38,24 +38,29 @@
     "passingScore": 100,
     "questions": [
         {
+            "questionId": "q01",
             "question": "Стандартный нумерованный ACL 10 уже создан на R1. Какой командой применить его к трафику, выходящему из интерфейса Serial 0/1/0?",
             "answerType": "singleChoice",
             "answers": [
                 {
+                    "answerId": "q01-a1",
                     "answer": "ip access-group 10 out в режиме конфигурации интерфейса Serial 0/1/0",
                     "correct": true
                 },
                 {
+                    "answerId": "q01-a2",
                     "answer": "ip access-group 10 in в режиме конфигурации интерфейса Serial 0/1/0",
                     "correct": false,
                     "comment": "Ключевое слово in применяет ACL к входящему трафику интерфейса. Для выходящего трафика нужна команда ip access-group 10 out."
                 },
                 {
+                    "answerId": "q01-a3",
                     "answer": "access-list 10 out в режиме глобальной конфигурации",
                     "correct": false,
                     "comment": "Команда access-list создает записи ACL, но не связывает ACL с интерфейсом. ACL применяется командой ip access-group 10 out в режиме конфигурации интерфейса."
                 },
                 {
+                    "answerId": "q01-a4",
                     "answer": "ip access-list standard 10 out в режиме глобальной конфигурации",
                     "correct": false,
                     "comment": "Команда ip access-list standard открывает режим конфигурации стандартного ACL. К интерфейсу ACL применяется командой ip access-group 10 out."
@@ -63,24 +68,29 @@
             ]
         },
         {
+            "questionId": "q02",
             "question": "Чем ввод записей именованного стандартного ACL отличается от ввода записей нумерованного?",
             "answerType": "singleChoice",
             "answers": [
                 {
+                    "answerId": "q02-a1",
                     "answer": "После команды ip access-list standard с именем ACL записи вводятся в режиме конфигурации именованного стандартного ACL без повторения начальной команды",
                     "correct": true
                 },
                 {
+                    "answerId": "q02-a2",
                     "answer": "Каждую запись нужно начинать с команды ip access-list standard и имени ACL",
                     "correct": false,
                     "comment": "В отличие от нумерованного ACL, начальную команду для каждой записи повторять не нужно: записи вводятся в режиме конфигурации именованного стандартного ACL."
                 },
                 {
+                    "answerId": "q02-a3",
                     "answer": "В именованный стандартный ACL нельзя добавлять комментарии remark",
                     "correct": false,
                     "comment": "Комментарии remark можно добавлять и в именованный ACL. Отличие в другом: записи вводятся в режиме конфигурации именованного стандартного ACL без повторения начальной команды."
                 },
                 {
+                    "answerId": "q02-a4",
                     "answer": "Имена ACL не чувствительны к регистру, поэтому заглавные буквы в них не используют",
                     "correct": false,
                     "comment": "Имена ACL чувствительны к регистру, а заглавные буквы делают ACL заметнее в выводе. Записи вводятся в режиме конфигурации именованного стандартного ACL без повторения начальной команды."
@@ -88,24 +98,29 @@
             ]
         },
         {
+            "questionId": "q03",
             "question": "Какое утверждение о комментариях remark в стандартном ACL верно?",
             "answerType": "singleChoice",
             "answers": [
                 {
+                    "answerId": "q03-a1",
                     "answer": "Команда show access-lists их не выводит, а в текущей конфигурации они отображаются",
                     "correct": true
                 },
                 {
+                    "answerId": "q03-a2",
                     "answer": "Они отображаются в выводе show access-lists, но не в текущей конфигурации",
                     "correct": false,
                     "comment": "Наоборот: show access-lists комментарии не выводит, а в текущей конфигурации они отображаются."
                 },
                 {
+                    "answerId": "q03-a3",
                     "answer": "Без них ACL не будет работать",
                     "correct": false,
                     "comment": "Команда remark не требуется для работы ACL, хотя настоятельно рекомендуется для документирования. Комментарии видны в текущей конфигурации, а show access-lists их не выводит."
                 },
                 {
+                    "answerId": "q03-a4",
                     "answer": "Длина комментария не ограничена",
                     "correct": false,
                     "comment": "Длина комментария ограничена 100 символами. Комментарии видны в текущей конфигурации, а show access-lists их не выводит."
@@ -113,19 +128,23 @@
             ]
         },
         {
+            "questionId": "q04",
             "question": "Администратору нужно убрать ACL 10 с интерфейса и полностью удалить его с маршрутизатора. Что нужно сделать?",
             "answerType": "singleChoice",
             "answers": [
                 {
+                    "answerId": "q04-a1",
                     "answer": "Ввести no ip access-group в режиме конфигурации интерфейса, а затем no access-list 10 в режиме глобальной конфигурации",
                     "correct": true
                 },
                 {
+                    "answerId": "q04-a2",
                     "answer": "Достаточно ввести no ip access-group: ACL будет удален с маршрутизатора автоматически",
                     "correct": false,
                     "comment": "После no ip access-group ACL по-прежнему настроен на маршрутизаторе. Чтобы удалить его, нужна команда глобальной конфигурации no access-list 10."
                 },
                 {
+                    "answerId": "q04-a3",
                     "answer": "Достаточно ввести no access-list 10 в режиме конфигурации интерфейса",
                     "correct": false,
                     "comment": "no access-list — команда глобальной конфигурации. Сначала ACL убирают с интерфейса командой no ip access-group, затем удаляют командой no access-list 10."
@@ -133,19 +152,23 @@
             ]
         },
         {
+            "questionId": "q05",
             "question": "Какой командой проверить, применен ли ACL к интерфейсу и в каком направлении?",
             "answerType": "singleChoice",
             "answers": [
                 {
+                    "answerId": "q05-a1",
                     "answer": "show ip interface",
                     "correct": true
                 },
                 {
+                    "answerId": "q05-a2",
                     "answer": "show access-lists",
                     "correct": false,
                     "comment": "Эта команда выводит записи ACL, но не показывает, к какому интерфейсу и в каком направлении он применен. Это проверяют командой show ip interface."
                 },
                 {
+                    "answerId": "q05-a3",
                     "answer": "show ip interface brief",
                     "correct": false,
                     "comment": "Краткий вывод показывает адреса и состояние интерфейсов, но не списки ACL. Применение ACL к интерфейсу и направление показывает show ip interface."
