@@ -3,8 +3,8 @@
     "shortName": "ccna3.network-troubleshooting.exam",
     "type": "exam",
     "description": "Проверьте свои знания по темам модуля: документирование сети, процедура поиска и устранения неисправностей, инструменты для поиска и устранения неисправностей, симптомы и причины проблем с сетью, поиск и устранение неполадок с IP-подключениями.",
-    "difficulty": 1,
-    "duration": "PT0H39M",
+    "difficulty": 3,
+    "duration": "PT0H43M",
     "tags": {
         "$ref": "../../material-tags.json"
     },
@@ -30,7 +30,7 @@
             "mode": "exam",
             "grader": "test-auto",
             "aligned_bloom": "apply",
-            "passes_when": "Learner scores at least 80% on the exam's 27 questions covering module 12; attempts unlimited.",
+            "passes_when": "Learner scores at least 80% on the exam's 30 questions covering module 12; attempts unlimited.",
             "calibration": "operator-judge"
         }
     },
@@ -737,6 +737,76 @@
                 {
                     "answer": "Испытания и сертификация медных и оптоволоконных кабелей",
                     "correct": true
+                }
+            ]
+        },
+        {
+            "question": "Какие сценарии приведут к несовпадению дуплекса? (верны два варианта)",
+            "answerType": "multiChoice",
+            "answers": [
+                {
+                    "answer": "неправильная настройка динамической маршрутизации",
+                    "correct": false
+                },
+                {
+                    "answer": "запуск и остановка интерфейса маршрутизатора во время обычной работы",
+                    "correct": false
+                },
+                {
+                    "answer": "вручную установка двух подключенных устройств в различные дуплексные режимы",
+                    "correct": true
+                },
+                {
+                    "answer": "подключение устройства с автосогласованием к другому, которое вручную настроено на дуплекс",
+                    "correct": true
+                },
+                {
+                    "answer": "подключение устройства с интерфейсом со скоростью 100 Мбит/с к другому с интерфейсом со скоростью 1000 Мбит/с",
+                    "correct": false
+                }
+            ]
+        },
+        {
+            "question": "Технический специалист занимается устранением неполадок сетевого устройства и подозревает, что может быть несоответствие дуплексного режима. Что может вызвать несоответствие дуплекса?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "ошибка автоматического обнаружения MDIX",
+                    "correct": false
+                },
+                {
+                    "answer": "соединение разнородных устройств",
+                    "correct": false
+                },
+                {
+                    "answer": "неправильная конфигурация интерфейса",
+                    "correct": true
+                },
+                {
+                    "answer": "повреждение данных",
+                    "correct": false
+                }
+            ]
+        },
+        {
+            "question": "При тестировании нового веб-сервера администратор сети не может получить доступ к домашней странице, когда имя сервера введено в веб-браузер на ПК. Отправляет запросы на адреса IPv4 и IPv6 сервера. В чем может быть проблема?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "DNS не разрешает имя сервера в адрес IPv4 или IPv6",
+                    "correct": true
+                },
+                {
+                    "answer": "ARP не обнаруживает MAC-адрес сервера",
+                    "correct": false
+                },
+                {
+                    "answer": "DHCP не присвоил серверу адрес IPv4 или IPv6",
+                    "correct": false
+                },
+                {
+                    "answer": "FTP-клиент должен быть установлен на ПК",
+                    "correct": false
                 }
             ]
         }

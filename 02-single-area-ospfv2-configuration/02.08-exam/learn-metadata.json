@@ -3,8 +3,8 @@
     "shortName": "ccna3.single-area-ospfv2-configuration.exam",
     "type": "exam",
     "description": "Проверьте свои знания по темам модуля: идентификатор маршрутизатора OSPF, сети OSPF типа «точка-точка», OSPF сети коллективного доступа, управление метриками и таймерами OSPF, распространение маршрута по умолчанию через OSPF, проверка работы протокола OSPF.",
-    "difficulty": 1,
-    "duration": "PT1H9M",
+    "difficulty": 3,
+    "duration": "PT1H20M",
     "tags": {
         "$ref": "../../material-tags.json"
     },
@@ -31,7 +31,7 @@
             "mode": "exam",
             "grader": "test-auto",
             "aligned_bloom": "apply",
-            "passes_when": "Learner scores at least 80% on the exam's 45 questions covering module 2; attempts unlimited.",
+            "passes_when": "Learner scores at least 80% on the exam's 52 questions covering module 2; attempts unlimited.",
             "calibration": "operator-judge"
         }
     },
@@ -1252,6 +1252,164 @@
                 },
                 {
                     "answer": "default-information originate",
+                    "correct": true
+                }
+            ]
+        },
+        {
+            "question": "Сетевой инженер отметил, что некоторые ожидаемые записи сетевого маршрута не отображаются в таблице маршрутизации. Какие команды будут предоставлять дополнительную информацию о состоянии смежности маршрутизатора, интервалах таймера и идентификаторе области? (верны два варианта)",
+            "answerType": "multiChoice",
+            "answers": [
+                {
+                    "answer": "show ip protocols",
+                    "correct": false
+                },
+                {
+                    "answer": "show ip ospf interface",
+                    "correct": true
+                },
+                {
+                    "answer": "show ip route ospf",
+                    "correct": false
+                },
+                {
+                    "answer": "show ip ospf neighbor",
+                    "correct": true
+                },
+                {
+                    "answer": "show running-configuration",
+                    "correct": false
+                }
+            ]
+        },
+        {
+            "question": "В сети OSPF, когда требуются выборы DR и BDR?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "когда все маршрутизаторы в области OSPF не могут создавать смежности.",
+                    "correct": false
+                },
+                {
+                    "answer": "когда два соседних маршрутизатора находятся в двух разных сетях",
+                    "correct": false
+                },
+                {
+                    "answer": "когда маршрутизаторы соединены между собой по сети Ethernet",
+                    "correct": true
+                },
+                {
+                    "answer": "когда два соседних маршрутизатора соединены друг с другом по линии «точка-точка»",
+                    "correct": false
+                }
+            ]
+        },
+        {
+            "question": "Сетевой администратор изменил маршрутизатор с поддержкой OSPF, чтобы установить таймер приветствия 20 секунд. Что такое новое значение времени мертвого интервала по умолчанию?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "40 секунд",
+                    "correct": false
+                },
+                {
+                    "answer": "60 секунд",
+                    "correct": false
+                },
+                {
+                    "answer": "80 секунд",
+                    "correct": true
+                },
+                {
+                    "answer": "100 секунд",
+                    "correct": false
+                }
+            ]
+        },
+        {
+            "question": "Сетевой администратор устраняет проблему OSPF, связанную со смежностью соседей. Что должен сделать администратор?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "убедиться, что выборы DR/BDR завершены",
+                    "correct": false
+                },
+                {
+                    "answer": "убедиться, что идентификатор маршрутизатора включен в пакет приветствия",
+                    "correct": false
+                },
+                {
+                    "answer": "убедиться, что приоритет маршрутизатора уникален для каждого устройства",
+                    "correct": false
+                },
+                {
+                    "answer": "убедиться, что таймеры приветствия и мертвого интервала одинаковы на всех маршрутизаторах",
+                    "correct": true
+                }
+            ]
+        },
+        {
+            "question": "Инженер по сети изучает конфигурации маршрутизаторов в межсетевой сети. Рассмотрим следующую запись таблицы маршрутизации:\n\n```\nO 10.0.4.0/24 [110/50] via 10.0.3.2, 00:24:22, Serial0/1/1\n```\n\nУкажите значение административной дистанции этого маршрута.",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "24",
+                    "correct": false
+                },
+                {
+                    "answer": "50",
+                    "correct": false
+                },
+                {
+                    "answer": "110",
+                    "correct": true
+                },
+                {
+                    "answer": "160",
+                    "correct": false
+                }
+            ]
+        },
+        {
+            "question": "Инженер по сети, изучающий конфигурацию маршрутизатора, видит запись сети в таблице маршрутизации, указанную с кодом O. Какой маршрут это?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "статический маршрут",
+                    "correct": false
+                },
+                {
+                    "answer": "маршрут, используемый для шлюза по умолчанию",
+                    "correct": false
+                },
+                {
+                    "answer": "маршрут, динамически полученный с помощью протокола маршрутизации OSPF",
+                    "correct": true
+                },
+                {
+                    "answer": "маршрут для сети, непосредственно подключенной к интерфейсу локального маршрутизатора",
+                    "correct": false
+                }
+            ]
+        },
+        {
+            "question": "Два студента обсуждают маршрутизаторы и одно утверждение, которое они произносят является точным. Какое это утверждение?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "сеть с прямым подключением автоматически добавляется в таблицу маршрутизации соседа, если оба маршрутизатора выпущены одним производителем",
+                    "correct": false
+                },
+                {
+                    "answer": "удаленные сети можно добавлять только после того, как маршрутизаторы узнают о них через протоколы динамической маршрутизации",
+                    "correct": false
+                },
+                {
+                    "answer": "шлюз по умолчанию добавляется в таблицу маршрутизации при загрузке маршрутизатора",
+                    "correct": false
+                },
+                {
+                    "answer": "маршрут по умолчанию позволяет пересылать пакеты, которые не соответствуют определенному маршруту в таблице маршрутизации",
                     "correct": true
                 }
             ]

@@ -3,8 +3,8 @@
     "shortName": "ccna3.network-management.exam",
     "type": "exam",
     "description": "Проверьте свои знания по темам модуля: обнаружение устройств с помощью протокола CDP, обнаружение устройств с помощью протокола LLDP, протокол сетевого времени (NTP), простой протокол управления сетью (SNMP), журналирование системных сообщений с помощью Syslog, поддержка файловой системы на сетевом оборудовании, управление образами операционных систем на сетевых устройствах.",
-    "difficulty": 1,
-    "duration": "PT0H51M",
+    "difficulty": 3,
+    "duration": "PT1H1M",
     "tags": {
         "$ref": "../../material-tags.json"
     },
@@ -32,7 +32,7 @@
             "mode": "exam",
             "grader": "test-auto",
             "aligned_bloom": "apply",
-            "passes_when": "Learner scores at least 80% on the exam's 32 questions covering module 10; attempts unlimited.",
+            "passes_when": "Learner scores at least 80% on the exam's 38 questions covering module 10; attempts unlimited.",
             "calibration": "operator-judge"
         }
     },
@@ -907,6 +907,142 @@
                 {
                     "answer": "Незапрошенные сообщения, отправляемые агентом SNMP и оповещающие NMS о состоянии в сети",
                     "correct": true
+                }
+            ]
+        },
+        {
+            "question": "Сетевой техник настраивает SNMPv3 и установил уровень безопасности auth. Каков эффект этой настройки?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "проверяет подлинность пакета с помощью только алгоритма SHA",
+                    "correct": false
+                },
+                {
+                    "answer": "аутентифицирует пакет по строкам, совпадающим с именем пользователя или строкой сообщества",
+                    "correct": false
+                },
+                {
+                    "answer": "аутентифицирует пакет с помощью метода HMAC с MD5 или метода SHA",
+                    "correct": true
+                },
+                {
+                    "answer": "аутентифицирует пакет с помощью алгоритмов HMAC MD5 или HMAC SHA и шифрует пакет с помощью алгоритмов DES, 3DES или AES",
+                    "correct": false
+                }
+            ]
+        },
+        {
+            "question": "Какой тип сервера будет использоваться для хранения архивных записей сообщений от отслеживаемых сетевых устройств?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "DHCP",
+                    "correct": false
+                },
+                {
+                    "answer": "DNS",
+                    "correct": false
+                },
+                {
+                    "answer": "Print",
+                    "correct": false
+                },
+                {
+                    "answer": "аутентификация",
+                    "correct": false
+                },
+                {
+                    "answer": "системный журнал",
+                    "correct": true
+                }
+            ]
+        },
+        {
+            "question": "Сетевой инженер хочет синхронизировать время маршрутизатора с сервером NTP по адресу IPv4 209.165.200.225. Интерфейс выхода маршрутизатора настроен с адресом IPv4 192.168.212.11. Какая команда глобальной конфигурации должна использоваться для настройки сервера NTP в качестве источника времени для этого маршрутизатора?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "Ntp server 209.165.200.225",
+                    "correct": true
+                },
+                {
+                    "answer": "Ntp peer 209.165.200.225",
+                    "correct": false
+                },
+                {
+                    "answer": "Ntp server 192.168.212.11",
+                    "correct": false
+                },
+                {
+                    "answer": "Ntp peer 192.168.212.11",
+                    "correct": false
+                }
+            ]
+        },
+        {
+            "question": "Сетевой инженер использует программное обеспечение SNMP Manager для мониторинга и управления производительностью сети. Помимо опроса сетевых устройств через регулярные промежутки времени, инженер настраивает устройства на создание сообщений, информирующих SNMP-диспетчер об указанных событиях. Какой тип сообщений настроен на этих устройствах, что позволяет им отправлять незапрашиваемые сообщения?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "ловушка",
+                    "correct": true
+                },
+                {
+                    "answer": "запрос SET",
+                    "correct": false
+                },
+                {
+                    "answer": "get-bulk-request",
+                    "correct": false
+                },
+                {
+                    "answer": "get-response",
+                    "correct": false
+                }
+            ]
+        },
+        {
+            "question": "SNMP был реализован в сети для мониторинга и управления устройствами. Какой процесс проверки подлинности SNMP предпочтительнее, если диспетчеры SNMP взаимодействуют с агентами SNMP?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "строка сообщества открытого текста",
+                    "correct": false
+                },
+                {
+                    "answer": "шифрование строк сообщества",
+                    "correct": false
+                },
+                {
+                    "answer": "аутентификация имени пользователя и пароля",
+                    "correct": false
+                },
+                {
+                    "answer": "проверка подлинности MD5 или SHA",
+                    "correct": true
+                }
+            ]
+        },
+        {
+            "question": "Сетевой инженер настраивает коммутатор при отображении этого сообщения.\n\n```\n%LINK-3-UPDOWN: Interface Port-channel1, changed state to up\n```\n\nКакой уровень серьезности системного журнала данного сообщения?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "предупреждение (alert)",
+                    "correct": false
+                },
+                {
+                    "answer": "ошибка (error)",
+                    "correct": true
+                },
+                {
+                    "answer": "уведомление (notification)",
+                    "correct": false
+                },
+                {
+                    "answer": "информационный (information)",
+                    "correct": false
                 }
             ]
         }
