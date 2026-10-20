@@ -85,16 +85,14 @@
     <td><b>Модель</b></td>
     <td><b>Описание</b></td>
     <td><b>Местоположение</b></td>
-    <td colspan="2"><b>IOS</b></td>
-    <td><b>Лицензия</b></td>
+    <td colspan="2"><b>ОС</b></td>
   </tr>
   <tr>
     <td><b>Центральный офис</b></td>
-    <td>ISR 4321 </td>
+    <td>NR05</td>
     <td>Центральный пограничный маршрутизатор</td>
     <td>Здание A Rm: 137</td>
-    <td colspan="2">Cisco IOS XE Software, Version 16.09.04 flash:isr4300-universalk9_ias.16.09.04.SPA.bin</td>
-    <td>ipbasek9 securityk9</td>
+    <td colspan="2">NSALAB NetOS Software, Version 0.1.0, flash0:nr05-netos-0.1.0.bin</td>
   </tr>
   <tr>
     <td><b>Интерфейс</b></td>
@@ -141,16 +139,14 @@
     <td><b>Модель</b></td>
     <td><b>Описание</b></td>
     <td><b>Узел</b></td>
-    <td colspan="2"><b>IOS</b></td>
-    <td><b>Лицензия</b></td>
+    <td colspan="2"><b>ОС</b></td>
   </tr>
   <tr>
     <td><b>Branch-1</b></td>
-    <td>ISR 4221</td>
-    <td>Пограничный маршрутизатор Branch-2</td>
+    <td>NR02</td>
+    <td>Пограничный маршрутизатор Branch-1</td>
     <td>Здание B Rm: 107</td>
-    <td colspan="2">Cisco IOS XE Software, Version 16.09.04 flash:isr4200-universalk9.16.09.04.SPA.bin</td>
-    <td>ipbasek9 securityk9</td>
+    <td colspan="2">NSALAB NetOS Software, Version 0.1.0, flash0:nr02-netos-0.1.0.bin</td>
   </tr>
   <tr >
     <td><b>Интерфейс</b></td>
@@ -188,16 +184,16 @@
     <td><b>Модель</b></td>
     <td><b>Описание</b></td>
     <td colspan="2"><b>Управление IP-адрес</b></td>
-    <td colspan="4"><b>IOS</b></td>
+    <td colspan="4"><b>ОС</b></td>
     <td colspan="3"><b>VTP</b></td>
   </tr>
   <tr>
     <td><b>S1</b></td>
-    <td>Cisco Catalyst WS-C2960-24TC-L </td>
+    <td>NS01</td>
     <td>Branch-1 коммутатор LAN1</td>
     <td colspan="2">192.168.77.2/24</td>
-    <td colspan="4">IOS: 15.0 (2) image SE7: C2960-LANBASEK9-M</td>
-    <td colspan="3">Domain: CCNA Mode: Server</td>
+    <td colspan="4">NSALAB NetOS Software, Version 0.1.0, flash0:ns01-netos-0.1.0.bin</td>
+    <td colspan="3">Domain: nsalab Mode: Server</td>
   </tr>
   <tr >
     <td><b>Порт</b></td>
