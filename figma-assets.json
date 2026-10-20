@@ -2541,10 +2541,18 @@
     "page": "CCNA3 · 05 acls-for-ipv4-configuration"
    },
    "out": {
-    "path": "05-UNPLACED/assets/5.1.6.svg",
+    "path": "05-acls-for-ipv4-configuration/05.01-configure-standard-ipv4-acls/assets/5.1.5.svg",
     "format": "svg"
    },
-   "status": "orphan",
+   "status": "synced",
+   "provenance": {
+    "legacy": "5.1.5.svg",
+    "synced": {
+     "figmaVersion": "2412219307514478185",
+     "at": "2026-10-20T01:25:42Z",
+     "sha256": "13159ae7e68924ed86e507713d005a7b7db44f230b8dae6108a9d0664b4e0c61"
+    }
+   },
    "notes": "[нет в git · Опубликована как 5.1.5.svg и стоит сразу в двух блоках README (5.1.5 и 5.1.6) - одна топология на два номера. Оригиналы Cisco в файле разные (5.1.6.png и 5.1.5.png). · пара: закреплена]"
   },
   {
@@ -7356,9 +7364,9 @@
     "netacad": "c71b3943-1c46-11ea-af56-e368b99e9723",
     "legacy": "13.5.3.svg",
     "synced": {
-     "figmaVersion": "2410325910918669022",
-     "at": "2026-10-14T21:48:21Z",
-     "sha256": "53cf6a30990a09734f54d999d97c400599efed8e6326307aeb03463002dc34f9"
+     "figmaVersion": "2412219307514478185",
+     "at": "2026-10-20T01:25:42Z",
+     "sha256": "853b9754efeda0e0dbaab5cbf5eca8fcde3fc2de2672e406e44486314de86dca"
     }
    }
   },
@@ -7381,9 +7389,9 @@
     "netacad": "c71bae72-1c46-11ea-af56-e368b99e9723",
     "legacy": "13.5.4.svg",
     "synced": {
-     "figmaVersion": "2410325910918669022",
-     "at": "2026-10-14T21:48:21Z",
-     "sha256": "dddc0b1ec39acacd65bca9e2ac2c1c8bc482024159ef3d10f20dcf5a734d9afa"
+     "figmaVersion": "2412219307514478185",
+     "at": "2026-10-20T01:25:42Z",
+     "sha256": "f74155bace41b0cdbb89a41ee1a388cff2e17c354a9cf126508880e4552a16a3"
     }
    }
   },
@@ -7406,9 +7414,9 @@
     "netacad": "c71c4ab2-1c46-11ea-af56-e368b99e9723",
     "legacy": "13.5.5-1.svg",
     "synced": {
-     "figmaVersion": "2409982897191414088",
-     "at": "2026-10-13T23:56:14Z",
-     "sha256": "1a7041bb9e73a1df94c68afc120096c4c64911701276930016ddd15357bf3deb"
+     "figmaVersion": "2412219307514478185",
+     "at": "2026-10-20T01:25:42Z",
+     "sha256": "40c832a749f75fcf0d343e2a6bebfc17b73511804a4eb07774094a53104d26bd"
     }
    }
   },
@@ -7431,9 +7439,9 @@
     "netacad": "c71cbfe3-1c46-11ea-af56-e368b99e9723",
     "legacy": "13.5.5-2.svg",
     "synced": {
-     "figmaVersion": "2409982897191414088",
-     "at": "2026-10-13T23:56:14Z",
-     "sha256": "4b22255080e19440fa52df24c32381c24db8bb295a80d8b1fbe5c15296518faa"
+     "figmaVersion": "2412219307514478185",
+     "at": "2026-10-20T01:25:42Z",
+     "sha256": "509001bea611415c7306bee78c23ee982a719189d94e9c5b7b21ad76453116df"
     }
    }
   },
@@ -7456,9 +7464,9 @@
     "netacad": "c71d8330-1c46-11ea-af56-e368b99e9723",
     "legacy": "13.5.5-3.svg",
     "synced": {
-     "figmaVersion": "2409982897191414088",
-     "at": "2026-10-13T23:56:14Z",
-     "sha256": "12aa140abe835b0f26a71564693ca3f27586395073378a0f1524a3ad20b8fadb"
+     "figmaVersion": "2412219307514478185",
+     "at": "2026-10-20T01:25:42Z",
+     "sha256": "2f3c717baff22a4aefd82459990d6509ed69de74d52eeb58b8647e18ca2a3861"
     }
    }
   },
@@ -7636,9 +7644,9 @@
     "netacad": "c73529e3-1c46-11ea-af56-e368b99e9723",
     "legacy": "14.4.4.svg",
     "synced": {
-     "figmaVersion": "2410325910918669022",
-     "at": "2026-10-14T21:48:21Z",
-     "sha256": "05a3e9a239646c75071a18927dab80002c69492b79bdadd0754dcfbaee6ba826"
+     "figmaVersion": "2412219307514478185",
+     "at": "2026-10-20T01:25:42Z",
+     "sha256": "8ad098dc48af15904f33e6c54036bbf25433eb0309c2946676b92b27fa76fed6"
     }
    }
   },
@@ -7761,9 +7769,9 @@
     "netacad": "c73c2ec0-1c46-11ea-af56-e368b99e9723",
     "legacy": "14.6.2.svg",
     "synced": {
-     "figmaVersion": "2410325910918669022",
-     "at": "2026-10-14T21:48:21Z",
-     "sha256": "b7681bd70654fbe8d1dca5a0c2c069e71e8f1c9ebc1faab1367d6bf491f03f1c"
+     "figmaVersion": "2412219307514478185",
+     "at": "2026-10-20T01:25:42Z",
+     "sha256": "2ce622f3bb36224d89462f46aea132194957dfd3ffee6aca94482ba34d03303e"
     }
    }
   },
@@ -7786,9 +7794,9 @@
     "netacad": "c73ca3f2-1c46-11ea-af56-e368b99e9723",
     "legacy": "14.6.3-1.svg",
     "synced": {
-     "figmaVersion": "2410325910918669022",
-     "at": "2026-10-14T21:48:21Z",
-     "sha256": "d156c9ce3b6893f3bc2e0d01db55d4323dbd45330112cf95d97c4fae9829cf01"
+     "figmaVersion": "2412219307514478185",
+     "at": "2026-10-20T01:25:42Z",
+     "sha256": "4426ead9f73880433eac3008c8e2c18ab41bbac6f6c8bf2e79dd0317f85ceab7"
     }
    }
   },
@@ -7811,171 +7819,232 @@
     "netacad": "c73cf213-1c46-11ea-af56-e368b99e9723",
     "legacy": "14.6.3-2.svg",
     "synced": {
-     "figmaVersion": "2410325910918669022",
-     "at": "2026-10-14T21:48:21Z",
-     "sha256": "6d477f93e41b525441181508f87152e3dc1a92b08b207591e6a9dbf208ae77d0"
+     "figmaVersion": "2412219307514478185",
+     "at": "2026-10-20T01:25:42Z",
+     "sha256": "2bcf2c7f146366526d731f8d8c7bf6dc6b4f436426184ad2d3d7b5aabd3271b8"
     }
    },
    "notes": "[svg в git · перерисовка 1581:144566 без подписей в пределах depth=4 — проверить текст · пара: закреплена]"
   },
   {
-   "id": "ccna3-zqbavg6",
-   "kind": "native",
-   "display": {
-    "key": "5.1.5"
-   },
-   "out": {
-    "path": "05-acls-for-ipv4-configuration/05.01-configure-standard-ipv4-acls/assets/5.1.5.svg",
-    "format": "native"
-   },
-   "status": "manual",
-   "provenance": {
-    "netacad": "c618bd60-1c46-11ea-af56-e368b99e9723"
-   }
-  },
-  {
    "id": "ccna3-f5z45so",
-   "kind": "native",
+   "kind": "illustration",
    "display": {
     "key": "5.3.3-1"
    },
-   "out": {
-    "path": "05-acls-for-ipv4-configuration/05.03-secure-vty-ports-with-a-standard-ipv4-acl/assets/5.3.3-1.png",
-    "format": "native"
+   "figma": {
+    "nodeId": "5533:8943",
+    "page": "CCNA3 · 05 acls-for-ipv4-configuration"
    },
-   "status": "manual"
+   "out": {
+    "path": "05-acls-for-ipv4-configuration/05.03-secure-vty-ports-with-a-standard-ipv4-acl/assets/5.3.3-1.svg",
+    "format": "svg"
+   },
+   "status": "synced",
+   "provenance": {
+    "legacy": "5.3.3-1.png",
+    "synced": {
+     "figmaVersion": "2412239420868654326",
+     "at": "2026-10-20T01:48:35Z",
+     "sha256": "00c8df4a8909ea4c0e3f73b55c8eff5ea09e9f39a5b5748dd3a4bbf31a182967"
+    }
+   }
   },
   {
    "id": "ccna3-z74wkuj",
-   "kind": "native",
+   "kind": "illustration",
    "display": {
     "key": "5.3.3-2"
    },
-   "out": {
-    "path": "05-acls-for-ipv4-configuration/05.03-secure-vty-ports-with-a-standard-ipv4-acl/assets/5.3.3-2.png",
-    "format": "native"
+   "figma": {
+    "nodeId": "5533:8961",
+    "page": "CCNA3 · 05 acls-for-ipv4-configuration"
    },
-   "status": "manual"
+   "out": {
+    "path": "05-acls-for-ipv4-configuration/05.03-secure-vty-ports-with-a-standard-ipv4-acl/assets/5.3.3-2.svg",
+    "format": "svg"
+   },
+   "status": "synced",
+   "provenance": {
+    "legacy": "5.3.3-2.png",
+    "synced": {
+     "figmaVersion": "2412239420868654326",
+     "at": "2026-10-20T01:48:35Z",
+     "sha256": "36b09f91cf381aa235deb99d9a3128e0bdfc6f57984f55f7f5fb6c94f2310f8e"
+    }
+   }
   },
   {
    "id": "ccna3-d6wdabi",
-   "kind": "native",
+   "kind": "illustration",
    "display": {
     "key": "8.2.4-3"
    },
-   "out": {
-    "path": "08-vpn-and-ipsec-concepts/08.02-types-of-vpns/assets/8.2.4-3.png",
-    "format": "native"
+   "figma": {
+    "nodeId": "5535:10781",
+    "page": "CCNA3 · 08 vpn-and-ipsec-concepts"
    },
-   "status": "manual",
+   "out": {
+    "path": "08-vpn-and-ipsec-concepts/08.02-types-of-vpns/assets/8.2.4-3.svg",
+    "format": "svg"
+   },
+   "status": "synced",
    "provenance": {
-    "netacad": "c66d9420-1c46-11ea-af56-e368b99e9723"
+    "netacad": "c66d9420-1c46-11ea-af56-e368b99e9723",
+    "legacy": "8.2.4-3.png",
+    "synced": {
+     "figmaVersion": "2412239420868654326",
+     "at": "2026-10-20T01:48:35Z",
+     "sha256": "0583c0228fd615bfe9b25369033c0d20f0cbd465d5fad7bec28e1b98c1f822ac"
+    }
    }
   },
   {
    "id": "ccna3-uwet3sn",
-   "kind": "native",
+   "kind": "illustration",
    "display": {
     "key": "10.4.9"
    },
-   "out": {
-    "path": "10-network-management/10.04-snmp/assets/10.4.9.jpg",
-    "format": "native"
+   "figma": {
+    "nodeId": "5537:9385",
+    "page": "CCNA3 · 10 network-management"
    },
-   "status": "manual"
+   "out": {
+    "path": "10-network-management/10.04-snmp/assets/10.4.9.svg",
+    "format": "svg"
+   },
+   "status": "synced",
+   "provenance": {
+    "legacy": "10.4.9.jpg",
+    "synced": {
+     "figmaVersion": "2412239420868654326",
+     "at": "2026-10-20T01:48:35Z",
+     "sha256": "8408345e37bda1b7da8fd5e7368ed40988965e3fbdeeecc22c99232bd4988b0e"
+    }
+   }
   },
   {
    "id": "ccna3-copjc67",
-   "kind": "native",
+   "kind": "illustration",
    "display": {
     "key": "10.6.3"
    },
-   "out": {
-    "path": "10-network-management/10.06-router-and-switch-file-maintenance/assets/10.6.3.png",
-    "format": "native"
+   "figma": {
+    "nodeId": "5539:9535",
+    "page": "CCNA3 · 10 network-management"
    },
-   "status": "manual",
+   "out": {
+    "path": "10-network-management/10.06-router-and-switch-file-maintenance/assets/10.6.3.svg",
+    "format": "svg"
+   },
+   "status": "synced",
    "provenance": {
-    "netacad": "c6bb6602-1c46-11ea-af56-e368b99e9723"
+    "netacad": "c6bb6602-1c46-11ea-af56-e368b99e9723",
+    "legacy": "10.6.3.png",
+    "synced": {
+     "figmaVersion": "2412239420868654326",
+     "at": "2026-10-20T01:48:35Z",
+     "sha256": "c9db61ebec42e60ef7bfae8bcd82727b6e65286c35f9530c5c267e9290449cdf"
+    }
    }
   },
   {
    "id": "ccna3-yuh7uhy",
-   "kind": "native",
+   "kind": "illustration",
    "display": {
     "key": "10.6.4"
    },
-   "out": {
-    "path": "10-network-management/10.06-router-and-switch-file-maintenance/assets/10.6.4.png",
-    "format": "native"
+   "figma": {
+    "nodeId": "5539:9692",
+    "page": "CCNA3 · 10 network-management"
    },
-   "status": "manual",
+   "out": {
+    "path": "10-network-management/10.06-router-and-switch-file-maintenance/assets/10.6.4.svg",
+    "format": "svg"
+   },
+   "status": "synced",
    "provenance": {
-    "netacad": "c6bc2950-1c46-11ea-af56-e368b99e9723"
+    "netacad": "c6bc2950-1c46-11ea-af56-e368b99e9723",
+    "legacy": "10.6.4.png",
+    "synced": {
+     "figmaVersion": "2412239420868654326",
+     "at": "2026-10-20T01:48:35Z",
+     "sha256": "885e852323822f590c8d3c658b5bb20ea0f9719ca4990564593fd96e2f499c5c"
+    }
    }
   },
   {
    "id": "ccna3-d4u7eyy",
-   "kind": "native",
+   "kind": "illustration",
    "display": {
     "key": "10.6.6"
    },
-   "out": {
-    "path": "10-network-management/10.06-router-and-switch-file-maintenance/assets/10.6.6.png",
-    "format": "native"
+   "figma": {
+    "nodeId": "5537:9459",
+    "page": "CCNA3 · 10 network-management"
    },
-   "status": "manual",
+   "out": {
+    "path": "10-network-management/10.06-router-and-switch-file-maintenance/assets/10.6.6.svg",
+    "format": "svg"
+   },
+   "status": "synced",
    "provenance": {
-    "netacad": "c6bcc590-1c46-11ea-af56-e368b99e9723"
+    "netacad": "c6bcc590-1c46-11ea-af56-e368b99e9723",
+    "legacy": "10.6.6.png",
+    "synced": {
+     "figmaVersion": "2412219307514478185",
+     "at": "2026-10-20T01:25:42Z",
+     "sha256": "76e94fd3ed1a088284f450f48373e590934af6cad804ea02e01a5648470d9e09"
+    }
    }
   },
   {
    "id": "ccna3-3orrab4",
-   "kind": "native",
+   "kind": "illustration",
    "display": {
     "key": "11.3.1-1"
    },
-   "out": {
-    "path": "11-network-design/11.03-switch-hardware/assets/11.3.1-1.png",
-    "format": "native"
+   "figma": {
+    "nodeId": "5495:14898",
+    "page": "CCNA3 · 11 network-design"
    },
-   "status": "manual"
+   "out": {
+    "path": "11-network-design/11.03-switch-hardware/assets/11.3.1-1.svg",
+    "format": "svg"
+   },
+   "status": "synced",
+   "provenance": {
+    "legacy": "11.3.1-1.png",
+    "synced": {
+     "figmaVersion": "2412250511552610057",
+     "at": "2026-10-20T02:37:20Z",
+     "sha256": "ceb2d45c50fc28c1eabebb49be8e17e68533eb078dfa61500da98ae9c488d1d4"
+    }
+   }
   },
   {
    "id": "ccna3-hpvudhe",
-   "kind": "native",
+   "kind": "illustration",
    "display": {
     "key": "11.3.1-2"
    },
-   "out": {
-    "path": "11-network-design/11.03-switch-hardware/assets/11.3.1-2.jpg",
-    "format": "native"
-   },
-   "status": "manual"
-  },
-  {
-   "id": "ccna3-aegvqua",
-   "kind": "native",
-   "display": {
-    "key": "11.3.1-3"
+   "figma": {
+    "nodeId": "5495:26243",
+    "page": "CCNA3 · 11 network-design"
    },
    "out": {
-    "path": "11-network-design/11.03-switch-hardware/assets/11.3.1-3.png",
-    "format": "native"
+    "path": "11-network-design/11.03-switch-hardware/assets/11.3.1-2.svg",
+    "format": "svg"
    },
-   "status": "manual"
-  },
-  {
-   "id": "ccna3-gixwt3c",
-   "kind": "native",
-   "display": {
-    "key": "11.3.1-4"
-   },
-   "out": {
-    "path": "11-network-design/11.03-switch-hardware/assets/11.3.1-4.png",
-    "format": "native"
-   },
-   "status": "manual"
+   "status": "synced",
+   "provenance": {
+    "legacy": "11.3.1-2.jpg",
+    "synced": {
+     "figmaVersion": "2412250511552610057",
+     "at": "2026-10-20T02:37:20Z",
+     "sha256": "4cf433141ebef589e0ff31dede9bd47fe624c9164568604a3af6cb5fd4e1108b"
+    }
+   }
   },
   {
    "id": "ccna3-3p6y6wb",
@@ -7991,92 +8060,172 @@
   },
   {
    "id": "ccna3-fpufprq",
-   "kind": "native",
+   "kind": "illustration",
    "display": {
     "key": "11.3.2-1"
    },
-   "out": {
-    "path": "11-network-design/11.03-switch-hardware/assets/11.3.2-1.jpg",
-    "format": "native"
+   "figma": {
+    "nodeId": "5495:27927",
+    "page": "CCNA3 · 11 network-design"
    },
-   "status": "manual"
+   "out": {
+    "path": "11-network-design/11.03-switch-hardware/assets/11.3.2-1.svg",
+    "format": "svg"
+   },
+   "status": "synced",
+   "provenance": {
+    "legacy": "11.3.2-1.jpg",
+    "synced": {
+     "figmaVersion": "2412250511552610057",
+     "at": "2026-10-20T02:37:20Z",
+     "sha256": "78c9bcc5b21dc3475c25e8aecee182b958ba21fd0b8bb8434125252ed076d9b3"
+    }
+   }
   },
   {
    "id": "ccna3-6xkxrtj",
-   "kind": "native",
+   "kind": "illustration",
    "display": {
     "key": "11.3.2-2"
    },
-   "out": {
-    "path": "11-network-design/11.03-switch-hardware/assets/11.3.2-2.png",
-    "format": "native"
+   "figma": {
+    "nodeId": "5495:28688",
+    "page": "CCNA3 · 11 network-design"
    },
-   "status": "manual"
+   "out": {
+    "path": "11-network-design/11.03-switch-hardware/assets/11.3.2-2.svg",
+    "format": "svg"
+   },
+   "status": "synced",
+   "provenance": {
+    "legacy": "11.3.2-2.png",
+    "synced": {
+     "figmaVersion": "2412250511552610057",
+     "at": "2026-10-20T02:37:20Z",
+     "sha256": "cb0fa3275bff493b765f8ead9e4e0284fdaaa7933b37f06c913cd7909ae84d7a"
+    }
+   }
   },
   {
    "id": "ccna3-g5q6oqh",
-   "kind": "native",
+   "kind": "illustration",
    "display": {
     "key": "11.3.2-3"
    },
-   "out": {
-    "path": "11-network-design/11.03-switch-hardware/assets/11.3.2-3.png",
-    "format": "native"
+   "figma": {
+    "nodeId": "5495:33264",
+    "page": "CCNA3 · 11 network-design"
    },
-   "status": "manual"
+   "out": {
+    "path": "11-network-design/11.03-switch-hardware/assets/11.3.2-3.svg",
+    "format": "svg"
+   },
+   "status": "synced",
+   "provenance": {
+    "legacy": "11.3.2-3.png",
+    "synced": {
+     "figmaVersion": "2412250511552610057",
+     "at": "2026-10-20T02:37:20Z",
+     "sha256": "2477a0a6ea6b7d9d7b4eea7373d8a762d0de6bf79c9a562cae7261e96994b0a9"
+    }
+   }
   },
   {
    "id": "ccna3-wfz7gsm",
-   "kind": "native",
+   "kind": "illustration",
    "display": {
     "key": "11.3.2-4"
    },
-   "out": {
-    "path": "11-network-design/11.03-switch-hardware/assets/11.3.2-4.png",
-    "format": "native"
+   "figma": {
+    "nodeId": "5495:33436",
+    "page": "CCNA3 · 11 network-design"
    },
-   "status": "manual"
+   "out": {
+    "path": "11-network-design/11.03-switch-hardware/assets/11.3.2-4.svg",
+    "format": "svg"
+   },
+   "status": "synced",
+   "provenance": {
+    "legacy": "11.3.2-4.png",
+    "synced": {
+     "figmaVersion": "2412250511552610057",
+     "at": "2026-10-20T02:37:20Z",
+     "sha256": "341f61c47d47c9450fe2ad26584c051da43cde6d6be098c9c623d8e770a71f83"
+    }
+   }
   },
   {
    "id": "ccna3-j2rz6jz",
-   "kind": "native",
+   "kind": "illustration",
    "display": {
     "key": "11.3.3-1"
    },
-   "out": {
-    "path": "11-network-design/11.03-switch-hardware/assets/11.3.3-1.jpg",
-    "format": "native"
+   "figma": {
+    "nodeId": "5496:34273",
+    "page": "CCNA3 · 11 network-design"
    },
-   "status": "manual"
+   "out": {
+    "path": "11-network-design/11.03-switch-hardware/assets/11.3.3-1.svg",
+    "format": "svg"
+   },
+   "status": "synced",
+   "provenance": {
+    "legacy": "11.3.3-1.jpg",
+    "synced": {
+     "figmaVersion": "2412250511552610057",
+     "at": "2026-10-20T02:37:20Z",
+     "sha256": "aafb512d4d1e76d72c198d993e7c82f8e96092dec792a851651a743928f52c75"
+    }
+   }
   },
   {
    "id": "ccna3-fdzgppn",
-   "kind": "native",
+   "kind": "illustration",
    "display": {
     "key": "11.3.3-2"
    },
-   "out": {
-    "path": "11-network-design/11.03-switch-hardware/assets/11.3.3-2.png",
-    "format": "native"
+   "figma": {
+    "nodeId": "5496:35284",
+    "page": "CCNA3 · 11 network-design"
    },
-   "status": "manual",
+   "out": {
+    "path": "11-network-design/11.03-switch-hardware/assets/11.3.3-2.svg",
+    "format": "svg"
+   },
+   "status": "synced",
    "provenance": {
-    "netacad": "c6d44531-1c46-11ea-af56-e368b99e9723"
+    "netacad": "c6d44531-1c46-11ea-af56-e368b99e9723",
+    "legacy": "11.3.3-2.png",
+    "synced": {
+     "figmaVersion": "2412250511552610057",
+     "at": "2026-10-20T02:37:20Z",
+     "sha256": "1c184c242377078198108f74a2a080792a18ba928d714a4963889d8227af3ab9"
+    }
    }
   },
   {
    "id": "ccna3-tnrykg2",
-   "kind": "native",
+   "kind": "illustration",
    "display": {
     "key": "11.3.5-1"
    },
-   "out": {
-    "path": "11-network-design/11.03-switch-hardware/assets/11.3.5-1.png",
-    "format": "native"
+   "figma": {
+    "nodeId": "5496:39369",
+    "page": "CCNA3 · 11 network-design"
    },
-   "status": "manual",
+   "out": {
+    "path": "11-network-design/11.03-switch-hardware/assets/11.3.5-1.svg",
+    "format": "svg"
+   },
+   "status": "synced",
    "provenance": {
-    "netacad": "c6d50881-1c46-11ea-af56-e368b99e9723"
+    "netacad": "c6d50881-1c46-11ea-af56-e368b99e9723",
+    "legacy": "11.3.5-1.png",
+    "synced": {
+     "figmaVersion": "2412250511552610057",
+     "at": "2026-10-20T02:37:20Z",
+     "sha256": "5ad44f6980f7231346bd6c28849693cb4c1f80de51198fa709f1374d7fa3d4f7"
+    }
    }
   },
   {
@@ -8125,301 +8274,269 @@
    }
   },
   {
-   "id": "ccna3-uq3wu2p",
-   "kind": "native",
-   "display": {
-    "key": "11.3.6"
-   },
-   "out": {
-    "path": "11-network-design/11.03-switch-hardware/assets/11.3.6.png",
-    "format": "native"
-   },
-   "status": "manual"
-  },
-  {
-   "id": "ccna3-mnzow2l",
-   "kind": "native",
-   "display": {
-    "key": "11.4.2-1"
-   },
-   "out": {
-    "path": "11-network-design/11.04-router-hardware/assets/11.4.2-1.png",
-    "format": "native"
-   },
-   "status": "manual"
-  },
-  {
-   "id": "ccna3-vjmadwl",
-   "kind": "native",
-   "display": {
-    "key": "11.4.2-2"
-   },
-   "out": {
-    "path": "11-network-design/11.04-router-hardware/assets/11.4.2-2.png",
-    "format": "native"
-   },
-   "status": "manual"
-  },
-  {
    "id": "ccna3-scaoed3",
-   "kind": "native",
+   "kind": "illustration",
    "display": {
     "key": "11.4.2-3"
    },
-   "out": {
-    "path": "11-network-design/11.04-router-hardware/assets/11.4.2-3.png",
-    "format": "native"
+   "figma": {
+    "nodeId": "5498:40932",
+    "page": "CCNA3 · 11 network-design"
    },
-   "status": "manual",
+   "out": {
+    "path": "11-network-design/11.04-router-hardware/assets/11.4.2-3.svg",
+    "format": "svg"
+   },
+   "status": "synced",
    "provenance": {
-    "netacad": "c6da1190-1c46-11ea-af56-e368b99e9723"
+    "netacad": "c6da1190-1c46-11ea-af56-e368b99e9723",
+    "legacy": "11.4.2-3.png",
+    "synced": {
+     "figmaVersion": "2412250511552610057",
+     "at": "2026-10-20T02:37:20Z",
+     "sha256": "9fbc772b4c8925a52c4a9f61f6fd3ce78fe34bbf0f14f81a1af85b3e1c7ed6f0"
+    }
    }
   },
   {
    "id": "ccna3-3vo226w",
-   "kind": "native",
+   "kind": "illustration",
    "display": {
     "key": "11.4.2-4"
    },
-   "out": {
-    "path": "11-network-design/11.04-router-hardware/assets/11.4.2-4.jpg",
-    "format": "native"
+   "figma": {
+    "nodeId": "5498:41341",
+    "page": "CCNA3 · 11 network-design"
    },
-   "status": "manual"
+   "out": {
+    "path": "11-network-design/11.04-router-hardware/assets/11.4.2-4.svg",
+    "format": "svg"
+   },
+   "status": "synced",
+   "provenance": {
+    "legacy": "11.4.2-4.jpg",
+    "synced": {
+     "figmaVersion": "2412250511552610057",
+     "at": "2026-10-20T02:37:20Z",
+     "sha256": "c11066e07de415d2a95921d25532be8f042bd67612010586f5e73083d6d21c7b"
+    }
+   }
   },
   {
    "id": "ccna3-7h23rv5",
-   "kind": "native",
+   "kind": "illustration",
    "display": {
     "key": "11.4.3-1"
    },
-   "out": {
-    "path": "11-network-design/11.04-router-hardware/assets/11.4.3-1.png",
-    "format": "native"
+   "figma": {
+    "nodeId": "5498:41480",
+    "page": "CCNA3 · 11 network-design"
    },
-   "status": "manual"
+   "out": {
+    "path": "11-network-design/11.04-router-hardware/assets/11.4.3-1.svg",
+    "format": "svg"
+   },
+   "status": "synced",
+   "provenance": {
+    "legacy": "11.4.3-1.png",
+    "synced": {
+     "figmaVersion": "2412250511552610057",
+     "at": "2026-10-20T02:37:20Z",
+     "sha256": "8df16092a84ce0ec1dbd8303c5911c9b7a01f83d54e93be0c468a28c0745e64d"
+    }
+   }
   },
   {
    "id": "ccna3-otvdxw2",
-   "kind": "native",
+   "kind": "illustration",
    "display": {
     "key": "11.4.3-2"
    },
-   "out": {
-    "path": "11-network-design/11.04-router-hardware/assets/11.4.3-2.png",
-    "format": "native"
+   "figma": {
+    "nodeId": "5498:41607",
+    "page": "CCNA3 · 11 network-design"
    },
-   "status": "manual"
+   "out": {
+    "path": "11-network-design/11.04-router-hardware/assets/11.4.3-2.svg",
+    "format": "svg"
+   },
+   "status": "synced",
+   "provenance": {
+    "legacy": "11.4.3-2.png",
+    "synced": {
+     "figmaVersion": "2412250511552610057",
+     "at": "2026-10-20T02:37:20Z",
+     "sha256": "4c93aada28cd48e9d856bf48b327d06eb3553f6c148b50b40f83ac346c383a52"
+    }
+   }
   },
   {
    "id": "ccna3-ozcfpab",
-   "kind": "native",
+   "kind": "illustration",
    "display": {
     "key": "11.4.3-3"
    },
-   "out": {
-    "path": "11-network-design/11.04-router-hardware/assets/11.4.3-3.png",
-    "format": "native"
+   "figma": {
+    "nodeId": "5498:41839",
+    "page": "CCNA3 · 11 network-design"
    },
-   "status": "manual"
+   "out": {
+    "path": "11-network-design/11.04-router-hardware/assets/11.4.3-3.svg",
+    "format": "svg"
+   },
+   "status": "synced",
+   "provenance": {
+    "legacy": "11.4.3-3.png",
+    "synced": {
+     "figmaVersion": "2412250511552610057",
+     "at": "2026-10-20T02:37:20Z",
+     "sha256": "9acf80317c3d8334065bb21e1276c52ebac23d447af6c8d85c6585de3785da30"
+    }
+   }
   },
   {
    "id": "ccna3-aj7h6cu",
-   "kind": "native",
+   "kind": "illustration",
    "display": {
     "key": "11.4.3-4"
    },
-   "out": {
-    "path": "11-network-design/11.04-router-hardware/assets/11.4.3-4.png",
-    "format": "native"
+   "figma": {
+    "nodeId": "5498:42240",
+    "page": "CCNA3 · 11 network-design"
    },
-   "status": "manual"
+   "out": {
+    "path": "11-network-design/11.04-router-hardware/assets/11.4.3-4.svg",
+    "format": "svg"
+   },
+   "status": "synced",
+   "provenance": {
+    "legacy": "11.4.3-4.png",
+    "synced": {
+     "figmaVersion": "2412250511552610057",
+     "at": "2026-10-20T02:37:20Z",
+     "sha256": "066bd7b140d6e85c496369b30772fcaa86d9f33dac7633539547ef2364535734"
+    }
+   }
   },
   {
    "id": "ccna3-3n2r6ze",
-   "kind": "native",
+   "kind": "illustration",
    "display": {
     "key": "12.3.2"
    },
-   "out": {
-    "path": "12-network-troubleshooting/12.03-troubleshooting-tools/assets/12.3.2.jpg",
-    "format": "native"
-   },
-   "status": "manual"
-  },
-  {
-   "id": "ccna3-egyfuqn",
-   "kind": "native",
-   "display": {
-    "key": "13.1.2"
+   "figma": {
+    "nodeId": "5536:9992",
+    "page": "CCNA3 · 12 network-troubleshooting"
    },
    "out": {
-    "path": "13-network-virtualization/13.01-cloud-computing/assets/13.1.2.jpg",
-    "format": "native"
+    "path": "12-network-troubleshooting/12.03-troubleshooting-tools/assets/12.3.2.svg",
+    "format": "svg"
    },
-   "status": "manual"
+   "status": "synced",
+   "provenance": {
+    "legacy": "12.3.2.jpg",
+    "synced": {
+     "figmaVersion": "2412239420868654326",
+     "at": "2026-10-20T01:48:35Z",
+     "sha256": "a54c540c029bd01dc342b2fac334741f5afa41e271d425e9c8631bc9a6f8b9cb"
+    }
+   }
   },
   {
    "id": "ccna3-c7dycsd",
-   "kind": "native",
+   "kind": "illustration",
    "display": {
     "key": "13.2.1"
    },
-   "out": {
-    "path": "13-network-virtualization/13.02-virtualization/assets/13.2.1.png",
-    "format": "native"
-   },
-   "status": "manual"
-  },
-  {
-   "id": "ccna3-lwiu57d",
-   "kind": "native",
-   "display": {
-    "key": "13.3.2-2"
+   "figma": {
+    "nodeId": "5540:9864",
+    "page": "CCNA3 · 13 network-virtualization"
    },
    "out": {
-    "path": "13-network-virtualization/13.03-virtual-network-infrastructure/assets/13.3.2-2.jpg",
-    "format": "native"
+    "path": "13-network-virtualization/13.02-virtualization/assets/13.2.1.svg",
+    "format": "svg"
    },
-   "status": "manual"
-  },
-  {
-   "id": "ccna3-loupcxw",
-   "kind": "native",
-   "display": {
-    "key": "13.4.3"
-   },
-   "out": {
-    "path": "13-network-virtualization/13.04-software-defined-networking/assets/13.4.3.png",
-    "format": "native"
-   },
-   "status": "manual",
+   "status": "synced",
    "provenance": {
-    "netacad": "c7167e54-1c46-11ea-af56-e368b99e9723"
+    "legacy": "13.2.1.png",
+    "synced": {
+     "figmaVersion": "2412219307514478185",
+     "at": "2026-10-20T01:25:42Z",
+     "sha256": "e7e951a1503fe1b02364b85872c2880916a6c3af937a7f10ba3aa695e2a9ba98"
+    }
    }
-  },
-  {
-   "id": "ccna3-lnz6q4r",
-   "kind": "native",
-   "display": {
-    "key": "13.5.6"
-   },
-   "out": {
-    "path": "13-network-virtualization/13.05-controllers/assets/13.5.6.jpg",
-    "format": "native"
-   },
-   "status": "manual"
   },
   {
    "id": "ccna3-i7murxg",
-   "kind": "native",
+   "kind": "illustration",
    "display": {
     "key": "13.5.7"
    },
-   "out": {
-    "path": "13-network-virtualization/13.05-controllers/assets/13.5.7.png",
-    "format": "native"
-   },
-   "status": "manual"
-  },
-  {
-   "id": "ccna3-4afwae7",
-   "kind": "native",
-   "display": {
-    "key": "14.1.3"
+   "figma": {
+    "nodeId": "5540:9967",
+    "page": "CCNA3 · 13 network-virtualization"
    },
    "out": {
-    "path": "14-network-automation/14.01-automation-overview/assets/14.1.3.jpg",
-    "format": "native"
+    "path": "13-network-virtualization/13.05-controllers/assets/13.5.7.svg",
+    "format": "svg"
    },
-   "status": "manual"
-  },
-  {
-   "id": "ccna3-2pn3uya",
-   "kind": "native",
-   "display": {
-    "key": "14.2.2"
-   },
-   "out": {
-    "path": "14-network-automation/14.02-data-formats/assets/14.2.2.png",
-    "format": "native"
-   },
-   "status": "manual"
-  },
-  {
-   "id": "ccna3-vgrlbsr",
-   "kind": "native",
-   "display": {
-    "key": "14.4.3-1"
-   },
-   "out": {
-    "path": "14-network-automation/14.04-rest/assets/14.4.3-1.png",
-    "format": "native"
-   },
-   "status": "manual",
+   "status": "synced",
    "provenance": {
-    "netacad": "c734b4b4-1c46-11ea-af56-e368b99e9723"
+    "legacy": "13.5.7.png",
+    "synced": {
+     "figmaVersion": "2412219307514478185",
+     "at": "2026-10-20T01:25:42Z",
+     "sha256": "e395b3e1d4a51beae644b6fca4f2a169cca15c0f061a3dd1d0717da196a9304c"
+    }
    }
   },
   {
-   "id": "ccna3-vvert5m",
-   "kind": "native",
+   "id": "ccna3-2pn3uya",
+   "kind": "illustration",
    "display": {
-    "key": "14.4.5-2"
+    "key": "14.2.2"
+   },
+   "figma": {
+    "nodeId": "5544:9083",
+    "page": "CCNA3 · 14 network-automation"
    },
    "out": {
-    "path": "14-network-automation/14.04-rest/assets/14.4.5-2.png",
-    "format": "native"
+    "path": "14-network-automation/14.02-data-formats/assets/14.2.2.svg",
+    "format": "svg"
    },
-   "status": "manual"
-  },
-  {
-   "id": "ccna3-k4l5xwg",
-   "kind": "native",
-   "display": {
-    "key": "14.4.6-1"
-   },
-   "out": {
-    "path": "14-network-automation/14.04-rest/assets/14.4.6-1.png",
-    "format": "native"
-   },
-   "status": "manual"
+   "status": "synced",
+   "provenance": {
+    "legacy": "14.2.2.png",
+    "synced": {
+     "figmaVersion": "2412239420868654326",
+     "at": "2026-10-20T01:48:35Z",
+     "sha256": "51c6df27a0127d36fc1e83c40e6ff9d4611d7b8cb0e849136fc903fcc7ace54f"
+    }
+   }
   },
   {
    "id": "ccna3-iyjtgnz",
-   "kind": "native",
+   "kind": "illustration",
    "display": {
     "key": "14.4.6-2"
    },
-   "out": {
-    "path": "14-network-automation/14.04-rest/assets/14.4.6-2.png",
-    "format": "native"
-   },
-   "status": "manual"
-  },
-  {
-   "id": "ccna3-ub7gm56",
-   "kind": "native",
-   "display": {
-    "key": "14.4.6-3"
+   "figma": {
+    "nodeId": "5544:9152",
+    "page": "CCNA3 · 14 network-automation"
    },
    "out": {
-    "path": "14-network-automation/14.04-rest/assets/14.4.6-3.png",
-    "format": "native"
+    "path": "14-network-automation/14.04-rest/assets/14.4.6-2.svg",
+    "format": "svg"
    },
-   "status": "manual"
-  },
-  {
-   "id": "ccna3-eodnzv3",
-   "kind": "native",
-   "display": {
-    "key": "14.5.4"
-   },
-   "out": {
-    "path": "14-network-automation/14.05-configuration-management/assets/14.5.4.png",
-    "format": "native"
-   },
-   "status": "manual"
+   "status": "synced",
+   "provenance": {
+    "legacy": "14.4.6-2.png",
+    "synced": {
+     "figmaVersion": "2412239420868654326",
+     "at": "2026-10-20T01:48:35Z",
+     "sha256": "e7d6a06848bdd804760cd4817b251fa58dfef9c1daebd27d07cbc345607fac14"
+    }
+   }
   },
   {
    "id": "ccna3-qn72ud4",
@@ -8435,15 +8552,27 @@
   },
   {
    "id": "ccna3-s37724j",
-   "kind": "native",
+   "kind": "illustration",
    "display": {
     "key": "14.6.5"
    },
-   "out": {
-    "path": "14-network-automation/14.06-ibn-and-cisco-dna-center/assets/14.6.5.png",
-    "format": "native"
+   "figma": {
+    "nodeId": "5546:9231",
+    "page": "CCNA3 · 14 network-automation"
    },
-   "status": "manual"
+   "out": {
+    "path": "14-network-automation/14.06-ibn-and-cisco-dna-center/assets/14.6.5.svg",
+    "format": "svg"
+   },
+   "status": "synced",
+   "provenance": {
+    "legacy": "14.6.5.png",
+    "synced": {
+     "figmaVersion": "2412219307514478185",
+     "at": "2026-10-20T01:25:42Z",
+     "sha256": "b7001f1874d055620a82adb5d2e9c4a076f9f35c5ac7134bf49628b6c5f3325e"
+    }
+   }
   }
  ]
 }
