@@ -8,32 +8,25 @@
     "tags": {
         "$ref": "../../material-tags.json"
     },
+    "compute": {
+        "local": {
+            "$ref": "./compute/local"
+        }
+    },
     "credentialsSchema": {
-        "userName": {
-            "title": "Имя пользователя",
-            "source": "learn_user"
-        },
-        "password": {
-            "title": "Пароль",
-            "source": "learn_password"
-        },
         "consoleURL": {
-            "title": "Адрес портала",
-            "value": "https://portal.skillscloud.company"
+            "title": "Адрес лаборатории",
+            "source": "URL"
         }
     },
     "skills": {},
     "text": {
         "$ref": "./README.md"
     },
-    "assets": {
-        "$ref": "./assets"
-    },
     "assessment": {
-        "$ref": "./assessment.json"
-    },
-    "deploy": {
-        "$ref": "./deploy"
+        "local": {
+            "$ref": "./assessment"
+        }
     },
     "answerSchema": {
         "type": "object",
@@ -41,17 +34,17 @@
         "properties": {
             "q_1": {
                 "type": "string",
-                "title": "1. Успешно ли выполнен эхо-запрос?",
+                "title": "1. Выполняются ли эхо-запросы от компьютеров PC1 и PC2 к веб-серверу 64.100.1.2?",
                 "placeholder": "Enter your answer here"
             },
             "q_2": {
                 "type": "string",
-                "title": "2. Какое сообщение вы получили и какое устройство выдало сообщение?",
+                "title": "2. Какое сообщение получил компьютер PC1 в ответ на эхо-запросы к веб-серверу и какое устройство его прислало?",
                 "placeholder": "Enter your answer here"
             },
             "q_3": {
                 "type": "string",
-                "title": "3. Какой оператор присутствует в таблицах маршрутизации, который указывает на то, что эхо-запрос на веб-сервер завершится неудачей?",
+                "title": "3. Какая строка в таблицах маршрутизации маршрутизаторов R1, R2 и R3 показывает, что эхо-запросы к веб-серверу не выполнятся?",
                 "placeholder": "Enter your answer here"
             }
         }

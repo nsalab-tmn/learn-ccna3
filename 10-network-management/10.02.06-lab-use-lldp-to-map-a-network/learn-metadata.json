@@ -8,32 +8,25 @@
     "tags": {
         "$ref": "../../material-tags.json"
     },
+    "compute": {
+        "local": {
+            "$ref": "./compute/local"
+        }
+    },
     "credentialsSchema": {
-        "userName": {
-            "title": "Имя пользователя",
-            "source": "learn_user"
-        },
-        "password": {
-            "title": "Пароль",
-            "source": "learn_password"
-        },
         "consoleURL": {
-            "title": "Адрес портала",
-            "value": "https://portal.skillscloud.company"
+            "title": "Адрес лаборатории",
+            "source": "URL"
         }
     },
     "skills": {},
     "text": {
         "$ref": "./README.md"
     },
-    "assets": {
-        "$ref": "./assets"
-    },
     "assessment": {
-        "$ref": "./assessment.json"
-    },
-    "deploy": {
-        "$ref": "./deploy"
+        "local": {
+            "$ref": "./assessment"
+        }
     },
     "answerSchema": {
         "type": "object",
@@ -41,12 +34,12 @@
         "properties": {
             "q_1": {
                 "type": "string",
-                "title": "1. Какая еще потенциально конфиденциальная информация содержится в результатах выполнения команды, помимо IP-адреса соседнего устройства?",
+                "title": "1. Какие еще потенциально конфиденциальные сведения, помимо IP-адреса соседнего устройства, содержатся в выводе команды show lldp neighbors detail?",
                 "placeholder": "Enter your answer here"
             },
             "q_2": {
                 "type": "string",
-                "title": "2. Какие сведения отображаются в командной строке после успешного подключения по протоколу SSH?",
+                "title": "2. Какие сведения отображаются в приглашении командной строки после успешного подключения к маршрутизатору RBO-Core по протоколу SSH?",
                 "placeholder": "Enter your answer here"
             }
         }

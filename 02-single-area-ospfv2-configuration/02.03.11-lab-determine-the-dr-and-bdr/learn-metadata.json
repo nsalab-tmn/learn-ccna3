@@ -8,32 +8,25 @@
     "tags": {
         "$ref": "../../material-tags.json"
     },
+    "compute": {
+        "local": {
+            "$ref": "./compute/local"
+        }
+    },
     "credentialsSchema": {
-        "userName": {
-            "title": "Имя пользователя",
-            "source": "learn_user"
-        },
-        "password": {
-            "title": "Пароль",
-            "source": "learn_password"
-        },
         "consoleURL": {
-            "title": "Адрес портала",
-            "value": "https://portal.skillscloud.company"
+            "title": "Адрес лаборатории",
+            "source": "URL"
         }
     },
     "skills": {},
     "text": {
         "$ref": "./README.md"
     },
-    "assets": {
-        "$ref": "./assets"
-    },
     "assessment": {
-        "$ref": "./assessment.json"
-    },
-    "deploy": {
-        "$ref": "./deploy"
+        "local": {
+            "$ref": "./assessment"
+        }
     },
     "answerSchema": {
         "type": "object",
@@ -56,32 +49,32 @@
             },
             "q_4": {
                 "type": "string",
-                "title": "4. По результатам команды debug определите, какой маршрутизатор был выбран в качестве DR, а какой в качестве BDR?",
+                "title": "4. По результатам команды debug на маршрутизаторе RA определите, какой маршрутизатор был выбран в качестве DR, а какой — в качестве BDR после отключения RC?",
                 "placeholder": "Enter your answer here"
             },
             "q_5": {
                 "type": "string",
-                "title": "5. Изменились ли роли DR и BDR? Дайте пояснение.",
+                "title": "5. Изменились ли роли DR и BDR после того, как маршрутизатор RC снова подключился к сети? Почему?",
                 "placeholder": "Enter your answer here"
             },
             "q_6": {
                 "type": "string",
-                "title": "6. По результатам команды debug на маршрутизаторе **RA** определите, какой маршрутизатор был выбран в качестве DR, а какой BDR?",
+                "title": "6. По результатам команды debug на маршрутизаторе RA определите, какой маршрутизатор был выбран в качестве DR, а какой — в качестве BDR после отключения RB?",
                 "placeholder": "Enter your answer here"
             },
             "q_7": {
                 "type": "string",
-                "title": "7. Дождитесь, когда будут выбраны новые DR и BDR. Изменились ли роли DR и BDR? Дайте пояснение.",
+                "title": "7. Изменились ли роли DR и BDR после того, как маршрутизатор RB снова подключился к сети? Почему?",
                 "placeholder": "Enter your answer here"
             },
             "q_8": {
                 "type": "string",
-                "title": "8. Каков статус маршрутизатора RC сейчас?",
+                "title": "8. Какова роль маршрутизатора RC сейчас по выводу команды show ip ospf interface g0/0?",
                 "placeholder": "Enter your answer here"
             },
             "q_9": {
                 "type": "string",
-                "title": "9. Согласно выводу команды **show ip ospf neighbor** на маршрутизаторах, какой маршрутизатор теперь является DR, а какой - BDR?",
+                "title": "9. Согласно выводу команды show ip ospf neighbor на маршрутизаторах, какой маршрутизатор теперь является DR, а какой — BDR?",
                 "placeholder": "Enter your answer here"
             }
         }

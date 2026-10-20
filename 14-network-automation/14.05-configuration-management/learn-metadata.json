@@ -1,9 +1,10 @@
 {
     "title": "Инструменты управления конфигурацией",
-    "materialType": "lecture",
+    "shortName": "ccna3.network-automation.configuration-management",
+    "type": "scored-lecture",
     "description": "Как инструменты управения конфигурацией эволюционировали с течением времени? Какие инструменты управления конфигурацией часто эксплуатируются сегодня?",
     "difficulty": 3,
-    "duration": "PT0H14M",
+    "duration": "PT0H22M",
     "tags": {
         "$ref": "../../material-tags.json"
     },
@@ -13,5 +14,150 @@
     },
     "assets": {
         "$ref": "./assets"
-    }
+    },
+    "competency": {
+        "produces": {
+            "id": "ksa.ccna3.network-automation.configuration-management",
+            "kind": "K",
+            "bloom": "understand",
+            "objective": "Tell configuration management tools from APIs and SNMP, define automation, orchestration and agentless operation, and identify which of the common configuration management tools are written in Python."
+        },
+        "requires": [
+            "ksa.ccna3.network-automation.rest",
+            "ksa.ccna3.network-management.snmp"
+        ],
+        "measurement": {
+            "mode": "test",
+            "grader": "test-auto",
+            "aligned_bloom": "understand",
+            "passes_when": "All embedded questions answered correctly (100%, unlimited attempts): configuration management tools, automation, orchestration, agentless operation, tools written in Python.",
+            "calibration": "operator-judge"
+        }
+    },
+    "passingScore": 100,
+    "questions": [
+        {
+            "question": "Какие из перечисленных ниже инструментов обычно не используют в качестве инструментов управления конфигурацией? (Выберите два варианта.)",
+            "answerType": "multiChoice",
+            "answers": [
+                {
+                    "answer": "API",
+                    "correct": true
+                },
+                {
+                    "answer": "Ansible",
+                    "correct": false,
+                    "comment": "API и SNMP не являются инструментами управления конфигурацией."
+                },
+                {
+                    "answer": "Chef",
+                    "correct": false,
+                    "comment": "API и SNMP не являются инструментами управления конфигурацией."
+                },
+                {
+                    "answer": "Puppet",
+                    "correct": false,
+                    "comment": "API и SNMP не являются инструментами управления конфигурацией."
+                },
+                {
+                    "answer": "Saltstack",
+                    "correct": false,
+                    "comment": "API и SNMP не являются инструментами управления конфигурацией."
+                },
+                {
+                    "answer": "SNMP",
+                    "correct": true
+                }
+            ]
+        },
+        {
+            "question": "Какой термин управления конфигурацией описывает программное выполнение задачи в системе, например настройку интерфейса или развертывание VLAN?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "Управление версиями",
+                    "correct": false,
+                    "comment": "Автоматизация обычно связана с инструментом, автоматически выполняющим определенную задачу."
+                },
+                {
+                    "answer": "Автоматизация",
+                    "correct": true
+                },
+                {
+                    "answer": "Оркестрация",
+                    "correct": false,
+                    "comment": "Автоматизация обычно связана с инструментом, автоматически выполняющим определенную задачу."
+                },
+                {
+                    "answer": "Управление сетью",
+                    "correct": false,
+                    "comment": "Автоматизация обычно связана с инструментом, автоматически выполняющим определенную задачу."
+                }
+            ]
+        },
+        {
+            "question": "Какой термин управления конфигурацией описывает процесс, который определяет, как и в каком порядке выполняются все автоматизированные действия и что нужно сделать до начала другой задачи?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "Управление версиями",
+                    "correct": false,
+                    "comment": "Оркестрация — это организация ряда автоматизированных задач, которые приводят к координированию рабочего процесса."
+                },
+                {
+                    "answer": "Автоматизация",
+                    "correct": false,
+                    "comment": "Оркестрация — это организация ряда автоматизированных задач, которые приводят к координированию рабочего процесса."
+                },
+                {
+                    "answer": "Оркестрация",
+                    "correct": true
+                },
+                {
+                    "answer": "Управление сетью",
+                    "correct": false,
+                    "comment": "Оркестрация — это организация ряда автоматизированных задач, которые приводят к координированию рабочего процесса."
+                }
+            ]
+        },
+        {
+            "question": "Верно ли утверждение? Безагентный (Agentless) означает, что контроллер или мастер передает конфигурацию на контролируемое устройство.",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "Истина",
+                    "correct": true
+                },
+                {
+                    "answer": "Ложь",
+                    "correct": false,
+                    "comment": "Безагентное управление конфигурацией работает на основе push («push-based»). Сценарий конфигурации запускается на мастере. Мастер подключается к устройству и выполняет задачи в сценарии."
+                }
+            ]
+        },
+        {
+            "question": "Какие из следующих инструментов управления конфигурацией используют Python? (Выберите все подходящие варианты).",
+            "answerType": "multiChoice",
+            "answers": [
+                {
+                    "answer": "Ansible",
+                    "correct": true
+                },
+                {
+                    "answer": "Chef",
+                    "correct": false,
+                    "comment": "Ansible и SaltStack используют язык Python. Puppet и Chef используют Ruby."
+                },
+                {
+                    "answer": "Puppet",
+                    "correct": false,
+                    "comment": "Ansible и SaltStack используют язык Python. Puppet и Chef используют Ruby."
+                },
+                {
+                    "answer": "Saltstack",
+                    "correct": true
+                }
+            ]
+        }
+    ]
 }

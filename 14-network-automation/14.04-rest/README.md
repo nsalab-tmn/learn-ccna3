@@ -44,14 +44,7 @@ API RESTful используют общие методы HTTP, включая PO
 | PUT/PATCH | Update |
 | DELETE | Delete |
 
-На рисунке HTTP-запрос данных в формате JSON. Если запрос успешно создан в соответствии с документацией API, сервер ответит данными JSON. Они могут использоваться веб-приложением клиента для отображения данных. Например, приложение для определения местоположения смартфонов показывает местоположение Сан-Хосе, штат Калифорния.
-
-![](./assets/14.4.3-1.png)
-<!-- /courses/ensa-dl/ae8eb39a-34fd-11eb-ba19-f1886492e0e4/aeb686ee-34fd-11eb-ba19-f1886492e0e4/assets/c734b4b4-1c46-11ea-af56-e368b99e9723.svg -->
-
-<!--
-На рисунке показаны маршруты проезда из Сан-Хосе, штат Калифорния, для картографического приложения в формате JSON. В коде указаны широта и долгота, независимо от того, есть ли на маршруте платные дороги, мосты или туннели. В нем также указано время, использованное топливо и текст комментария.
--->
+Клиент может запросить данные в формате JSON. Если запрос успешно создан в соответствии с документацией API, сервер ответит данными JSON. Они могут использоваться веб-приложением клиента для отображения данных. Например, приложение для определения местоположения смартфонов показывает местоположение Сан-Хосе, штат Калифорния.
 
 ![](./assets/14.4.3-2.svg)
 <!-- /courses/ensa-dl/ae8eb39a-34fd-11eb-ba19-f1886492e0e4/aeb686ee-34fd-11eb-ba19-f1886492e0e4/assets/c734dbc2-1c46-11ea-af56-e368b99e9723.svg -->
@@ -81,7 +74,7 @@ API RESTful используют общие методы HTTP, включая PO
 <!-- /courses/ensa-dl/ae8eb39a-34fd-11eb-ba19-f1886492e0e4/aeb686ee-34fd-11eb-ba19-f1886492e0e4/assets/c73529e3-1c46-11ea-af56-e368b99e9723.svg -->
 
 <!--
-На рисунке показан URI https://www.example.com/author/book.html#page155. URL универсального идентификатора ресурса (URI): https://www.example.com/author/book.html. URN-часть: example.com/author/book.html#page155. Фрагмент: #page155.
+На рисунке показан URI https://www.example.com/author/book.html#page155. URL-адрес: https://www.example.com/author/book.html. Фрагмент: #page155. Ниже приведен пример URN: urn:ietf:params:netconf:base:1.1.
 -->
 
 <!-- 14.4.5 -->
@@ -98,15 +91,43 @@ API RESTful используют общие методы HTTP, включая PO
 На рисунке показаны части запроса API. На рисунке используется URI http://www.mapquestapi.com/directions/v2/route?outFormat=json&key=KEY&from=San+Jose,Ca&to=Monterey,Ca. Серверная часть API URI:: http://www.mapquestapi.com. Ресурсная часть URI:: directions/v2/route. Часть запроса URI: ?outFormat=json&key=KEY&from=San+Jose,Ca&to=Monterey,Ca. Формат: outFormat=json&. Ключ: key=KEY&. Параметры: from=San+Jose,Ca&to=Monterey,Ca.
 -->
 
-На рисунке показана часть ответа API. В этом примере это направление MapQuest из Сан-Хосе в Монтерей в формате JSON.
+Ниже показана часть ответа API. В этом примере это направление MapQuest из Сан-Хосе в Монтерей в формате JSON.
 
 **Частичная полезная нагрузка JSON, полученная из запроса API**
 
-![](./assets/14.4.5-2.png)
-
-<!--
-На рисунке показано направление MapQuest из Сан-Хосе в Монтерей в формате JSON. В коде указаны широта и долгота, независимо от того, есть ли на маршруте платные дороги, мосты или туннели. В нем также указано время, использованное топливо и текст комментария.
--->
+```json
+{
+  "route": {
+    "hasTollRoad": false,
+    "hasBridge": true,
+    "boundingBox": {
+      "lr": { "lng": -121.667061, "lat": 36.596809 },
+      "ul": { "lng": -121.897125, "lat": 37.335358 }
+    },
+    "distance": 71.712,
+    "hasTimedRestriction": false,
+    "hasTunnel": false,
+    "hasHighway": true,
+    "computedWaypoints": [],
+    "routeError": { "errorCode": -400, "message": "" },
+    "formattedTime": "01:12:59",
+    "sessionId": "5ce1ebf7-017f-5e21-02b4-1a7b-06b08100f026",
+    "hasAccessRestriction": false,
+    "realTime": 4378,
+    "hasSeasonalClosure": false,
+    "hasCountryCross": false,
+    "fuelUsed": 3.29,
+    "legs": [
+      {
+        "hasTollRoad": false,
+        "hasBridge": true,
+        "destNarrative": "Proceed to MONTEREY, CA.",
+        "distance": 71.712
+      }
+    ]
+  }
+}
+```
 
 Части запроса API:
 
@@ -136,21 +157,49 @@ API RESTful используют общие методы HTTP, включая PO
 
 **Веб-сайт разработчика**
 
-Разработчики часто поддерживают веб-сайты, которые включают информацию об API, информацию о параметрах и примеры использования. На этих сайтах пользователи также могут выполнить запрос API на веб-странице разработчика, вводя параметры и другую информацию. На следующем рисунке показан пример веб-страницы API MapQuest Directions.
+Разработчики часто поддерживают веб-сайты, которые включают информацию об API, информацию о параметрах и примеры использования. На этих сайтах пользователи также могут выполнить запрос API на веб-странице разработчика, вводя параметры и другую информацию. Пример такого сайта — страница MapQuest Directions API.
 
-![](./assets/14.4.6-1.png)
+**Клиент REST API**
 
-**Postman**
+Клиент REST API — приложение для тестирования и использования REST API. Он доступен в виде приложения для браузера или отдельной установки. Он содержит все необходимое для построения и отправки запросов REST API, включая ввод параметров запроса и ключей. Клиент REST API позволяет собирать и сохранять часто используемые вызовы API в истории или в виде коллекций. Это отличный инструмент для изучения того, как создавать запросы API, и для анализа данных, возвращаемых из API. На следующем рисунке показан пример использования API MapQuest с клиентом REST API.
 
-Postman — приложение для тестирования и использования REST API. Он доступен в виде приложения для браузера или отдельной установки. Он содержит все необходимое для построения и отправки запросов REST API, включая ввод параметров запроса и ключей. Postman позволяет собирать и сохранять часто используемые вызовы API в истории или в виде коллекций. Postman — отличный инструмент для изучения того, как создавать запросы API, и для анализа данных, возвращаемых из API. На следующем рисунке показан пример использования API MapQuest с Postman.
-
-![](./assets/14.4.6-2.png)
+![](./assets/14.4.6-2.svg)
 
 **Python**
 
-API также можно вызывать из программы Python. Это учитывает возможную автоматизацию, настройку и интеграцию приложения с API. На следующем рисунке показан пример части программы на Python, используемой для отправки запросов в API MapQuest.
+API также можно вызывать из программы Python. Это учитывает возможную автоматизацию, настройку и интеграцию приложения с API. Ниже показан пример части программы на Python, используемой для отправки запросов в API MapQuest.
 
-![](./assets/14.4.6-3.png)
+```python
+#Replace "your_api_key" with your MapQuest API key
+
+import urllib.parse
+import requests
+
+main_api = "https://www.mapquestapi.com/directions/v2/route?"
+key = "your_api_key"
+
+while True:
+    orig = input("Starting Location: ")
+    if orig == "quit" or orig == "q":
+        break
+
+    dest = input("Destination: ")
+    if dest == "quit" or dest == "q":
+        break
+
+    url = main_api + urllib.parse.urlencode({"key": key, "from":orig, "to":dest})
+    print("URL: " + (url))
+
+    json_data = requests.get(url).json()
+    json_status = json_data["info"]["statuscode"]
+
+    if json_status == 0:
+        print("API Status: " + str(json_status) + " = A successful route call.\n")
+        print("Directions from " + (orig) + " to " + (dest))
+        print("Trip Duration:   " + (json_data["route"]["formattedTime"]))
+        print("Kilometers:      " + str("{:.2f}".format((json_data["route"]["distance"])*1.61)))
+        print("Fuel Used (Ltr): " + str("{:.2f}".format((json_data["route"]["fuelUsed"])*3.78)))
+```
 
 **Сетевые операционные системы**
 

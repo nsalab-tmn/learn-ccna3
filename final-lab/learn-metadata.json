@@ -2,24 +2,21 @@
     "title": "Работа в симуляторе: комплексный сценарий (ENSA-F1)",
     "shortName": "ensa-f1",
     "materialType": "lab",
-    "description": "Цели лабораторной работы:\r\r* Размещение и подключение сетевых устройств в режиме физической симуляции.\r* Настройка базовой конфигурации сетевых устройств.\r* Настройка маршрутизации OSPFv2 для одной области.\r* Настройка списков контроля доступа и трансляции сетевых адресов.",
+    "description": "Цели лабораторной работы:\n* Задать адреса компьютерам и коммутаторам и выполнить базовую настройку и защиту маршрутизаторов.\n* Настроить маршрутизацию OSPFv2 в одной области.\n* Настроить трансляцию NAT и списки контроля доступа.\n* Обновить ОС коммутатора с TFTP-сервера.",
     "difficulty": 1,
     "duration": "PT1H30M",
     "tags": {
         "$ref": "../material-tags.json"
     },
+    "compute": {
+        "local": {
+            "$ref": "./compute/local"
+        }
+    },
     "credentialsSchema": {
-        "userName": {
-            "title": "Имя пользователя",
-            "source": "learn_user"
-        },
-        "password": {
-            "title": "Пароль",
-            "source": "learn_password"
-        },
         "consoleURL": {
-            "title": "Адрес портала",
-            "value": "https://portal.skillscloud.company"
+            "title": "Адрес лаборатории",
+            "source": "URL"
         }
     },
     "skills": {},
@@ -27,12 +24,8 @@
         "$ref": "./README.md"
     },
     "assessment": {
-        "$ref": "./assessment.json"
-    },
-    "deploy": {
-        "$ref": "./deploy"
-    },
-    "assets": {
-        "$ref": "./assets"
+        "local": {
+            "$ref": "./assessment"
+        }
     }
 }

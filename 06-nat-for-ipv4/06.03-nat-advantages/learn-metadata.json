@@ -1,9 +1,10 @@
 {
     "title": "Преимущества и недостатки NAT",
-    "materialType": "lecture",
+    "shortName": "ccna3.nat-for-ipv4.nat-advantages",
+    "type": "scored-lecture",
     "description": "В чем заключаются преимущества и недостатки преобразования сетевых адресов?",
     "difficulty": 3,
-    "duration": "PT0H5M",
+    "duration": "PT0H10M",
     "tags": {
         "$ref": "../../material-tags.json"
     },
@@ -11,7 +12,86 @@
     "text": {
         "$ref": "./README.md"
     },
-    "assets": {
-        "$ref": "./assets"
-    }
+    "competency": {
+        "produces": {
+            "id": "ksa.ccna3.nat-for-ipv4.nat-advantages",
+            "kind": "K",
+            "bloom": "understand",
+            "objective": "Judge whether a statement about a NAT advantage or disadvantage is true: hiding inside addresses, whether NAT overload maps addresses one to one, end-to-end traceability and tunneling protocols."
+        },
+        "requires": [
+            "ksa.ccna3.nat-for-ipv4.nat-characteristics",
+            "ksa.ccna3.nat-for-ipv4.types-of-nat"
+        ],
+        "measurement": {
+            "mode": "test",
+            "grader": "test-auto",
+            "aligned_bloom": "understand",
+            "passes_when": "All embedded questions answered correctly (100%, unlimited attempts): hiding inside addresses, PAT mapping, end-to-end tracing, IPsec through NAT.",
+            "calibration": "operator-judge"
+        }
+    },
+    "passingScore": 100,
+    "questions": [
+        {
+            "question": "Верно ли утверждение, что побочным эффектом NAT является то, что он скрывает внутренний локальный IP-адрес узла от внешней сети?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "верно",
+                    "correct": true
+                },
+                {
+                    "answer": "неверно",
+                    "correct": false,
+                    "comment": "Правильный ответ – верно. NAT скрывает IPv4-адреса внутренних узлов от внешней сети"
+                }
+            ]
+        },
+        {
+            "question": "Верно ли утверждение, что при NAT с перегрузкой каждый внутренний локальный IP-адрес преобразуется в уникальный внутренний глобальный IP-адрес по принципу «один к одному»?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "верно",
+                    "correct": false,
+                    "comment": "Правильный ответ – неверно. NAT с перегрузкой (PAT) позволяет многим внутренним узлам совместно использовать один или несколько общедоступных адресов IPv4"
+                },
+                {
+                    "answer": "неверно",
+                    "correct": true
+                }
+            ]
+        },
+        {
+            "question": "Верно ли утверждение, что использование NAT упрощает сквозную трассировку между источником и узлом назначения?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "верно",
+                    "correct": false,
+                    "comment": "Правильный ответ – неверно. При использовании NAT возможность сквозной трассировки теряется, что затрудняет отслеживание пакетов и устранение неполадок"
+                },
+                {
+                    "answer": "неверно",
+                    "correct": true
+                }
+            ]
+        },
+        {
+            "question": "Верно ли утверждение, что протоколы туннелирования, такие как IPsec, не работают должным образом через NAT?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "верно",
+                    "correct": true
+                },
+                {
+                    "answer": "неверно",
+                    "correct": false,
+                    "comment": "Правильный ответ – верно. NAT усложняет работу с туннельными протоколами, такими как IPsec, поскольку преобразование NAT изменяет значения в заголовках, что приводит к сбою проверки целостности"
+                }
+            ]
+        }
+    ]
 }

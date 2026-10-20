@@ -1,9 +1,10 @@
 {
     "title": "Управление образами операционных систем на сетевых устройствах",
-    "materialType": "lecture",
+    "shortName": "ccna3.network-management.ios-image-management",
+    "type": "scored-lecture",
     "description": "Как обновить или сделать резервную копию операционной системы сетевого устройства?",
     "difficulty": 3,
-    "duration": "PT0H17M",
+    "duration": "PT0H23M",
     "tags": {
         "$ref": "../../material-tags.json"
     },
@@ -13,5 +14,151 @@
     },
     "assets": {
         "$ref": "./assets"
-    }
+    },
+    "competency": {
+        "produces": {
+            "id": "ksa.ccna3.network-management.ios-image-management",
+            "kind": "K",
+            "bloom": "understand",
+            "objective": "Explain why OS images are backed up to a TFTP server, choose the first step of an image backup and the commands that copy an image to the server and verify the loaded one, and state which image a router loads when no boot system command is configured."
+        },
+        "requires": [
+            "ksa.ccna3.network-management.router-and-switch-file-maintenance"
+        ],
+        "measurement": {
+            "mode": "test",
+            "grader": "test-auto",
+            "aligned_bloom": "understand",
+            "passes_when": "All embedded questions answered correctly (100%, unlimited attempts): why images are backed up, checking the TFTP server first, copy flash: tftp:, loading without boot system, show version.",
+            "calibration": "operator-judge"
+        }
+    },
+    "passingScore": 100,
+    "questions": [
+        {
+            "question": "Зачем в сети хранят резервные копии образов ОС на TFTP-сервере?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "Чтобы быстро восстановить образ, если он поврежден или случайно удален на маршрутизаторе",
+                    "correct": true
+                },
+                {
+                    "answer": "Чтобы освободить флеш-память маршрутизатора от образа ОС",
+                    "correct": false,
+                    "comment": "Образ ОС остается во флеш-памяти: маршрутизатор загружает его оттуда. Резервная копия нужна, чтобы быстро восстановить поврежденный или удаленный образ."
+                },
+                {
+                    "answer": "Чтобы новые версии ОС устанавливались на маршрутизаторы автоматически",
+                    "correct": false,
+                    "comment": "Новый образ администратор сам копирует во флеш-память и назначает для загрузки. Резервная копия нужна, чтобы быстро восстановить поврежденный или удаленный образ."
+                },
+                {
+                    "answer": "Чтобы сократить время загрузки маршрутизатора",
+                    "correct": false,
+                    "comment": "Резервная копия на сервере не влияет на загрузку маршрутизатора. Она нужна, чтобы быстро восстановить поврежденный или удаленный образ ОС."
+                }
+            ]
+        },
+        {
+            "question": "Администратор собирается скопировать образ ОС с маршрутизатора на TFTP-сервер. Что нужно сделать в первую очередь?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "Отправить эхо-запрос на TFTP-сервер, чтобы убедиться в его доступности",
+                    "correct": true
+                },
+                {
+                    "answer": "Ввести команду boot system с именем образа",
+                    "correct": false,
+                    "comment": "Команда boot system задает образ для загрузки после установки новой ОС, для резервного копирования она не нужна. Сначала доступность TFTP-сервера проверяют эхо-запросом."
+                },
+                {
+                    "answer": "Перезагрузить маршрутизатор командой reload",
+                    "correct": false,
+                    "comment": "Для копирования образа перезагрузка не нужна. Сначала доступность TFTP-сервера проверяют эхо-запросом, затем проверяют размер образа и только потом копируют его."
+                },
+                {
+                    "answer": "Выполнить команду show version",
+                    "correct": false,
+                    "comment": "Команда show version показывает, какой образ загружен, и нужна после перезагрузки. Перед копированием сначала проверяют доступность TFTP-сервера эхо-запросом."
+                }
+            ]
+        },
+        {
+            "question": "Какая команда копирует образ ОС из флеш-памяти маршрутизатора на TFTP-сервер?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "copy flash: tftp:",
+                    "correct": true
+                },
+                {
+                    "answer": "copy tftp: flash:",
+                    "correct": false,
+                    "comment": "Эта команда копирует образ в обратном направлении: с TFTP-сервера во флеш-память. На сервер образ копирует команда copy flash: tftp:."
+                },
+                {
+                    "answer": "copy running-config tftp",
+                    "correct": false,
+                    "comment": "Эта команда сохраняет на TFTP-сервере текущую конфигурацию, а не образ ОС. Образ копирует команда copy flash: tftp:."
+                },
+                {
+                    "answer": "show flash0:",
+                    "correct": false,
+                    "comment": "Команда show flash0: только показывает файлы во флеш-памяти и их размер. Образ на сервер копирует команда copy flash: tftp:."
+                }
+            ]
+        },
+        {
+            "question": "Что обычно делает маршрутизатор при запуске, если в загрузочной конфигурации нет ни одной команды boot system?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "Загружает первый допустимый образ ОС из флеш-памяти",
+                    "correct": true
+                },
+                {
+                    "answer": "Загружает образ ОС с TFTP-сервера",
+                    "correct": false,
+                    "comment": "Без команд boot system маршрутизатор обычно загружает первый допустимый образ ОС из флеш-памяти, а не с TFTP-сервера."
+                },
+                {
+                    "answer": "Не загружает ОС, пока администратор не введет команду boot system",
+                    "correct": false,
+                    "comment": "Команды boot system необязательны: без них маршрутизатор обычно загружает первый допустимый образ ОС из флеш-памяти."
+                },
+                {
+                    "answer": "Загружает образ, который последним скопировали во флеш-память",
+                    "correct": false,
+                    "comment": "Порядок копирования образов не определяет выбор: без команд boot system маршрутизатор обычно загружает первый допустимый образ ОС из флеш-памяти."
+                }
+            ]
+        },
+        {
+            "question": "Какой командой после перезагрузки проверяют, что маршрутизатор загрузил новый образ ОС?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "show version",
+                    "correct": true
+                },
+                {
+                    "answer": "show flash:",
+                    "correct": false,
+                    "comment": "Команда show flash: показывает файлы во флеш-памяти и свободный объем, но не то, какой образ загружен. Это проверяют командой show version."
+                },
+                {
+                    "answer": "boot system",
+                    "correct": false,
+                    "comment": "Команда boot system задает образ для следующей загрузки, но не проверяет загруженный. Это проверяют командой show version."
+                },
+                {
+                    "answer": "copy running-config startup-config",
+                    "correct": false,
+                    "comment": "Эта команда сохраняет текущую конфигурацию в загрузочную. Загруженный образ ОС проверяют командой show version."
+                }
+            ]
+        }
+    ]
 }

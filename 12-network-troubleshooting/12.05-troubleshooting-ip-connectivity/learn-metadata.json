@@ -1,9 +1,10 @@
 {
     "title": "Поиск и устранение неполадок с IP-подключениями",
-    "materialType": "lecture",
+    "shortName": "ccna3.network-troubleshooting.troubleshooting-ip-connectivity",
+    "type": "scored-lecture",
     "description": "Как выглядит типовой процесс диагностики неполадок, связанных с доступностью ресурсов в сети?",
     "difficulty": 3,
-    "duration": "PT0H43M",
+    "duration": "PT0H49M",
     "tags": {
         "$ref": "../../material-tags.json"
     },
@@ -13,5 +14,153 @@
     },
     "assets": {
         "$ref": "./assets"
-    }
+    },
+    "competency": {
+        "produces": {
+            "id": "ksa.ccna3.network-troubleshooting.troubleshooting-ip-connectivity",
+            "kind": "K",
+            "bloom": "understand",
+            "objective": "Name the first check of the bottom-up procedure for end-to-end connectivity, interpret late collisions and ports in different VLANs as causes of failure, state which route a router uses when several entries match, and choose the command that shows whether an ACL is applied to an interface."
+        },
+        "requires": [
+            "ksa.ccna3.network-troubleshooting.troubleshooting-process",
+            "ksa.ccna3.network-troubleshooting.symptoms-and-causes-of-network-problems",
+            "ksa.ccna3.acls-for-ipv4-configuration.configure-extended-ipv4-acls"
+        ],
+        "measurement": {
+            "mode": "test",
+            "grader": "test-auto",
+            "aligned_bloom": "understand",
+            "passes_when": "All embedded questions answered correctly (100%, unlimited attempts): first bottom-up step, duplex mismatch, VLAN assignment, longest prefix match, verifying ACL placement.",
+            "calibration": "operator-judge"
+        }
+    },
+    "passingScore": 100,
+    "questions": [
+        {
+            "question": "Администратор устраняет проблему сквозной связи методом «снизу вверх». Что он проверяет в первую очередь?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "Физическую связь в точке, где прекращается обмен данными",
+                    "correct": true
+                },
+                {
+                    "answer": "Правильность параметров DNS",
+                    "correct": false,
+                    "comment": "Проверка DNS — последний, восьмой шаг. Метод «снизу вверх» начинается с проверки физической связи в точке, где прекращается обмен данными."
+                },
+                {
+                    "answer": "Списки контроля доступа (ACL), которые могут блокировать трафик",
+                    "correct": false,
+                    "comment": "Списки ACL проверяют на седьмом шаге. Метод «снизу вверх» начинается с проверки физической связи в точке, где прекращается обмен данными."
+                },
+                {
+                    "answer": "Правильность шлюза по умолчанию",
+                    "correct": false,
+                    "comment": "Шлюз по умолчанию проверяют на четвертом шаге. Метод «снизу вверх» начинается с проверки физической связи в точке, где прекращается обмен данными."
+                }
+            ]
+        },
+        {
+            "question": "В выводе команды show interfaces для канала Ethernet «точка-точка» растет число поздних коллизий. На что это чаще всего указывает?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "На несогласованность режима дуплекса на концах канала",
+                    "correct": true
+                },
+                {
+                    "answer": "На нормальную работу канала в полнодуплексном режиме",
+                    "correct": false,
+                    "comment": "В полнодуплексном режиме коллизии происходить не могут. Поздние коллизии чаще всего указывают на несогласованность режима дуплекса."
+                },
+                {
+                    "answer": "На перегрузку интерфейса, из-за которой отбрасываются пакеты в выходной очереди",
+                    "correct": false,
+                    "comment": "Перегрузку показывают потери в выходной очереди, а не коллизии. Поздние коллизии чаще всего указывают на несогласованность режима дуплекса."
+                },
+                {
+                    "answer": "На неверно указанный шлюз по умолчанию",
+                    "correct": false,
+                    "comment": "Шлюз по умолчанию не влияет на коллизии в канале Ethernet. Поздние коллизии чаще всего указывают на несогласованность режима дуплекса."
+                }
+            ]
+        },
+        {
+            "question": "Два компьютера находятся в одной IP-сети, но подключены к портам коммутатора, которые относятся к разным VLAN. Что произойдет?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "Компьютеры не смогут взаимодействовать друг с другом",
+                    "correct": true
+                },
+                {
+                    "answer": "Компьютеры будут взаимодействовать, потому что находятся в одной IP-сети",
+                    "correct": false,
+                    "comment": "Каждая VLAN — отдельная логическая сеть, и общая IP-сеть этого не меняет: компьютеры в разных VLAN не смогут взаимодействовать друг с другом."
+                },
+                {
+                    "answer": "ARP-запрос одного компьютера получит другой компьютер",
+                    "correct": false,
+                    "comment": "Широковещательный кадр, например ARP-запрос, получают только компьютеры той же VLAN. Поэтому компьютеры в разных VLAN не смогут взаимодействовать друг с другом."
+                },
+                {
+                    "answer": "Порты обоих компьютеров станут неактивными",
+                    "correct": false,
+                    "comment": "Порт становится неактивным, если удалить VLAN, к которой он относится. Здесь порты работают, но компьютеры в разных VLAN не смогут взаимодействовать друг с другом."
+                }
+            ]
+        },
+        {
+            "question": "Адрес назначения пакета соответствует нескольким записям таблицы маршрутизации с префиксами разной длины. Как поступит маршрутизатор?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "Перешлет пакет по маршруту с наиболее длинным совпадением префикса",
+                    "correct": true
+                },
+                {
+                    "answer": "Перешлет пакет по маршруту по умолчанию",
+                    "correct": false,
+                    "comment": "Маршрут по умолчанию применяется, только когда адрес не соответствует ни одной записи. Здесь пакет уйдет по маршруту с наиболее длинным совпадением префикса."
+                },
+                {
+                    "answer": "Распределит пакеты между всеми совпавшими маршрутами",
+                    "correct": false,
+                    "comment": "Распределять пакеты можно между маршрутами с префиксами одинаковой длины. При разной длине пакет уйдет по маршруту с наиболее длинным совпадением префикса."
+                },
+                {
+                    "answer": "Отбросит пакет",
+                    "correct": false,
+                    "comment": "Пакет отбрасывается, только если он не соответствует ни одной записи и маршрут по умолчанию не настроен. Здесь пакет уйдет по маршруту с наиболее длинным совпадением префикса."
+                }
+            ]
+        },
+        {
+            "question": "Какая команда показывает, применен ли список контроля доступа (ACL) IPv4 к интерфейсу маршрутизатора и в каком направлении?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "show ip interface",
+                    "correct": true
+                },
+                {
+                    "answer": "show ip access-lists",
+                    "correct": false,
+                    "comment": "Эта команда показывает содержимое списков ACL, но не интерфейсы, к которым они применены. Это показывает команда show ip interface."
+                },
+                {
+                    "answer": "show ip route",
+                    "correct": false,
+                    "comment": "Эта команда выводит таблицу маршрутизации. Применение ACL к интерфейсу показывает команда show ip interface."
+                },
+                {
+                    "answer": "show mac address-table",
+                    "correct": false,
+                    "comment": "Эта команда выводит таблицу MAC-адресов коммутатора. Применение ACL к интерфейсу маршрутизатора показывает команда show ip interface."
+                }
+            ]
+        }
+    ]
 }

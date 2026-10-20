@@ -1,10 +1,43 @@
 {
     "title": "Экзамен по стандартам корпоративных сетей, сетевой безопасности и автоматизации управления сетью",
+    "shortName": "ccna3.final-exam",
+    "type": "exam",
     "description": "Проверьте свои знания по темам:\r\r* Принципы работы протокола маршрутизации OSPF\r* Настройка OSPF для одной области\r* Принципы обеспечения безопасности сети\r* Принципы создания списков контроля доступа\r* Списки контроля доступа в конфигурациях IPv4\r* Трансляция сетевых адресов в сетях IPv4\r* Принципы работы глобальных сетей\r* Принципы работы виртуальных частных сетей\r* Принципы работы качества обслуживания (QoS)\r* Принципы управления сетью\r* Концепции проектирования сетей\r* Поиск и устранение неполадок в сети\r* Виртуализация сети\r* Автоматизация управления сетью",
     "difficulty": 1,
     "duration": "PT1H27M",
-    "materialType": "test-exam",
-    "passingScore": 100,
+    "tags": {
+        "$ref": "../material-tags.json"
+    },
+    "skills": {},
+    "assets": {
+        "$ref": "./assets"
+    },
+    "competency": {
+        "produces": {
+            "id": "ksa.ccna3.final-exam",
+            "kind": "K",
+            "bloom": "understand",
+            "objective": "Across all modules of the course, identify the routing, security, WAN, management, design or automation mechanism a scenario describes, and choose the configuration, verification or troubleshooting step it calls for."
+        },
+        "requires": [
+            "ksa.ccna3.single-area-ospfv2-concepts.exam",
+            "ksa.ccna3.single-area-ospfv2-configuration.exam",
+            "ksa.ccna3.network-security-concepts.exam",
+            "ksa.ccna3.acl-concepts.exam",
+            "ksa.ccna3.acls-for-ipv4-configuration.exam",
+            "ksa.ccna3.06-08-exam",
+            "ksa.ccna3.09-12-exam",
+            "ksa.ccna3.13-14-exam"
+        ],
+        "measurement": {
+            "mode": "exam",
+            "grader": "test-auto",
+            "aligned_bloom": "understand",
+            "passes_when": "Learner scores at least 80% on the exam's 55 questions covering the whole course; attempts unlimited.",
+            "calibration": "operator-judge"
+        }
+    },
+    "passingScore": 80,
     "questions": [
         {
             "answerType": "matching",
@@ -1567,12 +1600,5 @@
             ],
             "question": "Пользователь читает книгу с сайта https://www.books-info.com/author1a/book2.html#page100. Какая часть веб-ссылки называется фрагментом?"
         }
-    ],
-    "tags": {
-        "$ref": "../material-tags.json"
-    },
-    "skills": {},
-    "assets": {
-        "$ref": "./assets"
-    }
+    ]
 }

@@ -1,9 +1,10 @@
 {
     "title": "Журналирование системных сообщений с помощью Syslog",
-    "materialType": "lecture",
+    "shortName": "ccna3.network-management.syslog",
+    "type": "scored-lecture",
     "description": "Что такое журналирование системных сообщений и для чего оно нужно в контексте управления сетью? Как протокол Syslog помогает справиться с этой задачей?",
     "difficulty": 3,
-    "duration": "PT0H9M",
+    "duration": "PT0H13M",
     "tags": {
         "$ref": "../../material-tags.json"
     },
@@ -13,5 +14,101 @@
     },
     "assets": {
         "$ref": "./assets"
-    }
+    },
+    "competency": {
+        "produces": {
+            "id": "ksa.ccna3.network-management.syslog",
+            "kind": "K",
+            "bloom": "understand",
+            "objective": "Interpret a syslog message in the %facility-severity-MNEMONIC format by naming its facility, its mnemonic and its severity level."
+        },
+        "requires": [
+            "ksa.ccna3.network-management.ntp"
+        ],
+        "measurement": {
+            "mode": "test",
+            "grader": "test-auto",
+            "aligned_bloom": "understand",
+            "passes_when": "All embedded questions answered correctly (100%, unlimited attempts): facility, mnemonic and severity of a syslog message.",
+            "calibration": "operator-judge"
+        }
+    },
+    "passingScore": 100,
+    "questions": [
+        {
+            "question": "Посмотрите на вывод системного журнала.\n\n`*Jun 12 17:46:01.619: %IFMGR-7-NO_IFINDEX_FILE: Unable to open nvram:/ifIndex-table No such file or directory`\n\nКакой уровень серьезности у сгенерированного сообщения?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "Ошибка",
+                    "correct": false,
+                    "comment": "Уровень серьезности этого сообщения системного журнала — 7, он соответствует отладке."
+                },
+                {
+                    "answer": "Информационный",
+                    "correct": false,
+                    "comment": "Уровень серьезности этого сообщения системного журнала — 7, он соответствует отладке."
+                },
+                {
+                    "answer": "Предупреждение",
+                    "correct": false,
+                    "comment": "Уровень серьезности этого сообщения системного журнала — 7, он соответствует отладке."
+                },
+                {
+                    "answer": "Отладка",
+                    "correct": true
+                }
+            ]
+        },
+        {
+            "question": "Посмотрите на вывод системного журнала.\n\n`*Jun 12 17:46:01.619: %IFMGR-7-NO_IFINDEX_FILE: Unable to open nvram:/ifIndex-table No such file or directory`\n\nКакова мнемоника этого сообщения системного журнала?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "IFMGR",
+                    "correct": false,
+                    "comment": "Формат сообщения syslog: seq no: timestamp: %facility-severity-MNEMONIC: description. Поэтому мнемоникой в этом сообщении является NO_IFINDEX_FILE."
+                },
+                {
+                    "answer": "Unable to open nvram",
+                    "correct": false,
+                    "comment": "Формат сообщения syslog: seq no: timestamp: %facility-severity-MNEMONIC: description. Поэтому мнемоникой в этом сообщении является NO_IFINDEX_FILE."
+                },
+                {
+                    "answer": "NO_IFINDEX_FILE",
+                    "correct": true
+                },
+                {
+                    "answer": "ifIndex-table",
+                    "correct": false,
+                    "comment": "Формат сообщения syslog: seq no: timestamp: %facility-severity-MNEMONIC: description. Поэтому мнемоникой в этом сообщении является NO_IFINDEX_FILE."
+                }
+            ]
+        },
+        {
+            "question": "Посмотрите на вывод системного журнала.\n\n`*Jun 12 17:46:01.619: %IFMGR-7-NO_IFINDEX_FILE: Unable to open nvram:/ifIndex-table No such file or directory`\n\nЧто является объектом этого сообщения системного журнала?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "IFMGR",
+                    "correct": true
+                },
+                {
+                    "answer": "NO_IFINDEX_FILE",
+                    "correct": false,
+                    "comment": "Формат сообщения syslog: seq no: timestamp: %facility-severity-MNEMONIC: description. Таким образом, объектом в этом сообщении является IFMGR."
+                },
+                {
+                    "answer": "IFMGR-7",
+                    "correct": false,
+                    "comment": "Формат сообщения syslog: seq no: timestamp: %facility-severity-MNEMONIC: description. Таким образом, объектом в этом сообщении является IFMGR."
+                },
+                {
+                    "answer": "ifIndex-table",
+                    "correct": false,
+                    "comment": "Формат сообщения syslog: seq no: timestamp: %facility-severity-MNEMONIC: description. Таким образом, объектом в этом сообщении является IFMGR."
+                }
+            ]
+        }
+    ]
 }

@@ -1,9 +1,10 @@
 {
     "title": "OSPF сети коллективного доступа",
-    "materialType": "lecture",
+    "shortName": "ccna3.single-area-ospfv2-configuration.multiaccess-ospf-networks",
+    "type": "scored-lecture",
     "description": "Какими бывают типы сетей в контексте OSPF? Что такое назначенный маршрутизатор и какую роль он выполняет? Как настроить и проверить приоритеты маршрутизаторов?",
     "difficulty": 3,
-    "duration": "PT0H25M",
+    "duration": "PT0H31M",
     "tags": {
         "$ref": "../../material-tags.json"
     },
@@ -13,5 +14,147 @@
     },
     "assets": {
         "$ref": "./assets"
-    }
+    },
+    "competency": {
+        "produces": {
+            "id": "ksa.ccna3.single-area-ospfv2-configuration.multiaccess-ospf-networks",
+            "kind": "K",
+            "bloom": "understand",
+            "objective": "Describe how OSPF elects the DR and BDR on a multiaccess network and keeps them when a router joins, name the multicast address DROTHERs send to, interpret the 2-WAY/DROTHER state, and choose the priority that keeps an interface out of the election."
+        },
+        "requires": [
+            "ksa.ccna3.single-area-ospfv2-configuration.ospf-router-id",
+            "ksa.ccna3.single-area-ospfv2-concepts.ospf-operation"
+        ],
+        "measurement": {
+            "mode": "test",
+            "grader": "test-auto",
+            "aligned_bloom": "understand",
+            "passes_when": "All embedded questions answered correctly (100%, unlimited attempts): the 224.0.0.6 address, DR election with default priorities, non-preemptive election, the 2-WAY/DROTHER state, the ip ospf priority command.",
+            "calibration": "operator-judge"
+        }
+    },
+    "passingScore": 100,
+    "questions": [
+        {
+            "question": "На какой адрес многоадресной рассылки IPv4 маршрутизаторы DROTHER отправляют пакеты OSPF для DR и BDR?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "224.0.0.6",
+                    "correct": true
+                },
+                {
+                    "answer": "224.0.0.5",
+                    "correct": false,
+                    "comment": "На адрес 224.0.0.5 (все маршрутизаторы OSPF) DR рассылает LSA всем маршрутизаторам. DROTHER отправляют пакеты OSPF для DR и BDR на адрес 224.0.0.6, который прослушивают только DR и BDR."
+                },
+                {
+                    "answer": "255.255.255.255",
+                    "correct": false,
+                    "comment": "Это адрес широковещательной, а не многоадресной рассылки. DROTHER отправляют пакеты OSPF для DR и BDR на адрес 224.0.0.6, который прослушивают только DR и BDR."
+                }
+            ]
+        },
+        {
+            "question": "На всех интерфейсах маршрутизаторов в сети множественного доступа оставлен приоритет OSPF по умолчанию. Какой маршрутизатор станет DR?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "Маршрутизатор с наивысшим идентификатором маршрутизатора",
+                    "correct": true
+                },
+                {
+                    "answer": "Маршрутизатор с наименьшим идентификатором маршрутизатора",
+                    "correct": false,
+                    "comment": "При равных приоритетах DR становится маршрутизатор с наивысшим идентификатором, а BDR — со вторым по величине."
+                },
+                {
+                    "answer": "Маршрутизатор с наименьшей стоимостью интерфейса",
+                    "correct": false,
+                    "comment": "Стоимость интерфейса в выборе DR не участвует. При равных приоритетах DR становится маршрутизатор с наивысшим идентификатором."
+                },
+                {
+                    "answer": "Ни один: при приоритете по умолчанию маршрутизаторы не участвуют в выборе",
+                    "correct": false,
+                    "comment": "Не участвует в выборе только интерфейс с приоритетом 0, а приоритет по умолчанию равен 1. При равных приоритетах DR становится маршрутизатор с наивысшим идентификатором."
+                }
+            ]
+        },
+        {
+            "question": "После выбора DR и BDR к сети множественного доступа подключили новый маршрутизатор с более высоким идентификатором, чем у текущего DR. Что произойдет?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "Новый маршрутизатор станет DROTHER, а DR и BDR сохранят свои роли",
+                    "correct": true
+                },
+                {
+                    "answer": "Новый маршрутизатор сразу станет DR",
+                    "correct": false,
+                    "comment": "Выбор DR и BDR не является вытесняющим: маршрутизатор с более высоким идентификатором не перенимает уже назначенную роль. Новый маршрутизатор станет DROTHER."
+                },
+                {
+                    "answer": "Запустится новый выбор DR и BDR",
+                    "correct": false,
+                    "comment": "Добавление нового устройства не приводит к новому выбору. DR и BDR сохранят свои роли, а новый маршрутизатор станет DROTHER."
+                },
+                {
+                    "answer": "Новый маршрутизатор станет BDR, а текущий BDR — DROTHER",
+                    "correct": false,
+                    "comment": "Текущий BDR тоже не вытесняется. Новый маршрутизатор станет DROTHER, а DR и BDR сохранят свои роли."
+                }
+            ]
+        },
+        {
+            "question": "Команда show ip ospf neighbor на маршрутизаторе DROTHER в сети Ethernet показывает другого соседа в состоянии 2-WAY/DROTHER. Как оценить это состояние?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "Это нормально: маршрутизаторы DROTHER устанавливают двустороннюю связь, но смежность между собой не формируют",
+                    "correct": true
+                },
+                {
+                    "answer": "Это ошибка: в исправной сети все соседи должны находиться в состоянии FULL",
+                    "correct": false,
+                    "comment": "Состояние 2-WAY — единственное исключение из правила FULL: в широковещательной сети множественного доступа маршрутизаторы DROTHER смежность между собой не формируют."
+                },
+                {
+                    "answer": "Сосед еще не завершил синхронизацию и скоро перейдет в состояние FULL",
+                    "correct": false,
+                    "comment": "Маршрутизаторы DROTHER остаются в состоянии 2-WAY: они устанавливают двустороннюю связь, но смежность между собой не формируют. Это нормальное состояние."
+                },
+                {
+                    "answer": "Сосед является BDR и ожидает сбоя DR",
+                    "correct": false,
+                    "comment": "Сосед BDR отображается как FULL/BDR. Состояние 2-WAY/DROTHER означает, что оба маршрутизатора — DROTHER: двусторонняя связь есть, а смежности нет."
+                }
+            ]
+        },
+        {
+            "question": "Какой командой исключить интерфейс маршрутизатора из выбора DR и BDR?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "ip ospf priority 0",
+                    "correct": true
+                },
+                {
+                    "answer": "ip ospf priority 255",
+                    "correct": false,
+                    "comment": "Значение 255 — наибольший приоритет: оно повышает вероятность того, что маршрутизатор станет DR. Исключает интерфейс из выбора значение 0: ip ospf priority 0."
+                },
+                {
+                    "answer": "ip ospf priority 1",
+                    "correct": false,
+                    "comment": "1 — приоритет по умолчанию, с ним интерфейс участвует в выборе. Исключает интерфейс из выбора команда ip ospf priority 0."
+                },
+                {
+                    "answer": "clear ip ospf process",
+                    "correct": false,
+                    "comment": "Эта команда сбрасывает процесс OSPF, чтобы новые настройки вступили в силу, но интерфейс из выбора не исключает. Это делает команда ip ospf priority 0."
+                }
+            ]
+        }
+    ]
 }

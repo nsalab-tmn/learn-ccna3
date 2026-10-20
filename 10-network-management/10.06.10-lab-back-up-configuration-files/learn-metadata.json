@@ -8,32 +8,25 @@
     "tags": {
         "$ref": "../../material-tags.json"
     },
+    "compute": {
+        "local": {
+            "$ref": "./compute/local"
+        }
+    },
     "credentialsSchema": {
-        "userName": {
-            "title": "Имя пользователя",
-            "source": "learn_user"
-        },
-        "password": {
-            "title": "Пароль",
-            "source": "learn_password"
-        },
         "consoleURL": {
-            "title": "Адрес портала",
-            "value": "https://portal.skillscloud.company"
+            "title": "Адрес лаборатории",
+            "source": "URL"
         }
     },
     "skills": {},
     "text": {
         "$ref": "./README.md"
     },
-    "assets": {
-        "$ref": "./assets"
-    },
     "assessment": {
-        "$ref": "./assessment.json"
-    },
-    "deploy": {
-        "$ref": "./deploy"
+        "local": {
+            "$ref": "./assessment"
+        }
     },
     "answerSchema": {
         "type": "object",
@@ -41,22 +34,22 @@
         "properties": {
             "q_1": {
                 "type": "string",
-                "title": "1. Какие изменения были внесены?",
+                "title": "1. Какие изменения внесла в текущую конфигурацию маршрутизатора RTA команда copy tftp running-config?",
                 "placeholder": "Enter your answer here"
             },
             "q_2": {
                 "type": "string",
-                "title": "2. Все ли интерфейсы активны?",
+                "title": "2. Все ли интерфейсы маршрутизатора RTA работают после восстановления конфигурации?",
                 "placeholder": "Enter your answer here"
             },
             "q_3": {
                 "type": "string",
-                "title": "3. Какой специальный символ неоднократно показывает, что файл IOS успешно копируется на TFTP-сервер?",
+                "title": "3. Какой символ, повторяющийся в выводе команды copy flash: tftp:, показывает, что файл образа ОС успешно копируется на TFTP-сервер?",
                 "placeholder": "Enter your answer here"
             },
             "q_4": {
                 "type": "string",
-                "title": "4. Был ли скопирован файл IOS **c1900-universalk9-mz.SPA.151-4.M4.bin** на TFTP-сервер?",
+                "title": "4. Был ли скопирован файл образа ОС nr01-netos-0.1.0.bin на TFTP-сервер?",
                 "placeholder": "Enter your answer here"
             }
         }

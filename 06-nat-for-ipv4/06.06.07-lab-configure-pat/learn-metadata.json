@@ -8,32 +8,25 @@
     "tags": {
         "$ref": "../../material-tags.json"
     },
+    "compute": {
+        "local": {
+            "$ref": "./compute/local"
+        }
+    },
     "credentialsSchema": {
-        "userName": {
-            "title": "Имя пользователя",
-            "source": "learn_user"
-        },
-        "password": {
-            "title": "Пароль",
-            "source": "learn_password"
-        },
         "consoleURL": {
-            "title": "Адрес портала",
-            "value": "https://portal.skillscloud.company"
+            "title": "Адрес лаборатории",
+            "source": "URL"
         }
     },
     "skills": {},
     "text": {
         "$ref": "./README.md"
     },
-    "assets": {
-        "$ref": "./assets"
-    },
     "assessment": {
-        "$ref": "./assessment.json"
-    },
-    "deploy": {
-        "$ref": "./deploy"
+        "local": {
+            "$ref": "./assessment"
+        }
     },
     "answerSchema": {
         "type": "object",
@@ -41,17 +34,17 @@
         "properties": {
             "q_1": {
                 "type": "string",
-                "title": "1. Все ли соединения были успешными?",
+                "title": "1. Выполняются ли эхо-запросы к серверу Server1 от компьютеров PC1 и PC2 и ноутбуков L1 и L2?",
                 "placeholder": "Enter your answer here"
             },
             "q_2": {
                 "type": "string",
-                "title": "2. Все ли соединения были успешными?",
+                "title": "2. Выполняются ли эхо-запросы к серверу Server1 от компьютеров PC3 и PC4 и ноутбуков L3 и L4?",
                 "placeholder": "Enter your answer here"
             },
             "q_3": {
                 "type": "string",
-                "title": "3. Почему **R2** не перечисляет никаких динамических сопоставлений?",
+                "title": "3. Почему в статистике NAT маршрутизатора R2, в отличие от R1, нет сведений о пуле адресов?",
                 "placeholder": "Enter your answer here"
             }
         }

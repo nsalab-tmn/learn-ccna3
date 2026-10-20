@@ -1,9 +1,10 @@
 {
     "title": "Традиционные способы подключения к глобальной сети",
-    "materialType": "lecture",
+    "shortName": "ccna3.wan-concepts.traditional-wan-connectivity",
+    "type": "scored-lecture",
     "description": "Какая общепринятая терминология используется в глобальных сетях? С помощью каких стандартов осуществляется коммутация каналов и коммутация пакетов?",
     "difficulty": 3,
-    "duration": "PT0H9M",
+    "duration": "PT0H14M",
     "tags": {
         "$ref": "../../material-tags.json"
     },
@@ -13,5 +14,114 @@
     },
     "assets": {
         "$ref": "./assets"
-    }
+    },
+    "competency": {
+        "produces": {
+            "id": "ksa.ccna3.wan-concepts.traditional-wan-connectivity",
+            "kind": "K",
+            "bloom": "understand",
+            "objective": "Classify traditional WAN options (leased lines, PSTN, ISDN, Frame Relay, ATM) as leased-line, circuit-switched or packet-switched connections."
+        },
+        "requires": [
+            "ksa.ccna3.wan-concepts.wan-operations"
+        ],
+        "measurement": {
+            "mode": "test",
+            "grader": "test-auto",
+            "aligned_bloom": "understand",
+            "passes_when": "All embedded questions answered correctly (100%, unlimited attempts): T- and E-carrier leased lines, circuit-switched PSTN and ISDN, packet-switched Frame Relay and ATM.",
+            "calibration": "operator-judge"
+        }
+    },
+    "passingScore": 100,
+    "questions": [
+        {
+            "question": "Какой традиционный вариант подключения WAN использует линии T-Carrier или E-Carrier?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "ATM",
+                    "correct": false,
+                    "comment": "В арендованных линиях используются линии T-Carrier или E-Carrier"
+                },
+                {
+                    "answer": "Frame Relay",
+                    "correct": false,
+                    "comment": "В арендованных линиях используются линии T-Carrier или E-Carrier"
+                },
+                {
+                    "answer": "ISDN",
+                    "correct": false,
+                    "comment": "В арендованных линиях используются линии T-Carrier или E-Carrier"
+                },
+                {
+                    "answer": "арендованные линии",
+                    "correct": true
+                },
+                {
+                    "answer": "PSTN",
+                    "correct": false,
+                    "comment": "В арендованных линиях используются линии T-Carrier или E-Carrier"
+                }
+            ]
+        },
+        {
+            "question": "Выберите традиционные варианты подключения WAN с коммутацией каналов. (верны два варианта)",
+            "answerType": "multiChoice",
+            "answers": [
+                {
+                    "answer": "ATM",
+                    "correct": false,
+                    "comment": "PSTN (ТСОП) и ISDN — это два варианта подключения глобальной сети с коммутацией каналов"
+                },
+                {
+                    "answer": "Frame Relay",
+                    "correct": false,
+                    "comment": "PSTN (ТСОП) и ISDN — это два варианта подключения глобальной сети с коммутацией каналов"
+                },
+                {
+                    "answer": "ISDN",
+                    "correct": true
+                },
+                {
+                    "answer": "арендованные линии",
+                    "correct": false,
+                    "comment": "PSTN (ТСОП) и ISDN — это два варианта подключения глобальной сети с коммутацией каналов"
+                },
+                {
+                    "answer": "PSTN",
+                    "correct": true
+                }
+            ]
+        },
+        {
+            "question": "Выберите традиционные варианты подключения к глобальной сети с коммутацией пакетов. (верны два варианта)",
+            "answerType": "multiChoice",
+            "answers": [
+                {
+                    "answer": "ATM",
+                    "correct": true
+                },
+                {
+                    "answer": "Frame Relay",
+                    "correct": true
+                },
+                {
+                    "answer": "ISDN",
+                    "correct": false,
+                    "comment": "ATM и Frame Relay — это два варианта подключения WAN с коммутацией пакетов"
+                },
+                {
+                    "answer": "арендованные линии",
+                    "correct": false,
+                    "comment": "ATM и Frame Relay — это два варианта подключения WAN с коммутацией пакетов"
+                },
+                {
+                    "answer": "PSTN",
+                    "correct": false,
+                    "comment": "ATM и Frame Relay — это два варианта подключения WAN с коммутацией пакетов"
+                }
+            ]
+        }
+    ]
 }

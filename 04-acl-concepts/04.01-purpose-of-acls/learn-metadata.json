@@ -1,9 +1,10 @@
 {
     "title": "Назначение списков контроля доступа",
-    "materialType": "lecture",
+    "shortName": "ccna3.acl-concepts.purpose-of-acls",
+    "type": "scored-lecture",
     "description": "Что такое списки контроля доступа, для чего они нужны и как они работают?",
     "difficulty": 3,
-    "duration": "PT0H7M",
+    "duration": "PT0H11M",
     "tags": {
         "$ref": "../../material-tags.json"
     },
@@ -13,5 +14,101 @@
     },
     "assets": {
         "$ref": "./assets"
-    }
+    },
+    "competency": {
+        "produces": {
+            "id": "ksa.ccna3.acl-concepts.purpose-of-acls",
+            "kind": "K",
+            "bloom": "understand",
+            "objective": "Name the entries an ACL is made of, state the OSI layer at which a standard ACL filters, and describe what happens to a packet that matches no ACE."
+        },
+        "requires": [
+            "ksa.ccna3.network-security-concepts.network-security-best-practices"
+        ],
+        "measurement": {
+            "mode": "test",
+            "grader": "test-auto",
+            "aligned_bloom": "understand",
+            "passes_when": "All embedded questions answered correctly (100%, unlimited attempts): ACEs, the layer at which a standard ACL filters, the implicit deny.",
+            "calibration": "operator-judge"
+        }
+    },
+    "passingScore": 100,
+    "questions": [
+        {
+            "question": "Как называются запрещающие или разрешающие инструкции ACL?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "записи контроля доступа (ACE)",
+                    "correct": true
+                },
+                {
+                    "answer": "произвольные инструкции",
+                    "correct": false,
+                    "comment": "Разрешающие и запрещающие инструкции ACL называются записями контроля доступа (ACE)"
+                },
+                {
+                    "answer": "записи контроля содержимого",
+                    "correct": false,
+                    "comment": "Разрешающие и запрещающие инструкции ACL называются записями контроля доступа (ACE)"
+                },
+                {
+                    "answer": "инструкции управления",
+                    "correct": false,
+                    "comment": "Разрешающие и запрещающие инструкции ACL называются записями контроля доступа (ACE)"
+                }
+            ]
+        },
+        {
+            "question": "Какое утверждение о фильтрации пакетов является верным?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "расширенный ACL фильтрует только на уровне 3",
+                    "correct": false,
+                    "comment": "стандартный ACL фильтрует только на уровне 3"
+                },
+                {
+                    "answer": "расширенный ACL фильтрует только на уровне 4",
+                    "correct": false,
+                    "comment": "стандартный ACL фильтрует только на уровне 3"
+                },
+                {
+                    "answer": "стандартный ACL фильтрует только на уровне 3",
+                    "correct": true
+                },
+                {
+                    "answer": "стандартный ACL фильтрует только на уровне 4",
+                    "correct": false,
+                    "comment": "стандартный ACL фильтрует только на уровне 3"
+                }
+            ]
+        },
+        {
+            "question": "Чем заканчивается обработка пакета, если ему не соответствует ни одна запись ACE стандартного ACL?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "если на маршрутизаторе настроен стандартный список контроля доступа (ACL) IPv4, то, получив пакет, он извлекает из заголовка пакета IPv4-адрес источника",
+                    "correct": false,
+                    "comment": "Если в ACL нет соответствующего ACE, пакет отбрасывается из-за неявного запрета ACE, автоматически применяемого ко всем ACL"
+                },
+                {
+                    "answer": "маршрутизатор просматривает ACL, начиная сверху, и последовательно сравнивает адрес с каждым ACE",
+                    "correct": false,
+                    "comment": "Если в ACL нет соответствующего ACE, пакет отбрасывается из-за неявного запрета ACE, автоматически применяемого ко всем ACL"
+                },
+                {
+                    "answer": "при обнаружении совпадения, ACE либо разрешает, либо запрещает пакет, и любые оставшиеся ACE не анализируются",
+                    "correct": false,
+                    "comment": "Если в ACL нет соответствующего ACE, пакет отбрасывается из-за неявного запрета ACE, автоматически применяемого ко всем ACL"
+                },
+                {
+                    "answer": "если в ACL нет соответствующего ACE, пакет отбрасывается из-за неявного запрета ACE, автоматически применяемого ко всем ACL",
+                    "correct": true
+                }
+            ]
+        }
+    ]
 }

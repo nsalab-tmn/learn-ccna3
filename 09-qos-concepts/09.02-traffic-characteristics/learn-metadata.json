@@ -1,9 +1,10 @@
 {
     "title": "Характеристики сетевого трафика",
-    "materialType": "lecture",
+    "shortName": "ccna3.qos-concepts.traffic-characteristics",
+    "type": "scored-lecture",
     "description": "Какие существуют классы трафика и какие требования они предъявляют к полосе пропускания?",
     "difficulty": 3,
-    "duration": "PT0H11M",
+    "duration": "PT0H18M",
     "tags": {
         "$ref": "../../material-tags.json"
     },
@@ -13,5 +14,147 @@
     },
     "assets": {
         "$ref": "./assets"
-    }
+    },
+    "competency": {
+        "produces": {
+            "id": "ksa.ccna3.qos-concepts.traffic-characteristics",
+            "kind": "K",
+            "bloom": "understand",
+            "objective": "Classify voice, video and data traffic by their characteristics and requirements: predictability, burstiness, minimum bandwidth, packet pattern and priority."
+        },
+        "requires": [
+            "ksa.ccna3.qos-concepts.network-transmission-quality"
+        ],
+        "measurement": {
+            "mode": "test",
+            "grader": "test-auto",
+            "aligned_bloom": "understand",
+            "passes_when": "All embedded questions answered correctly (100%, unlimited attempts): voice, video and data traffic characteristics and requirements.",
+            "calibration": "operator-judge"
+        }
+    },
+    "passingScore": 100,
+    "questions": [
+        {
+            "question": "Какой тип трафика может занять всю полосу пропускания канала связи?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "Голос",
+                    "correct": false,
+                    "comment": "Некоторые приложения TCP, например FTP при загрузке большого файла, используют всю доступную полосу пропускания."
+                },
+                {
+                    "answer": "Видео",
+                    "correct": false,
+                    "comment": "Некоторые приложения TCP, например FTP при загрузке большого файла, используют всю доступную полосу пропускания."
+                },
+                {
+                    "answer": "Данные",
+                    "correct": true
+                }
+            ]
+        },
+        {
+            "question": "Для какого типа трафика требуется пропускная способность не ниже 384 Кбит/с?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "Голос",
+                    "correct": false,
+                    "comment": "Видео требует не менее 384 Кбит/с полосы пропускания."
+                },
+                {
+                    "answer": "Видео",
+                    "correct": true
+                },
+                {
+                    "answer": "Данные",
+                    "correct": false,
+                    "comment": "Видео требует не менее 384 Кбит/с полосы пропускания."
+                }
+            ]
+        },
+        {
+            "question": "Трафик какого типа может быть непредсказуемым, неоднородным и неравномерным?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "Голос",
+                    "correct": false,
+                    "comment": "Видеотрафик может быть непредсказуемым, неоднородным и неравномерным."
+                },
+                {
+                    "answer": "Видео",
+                    "correct": true
+                },
+                {
+                    "answer": "Данные",
+                    "correct": false,
+                    "comment": "Видеотрафик может быть непредсказуемым, неоднородным и неравномерным."
+                }
+            ]
+        },
+        {
+            "question": "Трафик какого типа может быть предсказуемым и равномерным?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "Голос",
+                    "correct": true
+                },
+                {
+                    "answer": "Видео",
+                    "correct": false,
+                    "comment": "Голосовой трафик может быть предсказуемым и равномерным, но чувствителен к задержке и отбрасыванию пакетов."
+                },
+                {
+                    "answer": "Данные",
+                    "correct": false,
+                    "comment": "Голосовой трафик может быть предсказуемым и равномерным, но чувствителен к задержке и отбрасыванию пакетов."
+                }
+            ]
+        },
+        {
+            "question": "Какой тип трафика передается по UDP равномерным потоком, по 200 байт каждые 20 мс, и поэтому при потере не отправляется повторно?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "Голос",
+                    "correct": true,
+                    "comment": "Голосовой трафик равномерен — 200 байт каждые 20 мс — и использует UDP, где потерянные пакеты заново не передаются."
+                },
+                {
+                    "answer": "Видео",
+                    "correct": false,
+                    "comment": "Видео тоже передается по UDP, но этот трафик неравномерный и пульсирующий: размер и число пакетов меняются каждые 33 мс."
+                },
+                {
+                    "answer": "Данные",
+                    "correct": false,
+                    "comment": "Трафик данных обычно передается по TCP, который повторно отправляет потерянные пакеты, например для электронной почты и веб-страниц."
+                }
+            ]
+        },
+        {
+            "question": "Какой тип трафика должен получить более высокий приоритет UDP?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "Голос",
+                    "correct": true
+                },
+                {
+                    "answer": "Видео",
+                    "correct": false,
+                    "comment": "Голосовой трафик чувствителен к задержке и пропущенным пакетам, следовательно, ему нужен более высокий приоритет UDP."
+                },
+                {
+                    "answer": "Данные",
+                    "correct": false,
+                    "comment": "Голосовой трафик чувствителен к задержке и пропущенным пакетам, следовательно, ему нужен более высокий приоритет UDP."
+                }
+            ]
+        }
+    ]
 }

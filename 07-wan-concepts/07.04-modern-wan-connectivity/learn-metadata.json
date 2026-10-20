@@ -1,9 +1,10 @@
 {
     "title": "Современные способы подключения к глобальной сети",
-    "materialType": "lecture",
+    "shortName": "ccna3.wan-concepts.modern-wan-connectivity",
+    "type": "scored-lecture",
     "description": "Какими способами подключения к глобальным сетям пользуются сегодня?",
     "difficulty": 3,
-    "duration": "PT0H8M",
+    "duration": "PT0H10M",
     "tags": {
         "$ref": "../../material-tags.json"
     },
@@ -13,5 +14,86 @@
     },
     "assets": {
         "$ref": "./assets"
-    }
+    },
+    "competency": {
+        "produces": {
+            "id": "ksa.ccna3.wan-concepts.modern-wan-connectivity",
+            "kind": "K",
+            "bloom": "understand",
+            "objective": "Identify the modern WAN option, Metro Ethernet or MPLS, that a description fits, from distractors such as ATM, cable and DSL."
+        },
+        "requires": [
+            "ksa.ccna3.wan-concepts.traditional-wan-connectivity"
+        ],
+        "measurement": {
+            "mode": "test",
+            "grader": "test-auto",
+            "aligned_bloom": "understand",
+            "passes_when": "All embedded questions answered correctly (100%, unlimited attempts): Metro Ethernet, MPLS labels.",
+            "calibration": "operator-judge"
+        }
+    },
+    "passingScore": 100,
+    "questions": [
+        {
+            "question": "Какой вариант подключения к глобальной сети основан на технологии Ethernet LAN?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "ATM",
+                    "correct": false,
+                    "comment": "Metro Ethernet основана на технологии Ethernet LAN"
+                },
+                {
+                    "answer": "кабельные системы",
+                    "correct": false,
+                    "comment": "Metro Ethernet основана на технологии Ethernet LAN"
+                },
+                {
+                    "answer": "DSL",
+                    "correct": false,
+                    "comment": "Metro Ethernet основана на технологии Ethernet LAN"
+                },
+                {
+                    "answer": "сети Metro Ethernet",
+                    "correct": true
+                },
+                {
+                    "answer": "MPLS",
+                    "correct": false,
+                    "comment": "Metro Ethernet основана на технологии Ethernet LAN"
+                }
+            ]
+        },
+        {
+            "question": "Какой вариант является решением сервисного провайдера WAN, который использует метки для направления потока пакетов через сеть провайдера?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "ATM",
+                    "correct": false,
+                    "comment": "MPLS — это решение WAN сервисного провайдера, использующее метки для направления потока пакетов через сеть провайдера"
+                },
+                {
+                    "answer": "кабельные системы",
+                    "correct": false,
+                    "comment": "MPLS — это решение WAN сервисного провайдера, использующее метки для направления потока пакетов через сеть провайдера"
+                },
+                {
+                    "answer": "DSL",
+                    "correct": false,
+                    "comment": "MPLS — это решение WAN сервисного провайдера, использующее метки для направления потока пакетов через сеть провайдера"
+                },
+                {
+                    "answer": "сети Metro Ethernet",
+                    "correct": false,
+                    "comment": "MPLS — это решение WAN сервисного провайдера, использующее метки для направления потока пакетов через сеть провайдера"
+                },
+                {
+                    "answer": "MPLS",
+                    "correct": true
+                }
+            ]
+        }
+    ]
 }

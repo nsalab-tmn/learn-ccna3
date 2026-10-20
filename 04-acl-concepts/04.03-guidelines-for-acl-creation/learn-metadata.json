@@ -1,9 +1,10 @@
 {
     "title": "Рекомендации по созданию списков контроля доступа",
-    "materialType": "lecture",
+    "shortName": "ccna3.acl-concepts.guidelines-for-acl-creation",
+    "type": "scored-lecture",
     "description": "Как правильно составлять и применять списки контроля доступа?",
     "difficulty": 3,
-    "duration": "PT0H5M",
+    "duration": "PT0H7M",
     "tags": {
         "$ref": "../../material-tags.json"
     },
@@ -13,5 +14,82 @@
     },
     "assets": {
         "$ref": "./assets"
-    }
+    },
+    "competency": {
+        "produces": {
+            "id": "ksa.ccna3.acl-concepts.guidelines-for-acl-creation",
+            "kind": "K",
+            "bloom": "understand",
+            "objective": "State how many IPv4 and IPv6 ACLs one interface can carry, and identify the recommended practice for planning an ACL before configuring it."
+        },
+        "requires": [
+            "ksa.ccna3.acl-concepts.purpose-of-acls",
+            "ksa.ccna3.acl-concepts.wildcard-masks-in-acls"
+        ],
+        "measurement": {
+            "mode": "test",
+            "grader": "test-auto",
+            "aligned_bloom": "understand",
+            "passes_when": "All embedded questions answered correctly (100%, unlimited attempts): the limit of ACLs per interface, ACL creation best practices.",
+            "calibration": "operator-judge"
+        }
+    },
+    "passingScore": 100,
+    "questions": [
+        {
+            "question": "Сколько всего списков ACL (IPv4 и IPv6) можно настроить на интерфейсе?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "0",
+                    "correct": false,
+                    "comment": "Для каждого интерфейса можно настроить четыре ACL, два IPv4 и два IPv6"
+                },
+                {
+                    "answer": "1",
+                    "correct": false,
+                    "comment": "Для каждого интерфейса можно настроить четыре ACL, два IPv4 и два IPv6"
+                },
+                {
+                    "answer": "2",
+                    "correct": false,
+                    "comment": "Для каждого интерфейса можно настроить четыре ACL, два IPv4 и два IPv6"
+                },
+                {
+                    "answer": "4",
+                    "correct": true
+                },
+                {
+                    "answer": "8",
+                    "correct": false,
+                    "comment": "Для каждого интерфейса можно настроить четыре ACL, два IPv4 и два IPv6"
+                }
+            ]
+        },
+        {
+            "question": "Что из перечисленного является наилучшей практикой ACL?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "тестирование списков ACL в производственной сети",
+                    "correct": false,
+                    "comment": "Перед настройкой ACL рекомендуется описать то, что он должен делать"
+                },
+                {
+                    "answer": "создание списков ACL на производственном маршрутизаторе",
+                    "correct": false,
+                    "comment": "Перед настройкой ACL рекомендуется описать то, что он должен делать"
+                },
+                {
+                    "answer": "документирование списков ACL с помощью команды ACL description",
+                    "correct": false,
+                    "comment": "Перед настройкой ACL рекомендуется описать то, что он должен делать"
+                },
+                {
+                    "answer": "создание описания того, что должен делать ACL перед настройкой его на маршрутизаторе",
+                    "correct": true
+                }
+            ]
+        }
+    ]
 }

@@ -1,9 +1,10 @@
 {
     "title": "Проверка работы протокола OSPF",
-    "materialType": "lecture",
+    "shortName": "ccna3.single-area-ospfv2-configuration.verify-single-area-ospfv2",
+    "type": "scored-lecture",
     "description": "Как проверить корректность работы OSPF на маршрутизаторе?",
     "difficulty": 3,
-    "duration": "PT0H10M",
+    "duration": "PT0H16M",
     "tags": {
         "$ref": "../../material-tags.json"
     },
@@ -13,5 +14,152 @@
     },
     "assets": {
         "$ref": "./assets"
-    }
+    },
+    "competency": {
+        "produces": {
+            "id": "ksa.ccna3.single-area-ospfv2-configuration.verify-single-area-ospfv2",
+            "kind": "K",
+            "bloom": "understand",
+            "objective": "Choose the show command that verifies OSPFv2 adjacencies or SPF process information, interpret the State and Dead Time fields of the neighbor table, and identify the mismatches that prevent an adjacency."
+        },
+        "requires": [
+            "ksa.ccna3.single-area-ospfv2-configuration.point-to-point-ospf-networks",
+            "ksa.ccna3.single-area-ospfv2-configuration.multiaccess-ospf-networks",
+            "ksa.ccna3.single-area-ospfv2-configuration.modify-single-area-ospfv2"
+        ],
+        "measurement": {
+            "mode": "test",
+            "grader": "test-auto",
+            "aligned_bloom": "understand",
+            "passes_when": "All embedded questions answered correctly (100%, unlimited attempts): show ip ospf neighbor, show ip ospf, conditions that block an adjacency, the FULL/- state, Dead Time.",
+            "calibration": "operator-judge"
+        }
+    },
+    "passingScore": 100,
+    "questions": [
+        {
+            "question": "Какой командой проверить, что маршрутизатор сформировал отношения смежности OSPFv2 с соседями?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "show ip ospf neighbor",
+                    "correct": true
+                },
+                {
+                    "answer": "show ip interface brief",
+                    "correct": false,
+                    "comment": "Эта команда проверяет, что интерфейсы активны и на них правильно настроены адреса. Смежности с соседями показывает show ip ospf neighbor."
+                },
+                {
+                    "answer": "show ip ospf",
+                    "correct": false,
+                    "comment": "Эта команда показывает идентификаторы процесса и маршрутизатора, данные области и время последнего расчета SPF. Смежности с соседями показывает show ip ospf neighbor."
+                },
+                {
+                    "answer": "show ip route",
+                    "correct": false,
+                    "comment": "Эта команда проверяет, что в таблице маршрутизации есть все ожидаемые маршруты. Смежности с соседями показывает show ip ospf neighbor."
+                }
+            ]
+        },
+        {
+            "question": "Администратору нужно узнать, сколько времени назад в области последний раз выполнялся алгоритм SPF. Какую команду он использует?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "show ip ospf",
+                    "correct": true
+                },
+                {
+                    "answer": "show ip protocols",
+                    "correct": false,
+                    "comment": "Эта команда показывает идентификаторы процесса и маршрутизатора, объявляемые сети, источники обновлений и административное расстояние. Время последнего расчета SPF выводит show ip ospf."
+                },
+                {
+                    "answer": "show ip ospf neighbor",
+                    "correct": false,
+                    "comment": "Эта команда выводит таблицу соседей. Время последнего расчета SPF выводит show ip ospf."
+                },
+                {
+                    "answer": "show ip ospf interface brief",
+                    "correct": false,
+                    "comment": "Эта команда кратко описывает интерфейсы с OSPFv2: области, адреса, стоимость, состояние и число соседей. Время последнего расчета SPF выводит show ip ospf."
+                }
+            ]
+        },
+        {
+            "question": "При каких условиях два маршрутизатора не смогут установить отношения смежности OSPFv2? (выберите два варианта)",
+            "answerType": "multiChoice",
+            "answers": [
+                {
+                    "answer": "Маски подсети на соединенных интерфейсах не совпадают",
+                    "correct": true
+                },
+                {
+                    "answer": "Таймеры приветствия или простоя не совпадают",
+                    "correct": true
+                },
+                {
+                    "answer": "У маршрутизаторов разные идентификаторы маршрутизатора",
+                    "correct": false,
+                    "comment": "Идентификаторы маршрутизаторов как раз должны различаться. Смежности мешают несовпадение масок подсети, таймеров или типов сетей OSPFv2 и ошибки в команде network."
+                },
+                {
+                    "answer": "На обоих маршрутизаторах интервал приветствия изменен на одно и то же значение 5 секунд",
+                    "correct": false,
+                    "comment": "Мешает только несовпадение таймеров. Если интервалы на обоих маршрутизаторах одинаковы, смежность устанавливается."
+                }
+            ]
+        },
+        {
+            "question": "В выводе show ip ospf neighbor у соседа в столбце State указано FULL/ -. Что означает тире?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "В сети этого типа DR и BDR не требуются",
+                    "correct": true
+                },
+                {
+                    "answer": "Сосед является маршрутизатором DROTHER",
+                    "correct": false,
+                    "comment": "Сосед DROTHER отображается с ролью DROTHER, например FULL/DROTHER. Тире означает, что в сети этого типа DR и BDR не требуются."
+                },
+                {
+                    "answer": "Отношения смежности с соседом еще не установлены",
+                    "correct": false,
+                    "comment": "Состояние FULL означает, что маршрутизаторы имеют одинаковые базы данных состояния каналов. Тире лишь указывает, что в сети этого типа DR и BDR не требуются."
+                },
+                {
+                    "answer": "Сосед перестал отправлять пакеты приветствия",
+                    "correct": false,
+                    "comment": "Тогда по истечении Dead Time сосед был бы объявлен неработающим. Тире означает, что в сети этого типа DR и BDR не требуются."
+                }
+            ]
+        },
+        {
+            "question": "Что показывает значение Dead Time в выводе show ip ospf neighbor?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "Сколько еще маршрутизатор будет ждать пакета приветствия от соседа, прежде чем объявить его неработающим; при получении пакета приветствия значение сбрасывается",
+                    "correct": true
+                },
+                {
+                    "answer": "Сколько времени прошло с момента установления смежности",
+                    "correct": false,
+                    "comment": "Dead Time — оставшееся время ожидания пакета приветствия от соседа. При получении пакета приветствия значение сбрасывается."
+                },
+                {
+                    "answer": "Интервал, с которым маршрутизатор отправляет пакеты приветствия",
+                    "correct": false,
+                    "comment": "Интервалы приветствия и простоя видны в выводе show ip ospf interface. Dead Time — оставшееся время ожидания пакета приветствия, после которого сосед объявляется неработающим."
+                },
+                {
+                    "answer": "Время последнего выполнения алгоритма SPF",
+                    "correct": false,
+                    "comment": "Это показывает команда show ip ospf. Dead Time — оставшееся время ожидания пакета приветствия, после которого сосед объявляется неработающим."
+                }
+            ]
+        }
+    ]
 }
