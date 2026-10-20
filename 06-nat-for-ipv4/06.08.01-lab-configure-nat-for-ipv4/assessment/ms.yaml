@@ -9,6 +9,8 @@ Criterions:
     - code: R2.ACL.ACL-R2NAT
       name: R2NAT
       description: 'Список доступа R2NAT: 3 записей по порядку'
+      skills:
+      - ACL
       max_mark: 2
       steps:
       - name: 'show access-lists R2NAT: matches (?m)^Standard IP access list R2NAT\s*$\s*\n\s+\d+ permit\ 192\.168\.10\.0,\
@@ -33,6 +35,8 @@ Criterions:
     - code: R2.NAT.NAT-POOL-1
       name: Pools.Pool Name 1
       description: Пул NAT 209.165.202.129–209.165.202.129
+      skills:
+      - Dynamic PAT Configuration
       max_mark: 2
       steps:
       - name: 'show running-config: matches (?m)^ip nat pool R2POOL 209\.165\.202\.129 209\.165\.202\.129 netmask
@@ -49,6 +53,8 @@ Criterions:
     - code: R2.NAT.NAT-LIST-1
       name: Inside Source List.NAT Source Setting 1
       description: 'NAT для списка R2NAT: pool R2POOL с перегрузкой (PAT)'
+      skills:
+      - Dynamic PAT Configuration
       max_mark: 2
       steps:
       - name: 'show running-config: matches (?m)^ip nat inside source list R2NAT pool\ R2POOL overload\s*$'
@@ -64,6 +70,8 @@ Criterions:
     - code: R2.NAT.NAT-STATIC-1
       name: Inside Source Static.NAT Source Setting 1
       description: Статический NAT 192.168.20.254 → 209.165.202.130
+      skills:
+      - Static NAT Configuration
       max_mark: 2
       steps:
       - name: 'show running-config: matches (?m)^ip nat inside source static 192\.168\.20\.254 209\.165\.202\.130\s*$'
@@ -82,6 +90,8 @@ Criterions:
     - code: R2.PORTS.S0-0-0-NAT
       name: Serial0/0/0.NAT Mode
       description: 'S0/0/0: ip nat inside'
+      skills:
+      - NAT Interface Configuration
       max_mark: 1
       steps:
       - name: 'show running-config interface Serial0/0/0: matches (?m)^ ip nat inside\s*$'
@@ -97,6 +107,8 @@ Criterions:
     - code: R2.PORTS.S0-0-1-NAT
       name: Serial0/0/1.NAT Mode
       description: 'S0/0/1: ip nat inside'
+      skills:
+      - NAT Interface Configuration
       max_mark: 1
       steps:
       - name: 'show running-config interface Serial0/0/1: matches (?m)^ ip nat inside\s*$'
@@ -112,6 +124,8 @@ Criterions:
     - code: R2.PORTS.G0-0-NAT
       name: GigabitEthernet0/0.NAT Mode
       description: 'G0/0: ip nat inside'
+      skills:
+      - NAT Interface Configuration
       max_mark: 1
       steps:
       - name: 'show running-config interface GigabitEthernet0/0: matches (?m)^ ip nat inside\s*$'
@@ -127,6 +141,8 @@ Criterions:
     - code: R2.PORTS.S0-1-0-NAT
       name: Serial0/1/0.NAT Mode
       description: 'S0/1/0: ip nat outside'
+      skills:
+      - NAT Interface Configuration
       max_mark: 1
       steps:
       - name: 'show running-config interface Serial0/1/0: matches (?m)^ ip nat outside\s*$'

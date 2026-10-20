@@ -446,6 +446,8 @@ Criterions:
     - code: R1.PORTS.G0-0-0-DESC
       name: GigabitEthernet0/0/0.Description
       description: 'G0/0/0: задано описание интерфейса'
+      skills:
+      - Other
       max_mark: 1
       steps:
       - name: 'show running-config | section ^interface GigabitEthernet0/0/0( |$): matches (?m)^ description \S'
@@ -461,6 +463,8 @@ Criterions:
     - code: R1.PORTS.G0-0-0-IP
       name: GigabitEthernet0/0/0.IP Address
       description: 'G0/0/0: IP-адрес 10.0.0.1'
+      skills:
+      - Ip
       max_mark: 1
       steps:
       - name: 'show running-config | section ^interface GigabitEthernet0/0/0( |$): matches (?m)^ ip address 10\.0\.0\.1 '
@@ -476,6 +480,8 @@ Criterions:
     - code: R1.PORTS.G0-0-0-UP
       name: GigabitEthernet0/0/0.Port Status
       description: 'G0/0/0: интерфейс включён (no shutdown)'
+      skills:
+      - Physical
       max_mark: 1
       steps:
       - name: 'show running-config | section ^interface GigabitEthernet0/0/0( |$): has interface GigabitEthernet0/0/0'
@@ -502,6 +508,8 @@ Criterions:
     - code: R1.PORTS.G0-0-0-MASK
       name: GigabitEthernet0/0/0.Subnet Mask
       description: 'G0/0/0: маска 255.255.255.248'
+      skills:
+      - Ip
       max_mark: 1
       steps:
       - name: 'show running-config | section ^interface GigabitEthernet0/0/0( |$): matches (?m)^ ip address \S+
@@ -518,6 +526,8 @@ Criterions:
     - code: R1.PORTS.G0-0-1-DESC
       name: GigabitEthernet0/0/1.Description
       description: 'G0/0/1: задано описание интерфейса'
+      skills:
+      - Other
       max_mark: 1
       steps:
       - name: 'show running-config | section ^interface GigabitEthernet0/0/1( |$): matches (?m)^ description \S'
@@ -533,6 +543,8 @@ Criterions:
     - code: R1.PORTS.G0-0-1-IP
       name: GigabitEthernet0/0/1.IP Address
       description: 'G0/0/1: IP-адрес 192.168.20.1'
+      skills:
+      - Ip
       max_mark: 1
       steps:
       - name: 'show running-config | section ^interface GigabitEthernet0/0/1( |$): matches (?m)^ ip address 192\.168\.20\.1 '
@@ -548,6 +560,8 @@ Criterions:
     - code: R1.PORTS.G0-0-1-UP
       name: GigabitEthernet0/0/1.Port Status
       description: 'G0/0/1: интерфейс включён (no shutdown)'
+      skills:
+      - Physical
       max_mark: 1
       steps:
       - name: 'show running-config | section ^interface GigabitEthernet0/0/1( |$): has interface GigabitEthernet0/0/1'
@@ -574,6 +588,8 @@ Criterions:
     - code: R1.PORTS.G0-0-1-MASK
       name: GigabitEthernet0/0/1.Subnet Mask
       description: 'G0/0/1: маска 255.255.255.0'
+      skills:
+      - Ip
       max_mark: 1
       steps:
       - name: 'show running-config | section ^interface GigabitEthernet0/0/1( |$): matches (?m)^ ip address \S+
@@ -590,6 +606,8 @@ Criterions:
     - code: R1.PORTS.G0-0-2-DESC
       name: GigabitEthernet0/0/2.Description
       description: 'G0/0/2: задано описание интерфейса'
+      skills:
+      - Other
       max_mark: 1
       steps:
       - name: 'show running-config | section ^interface GigabitEthernet0/0/2( |$): matches (?m)^ description \S'
@@ -605,6 +623,8 @@ Criterions:
     - code: R1.PORTS.G0-0-2-IP
       name: GigabitEthernet0/0/2.IP Address
       description: 'G0/0/2: IP-адрес 192.168.10.1'
+      skills:
+      - Ip
       max_mark: 1
       steps:
       - name: 'show running-config | section ^interface GigabitEthernet0/0/2( |$): matches (?m)^ ip address 192\.168\.10\.1 '
@@ -620,6 +640,8 @@ Criterions:
     - code: R1.PORTS.G0-0-2-UP
       name: GigabitEthernet0/0/2.Port Status
       description: 'G0/0/2: интерфейс включён (no shutdown)'
+      skills:
+      - Physical
       max_mark: 1
       steps:
       - name: 'show running-config | section ^interface GigabitEthernet0/0/2( |$): has interface GigabitEthernet0/0/2'
@@ -646,6 +668,8 @@ Criterions:
     - code: R1.PORTS.G0-0-2-MASK
       name: GigabitEthernet0/0/2.Subnet Mask
       description: 'G0/0/2: маска 255.255.255.0'
+      skills:
+      - Ip
       max_mark: 1
       steps:
       - name: 'show running-config | section ^interface GigabitEthernet0/0/2( |$): matches (?m)^ ip address \S+
@@ -662,6 +686,8 @@ Criterions:
     - code: R1.PORTS.G0-0-0-OSPF-HELLO
       name: GigabitEthernet0/0/0.OSPF Hello-Interval
       description: 'G0/0/0: интервал hello 5 с'
+      skills:
+      - Routing
       max_mark: 1
       steps:
       - name: 'show ip ospf interface GigabitEthernet0/0/0: matches (?m)^  Timer intervals configured, Hello 5,'
@@ -677,6 +703,8 @@ Criterions:
     - code: R1.PORTS.G0-0-0-OSPF-NETWORK
       name: GigabitEthernet0/0/0.OSPF Network Type
       description: 'G0/0/0: тип сети OSPF point-to-point'
+      skills:
+      - Routing
       max_mark: 1
       steps:
       - name: 'show running-config interface GigabitEthernet0/0/0: matches (?m)^ ip ospf network point-to-point\s*$'
@@ -692,6 +720,8 @@ Criterions:
     - code: R1.PORTS.G0-0-0-NAT
       name: GigabitEthernet0/0/0.NAT Mode
       description: 'G0/0/0: ip nat outside'
+      skills:
+      - Nat
       max_mark: 1
       steps:
       - name: 'show running-config interface GigabitEthernet0/0/0: matches (?m)^ ip nat outside\s*$'
@@ -707,6 +737,8 @@ Criterions:
     - code: R1.PORTS.G0-0-1-NAT
       name: GigabitEthernet0/0/1.NAT Mode
       description: 'G0/0/1: ip nat inside'
+      skills:
+      - Nat
       max_mark: 1
       steps:
       - name: 'show running-config interface GigabitEthernet0/0/1: matches (?m)^ ip nat inside\s*$'
@@ -1253,6 +1285,8 @@ Criterions:
     - code: R2.PORTS.G0-0-0-DESC
       name: GigabitEthernet0/0/0.Description
       description: 'G0/0/0: задано описание интерфейса'
+      skills:
+      - Other
       max_mark: 1
       steps:
       - name: 'show running-config | section ^interface GigabitEthernet0/0/0( |$): matches (?m)^ description \S'
@@ -1268,6 +1302,8 @@ Criterions:
     - code: R2.PORTS.G0-0-0-IP
       name: GigabitEthernet0/0/0.IP Address
       description: 'G0/0/0: IP-адрес 10.0.0.2'
+      skills:
+      - Ip
       max_mark: 1
       steps:
       - name: 'show running-config | section ^interface GigabitEthernet0/0/0( |$): matches (?m)^ ip address 10\.0\.0\.2 '
@@ -1283,6 +1319,8 @@ Criterions:
     - code: R2.PORTS.G0-0-0-UP
       name: GigabitEthernet0/0/0.Port Status
       description: 'G0/0/0: интерфейс включён (no shutdown)'
+      skills:
+      - Physical
       max_mark: 1
       steps:
       - name: 'show running-config | section ^interface GigabitEthernet0/0/0( |$): has interface GigabitEthernet0/0/0'
@@ -1309,6 +1347,8 @@ Criterions:
     - code: R2.PORTS.G0-0-0-MASK
       name: GigabitEthernet0/0/0.Subnet Mask
       description: 'G0/0/0: маска 255.255.255.248'
+      skills:
+      - Ip
       max_mark: 1
       steps:
       - name: 'show running-config | section ^interface GigabitEthernet0/0/0( |$): matches (?m)^ ip address \S+
@@ -1325,6 +1365,8 @@ Criterions:
     - code: R2.PORTS.G0-0-1-DESC
       name: GigabitEthernet0/0/1.Description
       description: 'G0/0/1: задано описание интерфейса'
+      skills:
+      - Other
       max_mark: 1
       steps:
       - name: 'show running-config | section ^interface GigabitEthernet0/0/1( |$): matches (?m)^ description \S'
@@ -1340,6 +1382,8 @@ Criterions:
     - code: R2.PORTS.G0-0-1-IP
       name: GigabitEthernet0/0/1.IP Address
       description: 'G0/0/1: IP-адрес 192.168.40.1'
+      skills:
+      - Ip
       max_mark: 1
       steps:
       - name: 'show running-config | section ^interface GigabitEthernet0/0/1( |$): matches (?m)^ ip address 192\.168\.40\.1 '
@@ -1355,6 +1399,8 @@ Criterions:
     - code: R2.PORTS.G0-0-1-UP
       name: GigabitEthernet0/0/1.Port Status
       description: 'G0/0/1: интерфейс включён (no shutdown)'
+      skills:
+      - Physical
       max_mark: 1
       steps:
       - name: 'show running-config | section ^interface GigabitEthernet0/0/1( |$): has interface GigabitEthernet0/0/1'
@@ -1381,6 +1427,8 @@ Criterions:
     - code: R2.PORTS.G0-0-1-MASK
       name: GigabitEthernet0/0/1.Subnet Mask
       description: 'G0/0/1: маска 255.255.255.0'
+      skills:
+      - Ip
       max_mark: 1
       steps:
       - name: 'show running-config | section ^interface GigabitEthernet0/0/1( |$): matches (?m)^ ip address \S+
@@ -1397,6 +1445,8 @@ Criterions:
     - code: R2.PORTS.G0-0-2-DESC
       name: GigabitEthernet0/0/2.Description
       description: 'G0/0/2: задано описание интерфейса'
+      skills:
+      - Other
       max_mark: 1
       steps:
       - name: 'show running-config | section ^interface GigabitEthernet0/0/2( |$): matches (?m)^ description \S'
@@ -1412,6 +1462,8 @@ Criterions:
     - code: R2.PORTS.G0-0-2-IP
       name: GigabitEthernet0/0/2.IP Address
       description: 'G0/0/2: IP-адрес 192.168.30.1'
+      skills:
+      - Ip
       max_mark: 1
       steps:
       - name: 'show running-config | section ^interface GigabitEthernet0/0/2( |$): matches (?m)^ ip address 192\.168\.30\.1 '
@@ -1427,6 +1479,8 @@ Criterions:
     - code: R2.PORTS.G0-0-2-UP
       name: GigabitEthernet0/0/2.Port Status
       description: 'G0/0/2: интерфейс включён (no shutdown)'
+      skills:
+      - Physical
       max_mark: 1
       steps:
       - name: 'show running-config | section ^interface GigabitEthernet0/0/2( |$): has interface GigabitEthernet0/0/2'
@@ -1453,6 +1507,8 @@ Criterions:
     - code: R2.PORTS.G0-0-2-MASK
       name: GigabitEthernet0/0/2.Subnet Mask
       description: 'G0/0/2: маска 255.255.255.0'
+      skills:
+      - Ip
       max_mark: 1
       steps:
       - name: 'show running-config | section ^interface GigabitEthernet0/0/2( |$): matches (?m)^ ip address \S+
@@ -1469,6 +1525,8 @@ Criterions:
     - code: R2.PORTS.G0-0-0-OSPF-HELLO
       name: GigabitEthernet0/0/0.OSPF Hello-Interval
       description: 'G0/0/0: интервал hello 5 с'
+      skills:
+      - Routing
       max_mark: 1
       steps:
       - name: 'show ip ospf interface GigabitEthernet0/0/0: matches (?m)^  Timer intervals configured, Hello 5,'
@@ -1484,6 +1542,8 @@ Criterions:
     - code: R2.PORTS.G0-0-0-OSPF-NETWORK
       name: GigabitEthernet0/0/0.OSPF Network Type
       description: 'G0/0/0: тип сети OSPF point-to-point'
+      skills:
+      - Routing
       max_mark: 1
       steps:
       - name: 'show running-config interface GigabitEthernet0/0/0: matches (?m)^ ip ospf network point-to-point\s*$'
@@ -1499,6 +1559,8 @@ Criterions:
     - code: R2.PORTS.G0-0-0-NAT
       name: GigabitEthernet0/0/0.NAT Mode
       description: 'G0/0/0: ip nat outside'
+      skills:
+      - Nat
       max_mark: 1
       steps:
       - name: 'show running-config interface GigabitEthernet0/0/0: matches (?m)^ ip nat outside\s*$'
@@ -1514,6 +1576,8 @@ Criterions:
     - code: R2.PORTS.G0-0-1-NAT
       name: GigabitEthernet0/0/1.NAT Mode
       description: 'G0/0/1: ip nat inside'
+      skills:
+      - Nat
       max_mark: 1
       steps:
       - name: 'show running-config interface GigabitEthernet0/0/1: matches (?m)^ ip nat inside\s*$'
@@ -1529,6 +1593,8 @@ Criterions:
     - code: R2.PORTS.G0-0-0-ACL-IN
       name: GigabitEthernet0/0/0.Access-group In
       description: 'G0/0/0: список R2-SECURITY применён (in)'
+      skills:
+      - Acl
       max_mark: 1
       steps:
       - name: 'show running-config interface GigabitEthernet0/0/0: matches (?m)^ ip access-group R2\-SECURITY in\s*$'
