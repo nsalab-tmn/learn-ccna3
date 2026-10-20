@@ -3,8 +3,8 @@
     "shortName": "ccna3.single-area-ospfv2-concepts.exam",
     "type": "exam",
     "description": "Проверьте свои знания по темам модуля: особенности и характеристики OSPF, пакеты OSPF, принципы работы OSPF.",
-    "difficulty": 1,
-    "duration": "PT0H48M",
+    "difficulty": 3,
+    "duration": "PT1H2M",
     "tags": {
         "$ref": "../../material-tags.json"
     },
@@ -25,7 +25,7 @@
             "mode": "exam",
             "grader": "test-auto",
             "aligned_bloom": "understand",
-            "passes_when": "Learner scores at least 80% on the exam's 31 questions covering module 1; attempts unlimited.",
+            "passes_when": "Learner scores at least 80% on the exam's 40 questions covering module 1; attempts unlimited.",
             "calibration": "operator-judge"
         }
     },
@@ -933,6 +933,208 @@
                     "answer": "OSPF для нескольких областей увеличивает частоту вычислений SPF",
                     "correct": false,
                     "comment": "Тема 1.1.0 – Компанию, использующую одну большую автономную систему (AS), можно разделить на области меньшего размера. В этом случае, если применяется протокол OSPF, такая модель называется «OSPF с несколькими областями». Использование OSPF с несколькими областями позволяет уменьшить частоту вычислений по алгоритму маршрутизации по кратчайшему пути (SPF), снижая таким образом нагрузку на маршрутизатор. В схеме OSPF с одной областью все устройства расположены в области 0 или в магистральной области"
+                }
+            ]
+        },
+        {
+            "question": "В сети OSPF, какие операторы описывают базу данных состояния канала (LSDB)? (верны два варианта)",
+            "answerType": "multiChoice",
+            "answers": [
+                {
+                    "answer": "таблица соседей создается на основе LSDB",
+                    "correct": false
+                },
+                {
+                    "answer": "все маршрутизаторы в пределах области имеют идентичную базу данных состояния канала",
+                    "correct": true
+                },
+                {
+                    "answer": "базу данных можно просмотреть с помощью команды **show ip ospf database**",
+                    "correct": true
+                },
+                {
+                    "answer": "он содержит список только лучших маршрутов к определенной сети",
+                    "correct": false
+                },
+                {
+                    "answer": "список всех соседних маршрутизаторов, с которыми установлен двусторонний обмен данными",
+                    "correct": false
+                }
+            ]
+        },
+        {
+            "question": "Какая таблица OSPF после сходимости идентична для всех маршрутизаторов в пределах одной области OSPF?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "маршрутизации",
+                    "correct": false
+                },
+                {
+                    "answer": "соседей",
+                    "correct": false
+                },
+                {
+                    "answer": "топологии",
+                    "correct": true
+                },
+                {
+                    "answer": "смежности",
+                    "correct": false
+                }
+            ]
+        },
+        {
+            "question": "Какой тип пакета OSPF используется маршрутизатором для обнаружения соседних устройств и установления смежности соседей?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "приветствие (hello)",
+                    "correct": true
+                },
+                {
+                    "answer": "обновление состояния канала (LSU)",
+                    "correct": false
+                },
+                {
+                    "answer": "запрос состояния канала (LSR)",
+                    "correct": false
+                },
+                {
+                    "answer": "пакет описания базы данных (DBD)",
+                    "correct": false
+                }
+            ]
+        },
+        {
+            "question": "Что характерно для сети OSPF для одной области?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "все маршрутизаторы в магистральной области",
+                    "correct": true
+                },
+                {
+                    "answer": "все маршрутизаторы имеют одну и ту же таблицу маршрутизации",
+                    "correct": false
+                },
+                {
+                    "answer": "все маршрутизаторы имеют одну и ту же таблицу соседей",
+                    "correct": false
+                },
+                {
+                    "answer": "все маршрутизаторы используют общую базу данных пересылки",
+                    "correct": false
+                }
+            ]
+        },
+        {
+            "question": "Какой тип пакета OSPFv2 используется для пересылки информации об изменении канала OSPF?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "приветствие",
+                    "correct": false
+                },
+                {
+                    "answer": "обновление состояния канала (LSU)",
+                    "correct": true
+                },
+                {
+                    "answer": "пакет описания базы данных (DBD)",
+                    "correct": false
+                },
+                {
+                    "answer": "подтверждение состояния канала (LSAck)",
+                    "correct": false
+                }
+            ]
+        },
+        {
+            "question": "Когда маршрутизатор OSPF перейдет из состояния Down в состояние Init?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "как только маршрутизатор запускается",
+                    "correct": false
+                },
+                {
+                    "answer": "когда интерфейс с поддержкой OSPF становится активным",
+                    "correct": true
+                },
+                {
+                    "answer": "как только завершится процесс выборов в DR/BDR",
+                    "correct": false
+                },
+                {
+                    "answer": "когда маршрутизатор получает пакет приветствия от соседнего устройства",
+                    "correct": false
+                }
+            ]
+        },
+        {
+            "question": "В каком состоянии OSPF проводятся выборы DR/BDR?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "Init (инициация)",
+                    "correct": false
+                },
+                {
+                    "answer": "ExStart",
+                    "correct": false
+                },
+                {
+                    "answer": "Two-Way",
+                    "correct": true
+                },
+                {
+                    "answer": "Exchange",
+                    "correct": false
+                }
+            ]
+        },
+        {
+            "question": "Два маршрутизатора с поддержкой OSPF подключены по каналу «точка-точка». Во время состояния ExStart какой маршрутизатор будет выбран в качестве первого для отправки пакетов DBD?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "маршрутизатор с наименьшим идентификатором устройства",
+                    "correct": false
+                },
+                {
+                    "answer": "маршрутизатор с наибольшим идентификатором устройства",
+                    "correct": true
+                },
+                {
+                    "answer": "маршрутизатор с самым маленьким IP-адресом на интерфейсе",
+                    "correct": false
+                },
+                {
+                    "answer": "маршрутизатор с самым большим IP-адресом на интерфейсе",
+                    "correct": false
+                }
+            ]
+        },
+        {
+            "question": "Когда два или более маршрута к одному и тому же месту назначения извлекаются из разных протоколов маршрутизации, что оценивает маршрутизатор для выбора между маршрутами?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "стоимость",
+                    "correct": false
+                },
+                {
+                    "answer": "административное расстояние",
+                    "correct": true
+                },
+                {
+                    "answer": "число переходов",
+                    "correct": false
+                },
+                {
+                    "answer": "метрика",
+                    "correct": false
                 }
             ]
         }

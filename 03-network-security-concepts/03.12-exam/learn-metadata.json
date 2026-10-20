@@ -3,8 +3,8 @@
     "shortName": "ccna3.network-security-concepts.exam",
     "type": "exam",
     "description": "Проверьте свои знания по темам модуля: векторы сетевых атак, типы злоумышленников, инструменты злоумышленников, вредоносное программное обеспечение, распространенные сетевые атаки, сетевые уязвимости и угрозы, уязвимости протоколов TCP и UDP, атаки на IP-сервисы, практики по обеспечению сетевой безопасности, защита коммуникации с помощью криптографии.",
-    "difficulty": 1,
-    "duration": "PT0H50M",
+    "difficulty": 3,
+    "duration": "PT0H55M",
     "tags": {
         "$ref": "../../material-tags.json"
     },
@@ -32,7 +32,7 @@
             "mode": "exam",
             "grader": "test-auto",
             "aligned_bloom": "understand",
-            "passes_when": "Learner scores at least 80% on the exam's 33 questions covering module 3; attempts unlimited.",
+            "passes_when": "Learner scores at least 80% on the exam's 36 questions covering module 3; attempts unlimited.",
             "calibration": "operator-judge"
         }
     },
@@ -903,6 +903,72 @@
                 {
                     "answer": "вирус запускается событием в зараженной системе",
                     "correct": true
+                }
+            ]
+        },
+        {
+            "question": "Группа пользователей в одной сети жалуется на медленную работу компьютеров. После расследования техник определяет, что эти компьютеры являются частью сети зомби. Какой тип вредоносных программ используется для управления этими компьютерами?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "ботнет",
+                    "correct": true
+                },
+                {
+                    "answer": "руткит",
+                    "correct": false
+                },
+                {
+                    "answer": "шпионское ПО",
+                    "correct": false
+                },
+                {
+                    "answer": "вирус",
+                    "correct": false
+                }
+            ]
+        },
+        {
+            "question": "Злоумышленник перенаправляет трафик на ложный шлюз по умолчанию, пытаясь перехватить трафик данных коммутируемой сети. К какому типу относится такая атака?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "подделка записей кеша ARP",
+                    "correct": false
+                },
+                {
+                    "answer": "DHCP-спуфинг (несанкционированный доступ к протоколу DHCP)",
+                    "correct": true
+                },
+                {
+                    "answer": "туннелирование DNS",
+                    "correct": false
+                },
+                {
+                    "answer": "лавинная рассылка TCP SYN",
+                    "correct": false
+                }
+            ]
+        },
+        {
+            "question": "Какое решение безопасности определяет входящие угрозы и блокирует их вход в корпоративную сеть?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "списки контроля доступа",
+                    "correct": false
+                },
+                {
+                    "answer": "виртуальные частные сети (VPN)",
+                    "correct": false
+                },
+                {
+                    "answer": "системы предотвращения вторжений",
+                    "correct": true
+                },
+                {
+                    "answer": "фильтрация посредством межсетевых экранов",
+                    "correct": false
                 }
             ]
         }

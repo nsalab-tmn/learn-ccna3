@@ -3,8 +3,8 @@
     "shortName": "ccna3.vpn-and-ipsec-concepts.exam",
     "type": "exam",
     "description": "Проверьте свои знания по темам модуля: технологии виртуальных частных сетей, типы виртуальных частных сетей, стек протоколов IPsec.",
-    "difficulty": 1,
-    "duration": "PT0H59M",
+    "difficulty": 3,
+    "duration": "PT1H4M",
     "tags": {
         "$ref": "../../material-tags.json"
     },
@@ -25,7 +25,7 @@
             "mode": "exam",
             "grader": "test-auto",
             "aligned_bloom": "understand",
-            "passes_when": "Learner scores at least 80% on the exam's 36 questions covering module 8; attempts unlimited.",
+            "passes_when": "Learner scores at least 80% on the exam's 39 questions covering module 8; attempts unlimited.",
             "calibration": "operator-judge"
         }
     },
@@ -994,6 +994,80 @@
                     "answer": "частная",
                     "correct": false,
                     "comment": "Тема 8.1.0 — При VPN соединении site-to-site, внутренние узлы не знают о существовании VPN. Сети remote-access VPN поддерживают клиент-серверную архитектуру, при которой VPN-клиенту (удаленному узлу) предоставляется защищенный доступ к корпоративной сети через VPN-сервер, находящийся на периметре сети. Публичные и частные VPN не являются типами VPN."
+                }
+            ]
+        },
+        {
+            "question": "Какие типы VPN являются примерами управляемых предприятием сетей типа site-to-site? (верны три варианта)",
+            "answerType": "multiChoice",
+            "answers": [
+                {
+                    "answer": "VPN по IPsec",
+                    "correct": true
+                },
+                {
+                    "answer": "уровень 3 MPLS VPN",
+                    "correct": false
+                },
+                {
+                    "answer": "основанная на SSL сеть VPN без использования клиента",
+                    "correct": false
+                },
+                {
+                    "answer": "GRE через IPSec VPN",
+                    "correct": true
+                },
+                {
+                    "answer": "клиентское IPsec VPN соединение",
+                    "correct": false
+                },
+                {
+                    "answer": "динамическая многоточечная VPN-сеть",
+                    "correct": true
+                }
+            ]
+        },
+        {
+            "question": "Сотрудник, который постоянно путешествует по работе, должен получить удаленный доступ к сети компании. Какой механизм безопасности обеспечивает безопасное соединение?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "список контроля доступа",
+                    "correct": false
+                },
+                {
+                    "answer": "система предотвращения вторжений",
+                    "correct": false
+                },
+                {
+                    "answer": "виртуальная частная сеть (VPN)",
+                    "correct": true
+                },
+                {
+                    "answer": "специализированные системы межсетевых экранов",
+                    "correct": false
+                }
+            ]
+        },
+        {
+            "question": "Какое утверждение является точным описанием типа VPN?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "бесклиентное VPN-соединение защищено с помощью SSL-соединения через веб-браузер",
+                    "correct": false
+                },
+                {
+                    "answer": "в клиентской VPN пользователи инициируют подключение с помощью клиентского программного обеспечения VPN, а шлюз VPN выполняет шифрование данных",
+                    "correct": false
+                },
+                {
+                    "answer": "site-to-site VPN обычно создается и защищается с использованием IP-безопасности (IPsec)",
+                    "correct": false
+                },
+                {
+                    "answer": "в Site-to-site VPN внутренние узлы не знают, что VPN используется",
+                    "correct": true
                 }
             ]
         }

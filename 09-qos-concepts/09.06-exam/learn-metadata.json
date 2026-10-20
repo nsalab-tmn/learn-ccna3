@@ -3,8 +3,8 @@
     "shortName": "ccna3.qos-concepts.exam",
     "type": "exam",
     "description": "Проверьте свои знания по темам модуля: качество передачи данных по сети, характеристики сетевого трафика, алгоритмы организации очереди, модели обеспечения качества обслуживания, способы обеспечения качества обслуживания.",
-    "difficulty": 1,
-    "duration": "PT0H53M",
+    "difficulty": 3,
+    "duration": "PT0H56M",
     "tags": {
         "$ref": "../../material-tags.json"
     },
@@ -27,7 +27,7 @@
             "mode": "exam",
             "grader": "test-auto",
             "aligned_bloom": "understand",
-            "passes_when": "Learner scores at least 80% on the exam's 35 questions covering module 9; attempts unlimited.",
+            "passes_when": "Learner scores at least 80% on the exam's 37 questions covering module 9; attempts unlimited.",
             "calibration": "operator-judge"
         }
     },
@@ -900,6 +900,62 @@
                 {
                     "answer": "Буфер задержки воспроизведения",
                     "correct": true
+                }
+            ]
+        },
+        {
+            "question": "Какие категории инструментов можно использовать в IP-сетях для реализации QoS? (верны три варианта)",
+            "answerType": "multiChoice",
+            "answers": [
+                {
+                    "answer": "классификация и маркировка",
+                    "correct": true
+                },
+                {
+                    "answer": "управление перегрузкой",
+                    "correct": true
+                },
+                {
+                    "answer": "предотвращение перегрузок",
+                    "correct": true
+                },
+                {
+                    "answer": "интегрированные сервисы",
+                    "correct": false
+                },
+                {
+                    "answer": "дифференцированные сервисы",
+                    "correct": false
+                },
+                {
+                    "answer": "негарантированная доставка",
+                    "correct": false
+                }
+            ]
+        },
+        {
+            "question": "Какую модель QoS реализует сетевой инженер для обеспечения стандарта качества обслуживания от источника до места назначения для указанного потока данных?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "интегрированные сервисы",
+                    "correct": true
+                },
+                {
+                    "answer": "дифференцированные услуги",
+                    "correct": false
+                },
+                {
+                    "answer": "негарантированная доставка",
+                    "correct": false
+                },
+                {
+                    "answer": "взвешенная организация очередей на основе классов (CBWFQ)",
+                    "correct": false
+                },
+                {
+                    "answer": "организация очереди с малой задержкой (LLQ)",
+                    "correct": false
                 }
             ]
         }

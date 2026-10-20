@@ -3,8 +3,8 @@
     "shortName": "ccna3.acls-for-ipv4-configuration.exam",
     "type": "exam",
     "description": "Проверьте свои знания по темам модуля: настройка стандартных списков контроля доступа для IPv4-сетей, изменение списков контроля доступа, защита терминальных линий с помощью стандартного списка контроля доступа, настройка расширенных списков контроля доступа.",
-    "difficulty": 1,
-    "duration": "PT0H59M",
+    "difficulty": 3,
+    "duration": "PT1H2M",
     "tags": {
         "$ref": "../../material-tags.json"
     },
@@ -29,7 +29,7 @@
             "mode": "exam",
             "grader": "test-auto",
             "aligned_bloom": "apply",
-            "passes_when": "Learner scores at least 80% on the exam's 36 questions covering module 5; attempts unlimited.",
+            "passes_when": "Learner scores at least 80% on the exam's 38 questions covering module 5; attempts unlimited.",
             "calibration": "operator-judge"
         }
     },
@@ -1047,6 +1047,54 @@
                     "answer": "R1(config-if)# ip access-group 1 in",
                     "correct": false,
                     "comment": "Тема 5.3.0 — Административный доступ через SSH к маршрутизатору осуществляется через линии VTY. Поэтому ACL должен применяться к этим линиям во входящем направлении. Это достигается путем перехода в режим конфигурации линии VTY и ввода команды access-class"
+                }
+            ]
+        },
+        {
+            "question": "Какая другая команда, связанная с командой **login local**, должна быть введена на коммутаторе при настройке коммутатора для доступа к SSH?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "Enable secret",
+                    "correct": false
+                },
+                {
+                    "answer": "Password",
+                    "correct": false
+                },
+                {
+                    "answer": "Username username secret secret",
+                    "correct": true
+                },
+                {
+                    "answer": "Login block-for seconds attempts number within seconds",
+                    "correct": false
+                }
+            ]
+        },
+        {
+            "question": "Сетевой инженер настраивает безопасный удаленный доступ к маршрутизатору. Какие команды будут выданы в режиме конфигурации линии маршрутизатора для реализации SSH? (верны два варианта)",
+            "answerType": "multiChoice",
+            "answers": [
+                {
+                    "answer": "login local",
+                    "correct": true
+                },
+                {
+                    "answer": "transport input ssh",
+                    "correct": true
+                },
+                {
+                    "answer": "crypto key generate rsa",
+                    "correct": false
+                },
+                {
+                    "answer": "ip ssh version 2",
+                    "correct": false
+                },
+                {
+                    "answer": "username admin secret ccna",
+                    "correct": false
                 }
             ]
         }
