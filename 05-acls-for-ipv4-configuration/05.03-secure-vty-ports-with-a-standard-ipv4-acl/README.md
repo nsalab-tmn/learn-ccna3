@@ -74,7 +74,7 @@ R1#
 
 Как показано на рисунке, при подключении PC1 к R1 появляется запрос имени пользователя и пароля, и только после их ввода открывается доступ к командной строке.
 
-![](./assets/5.3.3-1.png)
+![](./assets/5.3.3-1.svg)
 
 <!--
 shows a Tera Term console window indicating that the remote SSH login was succesful
@@ -84,7 +84,7 @@ shows a Tera Term console window indicating that the remote SSH login was succes
 
 Далее мы тестируем соединение с PC2. Как показано на этом рисунке, когда PC2 пытается подключиться к Telnet, соединение отклоняется.
 
-![](./assets/5.3.3-2.png)
+![](./assets/5.3.3-2.svg)
 
 <!--
 shows the Tera Term console connection was refused
