@@ -25,8 +25,13 @@
             "ksa.ccna3.network-security-concepts.exam",
             "ksa.ccna3.acl-concepts.exam",
             "ksa.ccna3.acls-for-ipv4-configuration.exam",
-            "ksa.ccna3.06-08-exam",
-            "ksa.ccna3.09-12-exam",
+            "ksa.ccna3.nat-for-ipv4.exam",
+            "ksa.ccna3.wan-concepts.exam",
+            "ksa.ccna3.vpn-and-ipsec-concepts.exam",
+            "ksa.ccna3.qos-concepts.exam",
+            "ksa.ccna3.network-management.exam",
+            "ksa.ccna3.network-design.exam",
+            "ksa.ccna3.network-troubleshooting.exam",
             "ksa.ccna3.13-14-exam"
         ],
         "measurement": {

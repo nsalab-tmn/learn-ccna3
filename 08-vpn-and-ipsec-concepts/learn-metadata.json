@@ -18,7 +18,7 @@
             "$ref": "./08.03-ipsec/learn-metadata.json"
         },
         {
-            "$ref": "./08.04-summary/learn-metadata.json"
+            "$ref": "./08.04-exam/learn-metadata.json"
         }
     ]
 }
