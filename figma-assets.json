@@ -2544,9 +2544,14 @@
     "path": "04-acl-concepts/04.05-exam/assets/4.svg",
     "format": "svg"
    },
-   "status": "pending",
+   "status": "synced",
    "provenance": {
-    "legacy": "4.png"
+    "legacy": "4.png",
+    "synced": {
+     "figmaVersion": "2412373467859021384",
+     "at": "2026-10-20T09:32:05Z",
+     "sha256": "05eee2495ac922530b13f8cc7753d2ba20f195654d09f0a67e3d5f19954a9c0d"
+    }
    },
    "notes": "намеренный дубль экспорта (kb#318, вариант 1): тот же фрейм 5557:15193, что у ccna3-6bk5wij (final-exam/assets/7.svg); каждая папка экзамена самодостаточна — не сворачивать при дедупликации (kb#242)"
   },
@@ -3255,9 +3260,14 @@
     "path": "06-nat-for-ipv4/06.09-exam/assets/11.svg",
     "format": "svg"
    },
-   "status": "pending",
+   "status": "synced",
    "provenance": {
-    "legacy": "11.PNG"
+    "legacy": "11.PNG",
+    "synced": {
+     "figmaVersion": "2412373467859021384",
+     "at": "2026-10-20T09:32:05Z",
+     "sha256": "fae24f3f7bd496defb8c788ba85bb6689cfd11bc63e63cf6929fa4d4b02bc2d3"
+    }
    }
   },
   {
@@ -3274,9 +3284,14 @@
     "path": "06-nat-for-ipv4/06.09-exam/assets/14.svg",
     "format": "svg"
    },
-   "status": "pending",
+   "status": "synced",
    "provenance": {
-    "legacy": "14.png"
+    "legacy": "14.png",
+    "synced": {
+     "figmaVersion": "2412373467859021384",
+     "at": "2026-10-20T09:32:05Z",
+     "sha256": "a637823aea3eae132c0ab741d7f52a7ee8b65c3607d01ca8679a0e6223771585"
+    }
    },
    "notes": "намеренный дубль экспорта (kb#318, вариант 1): тот же фрейм 5755:166315, что у ccna3-z2os3c6 (final-exam/assets/9.svg); каждая папка экзамена самодостаточна — не сворачивать при дедупликации (kb#242)"
   },
@@ -8119,9 +8134,14 @@
     "path": "11-network-design/11.03-switch-hardware/assets/11.3.1-5.svg",
     "format": "svg"
    },
-   "status": "pending",
+   "status": "synced",
    "provenance": {
-    "legacy": "11.3.1-5.png"
+    "legacy": "11.3.1-5.png",
+    "synced": {
+     "figmaVersion": "2412373467859021384",
+     "at": "2026-10-20T09:32:05Z",
+     "sha256": "b6dce1ce2d08fe2ae23c1c39a3bc9f520259487e38d809e1282bfde5376d619b"
+    }
    }
   },
   {
@@ -8308,10 +8328,15 @@
     "path": "11-network-design/11.03-switch-hardware/assets/11.3.5-2.svg",
     "format": "svg"
    },
-   "status": "pending",
+   "status": "synced",
    "provenance": {
     "netacad": "c6d556a1-1c46-11ea-af56-e368b99e9723",
-    "legacy": "11.3.5-2.png"
+    "legacy": "11.3.5-2.png",
+    "synced": {
+     "figmaVersion": "2412373467859021384",
+     "at": "2026-10-20T09:32:05Z",
+     "sha256": "c290cc2ff7ab3b460d970a859c2cd19cb7f9cf18fd781467c3b8ffa36b03d087"
+    }
    }
   },
   {
@@ -8328,10 +8353,15 @@
     "path": "11-network-design/11.03-switch-hardware/assets/11.3.5-3.svg",
     "format": "svg"
    },
-   "status": "pending",
+   "status": "synced",
    "provenance": {
     "netacad": "c6d5cbd2-1c46-11ea-af56-e368b99e9723",
-    "legacy": "11.3.5-3.png"
+    "legacy": "11.3.5-3.png",
+    "synced": {
+     "figmaVersion": "2412373467859021384",
+     "at": "2026-10-20T09:32:05Z",
+     "sha256": "99c6b27b40706886fef999e17af621a3a42a36bb6a765f3aabbc377718a00de8"
+    }
    }
   },
   {
@@ -8348,10 +8378,15 @@
     "path": "11-network-design/11.03-switch-hardware/assets/11.3.5-4.svg",
     "format": "svg"
    },
-   "status": "pending",
+   "status": "synced",
    "provenance": {
     "netacad": "c6d64100-1c46-11ea-af56-e368b99e9723",
-    "legacy": "11.3.5-4.png"
+    "legacy": "11.3.5-4.png",
+    "synced": {
+     "figmaVersion": "2412373467859021384",
+     "at": "2026-10-20T09:32:05Z",
+     "sha256": "80aba85008e349fde64b74f65a196c84f315d13c42e275dfc5c8630ca1484236"
+    }
    }
   },
   {
@@ -8633,9 +8668,14 @@
     "path": "14-network-automation/14.06-ibn-and-cisco-dna-center/assets/14.6.4.svg",
     "format": "svg"
    },
-   "status": "pending",
+   "status": "synced",
    "provenance": {
-    "legacy": "14.6.4.jpg"
+    "legacy": "14.6.4.jpg",
+    "synced": {
+     "figmaVersion": "2412373467859021384",
+     "at": "2026-10-20T09:32:05Z",
+     "sha256": "0f840e658171936f89c9baefaa45c6801ea3b4e71df1a0b1c1dbfad1bbb202bb"
+    }
    }
   },
   {
@@ -8676,9 +8716,14 @@
     "path": "final-exam/assets/7.svg",
     "format": "svg"
    },
-   "status": "pending",
+   "status": "synced",
    "provenance": {
-    "legacy": "7.png"
+    "legacy": "7.png",
+    "synced": {
+     "figmaVersion": "2412373467859021384",
+     "at": "2026-10-20T09:32:05Z",
+     "sha256": "05eee2495ac922530b13f8cc7753d2ba20f195654d09f0a67e3d5f19954a9c0d"
+    }
    },
    "notes": "намеренный дубль экспорта (kb#318, вариант 1): тот же фрейм 5557:15193, что у ccna3-rmgqxsl (04-acl-concepts/04.05-exam/assets/4.svg); каждая папка экзамена самодостаточна — не сворачивать при дедупликации (kb#242)"
   },
@@ -8696,9 +8741,14 @@
     "path": "final-exam/assets/8.svg",
     "format": "svg"
    },
-   "status": "pending",
+   "status": "synced",
    "provenance": {
-    "legacy": "8.JPG"
+    "legacy": "8.JPG",
+    "synced": {
+     "figmaVersion": "2412373467859021384",
+     "at": "2026-10-20T09:32:05Z",
+     "sha256": "2b32a9ac510b7fc265a54a1062ccdcbc6478c4699618b55915b7afd8d2d7f95f"
+    }
    }
   },
   {
@@ -8715,9 +8765,14 @@
     "path": "final-exam/assets/9.svg",
     "format": "svg"
    },
-   "status": "pending",
+   "status": "synced",
    "provenance": {
-    "legacy": "9.png"
+    "legacy": "9.png",
+    "synced": {
+     "figmaVersion": "2412373467859021384",
+     "at": "2026-10-20T09:32:05Z",
+     "sha256": "a637823aea3eae132c0ab741d7f52a7ee8b65c3607d01ca8679a0e6223771585"
+    }
    },
    "notes": "намеренный дубль экспорта (kb#318, вариант 1): тот же фрейм 5755:166315, что у ccna3-azdvmhl (06-nat-for-ipv4/06.09-exam/assets/14.svg); каждая папка экзамена самодостаточна — не сворачивать при дедупликации (kb#242)"
   }
