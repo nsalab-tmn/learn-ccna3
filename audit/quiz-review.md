@@ -12,7 +12,7 @@ A question-by-question review of every CCNA3 quiz and exam, and of the CCNA3 ban
 | module and final exams (`*-exam/`, `final-exam/`) | 6 | 323 |
 | bank copies (learn-ccna1 `__exams/CCNA3/*_Exam/`) | 6 | 362 |
 
-The CCNA1 and CCNA2 reviews are in learn-ccna1 and learn-ccna2 `audit/quiz-review.md` (learn-ccna1#119, learn-ccna2#51). `final-test/` is not connected to the course and is out of scope. Labs and `.pka` files are out of scope too (kb#271).
+The CCNA1 and CCNA2 reviews are in learn-ccna1 and learn-ccna2 `audit/quiz-review.md` (learn-ccna1#119, learn-ccna2#51). `final-test/` was not connected to the course and was out of scope here; it was removed on 2026-10-20 (kb#313, learn-ccna3#134) and its questions were dissolved into the module exams. Labs and `.pka` files are out of scope too (kb#271).
 
 ## Why
 
