@@ -32,7 +32,8 @@
             "ksa.ccna3.network-management.exam",
             "ksa.ccna3.network-design.exam",
             "ksa.ccna3.network-troubleshooting.exam",
-            "ksa.ccna3.13-14-exam"
+            "ksa.ccna3.network-virtualization.exam",
+            "ksa.ccna3.network-automation.exam"
         ],
         "measurement": {
             "mode": "exam",

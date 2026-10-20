@@ -27,7 +27,7 @@
             "$ref": "./14.06-ibn-and-cisco-dna-center/learn-metadata.json"
         },
         {
-            "$ref": "./14.07-summary/learn-metadata.json"
+            "$ref": "./14.07-exam/learn-metadata.json"
         }
     ]
 }
