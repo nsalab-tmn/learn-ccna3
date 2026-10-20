@@ -2541,10 +2541,13 @@
     "page": "CCNA3 · 05 acls-for-ipv4-configuration"
    },
    "out": {
-    "path": "05-UNPLACED/assets/5.1.6.svg",
+    "path": "05-acls-for-ipv4-configuration/05.01-configure-standard-ipv4-acls/assets/5.1.5.svg",
     "format": "svg"
    },
-   "status": "orphan",
+   "status": "pending",
+   "provenance": {
+    "legacy": "5.1.5.svg"
+   },
    "notes": "[нет в git · Опубликована как 5.1.5.svg и стоит сразу в двух блоках README (5.1.5 и 5.1.6) - одна топология на два номера. Оригиналы Cisco в файле разные (5.1.6.png и 5.1.5.png). · пара: закреплена]"
   },
   {
@@ -7819,114 +7822,140 @@
    "notes": "[svg в git · перерисовка 1581:144566 без подписей в пределах depth=4 — проверить текст · пара: закреплена]"
   },
   {
-   "id": "ccna3-zqbavg6",
-   "kind": "native",
-   "display": {
-    "key": "5.1.5"
-   },
-   "out": {
-    "path": "05-acls-for-ipv4-configuration/05.01-configure-standard-ipv4-acls/assets/5.1.5.svg",
-    "format": "native"
-   },
-   "status": "manual",
-   "provenance": {
-    "netacad": "c618bd60-1c46-11ea-af56-e368b99e9723"
-   }
-  },
-  {
    "id": "ccna3-f5z45so",
-   "kind": "native",
+   "kind": "illustration",
    "display": {
     "key": "5.3.3-1"
    },
-   "out": {
-    "path": "05-acls-for-ipv4-configuration/05.03-secure-vty-ports-with-a-standard-ipv4-acl/assets/5.3.3-1.png",
-    "format": "native"
+   "figma": {
+    "nodeId": "5533:8943",
+    "page": "CCNA3 · 05 acls-for-ipv4-configuration"
    },
-   "status": "manual"
+   "out": {
+    "path": "05-acls-for-ipv4-configuration/05.03-secure-vty-ports-with-a-standard-ipv4-acl/assets/5.3.3-1.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "5.3.3-1.png"
+   }
   },
   {
    "id": "ccna3-z74wkuj",
-   "kind": "native",
+   "kind": "illustration",
    "display": {
     "key": "5.3.3-2"
    },
-   "out": {
-    "path": "05-acls-for-ipv4-configuration/05.03-secure-vty-ports-with-a-standard-ipv4-acl/assets/5.3.3-2.png",
-    "format": "native"
+   "figma": {
+    "nodeId": "5533:8961",
+    "page": "CCNA3 · 05 acls-for-ipv4-configuration"
    },
-   "status": "manual"
+   "out": {
+    "path": "05-acls-for-ipv4-configuration/05.03-secure-vty-ports-with-a-standard-ipv4-acl/assets/5.3.3-2.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "5.3.3-2.png"
+   }
   },
   {
    "id": "ccna3-d6wdabi",
-   "kind": "native",
+   "kind": "illustration",
    "display": {
     "key": "8.2.4-3"
    },
-   "out": {
-    "path": "08-vpn-and-ipsec-concepts/08.02-types-of-vpns/assets/8.2.4-3.png",
-    "format": "native"
+   "figma": {
+    "nodeId": "5535:10781",
+    "page": "CCNA3 · 08 vpn-and-ipsec-concepts"
    },
-   "status": "manual",
+   "out": {
+    "path": "08-vpn-and-ipsec-concepts/08.02-types-of-vpns/assets/8.2.4-3.svg",
+    "format": "svg"
+   },
+   "status": "pending",
    "provenance": {
-    "netacad": "c66d9420-1c46-11ea-af56-e368b99e9723"
+    "netacad": "c66d9420-1c46-11ea-af56-e368b99e9723",
+    "legacy": "8.2.4-3.png"
    }
   },
   {
    "id": "ccna3-uwet3sn",
-   "kind": "native",
+   "kind": "illustration",
    "display": {
     "key": "10.4.9"
    },
-   "out": {
-    "path": "10-network-management/10.04-snmp/assets/10.4.9.jpg",
-    "format": "native"
+   "figma": {
+    "nodeId": "5537:9385",
+    "page": "CCNA3 · 10 network-management"
    },
-   "status": "manual"
+   "out": {
+    "path": "10-network-management/10.04-snmp/assets/10.4.9.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "10.4.9.jpg"
+   }
   },
   {
    "id": "ccna3-copjc67",
-   "kind": "native",
+   "kind": "illustration",
    "display": {
     "key": "10.6.3"
    },
-   "out": {
-    "path": "10-network-management/10.06-router-and-switch-file-maintenance/assets/10.6.3.png",
-    "format": "native"
+   "figma": {
+    "nodeId": "5539:9535",
+    "page": "CCNA3 · 10 network-management"
    },
-   "status": "manual",
+   "out": {
+    "path": "10-network-management/10.06-router-and-switch-file-maintenance/assets/10.6.3.svg",
+    "format": "svg"
+   },
+   "status": "pending",
    "provenance": {
-    "netacad": "c6bb6602-1c46-11ea-af56-e368b99e9723"
+    "netacad": "c6bb6602-1c46-11ea-af56-e368b99e9723",
+    "legacy": "10.6.3.png"
    }
   },
   {
    "id": "ccna3-yuh7uhy",
-   "kind": "native",
+   "kind": "illustration",
    "display": {
     "key": "10.6.4"
    },
-   "out": {
-    "path": "10-network-management/10.06-router-and-switch-file-maintenance/assets/10.6.4.png",
-    "format": "native"
+   "figma": {
+    "nodeId": "5539:9692",
+    "page": "CCNA3 · 10 network-management"
    },
-   "status": "manual",
+   "out": {
+    "path": "10-network-management/10.06-router-and-switch-file-maintenance/assets/10.6.4.svg",
+    "format": "svg"
+   },
+   "status": "pending",
    "provenance": {
-    "netacad": "c6bc2950-1c46-11ea-af56-e368b99e9723"
+    "netacad": "c6bc2950-1c46-11ea-af56-e368b99e9723",
+    "legacy": "10.6.4.png"
    }
   },
   {
    "id": "ccna3-d4u7eyy",
-   "kind": "native",
+   "kind": "illustration",
    "display": {
     "key": "10.6.6"
    },
-   "out": {
-    "path": "10-network-management/10.06-router-and-switch-file-maintenance/assets/10.6.6.png",
-    "format": "native"
+   "figma": {
+    "nodeId": "5537:9459",
+    "page": "CCNA3 · 10 network-management"
    },
-   "status": "manual",
+   "out": {
+    "path": "10-network-management/10.06-router-and-switch-file-maintenance/assets/10.6.6.svg",
+    "format": "svg"
+   },
+   "status": "pending",
    "provenance": {
-    "netacad": "c6bcc590-1c46-11ea-af56-e368b99e9723"
+    "netacad": "c6bcc590-1c46-11ea-af56-e368b99e9723",
+    "legacy": "10.6.6.png"
    }
   },
   {
@@ -8237,189 +8266,98 @@
   },
   {
    "id": "ccna3-3n2r6ze",
-   "kind": "native",
+   "kind": "illustration",
    "display": {
     "key": "12.3.2"
    },
-   "out": {
-    "path": "12-network-troubleshooting/12.03-troubleshooting-tools/assets/12.3.2.jpg",
-    "format": "native"
-   },
-   "status": "manual"
-  },
-  {
-   "id": "ccna3-egyfuqn",
-   "kind": "native",
-   "display": {
-    "key": "13.1.2"
+   "figma": {
+    "nodeId": "5536:9992",
+    "page": "CCNA3 · 12 network-troubleshooting"
    },
    "out": {
-    "path": "13-network-virtualization/13.01-cloud-computing/assets/13.1.2.jpg",
-    "format": "native"
+    "path": "12-network-troubleshooting/12.03-troubleshooting-tools/assets/12.3.2.svg",
+    "format": "svg"
    },
-   "status": "manual"
+   "status": "pending",
+   "provenance": {
+    "legacy": "12.3.2.jpg"
+   }
   },
   {
    "id": "ccna3-c7dycsd",
-   "kind": "native",
+   "kind": "illustration",
    "display": {
     "key": "13.2.1"
    },
-   "out": {
-    "path": "13-network-virtualization/13.02-virtualization/assets/13.2.1.png",
-    "format": "native"
-   },
-   "status": "manual"
-  },
-  {
-   "id": "ccna3-lwiu57d",
-   "kind": "native",
-   "display": {
-    "key": "13.3.2-2"
+   "figma": {
+    "nodeId": "5540:9864",
+    "page": "CCNA3 · 13 network-virtualization"
    },
    "out": {
-    "path": "13-network-virtualization/13.03-virtual-network-infrastructure/assets/13.3.2-2.jpg",
-    "format": "native"
+    "path": "13-network-virtualization/13.02-virtualization/assets/13.2.1.svg",
+    "format": "svg"
    },
-   "status": "manual"
-  },
-  {
-   "id": "ccna3-loupcxw",
-   "kind": "native",
-   "display": {
-    "key": "13.4.3"
-   },
-   "out": {
-    "path": "13-network-virtualization/13.04-software-defined-networking/assets/13.4.3.png",
-    "format": "native"
-   },
-   "status": "manual",
+   "status": "pending",
    "provenance": {
-    "netacad": "c7167e54-1c46-11ea-af56-e368b99e9723"
+    "legacy": "13.2.1.png"
    }
-  },
-  {
-   "id": "ccna3-lnz6q4r",
-   "kind": "native",
-   "display": {
-    "key": "13.5.6"
-   },
-   "out": {
-    "path": "13-network-virtualization/13.05-controllers/assets/13.5.6.jpg",
-    "format": "native"
-   },
-   "status": "manual"
   },
   {
    "id": "ccna3-i7murxg",
-   "kind": "native",
+   "kind": "illustration",
    "display": {
     "key": "13.5.7"
    },
-   "out": {
-    "path": "13-network-virtualization/13.05-controllers/assets/13.5.7.png",
-    "format": "native"
-   },
-   "status": "manual"
-  },
-  {
-   "id": "ccna3-4afwae7",
-   "kind": "native",
-   "display": {
-    "key": "14.1.3"
+   "figma": {
+    "nodeId": "5540:9967",
+    "page": "CCNA3 · 13 network-virtualization"
    },
    "out": {
-    "path": "14-network-automation/14.01-automation-overview/assets/14.1.3.jpg",
-    "format": "native"
+    "path": "13-network-virtualization/13.05-controllers/assets/13.5.7.svg",
+    "format": "svg"
    },
-   "status": "manual"
-  },
-  {
-   "id": "ccna3-2pn3uya",
-   "kind": "native",
-   "display": {
-    "key": "14.2.2"
-   },
-   "out": {
-    "path": "14-network-automation/14.02-data-formats/assets/14.2.2.png",
-    "format": "native"
-   },
-   "status": "manual"
-  },
-  {
-   "id": "ccna3-vgrlbsr",
-   "kind": "native",
-   "display": {
-    "key": "14.4.3-1"
-   },
-   "out": {
-    "path": "14-network-automation/14.04-rest/assets/14.4.3-1.png",
-    "format": "native"
-   },
-   "status": "manual",
+   "status": "pending",
    "provenance": {
-    "netacad": "c734b4b4-1c46-11ea-af56-e368b99e9723"
+    "legacy": "13.5.7.png"
    }
   },
   {
-   "id": "ccna3-vvert5m",
-   "kind": "native",
+   "id": "ccna3-2pn3uya",
+   "kind": "illustration",
    "display": {
-    "key": "14.4.5-2"
+    "key": "14.2.2"
+   },
+   "figma": {
+    "nodeId": "5544:9083",
+    "page": "CCNA3 · 14 network-automation"
    },
    "out": {
-    "path": "14-network-automation/14.04-rest/assets/14.4.5-2.png",
-    "format": "native"
+    "path": "14-network-automation/14.02-data-formats/assets/14.2.2.svg",
+    "format": "svg"
    },
-   "status": "manual"
-  },
-  {
-   "id": "ccna3-k4l5xwg",
-   "kind": "native",
-   "display": {
-    "key": "14.4.6-1"
-   },
-   "out": {
-    "path": "14-network-automation/14.04-rest/assets/14.4.6-1.png",
-    "format": "native"
-   },
-   "status": "manual"
+   "status": "pending",
+   "provenance": {
+    "legacy": "14.2.2.png"
+   }
   },
   {
    "id": "ccna3-iyjtgnz",
-   "kind": "native",
+   "kind": "illustration",
    "display": {
     "key": "14.4.6-2"
    },
-   "out": {
-    "path": "14-network-automation/14.04-rest/assets/14.4.6-2.png",
-    "format": "native"
-   },
-   "status": "manual"
-  },
-  {
-   "id": "ccna3-ub7gm56",
-   "kind": "native",
-   "display": {
-    "key": "14.4.6-3"
+   "figma": {
+    "nodeId": "5544:9152",
+    "page": "CCNA3 · 14 network-automation"
    },
    "out": {
-    "path": "14-network-automation/14.04-rest/assets/14.4.6-3.png",
-    "format": "native"
+    "path": "14-network-automation/14.04-rest/assets/14.4.6-2.svg",
+    "format": "svg"
    },
-   "status": "manual"
-  },
-  {
-   "id": "ccna3-eodnzv3",
-   "kind": "native",
-   "display": {
-    "key": "14.5.4"
-   },
-   "out": {
-    "path": "14-network-automation/14.05-configuration-management/assets/14.5.4.png",
-    "format": "native"
-   },
-   "status": "manual"
+   "status": "pending",
+   "provenance": {
+    "legacy": "14.4.6-2.png"
+   }
   },
   {
    "id": "ccna3-qn72ud4",
@@ -8435,15 +8373,22 @@
   },
   {
    "id": "ccna3-s37724j",
-   "kind": "native",
+   "kind": "illustration",
    "display": {
     "key": "14.6.5"
    },
-   "out": {
-    "path": "14-network-automation/14.06-ibn-and-cisco-dna-center/assets/14.6.5.png",
-    "format": "native"
+   "figma": {
+    "nodeId": "5546:9231",
+    "page": "CCNA3 · 14 network-automation"
    },
-   "status": "manual"
+   "out": {
+    "path": "14-network-automation/14.06-ibn-and-cisco-dna-center/assets/14.6.5.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "14.6.5.png"
+   }
   }
  ]
 }
