@@ -164,27 +164,25 @@ R1#
 Маршрутизаторы по умолчанию выбирают DR и BDR на интерфейсах Ethernet, даже если на канале имеется только одно другое устройство. Это можно проверить с помощью команды **show ip ospf interface**, как показано в примере для G0/0/0 R1.
 
 ```
-R1# show ip ospf interface GigabitEthernet 0/0/0
-GigabitEthernet0/0/0 is up, line protocol is up 
+R1#show ip ospf interface GigabitEthernet 0/0/0
+GigabitEthernet0/0/0 is up, line protocol is up
   Internet Address 10.1.1.5/30, Area 0, Attached via Interface Enable
   Process ID 10, Router ID 1.1.1.1, Network Type BROADCAST, Cost: 1
   Topology-MTID    Cost    Disabled    Shutdown      Topology Name
         0           1         no          no            Base
-  Enabled by interface config, including secondary ip addresses
   Transmit Delay is 1 sec, State BDR, Priority 1
   Designated Router (ID) 2.2.2.2, Interface address 10.1.1.6
   Backup Designated router (ID) 1.1.1.1, Interface address 10.1.1.5
   Timer intervals configured, Hello 10, Dead 40, Wait 40, Retransmit 5
     oob-resync timeout 40
-    Hello due in 00:00:08
+    Hello due in 00:00:09
   Supports Link-local Signaling (LLS)
-  Cisco NSF helper support enabled
   IETF NSF helper support enabled
-  Index 1/2/2, flood queue length 0
+  Index 1/1/1, flood queue length 0
   Next 0x0(0)/0x0(0)/0x0(0)
-  Last flood scan length is 1, maximum is 1
+  Last flood scan length is 0, maximum is 0
   Last flood scan time is 0 msec, maximum is 0 msec
-  Neighbor Count is 1, Adjacent neighbor count is 1 
+  Neighbor Count is 1, Adjacent neighbor count is 1
     Adjacent with neighbor 2.2.2.2  (Designated Router)
   Suppress hello for 0 neighbor(s)
 R1#
@@ -193,34 +191,33 @@ R1#
 R1 — BDR, а R2 — DR. Процесс выборов DR/BDR не нужен, так как в сети «точка-точка» между R1 и R2 может быть только два устройства. Обратите внимание на вывод — маршрутизатор назначил тип сети BROADCAST. Чтобы изменить это на сеть «точка-точка», используйте команду конфигурации интерфейса **ip ospf network point-to-point** на всех интерфейсах, где требуется отключить процесс выбора DR/BDR. В приведенном ниже примере показана эта конфигурация для R1. Состояние смежности OSPF будет уменьшаться в течение нескольких миллисекунд.
 
 ```
-R1(config)# interface GigabitEthernet 0/0/0
-R1(config-if)# ip ospf network point-to-point
-*Jun  6 00:44:05.208: %OSPF-5-ADJCHG: Process 10, Nbr 2.2.2.2 on GigabitEthernet0/0/0 from FULL to DOWN, Neighbor Down: Interface down or detached
-*Jun  6 00:44:05.211: %OSPF-5-ADJCHG: Process 10, Nbr 2.2.2.2 on GigabitEthernet0/0/0 from LOADING to FULL, Loading Done
-R1(config-if)# interface GigabitEthernet 0/0/1
-R1(config-if)# ip ospf network point-to-point 
-*Jun  6 00:44:45.532: %OSPF-5-ADJCHG: Process 10, Nbr 3.3.3.3 on GigabitEthernet0/0/1 from FULL to DOWN, Neighbor Down: Interface down or detached
-*Jun  6 00:44:45.535: %OSPF-5-ADJCHG: Process 10, Nbr 3.3.3.3 on GigabitEthernet0/0/1 from LOADING to FULL, Loading Done
-R1(config-if)# end
-R1# show ip ospf interface GigabitEthernet 0/0/0
-GigabitEthernet0/0/0 is up, line protocol is up 
+R1(config)#interface GigabitEthernet 0/0/0
+R1(config-if)#ip ospf network point-to-point
+*Mar  1 00:02:42.380: %OSPF-5-ADJCHG: Process 10, Nbr 2.2.2.2 on GigabitEthernet0/0/0 from FULL to DOWN, Neighbor Down: Interface down or detached
+*Mar  1 00:02:42.430: %OSPF-5-ADJCHG: Process 10, Nbr 2.2.2.2 on GigabitEthernet0/0/0 from LOADING to FULL, Loading Done
+R1(config-if)#interface GigabitEthernet 0/0/1
+R1(config-if)#ip ospf network point-to-point
+*Mar  1 00:03:22.680: %OSPF-5-ADJCHG: Process 10, Nbr 3.3.3.3 on GigabitEthernet0/0/1 from FULL to DOWN, Neighbor Down: Interface down or detached
+*Mar  1 00:03:22.730: %OSPF-5-ADJCHG: Process 10, Nbr 3.3.3.3 on GigabitEthernet0/0/1 from LOADING to FULL, Loading Done
+R1(config-if)#end
+*Mar  1 00:03:27.910: %SYS-5-CONFIG_I: Configured from console by console
+R1#show ip ospf interface GigabitEthernet 0/0/0
+GigabitEthernet0/0/0 is up, line protocol is up
   Internet Address 10.1.1.5/30, Area 0, Attached via Interface Enable
   Process ID 10, Router ID 1.1.1.1, Network Type POINT_TO_POINT, Cost: 1
   Topology-MTID    Cost    Disabled    Shutdown      Topology Name
         0           1         no          no            Base
-  Enabled by interface config, including secondary ip addresses
-  Transmit Delay is 1 sec, State POINT_TO_POINT
+  Transmit Delay is 1 sec, State POINT_TO_POINT, Priority 1
   Timer intervals configured, Hello 10, Dead 40, Wait 40, Retransmit 5
     oob-resync timeout 40
     Hello due in 00:00:04
   Supports Link-local Signaling (LLS)
-  Cisco NSF helper support enabled
   IETF NSF helper support enabled
-  Index 1/2/2, flood queue length 0
+  Index 1/1/1, flood queue length 0
   Next 0x0(0)/0x0(0)/0x0(0)
-  Last flood scan length is 1, maximum is 2
-  Last flood scan time is 0 msec, maximum is 1 msec
-  Neighbor Count is 1, Adjacent neighbor count is 1 
+  Last flood scan length is 0, maximum is 0
+  Last flood scan time is 0 msec, maximum is 0 msec
+  Neighbor Count is 1, Adjacent neighbor count is 1
     Adjacent with neighbor 2.2.2.2
   Suppress hello for 0 neighbor(s)
 R1#
@@ -252,5 +249,4 @@ R2# show ip route | include 10.10.1
 O        10.10.1.0/24 [110/2] via 10.1.1.5, 00:00:30, GigabitEthernet0/0/0
 ```
 
-**Примечание.** На момент написания этой статьи Packet Tracer не поддерживает команду **ip ospf network point-to-point** на интерфейсах Gigabit Ethernet. Тем не менее, он поддерживается на интерфейсах Loopback.
 

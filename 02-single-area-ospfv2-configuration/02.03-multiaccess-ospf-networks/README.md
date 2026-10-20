@@ -58,31 +58,30 @@ OSPF может включать дополнительные процессы �
 
 1.  R1 не является ни DR, ни BDR, а является маршрутизатором DROTHER с приоритетом по умолчанию 1 (строка 7);
 2.  DR — это R3 с идентификатором 3.3.3.3 по адресу IPv4 192.168.1.3, а BDR — это R2 с идентификатором 2.2.2.2 по адресу IPv4 192.168.1.2 (строки 8 и 9);
-3.  R1 имеет два отношения смежности: одно с BDR, другое с DR (Строки 20-22).
+3.  R1 имеет два отношения смежности: одно с BDR, другое с DR (строки 19–21).
 
 ```
-R1# show ip ospf interface GigabitEthernet 0/0/0 
-GigabitEthernet0/0/0 is up, line protocol is up 
-  Internet Address 192.168.1.1/24, Area 0, Attached via Interface Enable 
-  Process ID 10, Router ID 1.1.1.1, Network Type BROADCAST, Cost: 1 
-  Topology-MTID Cost Disabled Shutdown Topology Name
-        0 1 no no Base
-  Enabled by interface config, including secondary ip addresses
-  Transmit Delay is 1 sec, State DROTHER, Priority 1 Designated Router (ID) 3.3.3.3, Interface address 192.168.1.3
-  Backup Designated router (ID) 2.2.2.2, Interface address 192.168.1.2 
+R1#show ip ospf interface GigabitEthernet 0/0/0
+GigabitEthernet0/0/0 is up, line protocol is up
+  Internet Address 192.168.1.1/24, Area 0, Attached via Interface Enable
+  Process ID 10, Router ID 1.1.1.1, Network Type BROADCAST, Cost: 1
+  Topology-MTID    Cost    Disabled    Shutdown      Topology Name
+        0           1         no          no            Base
+  Transmit Delay is 1 sec, State DROTHER, Priority 1
+  Designated Router (ID) 3.3.3.3, Interface address 192.168.1.3
+  Backup Designated router (ID) 2.2.2.2, Interface address 192.168.1.2
   Timer intervals configured, Hello 10, Dead 40, Wait 40, Retransmit 5
     oob-resync timeout 40
-     Hello due in 00:00:07 
+    Hello due in 00:00:09
   Supports Link-local Signaling (LLS)
-  Cisco NSF helper support enabled
   IETF NSF helper support enabled
   Index 1/1/1, flood queue length 0
   Next 0x0(0)/0x0(0)/0x0(0)
-  Last flood scan length is 0, maximum is 1 
-  Last flood scan time is 0 msec, maximum is 1 msec
-  Neighbor Count is 2, Adjacent neighbor count is 2 
-    Adjacent with neighbor 2.2.2.2 (Backup Designated Router)
-    Adjacent with neighbor 3.3.3.3 (Designated Router)
+  Last flood scan length is 0, maximum is 0
+  Last flood scan time is 0 msec, maximum is 0 msec
+  Neighbor Count is 2, Adjacent neighbor count is 2
+    Adjacent with neighbor 2.2.2.2  (Backup Designated Router)
+    Adjacent with neighbor 3.3.3.3  (Designated Router)
   Suppress hello for 0 neighbor(s)
 R1#
 ```
@@ -93,31 +92,30 @@ R1#
 
 1.  R2 — это BDR с приоритетом по умолчанию 1 (строка 7);
 2.  DR — это R3 с идентификатором 3.3.3.3 по адресу IPv4 192.168.1.3, а BDR — это R2 с идентификатором 2.2.2.2 по адресу IPv4 192.168.1.2 (строки 8 и 9);
-3.  R2 имеет два отношения смежности: одно с соседним устройством с идентификатором 1.1.1.1 (R1), а другое — с DR (Строки 20-22).
+3.  R2 имеет два отношения смежности: одно с соседним устройством с идентификатором 1.1.1.1 (R1), а другое — с DR (строки 19–21).
 
 ```
-R2# show ip ospf interface GigabitEthernet 0/0/0 
-GigabitEthernet0/0/0 is up, line protocol is up 
-  Internet Address 192.168.1.2/24, Area 0, Attached via Interface Enable 
-  Process ID 10, Router ID 2.2.2.2, Network Type BROADCAST, Cost: 1 
-  Topology-MTID Cost Disabled Shutdown Topology Name
-        0 1 no no Base
-  Enabled by interface config, including secondary ip addresses
-  Transmit Delay is 1 sec, State BDR, Priority 1 Designated Router (ID) 3.3.3.3, Interface address 192.168.1.3
-  Backup Designated router (ID) 2.2.2.2, Interface address 192.168.1.2 
+R2#show ip ospf interface GigabitEthernet 0/0/0
+GigabitEthernet0/0/0 is up, line protocol is up
+  Internet Address 192.168.1.2/24, Area 0, Attached via Interface Enable
+  Process ID 10, Router ID 2.2.2.2, Network Type BROADCAST, Cost: 1
+  Topology-MTID    Cost    Disabled    Shutdown      Topology Name
+        0           1         no          no            Base
+  Transmit Delay is 1 sec, State BDR, Priority 1
+  Designated Router (ID) 3.3.3.3, Interface address 192.168.1.3
+  Backup Designated router (ID) 2.2.2.2, Interface address 192.168.1.2
   Timer intervals configured, Hello 10, Dead 40, Wait 40, Retransmit 5
     oob-resync timeout 40
-    Hello due in 0:00:01
+    Hello due in 00:00:09
   Supports Link-local Signaling (LLS)
-  Cisco NSF helper support enabled
   IETF NSF helper support enabled
-  Index 1/1, flood queue length 0
-  Next 0x0(0)/0x0(0)
-  Last flood scan length is 0, maximum is 1 
+  Index 1/1/1, flood queue length 0
+  Next 0x0(0)/0x0(0)/0x0(0)
+  Last flood scan length is 0, maximum is 0
   Last flood scan time is 0 msec, maximum is 0 msec
-  Neighbor Count is 2, Adjacent neighbor count is 2 
+  Neighbor Count is 2, Adjacent neighbor count is 2
     Adjacent with neighbor 1.1.1.1
-    Adjacent with neighbor 3.3.3.3 (Designated Router)
+    Adjacent with neighbor 3.3.3.3  (Designated Router)
   Suppress hello for 0 neighbor(s)
 R2#
 ```
@@ -128,33 +126,31 @@ R2#
 
 1.  R3 — это DR с приоритетом по умолчанию 1 (строка 7);
 2.  DR — это R3 с идентификатором 3.3.3.3 по адресу IPv4 192.168.1.3, а BDR — это R2 с идентификатором 2.2.2.2 по адресу IPv4 192.168.1.2 (строки 8 и 9); 
-3.  R3 имеет два отношения смежности: одно с соседним устройством с идентификатором 1.1.1.1 (R1), а другое с BDR (Строки 20-22).
+3.  R3 имеет два отношения смежности: одно с соседним устройством с идентификатором 1.1.1.1 (R1), а другое с BDR (строки 19–21).
 
 ```
-R3# show ip ospf interface GigabitEthernet 0/0/0 
-GigabitEthernet0/0/0 is up, line protocol is up 
-  Internet Address 192.168.1.3/24, Area 0, Attached via Interface Enable 
-  Process ID 10, Router ID 3.3.3.3, Network Type BROADCAST, Cost: 1 
-  Topology-MTID Cost Disabled Shutdown Topology Name
-        0 1 no no Base
-  Enabled by interface config, including secondary ip addresses
-  Transmit Delay is 1 sec, State DR, Priority 1 Designated Router (ID) 3.3.3.3, Interface address 192.168.1.3
-  Backup Designated router (ID) 2.2.2.2, Interface address 192.168.1.2 
+R3#show ip ospf interface GigabitEthernet 0/0/0
+GigabitEthernet0/0/0 is up, line protocol is up
+  Internet Address 192.168.1.3/24, Area 0, Attached via Interface Enable
+  Process ID 10, Router ID 3.3.3.3, Network Type BROADCAST, Cost: 1
+  Topology-MTID    Cost    Disabled    Shutdown      Topology Name
+        0           1         no          no            Base
+  Transmit Delay is 1 sec, State DR, Priority 1
+  Designated Router (ID) 3.3.3.3, Interface address 192.168.1.3
+  Backup Designated router (ID) 2.2.2.2, Interface address 192.168.1.2
   Timer intervals configured, Hello 10, Dead 40, Wait 40, Retransmit 5
     oob-resync timeout 40
-    Hello due in 0:00:06
+    Hello due in 00:00:09
   Supports Link-local Signaling (LLS)
-  Cisco NSF helper support enabled
   IETF NSF helper support enabled
   Index 1/1/1, flood queue length 0
   Next 0x0(0)/0x0(0)/0x0(0)
-  Last flood scan length is 2, maximum is 2 
+  Last flood scan length is 0, maximum is 0
   Last flood scan time is 0 msec, maximum is 0 msec
-  Neighbor Count is 2, Adjacent neighbor count is 2 
-    Adjacent with neighbor 1.1.1.1 
-    Adjacent with neighbor 2.2.2.2 (Backup Designated Router)
+  Neighbor Count is 2, Adjacent neighbor count is 2
+    Adjacent with neighbor 1.1.1.1
+    Adjacent with neighbor 2.2.2.2  (Backup Designated Router)
   Suppress hello for 0 neighbor(s)
-R3#
 ```
 
 <!-- 2.3.5 -->
@@ -347,27 +343,25 @@ R1#
 Выходные данные команды **show ip ospf interface g0/0/0** на R1 подтверждают, что он является DR с приоритетом 255, и идентифицируют новые соседние смежности с R1.
 
 ```
-R1# show ip ospf interface GigabitEthernet 0/0/0
-GigabitEthernet0/0/0 is up, line protocol is up 
+R1#show ip ospf interface GigabitEthernet 0/0/0
+GigabitEthernet0/0/0 is up, line protocol is up
   Internet Address 192.168.1.1/24, Area 0, Attached via Interface Enable
   Process ID 10, Router ID 1.1.1.1, Network Type BROADCAST, Cost: 1
   Topology-MTID    Cost    Disabled    Shutdown      Topology Name
         0           1         no          no            Base
-  Enabled by interface config, including secondary ip addresses
   Transmit Delay is 1 sec, State DR, Priority 255
   Designated Router (ID) 1.1.1.1, Interface address 192.168.1.1
   Backup Designated router (ID) 2.2.2.2, Interface address 192.168.1.2
   Timer intervals configured, Hello 10, Dead 40, Wait 40, Retransmit 5
     oob-resync timeout 40
-    Hello due in 00:00:00
+    Hello due in 00:00:09
   Supports Link-local Signaling (LLS)
-  Cisco NSF helper support enabled
   IETF NSF helper support enabled
   Index 1/1/1, flood queue length 0
   Next 0x0(0)/0x0(0)/0x0(0)
-  Last flood scan length is 1, maximum is 2
-  Last flood scan time is 0 msec, maximum is 1 msec
-  Neighbor Count is 2, Adjacent neighbor count is 2 
+  Last flood scan length is 0, maximum is 0
+  Last flood scan time is 0 msec, maximum is 0 msec
+  Neighbor Count is 2, Adjacent neighbor count is 2
     Adjacent with neighbor 2.2.2.2  (Backup Designated Router)
     Adjacent with neighbor 3.3.3.3
   Suppress hello for 0 neighbor(s)

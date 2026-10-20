@@ -95,12 +95,12 @@ R1#
 <!-- 2.6.3 -->
 ## Проверка информации о процессе OSPF
 
-Команду **show ip ospf** можно также использовать для проверки идентификаторов процесса и маршрутизатора в протоколе OSPFv2, как показано на рис. 1. Она отображает данные области OSPFv2 и показывает время последнего расчета алгоритма SPF.
+Команду **show ip ospf** можно также использовать для проверки идентификаторов процесса и маршрутизатора в протоколе OSPFv2, как показано в примере. Она отображает данные области OSPFv2 и показывает время последнего расчета алгоритма SPF.
 
 ```
-R1# show ip ospf      
+R1#show ip ospf
  Routing Process "ospf 10" with ID 1.1.1.1
- Start time: 00:01:47.390, Time elapsed: 00:12:32.320
+ Start time: 00:00:01.010, Time elapsed: 00:12:01.170
  Supports only single TOS(TOS0) routes
  Supports opaque LSA
  Supports Link-local Signaling (LLS)
@@ -119,7 +119,7 @@ R1# show ip ospf
  Interface flood pacing timer 33 msecs
  Retransmission pacing timer 66 msecs
  EXCHANGE/LOADING adjacency limit: initial 300, process maximum 300
- Number of external LSA 1. Checksum Sum 0x00A1FF
+ Number of external LSA 1. Checksum Sum 0x001EE3
  Number of opaque AS LSA 0. Checksum Sum 0x000000
  Number of DCbitless external and opaque AS LSA 0
  Number of DoNotAge external and opaque AS LSA 0
@@ -127,20 +127,19 @@ R1# show ip ospf
  Number of areas transit capable is 0
  External flood list length 0
  IETF NSF helper support enabled
- Cisco NSF helper support enabled
  Reference bandwidth unit is 10000 mbps
     Area BACKBONE(0)
-        Number of interfaces in this area is 3
-	Area has no authentication
-	SPF algorithm last executed 00:11:31.231 ago
-	SPF algorithm executed 4 times
-	Area ranges are
-	Number of LSA 3. Checksum Sum 0x00E77E
-	Number of opaque link LSA 0. Checksum Sum 0x000000
-	Number of DCbitless LSA 0
-	Number of indication LSA 0
-	Number of DoNotAge LSA 0
-	Flood list length 0
+        Number of interfaces in this area is 3 (1 loopback)
+        Area has no authentication
+        SPF algorithm last executed 00:12:00.060 ago
+        SPF algorithm executed 3 times
+        Area ranges are
+        Number of LSA 3. Checksum Sum 0x01FFB3
+        Number of opaque link LSA 0. Checksum Sum 0x000000
+        Number of DCbitless LSA 0
+        Number of indication LSA 0
+        Number of DoNotAge LSA 0
+        Flood list length 0
 R1#
 ```
 
@@ -150,25 +149,23 @@ R1#
 Подробный список для каждого интерфейса, где включен OSPFv2, показывает команда **show ip ospf interface**. Укажите интерфейс для отображения параметров только этого интерфейса, как показано в следующих выходных данных для Gigabit Ethernet 0/0/0. Команда показывает идентификаторы процесса и локального маршрутизатора, тип сети, стоимость OSPF и смежности с соседями. В сетях с множественным доступом она также выводит сведения о DR и BDR (в этом примере их нет).
 
 ```
-R1# show ip ospf interface GigabitEthernet 0/0/0
-GigabitEthernet0/0/0 is up, line protocol is up 
+R1#show ip ospf interface GigabitEthernet 0/0/0
+GigabitEthernet0/0/0 is up, line protocol is up
   Internet Address 10.1.1.5/30, Area 0, Attached via Interface Enable
   Process ID 10, Router ID 1.1.1.1, Network Type POINT_TO_POINT, Cost: 10
   Topology-MTID    Cost    Disabled    Shutdown      Topology Name
         0           10        no          no            Base
-  Enabled by interface config, including secondary ip addresses
-  Transmit Delay is 1 sec, State POINT_TO_POINT
+  Transmit Delay is 1 sec, State POINT_TO_POINT, Priority 1
   Timer intervals configured, Hello 5, Dead 20, Wait 20, Retransmit 5
-    oob-resync timeout 40
-    Hello due in 00:00:01
+    oob-resync timeout 20
+    Hello due in 00:00:04
   Supports Link-local Signaling (LLS)
-  Cisco NSF helper support enabled
   IETF NSF helper support enabled
-  Index 1/2/2, flood queue length 0
+  Index 1/1/1, flood queue length 0
   Next 0x0(0)/0x0(0)/0x0(0)
-  Last flood scan length is 1, maximum is 1
+  Last flood scan length is 0, maximum is 0
   Last flood scan time is 0 msec, maximum is 0 msec
-  Neighbor Count is 1, Adjacent neighbor count is 1 
+  Neighbor Count is 1, Adjacent neighbor count is 1
     Adjacent with neighbor 2.2.2.2
   Suppress hello for 0 neighbor(s)
 R1#

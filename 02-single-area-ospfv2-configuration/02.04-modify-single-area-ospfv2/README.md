@@ -205,25 +205,23 @@ R1#
 Интервалы приветствия (hello) и простоя (dead) OSPF настраиваются для каждого интерфейса. Они должны совпадать, иначе отношения смежности не установятся. Для проверки настроенных в настоящее время интервалов на интерфейсах OSPFv2 используйте команду **show ip ospf interface**, как показано на примере. Интервалы приветствия и простоя GigabitEthernet 0/0/0 по умолчанию настроены на 10 и 40 секунд соответственно.
 
 ```
-R1# show ip ospf interface g0/0/0
-GigabitEthernet0/0/0 is up, line protocol is up 
+R1#show ip ospf interface g0/0/0
+GigabitEthernet0/0/0 is up, line protocol is up
   Internet Address 10.1.1.5/30, Area 0, Attached via Interface Enable
   Process ID 10, Router ID 1.1.1.1, Network Type POINT_TO_POINT, Cost: 10
   Topology-MTID    Cost    Disabled    Shutdown      Topology Name
         0           10        no          no            Base
-  Enabled by interface config, including secondary ip addresses
-  Transmit Delay is 1 sec, State POINT_TO_POINT
+  Transmit Delay is 1 sec, State POINT_TO_POINT, Priority 1
   Timer intervals configured, Hello 10, Dead 40, Wait 40, Retransmit 5
     oob-resync timeout 40
-    Hello due in 00:00:06
+    Hello due in 00:00:09
   Supports Link-local Signaling (LLS)
-  Cisco NSF helper support enabled
   IETF NSF helper support enabled
-  Index 1/2/2, flood queue length 0
+  Index 1/1/1, flood queue length 0
   Next 0x0(0)/0x0(0)/0x0(0)
-  Last flood scan length is 1, maximum is 1
+  Last flood scan length is 0, maximum is 0
   Last flood scan time is 0 msec, maximum is 0 msec
-  Neighbor Count is 1, Adjacent neighbor count is 1 
+  Neighbor Count is 1, Adjacent neighbor count is 1
     Adjacent with neighbor 2.2.2.2
   Suppress hello for 0 neighbor(s)
 R1#
