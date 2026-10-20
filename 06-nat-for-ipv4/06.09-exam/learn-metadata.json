@@ -3,8 +3,8 @@
     "shortName": "ccna3.nat-for-ipv4.exam",
     "type": "exam",
     "description": "Проверьте свои знания по темам модуля: характеристики технологии NAT, типы преобразований NAT, преимущества и недостатки NAT, настройка статической трансляции IPv4-адресов, настройка динамической трансляции IPv4-адресов, настройка динамической трансляции портов для IPv4, NAT64.",
-    "difficulty": 1,
-    "duration": "PT1H4M",
+    "difficulty": 3,
+    "duration": "PT1H7M",
     "tags": {
         "$ref": "../../material-tags.json"
     },
@@ -32,7 +32,7 @@
             "mode": "exam",
             "grader": "test-auto",
             "aligned_bloom": "apply",
-            "passes_when": "Learner scores at least 80% on the exam's 39 questions covering module 6; attempts unlimited.",
+            "passes_when": "Learner scores at least 80% on the exam's 41 questions covering module 6; attempts unlimited.",
             "calibration": "operator-judge"
         }
     },
@@ -1077,6 +1077,50 @@
                     "answer": "динамическое преобразование NAT",
                     "correct": false,
                     "comment": "Тема 6.2.0 — PAT позволяет нескольким узлам в частной сети использовать один публичный адрес, привязывая сеансы к номерам портов TCP/UDP"
+                }
+            ]
+        },
+        {
+            "question": "Что использует перегрузка NAT для отслеживания нескольких внутренних узлов, использующих один внутренний глобальный адрес?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "MAC-адреса",
+                    "correct": false
+                },
+                {
+                    "answer": "номера портов",
+                    "correct": true
+                },
+                {
+                    "answer": "IP-адреса",
+                    "correct": false
+                },
+                {
+                    "answer": "autonomous system numbers",
+                    "correct": false
+                }
+            ]
+        },
+        {
+            "question": "При настройке сети небольшого офиса администратор сети решает динамически назначать частные IP-адреса рабочим станциям и мобильным устройствам. Какая функция должна быть включена на маршрутизаторе компании, чтобы офисные устройства могли выходить в интернет?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "QoS",
+                    "correct": false
+                },
+                {
+                    "answer": "NAT",
+                    "correct": true
+                },
+                {
+                    "answer": "UPnP",
+                    "correct": false
+                },
+                {
+                    "answer": "фильтрация по MAC-адресам",
+                    "correct": false
                 }
             ]
         }

@@ -3,8 +3,8 @@
     "shortName": "ccna3.network-automation.exam",
     "type": "exam",
     "description": "Проверьте свои знания по темам модуля: обзор автоматизации, форматы данных, интерфейсы прикладного программирования (API), архитектура REST, инструменты управления конфигурацией, сети на основе намерений.",
-    "difficulty": 1,
-    "duration": "PT0H42M",
+    "difficulty": 3,
+    "duration": "PT0H50M",
     "tags": {
         "$ref": "../../material-tags.json"
     },
@@ -31,7 +31,7 @@
             "mode": "exam",
             "grader": "test-auto",
             "aligned_bloom": "understand",
-            "passes_when": "Learner scores at least 80% on the exam's 30 questions covering module 14; attempts unlimited.",
+            "passes_when": "Learner scores at least 80% on the exam's 36 questions covering module 14; attempts unlimited.",
             "calibration": "operator-judge"
         }
     },
@@ -842,6 +842,154 @@
                     "answer": "/ (косая черта)",
                     "correct": false,
                     "comment": "Тема 14.2.0 — Каждая пара ключ/значение в серии пар ключ/значение разделена запятой, поэтому середина JSON выглядит следующим образом: \"ключ\": \"значение\", \"ключ\": \"значение\"."
+                }
+            ]
+        },
+        {
+            "question": "Каковы синтаксические правила для написания массива JSON? (верны два варианта)",
+            "answerType": "multiChoice",
+            "answers": [
+                {
+                    "answer": "значения заключены в квадратные скобки",
+                    "correct": true
+                },
+                {
+                    "answer": "каждое значение в массиве отделяется запятой",
+                    "correct": true
+                },
+                {
+                    "answer": "точка с запятой отделяет ключ и список значений",
+                    "correct": false
+                },
+                {
+                    "answer": "пробел должен разделять каждое значение в массиве",
+                    "correct": false
+                },
+                {
+                    "answer": "массив может включать только один тип значений",
+                    "correct": false
+                }
+            ]
+        },
+        {
+            "question": "Что проводится в квадратных скобках [] в JSON?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "массив",
+                    "correct": true
+                },
+                {
+                    "answer": "объект",
+                    "correct": false
+                },
+                {
+                    "answer": "пары ключ/значение",
+                    "correct": false
+                },
+                {
+                    "answer": "вложенные значения",
+                    "correct": false
+                }
+            ]
+        },
+        {
+            "question": "Какой тип API будет использоваться для предоставления авторизованным продавцам организации доступа к внутренним данным продаж со своих мобильных устройств?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "закрытый",
+                    "correct": true
+                },
+                {
+                    "answer": "публичный",
+                    "correct": false
+                },
+                {
+                    "answer": "открытый",
+                    "correct": false
+                },
+                {
+                    "answer": "партнерский",
+                    "correct": false
+                }
+            ]
+        },
+        {
+            "question": "Что является характеристикой REST API?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "API который наиболее широко используется для веб-сервисов",
+                    "correct": true
+                },
+                {
+                    "answer": "считается медленным, сложным и жестким",
+                    "correct": false
+                },
+                {
+                    "answer": "превратился в то, что стало SOAP",
+                    "correct": false
+                },
+                {
+                    "answer": "используется для обмена XML-структурированной информацией через HTTP или SMTP",
+                    "correct": false
+                }
+            ]
+        },
+        {
+            "question": "Пользователь читает книгу с сайта https://www.books-info.com/author50/book1.html#page150. Какой термин используется для описания компонента www.books-info.com/author50/book1.html?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "URI",
+                    "correct": false
+                },
+                {
+                    "answer": "URL-адрес",
+                    "correct": false
+                },
+                {
+                    "answer": "URN",
+                    "correct": true
+                },
+                {
+                    "answer": "протокол",
+                    "correct": false
+                },
+                {
+                    "answer": "фрагмент",
+                    "correct": false
+                }
+            ]
+        },
+        {
+            "question": "Какие компоненты используются в части запроса типичного запроса RESTful API? (верны три варианта)",
+            "answerType": "multiChoice",
+            "answers": [
+                {
+                    "answer": "ключ",
+                    "correct": true
+                },
+                {
+                    "answer": "форматировать",
+                    "correct": true
+                },
+                {
+                    "answer": "протокол",
+                    "correct": false
+                },
+                {
+                    "answer": "ресурсы",
+                    "correct": false
+                },
+                {
+                    "answer": "API сервер",
+                    "correct": false
+                },
+                {
+                    "answer": "параметры",
+                    "correct": true
                 }
             ]
         }
