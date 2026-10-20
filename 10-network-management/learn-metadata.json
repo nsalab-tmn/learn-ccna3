@@ -39,6 +39,9 @@
             "$ref": "./10.06.10-lab-back-up-configuration-files/learn-metadata.json"
         },
         {
+            "$ref": "./10.06.13-lab-research-and-execute-password-recovery-procedures/learn-metadata.json"
+        },
+        {
             "$ref": "./10.07-ios-image-management/learn-metadata.json"
         },
         {
