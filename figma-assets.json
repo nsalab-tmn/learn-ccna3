@@ -1169,6 +1169,7 @@
   },
   {
    "id": "ccna3-t5zktob",
+   "ref": "ccna1-va2c7wd",
    "kind": "animation",
    "display": {
     "key": "3.4.1"
@@ -1199,6 +1200,7 @@
   },
   {
    "id": "ccna3-evkbyha",
+   "ref": "ccna1-t7zfonu",
    "kind": "animation",
    "display": {
     "key": "3.5.3-1"
@@ -1229,6 +1231,7 @@
   },
   {
    "id": "ccna3-fugrkdl",
+   "ref": "ccna1-pmlcwap",
    "kind": "animation",
    "display": {
     "key": "3.5.3-2"
@@ -1259,6 +1262,7 @@
   },
   {
    "id": "ccna3-fzzkmvv",
+   "ref": "ccna1-xx7yje7",
    "kind": "animation",
    "display": {
     "key": "3.5.3-3"
@@ -1289,6 +1293,7 @@
   },
   {
    "id": "ccna3-qfbmpbd",
+   "ref": "ccna1-gkhac7w",
    "kind": "animation",
    "display": {
     "key": "3.5.5-1"
@@ -1422,6 +1427,7 @@
   },
   {
    "id": "ccna3-qxw7mh3",
+   "ref": "ccna1-3vokuos",
    "kind": "animation",
    "display": {
     "key": "3.5.9-1"
@@ -1452,6 +1458,7 @@
   },
   {
    "id": "ccna3-rdjvm4g",
+   "ref": "ccna1-cet7odq",
    "kind": "animation",
    "display": {
     "key": "3.5.9-2"
@@ -1684,6 +1691,7 @@
   },
   {
    "id": "ccna3-fod5pw5",
+   "ref": "ccna1-lvj5zsc",
    "kind": "animation",
    "display": {
     "key": "3.8.1"
