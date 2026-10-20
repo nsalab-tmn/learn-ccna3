@@ -76,53 +76,42 @@ Total entries displayed: 2
 Если нужна более подробная информация о соседних устройствах, можно воспользоваться командой **show lldp neighbors detail**, которая предоставляет такие сведения, как версии ОС, IP-адреса и функции соседних устройств.
 
 ```
-S1# show lldp neighbors detail
+S1#show lldp neighbors detail
 ------------------------------------------------
-Chassis id: 848a.8d44.49b0
-Port id: Gi0/0/1
-Port Description: GigabitEthernet0/0/1
-System Name: R1
-  
-System Description:
-Cisco IOS Software [Fuji], ISR Software (X86_64_LINUX_IOSD-UNIVERSALK9-M), Version 16.9.4, RELEASE SOFTWARE (fc2)
-Technical Support: http://www.cisco.com/techsupport
-Copyright (c) 1986-2019 by Cisco Systems, Inc.
-Compiled Thu 22-Aug-19 18:09 by mcpre
-  
-Time remaining: 111 seconds
-System Capabilities: B,R
-Enabled Capabilities: R
-Management Addresses - not advertised
-Auto Negotiation - not supported
-Physical media capabilities - not advertised
-Media Attachment Unit type - not advertised
-Vlan ID: - not advertised
-  
-------------------------------------------------
-Chassis id: 0025.83e6.4b00
+Local Intf: Fa0/1
+Chassis id: 00d0.1035.2801
 Port id: Fa0/1
 Port Description: FastEthernet0/1
 System Name: S2
-  
+
 System Description:
-Cisco IOS Software, C2960 Software (C2960-LANBASEK9-M), Version 15.0(2)SE4, RELEASE SOFTWARE (fc1)
-Technical Support: http://www.cisco.com/techsupport
-Copyright (c) 1986-2013 by Cisco Systems, Inc.
-Compiled Wed 26-Jun-13 02:49 by prod_rel_team
-  
-Time remaining: 107 seconds
+NSALAB NetOS Software, NS01 Software (NS01-NETOS-M), Version 0.1.0
+
+Time remaining: 120 seconds
 System Capabilities: B
 Enabled Capabilities: B
-Management Addresses - not advertised
+Management Addresses:
+    IP: 192.168.1.3
 Auto Negotiation - supported, enabled
-Physical media capabilities:
-    100base-TX(FD)
-    100base-TX(HD)
-    10base-T(FD)
-    10base-T(HD)
-Media Attachment Unit type: 16
-Vlan ID: 1
-  
+
+------------------------------------------------
+Local Intf: Fa0/5
+Chassis id: 00d0.38e1.5501
+Port id: Gi0/0/1
+Port Description: GigabitEthernet0/0/1
+System Name: R1
+
+System Description:
+NSALAB NetOS Software, NR05 Software (NR05-NETOS-M), Version 0.1.0
+
+Time remaining: 120 seconds
+System Capabilities: B,R
+Enabled Capabilities: R
+Management Addresses:
+    IP: 192.168.1.1
+Auto Negotiation - supported, enabled
+
+
 Total entries displayed: 2
 ```
 

@@ -65,25 +65,21 @@ Router(config-if)# ip access-group {access-list-number | access-list-name} {in |
 **Примечание**. Если интернет-протокол не указан, может быть указан номер IP-протокола. Например, протокол ICMP номер 1, TCP — 6, UDP — 17.
 
 ```
-R1(config)# access-list 100 permit ? 
-<0-255>       An IP protocol number
-ahp           Authentication Header Protocol
-dvmrp         dvmrp
-eigrp         Cisco's EIGRP routing protocol
-esp           Encapsulation Security Payload
-gre           Cisco's GRE tunneling
-icmp          Internet Control Message Protocol
-igmp          Internet Gateway Message Protocol
-ip            Any Internet Protocol
-ipinip        IP in IP tunneling
-nos           KA9Q NOS compatible IP over IP tunneling
-object-group  Service object group
-ospf          OSPF routing protocol
-pcp           Payload Compression Protocol
-pim           Protocol Independent Multicast
-tcp           Transmission Control Protocol
-udp           User Datagram Protocol
-R1(config)# access-list 100 permit 
+R1(config)#access-list 100 permit ?
+  <0-255>  An IP protocol number
+  ahp      Authentication Header Protocol
+  eigrp    EIGRP routing protocol
+  esp      Encapsulation Security Payload
+  gre      Generic Routing Encapsulation Protocol
+  icmp     Internet Control Message Protocol
+  igmp     Internet Gateway Message Protocol
+  ip       Any Internet Protocol
+  ospf     OSPF routing protocol
+  pim      Protocol Independent Multicast
+  tcp      Transmission Control Protocol
+  udp      User Datagram Protocol
+
+R1(config)#access-list 100 permit                        
 ```
 
 **Параметры ключевых слов порта**

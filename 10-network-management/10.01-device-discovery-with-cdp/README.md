@@ -104,13 +104,15 @@ GigabitEthernet0 is down, line protocol is down
 Если в сети включен протокол CDP, ее структуру можно определить с помощью команды **show cdp neighbors**.
 
 ```
-R1# show cdp neighbors
+R1#show cdp neighbors
 Capability Codes: R - Router, T - Trans Bridge, B - Source Route Bridge
                   S - Switch, H - Host, I - IGMP, r - Repeater, P - Phone,
                   D - Remote, C - CVTA, M - Two-port Mac Relay
- 
+
 Device ID        Local Intrfce     Holdtme    Capability  Platform  Port ID
-S1               Gig 0/0/1           179         S I      WS-C3560- Fas 0/5
+S1               Gig 0/0/1         150                S I NS03      Fas 0/5
+
+Total cdp entries displayed : 1
 ```
 
 Нет никакой информации об остальной части сети. Команда **show cdp neighbors** отображает полезную информацию о каждом соседнем устройстве CDP:
@@ -118,7 +120,7 @@ S1               Gig 0/0/1           179         S I      WS-C3560- Fas 0/5
 * **идентификатор устройства**  — имя соседнего устройства (S1);
 * **идентификатор порта**  — имя локального или удаленного порта (Gig 0/0/1 и Fas 0/5 соответственно);
 * **список возможностей**  — является ли устройство маршрутизатором или коммутатором (S обозначает коммутатор; I обозначает IGMP и в данном курсе не рассматривается);
-* **платформа**  — аппаратная платформа устройства (WS-C3560 обозначает коммутатор Cisco 3560).
+* **платформа**  — аппаратная платформа, то есть модель соседнего устройства.
 
 Выходные данные показывают, что к интерфейсу G0/0/1 на R1 подключено другое устройство S1. Кроме того, S1 подключается через F0/5, как показано в обновленной топологии.
 
@@ -128,44 +130,37 @@ S1               Gig 0/0/1           179         S I      WS-C3560- Fas 0/5
 Сетевой администратор использует **show cdp neighbors detail** для обнаружения IP-адреса S1. Как показано в выходных данных, адрес S1 — 192.168.1.2.
 
 ```
-R1# show cdp neighbors detail
+R1#show cdp neighbors detail
 -------------------------
 Device ID: S1
 Entry address(es):
   IP address: 192.168.1.2
-Platform: cisco WS-C3560-24TS,  Capabilities: Switch IGMP
+Platform: NS03,  Capabilities: Switch IGMP
 Interface: GigabitEthernet0/0/1,  Port ID (outgoing port): FastEthernet0/5
-Holdtime : 136 sec
- 
+Holdtime : 150 sec
+
 Version :
-Cisco IOS Software, C3560 Software (C3560-LANBASEK9-M), Version 15.0(2)SE7, R
-RELEASE SOFTWARE (fc1)
-Technical Support: http://www.cisco.com/techsupport
-Copyright (c) 1986-2014 by Cisco Systems, Inc.
-Compiled Thu 23-Oct-14 14:49 by prod_rel_team
- 
+NSALAB NetOS Software, NS03 Software (NS03-NETOS-M), Version 0.1.0
+
 advertisement version: 2
-Protocol Hello:  OUI=0x00000C, Protocol ID=0x0112; payload len=27, 
-value=00000000FFFFFFFF010221FF000000000000002291210380FF0000
-VTP Management Domain: ''
-Native VLAN: 1
 Duplex: full
-Management address(es):
-  IP address: 192.168.1.2
- 
+
 Total cdp entries displayed : 1
 ```
 
 Получив удаленный доступ к коммутатору S1 через подключение SSH либо физический доступ через консольный порт, сетевой администратор может узнать, какие еще устройства подключены к S1, с помощью команды **show cdp neighbors**. На рисунке показан результат.
 
 ```
-S1# show cdp neighbors
+S1#show cdp neighbors
 Capability Codes: R - Router, T - Trans Bridge, B - Source Route Bridge
                   S - Switch, H - Host, I - IGMP, r - Repeater, P - Phone,
                   D - Remote, C - CVTA, M - Two-port Mac Relay
+
 Device ID        Local Intrfce     Holdtme    Capability  Platform  Port ID
-S2               Fas 0/1           150              S I   WS-C2960- Fas 0/1
-R1               Fas 0/5           179             R S I  ISR4331/K Gig 0/0/1
+S2               Fas 0/1           150                S I NS01      Fas 0/1
+R1               Fas 0/5           150            R B S I NR05      Gig 0/0/1
+
+Total cdp entries displayed : 2
 ```
 
 В выходных данных появляется еще один коммутатор — S2. Он использует F0/1 для подключения к интерфейсу F0/1 на S1, как показано на рисунке.
@@ -176,12 +171,15 @@ R1               Fas 0/5           179             R S I  ISR4331/K Gig 0/0/1
 Кроме того, администратор сети может использовать **show cdp neighbors detail** для обнаружения IP-адреса для S2, а затем удаленного доступа к нему. После успешного входа в систему администратор сети использует команду **show cdp neighbors**, чтобы определить, есть ли ещё устройства.
 
 ```
-S2# show cdp neighbors
+S2#show cdp neighbors
 Capability Codes: R - Router, T - Trans Bridge, B - Source Route Bridge
                   S - Switch, H - Host, I - IGMP, r - Repeater, P - Phone,
                   D - Remote, C - CVTA, M - Two-port Mac Relay
+
 Device ID        Local Intrfce     Holdtme    Capability  Platform  Port ID
-S1               Fas 0/1           141              S I   WS-C3560- Fas 0/1
+S1               Fas 0/1           150                S I NS03      Fas 0/1
+
+Total cdp entries displayed : 1
 ```
 
 К коммутатору S2 подключено только одно устройство — коммутатор S1. Следовательно, в топологии больше нет доступных для обнаружения устройств. Сетевой администратор может обновить документацию сети, указав в ней обнаруженные устройства.
