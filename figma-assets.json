@@ -1350,8 +1350,8 @@
     "key": "3.5.5-3"
    },
    "figma": {
-    "nodeId": "4191:452795",
-    "page": "CCNA3 · 03 network-security-concepts"
+    "nodeId": "4191:436705",
+    "page": "CCNA1 · 16 network-security-fundamentals"
    },
    "out": {
     "path": "03-network-security-concepts/03.05-common-network-attacks/assets/3.5.5-3.svg",
@@ -1362,9 +1362,9 @@
     "netacad": "c5daf113-1c46-11ea-af56-e368b99e9723",
     "legacy": "3.5.5-3.svg",
     "synced": {
-     "figmaVersion": "2410325910918669022",
-     "at": "2026-10-14T21:48:21Z",
-     "sha256": "4eee17630fce3c26f1786d26ad1e80eb95f43b7fa85d9408d2fa36bfc8cbda68"
+     "figmaVersion": "2412530345279259579",
+     "at": "2026-10-20T19:37:05Z",
+     "sha256": "76d34fd09b69c30ccae637df25395d5d8a91a89f9ebfe64e110feb5f7859508b"
     }
    },
    "notes": "[svg в git · текстовый ярлык 1037:97964 в реестр не попал — тоже не перерисовка · пара: закреплена]"
@@ -1873,8 +1873,8 @@
     "key": "3.8.7-3"
    },
    "figma": {
-    "nodeId": "4191:453765",
-    "page": "CCNA3 · 03 network-security-concepts"
+    "nodeId": "4191:444752",
+    "page": "CCNA2 · 10 lan-security-concepts"
    },
    "out": {
     "path": "03-network-security-concepts/03.08-ip-services/assets/3.8.7-3.svg",
@@ -1885,9 +1885,9 @@
     "netacad": "c5eea020-1c46-11ea-af56-e368b99e9723",
     "legacy": "3.8.7-3.svg",
     "synced": {
-     "figmaVersion": "2410325910918669022",
-     "at": "2026-10-14T21:48:21Z",
-     "sha256": "cc5ca65eebff9515cab3567e6512c2bc7999b390746139038da2d6e2f89c9ac6"
+     "figmaVersion": "2412530345279259579",
+     "at": "2026-10-20T19:37:05Z",
+     "sha256": "e1b56351e6bbf09500e61024d85894354b3639bb1913b2720ba93b9a7a5db0a2"
     }
    }
   },
@@ -2055,8 +2055,8 @@
     "key": "3.9.5-2"
    },
    "figma": {
-    "nodeId": "4191:454602",
-    "page": "CCNA3 · 03 network-security-concepts"
+    "nodeId": "4191:444233",
+    "page": "CCNA2 · 10 lan-security-concepts"
    },
    "out": {
     "path": "03-network-security-concepts/03.09-network-security-best-practices/assets/3.9.5-2.svg",
@@ -2067,9 +2067,9 @@
     "netacad": "c5f508c1-1c46-11ea-af56-e368b99e9723",
     "legacy": "3.9.5-2.svg",
     "synced": {
-     "figmaVersion": "2412471139702813764",
-     "at": "2026-10-20T15:52:01Z",
-     "sha256": "dfbd363d0fb600b278197e4a5eb187384358a2afcfa7dbe69e8fbb2b9a92a01b"
+     "figmaVersion": "2412530345279259579",
+     "at": "2026-10-20T19:37:05Z",
+     "sha256": "59a8c8f75485c239b2a70c443d7b0aebea1e6ab664d90205c340bad307e2d9bb"
     }
    }
   },
