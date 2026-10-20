@@ -2531,6 +2531,26 @@
    "notes": "[svg в git · Два узла \"4.4.5.png\": 1037:97979 (колонка, канон) и 1319:121391 (пиксельный дубль тем же imageRef, положен у перерисовки). Фрейм-омоним 1037:97981 — OCR-текст, в drops. · пара: закреплена]"
   },
   {
+   "id": "ccna3-rmgqxsl",
+   "kind": "illustration",
+   "display": {
+    "key": "4.5.4"
+   },
+   "figma": {
+    "nodeId": "5557:15193",
+    "page": "CCNA3 · 03 network-security-concepts"
+   },
+   "out": {
+    "path": "04-acl-concepts/04.05-exam/assets/4.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "4.png"
+   },
+   "notes": "намеренный дубль экспорта (kb#318, вариант 1): тот же фрейм 5557:15193, что у ccna3-6bk5wij (final-exam/assets/7.svg); каждая папка экзамена самодостаточна — не сворачивать при дедупликации (kb#242)"
+  },
+  {
    "id": "ccna3-44f2vls",
    "kind": "illustration",
    "display": {
@@ -3220,6 +3240,45 @@
      "sha256": "c9076896b8b2adf21aa61121c0936553b36d118d7946bef119419b2c42d586ca"
     }
    }
+  },
+  {
+   "id": "ccna3-b6bgss4",
+   "kind": "illustration",
+   "display": {
+    "key": "6.9.11"
+   },
+   "figma": {
+    "nodeId": "5558:10139",
+    "page": "CCNA3 · 06 nat-for-ipv4"
+   },
+   "out": {
+    "path": "06-nat-for-ipv4/06.09-exam/assets/11.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "11.PNG"
+   }
+  },
+  {
+   "id": "ccna3-azdvmhl",
+   "kind": "illustration",
+   "display": {
+    "key": "6.9.14"
+   },
+   "figma": {
+    "nodeId": "5755:166315",
+    "page": "CCNA3 · 06 nat-for-ipv4"
+   },
+   "out": {
+    "path": "06-nat-for-ipv4/06.09-exam/assets/14.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "14.png"
+   },
+   "notes": "намеренный дубль экспорта (kb#318, вариант 1): тот же фрейм 5755:166315, что у ccna3-z2os3c6 (final-exam/assets/9.svg); каждая папка экзамена самодостаточна — не сворачивать при дедупликации (kb#242)"
   },
   {
    "id": "ccna3-5jxw3y4",
@@ -8602,6 +8661,65 @@
      "sha256": "b7001f1874d055620a82adb5d2e9c4a076f9f35c5ac7134bf49628b6c5f3325e"
     }
    }
+  },
+  {
+   "id": "ccna3-6bk5wij",
+   "kind": "illustration",
+   "display": {
+    "key": "15.0.7"
+   },
+   "figma": {
+    "nodeId": "5557:15193",
+    "page": "CCNA3 · 03 network-security-concepts"
+   },
+   "out": {
+    "path": "final-exam/assets/7.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "7.png"
+   },
+   "notes": "намеренный дубль экспорта (kb#318, вариант 1): тот же фрейм 5557:15193, что у ccna3-rmgqxsl (04-acl-concepts/04.05-exam/assets/4.svg); каждая папка экзамена самодостаточна — не сворачивать при дедупликации (kb#242)"
+  },
+  {
+   "id": "ccna3-5o5erty",
+   "kind": "illustration",
+   "display": {
+    "key": "15.0.8"
+   },
+   "figma": {
+    "nodeId": "5755:166614",
+    "page": "CCNA3 · 14 network-automation"
+   },
+   "out": {
+    "path": "final-exam/assets/8.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "8.JPG"
+   }
+  },
+  {
+   "id": "ccna3-z2os3c6",
+   "kind": "illustration",
+   "display": {
+    "key": "15.0.9"
+   },
+   "figma": {
+    "nodeId": "5755:166315",
+    "page": "CCNA3 · 06 nat-for-ipv4"
+   },
+   "out": {
+    "path": "final-exam/assets/9.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "9.png"
+   },
+   "notes": "намеренный дубль экспорта (kb#318, вариант 1): тот же фрейм 5755:166315, что у ccna3-azdvmhl (06-nat-for-ipv4/06.09-exam/assets/14.svg); каждая папка экзамена самодостаточна — не сворачивать при дедупликации (kb#242)"
   }
  ]
 }
