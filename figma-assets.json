@@ -1344,6 +1344,7 @@
   },
   {
    "id": "ccna3-hn4u2ok",
+   "ref": "ccna1-ngydcy4",
    "kind": "illustration",
    "display": {
     "key": "3.5.5-3"
@@ -1866,6 +1867,7 @@
   },
   {
    "id": "ccna3-nyr32s4",
+   "ref": "ccna2-pdnjf2k",
    "kind": "illustration",
    "display": {
     "key": "3.8.7-3"
@@ -2047,6 +2049,7 @@
   },
   {
    "id": "ccna3-fqdeldn",
+   "ref": "ccna2-57cy3es",
    "kind": "illustration",
    "display": {
     "key": "3.9.5-2"
