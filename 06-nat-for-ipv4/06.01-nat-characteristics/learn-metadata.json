@@ -34,24 +34,29 @@
     "passingScore": 100,
     "questions": [
         {
+            "questionId": "q01",
             "question": "![](./assets/6.1.5.png) Посмотрите на изображение. Каким типом NAT-адреса является IP-адрес PC1 (192.168.10.10)?",
             "answerType": "singleChoice",
             "answers": [
                 {
+                    "answerId": "q01-a1",
                     "answer": "внешний локальный",
                     "correct": false,
                     "comment": "IPv4-адрес PC1 является внутренним локальным адресом NAT"
                 },
                 {
+                    "answerId": "q01-a2",
                     "answer": "внутренний локальный",
                     "correct": true
                 },
                 {
+                    "answerId": "q01-a3",
                     "answer": "внешний глобальный",
                     "correct": false,
                     "comment": "IPv4-адрес PC1 является внутренним локальным адресом NAT"
                 },
                 {
+                    "answerId": "q01-a4",
                     "answer": "внутренний глобальный",
                     "correct": false,
                     "comment": "IPv4-адрес PC1 является внутренним локальным адресом NAT"
@@ -59,49 +64,59 @@
             ]
         },
         {
+            "questionId": "q02",
             "question": "![](./assets/6.1.5.png) Посмотрите на изображение. В какой тип адреса был переведен адрес IPv4 для PC1 (209.165.200.226)?",
             "answerType": "singleChoice",
             "answers": [
                 {
+                    "answerId": "q02-a1",
                     "answer": "внешний локальный",
                     "correct": false,
                     "comment": "R1 преобразует адрес IPv4 для PC1 во внутренний глобальный адрес NAT"
                 },
                 {
+                    "answerId": "q02-a2",
                     "answer": "внутренний локальный",
                     "correct": false,
                     "comment": "R1 преобразует адрес IPv4 для PC1 во внутренний глобальный адрес NAT"
                 },
                 {
+                    "answerId": "q02-a3",
                     "answer": "внешний глобальный",
                     "correct": false,
                     "comment": "R1 преобразует адрес IPv4 для PC1 во внутренний глобальный адрес NAT"
                 },
                 {
+                    "answerId": "q02-a4",
                     "answer": "внутренний глобальный",
                     "correct": true
                 }
             ]
         },
         {
+            "questionId": "q03",
             "question": "![](./assets/6.1.5.png) Посмотрите на изображение. Каким типом NAT-адреса является IP-адрес веб-сервера (209.165.201.10)?",
             "answerType": "singleChoice",
             "answers": [
                 {
+                    "answerId": "q03-a1",
                     "answer": "внешний локальный",
                     "correct": false,
                     "comment": "IPv4-адрес удаленного веб-сервера является внешним глобальным адресом NAT"
                 },
                 {
+                    "answerId": "q03-a2",
                     "answer": "внутренний локальный",
                     "correct": false,
                     "comment": "IPv4-адрес удаленного веб-сервера является внешним глобальным адресом NAT"
                 },
                 {
+                    "answerId": "q03-a3",
                     "answer": "внешний глобальный",
                     "correct": true
                 },
                 {
+                    "answerId": "q03-a4",
                     "answer": "внутренний глобальный",
                     "correct": false,
                     "comment": "IPv4-адрес удаленного веб-сервера является внешним глобальным адресом NAT"

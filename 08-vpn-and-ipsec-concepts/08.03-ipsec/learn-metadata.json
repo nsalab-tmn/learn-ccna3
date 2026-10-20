@@ -37,66 +37,80 @@
     "passingScore": 100,
     "questions": [
         {
+            "questionId": "q01",
             "question": "На каких уровнях OSI IPsec может защитить трафик? (верны четыре варианта)",
             "answerType": "multiChoice",
             "answers": [
                 {
+                    "answerId": "q01-a1",
                     "answer": "уровень 1",
                     "correct": false,
                     "comment": "IPsec может защитить трафик от 4 до 7 уровня"
                 },
                 {
+                    "answerId": "q01-a2",
                     "answer": "уровень 2",
                     "correct": false,
                     "comment": "IPsec может защитить трафик от 4 до 7 уровня"
                 },
                 {
+                    "answerId": "q01-a3",
                     "answer": "уровень 3",
                     "correct": false,
                     "comment": "IPsec может защитить трафик от 4 до 7 уровня"
                 },
                 {
+                    "answerId": "q01-a4",
                     "answer": "уровень 4",
                     "correct": true
                 },
                 {
+                    "answerId": "q01-a5",
                     "answer": "уровень 5",
                     "correct": true
                 },
                 {
+                    "answerId": "q01-a6",
                     "answer": "уровень 6",
                     "correct": true
                 },
                 {
+                    "answerId": "q01-a7",
                     "answer": "уровень 7",
                     "correct": true
                 }
             ]
         },
         {
+            "questionId": "q02",
             "question": "Какая функция IPsec использует предустановленные ключи (PSK), цифровые сертификаты или сертификаты RSA?",
             "answerType": "singleChoice",
             "answers": [
                 {
+                    "answerId": "q02-a1",
                     "answer": "IPSec протокол",
                     "correct": false,
                     "comment": "Аутентификация использует предустановленные ключи (PSK), цифровые сертификаты или сертификаты RSA"
                 },
                 {
+                    "answerId": "q02-a2",
                     "answer": "конфиденциальность",
                     "correct": false,
                     "comment": "Аутентификация использует предустановленные ключи (PSK), цифровые сертификаты или сертификаты RSA"
                 },
                 {
+                    "answerId": "q02-a3",
                     "answer": "целостность",
                     "correct": false,
                     "comment": "Аутентификация использует предустановленные ключи (PSK), цифровые сертификаты или сертификаты RSA"
                 },
                 {
+                    "answerId": "q02-a4",
                     "answer": "аутентификация",
                     "correct": true
                 },
                 {
+                    "answerId": "q02-a5",
                     "answer": "алгоритм Диффи-Хеллмана",
                     "correct": false,
                     "comment": "Аутентификация использует предустановленные ключи (PSK), цифровые сертификаты или сертификаты RSA"
@@ -104,53 +118,64 @@
             ]
         },
         {
+            "questionId": "q03",
             "question": "Верно ли утверждение, что платформа IPsec должна обновляться каждый раз при разработке нового стандарта?",
             "answerType": "singleChoice",
             "answers": [
                 {
+                    "answerId": "q03-a1",
                     "answer": "верно",
                     "correct": false,
                     "comment": "Для обеспечения безопасной связи протокол IPsec не привязан ни к каким специальным правилам. Благодаря такой гибкости структуры IPsec может легко интегрировать новые технологии обеспечения безопасности без обновления существующих стандартов IPsec."
                 },
                 {
+                    "answerId": "q03-a2",
                     "answer": "неверно",
                     "correct": true
                 }
             ]
         },
         {
+            "questionId": "q04",
             "question": "Какие варианты инкапсуляции пакетов поддерживает IPsec? (верны два варианта)",
             "answerType": "multiChoice",
             "answers": [
                 {
+                    "answerId": "q04-a1",
                     "answer": "AES",
                     "correct": false,
                     "comment": "Для инкапсуляции пакетов IPsec может использовать AH, ESP или AH + ESP"
                 },
                 {
+                    "answerId": "q04-a2",
                     "answer": "AH",
                     "correct": true
                 },
                 {
+                    "answerId": "q04-a3",
                     "answer": "DH24",
                     "correct": false,
                     "comment": "Для инкапсуляции пакетов IPsec может использовать AH, ESP или AH + ESP"
                 },
                 {
+                    "answerId": "q04-a4",
                     "answer": "ESP",
                     "correct": true
                 },
                 {
+                    "answerId": "q04-a5",
                     "answer": "PSK",
                     "correct": false,
                     "comment": "Для инкапсуляции пакетов IPsec может использовать AH, ESP или AH + ESP"
                 },
                 {
+                    "answerId": "q04-a6",
                     "answer": "использование RSA",
                     "correct": false,
                     "comment": "Для инкапсуляции пакетов IPsec может использовать AH, ESP или AH + ESP"
                 },
                 {
+                    "answerId": "q04-a7",
                     "answer": "SHA",
                     "correct": false,
                     "comment": "Для инкапсуляции пакетов IPsec может использовать AH, ESP или AH + ESP"
@@ -158,37 +183,45 @@
             ]
         },
         {
+            "questionId": "q05",
             "question": "Какие варианты доступны для функции обеспечения конфиденциальности в структуре IPsec? (верны три варианта)",
             "answerType": "multiChoice",
             "answers": [
                 {
+                    "answerId": "q05-a1",
                     "answer": "3DES",
                     "correct": true
                 },
                 {
+                    "answerId": "q05-a2",
                     "answer": "AES",
                     "correct": true
                 },
                 {
+                    "answerId": "q05-a3",
                     "answer": "AH",
                     "correct": false,
                     "comment": "Функция обеспечения конфиденциальности в структуре IPsec может использовать 3DES, AES и SEAL. Также для этого может использоваться DES, хотя DES больше не рекомендуется."
                 },
                 {
+                    "answerId": "q05-a4",
                     "answer": "DH24",
                     "correct": false,
                     "comment": "Функция обеспечения конфиденциальности в структуре IPsec может использовать 3DES, AES и SEAL. Также для этого может использоваться DES, хотя DES больше не рекомендуется."
                 },
                 {
+                    "answerId": "q05-a5",
                     "answer": "PSK",
                     "correct": false,
                     "comment": "Функция обеспечения конфиденциальности в структуре IPsec может использовать 3DES, AES и SEAL. Также для этого может использоваться DES, хотя DES больше не рекомендуется."
                 },
                 {
+                    "answerId": "q05-a6",
                     "answer": "SEAL",
                     "correct": true
                 },
                 {
+                    "answerId": "q05-a7",
                     "answer": "SHA",
                     "correct": false,
                     "comment": "Функция обеспечения конфиденциальности в структуре IPsec может использовать 3DES, AES и SEAL. Также для этого может использоваться DES, хотя DES больше не рекомендуется."
@@ -196,77 +229,93 @@
             ]
         },
         {
+            "questionId": "q06",
             "question": "Какие варианты доступны для функции обеспечения целостности в структуре IPsec? (верны два варианта)",
             "answerType": "multiChoice",
             "answers": [
                 {
+                    "answerId": "q06-a1",
                     "answer": "AES",
                     "correct": false,
                     "comment": "Функция обеспечения целостности структуры IPsec может использовать MD5 и SHA"
                 },
                 {
+                    "answerId": "q06-a2",
                     "answer": "AH",
                     "correct": false,
                     "comment": "Функция обеспечения целостности структуры IPsec может использовать MD5 и SHA"
                 },
                 {
+                    "answerId": "q06-a3",
                     "answer": "DH24",
                     "correct": false,
                     "comment": "Функция обеспечения целостности структуры IPsec может использовать MD5 и SHA"
                 },
                 {
+                    "answerId": "q06-a4",
                     "answer": "MD5",
                     "correct": true
                 },
                 {
+                    "answerId": "q06-a5",
                     "answer": "PSK",
                     "correct": false,
                     "comment": "Функция обеспечения целостности структуры IPsec может использовать MD5 и SHA"
                 },
                 {
+                    "answerId": "q06-a6",
                     "answer": "SEAL",
                     "correct": false,
                     "comment": "Функция обеспечения целостности структуры IPsec может использовать MD5 и SHA"
                 },
                 {
+                    "answerId": "q06-a7",
                     "answer": "SHA",
                     "correct": true
                 }
             ]
         },
         {
+            "questionId": "q07",
             "question": "Какие варианты доступны для функции аутентификации в структуре IPsec? (верны два варианта)",
             "answerType": "multiChoice",
             "answers": [
                 {
+                    "answerId": "q07-a1",
                     "answer": "AES",
                     "correct": false,
                     "comment": "Функция аутентификации структуры IPsec может использовать PSK и RSA"
                 },
                 {
+                    "answerId": "q07-a2",
                     "answer": "AH",
                     "correct": false,
                     "comment": "Функция аутентификации структуры IPsec может использовать PSK и RSA"
                 },
                 {
+                    "answerId": "q07-a3",
                     "answer": "DH24",
                     "correct": false,
                     "comment": "Функция аутентификации структуры IPsec может использовать PSK и RSA"
                 },
                 {
+                    "answerId": "q07-a4",
                     "answer": "PSK",
                     "correct": true
                 },
                 {
+                    "answerId": "q07-a5",
                     "answer": "RSA",
                     "correct": true
                 },
                 {
+                    "answerId": "q07-a6",
                     "answer": "SEAL",
                     "correct": false,
                     "comment": "Функция аутентификации структуры IPsec может использовать PSK и RSA"
                 },
                 {
+                    "answerId": "q07-a7",
                     "answer": "SHA",
                     "correct": false,
                     "comment": "Функция аутентификации структуры IPsec может использовать PSK и RSA"
@@ -274,19 +323,23 @@
             ]
         },
         {
+            "questionId": "q08",
             "question": "Выбор какой группы Диффи-Хеллмана больше не рекомендуется?",
             "answerType": "singleChoice",
             "answers": [
                 {
+                    "answerId": "q08-a1",
                     "answer": "группы DH 1, 2 и 5",
                     "correct": true
                 },
                 {
+                    "answerId": "q08-a2",
                     "answer": "группы DH 14, 15 и 16",
                     "correct": false,
                     "comment": "Группы DH 1, 2 и 5 больше не должны использоваться"
                 },
                 {
+                    "answerId": "q08-a3",
                     "answer": "группы DH 19, 20, 21 и 24",
                     "correct": false,
                     "comment": "Группы DH 1, 2 и 5 больше не должны использоваться"
