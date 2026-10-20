@@ -8012,9 +8012,14 @@
     "path": "11-network-design/11.03-switch-hardware/assets/11.3.1-1.svg",
     "format": "svg"
    },
-   "status": "pending",
+   "status": "synced",
    "provenance": {
-    "legacy": "11.3.1-1.png"
+    "legacy": "11.3.1-1.png",
+    "synced": {
+     "figmaVersion": "2412250511552610057",
+     "at": "2026-10-20T02:37:20Z",
+     "sha256": "ceb2d45c50fc28c1eabebb49be8e17e68533eb078dfa61500da98ae9c488d1d4"
+    }
    }
   },
   {
@@ -8031,9 +8036,14 @@
     "path": "11-network-design/11.03-switch-hardware/assets/11.3.1-2.svg",
     "format": "svg"
    },
-   "status": "pending",
+   "status": "synced",
    "provenance": {
-    "legacy": "11.3.1-2.jpg"
+    "legacy": "11.3.1-2.jpg",
+    "synced": {
+     "figmaVersion": "2412250511552610057",
+     "at": "2026-10-20T02:37:20Z",
+     "sha256": "4cf433141ebef589e0ff31dede9bd47fe624c9164568604a3af6cb5fd4e1108b"
+    }
    }
   },
   {
@@ -8062,9 +8072,14 @@
     "path": "11-network-design/11.03-switch-hardware/assets/11.3.2-1.svg",
     "format": "svg"
    },
-   "status": "pending",
+   "status": "synced",
    "provenance": {
-    "legacy": "11.3.2-1.jpg"
+    "legacy": "11.3.2-1.jpg",
+    "synced": {
+     "figmaVersion": "2412250511552610057",
+     "at": "2026-10-20T02:37:20Z",
+     "sha256": "78c9bcc5b21dc3475c25e8aecee182b958ba21fd0b8bb8434125252ed076d9b3"
+    }
    }
   },
   {
@@ -8081,9 +8096,14 @@
     "path": "11-network-design/11.03-switch-hardware/assets/11.3.2-2.svg",
     "format": "svg"
    },
-   "status": "pending",
+   "status": "synced",
    "provenance": {
-    "legacy": "11.3.2-2.png"
+    "legacy": "11.3.2-2.png",
+    "synced": {
+     "figmaVersion": "2412250511552610057",
+     "at": "2026-10-20T02:37:20Z",
+     "sha256": "cb0fa3275bff493b765f8ead9e4e0284fdaaa7933b37f06c913cd7909ae84d7a"
+    }
    }
   },
   {
@@ -8100,9 +8120,14 @@
     "path": "11-network-design/11.03-switch-hardware/assets/11.3.2-3.svg",
     "format": "svg"
    },
-   "status": "pending",
+   "status": "synced",
    "provenance": {
-    "legacy": "11.3.2-3.png"
+    "legacy": "11.3.2-3.png",
+    "synced": {
+     "figmaVersion": "2412250511552610057",
+     "at": "2026-10-20T02:37:20Z",
+     "sha256": "2477a0a6ea6b7d9d7b4eea7373d8a762d0de6bf79c9a562cae7261e96994b0a9"
+    }
    }
   },
   {
@@ -8119,9 +8144,14 @@
     "path": "11-network-design/11.03-switch-hardware/assets/11.3.2-4.svg",
     "format": "svg"
    },
-   "status": "pending",
+   "status": "synced",
    "provenance": {
-    "legacy": "11.3.2-4.png"
+    "legacy": "11.3.2-4.png",
+    "synced": {
+     "figmaVersion": "2412250511552610057",
+     "at": "2026-10-20T02:37:20Z",
+     "sha256": "341f61c47d47c9450fe2ad26584c051da43cde6d6be098c9c623d8e770a71f83"
+    }
    }
   },
   {
@@ -8138,9 +8168,14 @@
     "path": "11-network-design/11.03-switch-hardware/assets/11.3.3-1.svg",
     "format": "svg"
    },
-   "status": "pending",
+   "status": "synced",
    "provenance": {
-    "legacy": "11.3.3-1.jpg"
+    "legacy": "11.3.3-1.jpg",
+    "synced": {
+     "figmaVersion": "2412250511552610057",
+     "at": "2026-10-20T02:37:20Z",
+     "sha256": "aafb512d4d1e76d72c198d993e7c82f8e96092dec792a851651a743928f52c75"
+    }
    }
   },
   {
@@ -8157,10 +8192,15 @@
     "path": "11-network-design/11.03-switch-hardware/assets/11.3.3-2.svg",
     "format": "svg"
    },
-   "status": "pending",
+   "status": "synced",
    "provenance": {
     "netacad": "c6d44531-1c46-11ea-af56-e368b99e9723",
-    "legacy": "11.3.3-2.png"
+    "legacy": "11.3.3-2.png",
+    "synced": {
+     "figmaVersion": "2412250511552610057",
+     "at": "2026-10-20T02:37:20Z",
+     "sha256": "1c184c242377078198108f74a2a080792a18ba928d714a4963889d8227af3ab9"
+    }
    }
   },
   {
@@ -8177,10 +8217,15 @@
     "path": "11-network-design/11.03-switch-hardware/assets/11.3.5-1.svg",
     "format": "svg"
    },
-   "status": "pending",
+   "status": "synced",
    "provenance": {
     "netacad": "c6d50881-1c46-11ea-af56-e368b99e9723",
-    "legacy": "11.3.5-1.png"
+    "legacy": "11.3.5-1.png",
+    "synced": {
+     "figmaVersion": "2412250511552610057",
+     "at": "2026-10-20T02:37:20Z",
+     "sha256": "5ad44f6980f7231346bd6c28849693cb4c1f80de51198fa709f1374d7fa3d4f7"
+    }
    }
   },
   {
@@ -8242,10 +8287,15 @@
     "path": "11-network-design/11.04-router-hardware/assets/11.4.2-3.svg",
     "format": "svg"
    },
-   "status": "pending",
+   "status": "synced",
    "provenance": {
     "netacad": "c6da1190-1c46-11ea-af56-e368b99e9723",
-    "legacy": "11.4.2-3.png"
+    "legacy": "11.4.2-3.png",
+    "synced": {
+     "figmaVersion": "2412250511552610057",
+     "at": "2026-10-20T02:37:20Z",
+     "sha256": "9fbc772b4c8925a52c4a9f61f6fd3ce78fe34bbf0f14f81a1af85b3e1c7ed6f0"
+    }
    }
   },
   {
@@ -8262,9 +8312,14 @@
     "path": "11-network-design/11.04-router-hardware/assets/11.4.2-4.svg",
     "format": "svg"
    },
-   "status": "pending",
+   "status": "synced",
    "provenance": {
-    "legacy": "11.4.2-4.jpg"
+    "legacy": "11.4.2-4.jpg",
+    "synced": {
+     "figmaVersion": "2412250511552610057",
+     "at": "2026-10-20T02:37:20Z",
+     "sha256": "c11066e07de415d2a95921d25532be8f042bd67612010586f5e73083d6d21c7b"
+    }
    }
   },
   {
@@ -8281,9 +8336,14 @@
     "path": "11-network-design/11.04-router-hardware/assets/11.4.3-1.svg",
     "format": "svg"
    },
-   "status": "pending",
+   "status": "synced",
    "provenance": {
-    "legacy": "11.4.3-1.png"
+    "legacy": "11.4.3-1.png",
+    "synced": {
+     "figmaVersion": "2412250511552610057",
+     "at": "2026-10-20T02:37:20Z",
+     "sha256": "8df16092a84ce0ec1dbd8303c5911c9b7a01f83d54e93be0c468a28c0745e64d"
+    }
    }
   },
   {
@@ -8300,9 +8360,14 @@
     "path": "11-network-design/11.04-router-hardware/assets/11.4.3-2.svg",
     "format": "svg"
    },
-   "status": "pending",
+   "status": "synced",
    "provenance": {
-    "legacy": "11.4.3-2.png"
+    "legacy": "11.4.3-2.png",
+    "synced": {
+     "figmaVersion": "2412250511552610057",
+     "at": "2026-10-20T02:37:20Z",
+     "sha256": "4c93aada28cd48e9d856bf48b327d06eb3553f6c148b50b40f83ac346c383a52"
+    }
    }
   },
   {
@@ -8319,9 +8384,14 @@
     "path": "11-network-design/11.04-router-hardware/assets/11.4.3-3.svg",
     "format": "svg"
    },
-   "status": "pending",
+   "status": "synced",
    "provenance": {
-    "legacy": "11.4.3-3.png"
+    "legacy": "11.4.3-3.png",
+    "synced": {
+     "figmaVersion": "2412250511552610057",
+     "at": "2026-10-20T02:37:20Z",
+     "sha256": "9acf80317c3d8334065bb21e1276c52ebac23d447af6c8d85c6585de3785da30"
+    }
    }
   },
   {
@@ -8338,9 +8408,14 @@
     "path": "11-network-design/11.04-router-hardware/assets/11.4.3-4.svg",
     "format": "svg"
    },
-   "status": "pending",
+   "status": "synced",
    "provenance": {
-    "legacy": "11.4.3-4.png"
+    "legacy": "11.4.3-4.png",
+    "synced": {
+     "figmaVersion": "2412250511552610057",
+     "at": "2026-10-20T02:37:20Z",
+     "sha256": "066bd7b140d6e85c496369b30772fcaa86d9f33dac7633539547ef2364535734"
+    }
    }
   },
   {
