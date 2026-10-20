@@ -8048,15 +8048,22 @@
   },
   {
    "id": "ccna3-3p6y6wb",
-   "kind": "native",
+   "kind": "illustration",
    "display": {
     "key": "11.3.1-5"
    },
-   "out": {
-    "path": "11-network-design/11.03-switch-hardware/assets/11.3.1-5.png",
-    "format": "native"
+   "figma": {
+    "nodeId": "5755:166132",
+    "page": "CCNA3 · 11 network-design"
    },
-   "status": "manual"
+   "out": {
+    "path": "11-network-design/11.03-switch-hardware/assets/11.3.1-5.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "11.3.1-5.png"
+   }
   },
   {
    "id": "ccna3-fpufprq",
@@ -8230,47 +8237,62 @@
   },
   {
    "id": "ccna3-mof4gqn",
-   "kind": "native",
+   "kind": "illustration",
    "display": {
     "key": "11.3.5-2"
    },
-   "out": {
-    "path": "11-network-design/11.03-switch-hardware/assets/11.3.5-2.png",
-    "format": "native"
+   "figma": {
+    "nodeId": "5755:167520",
+    "page": "CCNA3 · 11 network-design"
    },
-   "status": "manual",
+   "out": {
+    "path": "11-network-design/11.03-switch-hardware/assets/11.3.5-2.svg",
+    "format": "svg"
+   },
+   "status": "pending",
    "provenance": {
-    "netacad": "c6d556a1-1c46-11ea-af56-e368b99e9723"
+    "netacad": "c6d556a1-1c46-11ea-af56-e368b99e9723",
+    "legacy": "11.3.5-2.png"
    }
   },
   {
    "id": "ccna3-pdemrf5",
-   "kind": "native",
+   "kind": "illustration",
    "display": {
     "key": "11.3.5-3"
    },
-   "out": {
-    "path": "11-network-design/11.03-switch-hardware/assets/11.3.5-3.png",
-    "format": "native"
+   "figma": {
+    "nodeId": "5755:165921",
+    "page": "CCNA3 · 11 network-design"
    },
-   "status": "manual",
+   "out": {
+    "path": "11-network-design/11.03-switch-hardware/assets/11.3.5-3.svg",
+    "format": "svg"
+   },
+   "status": "pending",
    "provenance": {
-    "netacad": "c6d5cbd2-1c46-11ea-af56-e368b99e9723"
+    "netacad": "c6d5cbd2-1c46-11ea-af56-e368b99e9723",
+    "legacy": "11.3.5-3.png"
    }
   },
   {
    "id": "ccna3-qdiyuld",
-   "kind": "native",
+   "kind": "illustration",
    "display": {
     "key": "11.3.5-4"
    },
-   "out": {
-    "path": "11-network-design/11.03-switch-hardware/assets/11.3.5-4.png",
-    "format": "native"
+   "figma": {
+    "nodeId": "5755:166403",
+    "page": "CCNA3 · 11 network-design"
    },
-   "status": "manual",
+   "out": {
+    "path": "11-network-design/11.03-switch-hardware/assets/11.3.5-4.svg",
+    "format": "svg"
+   },
+   "status": "pending",
    "provenance": {
-    "netacad": "c6d64100-1c46-11ea-af56-e368b99e9723"
+    "netacad": "c6d64100-1c46-11ea-af56-e368b99e9723",
+    "legacy": "11.3.5-4.png"
    }
   },
   {
@@ -8540,15 +8562,22 @@
   },
   {
    "id": "ccna3-qn72ud4",
-   "kind": "native",
+   "kind": "illustration",
    "display": {
     "key": "14.6.4"
    },
-   "out": {
-    "path": "14-network-automation/14.06-ibn-and-cisco-dna-center/assets/14.6.4.jpg",
-    "format": "native"
+   "figma": {
+    "nodeId": "5755:167406",
+    "page": "CCNA3 · 14 network-automation"
    },
-   "status": "manual"
+   "out": {
+    "path": "14-network-automation/14.06-ibn-and-cisco-dna-center/assets/14.6.4.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "14.6.4.jpg"
+   }
   },
   {
    "id": "ccna3-s37724j",
