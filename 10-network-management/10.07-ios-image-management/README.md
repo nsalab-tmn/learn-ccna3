@@ -26,7 +26,7 @@
 
 Чтобы обслуживать сеть с минимальным временем простоя, необходимо вовремя создавать резервные копии образов ОС. Тогда сетевые администраторы смогут быстро восстановить стертый или поврежденный образ ОС.
 
-На рисунке администратор сети хочет создать резервную копию текущего файла образа на маршрутизаторе (isr4200-universalk9\ _ias.16.09.04.SPA.bin) на сервере TFTP по адресу 172.16.1.100.
+Администратор сети хочет создать резервную копию текущего файла образа маршрутизатора R1 (nr02-netos-0.1.0.bin) на TFTP-сервере по адресу 172.16.1.100.
 
 ![](./assets/10.7.3.svg)
 <!-- /courses/ensa-dl/ae8eb392-34fd-11eb-ba19-f1886492e0e4/aeb611b0-34fd-11eb-ba19-f1886492e0e4/assets/c6bf84b3-1c46-11ea-af56-e368b99e9723.svg -->
@@ -40,24 +40,26 @@
 Убедитесь в доступности TFTP-сервера. Как показано в примере, отправьте эхо-запрос на TFTP-сервер для проверки подключения.
 
 ```
-R1# ping 172.16.1.100
+R1#ping 172.16.1.100
 Type escape sequence to abort.
 Sending 5, 100-byte ICMP Echos to 172.16.1.100, timeout is 2 seconds:
 !!!!!
-Success rate is 100 percent (5/5),
-round-trip min/avg/max = 56/56/56 ms
+Success rate is 100 percent (5/5), round-trip min/avg/max = 1/2/4 ms
+R1#
 ```
 
 **Шаг 2. Проверьте размер образа на флэш-памяти.**
 
-Убедитесь, что на диске TFTP-сервера достаточно места для размещения образа ОС. Определить размер файла образа ОС можно с помощью команды **show flash0:** на маршрутизаторе. Длина файла на примере составляет 517153193 байт.
+Убедитесь, что на диске TFTP-сервера достаточно места для размещения образа ОС. Определить размер файла образа ОС можно с помощью команды **show flash:** на маршрутизаторе. Длина файла в примере — 417290496 байт.
 
 ```
-R1# show flash0: 
--# - --length-- -----date/time------ path
-8 517153193 Apr 2 2019 21:29:58 +00:00 
-                        isr4200-universalk9_ias.16.09.04.SPA.bin
-(дальше выходные данные опущены)
+R1#show flash:
+System flash directory:
+File  Length   Name/status
+  1   417290496 nr02-netos-0.1.0.bin
+[417290496 bytes used, 2806261312 available, 3223551808 total]
+3147999K bytes of processor board System flash (Read/Write)
+R1#
 ```
 
 **Шаг 3. Скопируйте образ на TFTP-сервер.**
@@ -65,22 +67,23 @@ R1# show flash0:
 Скопируйте образ на TFTP-сервер с помощью команды **copy** _source-url destination-url_. После выполнения команды с использованием заданных URL-адресов источника и получателя пользователь получит запрос на ввод имени файла отправителя, адреса удаленного узла и имени файла назначения. Как правило, вы вводите **Enter** , чтобы принять имя исходного файла в качестве имени файла назначения. После этого начнется передача.
 
 ```
-R1# copy flash: tftp: 
-Source filename []? isr4200-universalk9_ias.16.09.04.SPA.bin
+R1#copy flash: tftp:
+Source filename []? nr02-netos-0.1.0.bin
 Address or name of remote host []? 172.16.1.100
-Destination filename [isr4200-universalk9_ias.16.09.04.SPA.bin]? <Enter>
-Writing isr4200-universalk9_ias.16.09.04.SPA.bin...
-!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! 
-(дальше выходные данные опущены)
-517153193 bytes copied in 863.468 secs (269058 bytes/sec)
+Destination filename [nr02-netos-0.1.0.bin]?
+Writing nr02-netos-0.1.0.bin...!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+[OK - 417290496 bytes]
+
+417290496 bytes copied in 417.290 secs (1000000 bytes/sec)
+R1#
 ```
 
 <!-- 10.7.4 -->
 ## Пример копирования образа ОС на устройство
 
-Производители сетевого оборудования постоянно выпускают новые версии ОС, чтобы устранить ошибки и предложить новые функции. В этом примере для передачи используется IPv6 для демонстрации того, что TFTP может использоваться в IPv6-сетях.
+Производители сетевого оборудования постоянно выпускают новые версии ОС, чтобы устранить ошибки и предложить новые функции. TFTP работает и в сетях IPv6: вместо IPv4-адреса сервера в команде указывается его IPv6-адрес. В этом примере используется тот же TFTP-сервер, что и для резервного копирования.
 
-На рисунке показан процесс копирования образа ОС с TFTP-сервера. Новый файл образа (isr4200-universalk9\_ias.16.09.04.SPA.bin) будет скопирован на маршрутизатор с TFTP-сервера по адресу 2001:DB8:CAFE:100::99.
+Новый файл образа ОС (nr02-netos-0.2.0.bin) копируется на маршрутизатор с TFTP-сервера по адресу 172.16.1.100.
 
 ![](./assets/10.7.4.svg)
 <!-- /courses/ensa-dl/ae8eb392-34fd-11eb-ba19-f1886492e0e4/aeb611b0-34fd-11eb-ba19-f1886492e0e4/assets/c6c020f2-1c46-11ea-af56-e368b99e9723.svg -->
@@ -94,24 +97,25 @@ Writing isr4200-universalk9_ias.16.09.04.SPA.bin...
 Убедитесь в доступности TFTP-сервера. Как показано в примере, отправьте на него эхо-запрос для проверки подключения.
 
 ```
-R1# ping 2001:db8:cafe:100::99
+R1#ping 172.16.1.100
 Type escape sequence to abort.
-Sending 5, 100-byte ICMP Echos to 2001:DB8:CAFE:100::99,
-timeout is 2 seconds:
+Sending 5, 100-byte ICMP Echos to 172.16.1.100, timeout is 2 seconds:
 !!!!!
-Success rate is 100 percent (5/5), 
-round-trip min/avg/max = 56/56/56 ms
+Success rate is 100 percent (5/5), round-trip min/avg/max = 1/2/4 ms
+R1#
 ```
 
 **Шаг 2. Проверьте количество свободной флеш-памяти.**
 
-Убедитесь, что на маршрутизаторе достаточно свободной флеш-памяти. Ее объем можно проверить командой **show flash:**. Сравните свободный объем с размером нового файла образа. В примере команда **show flash:** используется для проверки свободной флеш-памяти. Объем свободной флеш-памяти составляет 6294806528 байт.
+Убедитесь, что на маршрутизаторе достаточно свободной флеш-памяти. Ее объем можно проверить командой **show flash:**. Сравните свободный объем с размером нового файла образа. В примере команда **show flash:** используется для проверки свободной флеш-памяти. Объем свободной флеш-памяти составляет 2806261312 байт.
 
 ```
-R1# show flash: 
--# - --length-- -----date/time------ path
-(дальше выходные данные опущены)
-6294806528 bytes available (537251840 bytes used) 
+R1#show flash:
+System flash directory:
+File  Length   Name/status
+  1   417290496 nr02-netos-0.1.0.bin
+[417290496 bytes used, 2806261312 available, 3223551808 total]
+3147999K bytes of processor board System flash (Read/Write)
 R1#
 ```
 
@@ -120,18 +124,16 @@ R1#
 Скопируйте файл образа ОС с TFTP-сервера на маршрутизатор с помощью команды **copy**, показанной в примере. После выполнения этой команды с указанными URL-адресами источника и назначения пользователь получит запрос на ввод IP-адреса удаленного узла, имен файлов источника и назначения. Как правило, вы вводите **Enter**, чтобы принять имя исходного файла в качестве имени файла назначения. После этого начнется передача файла.
 
 ```
-R1# copy tftp: flash: 
-Address or name of remote host []?2001:DB8:CAFE:100::99
-Source filename []? isr4200-universalk9_ias.16.09.04.SPA.bin
-Destination filename [isr4200-universalk9_ias.16.09.04.SPA.bin]? <Enter>
-Accessing tftp://2001:DB8:CAFE:100::99/ isr4200-
-universalk9_ias.16.09.04.SPA.bin...
-Loading isr4200-universalk9_ias.16.09.04.SPA.bin
-from 2001:DB8:CAFE:100::99 (via
-GigabitEthernet0/0/0): !!!!!!!!!!!!!!!!!!!!
- 
-[OK - 517153193 bytes]
-517153193 bytes copied in 868.128 secs (265652 bytes/sec)
+R1#copy tftp: flash:
+Address or name of remote host []? 172.16.1.100
+Source filename []? nr02-netos-0.2.0.bin
+Destination filename [nr02-netos-0.2.0.bin]?
+Accessing tftp://172.16.1.100/nr02-netos-0.2.0.bin...
+Loading nr02-netos-0.2.0.bin from 172.16.1.100: !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+[OK - 34201600 bytes]
+
+34201600 bytes copied in 34.202 secs (1000000 bytes/sec)
+R1#
 ```
 
 <!-- 10.7.5 -->
@@ -140,16 +142,18 @@ GigabitEthernet0/0/0): !!!!!!!!!!!!!!!!!!!!
 Чтобы установить скопированный образ ОС, когда он сохранен во флеш-памяти маршрутизатора, настройте маршрутизатор на загрузку нового образа во время запуска с помощью команды **boot system**, как показано в примере. Сохраните конфигурацию. Перезагрузите маршрутизатор, чтобы он загрузился с новым образом.
 
 ```
-R1# configure terminal
-R1(config)# boot system flash0:isr4200-universalk9_ias.16.09.04.SPA.bin
-R1(config)# exit
-R1#
-R1# copy running-config startup-config
-R1#
-R1# reload
-Proceed with reload? [confirm] 
-
-*Mar  1 12:46:23.808: %SYS-5-RELOAD: Reload requested by console. Reload Reason: Reload Command.
+R1#configure terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+R1(config)#boot system flash nr02-netos-0.2.0.bin
+R1(config)#exit
+*Mar  1 00:09:36.030: %SYS-5-CONFIG_I: Configured from console by console
+R1#copy running-config startup-config
+Destination filename [startup-config]?
+Building configuration...
+[OK]
+R1#reload
+Proceed with reload? [confirm]
+*Mar  1 00:09:36.030: %SYS-5-RELOAD: Reload requested by console. Reload Reason: Reload Command.
 ```
 
 После запуска маршрутизатора в файле загрузочной конфигурации (startup configuration) нужно найти команды **boot system** с указанными в них именем и расположением образа ОС, который нужно загрузить. Чтобы обеспечить отказоустойчивую загрузку, можно ввести несколько команд **boot system**.
@@ -159,26 +163,19 @@ Proceed with reload? [confirm]
 После загрузки маршрутизатора убедитесь, что новый образ загрузился. Используйте для этого команду **show version**, как показано в примере.
 
 ```
-R1# show version
-Cisco IOS XE Software, Version 16.09.04
-Cisco IOS Software [Fuji], ISR Software (X86_64_LINUX_IOSD-UNIVERSALK9_IAS-M), Version 16.9.4, RELEASE SOFTWARE (fc2)
-Technical Support: http://www.cisco.com/techsupport
-Copyright (c) 1986-2019 by Cisco Systems, Inc.
-Compiled Thu 22-Aug-19 18:09 by mcpre
-Cisco IOS-XE software, Copyright (c) 2005-2019 by cisco Systems, Inc.
-All rights reserved.  Certain components of Cisco IOS-XE software are
-licensed under the GNU General Public License ("GPL") Version 2.0.  The
-software code licensed under GPL Version 2.0 is free software that comes
-with ABSOLUTELY NO WARRANTY.  You can redistribute and/or modify such
-GPL code under the terms of GPL Version 2.0.  For more details, see the
-documentation or "License Notice" file accompanying the IOS-XE software,
-or the applicable URL provided on the flyer accompanying the IOS-XE
-software.
-   
-ROM: IOS-XE ROMMON
-Router uptime is 2 hours, 19 minutes
-Uptime for this control processor is 2 hours, 22 minutes
-System returned to ROM by PowerOn
-System image file is "flash:isr4200-universalk9_ias.16.09.04.SPA.bin"
-(output omitted)
+R1#show version
+NSALAB NetOS Software, NR02 Software (NR02-NETOS-M), Version 0.2.0, RELEASE SOFTWARE
+Copyright (c) 2026 NSALAB
+
+R1 uptime is 1 minute
+System returned to ROM by reload
+System image file is "flash0:nr02-netos-0.2.0.bin"
+
+NSALAB NR02 (revision 1.0) with 1048576K/6147K bytes of memory.
+Processor board ID NSA00000001
+2 Gigabit Ethernet interfaces
+256K bytes of non-volatile configuration memory.
+
+Configuration register is 0x2102
+R1#
 ```
