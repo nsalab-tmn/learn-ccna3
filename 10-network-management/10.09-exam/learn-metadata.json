@@ -166,7 +166,7 @@
                     "correct": false
                 }
             ],
-            "question": "Сетевой администратор настраивает маршрутизатор с помощью последовательности команд:\n\n```\nR1(config)# boot system tftp://c1900-universalk9-mz.SPA.152-4.M3.bin\nR1(config)# boot system rom\n```\n\nКаков результат этой последовательности?"
+            "question": "Сетевой администратор настраивает маршрутизатор с помощью последовательности команд:\n\n```\nR1(config)# boot system tftp://10.1.1.10/os-image.bin\nR1(config)# boot system rom\n```\n\nКаков результат этой последовательности?"
         },
         {
             "questionId": "q05",
