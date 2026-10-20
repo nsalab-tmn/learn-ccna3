@@ -503,7 +503,7 @@
                     "correct": true
                 }
             ],
-            "question": "![](./assets/11.PNG)\n\nПосмотрите на изображение.\n\nДля маршрутизатора была использована следующая конфигурация NAT:\n\n```\nERtr(config)# access-list 1 permit 10.0.0.0 0.255.255.255\nERtr(config)# ip nat pool corp 209.165.201.6 209.165.201.30 netmask 255.255.255.224\nERtr(config)# ip nat inside source list 1 pool corp overload\nERtr(config)# ip nat inside source static 10.10.10.55 209.165.201.4\nERtr(config)# interface gigabitethernet 0/0\nERtr(config-if)# ip nat inside\nERtr(config-if)# interface serial 0/0/0\nERtr(config-if)# ip nat outside\n```\n\nИсходя из конфигурации и показанных результатов, что можно сказать о состоянии NAT в организации?"
+            "question": "![](./assets/11.svg)\n\nПосмотрите на изображение.\n\nДля маршрутизатора была использована следующая конфигурация NAT:\n\n```\nERtr(config)# access-list 1 permit 10.0.0.0 0.255.255.255\nERtr(config)# ip nat pool corp 209.165.201.6 209.165.201.30 netmask 255.255.255.224\nERtr(config)# ip nat inside source list 1 pool corp overload\nERtr(config)# ip nat inside source static 10.10.10.55 209.165.201.4\nERtr(config)# interface gigabitethernet 0/0\nERtr(config-if)# ip nat inside\nERtr(config-if)# interface serial 0/0/0\nERtr(config-if)# ip nat outside\n```\n\nИсходя из конфигурации и показанных результатов, что можно сказать о состоянии NAT в организации?"
         },
         {
             "answerType": "multiChoice",
@@ -604,7 +604,7 @@
                     "correct": false
                 }
             ],
-            "question": "![](./assets/14.png)\n\nПосмотрите на изображение.\n\nR1 настроен для использования статического NAT. Какой IP-адрес будут использовать узлы в Интернете для доступа к PC1?"
+            "question": "![](./assets/14.svg)\n\nПосмотрите на изображение.\n\nR1 настроен для использования статического NAT. Какой IP-адрес будут использовать узлы в Интернете для доступа к PC1?"
         },
         {
             "answerType": "singleChoice",
