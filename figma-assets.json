@@ -8886,6 +8886,251 @@
      "sha256": "5152d7e1bc337d35a27dfe1f45c2d382f3633a45c0f64b423973004b111de28d"
     }
    }
+  },
+  {
+   "id": "ccna3-u3pcl7l",
+   "kind": "illustration",
+   "display": {
+    "key": "4.5.16"
+   },
+   "claim": "Маршрутизатор R2 подключен к Интернету и последовательными каналами — интерфейсом S0/0/0 к R1 и интерфейсом S0/0/1 к интерфейсу S0/0/1 маршрутизатора R3; к R1 через G0/0 подключена сеть 192.168.10.0/24 (коммутатор S1, PC1), через G0/1 — сеть 192.168.11.0/24 (коммутатор S2, PC2 с адресом 192.168.11.10), к R3 через G0/0 — сеть серверов 192.168.30.0/24 (коммутатор S3, сервер).",
+   "figma": {
+    "nodeId": "6021:9341",
+    "page": "CCNA3 · 04 acl-concepts"
+   },
+   "out": {
+    "path": "04-acl-concepts/04.05-exam/assets/16.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "16.jpg"
+   }
+  },
+  {
+   "id": "ccna3-kiv2tst",
+   "kind": "illustration",
+   "display": {
+    "key": "4.5.2"
+   },
+   "claim": "Маршрутизатор R1 подключен интерфейсом S0/0/1 к Интернету, последовательным каналом — к интерфейсу S0/0/1 маршрутизатора R2, интерфейсом Gi0/0 через коммутатор — к узлу H1; интерфейс Gi0/1 маршрутизатора R2 через коммутатор подключен к узлу H2.",
+   "figma": {
+    "nodeId": "6021:9521",
+    "page": "CCNA3 · 04 acl-concepts"
+   },
+   "out": {
+    "path": "04-acl-concepts/04.05-exam/assets/2.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "2.PNG"
+   }
+  },
+  {
+   "id": "ccna3-lajr675",
+   "kind": "illustration",
+   "display": {
+    "key": "5.6.1"
+   },
+   "claim": "Маршрутизаторы R1 и R2 соединены последовательным каналом; к R1 подключены сети на G0/0 192.168.10.1/26 (узел H1 192.168.10.9/26) и G0/1 192.168.10.65/26 (узел H2 192.168.10.69/26), к R2 — сети на G0/0 192.168.10.129/26 (узел H3) и G0/1 192.168.10.197/26 (узел H4).",
+   "figma": {
+    "nodeId": "6021:10238",
+    "page": "CCNA3 · 05 acls-for-ipv4-configuration"
+   },
+   "out": {
+    "path": "05-acls-for-ipv4-configuration/05.06-exam/assets/1.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "1.PNG"
+   }
+  },
+  {
+   "id": "ccna3-qunttmf",
+   "kind": "illustration",
+   "display": {
+    "key": "5.6.5"
+   },
+   "claim": "Маршрутизаторы R1 и R2 соединены последовательным каналом; к R1 подключены сети на G0/0 192.168.10.1/26 (узел H1) и G0/1 192.168.10.65/27 (узел H2), к R2 — сети на G0/0 192.168.10.97/27 (узел H3) и G0/1 192.168.10.129/28 (узел H4).",
+   "figma": {
+    "nodeId": "6021:10410",
+    "page": "CCNA3 · 05 acls-for-ipv4-configuration"
+   },
+   "out": {
+    "path": "05-acls-for-ipv4-configuration/05.06-exam/assets/5.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "5.PNG"
+   }
+  },
+  {
+   "id": "ccna3-vh7hiif",
+   "kind": "illustration",
+   "display": {
+    "key": "5.6.15"
+   },
+   "claim": "Вывод show access-lists на маршрутизаторе Router: расширенный список 101 из трёх записей — 10 deny tcp any any, 20 permit udp any any и 30 permit icmp any any.",
+   "figma": {
+    "nodeId": "6021:10580",
+    "page": "CCNA3 · 05 acls-for-ipv4-configuration"
+   },
+   "out": {
+    "path": "05-acls-for-ipv4-configuration/05.06-exam/assets/15.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "15.png"
+   }
+  },
+  {
+   "id": "ccna3-5matmez",
+   "kind": "illustration",
+   "display": {
+    "key": "5.6.7"
+   },
+   "claim": "Вывод show access-lists на маршрутизаторе Router1: стандартный именованный список TRAFFIC-CONTROL из записей 10 permit 172.23.0.0 с шаблонной маской 0.0.255.255 и 20 deny any.",
+   "figma": {
+    "nodeId": "6021:10583",
+    "page": "CCNA3 · 05 acls-for-ipv4-configuration"
+   },
+   "out": {
+    "path": "05-acls-for-ipv4-configuration/05.06-exam/assets/7.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "7.gif"
+   }
+  },
+  {
+   "id": "ccna3-fx7rg5b",
+   "kind": "illustration",
+   "display": {
+    "key": "5.6.9"
+   },
+   "claim": "Вывод show access-list MyACL на R1: расширенный список из четырёх записей permit tcp к узлу 10.23.77.101 — от 10.35.80.22 по telnet, от 10.35.80.25 к портам 16100 и 17600 и от 10.35.80.27 к порту 10701, у трёх последних записей есть счётчики совпадений.",
+   "figma": {
+    "nodeId": "6021:10586",
+    "page": "CCNA3 · 05 acls-for-ipv4-configuration"
+   },
+   "out": {
+    "path": "05-acls-for-ipv4-configuration/05.06-exam/assets/9.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "9.png"
+   }
+  },
+  {
+   "id": "ccna3-a6jxphb",
+   "ref": "ccna3-u3pcl7l",
+   "kind": "illustration",
+   "display": {
+    "key": "4.5.18"
+   },
+   "claim": "Маршрутизатор R2 подключен к Интернету и последовательными каналами — интерфейсом S0/0/0 к R1 и интерфейсом S0/0/1 к интерфейсу S0/0/1 маршрутизатора R3; к R1 через G0/0 подключена сеть 192.168.10.0/24 (коммутатор S1, PC1), через G0/1 — сеть 192.168.11.0/24 (коммутатор S2, PC2 с адресом 192.168.11.10), к R3 через G0/0 — сеть серверов 192.168.30.0/24 (коммутатор S3, сервер).",
+   "figma": {
+    "nodeId": "6021:9341",
+    "page": "CCNA3 · 04 acl-concepts"
+   },
+   "out": {
+    "path": "04-acl-concepts/04.05-exam/assets/18.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "18.jpg"
+   }
+  },
+  {
+   "id": "ccna3-pd3rync",
+   "ref": "ccna3-u3pcl7l",
+   "kind": "illustration",
+   "display": {
+    "key": "4.5.22"
+   },
+   "claim": "Маршрутизатор R2 подключен к Интернету и последовательными каналами — интерфейсом S0/0/0 к R1 и интерфейсом S0/0/1 к интерфейсу S0/0/1 маршрутизатора R3; к R1 через G0/0 подключена сеть 192.168.10.0/24 (коммутатор S1, PC1), через G0/1 — сеть 192.168.11.0/24 (коммутатор S2, PC2 с адресом 192.168.11.10), к R3 через G0/0 — сеть серверов 192.168.30.0/24 (коммутатор S3, сервер).",
+   "figma": {
+    "nodeId": "6021:9341",
+    "page": "CCNA3 · 04 acl-concepts"
+   },
+   "out": {
+    "path": "04-acl-concepts/04.05-exam/assets/22.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "22.jpg"
+   }
+  },
+  {
+   "id": "ccna3-ujetrx4",
+   "ref": "ccna3-u3pcl7l",
+   "kind": "illustration",
+   "display": {
+    "key": "4.5.23"
+   },
+   "claim": "Маршрутизатор R2 подключен к Интернету и последовательными каналами — интерфейсом S0/0/0 к R1 и интерфейсом S0/0/1 к интерфейсу S0/0/1 маршрутизатора R3; к R1 через G0/0 подключена сеть 192.168.10.0/24 (коммутатор S1, PC1), через G0/1 — сеть 192.168.11.0/24 (коммутатор S2, PC2 с адресом 192.168.11.10), к R3 через G0/0 — сеть серверов 192.168.30.0/24 (коммутатор S3, сервер).",
+   "figma": {
+    "nodeId": "6021:9341",
+    "page": "CCNA3 · 04 acl-concepts"
+   },
+   "out": {
+    "path": "04-acl-concepts/04.05-exam/assets/23.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "23.jpg"
+   }
+  },
+  {
+   "id": "ccna3-k53azc6",
+   "ref": "ccna3-u3pcl7l",
+   "kind": "illustration",
+   "display": {
+    "key": "4.5.25"
+   },
+   "claim": "Маршрутизатор R2 подключен к Интернету и последовательными каналами — интерфейсом S0/0/0 к R1 и интерфейсом S0/0/1 к интерфейсу S0/0/1 маршрутизатора R3; к R1 через G0/0 подключена сеть 192.168.10.0/24 (коммутатор S1, PC1), через G0/1 — сеть 192.168.11.0/24 (коммутатор S2, PC2 с адресом 192.168.11.10), к R3 через G0/0 — сеть серверов 192.168.30.0/24 (коммутатор S3, сервер).",
+   "figma": {
+    "nodeId": "6021:9341",
+    "page": "CCNA3 · 04 acl-concepts"
+   },
+   "out": {
+    "path": "04-acl-concepts/04.05-exam/assets/25.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "25.jpg"
+   }
+  },
+  {
+   "id": "ccna3-yfpj2ny",
+   "ref": "ccna3-u3pcl7l",
+   "kind": "illustration",
+   "display": {
+    "key": "5.6.20"
+   },
+   "claim": "Маршрутизатор R2 подключен к Интернету и последовательными каналами — интерфейсом S0/0/0 к R1 и интерфейсом S0/0/1 к интерфейсу S0/0/1 маршрутизатора R3; к R1 через G0/0 подключена сеть 192.168.10.0/24 (коммутатор S1, PC1), через G0/1 — сеть 192.168.11.0/24 (коммутатор S2, PC2 с адресом 192.168.11.10), к R3 через G0/0 — сеть серверов 192.168.30.0/24 (коммутатор S3, сервер).",
+   "figma": {
+    "nodeId": "6021:9341",
+    "page": "CCNA3 · 04 acl-concepts"
+   },
+   "out": {
+    "path": "05-acls-for-ipv4-configuration/05.06-exam/assets/20.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "20.jpg"
+   }
   }
  ]
 }
