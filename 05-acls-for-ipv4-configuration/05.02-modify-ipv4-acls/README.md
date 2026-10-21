@@ -38,7 +38,7 @@ R1#
 ```
 R1(config)# no access-list 1
 R1(config)#
-R1(config)# access-list 1 deny 19.168.10.10
+R1(config)# access-list 1 deny 192.168.10.10
 R1(config)# access-list 1 permit 192.168.10.0 0.0.0.255
 R1(config)#
 ```

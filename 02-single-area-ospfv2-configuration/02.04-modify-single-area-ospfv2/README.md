@@ -70,10 +70,10 @@ R1(config-router)# auto-cost reference-bandwidth 10000
 % OSPF: Reference bandwidth is changed.
         Please ensure reference bandwidth is consistent across all routers.
 R1(config-router)# do show ip ospf interface gigabitethernet0/0/0
-GigabitEthernet0/0 is up, line protocol is up
-  Internet address is 172.16.1.1/24, Area 0
-  Process ID 10, Router ID 1.1.1.1, Network Type BROADCAST, Cost: 10
-  Transmit Delay is 1 sec, State DR, Priority 1
+GigabitEthernet0/0/0 is up, line protocol is up
+  Internet Address 10.1.1.5/30, Area 0, Attached via Interface Enable
+  Process ID 10, Router ID 1.1.1.1, Network Type POINT_TO_POINT, Cost: 10
+  Transmit Delay is 1 sec, State POINT_TO_POINT, Priority 1
 (output omitted)
 ```
 
@@ -155,7 +155,7 @@ O        10.10.3.0/24 [110/30] via 10.1.1.6, 00:03:21, GigabitEthernet0/0/0
 R1#
 ```
 
-**Примечание.** хотя использование команды **ip ospf cost** является рекомендуемым методом для манипулирования значениями стоимости OSPF, администратор также может сделать это с помощью команды конфигурации интерфейса **bandwidth** _kbps_. Однако это будет работать только в том случае, если все маршрутизаторы — устройства одного производителя.
+**Примечание.** хотя использование команды **ip ospf cost** является рекомендуемым методом для манипулирования значениями стоимости OSPF, администратор также может сделать это с помощью команды конфигурации интерфейса **bandwidth** _kbps_. Однако это сработает, только если все маршрутизаторы домена вычисляют стоимость из пропускной способности по одной и той же формуле с одной и той же опорной пропускной способностью.
 
 <!-- 2.4.5 -->
 ## Тестирование аварийного переключения на резервный маршрут
