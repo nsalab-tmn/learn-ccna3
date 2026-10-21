@@ -158,10 +158,10 @@ R1#
 ![](./assets/12.5.4.svg)
 <!-- /courses/ensa-dl/ae8eb396-34fd-11eb-ba19-f1886492e0e4/aeb65fd2-34fd-11eb-ba19-f1886492e0e4/assets/c7003731-1c46-11ea-af56-e368b99e9723.svg -->
 
-Сетевой администратор получает консольное сообщение на коммутаторе S2:
+Сетевой администратор получает консольное сообщение на коммутаторе S1:
 
 ```
-*Mar 1 00:45:08.756: %CDP-4-DUPLEX_MISMATCH: duplex mismatch discovered on FastEthernet0/20 (not half duplex), with Switch FastEthernet0/20 (half duplex).
+*Mar 1 00:45:08.756: %CDP-4-DUPLEX_MISMATCH: duplex mismatch discovered on FastEthernet0/20 (not half duplex), with S2 FastEthernet0/20 (half duplex).
 ```
 
 С помощью команды **show interfaces fa 0/20** администратор проверяет интерфейс на S1, используемый для подключения к S2, и убеждается, что в нем установлен полнодуплексный режим.
@@ -170,7 +170,7 @@ R1#
 S1# show interface fa 0/20
 FastEthernet0/20 is up, line protocol is up (connected) 
 Hardware is Fast Ethernet, address is 0cd9.96e8.8a01 (bia 0cd9.96e8.8a01)
-MTU 1500 bytes, BW 10000 Kbit/sec, DLY 1000 usec, reliability 255/255, txload 1/255, rxload 1/255 
+MTU 1500 bytes, BW 100000 Kbit/sec, DLY 100 usec, reliability 255/255, txload 1/255, rxload 1/255
 Encapsulation ARPA, loopback not set Keepalive set (10 sec)
 Full-duplex, Auto-speed, media type is 10/100BaseTX 
   
@@ -192,11 +192,11 @@ Half-duplex, Auto-speed, media type is 10/100BaseTX
 (Output omitted)
   
 S2(config)# interface fa 0/20 
-S2(config-if)# duplex auto 
+S2(config-if)# duplex full
 S2(config-if)#
 ```
 
-Администратор выбирает для этого параметра значение **duplex auto** для автоматического согласования режима дуплекса. Так как для порта на коммутаторе S1 установлен полнодуплексный режим, на S2 используется он же.
+Администратор задает на порту S2 тот же полнодуплексный режим, что и на S1, командой **duplex full**. Режим дуплекса на обоих концах канала задают одинаково: если на S1 режим задан вручную, а на S2 включено автосогласование (**duplex auto**), то S2 определит скорость параллельным обнаружением, но выберет полудуплексный режим (IEEE 802.3, п. 28.2.3.1), и несогласование останется.
 
 Пользователи сообщают, что проблем с производительностью больше нет.
 
@@ -610,14 +610,13 @@ Trying 2001:DB8:ACAD:2::2, 80 ... Open
 ^C
 HTTP/1.1 400 Bad Request
 Date: Mon, 04 Nov 2019 12:34:23 GMT
-Server: cisco-IOS
 Accept-Ranges: none
 400 Bad Request
 [Connection to 2001:db8:acad:2::2 closed by foreign host]
 R1#
 ```
 
-Выходные данные проверяют успешное соединение транспортного уровня, но R2 отклоняет соединение, используя порт 80.
+Выходные данные подтверждают, что соединение транспортного уровня установлено (слово «Open»): R2 принял TCP-соединение на порту 80 и ответил на некорректный запрос кодом 400 Bad Request (RFC 9110, п. 15.5.1). Сервер HTTP на R2 работает, и соединение не было отклонено.
 
 <!-- 12.5.11 -->
 ## Шаг 7. Проверка ACL
@@ -649,7 +648,7 @@ R3#
 
 **show ip interfaces**
 
-Мы можем проверить, какой интерфейс имеет ACL применяется с помощью команды **show ip interfaces serial 0/1/1** и команды **show ip interfaces gig 0/0/0**. Выходные данные показывают, что ACL никогда не применялся к входящему интерфейсу на Serial 0/0/1, но он был случайно применен к интерфейсу G0/0/0, блокируя весь исходящий трафик из сети 172.16.1.0/24.
+Мы можем проверить, какой интерфейс имеет ACL применяется с помощью команды **show ip interfaces serial 0/1/1** и команды **show ip interfaces gig 0/0/0**. Выходные данные показывают, что ACL никогда не применялся к входящему интерфейсу на Serial 0/1/1, но он был случайно применен к интерфейсу G0/0/0, блокируя весь исходящий трафик из сети 172.16.1.0/24.
 
 ```
 R3# show ip interface serial 0/1/1 | include access list  
