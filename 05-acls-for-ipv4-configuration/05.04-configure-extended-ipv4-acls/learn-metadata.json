@@ -39,37 +39,39 @@
     "passingScore": 100,
     "questions": [
         {
-            "questionId": "q01",
-            "question": "Какое утверждение о расширенных ACL IPv4 верно?",
+            "questionId": "q06",
+            "bloom": "understand",
+            "question": "Администратор R1 должен запретить узлам сети 192.168.20.0/24 доступ по FTP к серверу 203.0.113.10, пропуская остальной их трафик. ACL он хочет назвать NO-FTP. С какой команды он начнет настройку?",
             "answerType": "singleChoice",
             "answers": [
                 {
-                    "answerId": "q01-a1",
-                    "answer": "Они могут фильтровать по адресам источника и назначения, протоколу и номеру порта",
+                    "answerId": "q06-a1",
+                    "answer": "ip access-list extended NO-FTP",
                     "correct": true
                 },
                 {
-                    "answerId": "q01-a2",
-                    "answer": "Они фильтруют только по адресу источника",
+                    "answerId": "q06-a2",
+                    "answer": "ip access-list standard NO-FTP",
                     "correct": false,
-                    "comment": "Только по адресу источника фильтруют стандартные ACL. Расширенные ACL фильтруют по адресам источника и назначения, протоколу и номеру порта."
+                    "comment": "Стандартный ACL проверяет только адрес источника и не может выделить FTP-трафик к одному серверу. Для этого нужен расширенный ACL, который проверяет еще назначение, протокол и порт: ip access-list extended NO-FTP."
                 },
                 {
-                    "answerId": "q01-a3",
-                    "answer": "Их записи для отдельных узлов автоматически выводятся перед записями диапазона",
+                    "answerId": "q06-a3",
+                    "answer": "access-list 10 deny 192.168.20.0 0.0.0.255",
                     "correct": false,
-                    "comment": "Такое упорядочение применяется только к стандартным ACL. Записи расширенного ACL отображаются и обрабатываются в порядке ввода."
+                    "comment": "Это запись нумерованного стандартного ACL: она запретила бы весь трафик сети 192.168.20.0/24, а не только FTP к серверу, и у ACL не было бы имени. Начать нужно с ip access-list extended NO-FTP."
                 },
                 {
-                    "answerId": "q01-a4",
-                    "answer": "Их номера лежат в диапазонах от 1 до 99 и от 1300 до 1999",
+                    "answerId": "q06-a4",
+                    "answer": "ip access-group NO-FTP in",
                     "correct": false,
-                    "comment": "Это диапазоны стандартных ACL. Расширенные нумерованные ACL используют номера от 100 до 199 и от 2000 до 2699."
+                    "comment": "Команда ip access-group применяет уже созданный ACL к интерфейсу. Создание именованного расширенного ACL начинается с ip access-list extended NO-FTP."
                 }
             ]
         },
         {
             "questionId": "q02",
+            "bloom": "remember",
             "question": "Нужно разрешить трафик HTTPS из сети 192.168.10.0/24 в любую сеть. Какая запись подходит?",
             "answerType": "singleChoice",
             "answers": [
@@ -99,92 +101,95 @@
             ]
         },
         {
-            "questionId": "q03",
-            "question": "Что разрешает запись access-list 120 permit tcp any 192.168.10.0 0.0.0.255 established?",
+            "questionId": "q07",
+            "bloom": "understand",
+            "question": "Внутренняя сеть 192.168.30.0/24 подключена к интерфейсу G0/0/0 маршрутизатора R1. На R1 настроено:\n\n```\nip access-list extended WEB-OUT\n permit tcp 192.168.30.0 0.0.0.255 any eq 80\n permit tcp 192.168.30.0 0.0.0.255 any eq 443\nip access-list extended WEB-BACK\n permit tcp any 192.168.30.0 0.0.0.255 established\ninterface g0/0/0\n ip access-group WEB-OUT in\n ip access-group WEB-BACK out\n```\n\nКакой пакет из Интернета, адресованный узлу 192.168.30.25, R1 передаст во внутреннюю сеть?",
             "answerType": "singleChoice",
             "answers": [
                 {
-                    "answerId": "q03-a1",
-                    "answer": "Только ответный TCP-трафик на соединения, начатые из сети 192.168.10.0/24: сегменты с установленным флагом ACK или RST",
+                    "answerId": "q07-a1",
+                    "answer": "TCP-сегмент с установленным флагом ACK",
                     "correct": true
                 },
                 {
-                    "answerId": "q03-a2",
-                    "answer": "Любой TCP-трафик к узлам сети 192.168.10.0/24, в том числе новые соединения из внешней сети",
+                    "answerId": "q07-a2",
+                    "answer": "TCP-сегмент к порту 80 с одним флагом SYN",
                     "correct": false,
-                    "comment": "С ключевым словом established TCP-трафик, который начинает внешний узел, отклоняется. Разрешается только ответный трафик на соединения, начатые из сети 192.168.10.0/24."
+                    "comment": "Пакеты, которые выходят из G0/0/0 во внутреннюю сеть, проверяет WEB-BACK, а не WEB-OUT. Ключевое слово established совпадает только с сегментами, где установлен флаг ACK или RST, поэтому сегмент с одним SYN попадет под неявный запрет."
                 },
                 {
-                    "answerId": "q03-a3",
-                    "answer": "Только TCP-трафик, исходящий из сети 192.168.10.0/24",
+                    "answerId": "q07-a3",
+                    "answer": "UDP-дейтаграмма с ответом DNS",
                     "correct": false,
-                    "comment": "В записи сеть 192.168.10.0/24 указана как назначение. Разрешается ответный TCP-трафик, который возвращается в эту сеть по соединениям, начатым из нее."
+                    "comment": "Единственная запись WEB-BACK относится к TCP, а established проверяет флаги TCP. UDP-дейтаграмма попадет под неявный запрет."
                 },
                 {
-                    "answerId": "q03-a4",
-                    "answer": "Любой трафик IP к сети 192.168.10.0/24, включая UDP и ICMP",
+                    "answerId": "q07-a4",
+                    "answer": "Эхо-ответ ICMP",
                     "correct": false,
-                    "comment": "Ключевое слово established применяется только к протоколу TCP. Разрешается ответный TCP-трафик на соединения, начатые из сети 192.168.10.0/24."
+                    "comment": "Запись WEB-BACK разрешает только TCP-сегменты с флагом ACK или RST. Эхо-ответ ICMP попадет под неявный запрет."
                 }
             ]
         },
         {
-            "questionId": "q04",
-            "question": "Почему в записи расширенного ACL для SSH указывают номер порта eq 22, а не имя?",
+            "questionId": "q08",
+            "bloom": "understand",
+            "question": "Именованный расширенный ACL ADMIN-OUT на R1:\n\n```\nExtended IP access list ADMIN-OUT\n    10 permit tcp 192.168.10.0 0.0.0.255 any eq www\n    20 permit tcp 192.168.10.0 0.0.0.255 any eq 443\n    30 permit tcp 192.168.10.0 0.0.0.255 any eq telnet\n    40 deny ip 192.168.10.0 0.0.0.255 any\n```\n\nАдминистратор хочет заменить Telnet на SSH и вводит:\n\n```\nR1(config)# ip access-list extended ADMIN-OUT\nR1(config-ext-nacl)# no 30\nR1(config-ext-nacl)# 30 permit tcp 192.168.10.0 0.0.0.255 any eq ssh\n```\n\nКаков результат?",
             "answerType": "singleChoice",
             "answers": [
                 {
-                    "answerId": "q04-a1",
-                    "answer": "В списке имен портов нет имени для SSH, поэтому нужно указать номер порта",
+                    "answerId": "q08-a1",
+                    "answer": "Запись 30 удалена, а новую запись ОС не приняла: для SSH нужен номер 22",
                     "correct": true
                 },
                 {
-                    "answerId": "q04-a2",
-                    "answer": "Имена портов в расширенных ACL не поддерживаются",
+                    "answerId": "q08-a2",
+                    "answer": "Новая запись 30 для SSH встала на прежнее место, перед записью 40",
                     "correct": false,
-                    "comment": "Поддерживаются: например, eq www и eq 80 дают одинаковый результат. Номер нужен, когда в списке нет имени протокола, как для SSH."
+                    "comment": "Так было бы с eq 22: имени ssh в списке имен портов нет, и ОС эту запись не примет. После no 30 в ACL остались записи 10, 20 и 40, а для SSH нужна запись 30 permit tcp 192.168.10.0 0.0.0.255 any eq 22."
                 },
                 {
-                    "answerId": "q04-a3",
-                    "answer": "Номер порта маршрутизатор обрабатывает быстрее имени",
+                    "answerId": "q08-a3",
+                    "answer": "Запись для SSH добавлена в конец ACL, после записи 40",
                     "correct": false,
-                    "comment": "Скорость обработки здесь ни при чем: номер нужен, потому что в списке имен портов нет имени для SSH."
+                    "comment": "Запись с явным порядковым номером встает по номеру, а не в конец. Но здесь ОС ее не примет: для SSH в списке имен портов нет имени, нужен номер eq 22."
                 },
                 {
-                    "answerId": "q04-a4",
-                    "answer": "SSH работает по UDP, а имена есть только у портов TCP",
+                    "answerId": "q08-a4",
+                    "answer": "Команда no 30 удалила весь ACL ADMIN-OUT",
                     "correct": false,
-                    "comment": "SSH указывают в записи с протоколом tcp (permit tcp ... eq 22), а имена есть и у портов UDP. Номер нужен, потому что в списке имен портов нет имени для SSH."
+                    "comment": "В режиме конфигурации ACL команда no с порядковым номером удаляет только эту запись. Новую запись ОС не примет: для SSH нужен номер порта eq 22."
                 }
             ]
         },
         {
-            "questionId": "q05",
-            "question": "Команда show ip interface g0/0/0 | include access list выводит строки Outgoing access list is REPLY-PC1 и Inbound access list is PERMIT-PC1. Что они означают?",
+            "questionId": "q09",
+            "bloom": "understand",
+            "question": "Команда show ip interface g0/0/1 | include access list на R1 выводит:\n\n```\n  Outgoing access list is not set\n  Inbound  access list is EDGE-IN\n```\n\nЧто означают эти строки?",
             "answerType": "singleChoice",
             "answers": [
                 {
-                    "answerId": "q05-a1",
-                    "answer": "На интерфейсе G0/0/0 ACL PERMIT-PC1 применен к входящему трафику, а REPLY-PC1 — к исходящему",
+                    "answerId": "q09-a1",
+                    "answer": "EDGE-IN проверяет входящий трафик G0/0/1, исходящий не фильтруется",
                     "correct": true
                 },
                 {
-                    "answerId": "q05-a2",
-                    "answer": "ACL PERMIT-PC1 применен к исходящему трафику, а REPLY-PC1 — к входящему",
+                    "answerId": "q09-a2",
+                    "answer": "EDGE-IN проверяет исходящий трафик G0/0/1, входящий не фильтруется",
                     "correct": false,
-                    "comment": "Наоборот: строка Inbound относится к входящему трафику, Outgoing — к исходящему. PERMIT-PC1 применен на вход, REPLY-PC1 — на выход."
+                    "comment": "Наоборот: строка Inbound относится к входящему трафику, Outgoing — к исходящему. EDGE-IN применен к входящему трафику, а для исходящего ACL не задан."
                 },
                 {
-                    "answerId": "q05-a3",
-                    "answer": "Оба ACL настроены на маршрутизаторе, но к интерфейсу не применены",
+                    "answerId": "q09-a3",
+                    "answer": "ACL EDGE-IN создан, но к интерфейсу G0/0/1 не применен",
                     "correct": false,
-                    "comment": "Команда show ip interface показывает именно ACL, примененные к интерфейсу, и их направление: PERMIT-PC1 — на вход, REPLY-PC1 — на выход."
+                    "comment": "Команда show ip interface показывает ACL, примененные к интерфейсу. Строка Inbound access list is EDGE-IN означает, что EDGE-IN применен к входящему трафику G0/0/1."
                 },
                 {
-                    "answerId": "q05-a4",
-                    "answer": "Записи обоих ACL сработали хотя бы один раз",
+                    "answerId": "q09-a4",
+                    "answer": "Исходящий трафик G0/0/1 запрещен: для него нет ACL",
                     "correct": false,
-                    "comment": "Счетчики совпадений выводит команда show access-lists. Здесь показано, что PERMIT-PC1 применен к входящему трафику интерфейса, а REPLY-PC1 — к исходящему."
+                    "comment": "Строка not set означает, что исходящий трафик интерфейса не фильтруется вовсе, а не запрещается. Входящий трафик проверяет ACL EDGE-IN."
                 }
             ]
         }
