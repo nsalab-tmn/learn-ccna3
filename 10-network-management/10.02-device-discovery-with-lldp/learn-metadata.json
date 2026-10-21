@@ -36,38 +36,83 @@
     "passingScore": 100,
     "questions": [
         {
-            "questionId": "q01",
-            "question": "Какой проприетарный протокол служит для сбора информации о соседних устройствах, использующих один и тот же канал передачи данных?",
+            "questionId": "q03",
+            "bloom": "understand",
+            "question": "Администратор ввел команду на коммутаторе S3 и получил вывод:\n\n```\nS3# show lldp neighbors\nCapability codes:\n    (R) Router, (B) Bridge, (T) Telephone, (C) DOCSIS Cable Device\n    (W) WLAN Access Point, (P) Repeater, (S) Station, (O) Other\nDevice ID           Local Intf     Hold-time  Capability      Port ID\nD1                  Gi0/1          104        B               Gi0/24\nD2                  Fa0/2          98         R               Gi0/0/1\nTotal entries displayed: 2\n```\n\nУстройство какого типа подключено к интерфейсу Gi0/1 коммутатора S3?",
             "answerType": "singleChoice",
             "answers": [
                 {
-                    "answerId": "q01-a1",
-                    "answer": "CDP",
+                    "answerId": "q03-a1",
+                    "answer": "Коммутатор",
                     "correct": true
                 },
                 {
-                    "answerId": "q01-a2",
-                    "answer": "LLDP",
+                    "answerId": "q03-a2",
+                    "answer": "Маршрутизатор",
                     "correct": false,
-                    "comment": "CDP — это проприетарный протокол уровня 2, который на поддерживающих его устройствах обычно включен по умолчанию и используется для сбора информации о соседних устройствах."
+                    "comment": "Код R (маршрутизатор) стоит у соседа D2 на интерфейсе Fa0/2. У D1 на интерфейсе Gi0/1 код B (bridge — мост), которым LLDP обозначает и коммутатор."
+                },
+                {
+                    "answerId": "q03-a3",
+                    "answer": "Повторитель",
+                    "correct": false,
+                    "comment": "Повторитель обозначается кодом P, а у D1 в столбце Capability код B (bridge — мост). Этим кодом LLDP обозначает и коммутатор."
+                },
+                {
+                    "answerId": "q03-a4",
+                    "answer": "Точка доступа беспроводной сети",
+                    "correct": false,
+                    "comment": "Точка доступа обозначается кодом W, а у D1 код B (bridge — мост). Этим кодом LLDP обозначает и коммутатор."
                 }
             ]
         },
         {
             "questionId": "q02",
-            "question": "Какой протокол работает с сетевыми устройствами разных производителей, такими как маршрутизаторы, коммутаторы, точки доступа к беспроводной сети?",
+            "bloom": "remember",
+            "question": "В сети компании работают маршрутизаторы, коммутаторы и точки доступа нескольких производителей. Какой протокол обнаружения соседей подходит для всех этих устройств?",
             "answerType": "singleChoice",
             "answers": [
                 {
                     "answerId": "q02-a1",
                     "answer": "CDP",
                     "correct": false,
-                    "comment": "LLDP - это независимый от производителя протокол обнаружения соседей, который объявляет идентичность и возможности устройства и получает информацию от других физически подключенных устройств уровня 2."
+                    "comment": "CDP — проприетарный протокол: он работает только на устройствах, которые его поддерживают. Для устройств разных производителей подходит LLDP — протокол обнаружения соседей, не зависящий от производителя."
                 },
                 {
                     "answerId": "q02-a2",
                     "answer": "LLDP",
                     "correct": true
+                }
+            ]
+        },
+        {
+            "questionId": "q04",
+            "bloom": "understand",
+            "question": "На коммутаторе LLDP включен командой lldp run. Через интерфейс Gi0/1, подключенный к сети провайдера, коммутатор должен по-прежнему принимать объявления LLDP, но перестать отправлять свои. Какую команду нужно ввести в режиме настройки этого интерфейса?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answerId": "q04-a1",
+                    "answer": "no lldp transmit",
+                    "correct": true
+                },
+                {
+                    "answerId": "q04-a2",
+                    "answer": "no lldp receive",
+                    "correct": false,
+                    "comment": "Команда no lldp receive отключает прием объявлений, а их по условию нужно принимать. Передача и прием LLDP настраиваются отдельно, и отправку отключает no lldp transmit."
+                },
+                {
+                    "answerId": "q04-a3",
+                    "answer": "no lldp run",
+                    "correct": false,
+                    "comment": "Команда no lldp run относится к режиму глобальной конфигурации и отключает LLDP на всем коммутаторе, в том числе прием на Gi0/1. Отправку через один интерфейс отключает no lldp transmit."
+                },
+                {
+                    "answerId": "q04-a4",
+                    "answer": "no cdp enable",
+                    "correct": false,
+                    "comment": "Команда no cdp enable отключает на интерфейсе CDP, а не LLDP. Отправку объявлений LLDP через интерфейс отключает no lldp transmit."
                 }
             ]
         }
