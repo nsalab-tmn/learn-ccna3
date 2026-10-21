@@ -9207,9 +9207,14 @@
     "path": "06-nat-for-ipv4/06.09-exam/assets/3.svg",
     "format": "svg"
    },
-   "status": "pending",
+   "status": "synced",
    "provenance": {
-    "legacy": "3.gif"
+    "legacy": "3.gif",
+    "synced": {
+     "figmaVersion": "2412728046984626872",
+     "at": "2026-10-21T08:32:59Z",
+     "sha256": "d48cd39861574ca0176f7b7718a5f2b97d8754316d4ba653d116c24794c52376"
+    }
    }
   },
   {
@@ -9227,9 +9232,14 @@
     "path": "06-nat-for-ipv4/06.09-exam/assets/6.svg",
     "format": "svg"
    },
-   "status": "pending",
+   "status": "synced",
    "provenance": {
-    "legacy": "6.png"
+    "legacy": "6.png",
+    "synced": {
+     "figmaVersion": "2412728046984626872",
+     "at": "2026-10-21T08:32:59Z",
+     "sha256": "53f2d96f7bd2f29eac0f7f3271be2084885b9997946576c86d7f7969c821a6b3"
+    }
    }
   },
   {
@@ -9247,9 +9257,14 @@
     "path": "06-nat-for-ipv4/06.09-exam/assets/9.svg",
     "format": "svg"
    },
-   "status": "pending",
+   "status": "synced",
    "provenance": {
-    "legacy": "9.gif"
+    "legacy": "9.gif",
+    "synced": {
+     "figmaVersion": "2412728046984626872",
+     "at": "2026-10-21T08:32:59Z",
+     "sha256": "10668a280258e0fce97d7444f74f172a9cf28abfccc16879180a4bec71743db2"
+    }
    }
   },
   {
@@ -9267,9 +9282,14 @@
     "path": "06-nat-for-ipv4/06.09-exam/assets/13.svg",
     "format": "svg"
    },
-   "status": "pending",
+   "status": "synced",
    "provenance": {
-    "legacy": "13.PNG"
+    "legacy": "13.PNG",
+    "synced": {
+     "figmaVersion": "2412728046984626872",
+     "at": "2026-10-21T08:32:59Z",
+     "sha256": "fee98f8dc7ae5fc9de1fc59f53f530bf652cf5da80069d2a223bc6383c54369e"
+    }
    }
   },
   {
@@ -9287,9 +9307,14 @@
     "path": "06-nat-for-ipv4/06.09-exam/assets/5.svg",
     "format": "svg"
    },
-   "status": "pending",
+   "status": "synced",
    "provenance": {
-    "legacy": "5.PNG"
+    "legacy": "5.PNG",
+    "synced": {
+     "figmaVersion": "2412728046984626872",
+     "at": "2026-10-21T08:32:59Z",
+     "sha256": "c558a79e3e9bfd36c95255ae905352e84a7b31bfbaefa67b6f730ff4f4a33c55"
+    }
    }
   },
   {
@@ -9307,9 +9332,14 @@
     "path": "06-nat-for-ipv4/06.09-exam/assets/7.svg",
     "format": "svg"
    },
-   "status": "pending",
+   "status": "synced",
    "provenance": {
-    "legacy": "7.PNG"
+    "legacy": "7.PNG",
+    "synced": {
+     "figmaVersion": "2412728046984626872",
+     "at": "2026-10-21T08:32:59Z",
+     "sha256": "453ab074d2266829cecc692a668edbc8cac4b262cf7b8cb2c65cbcd997a41279"
+    }
    }
   },
   {
@@ -9327,9 +9357,14 @@
     "path": "06-nat-for-ipv4/06.09-exam/assets/12.svg",
     "format": "svg"
    },
-   "status": "pending",
+   "status": "synced",
    "provenance": {
-    "legacy": "12.PNG"
+    "legacy": "12.PNG",
+    "synced": {
+     "figmaVersion": "2412728046984626872",
+     "at": "2026-10-21T08:32:59Z",
+     "sha256": "dcd63cbef6cdca435a2083cd53c8a4688dc03402a7cebe71c671c3b820338088"
+    }
    }
   },
   {
@@ -9347,9 +9382,14 @@
     "path": "06-nat-for-ipv4/06.09-exam/assets/15.svg",
     "format": "svg"
    },
-   "status": "pending",
+   "status": "synced",
    "provenance": {
-    "legacy": "15.png"
+    "legacy": "15.png",
+    "synced": {
+     "figmaVersion": "2412728046984626872",
+     "at": "2026-10-21T08:32:59Z",
+     "sha256": "5d62a545fd70c09b25e75fd0186b02595f09280c17eacbe041f9dfe4b0920b26"
+    }
    }
   },
   {
@@ -9368,9 +9408,14 @@
     "path": "06-nat-for-ipv4/06.09-exam/assets/10.svg",
     "format": "svg"
    },
-   "status": "pending",
+   "status": "synced",
    "provenance": {
-    "legacy": "10.gif"
+    "legacy": "10.gif",
+    "synced": {
+     "figmaVersion": "2412728046984626872",
+     "at": "2026-10-21T08:32:59Z",
+     "sha256": "453ab074d2266829cecc692a668edbc8cac4b262cf7b8cb2c65cbcd997a41279"
+    }
    }
   }
  ]
