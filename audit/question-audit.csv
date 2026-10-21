@@ -20,6 +20,7 @@ material,questionId,bloom,rule_failed,finding,fix
 01-single-area-ospfv2-concepts/01.02-ospf-packets,q09,understand,,New item replacing q04.,none
 01-single-area-ospfv2-concepts/01.02-ospf-packets,q10,understand,,New item replacing q05.,none
 01-single-area-ospfv2-concepts/01.02-ospf-packets,q11,understand,,New item replacing q06.,none
+01-single-area-ospfv2-concepts/01.02-ospf-packets,q12,understand,,New item replacing q11.,none
 01-single-area-ospfv2-concepts/01.03-ospf-operation,q01,remember,3;4;5;10,"Statement stem («Во время этого состояния…»), seven options (all states), shared comment restating the key; pure recall of the 1.3.2 table (Two-Way: DR/BDR election). Rework as a described event the learner places in a state.",rework
 01-single-area-ospfv2-concepts/01.03-ospf-operation,q02,remember,4;5,The one allowed recall item; key and per-option comments agree with RFC 2328 §10.1. Statement stem: make it a question; seven options: keep four.,text
 01-single-area-ospfv2-concepts/01.03-ospf-operation,q03,remember,3;4;5;10,"Statement stem; seven options; shared comment; pure recall. Every Hello carries the sender's Router ID (RFC 2328 A.3.1), so the stem's detail does not single out Init; Init means the neighbour's Hello does not yet list the router's own ID (§10.1) — build the rework on that.",rework
@@ -33,6 +34,8 @@ material,questionId,bloom,rule_failed,finding,fix
 01-single-area-ospfv2-concepts/01.03-ospf-operation,q11,understand,,New item replacing q05.,none
 01-single-area-ospfv2-concepts/01.03-ospf-operation,q12,understand,,New item replacing q06.,none
 01-single-area-ospfv2-concepts/01.03-ospf-operation,q13,understand,,New item replacing q07.,none
+01-single-area-ospfv2-concepts/01.03-ospf-operation,q14,understand,,New item replacing q09.,none
+01-single-area-ospfv2-concepts/01.03-ospf-operation,q15,understand,,New item replacing q12.,none
 01-single-area-ospfv2-concepts/01.03-ospf-operation,,,11,"Lecture-level: sections «Необходимость DR» (n(n−1)/2 adjacencies) and «Лавинная рассылка LSA с помощью DR» (DR as the collection and distribution point, BDR, DROTHER) have no question.",rework
 01-single-area-ospfv2-concepts/01.04-exam,q01,remember,6;10,"Key true (1.1.4; RFC 2328 §3). «частые расчеты SPF» is what areas prevent, not a mechanism, so nobody picks it; the shared comment explains areas but not why automatic summarisation (off by default, 1.1.5) or DR election (one segment's flooding) is wrong.",text
 01-single-area-ospfv2-concepts/01.04-exam,q02,remember,10,Key true (1.1.5). The shared comment answers only the LSDB option; it does not say summarisation is off by default or that a multi-area design needs backbone area 0.,text
@@ -81,6 +84,7 @@ material,questionId,bloom,rule_failed,finding,fix
 02-single-area-ospfv2-configuration/02.01-ospf-router-id,q04,understand,,New item replacing q01.,none
 02-single-area-ospfv2-configuration/02.01-ospf-router-id,q05,understand,,New item replacing q02.,none
 02-single-area-ospfv2-configuration/02.01-ospf-router-id,q06,understand,,New item (rule 11: a section had no question).,none
+02-single-area-ospfv2-configuration/02.01-ospf-router-id,q07,understand,,New item replacing q06.,none
 02-single-area-ospfv2-configuration/02.01-ospf-router-id,,,11,"Lecture-level: sections «Пример топологии» (2.1.1, the module's reference topology) and «Изменение идентификатора маршрутизатора» (2.1.7: a new ID takes effect only after `clear ip ospf process` or a reload) have no question.",rework
 02-single-area-ospfv2-configuration/02.02-point-to-point-ospf-networks,q01,remember,3;6,"Pure recall of the 2.2.2 list (bit 1 = ignore); second recall item, q05 is kept. «Интерфейс с этим адресом становится пассивным» and «Бит относится к идентификатору области OSPF» are fillers no learner of 2.2.2 picks (two options are allowed here: match / ignore). Rework into a case: which of given interface addresses a statement such as `network 172.16.4.0 0.0.3.255 area 0` enables.",rework
 02-single-area-ospfv2-configuration/02.02-point-to-point-ospf-networks,q02,remember,3;8,"Key true, but the case (10.1.1.5/30, `network 10.1.1.5 0.0.0.0 area 0`, advertises 10.1.1.4/30) is printed in 2.2.4: third recall item. The key (114 characters) is far longer than every distractor (75–78). Rework with an address and wildcard not in the text.",rework
@@ -466,6 +470,7 @@ material,questionId,bloom,rule_failed,finding,fix
 06-nat-for-ipv4/06.03-nat-advantages,q06,understand,,New item replacing q02.,none
 06-nat-for-ipv4/06.03-nat-advantages,q07,understand,,New item replacing q03.,none
 06-nat-for-ipv4/06.03-nat-advantages,q08,understand,,New item replacing q04.,none
+06-nat-for-ipv4/06.03-nat-advantages,q09,understand,,New item replacing q08.,none
 06-nat-for-ipv4/06.04-configure-static-nat,q01,remember,,"The one allowed recall item (the 6.4.2 command with its own addresses); key true, and the distractors are named mistakes (address order, «outside», the interface command), each with its own comment. Passes.",none
 06-nat-for-ipv4/06.04-configure-static-nat,q02,remember,3;8,Pure recall of step 2 (6.4.2); key true. The key (143 characters) is about three times as long as every distractor (33–52).,rework
 06-nat-for-ipv4/06.04-configure-static-nat,q03,remember,3;8,The 6.4.3 walk-through with its own addresses (steps 2–3): pure recall; key true. The key (112) is longer than every distractor (53–85). Rework on a new static mapping the learner traces.,rework
@@ -482,6 +487,7 @@ material,questionId,bloom,rule_failed,finding,fix
 06-nat-for-ipv4/06.05-configure-dynamic-nat,q07,understand,,New item replacing q03.,none
 06-nat-for-ipv4/06.05-configure-dynamic-nat,q08,understand,,New item replacing q04.,none
 06-nat-for-ipv4/06.05-configure-dynamic-nat,q09,understand,,New item replacing q05.,none
+06-nat-for-ipv4/06.05-configure-dynamic-nat,q10,understand,,New item replacing q06.,none
 06-nat-for-ipv4/06.05-configure-dynamic-nat,,,11,"Lecture-level: both «Анализ динамического NAT» sections (6.5.3: the ACL check, the first free pool address and the new entry; 6.5.4: the reply translated back from the table) have no question.",rework
 06-nat-for-ipv4/06.06-configure-pat,q01,remember,,"The one allowed recall item (6.6.2–6.6.3: «overload»); the distractors are keywords of the same module, each explained. Passes.",none
 06-nat-for-ipv4/06.06-configure-pat,q02,remember,3,"The 6.6.2 command for the lecture's own interface: pure recall; key true. Rework on the pool case of 6.6.3 or another interface. Check on the simulator whether the interface form without «overload» is saved with it (some router OSes add it), which would make that distractor work as PAT.",rework
@@ -1280,3 +1286,8 @@ final-exam,q52,remember,1;5,"Keys match 13.4.2 (the device control plane holds t
 final-exam,q53,remember,10,Key true (RFC 8259 §4; 14.2.6). The shared comment explains the key only; it does not say square brackets hold arrays and double quotes strings (14.2.6).,text
 final-exam,q54,understand,1;4;10,"The exhibit is YAML (key-value pairs with colons, indentation, no braces). As worded, «Какой формат данных используется … для приложений автоматизации сети?» makes JSON and XML true too (14.2.2); ask «В каком формате записаны данные на рисунке?». The combined comment does not answer HTML.",text
 final-exam,q55,remember,,"Key true (RFC 3986 §3.5; 14.4.4 parts of a URI, a near-identical example). The combined comment names every part. Passes.",none
+final-exam,q56,analyze,,New item replacing q16.,none
+final-exam,q57,apply,,New item replacing q19.,none
+final-exam,q58,understand,,New item replacing q29.,none
+final-exam,q59,understand,,New item replacing q49.,none
+final-exam,q60,apply,,New item replacing q14.,none
