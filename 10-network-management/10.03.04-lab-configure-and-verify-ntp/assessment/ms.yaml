@@ -23,6 +23,38 @@ Criterions:
             command: show running-config
             expr: (?m)^ntp server 209\.165\.200\.225\s*$
             match: true
+  - code: R1.CONNECTIVITY-TESTS
+    name: Connectivity Tests
+    aspects:
+    - code: R1.CONNECTIVITY-TESTS.CT-0
+      name: 'R1 to 209.165.200.225 : 209.165.200.225 (ICMP)'
+      description: 'R1 → 209.165.200.225 (PING): проходит'
+      skills:
+      - Other
+      max_mark: 1
+      steps:
+      - name: 'show running-config: matches (?m)^ntp server 209\.165\.200\.225\s*$'
+        code: check
+        type: check
+        device: R1
+        action_chain:
+        - action: verify_output_regex
+          action_vars:
+            command: show running-config
+            expr: (?m)^ntp server 209\.165\.200\.225\s*$
+            match: true
+      - name: 'ping 209.165.200.225: some replies'
+        code: check
+        type: check
+        device: R1
+        action_chain:
+        - action: verify_output_regex
+          action_vars:
+            command: ping 209.165.200.225 repeat 2
+            expr: Success rate is [1-9]
+            match: true
+            retries: 3
+            retry_interval: 15
 - code: R2
   name: R2
   subCriterions:
@@ -46,3 +78,39 @@ Criterions:
             command: show running-config
             expr: (?m)^ntp server 209\.165\.200\.225\s*$
             match: true
+- code: N1
+  name: N1
+  subCriterions:
+  - code: N1.CONNECTIVITY-TESTS
+    name: Connectivity Tests
+    aspects:
+    - code: N1.CONNECTIVITY-TESTS.CT-1
+      name: 'N1 to 209.165.200.227 : 209.165.200.227 (ICMP)'
+      description: 'N1 → 209.165.200.227 (PING): проходит'
+      skills:
+      - Other
+      max_mark: 1
+      steps:
+      - name: 'show running-config: matches (?m)^ntp server 209\.165\.200\.225\s*$'
+        code: check
+        type: check
+        device: R2
+        action_chain:
+        - action: verify_output_regex
+          action_vars:
+            command: show running-config
+            expr: (?m)^ntp server 209\.165\.200\.225\s*$
+            match: true
+      - name: 'ping -n 2 209.165.200.227: has : bytes='
+        code: check
+        type: check
+        device: N1
+        action_chain:
+        - action: verify_output
+          action_vars:
+            command: ping -n 2 209.165.200.227
+            assert_tags:
+            - ': bytes='
+            tags_are_present: true
+            retries: 3
+            retry_interval: 15

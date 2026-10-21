@@ -41,7 +41,7 @@ Criterions:
       description: 'PC1 → 64.100.100.10 (PING): проходит'
       skills:
       - Other
-      max_mark: 3
+      max_mark: 2
       steps:
       - name: 'ping -n 2 64.100.100.10: has : bytes='
         code: check
@@ -97,7 +97,7 @@ Criterions:
       description: 'PC3 → 192.168.20.254 (PING): проходит'
       skills:
       - Other
-      max_mark: 3
+      max_mark: 2
       steps:
       - name: 'ping -n 2 192.168.20.254: has : bytes='
         code: check
@@ -149,11 +149,41 @@ Criterions:
     name: Connectivity Tests
     aspects:
     - code: PC4.CONNECTIVITY-TESTS.CT-3
+      name: 'PC4 to 2001:db8:b:20::254 : 2001:db8:b:20::254 (ICMP)'
+      description: 'PC4 → 2001:db8:b:20::254 (PING): проходит'
+      skills:
+      - Other
+      max_mark: 2
+      steps:
+      - name: 'show interfaces GigabitEthernet0/1 switchport: matches Trunking Native Mode VLAN: 99 \('
+        code: check
+        type: check
+        device: S2
+        action_chain:
+        - action: verify_output_regex
+          action_vars:
+            command: show interfaces GigabitEthernet0/1 switchport
+            expr: 'Trunking Native Mode VLAN: 99 \('
+            match: true
+      - name: 'ping -n 2 2001:db8:b:20::254: has : bytes='
+        code: check
+        type: check
+        device: PC4
+        action_chain:
+        - action: verify_output
+          action_vars:
+            command: ping -n 2 2001:db8:b:20::254
+            assert_tags:
+            - ': bytes='
+            tags_are_present: true
+            retries: 3
+            retry_interval: 15
+    - code: PC4.CONNECTIVITY-TESTS.CT-4
       name: 'PC4 to 2001:db8:b:64::10 : 2001:db8:b:64::10 (ICMP)'
       description: 'PC4 → 2001:db8:b:64::10 (PING): проходит'
       skills:
       - Other
-      max_mark: 3
+      max_mark: 2
       steps:
       - name: 'ping -n 2 2001:db8:b:64::10: has : bytes='
         code: check
@@ -166,8 +196,8 @@ Criterions:
             assert_tags:
             - ': bytes='
             tags_are_present: true
-            retries: 3
-            retry_interval: 15
+            retries: 1
+            retry_interval: 5
 - code: R1
   name: R1
   subCriterions:
@@ -673,7 +703,7 @@ Criterions:
       description: 'PC2 → 64.100.100.10 (PING): проходит'
       skills:
       - Other
-      max_mark: 3
+      max_mark: 2
       steps:
       - name: 'ping -n 2 64.100.100.10: has : bytes='
         code: check
