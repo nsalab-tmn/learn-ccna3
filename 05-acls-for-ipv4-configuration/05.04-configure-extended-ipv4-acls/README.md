@@ -449,10 +449,11 @@ R1#
 R1# show running-config | begin ip access-list 
 ip access-list extended PERMIT-PC1
 Remark Permit PC1 TCP access to internet
-permit tcp host 192.168.10.10 any eq 20
+permit tcp host 192.168.10.10 any eq ftp-data
 permit tcp host 192.168.10.10 any eq ftp 
 permit tcp host 192.168.10.10 any eq 22 
 permit tcp host 192.168.10.10 any eq telnet
+permit udp host 192.168.10.10 any eq domain
 permit tcp host 192.168.10.10 any eq domain
 permit tcp host 192.168.10.10 any eq www
 permit tcp host 192.168.10.10 any eq 443 
