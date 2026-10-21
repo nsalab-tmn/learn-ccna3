@@ -103,7 +103,7 @@ devices:
     enable secret SW1EnaAccess#
     ip domain-name netlab.local
     username admin secret SW1admin#
-    crypto key generate rsa general-keys modulus 1024
+    crypto key generate rsa general-keys modulus 2048
     line vty 0 4
      login local
      transport input ssh
@@ -137,7 +137,7 @@ devices:
     enable secret SW2EnaAccess#
     ip domain-name netlab.local
     username admin secret SW2admin#
-    crypto key generate rsa general-keys modulus 1024
+    crypto key generate rsa general-keys modulus 2048
     line vty 0 4
      login local
      transport input ssh
@@ -171,7 +171,7 @@ devices:
     enable secret SW3EnaAccess#
     ip domain-name netlab.local
     username admin secret SW3admin#
-    crypto key generate rsa general-keys modulus 1024
+    crypto key generate rsa general-keys modulus 2048
     line vty 0 4
      login local
      transport input ssh
