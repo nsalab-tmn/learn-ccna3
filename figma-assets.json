@@ -8902,9 +8902,14 @@
     "path": "04-acl-concepts/04.05-exam/assets/16.svg",
     "format": "svg"
    },
-   "status": "pending",
+   "status": "synced",
    "provenance": {
-    "legacy": "16.jpg"
+    "legacy": "16.jpg",
+    "synced": {
+     "figmaVersion": "2412728046984626872",
+     "at": "2026-10-21T08:16:19Z",
+     "sha256": "10c1484b276b3f0819e50f020e176edb80a9a9951e5fa5ff371ea4cfca7de50f"
+    }
    }
   },
   {
@@ -8922,9 +8927,14 @@
     "path": "04-acl-concepts/04.05-exam/assets/2.svg",
     "format": "svg"
    },
-   "status": "pending",
+   "status": "synced",
    "provenance": {
-    "legacy": "2.PNG"
+    "legacy": "2.PNG",
+    "synced": {
+     "figmaVersion": "2412728046984626872",
+     "at": "2026-10-21T08:16:19Z",
+     "sha256": "04b3dde5f588ad1119cb1961442d6009c8cc3c498ddf55f777aba111659de528"
+    }
    }
   },
   {
@@ -8942,9 +8952,14 @@
     "path": "05-acls-for-ipv4-configuration/05.06-exam/assets/1.svg",
     "format": "svg"
    },
-   "status": "pending",
+   "status": "synced",
    "provenance": {
-    "legacy": "1.PNG"
+    "legacy": "1.PNG",
+    "synced": {
+     "figmaVersion": "2412728046984626872",
+     "at": "2026-10-21T08:16:19Z",
+     "sha256": "a03184d6bae9f1935c27920c8fcd1900cd5d6c3c74bec15038a61d6e5d3de71e"
+    }
    }
   },
   {
@@ -8962,9 +8977,14 @@
     "path": "05-acls-for-ipv4-configuration/05.06-exam/assets/5.svg",
     "format": "svg"
    },
-   "status": "pending",
+   "status": "synced",
    "provenance": {
-    "legacy": "5.PNG"
+    "legacy": "5.PNG",
+    "synced": {
+     "figmaVersion": "2412728046984626872",
+     "at": "2026-10-21T08:16:19Z",
+     "sha256": "bb40557e13e60133ed8df263b53790994b942f8c9bc87a151664996edbda5e41"
+    }
    }
   },
   {
@@ -8982,9 +9002,14 @@
     "path": "05-acls-for-ipv4-configuration/05.06-exam/assets/15.svg",
     "format": "svg"
    },
-   "status": "pending",
+   "status": "synced",
    "provenance": {
-    "legacy": "15.png"
+    "legacy": "15.png",
+    "synced": {
+     "figmaVersion": "2412728046984626872",
+     "at": "2026-10-21T08:16:19Z",
+     "sha256": "2ae3e8cc6fc2adb22c0f181f0908e376b62f22a346939887c7515beda5727cf3"
+    }
    }
   },
   {
@@ -9002,9 +9027,14 @@
     "path": "05-acls-for-ipv4-configuration/05.06-exam/assets/7.svg",
     "format": "svg"
    },
-   "status": "pending",
+   "status": "synced",
    "provenance": {
-    "legacy": "7.gif"
+    "legacy": "7.gif",
+    "synced": {
+     "figmaVersion": "2412728046984626872",
+     "at": "2026-10-21T08:16:19Z",
+     "sha256": "3ce429ddc913ce9d291ea430343e982d839ca0db2e40432b8db0378cd63e9e3a"
+    }
    }
   },
   {
@@ -9022,9 +9052,14 @@
     "path": "05-acls-for-ipv4-configuration/05.06-exam/assets/9.svg",
     "format": "svg"
    },
-   "status": "pending",
+   "status": "synced",
    "provenance": {
-    "legacy": "9.png"
+    "legacy": "9.png",
+    "synced": {
+     "figmaVersion": "2412728046984626872",
+     "at": "2026-10-21T08:16:19Z",
+     "sha256": "00bc102cee865e2a199ab704f886fc7061d9d45d2c6c4a57ef5acba52459b086"
+    }
    }
   },
   {
@@ -9043,9 +9078,14 @@
     "path": "04-acl-concepts/04.05-exam/assets/18.svg",
     "format": "svg"
    },
-   "status": "pending",
+   "status": "synced",
    "provenance": {
-    "legacy": "18.jpg"
+    "legacy": "18.jpg",
+    "synced": {
+     "figmaVersion": "2412728046984626872",
+     "at": "2026-10-21T08:16:19Z",
+     "sha256": "10c1484b276b3f0819e50f020e176edb80a9a9951e5fa5ff371ea4cfca7de50f"
+    }
    }
   },
   {
@@ -9064,9 +9104,14 @@
     "path": "04-acl-concepts/04.05-exam/assets/22.svg",
     "format": "svg"
    },
-   "status": "pending",
+   "status": "synced",
    "provenance": {
-    "legacy": "22.jpg"
+    "legacy": "22.jpg",
+    "synced": {
+     "figmaVersion": "2412728046984626872",
+     "at": "2026-10-21T08:16:19Z",
+     "sha256": "10c1484b276b3f0819e50f020e176edb80a9a9951e5fa5ff371ea4cfca7de50f"
+    }
    }
   },
   {
@@ -9085,9 +9130,14 @@
     "path": "04-acl-concepts/04.05-exam/assets/23.svg",
     "format": "svg"
    },
-   "status": "pending",
+   "status": "synced",
    "provenance": {
-    "legacy": "23.jpg"
+    "legacy": "23.jpg",
+    "synced": {
+     "figmaVersion": "2412728046984626872",
+     "at": "2026-10-21T08:16:19Z",
+     "sha256": "10c1484b276b3f0819e50f020e176edb80a9a9951e5fa5ff371ea4cfca7de50f"
+    }
    }
   },
   {
@@ -9106,9 +9156,14 @@
     "path": "04-acl-concepts/04.05-exam/assets/25.svg",
     "format": "svg"
    },
-   "status": "pending",
+   "status": "synced",
    "provenance": {
-    "legacy": "25.jpg"
+    "legacy": "25.jpg",
+    "synced": {
+     "figmaVersion": "2412728046984626872",
+     "at": "2026-10-21T08:16:19Z",
+     "sha256": "10c1484b276b3f0819e50f020e176edb80a9a9951e5fa5ff371ea4cfca7de50f"
+    }
    }
   },
   {
@@ -9127,9 +9182,14 @@
     "path": "05-acls-for-ipv4-configuration/05.06-exam/assets/20.svg",
     "format": "svg"
    },
-   "status": "pending",
+   "status": "synced",
    "provenance": {
-    "legacy": "20.jpg"
+    "legacy": "20.jpg",
+    "synced": {
+     "figmaVersion": "2412728046984626872",
+     "at": "2026-10-21T08:16:19Z",
+     "sha256": "10c1484b276b3f0819e50f020e176edb80a9a9951e5fa5ff371ea4cfca7de50f"
+    }
    }
   }
  ]
