@@ -9417,6 +9417,166 @@
      "sha256": "453ab074d2266829cecc692a668edbc8cac4b262cf7b8cb2c65cbcd997a41279"
     }
    }
+  },
+  {
+   "id": "ccna3-wwy2dt3",
+   "kind": "illustration",
+   "display": {
+    "key": "10.9.1"
+   },
+   "claim": "Маршрутизаторы R1 (192.168.10.1/30) и R2 (192.168.10.2/30) соединены последовательным каналом; к R1 через коммутатор подключен компьютер его локальной сети, где адрес маршрутизатора — 192.168.9.254/26, к R2 — TFTP-сервер H3 (192.168.11.252/24) в сети, где адрес маршрутизатора — 192.168.11.254/24.",
+   "figma": {
+    "nodeId": "6045:9929",
+    "page": "CCNA3 · 10 network-management"
+   },
+   "out": {
+    "path": "10-network-management/10.09-exam/assets/1.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "1.jpg"
+   }
+  },
+  {
+   "id": "ccna3-gwtitae",
+   "kind": "illustration",
+   "display": {
+    "key": "10.9.2"
+   },
+   "claim": "Вывод dir flash: на R1: три образа ОС — nr01-netos-0.1.0.bin (33 591 768 байт), nr01-netos-0.0.9.bin (29 360 128 байт) и nr01-netos-0.1.1.bin (35 651 584 байта) — и два файла конфигурации.",
+   "figma": {
+    "nodeId": "6045:10034",
+    "page": "CCNA3 · 10 network-management"
+   },
+   "out": {
+    "path": "10-network-management/10.09-exam/assets/2.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "2.PNG"
+   }
+  },
+  {
+   "id": "ccna3-sn2hcel",
+   "kind": "illustration",
+   "display": {
+    "key": "10.9.3"
+   },
+   "claim": "Вывод show cdp neighbors на R1: соседи R3 с возможностями R S I на Gig 0/0, коммутатор S1 с возможностями S I на Gig 0/1 и R2 с возможностями R S I на Ser 0/0/0.",
+   "figma": {
+    "nodeId": "6045:10037",
+    "page": "CCNA3 · 10 network-management"
+   },
+   "out": {
+    "path": "10-network-management/10.09-exam/assets/3.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "3.PNG"
+   }
+  },
+  {
+   "id": "ccna3-xe7fwpn",
+   "kind": "illustration",
+   "display": {
+    "key": "10.9.4"
+   },
+   "claim": "Вывод show lldp neighbors на S1: Dev2 с возможностью B (Bridge) на порту Fa0/4, его порт Fa0/4; Dev1 с возможностью R (Router) на порту Fa0/5, его порт Gi0/1.",
+   "figma": {
+    "nodeId": "6045:10040",
+    "page": "CCNA3 · 10 network-management"
+   },
+   "out": {
+    "path": "10-network-management/10.09-exam/assets/4.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "4.png"
+   }
+  },
+  {
+   "id": "ccna3-zjwa4zv",
+   "kind": "illustration",
+   "display": {
+    "key": "11.6.5"
+   },
+   "claim": "Пограничный маршрутизатор подключен к Интернету и последовательным каналом — к Router_1, Router_1 — к коммутатору S1; S1 соединен с S2, S3 и S4, S3 — еще и с S4; к S2 подключены AP_1 и PC_1, к S3 — AP_2 и PC_3, к S4 — PC_2.",
+   "figma": {
+    "nodeId": "6045:47369",
+    "page": "CCNA3 · 11 network-design"
+   },
+   "out": {
+    "path": "11-network-design/11.06-exam/assets/5.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "5.png"
+   }
+  },
+  {
+   "id": "ccna3-ax4bqyz",
+   "kind": "illustration",
+   "display": {
+    "key": "12.7.9"
+   },
+   "claim": "Вывод show ip protocols на R1: процесс OSPF 100, Router ID 192.168.255.1, сети 192.168.10.254 0.0.0.0 и 192.168.255.1 0.0.0.0 в области 0, пассивный интерфейс GigabitEthernet0/0, источник маршрутов 192.168.255.2.",
+   "figma": {
+    "nodeId": "6045:49322",
+    "page": "CCNA3 · 12 network-troubleshooting"
+   },
+   "out": {
+    "path": "12-network-troubleshooting/12.07-exam/assets/9.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "9.png"
+   }
+  },
+  {
+   "id": "ccna3-jzef2zz",
+   "kind": "illustration",
+   "display": {
+    "key": "15.0.1"
+   },
+   "claim": "Вывод show ip protocols на R1: процесс OSPF 100, сети 192.168.10.0 0.0.0.255 и 192.168.20.0 0.0.0.255 в области 0, пассивный интерфейс FastEthernet0/0, источников маршрутов нет.",
+   "figma": {
+    "nodeId": "6045:50819",
+    "page": "CCNA3 · 14 network-automation"
+   },
+   "out": {
+    "path": "final-exam/assets/1.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "1.png"
+   }
+  },
+  {
+   "id": "ccna3-kqo3du2",
+   "kind": "illustration",
+   "display": {
+    "key": "15.0.5"
+   },
+   "claim": "FTP- и веб-сервер 10.0.54.5/28 подключен через коммутатор к интерфейсу Gi0/0 маршрутизатора R1, к другому интерфейсу R1 через коммутатор подключен компьютер; интерфейс S0/0/0 маршрутизатора R1 последовательным каналом подключен к R2, к интерфейсу Gi0/0 маршрутизатора R2 через коммутатор подключен компьютер администратора 10.0.70.23/25.",
+   "figma": {
+    "nodeId": "6045:50678",
+    "page": "CCNA3 · 14 network-automation"
+   },
+   "out": {
+    "path": "final-exam/assets/5.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "5.png"
+   }
   }
  ]
 }
