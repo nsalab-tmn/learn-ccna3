@@ -9191,6 +9191,187 @@
      "sha256": "10c1484b276b3f0819e50f020e176edb80a9a9951e5fa5ff371ea4cfca7de50f"
     }
    }
+  },
+  {
+   "id": "ccna3-nu3hmry",
+   "kind": "illustration",
+   "display": {
+    "key": "6.9.3"
+   },
+   "claim": "PC1 (.10) в сети 192.168.0.0/24 подключен через коммутатор S1 к интерфейсу Gi0/0 (.1) маршрутизатора R1; интерфейс S0/0/0 маршрутизатора R1 (.225) последовательным каналом в сети 209.165.200.224/27 подключен к маршрутизатору провайдера (.254).",
+   "figma": {
+    "nodeId": "6038:10693",
+    "page": "CCNA3 · 06 nat-for-ipv4"
+   },
+   "out": {
+    "path": "06-nat-for-ipv4/06.09-exam/assets/3.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "3.gif"
+   }
+  },
+  {
+   "id": "ccna3-kanjowv",
+   "kind": "illustration",
+   "display": {
+    "key": "6.9.6"
+   },
+   "claim": "ПК подключен через коммутатор к маршрутизатору RT1, RT1 и RT2 соединены через Интернет, веб-сервер подключен через коммутатор к RT2 (адрес 192.0.2.2 в сторону Интернета, 172.16.1.254/24 в сторону веб-сервера); у ПК внутренний локальный адрес 192.168.1.5 и внутренний глобальный 209.165.200.245, у веб-сервера — 172.16.1.10 и 203.0.113.10.",
+   "figma": {
+    "nodeId": "6038:10769",
+    "page": "CCNA3 · 06 nat-for-ipv4"
+   },
+   "out": {
+    "path": "06-nat-for-ipv4/06.09-exam/assets/6.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "6.png"
+   }
+  },
+  {
+   "id": "ccna3-5t6gp76",
+   "kind": "illustration",
+   "display": {
+    "key": "6.9.9"
+   },
+   "claim": "Веб-сервер 10.1.0.13/16 подключен через коммутатор к маршрутизатору NAT; маршрутизаторы NAT (.1) и R2 (.2) соединены через сеть 209.165.201.0/29; PC1 10.0.54.5/28 подключен через коммутатор к R2.",
+   "figma": {
+    "nodeId": "6038:10899",
+    "page": "CCNA3 · 06 nat-for-ipv4"
+   },
+   "out": {
+    "path": "06-nat-for-ipv4/06.09-exam/assets/9.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "9.gif"
+   }
+  },
+  {
+   "id": "ccna3-padr6f5",
+   "kind": "illustration",
+   "display": {
+    "key": "6.9.13"
+   },
+   "claim": "ПК 10.130.5.76/24 подключен через коммутатор к маршрутизатору R1 (10.130.5.1/24); интерфейс S0/0/0 маршрутизатора R1 (192.0.2.1/30) последовательным каналом подключен к R2 (192.0.2.2/30); сервер 203.0.113.5/28 подключен через коммутатор к R2 (203.0.113.14/28).",
+   "figma": {
+    "nodeId": "6038:11021",
+    "page": "CCNA3 · 06 nat-for-ipv4"
+   },
+   "out": {
+    "path": "06-nat-for-ipv4/06.09-exam/assets/13.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "13.PNG"
+   }
+  },
+  {
+   "id": "ccna3-ywgxmek",
+   "kind": "illustration",
+   "display": {
+    "key": "6.9.5"
+   },
+   "claim": "Вывод show ip nat statistics на R1: 6 активных преобразований (2 статических, 4 динамических), внешний интерфейс Serial0/0/0, внутренние GigabitEthernet0/0 и GigabitEthernet0/1, список доступа 1 с пулом NAT и перегрузкой; в пуле 209.165.200.228–209.165.200.230 три адреса, выделен один.",
+   "figma": {
+    "nodeId": "6038:11133",
+    "page": "CCNA3 · 06 nat-for-ipv4"
+   },
+   "out": {
+    "path": "06-nat-for-ipv4/06.09-exam/assets/5.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "5.PNG"
+   }
+  },
+  {
+   "id": "ccna3-necjlcs",
+   "kind": "illustration",
+   "display": {
+    "key": "6.9.7"
+   },
+   "claim": "Вывод show ip nat translations на R1: две TCP-записи PAT с внутренним глобальным адресом 209.165.200.225 — для 10.6.15.2 к 209.165.202.141:80 и для 10.6.15.1 к 198.51.100.3:80.",
+   "figma": {
+    "nodeId": "6038:11136",
+    "page": "CCNA3 · 06 nat-for-ipv4"
+   },
+   "out": {
+    "path": "06-nat-for-ipv4/06.09-exam/assets/7.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "7.PNG"
+   }
+  },
+  {
+   "id": "ccna3-taeqikh",
+   "kind": "illustration",
+   "display": {
+    "key": "6.9.12"
+   },
+   "claim": "Таблица преобразований NAT без строки команды: две статические записи — 209.165.200.225 для 192.168.1.10 и 209.165.200.235 для 192.168.10.10.",
+   "figma": {
+    "nodeId": "6038:11139",
+    "page": "CCNA3 · 06 nat-for-ipv4"
+   },
+   "out": {
+    "path": "06-nat-for-ipv4/06.09-exam/assets/12.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "12.PNG"
+   }
+  },
+  {
+   "id": "ccna3-ww5kpvo",
+   "kind": "illustration",
+   "display": {
+    "key": "6.9.15"
+   },
+   "claim": "Выводы show ip interface brief и show ip nat translations на RT2: FastEthernet0/1 — 192.0.2.254; в таблице NAT — ICMP-запись 192.168.2.20 с адресом 192.0.2.254, статическая запись 192.168.254.253 ↔ 192.0.2.88 и TCP-запись от 203.0.113.20:1025 к 192.0.2.88:80.",
+   "figma": {
+    "nodeId": "6038:11142",
+    "page": "CCNA3 · 06 nat-for-ipv4"
+   },
+   "out": {
+    "path": "06-nat-for-ipv4/06.09-exam/assets/15.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "15.png"
+   }
+  },
+  {
+   "id": "ccna3-kjfie4c",
+   "ref": "ccna3-necjlcs",
+   "kind": "illustration",
+   "display": {
+    "key": "6.9.10"
+   },
+   "claim": "Вывод show ip nat translations на R1: две TCP-записи PAT с внутренним глобальным адресом 209.165.200.225 — для 10.6.15.2 к 209.165.202.141:80 и для 10.6.15.1 к 198.51.100.3:80.",
+   "figma": {
+    "nodeId": "6038:11136",
+    "page": "CCNA3 · 06 nat-for-ipv4"
+   },
+   "out": {
+    "path": "06-nat-for-ipv4/06.09-exam/assets/10.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "10.gif"
+   }
   }
  ]
 }
