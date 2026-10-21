@@ -114,7 +114,7 @@
     <td>G0/0/1</td>
     <td colspan="2">Подключается к Branch-1</td>
     <td>10.1.1.1/30</td>
-    <td>2001:db8:acad:a001::1/64</td>
+    <td>2001:db8:feed:2::1/64</td>
     <td>a03d.6fe1.e181</td>
     <td>OSPFv3</td>
   </tr>
@@ -122,15 +122,15 @@
     <td>G0/1/0</td>
     <td colspan="2">Подключение к интернет-провайдеру</td>
     <td>209.165.200.226/30</td>
-    <td>2001:db8:feed:1::2/64</td>
+    <td>2001:db8:feed:1::226/64</td>
     <td>a03d.6fc3.a132</td>
     <td>По умолчанию</td>
   </tr>
   <tr>
     <td>S0/1/1</td>
     <td colspan="2">Подключается к Branch-2</td>
-    <td>10.1.1.2/24</td>
-    <td>2001:db8:acad:2::1/64</td>
+    <td>10.2.2.1/30</td>
+    <td>2001:db8:feed:3::1/64</td>
     <td>Н/Д (недоступно)</td>
     <td>OSPFv3</td>
   </tr>
@@ -168,7 +168,7 @@
     <td>G0/0/1</td>
     <td colspan="2">Подключение к Central</td>
     <td>10.1.1.2/30</td>
-    <td>2001:db8:acad:a001::2/64</td>
+    <td>2001:db8:feed:2::2/64</td>
     <td>a03d.6fe1.9d91</td>
     <td>OSPF</td>
   </tr>
