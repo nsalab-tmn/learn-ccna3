@@ -578,11 +578,11 @@ R1#
 Сетевой администратор устраняет проблему, когда не получается подключиться к маршрутизатору по протоколу HTTP. Администратор выполняет команду R2, как показано в выходных данных команды.
 
 ```
-R1# ping 2001:db8:acad:2::2
+R1#ping 2001:db8:acad:2::2
 Type escape sequence to abort.
 Sending 5, 100-byte ICMP Echos to 2001:DB8:ACAD:2::2, timeout is 2 seconds:
 !!!!!
-Success rate is 100 percent (5/5), round-trip min/avg/max = 2/2/3 ms
+Success rate is 100 percent (5/5), round-trip min/avg/max = 1/2/4 ms
 R1#
 ```
 
@@ -591,11 +591,15 @@ R2 отвечает и подтверждает, что сетевой уров�
 Затем администратор проверяет, может ли он подключиться к маршрутизатору R2 по протоколу Telnet, как показано в выходных данных команды.
 
 ```
-R1# telnet 2001:db8:acad:2::2
+R1#telnet 2001:db8:acad:2::2
 Trying 2001:DB8:ACAD:2::2 ... Open
+
 User Access Verification
-Password:
-R2> exit
+
+Password: 
+R2>exit
+
+
 [Connection to 2001:db8:acad:2::2 closed by foreign host]
 R1#
 ```
@@ -605,18 +609,20 @@ R1#
 Например, администратор пытается установить Telnet на R2 с помощью порта 80.
 
 ```
-R1# telnet 2001:db8:acad:2::2 80
+R1#telnet 2001:db8:acad:2::2 80
 Trying 2001:DB8:ACAD:2::2, 80 ... Open
 ^C
 HTTP/1.1 400 Bad Request
-Date: Mon, 04 Nov 2019 12:34:23 GMT
-Accept-Ranges: none
+Server: NetOS
+Content-Type: text/html
+Content-Length: 15
+
 400 Bad Request
 [Connection to 2001:db8:acad:2::2 closed by foreign host]
 R1#
 ```
 
-Выходные данные подтверждают, что соединение транспортного уровня установлено (слово «Open»): R2 принял TCP-соединение на порту 80 и ответил на некорректный запрос кодом 400 Bad Request (RFC 9110, п. 15.5.1). Сервер HTTP на R2 работает, и соединение не было отклонено.
+Выходные данные подтверждают, что соединение транспортного уровня установлено (слово «Open»): R2 принял TCP-соединение на порту 80 и ответил на некорректный запрос кодом 400 Bad Request (RFC 9110, п. 15.5.1). Строки заголовка ответа (Server, Content-Type и Content-Length) прислал веб-сервер самого маршрутизатора: на R2 включена команда **ip http server**. Сервер HTTP на R2 работает, и соединение не было отклонено.
 
 <!-- 12.5.11 -->
 ## Шаг 7. Проверка ACL
