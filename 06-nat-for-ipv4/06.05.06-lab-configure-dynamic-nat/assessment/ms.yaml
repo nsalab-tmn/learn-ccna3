@@ -116,38 +116,12 @@ Criterions:
       description: 'PC1 → 209.165.201.5 (PING): проходит'
       skills:
       - Other
-      max_mark: 6
+      max_mark: 11
       steps:
       - name: 'ping -n 2 209.165.201.5: has : bytes='
         code: check
         type: check
         device: PC1
-        action_chain:
-        - action: verify_output
-          action_vars:
-            command: ping -n 2 209.165.201.5
-            assert_tags:
-            - ': bytes='
-            tags_are_present: true
-            retries: 3
-            retry_interval: 15
-- code: L1
-  name: L1
-  subCriterions:
-  - code: L1.CONNECTIVITY-TESTS
-    name: Connectivity Tests
-    aspects:
-    - code: L1.CONNECTIVITY-TESTS.CT-1
-      name: 'L1 to 209.165.201.5 : 209.165.201.5 (ICMP)'
-      description: 'L1 → 209.165.201.5 (PING): проходит'
-      skills:
-      - Other
-      max_mark: 6
-      steps:
-      - name: 'ping -n 2 209.165.201.5: has : bytes='
-        code: check
-        type: check
-        device: L1
         action_chain:
         - action: verify_output
           action_vars:

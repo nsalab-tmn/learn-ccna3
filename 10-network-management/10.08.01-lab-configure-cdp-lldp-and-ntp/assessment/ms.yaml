@@ -417,3 +417,121 @@ Criterions:
             command: show running-config interface GigabitEthernet0/1
             expr: (?m)^ no lldp receive\s*$
             match: true
+- code: PC1
+  name: PC1
+  subCriterions:
+  - code: PC1.CONNECTIVITY-TESTS
+    name: Connectivity Tests
+    aspects:
+    - code: PC1.CONNECTIVITY-TESTS.CT-0
+      name: 'PC1 to 192.168.1.254 : 192.168.1.254 (ICMP)'
+      description: 'PC1 → 192.168.1.254 (PING): проходит'
+      skills:
+      - Other
+      max_mark: 4
+      steps:
+      - name: 'show running-config: matches (?m)^ntp server 192\.168\.1\.254\s*$'
+        code: check
+        type: check
+        device: HQ
+        action_chain:
+        - action: verify_output_regex
+          action_vars:
+            command: show running-config
+            expr: (?m)^ntp server 192\.168\.1\.254\s*$
+            match: true
+      - name: 'ping -n 2 192.168.1.254: has : bytes='
+        code: check
+        type: check
+        device: PC1
+        action_chain:
+        - action: verify_output
+          action_vars:
+            command: ping -n 2 192.168.1.254
+            assert_tags:
+            - ': bytes='
+            tags_are_present: true
+            retries: 3
+            retry_interval: 15
+- code: PC2
+  name: PC2
+  subCriterions:
+  - code: PC2.CONNECTIVITY-TESTS
+    name: Connectivity Tests
+    aspects:
+    - code: PC2.CONNECTIVITY-TESTS.CT-1
+      name: 'PC2 to 192.168.2.10 : 192.168.2.10 (ICMP)'
+      description: 'PC2 → 192.168.2.10 (PING): проходит'
+      skills:
+      - Other
+      max_mark: 4
+      steps:
+      - name: 'show running-config interface FastEthernet0/1: matches (?m)^ no cdp enable\s*$'
+        code: check
+        type: check
+        device: BR-SW-2
+        action_chain:
+        - action: verify_output_regex
+          action_vars:
+            command: show running-config interface FastEthernet0/1
+            expr: (?m)^ no cdp enable\s*$
+            match: true
+      - name: 'show running-config interface FastEthernet0/1: matches (?m)^ no lldp receive\s*$'
+        code: check
+        type: check
+        device: HQ-SW-2
+        action_chain:
+        - action: verify_output_regex
+          action_vars:
+            command: show running-config interface FastEthernet0/1
+            expr: (?m)^ no lldp receive\s*$
+            match: true
+      - name: 'ping -n 2 192.168.2.10: has : bytes='
+        code: check
+        type: check
+        device: PC2
+        action_chain:
+        - action: verify_output
+          action_vars:
+            command: ping -n 2 192.168.2.10
+            assert_tags:
+            - ': bytes='
+            tags_are_present: true
+            retries: 3
+            retry_interval: 15
+- code: PC3
+  name: PC3
+  subCriterions:
+  - code: PC3.CONNECTIVITY-TESTS
+    name: Connectivity Tests
+    aspects:
+    - code: PC3.CONNECTIVITY-TESTS.CT-2
+      name: 'PC3 to 192.168.4.4 : 192.168.4.4 (ICMP)'
+      description: 'PC3 → 192.168.4.4 (PING): проходит'
+      skills:
+      - Other
+      max_mark: 4
+      steps:
+      - name: 'show running-config interface FastEthernet0/1: matches (?m)^ no cdp enable\s*$'
+        code: check
+        type: check
+        device: BR-SW-3
+        action_chain:
+        - action: verify_output_regex
+          action_vars:
+            command: show running-config interface FastEthernet0/1
+            expr: (?m)^ no cdp enable\s*$
+            match: true
+      - name: 'ping -n 2 192.168.4.4: has : bytes='
+        code: check
+        type: check
+        device: PC3
+        action_chain:
+        - action: verify_output
+          action_vars:
+            command: ping -n 2 192.168.4.4
+            assert_tags:
+            - ': bytes='
+            tags_are_present: true
+            retries: 3
+            retry_interval: 15

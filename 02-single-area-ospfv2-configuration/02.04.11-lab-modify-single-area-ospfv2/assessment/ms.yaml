@@ -97,3 +97,201 @@ Criterions:
             command: show ip ospf interface Serial0/0/0
             expr: (?m)^  Timer intervals configured, Hello 15,
             match: true
+- code: PC1
+  name: PC1
+  subCriterions:
+  - code: PC1.CONNECTIVITY-TESTS
+    name: Connectivity Tests
+    aspects:
+    - code: PC1.CONNECTIVITY-TESTS.CT-0
+      name: 'PC1 to 64.100.1.2 : 64.100.1.2 (ICMP)'
+      description: 'PC1 → 64.100.1.2 (PING): проходит'
+      skills:
+      - Other
+      max_mark: 1
+      steps:
+      - name: 'show ip ospf interface Serial0/0/0: matches (?m)^  Timer intervals configured, Hello 15,'
+        code: check
+        type: check
+        device: R1
+        action_chain:
+        - action: verify_output_regex
+          action_vars:
+            command: show ip ospf interface Serial0/0/0
+            expr: (?m)^  Timer intervals configured, Hello 15,
+            match: true
+      - name: 'show ip ospf interface Serial0/0/0: matches (?m)^  Timer intervals configured, Hello \d+, Dead 60,'
+        code: check
+        type: check
+        device: R1
+        action_chain:
+        - action: verify_output_regex
+          action_vars:
+            command: show ip ospf interface Serial0/0/0
+            expr: (?m)^  Timer intervals configured, Hello \d+, Dead 60,
+            match: true
+      - name: 'show ip ospf interface Serial0/0/0: matches (?m)^  Timer intervals configured, Hello 15,'
+        code: check
+        type: check
+        device: R2
+        action_chain:
+        - action: verify_output_regex
+          action_vars:
+            command: show ip ospf interface Serial0/0/0
+            expr: (?m)^  Timer intervals configured, Hello 15,
+            match: true
+      - name: 'show ip ospf interface Serial0/0/0: matches (?m)^  Timer intervals configured, Hello \d+, Dead 60,'
+        code: check
+        type: check
+        device: R2
+        action_chain:
+        - action: verify_output_regex
+          action_vars:
+            command: show ip ospf interface Serial0/0/0
+            expr: (?m)^  Timer intervals configured, Hello \d+, Dead 60,
+            match: true
+      - name: 'ping -n 2 64.100.1.2: has : bytes='
+        code: check
+        type: check
+        device: PC1
+        action_chain:
+        - action: verify_output
+          action_vars:
+            command: ping -n 2 64.100.1.2
+            assert_tags:
+            - ': bytes='
+            tags_are_present: true
+            retries: 3
+            retry_interval: 15
+- code: PC2
+  name: PC2
+  subCriterions:
+  - code: PC2.CONNECTIVITY-TESTS
+    name: Connectivity Tests
+    aspects:
+    - code: PC2.CONNECTIVITY-TESTS.CT-1
+      name: 'PC2 to 172.16.1.2 : 172.16.1.2 (ICMP)'
+      description: 'PC2 → 172.16.1.2 (PING): проходит'
+      skills:
+      - Other
+      max_mark: 1
+      steps:
+      - name: 'show ip ospf interface Serial0/0/0: matches (?m)^  Timer intervals configured, Hello 15,'
+        code: check
+        type: check
+        device: R1
+        action_chain:
+        - action: verify_output_regex
+          action_vars:
+            command: show ip ospf interface Serial0/0/0
+            expr: (?m)^  Timer intervals configured, Hello 15,
+            match: true
+      - name: 'show ip ospf interface Serial0/0/0: matches (?m)^  Timer intervals configured, Hello \d+, Dead 60,'
+        code: check
+        type: check
+        device: R1
+        action_chain:
+        - action: verify_output_regex
+          action_vars:
+            command: show ip ospf interface Serial0/0/0
+            expr: (?m)^  Timer intervals configured, Hello \d+, Dead 60,
+            match: true
+      - name: 'show ip ospf interface Serial0/0/0: matches (?m)^  Timer intervals configured, Hello 15,'
+        code: check
+        type: check
+        device: R2
+        action_chain:
+        - action: verify_output_regex
+          action_vars:
+            command: show ip ospf interface Serial0/0/0
+            expr: (?m)^  Timer intervals configured, Hello 15,
+            match: true
+      - name: 'show ip ospf interface Serial0/0/0: matches (?m)^  Timer intervals configured, Hello \d+, Dead 60,'
+        code: check
+        type: check
+        device: R2
+        action_chain:
+        - action: verify_output_regex
+          action_vars:
+            command: show ip ospf interface Serial0/0/0
+            expr: (?m)^  Timer intervals configured, Hello \d+, Dead 60,
+            match: true
+      - name: 'ping -n 2 172.16.1.2: has : bytes='
+        code: check
+        type: check
+        device: PC2
+        action_chain:
+        - action: verify_output
+          action_vars:
+            command: ping -n 2 172.16.1.2
+            assert_tags:
+            - ': bytes='
+            tags_are_present: true
+            retries: 3
+            retry_interval: 15
+- code: PC3
+  name: PC3
+  subCriterions:
+  - code: PC3.CONNECTIVITY-TESTS
+    name: Connectivity Tests
+    aspects:
+    - code: PC3.CONNECTIVITY-TESTS.CT-2
+      name: 'PC3 to 64.100.1.2 : 64.100.1.2 (ICMP)'
+      description: 'PC3 → 64.100.1.2 (PING): проходит'
+      skills:
+      - Other
+      max_mark: 1
+      steps:
+      - name: 'show ip ospf interface Serial0/0/0: matches (?m)^  Timer intervals configured, Hello 15,'
+        code: check
+        type: check
+        device: R1
+        action_chain:
+        - action: verify_output_regex
+          action_vars:
+            command: show ip ospf interface Serial0/0/0
+            expr: (?m)^  Timer intervals configured, Hello 15,
+            match: true
+      - name: 'show ip ospf interface Serial0/0/0: matches (?m)^  Timer intervals configured, Hello \d+, Dead 60,'
+        code: check
+        type: check
+        device: R1
+        action_chain:
+        - action: verify_output_regex
+          action_vars:
+            command: show ip ospf interface Serial0/0/0
+            expr: (?m)^  Timer intervals configured, Hello \d+, Dead 60,
+            match: true
+      - name: 'show ip ospf interface Serial0/0/0: matches (?m)^  Timer intervals configured, Hello 15,'
+        code: check
+        type: check
+        device: R2
+        action_chain:
+        - action: verify_output_regex
+          action_vars:
+            command: show ip ospf interface Serial0/0/0
+            expr: (?m)^  Timer intervals configured, Hello 15,
+            match: true
+      - name: 'show ip ospf interface Serial0/0/0: matches (?m)^  Timer intervals configured, Hello \d+, Dead 60,'
+        code: check
+        type: check
+        device: R2
+        action_chain:
+        - action: verify_output_regex
+          action_vars:
+            command: show ip ospf interface Serial0/0/0
+            expr: (?m)^  Timer intervals configured, Hello \d+, Dead 60,
+            match: true
+      - name: 'ping -n 2 64.100.1.2: has : bytes='
+        code: check
+        type: check
+        device: PC3
+        action_chain:
+        - action: verify_output
+          action_vars:
+            command: ping -n 2 64.100.1.2
+            assert_tags:
+            - ': bytes='
+            tags_are_present: true
+            retries: 3
+            retry_interval: 15
