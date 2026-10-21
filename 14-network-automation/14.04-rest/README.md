@@ -46,7 +46,7 @@ API RESTful используют общие методы HTTP, включая PO
 | PUT/PATCH | Update |
 | DELETE | Delete |
 
-Клиент может запросить данные в формате JSON. Если запрос успешно создан в соответствии с документацией API, сервер ответит данными JSON. Они могут использоваться веб-приложением клиента для отображения данных. Например, приложение для определения местоположения смартфонов показывает местоположение Сан-Хосе, штат Калифорния.
+Клиент может запросить данные в формате JSON. Если запрос составлен в соответствии с документацией API, сервер ответит данными JSON, а веб-приложение клиента использует их для отображения. Например, картографическое приложение на смартфоне обращается к веб-службе http://ya.ru/resources запросом `GET /resources/cities/san-jose HTTP/1.1` с заголовком `Accept: application/json`. Сервер отвечает строкой состояния `HTTP/1.1 200 OK` и телом `{"city": "Сан-Хосе", "latitude": 37.34, "longitude": -121.89}`, и по этим координатам приложение показывает Сан-Хосе на карте.
 
 ![](./assets/14.4.3-2.svg)
 <!-- /courses/ensa-dl/ae8eb39a-34fd-11eb-ba19-f1886492e0e4/aeb686ee-34fd-11eb-ba19-f1886492e0e4/assets/c734dbc2-1c46-11ea-af56-e368b99e9723.svg -->
@@ -76,7 +76,7 @@ API RESTful используют общие методы HTTP, включая PO
 <!-- /courses/ensa-dl/ae8eb39a-34fd-11eb-ba19-f1886492e0e4/aeb686ee-34fd-11eb-ba19-f1886492e0e4/assets/c73529e3-1c46-11ea-af56-e368b99e9723.svg -->
 
 <!--
-На рисунке показан URI https://www.example.com/author/book.html#page155. URL-адрес: https://www.example.com/author/book.html. Фрагмент: #page155. Ниже приведен пример URN: urn:ietf:params:netconf:base:1.1.
+На рисунке показан URI https://www.ya.ru/author/book.html#page155. URL-адрес: https://www.ya.ru/author/book.html. Фрагмент: #page155. Ниже приведен пример URN: urn:ietf:params:netconf:base:1.1.
 -->
 
 <!-- 14.4.5 -->
