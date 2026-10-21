@@ -12,11 +12,12 @@
 
 Колонка «Видеоряд (Figma)» в таблице фиксирует прогресс пересборки: по каким видео собран новый видеоряд — анимация Figma Motion на нашей дизайн-системе, тем же методом, что в CCNA1 и CCNA2. Голосовая дорожка — отдельный трек, пока не начат ни для одного видео.
 
-**Готово: 15 из 32** (explainer — 15 из 21). Шесть explainer-роликов модуля 3 о том, как проводятся атаки (`gDohT7qGeSs`, `s1Zb4Si9glY`, `zSvQp2erbbY`, `aHUs-Q95deY`, `qgM_6SJwwP8`, `NbmzS--sOyU`), в цепочку пересборки 2026-10-18 не вошли — решение по ним за оператором.
+**Готово: 15 из 32** (explainer — 15 из 21). **Не делаем: 4** — серия DNA Center `5wsjDRPXfmM`, `ALftVi8SAZo`, `o8uaZfpkr5A`, `bNG9z5NQc44` (маркетинг; оператор, 2026-10-21). Шесть explainer-роликов модуля 3 о том, как проводятся атаки (`gDohT7qGeSs`, `s1Zb4Si9glY`, `zSvQp2erbbY`, `aHUs-Q95deY`, `qgM_6SJwwP8`, `NbmzS--sOyU`), в цепочку пересборки 2026-10-18 не вошли — решение по ним за оператором.
 
 | статус | значит |
 |---|---|
 | — | пересборка не начата |
+| не делаем | видео не пересобирается: раздел удален или содержание передано тексту (решение оператора) |
 | волна безопасности | видео выведено из волны «работа в симуляторе» (kb#327); пересборка — в волне безопасности |
 | Motion | анимация собрана и ждёт приёмки оператора; время — её хронометраж, ссылка ведёт на кадр анимации |
 | **готов** | анимация Figma Motion принята оператором; время — её хронометраж (у оригинала — колонка «Длит.»), ссылка ведёт на кадр анимации |
@@ -55,10 +56,10 @@
 | `_sUxEZzjirg` | 14-network-automation / 14.04-rest | REST: методы/CRUD, анатомия URI, один GET к ipinfo.io из браузера, curl, JavaScript и Python | 4:26 | lab-demo | видео с генерированным голосом (код-рендер), ~3:00 + сессия для симулятора; **видеодорожка повреждена** (слайды 0:00–2:32 отсутствуют) | — | [14.04 — _sUxEZzjirg](14-network-automation/14.04-rest--_sUxEZzjirg.md) |
 | `-EHtbTcC_G4` | 14-network-automation / 14.05-configuration-management | Инструменты управления конфигурацией; разбор и запуск Ansible-playbook | 5:37 | lab-demo | видео с генерированным голосом (код-рендер), ~3:30 + сессия Ansible (Linux-хост как в видео и сетевой вариант `ios_facts`) | — | [14.05 — -EHtbTcC_G4](14-network-automation/14.05-configuration-management---EHtbTcC_G4.md) |
 | `aiimnEwcfFA` | 14-network-automation / 14.06-ibn-and-cisco-dna-center | Сети на основе намерений и ИИ (у доски, Cisco) | 3:12 | explainer | анимация Figma ≤ 60 с (цикл intent → translate → activate → infra → assurance, ИИ в центре) | **готов** · 1:22 · [Figma](https://www.figma.com/design/3FtCg22qFubpLBPOetQU03/CCNA-Design?node-id=5296-7793) | [14.06 — aiimnEwcfFA](14-network-automation/14.06-ibn-and-cisco-dna-center--aiimnEwcfFA.md) |
-| `5wsjDRPXfmM` | 14-network-automation / 14.06-ibn-and-cisco-dna-center | Обзор Cisco DNA Center и API платформы (часть 1/4) | 4:20 | lab-demo | видео с генерированным голосом (макет GUI контроллера), ~2:30 + API-сессия (auth, site-health, assign device) | — | [14.06 — 5wsjDRPXfmM](14-network-automation/14.06-ibn-and-cisco-dna-center--5wsjDRPXfmM.md) |
-| `ALftVi8SAZo` | 14-network-automation / 14.06-ibn-and-cisco-dna-center | DNA Center: Design и Provision (часть 2/4) | 3:00 | lab-demo | видео (макет GUI), ~2:30 + API-сессия обновления образа и CLI-эквивалент сетевых настроек | — | [14.06 — ALftVi8SAZo](14-network-automation/14.06-ibn-and-cisco-dna-center--ALftVi8SAZo.md) |
-| `o8uaZfpkr5A` | 14-network-automation / 14.06-ibn-and-cisco-dna-center | DNA Center: Policy и Assurance (часть 3/4) | 3:03 | lab-demo | видео (макет GUI + терминал), ~2:30 + CLI-сессия `show ip route / cef / eigrp neighbors` для симулятора | — | [14.06 — o8uaZfpkr5A](14-network-automation/14.06-ibn-and-cisco-dna-center--o8uaZfpkr5A.md) |
-| `bNG9z5NQc44` | 14-network-automation / 14.06-ibn-and-cisco-dna-center | DNA Center: диагностика подключения пользователя (часть 4/4) | 7:04 | lab-demo (хвост 5:13–6:55 — marketing) | видео (макет Client 360 + терминал WLC), ~3:30; ROI-таблицу убрать; CLI-сессия Catalyst 9800 | — | [14.06 — bNG9z5NQc44](14-network-automation/14.06-ibn-and-cisco-dna-center--bNG9z5NQc44.md) |
+| `5wsjDRPXfmM` | 14-network-automation / 14.06-ibn-and-cisco-dna-center | Обзор Cisco DNA Center и API платформы (часть 1/4) | 4:20 | lab-demo | видео с генерированным голосом (макет GUI контроллера), ~2:30 + API-сессия (auth, site-health, assign device) | не делаем: серия DNA Center — маркетинг (оператор, 2026-10-21) | [14.06 — 5wsjDRPXfmM](14-network-automation/14.06-ibn-and-cisco-dna-center--5wsjDRPXfmM.md) |
+| `ALftVi8SAZo` | 14-network-automation / 14.06-ibn-and-cisco-dna-center | DNA Center: Design и Provision (часть 2/4) | 3:00 | lab-demo | видео (макет GUI), ~2:30 + API-сессия обновления образа и CLI-эквивалент сетевых настроек | не делаем: серия DNA Center — маркетинг (оператор, 2026-10-21) | [14.06 — ALftVi8SAZo](14-network-automation/14.06-ibn-and-cisco-dna-center--ALftVi8SAZo.md) |
+| `o8uaZfpkr5A` | 14-network-automation / 14.06-ibn-and-cisco-dna-center | DNA Center: Policy и Assurance (часть 3/4) | 3:03 | lab-demo | видео (макет GUI + терминал), ~2:30 + CLI-сессия `show ip route / cef / eigrp neighbors` для симулятора | не делаем: серия DNA Center — маркетинг (оператор, 2026-10-21) | [14.06 — o8uaZfpkr5A](14-network-automation/14.06-ibn-and-cisco-dna-center--o8uaZfpkr5A.md) |
+| `bNG9z5NQc44` | 14-network-automation / 14.06-ibn-and-cisco-dna-center | DNA Center: диагностика подключения пользователя (часть 4/4) | 7:04 | lab-demo (хвост 5:13–6:55 — marketing) | видео (макет Client 360 + терминал WLC), ~3:30; ROI-таблицу убрать; CLI-сессия Catalyst 9800 | не делаем: серия DNA Center — маркетинг (оператор, 2026-10-21) | [14.06 — bNG9z5NQc44](14-network-automation/14.06-ibn-and-cisco-dna-center--bNG9z5NQc44.md) |
 
 ## Сводка — модули 01, 03, 08, 09
 
@@ -92,7 +93,7 @@
 
 **По классам:** lab-demo — 8 (`nsmyx7XLAPo`, `jaBySHLTV-Q`, `_sUxEZzjirg`, `-EHtbTcC_G4`, `5wsjDRPXfmM`, `ALftVi8SAZo`, `o8uaZfpkr5A`, `bNG9z5NQc44`); explainer — 5 (`bvv3U0BkiL0`, `zly4n5wU-bU`, `_ivjNF93RcE`, `2AduRqyW8Qc`, `aiimnEwcfFA`); marketing — 2 (`UlQEjsoNIGM`, `nVxWyrzuaBY`); cli-basics — 0; other — 0.
 
-**Убрать (marketing):** `UlQEjsoNIGM` (TechWiseTV про ACI — всё полезное уже в 13.5.3–13.5.4) и `nVxWyrzuaBY` (IoT-реклама Cisco без технического содержания). Плюс маркетинговый хвост `bNG9z5NQc44` (таблица «The Cost of Troubleshooting 800 Users»).
+**Убрать (marketing):** `UlQEjsoNIGM` (TechWiseTV про ACI — всё полезное уже в 13.5.3–13.5.4) и `nVxWyrzuaBY` (IoT-реклама Cisco без технического содержания). Плюс маркетинговый хвост `bNG9z5NQc44` (таблица «The Cost of Troubleshooting 800 Users»). **Решено (оператор, 2026-10-21):** всю серию DNA Center — `5wsjDRPXfmM`, `ALftVi8SAZo`, `o8uaZfpkr5A`, `bNG9z5NQc44` — не делаем как маркетинг; в 14.06 ее встроек нет.
 
 **Самое ценное для симулятора (готовые сессии в документах):**
 1. `nsmyx7XLAPo` — полный цикл обновления IOS: `ping` → `show flash` → `copy tftp flash` (диалог и прогресс) → `show flash` (два образа) → `boot system flash:` → `copy run start` → `reload` → `show version`; реальный вывод Cisco 1941 / IOS 15.7(3)M5.

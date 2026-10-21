@@ -24,7 +24,7 @@
 
 **По классам:** lab-demo — 8 (`nsmyx7XLAPo`, `jaBySHLTV-Q`, `_sUxEZzjirg`, `-EHtbTcC_G4`, `5wsjDRPXfmM`, `ALftVi8SAZo`, `o8uaZfpkr5A`, `bNG9z5NQc44`); explainer — 5 (`bvv3U0BkiL0`, `zly4n5wU-bU`, `_ivjNF93RcE`, `2AduRqyW8Qc`, `aiimnEwcfFA`); marketing — 2 (`UlQEjsoNIGM`, `nVxWyrzuaBY`); cli-basics — 0; other — 0.
 
-**Убрать (marketing):** `UlQEjsoNIGM` (TechWiseTV про ACI — всё полезное уже в 13.5.3–13.5.4) и `nVxWyrzuaBY` (IoT-реклама Cisco без технического содержания). Плюс маркетинговый хвост `bNG9z5NQc44` (таблица «The Cost of Troubleshooting 800 Users»).
+**Убрать (marketing):** `UlQEjsoNIGM` (TechWiseTV про ACI — всё полезное уже в 13.5.3–13.5.4) и `nVxWyrzuaBY` (IoT-реклама Cisco без технического содержания). Плюс маркетинговый хвост `bNG9z5NQc44` (таблица «The Cost of Troubleshooting 800 Users»). **Решено (оператор, 2026-10-21):** всю серию DNA Center — `5wsjDRPXfmM`, `ALftVi8SAZo`, `o8uaZfpkr5A`, `bNG9z5NQc44` — не делаем как маркетинг; в 14.06 ее встроек нет.
 
 **Самое ценное для симулятора (готовые сессии в документах):**
 1. `nsmyx7XLAPo` — полный цикл обновления IOS: `ping` → `show flash` → `copy tftp flash` (диалог и прогресс) → `show flash` (два образа) → `boot system flash:` → `copy run start` → `reload` → `show version`; реальный вывод Cisco 1941 / IOS 15.7(3)M5.
