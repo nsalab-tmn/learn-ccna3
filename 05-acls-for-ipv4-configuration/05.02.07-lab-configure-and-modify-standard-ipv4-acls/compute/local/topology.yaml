@@ -438,6 +438,38 @@ scenario:
             Minimum = 1ms, Maximum = 1ms, Average = 1ms
         ```
 
+        ```
+        C:\>ping 209.165.200.254
+
+        Pinging 209.165.200.254 with 32 bytes of data:
+
+        Reply from 209.165.200.226: bytes=32 time=1ms TTL=253
+        Reply from 209.165.200.226: bytes=32 time=1ms TTL=253
+        Reply from 209.165.200.226: bytes=32 time=1ms TTL=253
+        Reply from 209.165.200.226: bytes=32 time=1ms TTL=253
+
+        Ping statistics for 209.165.200.254:
+            Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),
+        Approximate round trip times in milli-seconds:
+            Minimum = 1ms, Maximum = 1ms, Average = 1ms
+        ```
+
+        ```
+        C:\>ping 209.165.200.254
+
+        Pinging 209.165.200.254 with 32 bytes of data:
+
+        Reply from 209.165.200.226: bytes=32 time=1ms TTL=253
+        Reply from 209.165.200.226: bytes=32 time=1ms TTL=253
+        Reply from 209.165.200.226: bytes=32 time=1ms TTL=253
+        Reply from 209.165.200.226: bytes=32 time=1ms TTL=253
+
+        Ping statistics for 209.165.200.254:
+            Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),
+        Approximate round trip times in milli-seconds:
+            Minimum = 1ms, Maximum = 1ms, Average = 1ms
+        ```
+
         **Шаг 7.** Ответьте на вопрос 5 в форме ответов.
     - title: "Стандартный нумерованный список доступа на R3"
       body: |
