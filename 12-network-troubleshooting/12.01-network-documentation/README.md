@@ -266,7 +266,7 @@
     <td colspan="2">-</td>
   </tr>
   <tr>
-    <td>Fa0/24</td>
+    <td>Fa0/23</td>
     <td colspan="2">Порт доступа для пользователей</td>
     <td>Да</td>
     <td colspan="2">20</td>
@@ -361,8 +361,8 @@
     <td>192.168.10.1</td>
   </tr>
   <tr>
-    <td>2001:db8:acad:1::251/64</td>
-    <td>2001:db8:acad:1::1</td>
+    <td>2001:db8:acad:2::251/64</td>
+    <td>2001:db8:acad:2::1</td>
     <td>2001:db8:acad:1::1</td>
   </tr>
   <tr>
