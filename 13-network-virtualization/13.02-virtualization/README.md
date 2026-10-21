@@ -112,7 +112,7 @@
 * VMware Workstation;
 * Oracle VM VirtualBox;
 * VMware Fusion;
-* Mac OS X Parallels.
+* Parallels Desktop (macOS).
 
 Многие из них — бесплатные. Некоторые гипервизоры предлагают дополнительные функции за отдельную плату.
 
