@@ -129,7 +129,7 @@ Dynamic mappings:
 -- Inside Source
 [Id: 3] access-list 1 pool NAT-POOL2 refcount 2
  pool NAT-POOL2: netmask 255.255.255.224
-	start 209.165.200.225 end 209.165.200.240
+	start 209.165.200.226 end 209.165.200.240
 	type generic, total addresses 15, allocated 1 (6%), misses 0
 (output omitted)
 R2#
