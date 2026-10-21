@@ -8,21 +8,43 @@ Criterions:
     aspects:
     - code: RT1.ACL.ACL-ACL
       name: ACL
-      description: 'Список доступа ACL: 9 записей по порядку'
+      description: 'Список доступа ACL: 9 записей, пересекающиеся — по порядку'
       skills:
       - IPv4 Extended ACL Implementation
       max_mark: 80
       steps:
-      - name: 'show access-lists ACL: matches (?m)^Extended IP access list ACL\s*$\s*\n\s+\d+ deny\ tcp\ host\ 172\.31\.1\.101\
-          host\ 64\.101\.255\.254\ eq\ www(?: \(\d+ match(?:es)?\))?\s*$\s*\n\s+\d+ deny\ tcp\ host\ 172\.31\.1\.101\
-          host\ 64\.101\.255\.254\ eq\ 443(?: \(\d+ match(?:es)?\))?\s*$\s*\n\s+\d+ deny\ tcp\ host\ 172\.31\.1\.101\
-          host\ 64\.103\.255\.254\ eq\ www(?: \(\d+ match(?:es)?\))?\s*$\s*\n\s+\d+ deny\ tcp\ host\ 172\.31\.1\.101\
-          host\ 64\.103\.255\.254\ eq\ 443(?: \(\d+ match(?:es)?\))?\s*$\s*\n\s+\d+ deny\ tcp\ host\ 172\.31\.1\.102\
-          host\ 64\.101\.255\.254\ eq\ ftp(?: \(\d+ match(?:es)?\))?\s*$\s*\n\s+\d+ deny\ tcp\ host\ 172\.31\.1\.102\
-          host\ 64\.103\.255\.254\ eq\ ftp(?: \(\d+ match(?:es)?\))?\s*$\s*\n\s+\d+ deny\ icmp\ host\ 172\.31\.1\.103\
-          host\ 64\.101\.255\.254(?: \(\d+ match(?:es)?\))?\s*$\s*\n\s+\d+ deny\ icmp\ host\ 172\.31\.1\.103\ host\
-          64\.103\.255\.254(?: \(\d+ match(?:es)?\))?\s*$\s*\n\s+\d+ permit\ ip\ any\ any(?: \(\d+ match(?:es)?\))?\s*$(?![\s\S]*^\s+\d+
-          (?:permit|deny) )'
+      - name: 'show access-lists ACL: matches (?m)^Extended IP access list ACL[ \t\r]*$(?=[\s\S]*^\s+\d+ (?:deny\
+          tcp\ host\ 172\.31\.1\.101\ host\ 64\.101\.255\.254\ eq\ www)(?: \(\d+ match(?:es)?\))?[ \t\r]*$)(?=[\s\S]*^\s+\d+
+          (?:deny\ tcp\ host\ 172\.31\.1\.101\ host\ 64\.101\.255\.254\ eq\ 443)(?: \(\d+ match(?:es)?\))?[ \t\r]*$)(?=[\s\S]*^\s+\d+
+          (?:deny\ tcp\ host\ 172\.31\.1\.101\ host\ 64\.103\.255\.254\ eq\ www)(?: \(\d+ match(?:es)?\))?[ \t\r]*$)(?=[\s\S]*^\s+\d+
+          (?:deny\ tcp\ host\ 172\.31\.1\.101\ host\ 64\.103\.255\.254\ eq\ 443)(?: \(\d+ match(?:es)?\))?[ \t\r]*$)(?=[\s\S]*^\s+\d+
+          (?:deny\ tcp\ host\ 172\.31\.1\.102\ host\ 64\.101\.255\.254\ eq\ ftp)(?: \(\d+ match(?:es)?\))?[ \t\r]*$)(?=[\s\S]*^\s+\d+
+          (?:deny\ tcp\ host\ 172\.31\.1\.102\ host\ 64\.103\.255\.254\ eq\ ftp)(?: \(\d+ match(?:es)?\))?[ \t\r]*$)(?=[\s\S]*^\s+\d+
+          (?:deny\ icmp\ host\ 172\.31\.1\.103\ host\ 64\.101\.255\.254)(?: \(\d+ match(?:es)?\))?[ \t\r]*$)(?=[\s\S]*^\s+\d+
+          (?:deny\ icmp\ host\ 172\.31\.1\.103\ host\ 64\.103\.255\.254)(?: \(\d+ match(?:es)?\))?[ \t\r]*$)(?=[\s\S]*^\s+\d+
+          (?:permit\ ip\ any\ any)(?: \(\d+ match(?:es)?\))?[ \t\r]*$)(?![\s\S]*^\s+\d+ (?:permit\ ip\ any\ any)(?:
+          \(\d+ match(?:es)?\))?[ \t\r]*$[\s\S]*^\s+\d+ (?:deny\ tcp\ host\ 172\.31\.1\.101\ host\ 64\.101\.255\.254\
+          eq\ www)(?: \(\d+ match(?:es)?\))?[ \t\r]*$)(?![\s\S]*^\s+\d+ (?:permit\ ip\ any\ any)(?: \(\d+ match(?:es)?\))?[
+          \t\r]*$[\s\S]*^\s+\d+ (?:deny\ tcp\ host\ 172\.31\.1\.101\ host\ 64\.101\.255\.254\ eq\ 443)(?: \(\d+
+          match(?:es)?\))?[ \t\r]*$)(?![\s\S]*^\s+\d+ (?:permit\ ip\ any\ any)(?: \(\d+ match(?:es)?\))?[ \t\r]*$[\s\S]*^\s+\d+
+          (?:deny\ tcp\ host\ 172\.31\.1\.101\ host\ 64\.103\.255\.254\ eq\ www)(?: \(\d+ match(?:es)?\))?[ \t\r]*$)(?![\s\S]*^\s+\d+
+          (?:permit\ ip\ any\ any)(?: \(\d+ match(?:es)?\))?[ \t\r]*$[\s\S]*^\s+\d+ (?:deny\ tcp\ host\ 172\.31\.1\.101\
+          host\ 64\.103\.255\.254\ eq\ 443)(?: \(\d+ match(?:es)?\))?[ \t\r]*$)(?![\s\S]*^\s+\d+ (?:permit\ ip\
+          any\ any)(?: \(\d+ match(?:es)?\))?[ \t\r]*$[\s\S]*^\s+\d+ (?:deny\ tcp\ host\ 172\.31\.1\.102\ host\
+          64\.101\.255\.254\ eq\ ftp)(?: \(\d+ match(?:es)?\))?[ \t\r]*$)(?![\s\S]*^\s+\d+ (?:permit\ ip\ any\ any)(?:
+          \(\d+ match(?:es)?\))?[ \t\r]*$[\s\S]*^\s+\d+ (?:deny\ tcp\ host\ 172\.31\.1\.102\ host\ 64\.103\.255\.254\
+          eq\ ftp)(?: \(\d+ match(?:es)?\))?[ \t\r]*$)(?![\s\S]*^\s+\d+ (?:permit\ ip\ any\ any)(?: \(\d+ match(?:es)?\))?[
+          \t\r]*$[\s\S]*^\s+\d+ (?:deny\ icmp\ host\ 172\.31\.1\.103\ host\ 64\.101\.255\.254)(?: \(\d+ match(?:es)?\))?[
+          \t\r]*$)(?![\s\S]*^\s+\d+ (?:permit\ ip\ any\ any)(?: \(\d+ match(?:es)?\))?[ \t\r]*$[\s\S]*^\s+\d+ (?:deny\
+          icmp\ host\ 172\.31\.1\.103\ host\ 64\.103\.255\.254)(?: \(\d+ match(?:es)?\))?[ \t\r]*$)(?![\s\S]*^\s+\d+
+          (?:deny\ ip\ any\ any|deny\ ip\ any\ any\ log)(?: \(\d+ match(?:es)?\))?[ \t\r]*$[\s\S]*^\s+\d+ (?!(?:deny\
+          ip\ any\ any|deny\ ip\ any\ any\ log)(?: \(\d+ match(?:es)?\))?[ \t\r]*$))(?![\s\S]*^\s+\d+ (?!(?:(?:deny\
+          tcp\ host\ 172\.31\.1\.101\ host\ 64\.101\.255\.254\ eq\ www)|(?:deny\ tcp\ host\ 172\.31\.1\.101\ host\
+          64\.101\.255\.254\ eq\ 443)|(?:deny\ tcp\ host\ 172\.31\.1\.101\ host\ 64\.103\.255\.254\ eq\ www)|(?:deny\
+          tcp\ host\ 172\.31\.1\.101\ host\ 64\.103\.255\.254\ eq\ 443)|(?:deny\ tcp\ host\ 172\.31\.1\.102\ host\
+          64\.101\.255\.254\ eq\ ftp)|(?:deny\ tcp\ host\ 172\.31\.1\.102\ host\ 64\.103\.255\.254\ eq\ ftp)|(?:deny\
+          icmp\ host\ 172\.31\.1\.103\ host\ 64\.101\.255\.254)|(?:deny\ icmp\ host\ 172\.31\.1\.103\ host\ 64\.103\.255\.254)|(?:permit\
+          ip\ any\ any)|(?:deny\ ip\ any\ any|deny\ ip\ any\ any\ log))(?: \(\d+ match(?:es)?\))?[ \t\r]*$))'
         code: check
         type: check
         device: RT1
@@ -30,16 +52,40 @@ Criterions:
         - action: verify_output_regex
           action_vars:
             command: show access-lists ACL
-            expr: '(?m)^Extended IP access list ACL\s*$\s*\n\s+\d+ deny\ tcp\ host\ 172\.31\.1\.101\ host\ 64\.101\.255\.254\
-              eq\ www(?: \(\d+ match(?:es)?\))?\s*$\s*\n\s+\d+ deny\ tcp\ host\ 172\.31\.1\.101\ host\ 64\.101\.255\.254\
-              eq\ 443(?: \(\d+ match(?:es)?\))?\s*$\s*\n\s+\d+ deny\ tcp\ host\ 172\.31\.1\.101\ host\ 64\.103\.255\.254\
-              eq\ www(?: \(\d+ match(?:es)?\))?\s*$\s*\n\s+\d+ deny\ tcp\ host\ 172\.31\.1\.101\ host\ 64\.103\.255\.254\
-              eq\ 443(?: \(\d+ match(?:es)?\))?\s*$\s*\n\s+\d+ deny\ tcp\ host\ 172\.31\.1\.102\ host\ 64\.101\.255\.254\
-              eq\ ftp(?: \(\d+ match(?:es)?\))?\s*$\s*\n\s+\d+ deny\ tcp\ host\ 172\.31\.1\.102\ host\ 64\.103\.255\.254\
-              eq\ ftp(?: \(\d+ match(?:es)?\))?\s*$\s*\n\s+\d+ deny\ icmp\ host\ 172\.31\.1\.103\ host\ 64\.101\.255\.254(?:
-              \(\d+ match(?:es)?\))?\s*$\s*\n\s+\d+ deny\ icmp\ host\ 172\.31\.1\.103\ host\ 64\.103\.255\.254(?:
-              \(\d+ match(?:es)?\))?\s*$\s*\n\s+\d+ permit\ ip\ any\ any(?: \(\d+ match(?:es)?\))?\s*$(?![\s\S]*^\s+\d+
-              (?:permit|deny) )'
+            expr: '(?m)^Extended IP access list ACL[ \t\r]*$(?=[\s\S]*^\s+\d+ (?:deny\ tcp\ host\ 172\.31\.1\.101\
+              host\ 64\.101\.255\.254\ eq\ www)(?: \(\d+ match(?:es)?\))?[ \t\r]*$)(?=[\s\S]*^\s+\d+ (?:deny\ tcp\
+              host\ 172\.31\.1\.101\ host\ 64\.101\.255\.254\ eq\ 443)(?: \(\d+ match(?:es)?\))?[ \t\r]*$)(?=[\s\S]*^\s+\d+
+              (?:deny\ tcp\ host\ 172\.31\.1\.101\ host\ 64\.103\.255\.254\ eq\ www)(?: \(\d+ match(?:es)?\))?[
+              \t\r]*$)(?=[\s\S]*^\s+\d+ (?:deny\ tcp\ host\ 172\.31\.1\.101\ host\ 64\.103\.255\.254\ eq\ 443)(?:
+              \(\d+ match(?:es)?\))?[ \t\r]*$)(?=[\s\S]*^\s+\d+ (?:deny\ tcp\ host\ 172\.31\.1\.102\ host\ 64\.101\.255\.254\
+              eq\ ftp)(?: \(\d+ match(?:es)?\))?[ \t\r]*$)(?=[\s\S]*^\s+\d+ (?:deny\ tcp\ host\ 172\.31\.1\.102\
+              host\ 64\.103\.255\.254\ eq\ ftp)(?: \(\d+ match(?:es)?\))?[ \t\r]*$)(?=[\s\S]*^\s+\d+ (?:deny\ icmp\
+              host\ 172\.31\.1\.103\ host\ 64\.101\.255\.254)(?: \(\d+ match(?:es)?\))?[ \t\r]*$)(?=[\s\S]*^\s+\d+
+              (?:deny\ icmp\ host\ 172\.31\.1\.103\ host\ 64\.103\.255\.254)(?: \(\d+ match(?:es)?\))?[ \t\r]*$)(?=[\s\S]*^\s+\d+
+              (?:permit\ ip\ any\ any)(?: \(\d+ match(?:es)?\))?[ \t\r]*$)(?![\s\S]*^\s+\d+ (?:permit\ ip\ any\
+              any)(?: \(\d+ match(?:es)?\))?[ \t\r]*$[\s\S]*^\s+\d+ (?:deny\ tcp\ host\ 172\.31\.1\.101\ host\ 64\.101\.255\.254\
+              eq\ www)(?: \(\d+ match(?:es)?\))?[ \t\r]*$)(?![\s\S]*^\s+\d+ (?:permit\ ip\ any\ any)(?: \(\d+ match(?:es)?\))?[
+              \t\r]*$[\s\S]*^\s+\d+ (?:deny\ tcp\ host\ 172\.31\.1\.101\ host\ 64\.101\.255\.254\ eq\ 443)(?: \(\d+
+              match(?:es)?\))?[ \t\r]*$)(?![\s\S]*^\s+\d+ (?:permit\ ip\ any\ any)(?: \(\d+ match(?:es)?\))?[ \t\r]*$[\s\S]*^\s+\d+
+              (?:deny\ tcp\ host\ 172\.31\.1\.101\ host\ 64\.103\.255\.254\ eq\ www)(?: \(\d+ match(?:es)?\))?[
+              \t\r]*$)(?![\s\S]*^\s+\d+ (?:permit\ ip\ any\ any)(?: \(\d+ match(?:es)?\))?[ \t\r]*$[\s\S]*^\s+\d+
+              (?:deny\ tcp\ host\ 172\.31\.1\.101\ host\ 64\.103\.255\.254\ eq\ 443)(?: \(\d+ match(?:es)?\))?[
+              \t\r]*$)(?![\s\S]*^\s+\d+ (?:permit\ ip\ any\ any)(?: \(\d+ match(?:es)?\))?[ \t\r]*$[\s\S]*^\s+\d+
+              (?:deny\ tcp\ host\ 172\.31\.1\.102\ host\ 64\.101\.255\.254\ eq\ ftp)(?: \(\d+ match(?:es)?\))?[
+              \t\r]*$)(?![\s\S]*^\s+\d+ (?:permit\ ip\ any\ any)(?: \(\d+ match(?:es)?\))?[ \t\r]*$[\s\S]*^\s+\d+
+              (?:deny\ tcp\ host\ 172\.31\.1\.102\ host\ 64\.103\.255\.254\ eq\ ftp)(?: \(\d+ match(?:es)?\))?[
+              \t\r]*$)(?![\s\S]*^\s+\d+ (?:permit\ ip\ any\ any)(?: \(\d+ match(?:es)?\))?[ \t\r]*$[\s\S]*^\s+\d+
+              (?:deny\ icmp\ host\ 172\.31\.1\.103\ host\ 64\.101\.255\.254)(?: \(\d+ match(?:es)?\))?[ \t\r]*$)(?![\s\S]*^\s+\d+
+              (?:permit\ ip\ any\ any)(?: \(\d+ match(?:es)?\))?[ \t\r]*$[\s\S]*^\s+\d+ (?:deny\ icmp\ host\ 172\.31\.1\.103\
+              host\ 64\.103\.255\.254)(?: \(\d+ match(?:es)?\))?[ \t\r]*$)(?![\s\S]*^\s+\d+ (?:deny\ ip\ any\ any|deny\
+              ip\ any\ any\ log)(?: \(\d+ match(?:es)?\))?[ \t\r]*$[\s\S]*^\s+\d+ (?!(?:deny\ ip\ any\ any|deny\
+              ip\ any\ any\ log)(?: \(\d+ match(?:es)?\))?[ \t\r]*$))(?![\s\S]*^\s+\d+ (?!(?:(?:deny\ tcp\ host\
+              172\.31\.1\.101\ host\ 64\.101\.255\.254\ eq\ www)|(?:deny\ tcp\ host\ 172\.31\.1\.101\ host\ 64\.101\.255\.254\
+              eq\ 443)|(?:deny\ tcp\ host\ 172\.31\.1\.101\ host\ 64\.103\.255\.254\ eq\ www)|(?:deny\ tcp\ host\
+              172\.31\.1\.101\ host\ 64\.103\.255\.254\ eq\ 443)|(?:deny\ tcp\ host\ 172\.31\.1\.102\ host\ 64\.101\.255\.254\
+              eq\ ftp)|(?:deny\ tcp\ host\ 172\.31\.1\.102\ host\ 64\.103\.255\.254\ eq\ ftp)|(?:deny\ icmp\ host\
+              172\.31\.1\.103\ host\ 64\.101\.255\.254)|(?:deny\ icmp\ host\ 172\.31\.1\.103\ host\ 64\.103\.255\.254)|(?:permit\
+              ip\ any\ any)|(?:deny\ ip\ any\ any|deny\ ip\ any\ any\ log))(?: \(\d+ match(?:es)?\))?[ \t\r]*$))'
             match: true
   - code: RT1.PORTS
     name: Ports
@@ -61,3 +107,401 @@ Criterions:
             command: show running-config interface GigabitEthernet0/0
             expr: (?m)^ ip access-group ACL in\s*$
             match: true
+- code: PC1
+  name: PC1
+  subCriterions:
+  - code: PC1.CONNECTIVITY-TESTS
+    name: Connectivity Tests
+    aspects:
+    - code: PC1.CONNECTIVITY-TESTS.CT-0
+      name: 'PC1 to 64.101.255.254 : 64.101.255.254 (ICMP)'
+      description: 'PC1 → 64.101.255.254 (PING): проходит'
+      skills:
+      - Other
+      max_mark: 1
+      steps:
+      - name: 'show running-config interface GigabitEthernet0/0: matches (?m)^ ip access-group ACL in\s*$'
+        code: check
+        type: check
+        device: RT1
+        action_chain:
+        - action: verify_output_regex
+          action_vars:
+            command: show running-config interface GigabitEthernet0/0
+            expr: (?m)^ ip access-group ACL in\s*$
+            match: true
+      - name: 'ping -n 2 64.101.255.254: has : bytes='
+        code: check
+        type: check
+        device: PC1
+        action_chain:
+        - action: verify_output
+          action_vars:
+            command: ping -n 2 64.101.255.254
+            assert_tags:
+            - ': bytes='
+            tags_are_present: true
+            retries: 3
+            retry_interval: 15
+    - code: PC1.CONNECTIVITY-TESTS.CT-4
+      name: 'PC1 to 64.101.255.254 : http://64.101.255.254 (TCP)'
+      description: 'PC1 → http://64.101.255.254 (HTTP): не проходит'
+      skills:
+      - Other
+      max_mark: 1
+      steps:
+      - name: 'show running-config interface GigabitEthernet0/0: matches (?m)^ ip access-group ACL in\s*$'
+        code: check
+        type: check
+        device: RT1
+        action_chain:
+        - action: verify_output_regex
+          action_vars:
+            command: show running-config interface GigabitEthernet0/0
+            expr: (?m)^ ip access-group ACL in\s*$
+            match: true
+      - name: 'browse http://64.101.255.254: timeout'
+        code: check
+        type: check
+        device: PC1
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{lab_ip}:7681/api/hosts/PC1/browse
+            method: POST
+            content:
+              url: http://64.101.255.254
+            assert_code: 200
+            assert_jmespath:
+              path: status
+              value: timeout
+    - code: PC1.CONNECTIVITY-TESTS.CT-5
+      name: 'PC1 to 64.103.255.254 : http://64.103.255.254 (TCP)'
+      description: 'PC1 → http://64.103.255.254 (HTTP): не проходит'
+      skills:
+      - Other
+      max_mark: 1
+      steps:
+      - name: 'show running-config interface GigabitEthernet0/0: matches (?m)^ ip access-group ACL in\s*$'
+        code: check
+        type: check
+        device: RT1
+        action_chain:
+        - action: verify_output_regex
+          action_vars:
+            command: show running-config interface GigabitEthernet0/0
+            expr: (?m)^ ip access-group ACL in\s*$
+            match: true
+      - name: 'browse http://64.103.255.254: timeout'
+        code: check
+        type: check
+        device: PC1
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{lab_ip}:7681/api/hosts/PC1/browse
+            method: POST
+            content:
+              url: http://64.103.255.254
+            assert_code: 200
+            assert_jmespath:
+              path: status
+              value: timeout
+    - code: PC1.CONNECTIVITY-TESTS.CT-6
+      name: 'PC1 to 64.101.255.254 : https://64.101.255.254 (TCP)'
+      description: 'PC1 → https://64.101.255.254 (HTTPS): не проходит'
+      skills:
+      - Other
+      max_mark: 1
+      steps:
+      - name: 'show running-config interface GigabitEthernet0/0: matches (?m)^ ip access-group ACL in\s*$'
+        code: check
+        type: check
+        device: RT1
+        action_chain:
+        - action: verify_output_regex
+          action_vars:
+            command: show running-config interface GigabitEthernet0/0
+            expr: (?m)^ ip access-group ACL in\s*$
+            match: true
+      - name: 'browse https://64.101.255.254: timeout'
+        code: check
+        type: check
+        device: PC1
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{lab_ip}:7681/api/hosts/PC1/browse
+            method: POST
+            content:
+              url: https://64.101.255.254
+            assert_code: 200
+            assert_jmespath:
+              path: status
+              value: timeout
+    - code: PC1.CONNECTIVITY-TESTS.CT-7
+      name: 'PC1 to 64.103.255.254 : https://64.103.255.254 (TCP)'
+      description: 'PC1 → https://64.103.255.254 (HTTPS): не проходит'
+      skills:
+      - Other
+      max_mark: 1
+      steps:
+      - name: 'show running-config interface GigabitEthernet0/0: matches (?m)^ ip access-group ACL in\s*$'
+        code: check
+        type: check
+        device: RT1
+        action_chain:
+        - action: verify_output_regex
+          action_vars:
+            command: show running-config interface GigabitEthernet0/0
+            expr: (?m)^ ip access-group ACL in\s*$
+            match: true
+      - name: 'browse https://64.103.255.254: timeout'
+        code: check
+        type: check
+        device: PC1
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{lab_ip}:7681/api/hosts/PC1/browse
+            method: POST
+            content:
+              url: https://64.103.255.254
+            assert_code: 200
+            assert_jmespath:
+              path: status
+              value: timeout
+- code: PC2
+  name: PC2
+  subCriterions:
+  - code: PC2.CONNECTIVITY-TESTS
+    name: Connectivity Tests
+    aspects:
+    - code: PC2.CONNECTIVITY-TESTS.CT-1
+      name: 'PC2 to 64.103.255.254 : 64.103.255.254 (ICMP)'
+      description: 'PC2 → 64.103.255.254 (PING): проходит'
+      skills:
+      - Other
+      max_mark: 1
+      steps:
+      - name: 'show running-config interface GigabitEthernet0/0: matches (?m)^ ip access-group ACL in\s*$'
+        code: check
+        type: check
+        device: RT1
+        action_chain:
+        - action: verify_output_regex
+          action_vars:
+            command: show running-config interface GigabitEthernet0/0
+            expr: (?m)^ ip access-group ACL in\s*$
+            match: true
+      - name: 'ping -n 2 64.103.255.254: has : bytes='
+        code: check
+        type: check
+        device: PC2
+        action_chain:
+        - action: verify_output
+          action_vars:
+            command: ping -n 2 64.103.255.254
+            assert_tags:
+            - ': bytes='
+            tags_are_present: true
+            retries: 3
+            retry_interval: 15
+    - code: PC2.CONNECTIVITY-TESTS.CT-8
+      name: 'PC2 to 64.101.255.254 : http://64.101.255.254 (TCP)'
+      description: 'PC2 → http://64.101.255.254 (HTTP): проходит'
+      skills:
+      - Other
+      max_mark: 1
+      steps:
+      - name: 'show running-config interface GigabitEthernet0/0: matches (?m)^ ip access-group ACL in\s*$'
+        code: check
+        type: check
+        device: RT1
+        action_chain:
+        - action: verify_output_regex
+          action_vars:
+            command: show running-config interface GigabitEthernet0/0
+            expr: (?m)^ ip access-group ACL in\s*$
+            match: true
+      - name: 'browse http://64.101.255.254: ok'
+        code: check
+        type: check
+        device: PC2
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{lab_ip}:7681/api/hosts/PC2/browse
+            method: POST
+            content:
+              url: http://64.101.255.254
+            assert_code: 200
+            assert_jmespath:
+              path: status
+              value: ok
+            retries: 1
+            retry_interval: 5
+    - code: PC2.CONNECTIVITY-TESTS.CT-9
+      name: 'PC2 to 64.103.255.254 : http://64.103.255.254 (TCP)'
+      description: 'PC2 → http://64.103.255.254 (HTTP): проходит'
+      skills:
+      - Other
+      max_mark: 1
+      steps:
+      - name: 'show running-config interface GigabitEthernet0/0: matches (?m)^ ip access-group ACL in\s*$'
+        code: check
+        type: check
+        device: RT1
+        action_chain:
+        - action: verify_output_regex
+          action_vars:
+            command: show running-config interface GigabitEthernet0/0
+            expr: (?m)^ ip access-group ACL in\s*$
+            match: true
+      - name: 'browse http://64.103.255.254: ok'
+        code: check
+        type: check
+        device: PC2
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{lab_ip}:7681/api/hosts/PC2/browse
+            method: POST
+            content:
+              url: http://64.103.255.254
+            assert_code: 200
+            assert_jmespath:
+              path: status
+              value: ok
+            retries: 1
+            retry_interval: 5
+    - code: PC2.CONNECTIVITY-TESTS.CT-10
+      name: 'PC2 to 64.101.255.254 : https://64.101.255.254 (TCP)'
+      description: 'PC2 → https://64.101.255.254 (HTTPS): проходит'
+      skills:
+      - Other
+      max_mark: 1
+      steps:
+      - name: 'show running-config interface GigabitEthernet0/0: matches (?m)^ ip access-group ACL in\s*$'
+        code: check
+        type: check
+        device: RT1
+        action_chain:
+        - action: verify_output_regex
+          action_vars:
+            command: show running-config interface GigabitEthernet0/0
+            expr: (?m)^ ip access-group ACL in\s*$
+            match: true
+      - name: 'browse https://64.101.255.254: ok'
+        code: check
+        type: check
+        device: PC2
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{lab_ip}:7681/api/hosts/PC2/browse
+            method: POST
+            content:
+              url: https://64.101.255.254
+            assert_code: 200
+            assert_jmespath:
+              path: status
+              value: ok
+            retries: 1
+            retry_interval: 5
+    - code: PC2.CONNECTIVITY-TESTS.CT-11
+      name: 'PC2 to 64.103.255.254 : https://64.103.255.254 (TCP)'
+      description: 'PC2 → https://64.103.255.254 (HTTPS): проходит'
+      skills:
+      - Other
+      max_mark: 1
+      steps:
+      - name: 'show running-config interface GigabitEthernet0/0: matches (?m)^ ip access-group ACL in\s*$'
+        code: check
+        type: check
+        device: RT1
+        action_chain:
+        - action: verify_output_regex
+          action_vars:
+            command: show running-config interface GigabitEthernet0/0
+            expr: (?m)^ ip access-group ACL in\s*$
+            match: true
+      - name: 'browse https://64.103.255.254: ok'
+        code: check
+        type: check
+        device: PC2
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{lab_ip}:7681/api/hosts/PC2/browse
+            method: POST
+            content:
+              url: https://64.103.255.254
+            assert_code: 200
+            assert_jmespath:
+              path: status
+              value: ok
+            retries: 1
+            retry_interval: 5
+- code: PC3
+  name: PC3
+  subCriterions:
+  - code: PC3.CONNECTIVITY-TESTS
+    name: Connectivity Tests
+    aspects:
+    - code: PC3.CONNECTIVITY-TESTS.CT-2
+      name: 'PC3 to 64.101.255.254 : 64.101.255.254 (ICMP)'
+      description: 'PC3 → 64.101.255.254 (PING): не проходит'
+      skills:
+      - Other
+      max_mark: 1
+      steps:
+      - name: 'show running-config interface GigabitEthernet0/0: matches (?m)^ ip access-group ACL in\s*$'
+        code: check
+        type: check
+        device: RT1
+        action_chain:
+        - action: verify_output_regex
+          action_vars:
+            command: show running-config interface GigabitEthernet0/0
+            expr: (?m)^ ip access-group ACL in\s*$
+            match: true
+      - name: 'ping -n 2 64.101.255.254: has not : bytes='
+        code: check
+        type: check
+        device: PC3
+        action_chain:
+        - action: verify_output
+          action_vars:
+            command: ping -n 2 64.101.255.254
+            assert_tags:
+            - ': bytes='
+            tags_are_present: false
+    - code: PC3.CONNECTIVITY-TESTS.CT-3
+      name: 'PC3 to 64.103.255.254 : 64.103.255.254 (ICMP)'
+      description: 'PC3 → 64.103.255.254 (PING): не проходит'
+      skills:
+      - Other
+      max_mark: 1
+      steps:
+      - name: 'show running-config interface GigabitEthernet0/0: matches (?m)^ ip access-group ACL in\s*$'
+        code: check
+        type: check
+        device: RT1
+        action_chain:
+        - action: verify_output_regex
+          action_vars:
+            command: show running-config interface GigabitEthernet0/0
+            expr: (?m)^ ip access-group ACL in\s*$
+            match: true
+      - name: 'ping -n 2 64.103.255.254: has not : bytes='
+        code: check
+        type: check
+        device: PC3
+        action_chain:
+        - action: verify_output
+          action_vars:
+            command: ping -n 2 64.103.255.254
+            assert_tags:
+            - ': bytes='
+            tags_are_present: false

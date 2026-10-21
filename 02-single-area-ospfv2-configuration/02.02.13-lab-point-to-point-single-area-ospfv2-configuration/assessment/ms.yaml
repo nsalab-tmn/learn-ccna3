@@ -13,7 +13,7 @@ Criterions:
       - Routing
       max_mark: 1
       steps:
-      - name: 'show running-config | section ^router ospf 10( |$): matches (?m)^ network 192\.168\.10\.0\s+0\.0\.0\.255\s+area\s+0\s*$'
+      - name: 'show running-config | section ^router ospf 10( |$): matches (?m)^ network 192\.168\.10\.0\s+0\.0\.0\.255\s+area\s+(?:0|0\.0\.0\.0)\s*$'
         code: check
         type: check
         device: R1
@@ -21,7 +21,7 @@ Criterions:
         - action: verify_output_regex
           action_vars:
             command: show running-config | section ^router ospf 10( |$)
-            expr: (?m)^ network 192\.168\.10\.0\s+0\.0\.0\.255\s+area\s+0\s*$
+            expr: (?m)^ network 192\.168\.10\.0\s+0\.0\.0\.255\s+area\s+(?:0|0\.0\.0\.0)\s*$
             match: true
     - code: R1.OSPF.OSPF-NETWORK-1
       name: Process ID 10.Networks.Route1
@@ -30,7 +30,7 @@ Criterions:
       - Routing
       max_mark: 1
       steps:
-      - name: 'show running-config | section ^router ospf 10( |$): matches (?m)^ network 10\.1\.1\.0\s+0\.0\.0\.3\s+area\s+0\s*$'
+      - name: 'show running-config | section ^router ospf 10( |$): matches (?m)^ network 10\.1\.1\.0\s+0\.0\.0\.3\s+area\s+(?:0|0\.0\.0\.0)\s*$'
         code: check
         type: check
         device: R1
@@ -38,7 +38,7 @@ Criterions:
         - action: verify_output_regex
           action_vars:
             command: show running-config | section ^router ospf 10( |$)
-            expr: (?m)^ network 10\.1\.1\.0\s+0\.0\.0\.3\s+area\s+0\s*$
+            expr: (?m)^ network 10\.1\.1\.0\s+0\.0\.0\.3\s+area\s+(?:0|0\.0\.0\.0)\s*$
             match: true
     - code: R1.OSPF.OSPF-NETWORK-2
       name: Process ID 10.Networks.Route2
@@ -47,7 +47,7 @@ Criterions:
       - Routing
       max_mark: 1
       steps:
-      - name: 'show running-config | section ^router ospf 10( |$): matches (?m)^ network 10\.1\.1\.4\s+0\.0\.0\.3\s+area\s+0\s*$'
+      - name: 'show running-config | section ^router ospf 10( |$): matches (?m)^ network 10\.1\.1\.4\s+0\.0\.0\.3\s+area\s+(?:0|0\.0\.0\.0)\s*$'
         code: check
         type: check
         device: R1
@@ -55,7 +55,7 @@ Criterions:
         - action: verify_output_regex
           action_vars:
             command: show running-config | section ^router ospf 10( |$)
-            expr: (?m)^ network 10\.1\.1\.4\s+0\.0\.0\.3\s+area\s+0\s*$
+            expr: (?m)^ network 10\.1\.1\.4\s+0\.0\.0\.3\s+area\s+(?:0|0\.0\.0\.0)\s*$
             match: true
     - code: R1.OSPF.OSPF-PASSIVE-G0-0-0
       name: Process ID 10.Passive Interface.GigabitEthernet0/0/0
@@ -106,7 +106,7 @@ Criterions:
       - Routing
       max_mark: 1
       steps:
-      - name: 'show running-config | section ^router ospf 10( |$): matches (?m)^ network 192\.168\.20\.1\s+0\.0\.0\.0\s+area\s+0\s*$'
+      - name: 'show running-config | section ^router ospf 10( |$): matches (?m)^ network 192\.168\.20\.1\s+0\.0\.0\.0\s+area\s+(?:0|0\.0\.0\.0)\s*$'
         code: check
         type: check
         device: R2
@@ -114,7 +114,7 @@ Criterions:
         - action: verify_output_regex
           action_vars:
             command: show running-config | section ^router ospf 10( |$)
-            expr: (?m)^ network 192\.168\.20\.1\s+0\.0\.0\.0\s+area\s+0\s*$
+            expr: (?m)^ network 192\.168\.20\.1\s+0\.0\.0\.0\s+area\s+(?:0|0\.0\.0\.0)\s*$
             match: true
     - code: R2.OSPF.OSPF-NETWORK-1
       name: Process ID 10.Networks.Route1
@@ -123,7 +123,7 @@ Criterions:
       - Routing
       max_mark: 1
       steps:
-      - name: 'show running-config | section ^router ospf 10( |$): matches (?m)^ network 10\.1\.1\.2\s+0\.0\.0\.0\s+area\s+0\s*$'
+      - name: 'show running-config | section ^router ospf 10( |$): matches (?m)^ network 10\.1\.1\.2\s+0\.0\.0\.0\s+area\s+(?:0|0\.0\.0\.0)\s*$'
         code: check
         type: check
         device: R2
@@ -131,7 +131,7 @@ Criterions:
         - action: verify_output_regex
           action_vars:
             command: show running-config | section ^router ospf 10( |$)
-            expr: (?m)^ network 10\.1\.1\.2\s+0\.0\.0\.0\s+area\s+0\s*$
+            expr: (?m)^ network 10\.1\.1\.2\s+0\.0\.0\.0\s+area\s+(?:0|0\.0\.0\.0)\s*$
             match: true
     - code: R2.OSPF.OSPF-NETWORK-2
       name: Process ID 10.Networks.Route2
@@ -140,7 +140,7 @@ Criterions:
       - Routing
       max_mark: 1
       steps:
-      - name: 'show running-config | section ^router ospf 10( |$): matches (?m)^ network 10\.1\.1\.9\s+0\.0\.0\.0\s+area\s+0\s*$'
+      - name: 'show running-config | section ^router ospf 10( |$): matches (?m)^ network 10\.1\.1\.9\s+0\.0\.0\.0\s+area\s+(?:0|0\.0\.0\.0)\s*$'
         code: check
         type: check
         device: R2
@@ -148,7 +148,7 @@ Criterions:
         - action: verify_output_regex
           action_vars:
             command: show running-config | section ^router ospf 10( |$)
-            expr: (?m)^ network 10\.1\.1\.9\s+0\.0\.0\.0\s+area\s+0\s*$
+            expr: (?m)^ network 10\.1\.1\.9\s+0\.0\.0\.0\s+area\s+(?:0|0\.0\.0\.0)\s*$
             match: true
     - code: R2.OSPF.OSPF-PASSIVE-G0-0-0
       name: Process ID 10.Passive Interface.GigabitEthernet0/0/0
@@ -238,7 +238,7 @@ Criterions:
       - Routing
       max_mark: 1
       steps:
-      - name: 'show running-config interface GigabitEthernet0/0/0: matches (?m)^ ip ospf \d+ area 0\s*$'
+      - name: 'show running-config interface GigabitEthernet0/0/0: matches (?m)^ ip ospf \d+ area (?:0|0\.0\.0\.0)\s*$'
         code: check
         type: check
         device: R3
@@ -246,7 +246,7 @@ Criterions:
         - action: verify_output_regex
           action_vars:
             command: show running-config interface GigabitEthernet0/0/0
-            expr: (?m)^ ip ospf \d+ area 0\s*$
+            expr: (?m)^ ip ospf \d+ area (?:0|0\.0\.0\.0)\s*$
             match: true
     - code: R3.PORTS.G0-0-0-OSPF-ID
       name: GigabitEthernet0/0/0.OSPF Id
@@ -272,7 +272,7 @@ Criterions:
       - Routing
       max_mark: 1
       steps:
-      - name: 'show running-config interface Serial0/1/0: matches (?m)^ ip ospf \d+ area 0\s*$'
+      - name: 'show running-config interface Serial0/1/0: matches (?m)^ ip ospf \d+ area (?:0|0\.0\.0\.0)\s*$'
         code: check
         type: check
         device: R3
@@ -280,7 +280,7 @@ Criterions:
         - action: verify_output_regex
           action_vars:
             command: show running-config interface Serial0/1/0
-            expr: (?m)^ ip ospf \d+ area 0\s*$
+            expr: (?m)^ ip ospf \d+ area (?:0|0\.0\.0\.0)\s*$
             match: true
     - code: R3.PORTS.S0-1-0-OSPF-ID
       name: Serial0/1/0.OSPF Id
@@ -306,7 +306,7 @@ Criterions:
       - Routing
       max_mark: 1
       steps:
-      - name: 'show running-config interface Serial0/1/1: matches (?m)^ ip ospf \d+ area 0\s*$'
+      - name: 'show running-config interface Serial0/1/1: matches (?m)^ ip ospf \d+ area (?:0|0\.0\.0\.0)\s*$'
         code: check
         type: check
         device: R3
@@ -314,7 +314,7 @@ Criterions:
         - action: verify_output_regex
           action_vars:
             command: show running-config interface Serial0/1/1
-            expr: (?m)^ ip ospf \d+ area 0\s*$
+            expr: (?m)^ ip ospf \d+ area (?:0|0\.0\.0\.0)\s*$
             match: true
     - code: R3.PORTS.S0-1-1-OSPF-ID
       name: Serial0/1/1.OSPF Id
@@ -333,3 +333,81 @@ Criterions:
             command: show running-config interface Serial0/1/1
             expr: (?m)^ ip ospf 10 area \S+\s*$
             match: true
+- code: PC1
+  name: PC1
+  subCriterions:
+  - code: PC1.CONNECTIVITY-TESTS
+    name: Connectivity Tests
+    aspects:
+    - code: PC1.CONNECTIVITY-TESTS.CT-0
+      name: 'PC1 to 192.168.30.10 : 192.168.30.10 (ICMP)'
+      description: 'PC1 → 192.168.30.10 (PING): проходит'
+      skills:
+      - Other
+      max_mark: 1
+      steps:
+      - name: 'ping -n 2 192.168.30.10: has : bytes='
+        code: check
+        type: check
+        device: PC1
+        action_chain:
+        - action: verify_output
+          action_vars:
+            command: ping -n 2 192.168.30.10
+            assert_tags:
+            - ': bytes='
+            tags_are_present: true
+            retries: 3
+            retry_interval: 15
+- code: PC2
+  name: PC2
+  subCriterions:
+  - code: PC2.CONNECTIVITY-TESTS
+    name: Connectivity Tests
+    aspects:
+    - code: PC2.CONNECTIVITY-TESTS.CT-1
+      name: 'PC2 to 192.168.10.10 : 192.168.10.10 (ICMP)'
+      description: 'PC2 → 192.168.10.10 (PING): проходит'
+      skills:
+      - Other
+      max_mark: 1
+      steps:
+      - name: 'ping -n 2 192.168.10.10: has : bytes='
+        code: check
+        type: check
+        device: PC2
+        action_chain:
+        - action: verify_output
+          action_vars:
+            command: ping -n 2 192.168.10.10
+            assert_tags:
+            - ': bytes='
+            tags_are_present: true
+            retries: 3
+            retry_interval: 15
+- code: PC3
+  name: PC3
+  subCriterions:
+  - code: PC3.CONNECTIVITY-TESTS
+    name: Connectivity Tests
+    aspects:
+    - code: PC3.CONNECTIVITY-TESTS.CT-2
+      name: 'PC3 to 192.168.20.10 : 192.168.20.10 (ICMP)'
+      description: 'PC3 → 192.168.20.10 (PING): проходит'
+      skills:
+      - Other
+      max_mark: 1
+      steps:
+      - name: 'ping -n 2 192.168.20.10: has : bytes='
+        code: check
+        type: check
+        device: PC3
+        action_chain:
+        - action: verify_output
+          action_vars:
+            command: ping -n 2 192.168.20.10
+            assert_tags:
+            - ': bytes='
+            tags_are_present: true
+            retries: 3
+            retry_interval: 15

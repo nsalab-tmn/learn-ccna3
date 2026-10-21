@@ -13,17 +13,16 @@ Criterions:
       - Configure CDP Interfaces
       max_mark: 7
       steps:
-      - name: 'show running-config interface FastEthernet0/1: has  no cdp enable'
+      - name: 'show running-config interface FastEthernet0/1: matches (?m)^ no cdp enable\s*$'
         code: check
         type: check
         device: BR-SW-2
         action_chain:
-        - action: verify_output
+        - action: verify_output_regex
           action_vars:
             command: show running-config interface FastEthernet0/1
-            assert_tags:
-            - ' no cdp enable'
-            tags_are_present: true
+            expr: (?m)^ no cdp enable\s*$
+            match: true
 - code: BR-SW-3
   name: BR-SW-3
   subCriterions:
@@ -37,17 +36,16 @@ Criterions:
       - Configure CDP Interfaces
       max_mark: 7
       steps:
-      - name: 'show running-config interface FastEthernet0/1: has  no cdp enable'
+      - name: 'show running-config interface FastEthernet0/1: matches (?m)^ no cdp enable\s*$'
         code: check
         type: check
         device: BR-SW-3
         action_chain:
-        - action: verify_output
+        - action: verify_output_regex
           action_vars:
             command: show running-config interface FastEthernet0/1
-            assert_tags:
-            - ' no cdp enable'
-            tags_are_present: true
+            expr: (?m)^ no cdp enable\s*$
+            match: true
 - code: BRANCH
   name: Branch
   subCriterions:
@@ -61,17 +59,16 @@ Criterions:
       - Configure CDP
       max_mark: 5
       steps:
-      - name: 'show running-config: has not no cdp run'
+      - name: 'show running-config: matches (?m)\A(?![\s\S]*^no cdp run\s*$)'
         code: check
         type: check
         device: Branch
         action_chain:
-        - action: verify_output
+        - action: verify_output_regex
           action_vars:
             command: show running-config
-            assert_tags:
-            - no cdp run
-            tags_are_present: false
+            expr: (?m)\A(?![\s\S]*^no cdp run\s*$)
+            match: true
 - code: HQ
   name: HQ
   subCriterions:
@@ -85,17 +82,16 @@ Criterions:
       - Configure CDP
       max_mark: 5
       steps:
-      - name: 'show running-config: has no cdp run'
+      - name: 'show running-config: matches (?m)^no cdp run\s*$'
         code: check
         type: check
         device: HQ
         action_chain:
-        - action: verify_output
+        - action: verify_output_regex
           action_vars:
             command: show running-config
-            assert_tags:
-            - no cdp run
-            tags_are_present: true
+            expr: (?m)^no cdp run\s*$
+            match: true
   - code: HQ.LLDP
     name: LLDP
     aspects:
@@ -156,17 +152,16 @@ Criterions:
             command: show running-config
             expr: (?m)^lldp run\s*$
             match: true
-      - name: 'show running-config interface GigabitEthernet0/0/0: has not  no lldp receive'
+      - name: 'show running-config interface GigabitEthernet0/0/0: matches (?m)\A(?![\s\S]*^ no lldp receive\s*$)'
         code: check
         type: check
         device: HQ
         action_chain:
-        - action: verify_output
+        - action: verify_output_regex
           action_vars:
             command: show running-config interface GigabitEthernet0/0/0
-            assert_tags:
-            - ' no lldp receive'
-            tags_are_present: false
+            expr: (?m)\A(?![\s\S]*^ no lldp receive\s*$)
+            match: true
     - code: HQ.PORTS.G0-0-0-LLDP-TRANSMIT
       name: GigabitEthernet0/0/0.LLDP Transmit
       description: 'G0/0/0: LLDP transmit выключен'
@@ -174,17 +169,16 @@ Criterions:
       - Configure LLDP Interfaces
       max_mark: 4
       steps:
-      - name: 'show running-config interface GigabitEthernet0/0/0: has  no lldp transmit'
+      - name: 'show running-config interface GigabitEthernet0/0/0: matches (?m)^ no lldp transmit\s*$'
         code: check
         type: check
         device: HQ
         action_chain:
-        - action: verify_output
+        - action: verify_output_regex
           action_vars:
             command: show running-config interface GigabitEthernet0/0/0
-            assert_tags:
-            - ' no lldp transmit'
-            tags_are_present: true
+            expr: (?m)^ no lldp transmit\s*$
+            match: true
     - code: HQ.PORTS.G0-0-1-LLDP-RECEIVE
       name: GigabitEthernet0/0/1.LLDP Receive
       description: 'G0/0/1: LLDP receive включён'
@@ -202,17 +196,16 @@ Criterions:
             command: show running-config
             expr: (?m)^lldp run\s*$
             match: true
-      - name: 'show running-config interface GigabitEthernet0/0/1: has not  no lldp receive'
+      - name: 'show running-config interface GigabitEthernet0/0/1: matches (?m)\A(?![\s\S]*^ no lldp receive\s*$)'
         code: check
         type: check
         device: HQ
         action_chain:
-        - action: verify_output
+        - action: verify_output_regex
           action_vars:
             command: show running-config interface GigabitEthernet0/0/1
-            assert_tags:
-            - ' no lldp receive'
-            tags_are_present: false
+            expr: (?m)\A(?![\s\S]*^ no lldp receive\s*$)
+            match: true
     - code: HQ.PORTS.G0-0-1-LLDP-TRANSMIT
       name: GigabitEthernet0/0/1.LLDP Transmit
       description: 'G0/0/1: LLDP transmit выключен'
@@ -220,17 +213,16 @@ Criterions:
       - Configure LLDP Interfaces
       max_mark: 4
       steps:
-      - name: 'show running-config interface GigabitEthernet0/0/1: has  no lldp transmit'
+      - name: 'show running-config interface GigabitEthernet0/0/1: matches (?m)^ no lldp transmit\s*$'
         code: check
         type: check
         device: HQ
         action_chain:
-        - action: verify_output
+        - action: verify_output_regex
           action_vars:
             command: show running-config interface GigabitEthernet0/0/1
-            assert_tags:
-            - ' no lldp transmit'
-            tags_are_present: true
+            expr: (?m)^ no lldp transmit\s*$
+            match: true
 - code: HQ-SW-1
   name: HQ-SW-1
   subCriterions:
@@ -244,17 +236,16 @@ Criterions:
       - Other
       max_mark: 5
       steps:
-      - name: 'show running-config: has no cdp run'
+      - name: 'show running-config: matches (?m)^no cdp run\s*$'
         code: check
         type: check
         device: HQ-SW-1
         action_chain:
-        - action: verify_output
+        - action: verify_output_regex
           action_vars:
             command: show running-config
-            assert_tags:
-            - no cdp run
-            tags_are_present: true
+            expr: (?m)^no cdp run\s*$
+            match: true
   - code: HQ-SW-1.LLDP
     name: LLDP
     aspects:
@@ -285,17 +276,16 @@ Criterions:
       - Configure LLDP Interfaces
       max_mark: 4
       steps:
-      - name: 'show running-config interface FastEthernet0/24: has  no lldp receive'
+      - name: 'show running-config interface FastEthernet0/24: matches (?m)^ no lldp receive\s*$'
         code: check
         type: check
         device: HQ-SW-1
         action_chain:
-        - action: verify_output
+        - action: verify_output_regex
           action_vars:
             command: show running-config interface FastEthernet0/24
-            assert_tags:
-            - ' no lldp receive'
-            tags_are_present: true
+            expr: (?m)^ no lldp receive\s*$
+            match: true
     - code: HQ-SW-1.PORTS.F0-24-LLDP-TRANSMIT
       name: FastEthernet0/24.LLDP Transmit
       description: 'F0/24: LLDP transmit выключен'
@@ -303,17 +293,16 @@ Criterions:
       - Configure LLDP Interfaces
       max_mark: 4
       steps:
-      - name: 'show running-config interface FastEthernet0/24: has  no lldp transmit'
+      - name: 'show running-config interface FastEthernet0/24: matches (?m)^ no lldp transmit\s*$'
         code: check
         type: check
         device: HQ-SW-1
         action_chain:
-        - action: verify_output
+        - action: verify_output_regex
           action_vars:
             command: show running-config interface FastEthernet0/24
-            assert_tags:
-            - ' no lldp transmit'
-            tags_are_present: true
+            expr: (?m)^ no lldp transmit\s*$
+            match: true
     - code: HQ-SW-1.PORTS.G0-1-LLDP-RECEIVE
       name: GigabitEthernet0/1.LLDP Receive
       description: 'G0/1: LLDP receive выключен'
@@ -321,17 +310,16 @@ Criterions:
       - Configure LLDP Interfaces
       max_mark: 8
       steps:
-      - name: 'show running-config interface GigabitEthernet0/1: has  no lldp receive'
+      - name: 'show running-config interface GigabitEthernet0/1: matches (?m)^ no lldp receive\s*$'
         code: check
         type: check
         device: HQ-SW-1
         action_chain:
-        - action: verify_output
+        - action: verify_output_regex
           action_vars:
             command: show running-config interface GigabitEthernet0/1
-            assert_tags:
-            - ' no lldp receive'
-            tags_are_present: true
+            expr: (?m)^ no lldp receive\s*$
+            match: true
 - code: HQ-SW-2
   name: HQ-SW-2
   subCriterions:
@@ -345,17 +333,16 @@ Criterions:
       - Other
       max_mark: 5
       steps:
-      - name: 'show running-config: has no cdp run'
+      - name: 'show running-config: matches (?m)^no cdp run\s*$'
         code: check
         type: check
         device: HQ-SW-2
         action_chain:
-        - action: verify_output
+        - action: verify_output_regex
           action_vars:
             command: show running-config
-            assert_tags:
-            - no cdp run
-            tags_are_present: true
+            expr: (?m)^no cdp run\s*$
+            match: true
   - code: HQ-SW-2.LLDP
     name: LLDP
     aspects:
@@ -386,17 +373,16 @@ Criterions:
       - Configure LLDP Interfaces
       max_mark: 4
       steps:
-      - name: 'show running-config interface FastEthernet0/1: has  no lldp receive'
+      - name: 'show running-config interface FastEthernet0/1: matches (?m)^ no lldp receive\s*$'
         code: check
         type: check
         device: HQ-SW-2
         action_chain:
-        - action: verify_output
+        - action: verify_output_regex
           action_vars:
             command: show running-config interface FastEthernet0/1
-            assert_tags:
-            - ' no lldp receive'
-            tags_are_present: true
+            expr: (?m)^ no lldp receive\s*$
+            match: true
     - code: HQ-SW-2.PORTS.F0-1-LLDP-TRANSMIT
       name: FastEthernet0/1.LLDP Transmit
       description: 'F0/1: LLDP transmit выключен'
@@ -404,17 +390,16 @@ Criterions:
       - Configure LLDP Interfaces
       max_mark: 4
       steps:
-      - name: 'show running-config interface FastEthernet0/1: has  no lldp transmit'
+      - name: 'show running-config interface FastEthernet0/1: matches (?m)^ no lldp transmit\s*$'
         code: check
         type: check
         device: HQ-SW-2
         action_chain:
-        - action: verify_output
+        - action: verify_output_regex
           action_vars:
             command: show running-config interface FastEthernet0/1
-            assert_tags:
-            - ' no lldp transmit'
-            tags_are_present: true
+            expr: (?m)^ no lldp transmit\s*$
+            match: true
     - code: HQ-SW-2.PORTS.G0-1-LLDP-RECEIVE
       name: GigabitEthernet0/1.LLDP Receive
       description: 'G0/1: LLDP receive выключен'
@@ -422,14 +407,13 @@ Criterions:
       - Configure LLDP Interfaces
       max_mark: 8
       steps:
-      - name: 'show running-config interface GigabitEthernet0/1: has  no lldp receive'
+      - name: 'show running-config interface GigabitEthernet0/1: matches (?m)^ no lldp receive\s*$'
         code: check
         type: check
         device: HQ-SW-2
         action_chain:
-        - action: verify_output
+        - action: verify_output_regex
           action_vars:
             command: show running-config interface GigabitEthernet0/1
-            assert_tags:
-            - ' no lldp receive'
-            tags_are_present: true
+            expr: (?m)^ no lldp receive\s*$
+            match: true

@@ -77,6 +77,29 @@ Criterions:
             command: ipconfig
             expr: '(?m)Default Gateway[. ]*: (?:\S+\s*\n\s+)?192\.168\.10\.1\s*$'
             match: true
+  - code: PC-A.CONNECTIVITY-TESTS
+    name: Connectivity Tests
+    aspects:
+    - code: PC-A.CONNECTIVITY-TESTS.CT-0
+      name: 'PC-A to 192.168.30.10 : 192.168.30.10 (ICMP)'
+      description: 'PC-A → 192.168.30.10 (PING): проходит'
+      skills:
+      - Other
+      max_mark: 3
+      steps:
+      - name: 'ping -n 2 192.168.30.10: has : bytes='
+        code: check
+        type: check
+        device: PC-A
+        action_chain:
+        - action: verify_output
+          action_vars:
+            command: ping -n 2 192.168.30.10
+            assert_tags:
+            - ': bytes='
+            tags_are_present: true
+            retries: 3
+            retry_interval: 15
 - code: PC-B
   name: PC-B
   subCriterions:
@@ -154,6 +177,29 @@ Criterions:
             command: ipconfig
             expr: '(?m)Default Gateway[. ]*: (?:\S+\s*\n\s+)?192\.168\.20\.1\s*$'
             match: true
+  - code: PC-B.CONNECTIVITY-TESTS
+    name: Connectivity Tests
+    aspects:
+    - code: PC-B.CONNECTIVITY-TESTS.CT-2
+      name: 'PC-B to 192.168.30.10 : 192.168.30.10 (ICMP)'
+      description: 'PC-B → 192.168.30.10 (PING): проходит'
+      skills:
+      - Other
+      max_mark: 3
+      steps:
+      - name: 'ping -n 2 192.168.30.10: has : bytes='
+        code: check
+        type: check
+        device: PC-B
+        action_chain:
+        - action: verify_output
+          action_vars:
+            command: ping -n 2 192.168.30.10
+            assert_tags:
+            - ': bytes='
+            tags_are_present: true
+            retries: 3
+            retry_interval: 15
 - code: PC-C
   name: PC-C
   subCriterions:
@@ -231,6 +277,49 @@ Criterions:
             command: ipconfig
             expr: '(?m)Default Gateway[. ]*: (?:\S+\s*\n\s+)?192\.168\.40\.1\s*$'
             match: true
+  - code: PC-C.CONNECTIVITY-TESTS
+    name: Connectivity Tests
+    aspects:
+    - code: PC-C.CONNECTIVITY-TESTS.CT-1
+      name: 'PC-C to 192.168.30.10 : 192.168.30.10 (ICMP)'
+      description: 'PC-C → 192.168.30.10 (PING): проходит'
+      skills:
+      - Other
+      max_mark: 3
+      steps:
+      - name: 'ping -n 2 192.168.30.10: has : bytes='
+        code: check
+        type: check
+        device: PC-C
+        action_chain:
+        - action: verify_output
+          action_vars:
+            command: ping -n 2 192.168.30.10
+            assert_tags:
+            - ': bytes='
+            tags_are_present: true
+            retries: 3
+            retry_interval: 15
+    - code: PC-C.CONNECTIVITY-TESTS.CT-3
+      name: 'PC-C to 192.168.10.10 : 192.168.10.10 (ICMP)'
+      description: 'PC-C → 192.168.10.10 (PING): проходит'
+      skills:
+      - Other
+      max_mark: 3
+      steps:
+      - name: 'ping -n 2 192.168.10.10: has : bytes='
+        code: check
+        type: check
+        device: PC-C
+        action_chain:
+        - action: verify_output
+          action_vars:
+            command: ping -n 2 192.168.10.10
+            assert_tags:
+            - ': bytes='
+            tags_are_present: true
+            retries: 1
+            retry_interval: 5
 - code: R1
   name: R1
   subCriterions:
@@ -239,13 +328,16 @@ Criterions:
     aspects:
     - code: R1.ACL.ACL-R1-VTY-LIMIT
       name: R1-VTY-LIMIT
-      description: 'Список доступа R1-VTY-LIMIT: 1 записей по порядку'
+      description: 'Список доступа R1-VTY-LIMIT: 1 записей'
       skills:
       - Acl
       max_mark: 1
       steps:
-      - name: 'show access-lists R1-VTY-LIMIT: matches (?m)^Standard IP access list R1\-VTY\-LIMIT\s*$\s*\n\s+\d+
-          permit\ 192\.168\.10\.10(?: \(\d+ match(?:es)?\))?\s*$(?![\s\S]*^\s+\d+ (?:permit|deny) )'
+      - name: 'show access-lists R1-VTY-LIMIT: matches (?m)^Standard IP access list R1\-VTY\-LIMIT[ \t\r]*$(?=[\s\S]*^\s+\d+
+          (?:permit\ 192\.168\.10\.10)(?: \(\d+ match(?:es)?\))?[ \t\r]*$)(?![\s\S]*^\s+\d+ (?:deny\ \ \ any|deny\
+          \ \ any\ log)(?: \(\d+ match(?:es)?\))?[ \t\r]*$[\s\S]*^\s+\d+ (?!(?:deny\ \ \ any|deny\ \ \ any\ log)(?:
+          \(\d+ match(?:es)?\))?[ \t\r]*$))(?![\s\S]*^\s+\d+ (?!(?:(?:permit\ 192\.168\.10\.10)|(?:deny\ \ \ any|deny\
+          \ \ any\ log))(?: \(\d+ match(?:es)?\))?[ \t\r]*$))'
         code: check
         type: check
         device: R1
@@ -253,8 +345,11 @@ Criterions:
         - action: verify_output_regex
           action_vars:
             command: show access-lists R1-VTY-LIMIT
-            expr: '(?m)^Standard IP access list R1\-VTY\-LIMIT\s*$\s*\n\s+\d+ permit\ 192\.168\.10\.10(?: \(\d+
-              match(?:es)?\))?\s*$(?![\s\S]*^\s+\d+ (?:permit|deny) )'
+            expr: '(?m)^Standard IP access list R1\-VTY\-LIMIT[ \t\r]*$(?=[\s\S]*^\s+\d+ (?:permit\ 192\.168\.10\.10)(?:
+              \(\d+ match(?:es)?\))?[ \t\r]*$)(?![\s\S]*^\s+\d+ (?:deny\ \ \ any|deny\ \ \ any\ log)(?: \(\d+ match(?:es)?\))?[
+              \t\r]*$[\s\S]*^\s+\d+ (?!(?:deny\ \ \ any|deny\ \ \ any\ log)(?: \(\d+ match(?:es)?\))?[ \t\r]*$))(?![\s\S]*^\s+\d+
+              (?!(?:(?:permit\ 192\.168\.10\.10)|(?:deny\ \ \ any|deny\ \ \ any\ log))(?: \(\d+ match(?:es)?\))?[
+              \t\r]*$))'
             match: true
   - code: R1.CON
     name: Console Line
@@ -303,17 +398,16 @@ Criterions:
       - Other
       max_mark: 1
       steps:
-      - name: 'show running-config: has no ip domain-lookup'
+      - name: 'show running-config: matches (?m)^no ip domain\-lookup\s*$'
         code: check
         type: check
         device: R1
         action_chain:
-        - action: verify_output
+        - action: verify_output_regex
           action_vars:
             command: show running-config
-            assert_tags:
-            - no ip domain-lookup
-            tags_are_present: true
+            expr: (?m)^no ip domain\-lookup\s*$
+            match: true
   - code: R1.OSPF
     name: OSPF
     aspects:
@@ -324,7 +418,7 @@ Criterions:
       - Routing
       max_mark: 1
       steps:
-      - name: 'show ip ospf: matches (?m)Routing Process "ospf 1" with ID [\s\S]*^    Area BACKBONE\(0\)\s*$'
+      - name: 'show ip ospf: matches (?m)Routing Process "ospf 1" with ID [\s\S]*^    Area BACKBONE\((?:0|0\.0\.0\.0)\)\s*$'
         code: check
         type: check
         device: R1
@@ -332,7 +426,7 @@ Criterions:
         - action: verify_output_regex
           action_vars:
             command: show ip ospf
-            expr: (?m)Routing Process "ospf 1" with ID [\s\S]*^    Area BACKBONE\(0\)\s*$
+            expr: (?m)Routing Process "ospf 1" with ID [\s\S]*^    Area BACKBONE\((?:0|0\.0\.0\.0)\)\s*$
             match: true
     - code: R1.OSPF.OSPF-AUTO-COST
       name: Process ID 1.Auto Cost
@@ -358,7 +452,7 @@ Criterions:
       - Routing
       max_mark: 1
       steps:
-      - name: 'show running-config | section ^router ospf 1( |$): matches (?m)^ network 10\.0\.0\.0\s+0\.0\.0\.7\s+area\s+0\s*$'
+      - name: 'show running-config | section ^router ospf 1( |$): matches (?m)^ network 10\.0\.0\.0\s+0\.0\.0\.7\s+area\s+(?:0|0\.0\.0\.0)\s*$'
         code: check
         type: check
         device: R1
@@ -366,7 +460,7 @@ Criterions:
         - action: verify_output_regex
           action_vars:
             command: show running-config | section ^router ospf 1( |$)
-            expr: (?m)^ network 10\.0\.0\.0\s+0\.0\.0\.7\s+area\s+0\s*$
+            expr: (?m)^ network 10\.0\.0\.0\s+0\.0\.0\.7\s+area\s+(?:0|0\.0\.0\.0)\s*$
             match: true
     - code: R1.OSPF.OSPF-NETWORK-1
       name: Process ID 1.Networks.Route1
@@ -375,7 +469,7 @@ Criterions:
       - Routing
       max_mark: 1
       steps:
-      - name: 'show running-config | section ^router ospf 1( |$): matches (?m)^ network 192\.168\.10\.0\s+0\.0\.0\.255\s+area\s+0\s*$'
+      - name: 'show running-config | section ^router ospf 1( |$): matches (?m)^ network 192\.168\.10\.0\s+0\.0\.0\.255\s+area\s+(?:0|0\.0\.0\.0)\s*$'
         code: check
         type: check
         device: R1
@@ -383,7 +477,7 @@ Criterions:
         - action: verify_output_regex
           action_vars:
             command: show running-config | section ^router ospf 1( |$)
-            expr: (?m)^ network 192\.168\.10\.0\s+0\.0\.0\.255\s+area\s+0\s*$
+            expr: (?m)^ network 192\.168\.10\.0\s+0\.0\.0\.255\s+area\s+(?:0|0\.0\.0\.0)\s*$
             match: true
     - code: R1.OSPF.OSPF-PASSIVE-G0-0-1
       name: Process ID 1.Passive Interface.GigabitEthernet0/0/1
@@ -896,17 +990,16 @@ Criterions:
       - Other
       max_mark: 1
       steps:
-      - name: 'show running-config: has banner motd'
+      - name: 'show running-config: matches (?m)^banner motd \^C\s*(?!\^C\s*$)\S[\s\S]*?\^C\s*$'
         code: check
         type: check
         device: R1
         action_chain:
-        - action: verify_output
+        - action: verify_output_regex
           action_vars:
             command: show running-config
-            assert_tags:
-            - banner motd
-            tags_are_present: true
+            expr: (?m)^banner motd \^C\s*(?!\^C\s*$)\S[\s\S]*?\^C\s*$
+            match: true
     - code: R1.MISC.ENABLE-SECRET
       name: Enable Secret
       description: Пароль привилегированного режима задан как enable secret
@@ -914,17 +1007,16 @@ Criterions:
       - Other
       max_mark: 1
       steps:
-      - name: 'show running-config: has enable secret 5 $1$mERr$rzbqVntPZ5IMeTna'
+      - name: 'show running-config: matches (?m)^enable secret 5 \$1\$mERr\$rzbqVntPZ5IMeTna\s*$'
         code: check
         type: check
         device: R1
         action_chain:
-        - action: verify_output
+        - action: verify_output_regex
           action_vars:
             command: show running-config
-            assert_tags:
-            - enable secret 5 $1$mERr$rzbqVntPZ5IMeTna
-            tags_are_present: true
+            expr: (?m)^enable secret 5 \$1\$mERr\$rzbqVntPZ5IMeTna\s*$
+            match: true
     - code: R1.MISC.HOSTNAME
       name: Host Name
       description: Имя устройства — R1
@@ -966,17 +1058,16 @@ Criterions:
       - Other
       max_mark: 1
       steps:
-      - name: 'show running-config: has security passwords min-length 10'
+      - name: 'show running-config: matches (?m)^security passwords min\-length 10\s*$'
         code: check
         type: check
         device: R1
         action_chain:
-        - action: verify_output
+        - action: verify_output_regex
           action_vars:
             command: show running-config
-            assert_tags:
-            - security passwords min-length 10
-            tags_are_present: true
+            expr: (?m)^security passwords min\-length 10\s*$
+            match: true
     - code: R1.MISC.PWD-ENCRYPTION
       name: Service Password Encryption
       description: Включено шифрование паролей (service password-encryption)
@@ -984,17 +1075,16 @@ Criterions:
       - Other
       max_mark: 1
       steps:
-      - name: 'show running-config: has service password-encryption'
+      - name: 'show running-config: matches (?m)^service password\-encryption\s*$'
         code: check
         type: check
         device: R1
         action_chain:
-        - action: verify_output
+        - action: verify_output_regex
           action_vars:
             command: show running-config
-            assert_tags:
-            - service password-encryption
-            tags_are_present: true
+            expr: (?m)^service password\-encryption\s*$
+            match: true
   - code: R1.NAT
     name: NAT
     aspects:
@@ -1033,13 +1123,16 @@ Criterions:
     aspects:
     - code: R2.ACL.ACL-1
       name: '1'
-      description: 'Список доступа 1: 1 записей по порядку'
+      description: 'Список доступа 1: 1 записей'
       skills:
       - Acl
       max_mark: 1
       steps:
-      - name: 'show access-lists 1: matches (?m)^Standard IP access list 1\s*$\s*\n\s+\d+ permit\ 192\.168\.40\.0,\
-          wildcard\ bits\ 0\.0\.0\.255(?: \(\d+ match(?:es)?\))?\s*$(?![\s\S]*^\s+\d+ (?:permit|deny) )'
+      - name: 'show access-lists 1: matches (?m)^Standard IP access list 1[ \t\r]*$(?=[\s\S]*^\s+\d+ (?:permit\
+          192\.168\.40\.0,\ wildcard\ bits\ 0\.0\.0\.255)(?: \(\d+ match(?:es)?\))?[ \t\r]*$)(?![\s\S]*^\s+\d+ (?:deny\
+          \ \ any|deny\ \ \ any\ log)(?: \(\d+ match(?:es)?\))?[ \t\r]*$[\s\S]*^\s+\d+ (?!(?:deny\ \ \ any|deny\
+          \ \ any\ log)(?: \(\d+ match(?:es)?\))?[ \t\r]*$))(?![\s\S]*^\s+\d+ (?!(?:(?:permit\ 192\.168\.40\.0,\
+          wildcard\ bits\ 0\.0\.0\.255)|(?:deny\ \ \ any|deny\ \ \ any\ log))(?: \(\d+ match(?:es)?\))?[ \t\r]*$))'
         code: check
         type: check
         device: R2
@@ -1047,21 +1140,30 @@ Criterions:
         - action: verify_output_regex
           action_vars:
             command: show access-lists 1
-            expr: '(?m)^Standard IP access list 1\s*$\s*\n\s+\d+ permit\ 192\.168\.40\.0,\ wildcard\ bits\ 0\.0\.0\.255(?:
-              \(\d+ match(?:es)?\))?\s*$(?![\s\S]*^\s+\d+ (?:permit|deny) )'
+            expr: '(?m)^Standard IP access list 1[ \t\r]*$(?=[\s\S]*^\s+\d+ (?:permit\ 192\.168\.40\.0,\ wildcard\
+              bits\ 0\.0\.0\.255)(?: \(\d+ match(?:es)?\))?[ \t\r]*$)(?![\s\S]*^\s+\d+ (?:deny\ \ \ any|deny\ \
+              \ any\ log)(?: \(\d+ match(?:es)?\))?[ \t\r]*$[\s\S]*^\s+\d+ (?!(?:deny\ \ \ any|deny\ \ \ any\ log)(?:
+              \(\d+ match(?:es)?\))?[ \t\r]*$))(?![\s\S]*^\s+\d+ (?!(?:(?:permit\ 192\.168\.40\.0,\ wildcard\ bits\
+              0\.0\.0\.255)|(?:deny\ \ \ any|deny\ \ \ any\ log))(?: \(\d+ match(?:es)?\))?[ \t\r]*$))'
             match: true
     - code: R2.ACL.ACL-R2-SECURITY
       name: R2-SECURITY
-      description: 'Список доступа R2-SECURITY: 5 записей по порядку'
+      description: 'Список доступа R2-SECURITY: 5 записей, в любом порядке'
       skills:
       - Acl
       max_mark: 1
       steps:
-      - name: 'show access-lists R2-SECURITY: matches (?m)^Extended IP access list R2\-SECURITY\s*$\s*\n\s+\d+ permit\
-          ospf\ any\ any(?: \(\d+ match(?:es)?\))?\s*$\s*\n\s+\d+ permit\ icmp\ any\ any(?: \(\d+ match(?:es)?\))?\s*$\s*\n\s+\d+
-          permit\ tcp\ any\ host\ 10\.0\.0\.2\ eq\ 22(?: \(\d+ match(?:es)?\))?\s*$\s*\n\s+\d+ permit\ udp\ any\
-          host\ 192\.168\.30\.10\ eq\ domain(?: \(\d+ match(?:es)?\))?\s*$\s*\n\s+\d+ permit\ udp\ any\ host\ 192\.168\.30\.10\
-          eq\ tftp(?: \(\d+ match(?:es)?\))?\s*$(?![\s\S]*^\s+\d+ (?:permit|deny) )'
+      - name: 'show access-lists R2-SECURITY: matches (?m)^Extended IP access list R2\-SECURITY[ \t\r]*$(?=[\s\S]*^\s+\d+
+          (?:permit\ ospf\ any\ any)(?: \(\d+ match(?:es)?\))?[ \t\r]*$)(?=[\s\S]*^\s+\d+ (?:permit\ icmp\ any\
+          any)(?: \(\d+ match(?:es)?\))?[ \t\r]*$)(?=[\s\S]*^\s+\d+ (?:permit\ tcp\ any\ host\ 10\.0\.0\.2\ eq\
+          22)(?: \(\d+ match(?:es)?\))?[ \t\r]*$)(?=[\s\S]*^\s+\d+ (?:permit\ udp\ any\ host\ 192\.168\.30\.10\
+          eq\ domain)(?: \(\d+ match(?:es)?\))?[ \t\r]*$)(?=[\s\S]*^\s+\d+ (?:permit\ udp\ any\ host\ 192\.168\.30\.10\
+          eq\ tftp)(?: \(\d+ match(?:es)?\))?[ \t\r]*$)(?![\s\S]*^\s+\d+ (?:deny\ ip\ any\ any|deny\ ip\ any\ any\
+          log)(?: \(\d+ match(?:es)?\))?[ \t\r]*$[\s\S]*^\s+\d+ (?!(?:deny\ ip\ any\ any|deny\ ip\ any\ any\ log)(?:
+          \(\d+ match(?:es)?\))?[ \t\r]*$))(?![\s\S]*^\s+\d+ (?!(?:(?:permit\ ospf\ any\ any)|(?:permit\ icmp\ any\
+          any)|(?:permit\ tcp\ any\ host\ 10\.0\.0\.2\ eq\ 22)|(?:permit\ udp\ any\ host\ 192\.168\.30\.10\ eq\
+          domain)|(?:permit\ udp\ any\ host\ 192\.168\.30\.10\ eq\ tftp)|(?:deny\ ip\ any\ any|deny\ ip\ any\ any\
+          log))(?: \(\d+ match(?:es)?\))?[ \t\r]*$))'
         code: check
         type: check
         device: R2
@@ -1069,22 +1171,30 @@ Criterions:
         - action: verify_output_regex
           action_vars:
             command: show access-lists R2-SECURITY
-            expr: '(?m)^Extended IP access list R2\-SECURITY\s*$\s*\n\s+\d+ permit\ ospf\ any\ any(?: \(\d+ match(?:es)?\))?\s*$\s*\n\s+\d+
-              permit\ icmp\ any\ any(?: \(\d+ match(?:es)?\))?\s*$\s*\n\s+\d+ permit\ tcp\ any\ host\ 10\.0\.0\.2\
-              eq\ 22(?: \(\d+ match(?:es)?\))?\s*$\s*\n\s+\d+ permit\ udp\ any\ host\ 192\.168\.30\.10\ eq\ domain(?:
-              \(\d+ match(?:es)?\))?\s*$\s*\n\s+\d+ permit\ udp\ any\ host\ 192\.168\.30\.10\ eq\ tftp(?: \(\d+
-              match(?:es)?\))?\s*$(?![\s\S]*^\s+\d+ (?:permit|deny) )'
+            expr: '(?m)^Extended IP access list R2\-SECURITY[ \t\r]*$(?=[\s\S]*^\s+\d+ (?:permit\ ospf\ any\ any)(?:
+              \(\d+ match(?:es)?\))?[ \t\r]*$)(?=[\s\S]*^\s+\d+ (?:permit\ icmp\ any\ any)(?: \(\d+ match(?:es)?\))?[
+              \t\r]*$)(?=[\s\S]*^\s+\d+ (?:permit\ tcp\ any\ host\ 10\.0\.0\.2\ eq\ 22)(?: \(\d+ match(?:es)?\))?[
+              \t\r]*$)(?=[\s\S]*^\s+\d+ (?:permit\ udp\ any\ host\ 192\.168\.30\.10\ eq\ domain)(?: \(\d+ match(?:es)?\))?[
+              \t\r]*$)(?=[\s\S]*^\s+\d+ (?:permit\ udp\ any\ host\ 192\.168\.30\.10\ eq\ tftp)(?: \(\d+ match(?:es)?\))?[
+              \t\r]*$)(?![\s\S]*^\s+\d+ (?:deny\ ip\ any\ any|deny\ ip\ any\ any\ log)(?: \(\d+ match(?:es)?\))?[
+              \t\r]*$[\s\S]*^\s+\d+ (?!(?:deny\ ip\ any\ any|deny\ ip\ any\ any\ log)(?: \(\d+ match(?:es)?\))?[
+              \t\r]*$))(?![\s\S]*^\s+\d+ (?!(?:(?:permit\ ospf\ any\ any)|(?:permit\ icmp\ any\ any)|(?:permit\
+              tcp\ any\ host\ 10\.0\.0\.2\ eq\ 22)|(?:permit\ udp\ any\ host\ 192\.168\.30\.10\ eq\ domain)|(?:permit\
+              udp\ any\ host\ 192\.168\.30\.10\ eq\ tftp)|(?:deny\ ip\ any\ any|deny\ ip\ any\ any\ log))(?: \(\d+
+              match(?:es)?\))?[ \t\r]*$))'
             match: true
     - code: R2.ACL.ACL-R2-VTY-LIMIT
       name: R2-VTY-LIMIT
-      description: 'Список доступа R2-VTY-LIMIT: 1 записей по порядку'
+      description: 'Список доступа R2-VTY-LIMIT: 1 записей'
       skills:
       - Acl
       max_mark: 1
       steps:
-      - name: 'show access-lists R2-VTY-LIMIT: matches (?m)^Standard IP access list R2\-VTY\-LIMIT\s*$\s*\n\s+\d+
-          permit\ 192\.168\.30\.0,\ wildcard\ bits\ 0\.0\.0\.255(?: \(\d+ match(?:es)?\))?\s*$(?![\s\S]*^\s+\d+
-          (?:permit|deny) )'
+      - name: 'show access-lists R2-VTY-LIMIT: matches (?m)^Standard IP access list R2\-VTY\-LIMIT[ \t\r]*$(?=[\s\S]*^\s+\d+
+          (?:permit\ 192\.168\.30\.0,\ wildcard\ bits\ 0\.0\.0\.255)(?: \(\d+ match(?:es)?\))?[ \t\r]*$)(?![\s\S]*^\s+\d+
+          (?:deny\ \ \ any|deny\ \ \ any\ log)(?: \(\d+ match(?:es)?\))?[ \t\r]*$[\s\S]*^\s+\d+ (?!(?:deny\ \ \
+          any|deny\ \ \ any\ log)(?: \(\d+ match(?:es)?\))?[ \t\r]*$))(?![\s\S]*^\s+\d+ (?!(?:(?:permit\ 192\.168\.30\.0,\
+          wildcard\ bits\ 0\.0\.0\.255)|(?:deny\ \ \ any|deny\ \ \ any\ log))(?: \(\d+ match(?:es)?\))?[ \t\r]*$))'
         code: check
         type: check
         device: R2
@@ -1092,8 +1202,11 @@ Criterions:
         - action: verify_output_regex
           action_vars:
             command: show access-lists R2-VTY-LIMIT
-            expr: '(?m)^Standard IP access list R2\-VTY\-LIMIT\s*$\s*\n\s+\d+ permit\ 192\.168\.30\.0,\ wildcard\
-              bits\ 0\.0\.0\.255(?: \(\d+ match(?:es)?\))?\s*$(?![\s\S]*^\s+\d+ (?:permit|deny) )'
+            expr: '(?m)^Standard IP access list R2\-VTY\-LIMIT[ \t\r]*$(?=[\s\S]*^\s+\d+ (?:permit\ 192\.168\.30\.0,\
+              wildcard\ bits\ 0\.0\.0\.255)(?: \(\d+ match(?:es)?\))?[ \t\r]*$)(?![\s\S]*^\s+\d+ (?:deny\ \ \ any|deny\
+              \ \ any\ log)(?: \(\d+ match(?:es)?\))?[ \t\r]*$[\s\S]*^\s+\d+ (?!(?:deny\ \ \ any|deny\ \ \ any\
+              log)(?: \(\d+ match(?:es)?\))?[ \t\r]*$))(?![\s\S]*^\s+\d+ (?!(?:(?:permit\ 192\.168\.30\.0,\ wildcard\
+              bits\ 0\.0\.0\.255)|(?:deny\ \ \ any|deny\ \ \ any\ log))(?: \(\d+ match(?:es)?\))?[ \t\r]*$))'
             match: true
   - code: R2.CON
     name: Console Line
@@ -1142,17 +1255,16 @@ Criterions:
       - Other
       max_mark: 1
       steps:
-      - name: 'show running-config: has no ip domain-lookup'
+      - name: 'show running-config: matches (?m)^no ip domain\-lookup\s*$'
         code: check
         type: check
         device: R2
         action_chain:
-        - action: verify_output
+        - action: verify_output_regex
           action_vars:
             command: show running-config
-            assert_tags:
-            - no ip domain-lookup
-            tags_are_present: true
+            expr: (?m)^no ip domain\-lookup\s*$
+            match: true
   - code: R2.OSPF
     name: OSPF
     aspects:
@@ -1163,7 +1275,7 @@ Criterions:
       - Routing
       max_mark: 1
       steps:
-      - name: 'show ip ospf: matches (?m)Routing Process "ospf 1" with ID [\s\S]*^    Area BACKBONE\(0\)\s*$'
+      - name: 'show ip ospf: matches (?m)Routing Process "ospf 1" with ID [\s\S]*^    Area BACKBONE\((?:0|0\.0\.0\.0)\)\s*$'
         code: check
         type: check
         device: R2
@@ -1171,7 +1283,7 @@ Criterions:
         - action: verify_output_regex
           action_vars:
             command: show ip ospf
-            expr: (?m)Routing Process "ospf 1" with ID [\s\S]*^    Area BACKBONE\(0\)\s*$
+            expr: (?m)Routing Process "ospf 1" with ID [\s\S]*^    Area BACKBONE\((?:0|0\.0\.0\.0)\)\s*$
             match: true
     - code: R2.OSPF.OSPF-AUTO-COST
       name: Process ID 1.Auto Cost
@@ -1197,7 +1309,7 @@ Criterions:
       - Routing
       max_mark: 1
       steps:
-      - name: 'show running-config | section ^router ospf 1( |$): matches (?m)^ network 10\.0\.0\.0\s+0\.0\.0\.7\s+area\s+0\s*$'
+      - name: 'show running-config | section ^router ospf 1( |$): matches (?m)^ network 10\.0\.0\.0\s+0\.0\.0\.7\s+area\s+(?:0|0\.0\.0\.0)\s*$'
         code: check
         type: check
         device: R2
@@ -1205,7 +1317,7 @@ Criterions:
         - action: verify_output_regex
           action_vars:
             command: show running-config | section ^router ospf 1( |$)
-            expr: (?m)^ network 10\.0\.0\.0\s+0\.0\.0\.7\s+area\s+0\s*$
+            expr: (?m)^ network 10\.0\.0\.0\s+0\.0\.0\.7\s+area\s+(?:0|0\.0\.0\.0)\s*$
             match: true
     - code: R2.OSPF.OSPF-NETWORK-1
       name: Process ID 1.Networks.Route1
@@ -1214,7 +1326,7 @@ Criterions:
       - Routing
       max_mark: 1
       steps:
-      - name: 'show running-config | section ^router ospf 1( |$): matches (?m)^ network 192\.168\.30\.0\s+0\.0\.0\.255\s+area\s+0\s*$'
+      - name: 'show running-config | section ^router ospf 1( |$): matches (?m)^ network 192\.168\.30\.0\s+0\.0\.0\.255\s+area\s+(?:0|0\.0\.0\.0)\s*$'
         code: check
         type: check
         device: R2
@@ -1222,7 +1334,7 @@ Criterions:
         - action: verify_output_regex
           action_vars:
             command: show running-config | section ^router ospf 1( |$)
-            expr: (?m)^ network 192\.168\.30\.0\s+0\.0\.0\.255\s+area\s+0\s*$
+            expr: (?m)^ network 192\.168\.30\.0\s+0\.0\.0\.255\s+area\s+(?:0|0\.0\.0\.0)\s*$
             match: true
     - code: R2.OSPF.OSPF-PASSIVE-G0-0-1
       name: Process ID 1.Passive Interface.GigabitEthernet0/0/1
@@ -1752,17 +1864,16 @@ Criterions:
       - Other
       max_mark: 1
       steps:
-      - name: 'show running-config: has banner motd'
+      - name: 'show running-config: matches (?m)^banner motd \^C\s*(?!\^C\s*$)\S[\s\S]*?\^C\s*$'
         code: check
         type: check
         device: R2
         action_chain:
-        - action: verify_output
+        - action: verify_output_regex
           action_vars:
             command: show running-config
-            assert_tags:
-            - banner motd
-            tags_are_present: true
+            expr: (?m)^banner motd \^C\s*(?!\^C\s*$)\S[\s\S]*?\^C\s*$
+            match: true
     - code: R2.MISC.ENABLE-SECRET
       name: Enable Secret
       description: Пароль привилегированного режима задан как enable secret
@@ -1770,17 +1881,16 @@ Criterions:
       - Other
       max_mark: 1
       steps:
-      - name: 'show running-config: has enable secret 5 $1$mERr$rzbqVntPZ5IMeTna'
+      - name: 'show running-config: matches (?m)^enable secret 5 \$1\$mERr\$rzbqVntPZ5IMeTna\s*$'
         code: check
         type: check
         device: R2
         action_chain:
-        - action: verify_output
+        - action: verify_output_regex
           action_vars:
             command: show running-config
-            assert_tags:
-            - enable secret 5 $1$mERr$rzbqVntPZ5IMeTna
-            tags_are_present: true
+            expr: (?m)^enable secret 5 \$1\$mERr\$rzbqVntPZ5IMeTna\s*$
+            match: true
     - code: R2.MISC.HOSTNAME
       name: Host Name
       description: Имя устройства — R2
@@ -1822,17 +1932,16 @@ Criterions:
       - Other
       max_mark: 1
       steps:
-      - name: 'show running-config: has security passwords min-length 10'
+      - name: 'show running-config: matches (?m)^security passwords min\-length 10\s*$'
         code: check
         type: check
         device: R2
         action_chain:
-        - action: verify_output
+        - action: verify_output_regex
           action_vars:
             command: show running-config
-            assert_tags:
-            - security passwords min-length 10
-            tags_are_present: true
+            expr: (?m)^security passwords min\-length 10\s*$
+            match: true
     - code: R2.MISC.PWD-ENCRYPTION
       name: Service Password Encryption
       description: Включено шифрование паролей (service password-encryption)
@@ -1840,17 +1949,16 @@ Criterions:
       - Other
       max_mark: 1
       steps:
-      - name: 'show running-config: has service password-encryption'
+      - name: 'show running-config: matches (?m)^service password\-encryption\s*$'
         code: check
         type: check
         device: R2
         action_chain:
-        - action: verify_output
+        - action: verify_output_regex
           action_vars:
             command: show running-config
-            assert_tags:
-            - service password-encryption
-            tags_are_present: true
+            expr: (?m)^service password\-encryption\s*$
+            match: true
   - code: R2.NAT
     name: NAT
     aspects:
@@ -1970,13 +2078,16 @@ Criterions:
     aspects:
     - code: S1.ACL.ACL-S1-VTY
       name: S1-VTY
-      description: 'Список доступа S1-VTY: 1 записей по порядку'
+      description: 'Список доступа S1-VTY: 1 записей'
       skills:
       - Acl
       max_mark: 1
       steps:
-      - name: 'show access-lists S1-VTY: matches (?m)^Standard IP access list S1\-VTY\s*$\s*\n\s+\d+ permit\ 192\.168\.10\.10(?:
-          \(\d+ match(?:es)?\))?\s*$(?![\s\S]*^\s+\d+ (?:permit|deny) )'
+      - name: 'show access-lists S1-VTY: matches (?m)^Standard IP access list S1\-VTY[ \t\r]*$(?=[\s\S]*^\s+\d+
+          (?:permit\ 192\.168\.10\.10)(?: \(\d+ match(?:es)?\))?[ \t\r]*$)(?![\s\S]*^\s+\d+ (?:deny\ \ \ any|deny\
+          \ \ any\ log)(?: \(\d+ match(?:es)?\))?[ \t\r]*$[\s\S]*^\s+\d+ (?!(?:deny\ \ \ any|deny\ \ \ any\ log)(?:
+          \(\d+ match(?:es)?\))?[ \t\r]*$))(?![\s\S]*^\s+\d+ (?!(?:(?:permit\ 192\.168\.10\.10)|(?:deny\ \ \ any|deny\
+          \ \ any\ log))(?: \(\d+ match(?:es)?\))?[ \t\r]*$))'
         code: check
         type: check
         device: S1
@@ -1984,8 +2095,11 @@ Criterions:
         - action: verify_output_regex
           action_vars:
             command: show access-lists S1-VTY
-            expr: '(?m)^Standard IP access list S1\-VTY\s*$\s*\n\s+\d+ permit\ 192\.168\.10\.10(?: \(\d+ match(?:es)?\))?\s*$(?![\s\S]*^\s+\d+
-              (?:permit|deny) )'
+            expr: '(?m)^Standard IP access list S1\-VTY[ \t\r]*$(?=[\s\S]*^\s+\d+ (?:permit\ 192\.168\.10\.10)(?:
+              \(\d+ match(?:es)?\))?[ \t\r]*$)(?![\s\S]*^\s+\d+ (?:deny\ \ \ any|deny\ \ \ any\ log)(?: \(\d+ match(?:es)?\))?[
+              \t\r]*$[\s\S]*^\s+\d+ (?!(?:deny\ \ \ any|deny\ \ \ any\ log)(?: \(\d+ match(?:es)?\))?[ \t\r]*$))(?![\s\S]*^\s+\d+
+              (?!(?:(?:permit\ 192\.168\.10\.10)|(?:deny\ \ \ any|deny\ \ \ any\ log))(?: \(\d+ match(?:es)?\))?[
+              \t\r]*$))'
             match: true
   - code: S1.VTY
     name: VTY Lines
@@ -2185,13 +2299,16 @@ Criterions:
     aspects:
     - code: S3.ACL.ACL-S3-VTY
       name: S3-VTY
-      description: 'Список доступа S3-VTY: 1 записей по порядку'
+      description: 'Список доступа S3-VTY: 1 записей'
       skills:
       - Acl
       max_mark: 1
       steps:
-      - name: 'show access-lists S3-VTY: matches (?m)^Standard IP access list S3\-VTY\s*$\s*\n\s+\d+ permit\ 192\.168\.30\.0,\
-          wildcard\ bits\ 0\.0\.0\.255(?: \(\d+ match(?:es)?\))?\s*$(?![\s\S]*^\s+\d+ (?:permit|deny) )'
+      - name: 'show access-lists S3-VTY: matches (?m)^Standard IP access list S3\-VTY[ \t\r]*$(?=[\s\S]*^\s+\d+
+          (?:permit\ 192\.168\.30\.0,\ wildcard\ bits\ 0\.0\.0\.255)(?: \(\d+ match(?:es)?\))?[ \t\r]*$)(?![\s\S]*^\s+\d+
+          (?:deny\ \ \ any|deny\ \ \ any\ log)(?: \(\d+ match(?:es)?\))?[ \t\r]*$[\s\S]*^\s+\d+ (?!(?:deny\ \ \
+          any|deny\ \ \ any\ log)(?: \(\d+ match(?:es)?\))?[ \t\r]*$))(?![\s\S]*^\s+\d+ (?!(?:(?:permit\ 192\.168\.30\.0,\
+          wildcard\ bits\ 0\.0\.0\.255)|(?:deny\ \ \ any|deny\ \ \ any\ log))(?: \(\d+ match(?:es)?\))?[ \t\r]*$))'
         code: check
         type: check
         device: S3
@@ -2199,8 +2316,11 @@ Criterions:
         - action: verify_output_regex
           action_vars:
             command: show access-lists S3-VTY
-            expr: '(?m)^Standard IP access list S3\-VTY\s*$\s*\n\s+\d+ permit\ 192\.168\.30\.0,\ wildcard\ bits\
-              0\.0\.0\.255(?: \(\d+ match(?:es)?\))?\s*$(?![\s\S]*^\s+\d+ (?:permit|deny) )'
+            expr: '(?m)^Standard IP access list S3\-VTY[ \t\r]*$(?=[\s\S]*^\s+\d+ (?:permit\ 192\.168\.30\.0,\ wildcard\
+              bits\ 0\.0\.0\.255)(?: \(\d+ match(?:es)?\))?[ \t\r]*$)(?![\s\S]*^\s+\d+ (?:deny\ \ \ any|deny\ \
+              \ any\ log)(?: \(\d+ match(?:es)?\))?[ \t\r]*$[\s\S]*^\s+\d+ (?!(?:deny\ \ \ any|deny\ \ \ any\ log)(?:
+              \(\d+ match(?:es)?\))?[ \t\r]*$))(?![\s\S]*^\s+\d+ (?!(?:(?:permit\ 192\.168\.30\.0,\ wildcard\ bits\
+              0\.0\.0\.255)|(?:deny\ \ \ any|deny\ \ \ any\ log))(?: \(\d+ match(?:es)?\))?[ \t\r]*$))'
             match: true
   - code: S3.VTY
     name: VTY Lines

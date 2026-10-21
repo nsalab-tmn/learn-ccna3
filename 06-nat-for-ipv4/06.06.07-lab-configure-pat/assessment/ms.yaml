@@ -8,13 +8,16 @@ Criterions:
     aspects:
     - code: R1.ACL.ACL-1
       name: '1'
-      description: 'Список доступа 1: 1 записей по порядку'
+      description: 'Список доступа 1: 1 записей'
       skills:
       - ACL
       max_mark: 5
       steps:
-      - name: 'show access-lists 1: matches (?m)^Standard IP access list 1\s*$\s*\n\s+\d+ permit\ 172\.16\.0\.0,\
-          wildcard\ bits\ 0\.0\.255\.255(?: \(\d+ match(?:es)?\))?\s*$(?![\s\S]*^\s+\d+ (?:permit|deny) )'
+      - name: 'show access-lists 1: matches (?m)^Standard IP access list 1[ \t\r]*$(?=[\s\S]*^\s+\d+ (?:permit\
+          172\.16\.0\.0,\ wildcard\ bits\ 0\.0\.255\.255)(?: \(\d+ match(?:es)?\))?[ \t\r]*$)(?![\s\S]*^\s+\d+ (?:deny\
+          \ \ any|deny\ \ \ any\ log)(?: \(\d+ match(?:es)?\))?[ \t\r]*$[\s\S]*^\s+\d+ (?!(?:deny\ \ \ any|deny\
+          \ \ any\ log)(?: \(\d+ match(?:es)?\))?[ \t\r]*$))(?![\s\S]*^\s+\d+ (?!(?:(?:permit\ 172\.16\.0\.0,\ wildcard\
+          bits\ 0\.0\.255\.255)|(?:deny\ \ \ any|deny\ \ \ any\ log))(?: \(\d+ match(?:es)?\))?[ \t\r]*$))'
         code: check
         type: check
         device: R1
@@ -22,8 +25,11 @@ Criterions:
         - action: verify_output_regex
           action_vars:
             command: show access-lists 1
-            expr: '(?m)^Standard IP access list 1\s*$\s*\n\s+\d+ permit\ 172\.16\.0\.0,\ wildcard\ bits\ 0\.0\.255\.255(?:
-              \(\d+ match(?:es)?\))?\s*$(?![\s\S]*^\s+\d+ (?:permit|deny) )'
+            expr: '(?m)^Standard IP access list 1[ \t\r]*$(?=[\s\S]*^\s+\d+ (?:permit\ 172\.16\.0\.0,\ wildcard\
+              bits\ 0\.0\.255\.255)(?: \(\d+ match(?:es)?\))?[ \t\r]*$)(?![\s\S]*^\s+\d+ (?:deny\ \ \ any|deny\
+              \ \ any\ log)(?: \(\d+ match(?:es)?\))?[ \t\r]*$[\s\S]*^\s+\d+ (?!(?:deny\ \ \ any|deny\ \ \ any\
+              log)(?: \(\d+ match(?:es)?\))?[ \t\r]*$))(?![\s\S]*^\s+\d+ (?!(?:(?:permit\ 172\.16\.0\.0,\ wildcard\
+              bits\ 0\.0\.255\.255)|(?:deny\ \ \ any|deny\ \ \ any\ log))(?: \(\d+ match(?:es)?\))?[ \t\r]*$))'
             match: true
   - code: R1.NAT
     name: NAT
@@ -124,13 +130,16 @@ Criterions:
     aspects:
     - code: R2.ACL.ACL-2
       name: '2'
-      description: 'Список доступа 2: 1 записей по порядку'
+      description: 'Список доступа 2: 1 записей'
       skills:
       - ACL
       max_mark: 5
       steps:
-      - name: 'show access-lists 2: matches (?m)^Standard IP access list 2\s*$\s*\n\s+\d+ permit\ 172\.17\.0\.0,\
-          wildcard\ bits\ 0\.0\.255\.255(?: \(\d+ match(?:es)?\))?\s*$(?![\s\S]*^\s+\d+ (?:permit|deny) )'
+      - name: 'show access-lists 2: matches (?m)^Standard IP access list 2[ \t\r]*$(?=[\s\S]*^\s+\d+ (?:permit\
+          172\.17\.0\.0,\ wildcard\ bits\ 0\.0\.255\.255)(?: \(\d+ match(?:es)?\))?[ \t\r]*$)(?![\s\S]*^\s+\d+ (?:deny\
+          \ \ any|deny\ \ \ any\ log)(?: \(\d+ match(?:es)?\))?[ \t\r]*$[\s\S]*^\s+\d+ (?!(?:deny\ \ \ any|deny\
+          \ \ any\ log)(?: \(\d+ match(?:es)?\))?[ \t\r]*$))(?![\s\S]*^\s+\d+ (?!(?:(?:permit\ 172\.17\.0\.0,\ wildcard\
+          bits\ 0\.0\.255\.255)|(?:deny\ \ \ any|deny\ \ \ any\ log))(?: \(\d+ match(?:es)?\))?[ \t\r]*$))'
         code: check
         type: check
         device: R2
@@ -138,8 +147,11 @@ Criterions:
         - action: verify_output_regex
           action_vars:
             command: show access-lists 2
-            expr: '(?m)^Standard IP access list 2\s*$\s*\n\s+\d+ permit\ 172\.17\.0\.0,\ wildcard\ bits\ 0\.0\.255\.255(?:
-              \(\d+ match(?:es)?\))?\s*$(?![\s\S]*^\s+\d+ (?:permit|deny) )'
+            expr: '(?m)^Standard IP access list 2[ \t\r]*$(?=[\s\S]*^\s+\d+ (?:permit\ 172\.17\.0\.0,\ wildcard\
+              bits\ 0\.0\.255\.255)(?: \(\d+ match(?:es)?\))?[ \t\r]*$)(?![\s\S]*^\s+\d+ (?:deny\ \ \ any|deny\
+              \ \ any\ log)(?: \(\d+ match(?:es)?\))?[ \t\r]*$[\s\S]*^\s+\d+ (?!(?:deny\ \ \ any|deny\ \ \ any\
+              log)(?: \(\d+ match(?:es)?\))?[ \t\r]*$))(?![\s\S]*^\s+\d+ (?!(?:(?:permit\ 172\.17\.0\.0,\ wildcard\
+              bits\ 0\.0\.255\.255)|(?:deny\ \ \ any|deny\ \ \ any\ log))(?: \(\d+ match(?:es)?\))?[ \t\r]*$))'
             match: true
   - code: R2.NAT
     name: NAT
@@ -215,3 +227,107 @@ Criterions:
             command: show running-config interface Serial0/1/1
             expr: (?m)^ ip nat outside\s*$
             match: true
+- code: PC1
+  name: PC1
+  subCriterions:
+  - code: PC1.CONNECTIVITY-TESTS
+    name: Connectivity Tests
+    aspects:
+    - code: PC1.CONNECTIVITY-TESTS.CT-0
+      name: 'PC1 to 209.165.201.5 : 209.165.201.5 (ICMP)'
+      description: 'PC1 → 209.165.201.5 (PING): проходит'
+      skills:
+      - Other
+      max_mark: 3
+      steps:
+      - name: 'ping -n 2 209.165.201.5: has : bytes='
+        code: check
+        type: check
+        device: PC1
+        action_chain:
+        - action: verify_output
+          action_vars:
+            command: ping -n 2 209.165.201.5
+            assert_tags:
+            - ': bytes='
+            tags_are_present: true
+            retries: 3
+            retry_interval: 15
+- code: L2
+  name: L2
+  subCriterions:
+  - code: L2.CONNECTIVITY-TESTS
+    name: Connectivity Tests
+    aspects:
+    - code: L2.CONNECTIVITY-TESTS.CT-1
+      name: 'L2 to 209.165.201.5 : 209.165.201.5 (ICMP)'
+      description: 'L2 → 209.165.201.5 (PING): проходит'
+      skills:
+      - Other
+      max_mark: 3
+      steps:
+      - name: 'ping -n 2 209.165.201.5: has : bytes='
+        code: check
+        type: check
+        device: L2
+        action_chain:
+        - action: verify_output
+          action_vars:
+            command: ping -n 2 209.165.201.5
+            assert_tags:
+            - ': bytes='
+            tags_are_present: true
+            retries: 3
+            retry_interval: 15
+- code: PC3
+  name: PC3
+  subCriterions:
+  - code: PC3.CONNECTIVITY-TESTS
+    name: Connectivity Tests
+    aspects:
+    - code: PC3.CONNECTIVITY-TESTS.CT-2
+      name: 'PC3 to 209.165.201.5 : 209.165.201.5 (ICMP)'
+      description: 'PC3 → 209.165.201.5 (PING): проходит'
+      skills:
+      - Other
+      max_mark: 3
+      steps:
+      - name: 'ping -n 2 209.165.201.5: has : bytes='
+        code: check
+        type: check
+        device: PC3
+        action_chain:
+        - action: verify_output
+          action_vars:
+            command: ping -n 2 209.165.201.5
+            assert_tags:
+            - ': bytes='
+            tags_are_present: true
+            retries: 3
+            retry_interval: 15
+- code: L4
+  name: L4
+  subCriterions:
+  - code: L4.CONNECTIVITY-TESTS
+    name: Connectivity Tests
+    aspects:
+    - code: L4.CONNECTIVITY-TESTS.CT-3
+      name: 'L4 to 209.165.201.5 : 209.165.201.5 (ICMP)'
+      description: 'L4 → 209.165.201.5 (PING): проходит'
+      skills:
+      - Other
+      max_mark: 3
+      steps:
+      - name: 'ping -n 2 209.165.201.5: has : bytes='
+        code: check
+        type: check
+        device: L4
+        action_chain:
+        - action: verify_output
+          action_vars:
+            command: ping -n 2 209.165.201.5
+            assert_tags:
+            - ': bytes='
+            tags_are_present: true
+            retries: 3
+            retry_interval: 15

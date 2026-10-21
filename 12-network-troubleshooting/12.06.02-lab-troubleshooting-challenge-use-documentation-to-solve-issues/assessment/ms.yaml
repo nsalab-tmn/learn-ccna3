@@ -37,7 +37,7 @@ Criterions:
       - Routing
       max_mark: 1
       steps:
-      - name: 'show running-config | section ^router ospf 10( |$): matches (?m)^ network 192\.168\.4\.0\s+0\.0\.0\.255\s+area\s+0\s*$'
+      - name: 'show running-config | section ^router ospf 10( |$): matches (?m)^ network 192\.168\.4\.0\s+0\.0\.0\.255\s+area\s+(?:0|0\.0\.0\.0)\s*$'
         code: check
         type: check
         device: Factory
@@ -45,7 +45,7 @@ Criterions:
         - action: verify_output_regex
           action_vars:
             command: show running-config | section ^router ospf 10( |$)
-            expr: (?m)^ network 192\.168\.4\.0\s+0\.0\.0\.255\s+area\s+0\s*$
+            expr: (?m)^ network 192\.168\.4\.0\s+0\.0\.0\.255\s+area\s+(?:0|0\.0\.0\.0)\s*$
             match: true
   - code: FACTORY.PORTS
     name: Ports
@@ -124,3 +124,65 @@ Criterions:
             command: ipconfig
             expr: '(?m)Default Gateway[. ]*: (?:\S+\s*\n\s+)?192\.168\.3\.1\s*$'
             match: true
+  - code: PC5.CONNECTIVITY-TESTS
+    name: Connectivity Tests
+    aspects:
+    - code: PC5.CONNECTIVITY-TESTS.CT-ALL
+      name: Connectivity Tests
+      description: 'Проверка связи: PC5 → 203.0.113.27, PC7 → 203.0.113.27, PC6 → 192.168.4.10, PC1 → 203.0.113.27'
+      skills:
+      - Other
+      max_mark: 1
+      steps:
+      - name: 'ping -n 2 203.0.113.27: has : bytes='
+        code: check
+        type: check
+        device: PC5
+        action_chain:
+        - action: verify_output
+          action_vars:
+            command: ping -n 2 203.0.113.27
+            assert_tags:
+            - ': bytes='
+            tags_are_present: true
+            retries: 3
+            retry_interval: 15
+      - name: 'ping -n 2 203.0.113.27: has : bytes='
+        code: check
+        type: check
+        device: PC7
+        action_chain:
+        - action: verify_output
+          action_vars:
+            command: ping -n 2 203.0.113.27
+            assert_tags:
+            - ': bytes='
+            tags_are_present: true
+            retries: 3
+            retry_interval: 15
+      - name: 'ping -n 2 192.168.4.10: has : bytes='
+        code: check
+        type: check
+        device: PC6
+        action_chain:
+        - action: verify_output
+          action_vars:
+            command: ping -n 2 192.168.4.10
+            assert_tags:
+            - ': bytes='
+            tags_are_present: true
+            retries: 3
+            retry_interval: 15
+      - name: 'ping -n 2 203.0.113.27: has : bytes='
+        code: check
+        type: check
+        device: PC1
+        action_chain:
+        - action: verify_output
+          action_vars:
+            command: ping -n 2 203.0.113.27
+            assert_tags:
+            - ': bytes='
+            tags_are_present: true
+            retries: 3
+            retry_interval: 15

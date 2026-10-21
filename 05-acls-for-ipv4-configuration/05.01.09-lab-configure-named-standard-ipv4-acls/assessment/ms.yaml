@@ -8,14 +8,21 @@ Criterions:
     aspects:
     - code: R1.ACL.ACL-FILE-SERVER-RESTRICTIONS
       name: File_Server_Restrictions
-      description: 'Список доступа File_Server_Restrictions: 3 записей по порядку'
+      description: 'Список доступа File_Server_Restrictions: 3 записей, пересекающиеся — по порядку'
       skills:
       - IPv4 Standard ACL Implementation
       max_mark: 80
       steps:
-      - name: 'show access-lists File_Server_Restrictions: matches (?m)^Standard IP access list File_Server_Restrictions\s*$\s*\n\s+\d+
-          permit\ 192\.168\.20\.4(?: \(\d+ match(?:es)?\))?\s*$\s*\n\s+\d+ permit\ 192\.168\.100\.100(?: \(\d+ match(?:es)?\))?\s*$\s*\n\s+\d+
-          deny\ \ \ any(?: \(\d+ match(?:es)?\))?\s*$(?![\s\S]*^\s+\d+ (?:permit|deny) )'
+      - name: 'show access-lists File_Server_Restrictions: matches (?m)^Standard IP access list File_Server_Restrictions[
+          \t\r]*$(?=[\s\S]*^\s+\d+ (?:permit\ 192\.168\.20\.4)(?: \(\d+ match(?:es)?\))?[ \t\r]*$)(?=[\s\S]*^\s+\d+
+          (?:permit\ 192\.168\.100\.100)(?: \(\d+ match(?:es)?\))?[ \t\r]*$)(?=[\s\S]*^\s+\d+ (?:deny\ \ \ any)(?:
+          \(\d+ match(?:es)?\))?[ \t\r]*$)(?![\s\S]*^\s+\d+ (?:deny\ \ \ any)(?: \(\d+ match(?:es)?\))?[ \t\r]*$[\s\S]*^\s+\d+
+          (?:permit\ 192\.168\.20\.4)(?: \(\d+ match(?:es)?\))?[ \t\r]*$)(?![\s\S]*^\s+\d+ (?:deny\ \ \ any)(?:
+          \(\d+ match(?:es)?\))?[ \t\r]*$[\s\S]*^\s+\d+ (?:permit\ 192\.168\.100\.100)(?: \(\d+ match(?:es)?\))?[
+          \t\r]*$)(?![\s\S]*^\s+\d+ (?:deny\ \ \ any|deny\ \ \ any\ log)(?: \(\d+ match(?:es)?\))?[ \t\r]*$[\s\S]*^\s+\d+
+          (?!(?:deny\ \ \ any|deny\ \ \ any\ log)(?: \(\d+ match(?:es)?\))?[ \t\r]*$))(?![\s\S]*^\s+\d+ (?!(?:(?:permit\
+          192\.168\.20\.4)|(?:permit\ 192\.168\.100\.100)|(?:deny\ \ \ any)|(?:deny\ \ \ any|deny\ \ \ any\ log))(?:
+          \(\d+ match(?:es)?\))?[ \t\r]*$))'
         code: check
         type: check
         device: R1
@@ -23,9 +30,15 @@ Criterions:
         - action: verify_output_regex
           action_vars:
             command: show access-lists File_Server_Restrictions
-            expr: '(?m)^Standard IP access list File_Server_Restrictions\s*$\s*\n\s+\d+ permit\ 192\.168\.20\.4(?:
-              \(\d+ match(?:es)?\))?\s*$\s*\n\s+\d+ permit\ 192\.168\.100\.100(?: \(\d+ match(?:es)?\))?\s*$\s*\n\s+\d+
-              deny\ \ \ any(?: \(\d+ match(?:es)?\))?\s*$(?![\s\S]*^\s+\d+ (?:permit|deny) )'
+            expr: '(?m)^Standard IP access list File_Server_Restrictions[ \t\r]*$(?=[\s\S]*^\s+\d+ (?:permit\ 192\.168\.20\.4)(?:
+              \(\d+ match(?:es)?\))?[ \t\r]*$)(?=[\s\S]*^\s+\d+ (?:permit\ 192\.168\.100\.100)(?: \(\d+ match(?:es)?\))?[
+              \t\r]*$)(?=[\s\S]*^\s+\d+ (?:deny\ \ \ any)(?: \(\d+ match(?:es)?\))?[ \t\r]*$)(?![\s\S]*^\s+\d+ (?:deny\
+              \ \ any)(?: \(\d+ match(?:es)?\))?[ \t\r]*$[\s\S]*^\s+\d+ (?:permit\ 192\.168\.20\.4)(?: \(\d+ match(?:es)?\))?[
+              \t\r]*$)(?![\s\S]*^\s+\d+ (?:deny\ \ \ any)(?: \(\d+ match(?:es)?\))?[ \t\r]*$[\s\S]*^\s+\d+ (?:permit\
+              192\.168\.100\.100)(?: \(\d+ match(?:es)?\))?[ \t\r]*$)(?![\s\S]*^\s+\d+ (?:deny\ \ \ any|deny\ \
+              \ any\ log)(?: \(\d+ match(?:es)?\))?[ \t\r]*$[\s\S]*^\s+\d+ (?!(?:deny\ \ \ any|deny\ \ \ any\ log)(?:
+              \(\d+ match(?:es)?\))?[ \t\r]*$))(?![\s\S]*^\s+\d+ (?!(?:(?:permit\ 192\.168\.20\.4)|(?:permit\ 192\.168\.100\.100)|(?:deny\
+              \ \ any)|(?:deny\ \ \ any|deny\ \ \ any\ log))(?: \(\d+ match(?:es)?\))?[ \t\r]*$))'
             match: true
   - code: R1.PORTS
     name: Ports
@@ -48,3 +61,172 @@ Criterions:
             command: show running-config interface FastEthernet0/1
             expr: (?m)^ ip access-group File_Server_Restrictions out\s*$
             match: true
+- code: PC1
+  name: PC1
+  subCriterions:
+  - code: PC1.CONNECTIVITY-TESTS
+    name: Connectivity Tests
+    aspects:
+    - code: PC1.CONNECTIVITY-TESTS.CT-0
+      name: 'PC1 to 192.168.200.100 : 192.168.200.100 (ICMP)'
+      description: 'PC1 → 192.168.200.100 (PING): проходит'
+      skills:
+      - Other
+      max_mark: 2
+      steps:
+      - name: 'show running-config interface FastEthernet0/1: matches (?m)^ ip access-group File_Server_Restrictions
+          out\s*$'
+        code: check
+        type: check
+        device: R1
+        action_chain:
+        - action: verify_output_regex
+          action_vars:
+            command: show running-config interface FastEthernet0/1
+            expr: (?m)^ ip access-group File_Server_Restrictions out\s*$
+            match: true
+      - name: 'ping -n 2 192.168.200.100: has : bytes='
+        code: check
+        type: check
+        device: PC1
+        action_chain:
+        - action: verify_output
+          action_vars:
+            command: ping -n 2 192.168.200.100
+            assert_tags:
+            - ': bytes='
+            tags_are_present: true
+            retries: 3
+            retry_interval: 15
+- code: PC2
+  name: PC2
+  subCriterions:
+  - code: PC2.CONNECTIVITY-TESTS
+    name: Connectivity Tests
+    aspects:
+    - code: PC2.CONNECTIVITY-TESTS.CT-1
+      name: 'PC2 to 192.168.100.100 : 192.168.100.100 (ICMP)'
+      description: 'PC2 → 192.168.100.100 (PING): проходит'
+      skills:
+      - Other
+      max_mark: 2
+      steps:
+      - name: 'show running-config interface FastEthernet0/1: matches (?m)^ ip access-group File_Server_Restrictions
+          out\s*$'
+        code: check
+        type: check
+        device: R1
+        action_chain:
+        - action: verify_output_regex
+          action_vars:
+            command: show running-config interface FastEthernet0/1
+            expr: (?m)^ ip access-group File_Server_Restrictions out\s*$
+            match: true
+      - name: 'ping -n 2 192.168.100.100: has : bytes='
+        code: check
+        type: check
+        device: PC2
+        action_chain:
+        - action: verify_output
+          action_vars:
+            command: ping -n 2 192.168.100.100
+            assert_tags:
+            - ': bytes='
+            tags_are_present: true
+            retries: 3
+            retry_interval: 15
+    - code: PC2.CONNECTIVITY-TESTS.CT-3
+      name: 'PC2 to 192.168.200.100 : 192.168.200.100 (ICMP)'
+      description: 'PC2 → 192.168.200.100 (PING): не проходит'
+      skills:
+      - Other
+      max_mark: 2
+      steps:
+      - name: 'show running-config interface FastEthernet0/1: matches (?m)^ ip access-group File_Server_Restrictions
+          out\s*$'
+        code: check
+        type: check
+        device: R1
+        action_chain:
+        - action: verify_output_regex
+          action_vars:
+            command: show running-config interface FastEthernet0/1
+            expr: (?m)^ ip access-group File_Server_Restrictions out\s*$
+            match: true
+      - name: 'ping -n 2 192.168.200.100: has not : bytes='
+        code: check
+        type: check
+        device: PC2
+        action_chain:
+        - action: verify_output
+          action_vars:
+            command: ping -n 2 192.168.200.100
+            assert_tags:
+            - ': bytes='
+            tags_are_present: false
+- code: PC0
+  name: PC0
+  subCriterions:
+  - code: PC0.CONNECTIVITY-TESTS
+    name: Connectivity Tests
+    aspects:
+    - code: PC0.CONNECTIVITY-TESTS.CT-2
+      name: 'PC0 to 192.168.100.100 : 192.168.100.100 (ICMP)'
+      description: 'PC0 → 192.168.100.100 (PING): проходит'
+      skills:
+      - Other
+      max_mark: 2
+      steps:
+      - name: 'show running-config interface FastEthernet0/1: matches (?m)^ ip access-group File_Server_Restrictions
+          out\s*$'
+        code: check
+        type: check
+        device: R1
+        action_chain:
+        - action: verify_output_regex
+          action_vars:
+            command: show running-config interface FastEthernet0/1
+            expr: (?m)^ ip access-group File_Server_Restrictions out\s*$
+            match: true
+      - name: 'ping -n 2 192.168.100.100: has : bytes='
+        code: check
+        type: check
+        device: PC0
+        action_chain:
+        - action: verify_output
+          action_vars:
+            command: ping -n 2 192.168.100.100
+            assert_tags:
+            - ': bytes='
+            tags_are_present: true
+            retries: 3
+            retry_interval: 15
+    - code: PC0.CONNECTIVITY-TESTS.CT-4
+      name: 'PC0 to 192.168.200.100 : 192.168.200.100 (ICMP)'
+      description: 'PC0 → 192.168.200.100 (PING): не проходит'
+      skills:
+      - Other
+      max_mark: 2
+      steps:
+      - name: 'show running-config interface FastEthernet0/1: matches (?m)^ ip access-group File_Server_Restrictions
+          out\s*$'
+        code: check
+        type: check
+        device: R1
+        action_chain:
+        - action: verify_output_regex
+          action_vars:
+            command: show running-config interface FastEthernet0/1
+            expr: (?m)^ ip access-group File_Server_Restrictions out\s*$
+            match: true
+      - name: 'ping -n 2 192.168.200.100: has not : bytes='
+        code: check
+        type: check
+        device: PC0
+        action_chain:
+        - action: verify_output
+          action_vars:
+            command: ping -n 2 192.168.200.100
+            assert_tags:
+            - ': bytes='
+            tags_are_present: false

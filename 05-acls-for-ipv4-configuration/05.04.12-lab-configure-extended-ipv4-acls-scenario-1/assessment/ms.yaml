@@ -8,14 +8,20 @@ Criterions:
     aspects:
     - code: R1.ACL.ACL-100
       name: '100'
-      description: 'Список доступа 100: 2 записей по порядку'
+      description: 'Список доступа 100: 2 записей, в любом порядке'
       skills:
       - IPv4 Extended ACL Implementation
       max_mark: 40
       steps:
-      - name: 'show access-lists 100: matches (?m)^Extended IP access list 100\s*$\s*\n\s+\d+ permit\ tcp\ 172\.22\.34\.64\
-          0\.0\.0\.31\ host\ 172\.22\.34\.62\ eq\ ftp(?: \(\d+ match(?:es)?\))?\s*$\s*\n\s+\d+ permit\ icmp\ 172\.22\.34\.64\
-          0\.0\.0\.31\ host\ 172\.22\.34\.62(?: \(\d+ match(?:es)?\))?\s*$(?![\s\S]*^\s+\d+ (?:permit|deny) )'
+      - name: 'show access-lists 100: matches (?m)^Extended IP access list 100[ \t\r]*$(?=[\s\S]*^\s+\d+ (?:permit\
+          tcp\ 172\.22\.34\.64\ 0\.0\.0\.31\ host\ 172\.22\.34\.62\ eq\ ftp)(?: \(\d+ match(?:es)?\))?[ \t\r]*$)(?=[\s\S]*^\s+\d+
+          (?:permit\ icmp\ 172\.22\.34\.64\ 0\.0\.0\.31\ host\ 172\.22\.34\.62|permit\ icmp\ 172\.22\.34\.64\ 0\.0\.0\.31\
+          host\ 172\.22\.34\.62\ echo)(?: \(\d+ match(?:es)?\))?[ \t\r]*$)(?![\s\S]*^\s+\d+ (?:deny\ ip\ any\ any|deny\
+          ip\ any\ any\ log)(?: \(\d+ match(?:es)?\))?[ \t\r]*$[\s\S]*^\s+\d+ (?!(?:deny\ ip\ any\ any|deny\ ip\
+          any\ any\ log)(?: \(\d+ match(?:es)?\))?[ \t\r]*$))(?![\s\S]*^\s+\d+ (?!(?:(?:permit\ tcp\ 172\.22\.34\.64\
+          0\.0\.0\.31\ host\ 172\.22\.34\.62\ eq\ ftp)|(?:permit\ icmp\ 172\.22\.34\.64\ 0\.0\.0\.31\ host\ 172\.22\.34\.62|permit\
+          icmp\ 172\.22\.34\.64\ 0\.0\.0\.31\ host\ 172\.22\.34\.62\ echo)|(?:deny\ ip\ any\ any|deny\ ip\ any\
+          any\ log))(?: \(\d+ match(?:es)?\))?[ \t\r]*$))'
         code: check
         type: check
         device: R1
@@ -23,21 +29,32 @@ Criterions:
         - action: verify_output_regex
           action_vars:
             command: show access-lists 100
-            expr: '(?m)^Extended IP access list 100\s*$\s*\n\s+\d+ permit\ tcp\ 172\.22\.34\.64\ 0\.0\.0\.31\ host\
-              172\.22\.34\.62\ eq\ ftp(?: \(\d+ match(?:es)?\))?\s*$\s*\n\s+\d+ permit\ icmp\ 172\.22\.34\.64\ 0\.0\.0\.31\
-              host\ 172\.22\.34\.62(?: \(\d+ match(?:es)?\))?\s*$(?![\s\S]*^\s+\d+ (?:permit|deny) )'
+            expr: '(?m)^Extended IP access list 100[ \t\r]*$(?=[\s\S]*^\s+\d+ (?:permit\ tcp\ 172\.22\.34\.64\ 0\.0\.0\.31\
+              host\ 172\.22\.34\.62\ eq\ ftp)(?: \(\d+ match(?:es)?\))?[ \t\r]*$)(?=[\s\S]*^\s+\d+ (?:permit\ icmp\
+              172\.22\.34\.64\ 0\.0\.0\.31\ host\ 172\.22\.34\.62|permit\ icmp\ 172\.22\.34\.64\ 0\.0\.0\.31\ host\
+              172\.22\.34\.62\ echo)(?: \(\d+ match(?:es)?\))?[ \t\r]*$)(?![\s\S]*^\s+\d+ (?:deny\ ip\ any\ any|deny\
+              ip\ any\ any\ log)(?: \(\d+ match(?:es)?\))?[ \t\r]*$[\s\S]*^\s+\d+ (?!(?:deny\ ip\ any\ any|deny\
+              ip\ any\ any\ log)(?: \(\d+ match(?:es)?\))?[ \t\r]*$))(?![\s\S]*^\s+\d+ (?!(?:(?:permit\ tcp\ 172\.22\.34\.64\
+              0\.0\.0\.31\ host\ 172\.22\.34\.62\ eq\ ftp)|(?:permit\ icmp\ 172\.22\.34\.64\ 0\.0\.0\.31\ host\
+              172\.22\.34\.62|permit\ icmp\ 172\.22\.34\.64\ 0\.0\.0\.31\ host\ 172\.22\.34\.62\ echo)|(?:deny\
+              ip\ any\ any|deny\ ip\ any\ any\ log))(?: \(\d+ match(?:es)?\))?[ \t\r]*$))'
             match: true
     - code: R1.ACL.ACL-HTTP-ONLY
       name: HTTP_ONLY
-      description: 'Список доступа HTTP_ONLY: 2 записей по порядку'
+      description: 'Список доступа HTTP_ONLY: 2 записей, в любом порядке'
       skills:
       - IPv4 Extended ACL Implementation
       max_mark: 40
       steps:
-      - name: 'show access-lists HTTP_ONLY: matches (?m)^Extended IP access list HTTP_ONLY\s*$\s*\n\s+\d+ permit\
-          tcp\ 172\.22\.34\.96\ 0\.0\.0\.15\ host\ 172\.22\.34\.62\ eq\ www(?: \(\d+ match(?:es)?\))?\s*$\s*\n\s+\d+
-          permit\ icmp\ 172\.22\.34\.96\ 0\.0\.0\.15\ host\ 172\.22\.34\.62(?: \(\d+ match(?:es)?\))?\s*$(?![\s\S]*^\s+\d+
-          (?:permit|deny) )'
+      - name: 'show access-lists HTTP_ONLY: matches (?m)^Extended IP access list HTTP_ONLY[ \t\r]*$(?=[\s\S]*^\s+\d+
+          (?:permit\ tcp\ 172\.22\.34\.96\ 0\.0\.0\.15\ host\ 172\.22\.34\.62\ eq\ www)(?: \(\d+ match(?:es)?\))?[
+          \t\r]*$)(?=[\s\S]*^\s+\d+ (?:permit\ icmp\ 172\.22\.34\.96\ 0\.0\.0\.15\ host\ 172\.22\.34\.62|permit\
+          icmp\ 172\.22\.34\.96\ 0\.0\.0\.15\ host\ 172\.22\.34\.62\ echo)(?: \(\d+ match(?:es)?\))?[ \t\r]*$)(?![\s\S]*^\s+\d+
+          (?:deny\ ip\ any\ any|deny\ ip\ any\ any\ log)(?: \(\d+ match(?:es)?\))?[ \t\r]*$[\s\S]*^\s+\d+ (?!(?:deny\
+          ip\ any\ any|deny\ ip\ any\ any\ log)(?: \(\d+ match(?:es)?\))?[ \t\r]*$))(?![\s\S]*^\s+\d+ (?!(?:(?:permit\
+          tcp\ 172\.22\.34\.96\ 0\.0\.0\.15\ host\ 172\.22\.34\.62\ eq\ www)|(?:permit\ icmp\ 172\.22\.34\.96\ 0\.0\.0\.15\
+          host\ 172\.22\.34\.62|permit\ icmp\ 172\.22\.34\.96\ 0\.0\.0\.15\ host\ 172\.22\.34\.62\ echo)|(?:deny\
+          ip\ any\ any|deny\ ip\ any\ any\ log))(?: \(\d+ match(?:es)?\))?[ \t\r]*$))'
         code: check
         type: check
         device: R1
@@ -45,10 +62,15 @@ Criterions:
         - action: verify_output_regex
           action_vars:
             command: show access-lists HTTP_ONLY
-            expr: '(?m)^Extended IP access list HTTP_ONLY\s*$\s*\n\s+\d+ permit\ tcp\ 172\.22\.34\.96\ 0\.0\.0\.15\
-              host\ 172\.22\.34\.62\ eq\ www(?: \(\d+ match(?:es)?\))?\s*$\s*\n\s+\d+ permit\ icmp\ 172\.22\.34\.96\
-              0\.0\.0\.15\ host\ 172\.22\.34\.62(?: \(\d+ match(?:es)?\))?\s*$(?![\s\S]*^\s+\d+ (?:permit|deny)
-              )'
+            expr: '(?m)^Extended IP access list HTTP_ONLY[ \t\r]*$(?=[\s\S]*^\s+\d+ (?:permit\ tcp\ 172\.22\.34\.96\
+              0\.0\.0\.15\ host\ 172\.22\.34\.62\ eq\ www)(?: \(\d+ match(?:es)?\))?[ \t\r]*$)(?=[\s\S]*^\s+\d+
+              (?:permit\ icmp\ 172\.22\.34\.96\ 0\.0\.0\.15\ host\ 172\.22\.34\.62|permit\ icmp\ 172\.22\.34\.96\
+              0\.0\.0\.15\ host\ 172\.22\.34\.62\ echo)(?: \(\d+ match(?:es)?\))?[ \t\r]*$)(?![\s\S]*^\s+\d+ (?:deny\
+              ip\ any\ any|deny\ ip\ any\ any\ log)(?: \(\d+ match(?:es)?\))?[ \t\r]*$[\s\S]*^\s+\d+ (?!(?:deny\
+              ip\ any\ any|deny\ ip\ any\ any\ log)(?: \(\d+ match(?:es)?\))?[ \t\r]*$))(?![\s\S]*^\s+\d+ (?!(?:(?:permit\
+              tcp\ 172\.22\.34\.96\ 0\.0\.0\.15\ host\ 172\.22\.34\.62\ eq\ www)|(?:permit\ icmp\ 172\.22\.34\.96\
+              0\.0\.0\.15\ host\ 172\.22\.34\.62|permit\ icmp\ 172\.22\.34\.96\ 0\.0\.0\.15\ host\ 172\.22\.34\.62\
+              echo)|(?:deny\ ip\ any\ any|deny\ ip\ any\ any\ log))(?: \(\d+ match(?:es)?\))?[ \t\r]*$))'
             match: true
   - code: R1.PORTS
     name: Ports
@@ -87,3 +109,261 @@ Criterions:
             command: show running-config interface GigabitEthernet0/1
             expr: (?m)^ ip access-group HTTP_ONLY in\s*$
             match: true
+- code: PC1
+  name: PC1
+  subCriterions:
+  - code: PC1.CONNECTIVITY-TESTS
+    name: Connectivity Tests
+    aspects:
+    - code: PC1.CONNECTIVITY-TESTS.CT-0
+      name: 'PC1 to 172.22.34.62 : 172.22.34.62 (ICMP)'
+      description: 'PC1 → 172.22.34.62 (PING): проходит'
+      skills:
+      - Other
+      max_mark: 2
+      steps:
+      - name: 'show running-config interface GigabitEthernet0/0: matches (?m)^ ip access-group 100 in\s*$'
+        code: check
+        type: check
+        device: R1
+        action_chain:
+        - action: verify_output_regex
+          action_vars:
+            command: show running-config interface GigabitEthernet0/0
+            expr: (?m)^ ip access-group 100 in\s*$
+            match: true
+      - name: 'show running-config interface GigabitEthernet0/1: matches (?m)^ ip access-group HTTP_ONLY in\s*$'
+        code: check
+        type: check
+        device: R1
+        action_chain:
+        - action: verify_output_regex
+          action_vars:
+            command: show running-config interface GigabitEthernet0/1
+            expr: (?m)^ ip access-group HTTP_ONLY in\s*$
+            match: true
+      - name: 'ping -n 2 172.22.34.62: has : bytes='
+        code: check
+        type: check
+        device: PC1
+        action_chain:
+        - action: verify_output
+          action_vars:
+            command: ping -n 2 172.22.34.62
+            assert_tags:
+            - ': bytes='
+            tags_are_present: true
+            retries: 3
+            retry_interval: 15
+    - code: PC1.CONNECTIVITY-TESTS.CT-2
+      name: 'PC1 to 172.22.34.98 : 172.22.34.98 (ICMP)'
+      description: 'PC1 → 172.22.34.98 (PING): не проходит'
+      skills:
+      - Other
+      max_mark: 2
+      steps:
+      - name: 'show running-config interface GigabitEthernet0/0: matches (?m)^ ip access-group 100 in\s*$'
+        code: check
+        type: check
+        device: R1
+        action_chain:
+        - action: verify_output_regex
+          action_vars:
+            command: show running-config interface GigabitEthernet0/0
+            expr: (?m)^ ip access-group 100 in\s*$
+            match: true
+      - name: 'show running-config interface GigabitEthernet0/1: matches (?m)^ ip access-group HTTP_ONLY in\s*$'
+        code: check
+        type: check
+        device: R1
+        action_chain:
+        - action: verify_output_regex
+          action_vars:
+            command: show running-config interface GigabitEthernet0/1
+            expr: (?m)^ ip access-group HTTP_ONLY in\s*$
+            match: true
+      - name: 'ping -n 2 172.22.34.98: has not : bytes='
+        code: check
+        type: check
+        device: PC1
+        action_chain:
+        - action: verify_output
+          action_vars:
+            command: ping -n 2 172.22.34.98
+            assert_tags:
+            - ': bytes='
+            tags_are_present: false
+    - code: PC1.CONNECTIVITY-TESTS.CT-5
+      name: 'PC1 to 172.22.34.62 : http://172.22.34.62 (TCP)'
+      description: 'PC1 → http://172.22.34.62 (HTTP): не проходит'
+      skills:
+      - Other
+      max_mark: 2
+      steps:
+      - name: 'show running-config interface GigabitEthernet0/0: matches (?m)^ ip access-group 100 in\s*$'
+        code: check
+        type: check
+        device: R1
+        action_chain:
+        - action: verify_output_regex
+          action_vars:
+            command: show running-config interface GigabitEthernet0/0
+            expr: (?m)^ ip access-group 100 in\s*$
+            match: true
+      - name: 'show running-config interface GigabitEthernet0/1: matches (?m)^ ip access-group HTTP_ONLY in\s*$'
+        code: check
+        type: check
+        device: R1
+        action_chain:
+        - action: verify_output_regex
+          action_vars:
+            command: show running-config interface GigabitEthernet0/1
+            expr: (?m)^ ip access-group HTTP_ONLY in\s*$
+            match: true
+      - name: 'browse http://172.22.34.62: timeout'
+        code: check
+        type: check
+        device: PC1
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{lab_ip}:7681/api/hosts/PC1/browse
+            method: POST
+            content:
+              url: http://172.22.34.62
+            assert_code: 200
+            assert_jmespath:
+              path: status
+              value: timeout
+- code: PC2
+  name: PC2
+  subCriterions:
+  - code: PC2.CONNECTIVITY-TESTS
+    name: Connectivity Tests
+    aspects:
+    - code: PC2.CONNECTIVITY-TESTS.CT-1
+      name: 'PC2 to 172.22.34.62 : 172.22.34.62 (ICMP)'
+      description: 'PC2 → 172.22.34.62 (PING): проходит'
+      skills:
+      - Other
+      max_mark: 2
+      steps:
+      - name: 'show running-config interface GigabitEthernet0/0: matches (?m)^ ip access-group 100 in\s*$'
+        code: check
+        type: check
+        device: R1
+        action_chain:
+        - action: verify_output_regex
+          action_vars:
+            command: show running-config interface GigabitEthernet0/0
+            expr: (?m)^ ip access-group 100 in\s*$
+            match: true
+      - name: 'show running-config interface GigabitEthernet0/1: matches (?m)^ ip access-group HTTP_ONLY in\s*$'
+        code: check
+        type: check
+        device: R1
+        action_chain:
+        - action: verify_output_regex
+          action_vars:
+            command: show running-config interface GigabitEthernet0/1
+            expr: (?m)^ ip access-group HTTP_ONLY in\s*$
+            match: true
+      - name: 'ping -n 2 172.22.34.62: has : bytes='
+        code: check
+        type: check
+        device: PC2
+        action_chain:
+        - action: verify_output
+          action_vars:
+            command: ping -n 2 172.22.34.62
+            assert_tags:
+            - ': bytes='
+            tags_are_present: true
+            retries: 3
+            retry_interval: 15
+    - code: PC2.CONNECTIVITY-TESTS.CT-3
+      name: 'PC2 to 172.22.34.62 : http://172.22.34.62 (TCP)'
+      description: 'PC2 → http://172.22.34.62 (HTTP): проходит'
+      skills:
+      - Other
+      max_mark: 2
+      steps:
+      - name: 'show running-config interface GigabitEthernet0/0: matches (?m)^ ip access-group 100 in\s*$'
+        code: check
+        type: check
+        device: R1
+        action_chain:
+        - action: verify_output_regex
+          action_vars:
+            command: show running-config interface GigabitEthernet0/0
+            expr: (?m)^ ip access-group 100 in\s*$
+            match: true
+      - name: 'show running-config interface GigabitEthernet0/1: matches (?m)^ ip access-group HTTP_ONLY in\s*$'
+        code: check
+        type: check
+        device: R1
+        action_chain:
+        - action: verify_output_regex
+          action_vars:
+            command: show running-config interface GigabitEthernet0/1
+            expr: (?m)^ ip access-group HTTP_ONLY in\s*$
+            match: true
+      - name: 'browse http://172.22.34.62: ok'
+        code: check
+        type: check
+        device: PC2
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{lab_ip}:7681/api/hosts/PC2/browse
+            method: POST
+            content:
+              url: http://172.22.34.62
+            assert_code: 200
+            assert_jmespath:
+              path: status
+              value: ok
+            retries: 1
+            retry_interval: 5
+    - code: PC2.CONNECTIVITY-TESTS.CT-4
+      name: 'PC2 to 172.22.34.62 : https://172.22.34.62 (TCP)'
+      description: 'PC2 → https://172.22.34.62 (HTTPS): не проходит'
+      skills:
+      - Other
+      max_mark: 2
+      steps:
+      - name: 'show running-config interface GigabitEthernet0/0: matches (?m)^ ip access-group 100 in\s*$'
+        code: check
+        type: check
+        device: R1
+        action_chain:
+        - action: verify_output_regex
+          action_vars:
+            command: show running-config interface GigabitEthernet0/0
+            expr: (?m)^ ip access-group 100 in\s*$
+            match: true
+      - name: 'show running-config interface GigabitEthernet0/1: matches (?m)^ ip access-group HTTP_ONLY in\s*$'
+        code: check
+        type: check
+        device: R1
+        action_chain:
+        - action: verify_output_regex
+          action_vars:
+            command: show running-config interface GigabitEthernet0/1
+            expr: (?m)^ ip access-group HTTP_ONLY in\s*$
+            match: true
+      - name: 'browse https://172.22.34.62: timeout'
+        code: check
+        type: check
+        device: PC2
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{lab_ip}:7681/api/hosts/PC2/browse
+            method: POST
+            content:
+              url: https://172.22.34.62
+            assert_code: 200
+            assert_jmespath:
+              path: status
+              value: timeout
