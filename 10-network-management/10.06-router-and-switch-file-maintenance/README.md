@@ -8,26 +8,14 @@
 В примере показан результат выполнения команды **show file systems**, которая выводит список доступных файловых систем на маршрутизаторе.
 
 ```
-Router# show file systems
+Router#show file systems
 File Systems:
-       Size(b)       Free(b)      Type  Flags  Prefixes
-             -             -    opaque     rw   system:
-             -             -    opaque     rw   tmpsys:
-*   7194652672    6294822912      disk     rw   bootflash: flash:#
-     256589824     256573440      disk     rw   usb0:
-    1804468224    1723789312      disk     ro   webui:
-             -             -    opaque     rw   null:
-             -             -    opaque     ro   tar:
-             -             -   network     rw   tftp:
-             -             -    opaque     wo   syslog:
-      33554432      33539983     nvram     rw   nvram:
-             -             -   network     rw   rcp:
-             -             -   network     rw   ftp:
-             -             -   network     rw   http:
-             -             -   network     rw   scp:
-             -             -   network     rw   sftp:
-             -             -   network     rw   https:
-             -             -    opaque     ro   cns:
+     Size(b)     Free(b)      Type  Flags  Prefixes
+* 3223551808  2806261312      disk     rw   flash:#
+           -           -    opaque     rw   system:
+    33554432    33554091     nvram     rw   nvram:
+           -           -   network     rw   tftp:
+  4009754624  4009754624  usbflash     rw   usbflash0:
 Router#
 ```
 
@@ -48,6 +36,7 @@ Directory of flash:/
     1  -rw-   417290496          <no date>  nr05-netos-0.1.0.bin
 
 3223551808 bytes total (2806261312 bytes free)
+
 Router#
 ```
 
@@ -58,25 +47,16 @@ Router#
 Чтобы просмотреть содержимое NVRAM, необходимо изменить текущую файловую систему по умолчанию, используя команду **cd** (изменить каталог), как показано в примере.
 
 ```
-Router#
-Router# cd nvram: 
-Router# pwd
+Router#cd nvram:
+Router#pwd
 nvram:/
-Router# dir
+Router#dir
 Directory of nvram:/
-32769  -rw-             1024                    <no date>  startup-config
-32770  ----               61                    <no date>  private-config
-32771  -rw-             1024                    <no date>  underlying-config
-    1  ----                4                    <no date>  private-KS1
-    2  -rw-             2945                    <no date>  cwmp_inventory
-    5  ----              447                    <no date>  persistent-data
-    6  -rw-             1237                    <no date>  NR05-2x1GE_0_0_0
-    8  -rw-               17                    <no date>  ecfm_ieee_mib
-    9  -rw-                0                    <no date>  ifIndex-table
-   10  -rw-             1431                    <no date>  NIM-2T_0_1_0
-   12  -rw-              820                    <no date>  NetOS-Self-Sig#1.cer
-   13  -rw-              820                    <no date>  NetOS-Self-Sig#2.cer
-33554432 bytes total (33539983 bytes free)
+
+  238  -rw-         341          <no date>  startup-config
+
+33554432 bytes total (33554091 bytes free)
+
 Router#
 ```
 
@@ -90,26 +70,13 @@ Router#
 Для просмотра файловых систем на коммутаторе используется та же команда, что и для маршрутизатора: **show file systems**, как показано в примере.
 
 ```
-Switch# show file systems
+Switch#show file systems
 File Systems:
-       Size(b)     Free(b)     Type  Flags  Prefixes
-*    32514048    20887552     flash     rw    flash:#
-          -           -      opaque     rw       vb:
-          -           -      opaque     ro       bs:
-          -           -      opaque     rw   system:
-          -           -      opaque     rw   tmpsys:
-        65536       48897     nvram     rw    nvram:
-          -           -      opaque     ro   xmodem:
-          -           -      opaque     ro   ymodem:
-          -           -      opaque     rw     null:
-          -           -      opaque     ro      tar:
-          -           -     network     rw     tftp:
-          -           -     network     rw      rcp:
-          -           -     network     rw     http:
-          -           -     network     rw      ftp:
-          -           -     network     rw      scp:
-          -           -     network     rw    https:
-          -           -     opaque      ro      cns:
+     Size(b)     Free(b)      Type  Flags  Prefixes
+*   64016384    59600514     flash     rw   flash:#
+           -           -    opaque     rw   system:
+       65536       64587     nvram     rw   nvram:
+           -           -   network     rw   tftp:
 Switch#
 ```
 
@@ -186,13 +153,17 @@ Writing R1-Jan-2019 !!!!!! [OK]
 ![](./assets/10.6.6.svg)
 <!-- /courses/ensa-dl/ae8eb392-34fd-11eb-ba19-f1886492e0e4/aeb5eaa8-34fd-11eb-ba19-f1886492e0e4/assets/c6bcc590-1c46-11ea-af56-e368b99e9723.svg -->
 
-Содержимое USB-накопителя отображает команда **dir**.
+Содержимое USB-накопителя отображает команда **dir**. В примере на накопителе уже есть резервная копия конфигурации R1-Config; как ее создать, показано в следующем разделе.
 
 ```
-Router# dir usbflash0: 
-Directory of usbflash0:/ 
-1 -rw- 30125020 Dec 22 2032 05:31:32 +00:00 nr05-netos-0.1.0.bin
-63158272 bytes total (33033216 bytes free)
+R1#dir usbflash0:
+Directory of usbflash0:/
+
+    1  -rw-         337          <no date>  R1-Config
+
+4009754624 bytes total (4009754287 bytes free)
+
+R1#
 ```
 
 <!-- 10.6.7 -->
@@ -201,28 +172,14 @@ Directory of usbflash0:/
 Во время резервного копирования через USB-порт рекомендуется запустить команду **show file systems**, чтобы проверить наличие USB-накопителя и подтвердить его имя, как показано в примере.
 
 ```
-R1# show file systems
+R1#show file systems
 File Systems:
-		Size(b)       Free(b)      Type  Flags  Prefixes
-             -             -    opaque     rw   archive:
-             -             -    opaque     rw   system:
-             -             -    opaque     rw   tmpsys:
-             -             -    opaque     rw   null:
-             -             -   network     rw   tftp:
-*    256487424     184819712      disk     rw   flash0: flash:#
-             -             -      disk     rw   flash1:
-        262136        249270     nvram     rw   nvram:
-             -             -    opaque     wo   syslog:
-             -             -    opaque     rw   xmodem:
-             -             -    opaque     rw   ymodem:
-             -             -   network     rw   rcp:
-             -             -   network     rw   http:
-             -             -   network     rw   ftp:
-             -             -   network     rw   scp:
-             -             -    opaque     ro   tar:
-             -             -   network     rw   https:
-             -             -    opaque     ro   cns:
-    4050042880    3774152704  usbflash     rw   usbflash0:
+     Size(b)     Free(b)      Type  Flags  Prefixes
+* 3223551808  2806261312      disk     rw   flash:#
+           -           -    opaque     rw   system:
+    33554432    33554095     nvram     rw   nvram:
+           -           -   network     rw   tftp:
+  4009754624  4009754624  usbflash     rw   usbflash0:
 R1#
 ```
 
@@ -235,49 +192,68 @@ R1#
 При копировании на USB-устройство флэш-памяти без ранее существующего файла будет отображаться следующий вывод.
 
 ```
-R1# copy running-config usbflash0: 
+R1#copy running-config usbflash0:
 Destination filename [running-config]? R1-Config
-5024 bytes copied in 0.736 secs (6826 bytes/sec)
+337 bytes copied in 0.416 secs (810 bytes/sec)
+R1#
 ```
 
 При копировании на USB-накопитель с тем же файлом конфигурации, который уже находится на диске, будет отображаться следующий вывод.
 
 ```
-R1# copy running-config usbflash0: 
+R1#copy running-config usbflash0:
 Destination filename [running-config]? R1-Config
 %Warning:There is a file already existing with this name
 Do you want to over write? [confirm]
-5024 bytes copied in 1.796 secs (2797 bytes/sec)
+337 bytes copied in 0.416 secs (810 bytes/sec)
 R1#
 ```
 
-Используйте команду **dir** для просмотра файла на USB-накопителе, а также команду **more** для просмотра содержимого, как показано в примере.
+Используйте команду **dir** для просмотра файла на USB-накопителе, а также команду **more** для просмотра содержимого, как показано в примере. Длинный файл команда **more** выводит по страницам: строка --More-- ждет нажатия клавиши «Пробел».
 
 ```
-R1# dir usbflash0:/ 
+R1#dir usbflash0:/
 Directory of usbflash0:/
-    1  drw-     0  Oct 15 2010 16:28:30 +00:00  netlab
-   16  -rw-  5024   Jan 7 2013 20:26:50 +00:00  R1-Config
-4050042880 bytes total (3774144512 bytes free)
-R1#
-R1# more usbflash0:/R1-Config
+
+    1  -rw-         337          <no date>  R1-Config
+
+4009754624 bytes total (4009754287 bytes free)
+
+R1#more usbflash0:/R1-Config
 !
-! Last configuration change at 20:19:54 UTC Mon Jan 7 2013 by
-admin version 15.2
-service timestamps debug datetime msec
-service timestamps log datetime msec
-no service password-encryption
+version 0.1
 !
 hostname R1
 !
-boot-start-marker
-boot-end-marker
 !
-logging buffered 51200 warnings
 !
-no aaa new-model
+interface GigabitEthernet0/0/0
+ no ip address
+ shutdown
+ duplex auto
+ speed auto
 !
-no ipv6 cef
+interface GigabitEthernet0/0/1
+ no ip address
+ shutdown
+ duplex auto
+ speed auto
+!
+interface Serial0/1/0
+ no ip address
+ shutdown
+!
+interface Serial0/1/1
+ no ip address
+ shutdown
+!
+line con 0
+!
+line vty 0 4
+ login
+!
+end
+
 R1#
 ```
 
