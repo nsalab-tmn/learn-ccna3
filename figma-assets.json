@@ -8786,6 +8786,86 @@
     }
    },
    "notes": "намеренный дубль экспорта (kb#318, вариант 1): тот же фрейм 5755:166315, что у ccna3-azdvmhl (06-nat-for-ipv4/06.09-exam/assets/14.svg); каждая папка экзамена самодостаточна — не сворачивать при дедупликации (kb#242)"
+  },
+  {
+   "id": "ccna3-z26j6ks",
+   "kind": "illustration",
+   "display": {
+    "key": "2.8.3"
+   },
+   "claim": "Маршрутизаторы R1–R4 подключены интерфейсами FastEthernet 0/0 к одному коммутатору; у каждого указаны идентификатор маршрутизатора, адрес и приоритет FastEthernet 0/0, адреса Serial 0/0/0 и Loopback 0: приоритет R2 — 255, идентификатор R1 — 1.1.1.1, у R4 Loopback 0 — 172.16.1.1 и приоритет по умолчанию.",
+   "figma": {
+    "nodeId": "6014:9816",
+    "page": "CCNA3 · 02 single-area-ospfv2-configuration"
+   },
+   "out": {
+    "path": "02-single-area-ospfv2-configuration/02.08-exam/assets/3.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "3.png"
+   }
+  },
+  {
+   "id": "ccna3-lenc2x5",
+   "kind": "illustration",
+   "display": {
+    "key": "2.8.8"
+   },
+   "claim": "Вывод show ip ospf interface для Serial0/0/1 маршрутизатора R1 без строки команды: адрес 172.16.30.1/30 в области 0, Router ID 1.1.1.1, тип сети POINT_TO_POINT, интервалы hello 5 и dead 20, смежность с соседом 2.2.2.2.",
+   "figma": {
+    "nodeId": "6014:9922",
+    "page": "CCNA3 · 02 single-area-ospfv2-configuration"
+   },
+   "out": {
+    "path": "02-single-area-ospfv2-configuration/02.08-exam/assets/8.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "8.jpg"
+   }
+  },
+  {
+   "id": "ccna3-oznjsy5",
+   "kind": "illustration",
+   "display": {
+    "key": "2.8.9"
+   },
+   "claim": "Вывод show ip protocols на R2: процесс OSPF 99, Router ID 192.168.30.254, сети 192.168.20.2 0.0.0.0 area 0 и 192.168.3.0 0.0.0.255 area 0, источник маршрутов 192.168.20.1.",
+   "figma": {
+    "nodeId": "6014:9925",
+    "page": "CCNA3 · 02 single-area-ospfv2-configuration"
+   },
+   "out": {
+    "path": "02-single-area-ospfv2-configuration/02.08-exam/assets/9.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "9.png"
+   }
+  },
+  {
+   "id": "ccna3-qhfzi2m",
+   "kind": "illustration",
+   "display": {
+    "key": "6.1.5"
+   },
+   "claim": "PC1 подключен к маршрутизатору R1, который выполняет NAT и подключен к Интернету, где находится веб-сервер 209.165.201.10; адрес источника пакета PC1 — 192.168.10.10 во внутренней сети и 209.165.200.226 за маршрутизатором R1.",
+   "figma": {
+    "nodeId": "6014:11821",
+    "page": "CCNA3 · 06 nat-for-ipv4"
+   },
+   "out": {
+    "path": "06-nat-for-ipv4/06.01-nat-characteristics/assets/6.1.5.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "6.1.5.png"
+   }
   }
  ]
 }
