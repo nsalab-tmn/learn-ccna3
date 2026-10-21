@@ -36,47 +36,33 @@
     "passingScore": 100,
     "questions": [
         {
-            "questionId": "q01",
-            "question": "Какие характеристики должен иметь API, чтобы считаться RESTful? (Выберите три варианта.)",
-            "answerType": "multiChoice",
+            "questionId": "q06",
+            "bloom": "understand",
+            "question": "Сервер API запоминает, какую страницу списка устройств клиент запросил последней, и без этих сведений не может обработать его следующий запрос. Какое ограничение архитектуры REST нарушает этот API?",
+            "answerType": "singleChoice",
             "answers": [
                 {
-                    "answerId": "q01-a1",
-                    "answer": "С сохранением состояния",
-                    "correct": false,
-                    "comment": "API является RESTful, если он имеет следующие характеристики: архитектура типа клиент-сервер, без сохранения состояния и кэшируемый"
-                },
-                {
-                    "answerId": "q01-a2",
-                    "answer": "Без сохранения состояния",
+                    "answerId": "q06-a1",
+                    "answer": "Без сохранения состояния (stateless)",
                     "correct": true
                 },
                 {
-                    "answerId": "q01-a3",
-                    "answer": "Кешируемый",
-                    "correct": true
-                },
-                {
-                    "answerId": "q01-a4",
-                    "answer": "Некешируемый",
+                    "answerId": "q06-a2",
+                    "answer": "Клиент-сервер (client-server)",
                     "correct": false,
-                    "comment": "API является RESTful, если он имеет следующие характеристики: архитектура типа клиент-сервер, без сохранения состояния и кэшируемый"
+                    "comment": "Клиент и сервер здесь разделены: клиент отправляет запросы, сервер обрабатывает данные. Нарушено другое ограничение: в REST сервер не хранит данные клиента между запросами, а состояние сеанса хранит клиент."
                 },
                 {
-                    "answerId": "q01-a5",
-                    "answer": "Архитектура типа клиент-сервер",
-                    "correct": true
-                },
-                {
-                    "answerId": "q01-a6",
-                    "answer": "Архитектура типа сервер-сервер",
+                    "answerId": "q06-a3",
+                    "answer": "Кэшируемость (cacheable)",
                     "correct": false,
-                    "comment": "API является RESTful, если он имеет следующие характеристики: архитектура типа клиент-сервер, без сохранения состояния и кэшируемый"
+                    "comment": "Кэшируемость касается повторного использования сохраненных ответов, а не того, где хранится состояние сеанса. Сервер, который помнит данные клиента между запросами, нарушает ограничение «без сохранения состояния»."
                 }
             ]
         },
         {
             "questionId": "q02",
+            "bloom": "understand",
             "question": "Что из перечисленного — URL?",
             "answerType": "singleChoice",
             "answers": [
@@ -108,6 +94,7 @@
         },
         {
             "questionId": "q03",
+            "bloom": "remember",
             "question": "Что из перечисленного — URN?",
             "answerType": "singleChoice",
             "answers": [
@@ -138,6 +125,7 @@
         },
         {
             "questionId": "q04",
+            "bloom": "understand",
             "question": "Какой вариант содержит фрагмент?",
             "answerType": "singleChoice",
             "answers": [
@@ -168,39 +156,88 @@
             ]
         },
         {
-            "questionId": "q05",
-            "question": "Что может входить в часть «Запрос» в URI для RESTful API? (Выберите три варианта.)",
+            "questionId": "q07",
+            "bloom": "understand",
+            "question": "Скрипт отправляет запрос RESTful API:\n\n```\nhttps://ya.ru/api/v1/weather?format=json&key=KEY&city=Tyumen\n```\n\nКакие два элемента входят в часть «Запрос» этого URI? (верны два варианта)",
             "answerType": "multiChoice",
             "answers": [
                 {
-                    "answerId": "q05-a1",
-                    "answer": "Ключ",
-                    "correct": true,
-                    "comment": "Ключ авторизации, если API его требует, передается в части «Запрос», например key=KEY."
+                    "answerId": "q07-a1",
+                    "answer": "format=json",
+                    "correct": true
                 },
                 {
-                    "answerId": "q05-a2",
-                    "answer": "Формат",
-                    "correct": true,
-                    "comment": "Формат данных (обычно JSON, иногда YAML или XML) задается в части «Запрос», например outFormat=json."
+                    "answerId": "q07-a2",
+                    "answer": "city=Tyumen",
+                    "correct": true
                 },
                 {
-                    "answerId": "q05-a3",
-                    "answer": "Параметры",
-                    "correct": true,
-                    "comment": "Параметры передают сведения, относящиеся к запросу, например from=San+Jose,Ca и to=Monterey,Ca."
-                },
-                {
-                    "answerId": "q05-a4",
-                    "answer": "Ресурсы",
+                    "answerId": "q07-a3",
+                    "answer": "api/v1/weather",
                     "correct": false,
-                    "comment": "Ресурсы — отдельная часть URI, которая определяет запрашиваемый API; в «Запрос» они не входят."
+                    "comment": "api/v1/weather — ресурсы: эта часть URI определяет запрашиваемый API. Часть «Запрос» идет после знака «?» и содержит формат, ключ и параметры."
                 },
                 {
-                    "answerId": "q05-a5",
-                    "answer": "Сервер API",
+                    "answerId": "q07-a4",
+                    "answer": "https://ya.ru",
                     "correct": false,
-                    "comment": "Сервер API — первая часть URI: адрес службы, которая отвечает на запросы REST. В «Запрос» он не входит."
+                    "comment": "https://ya.ru — сервер API, который отвечает на запросы REST. Часть «Запрос» идет после знака «?»: формат (format=json), ключ (key=KEY) и параметры (city=Tyumen)."
+                }
+            ]
+        },
+        {
+            "questionId": "q08",
+            "bloom": "understand",
+            "question": "Администратор через REST API контроллера меняет описание уже существующего интерфейса маршрутизатора. Какая это операция RESTful и какие методы HTTP ей соответствуют?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answerId": "q08-a1",
+                    "answer": "Обновление (Update): PUT/PATCH",
+                    "correct": true
+                },
+                {
+                    "answerId": "q08-a2",
+                    "answer": "Создание (Create): POST",
+                    "correct": false,
+                    "comment": "POST создает новый ресурс, а интерфейс уже существует. Изменение существующего ресурса — операция обновления (Update), ей соответствуют методы PUT и PATCH."
+                },
+                {
+                    "answerId": "q08-a3",
+                    "answer": "Чтение (Read): GET",
+                    "correct": false,
+                    "comment": "GET только читает данные и ничего не меняет на устройстве. Изменение существующего ресурса — операция обновления (Update), ей соответствуют методы PUT и PATCH."
+                },
+                {
+                    "answerId": "q08-a4",
+                    "answer": "Удаление (Delete): DELETE",
+                    "correct": false,
+                    "comment": "DELETE удаляет ресурс, а здесь интерфейс остается, меняется только его описание. Это обновление (Update), ему соответствуют методы PUT и PATCH."
+                }
+            ]
+        },
+        {
+            "questionId": "q09",
+            "bloom": "understand",
+            "question": "Инженер хочет изучить новый API: вручную собирать запросы с параметрами и ключом, просматривать полученные данные и сохранять удачные вызовы в коллекцию, не написав ни строчки кода. Какое средство ему подходит?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answerId": "q09-a1",
+                    "answer": "Клиент REST API",
+                    "correct": true
+                },
+                {
+                    "answerId": "q09-a2",
+                    "answer": "Программа на Python",
+                    "correct": false,
+                    "comment": "Программу на Python нужно написать: она подходит, чтобы автоматизировать вызовы API и встроить их в другие приложения. Собирать запросы вручную и сохранять удачные вызовы без программирования позволяет клиент REST API."
+                },
+                {
+                    "answerId": "q09-a3",
+                    "answer": "Сеанс NETCONF к маршрутизатору",
+                    "correct": false,
+                    "comment": "NETCONF — протокол настройки, мониторинга и управления сетевыми устройствами, а не средство для изучения веб-API. Собирать, отправлять и сохранять запросы без программирования позволяет клиент REST API."
                 }
             ]
         }
