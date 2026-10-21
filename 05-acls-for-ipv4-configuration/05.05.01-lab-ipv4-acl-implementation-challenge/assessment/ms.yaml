@@ -8,15 +8,23 @@ Criterions:
     aspects:
     - code: BRANCH.ACL.ACL-BRANCH-TO-HQ
       name: branch_to_hq
-      description: 'Список доступа branch_to_hq: 3 записей по порядку'
+      description: 'Список доступа branch_to_hq: 3 записей, пересекающиеся — по порядку'
       skills:
       - Configure Named Extended ACL 4
       max_mark: 25
       steps:
-      - name: 'show access-lists branch_to_hq: matches (?m)^Extended IP access list branch_to_hq\s*$\s*\n\s+\d+
-          deny\ ip\ 192\.168\.2\.0\ 0\.0\.0\.31\ 192\.168\.1\.0\ 0\.0\.0\.63(?: \(\d+ match(?:es)?\))?\s*$\s*\n\s+\d+
-          deny\ ip\ 192\.168\.2\.32\ 0\.0\.0\.15\ 192\.168\.1\.0\ 0\.0\.0\.63(?: \(\d+ match(?:es)?\))?\s*$\s*\n\s+\d+
-          permit\ ip\ any\ any(?: \(\d+ match(?:es)?\))?\s*$(?![\s\S]*^\s+\d+ (?:permit|deny) )'
+      - name: 'show access-lists branch_to_hq: matches (?m)^Extended IP access list branch_to_hq[ \t\r]*$(?=[\s\S]*^\s+\d+
+          (?:deny\ ip\ 192\.168\.2\.0\ 0\.0\.0\.31\ 192\.168\.1\.0\ 0\.0\.0\.63)(?: \(\d+ match(?:es)?\))?[ \t\r]*$)(?=[\s\S]*^\s+\d+
+          (?:deny\ ip\ 192\.168\.2\.32\ 0\.0\.0\.15\ 192\.168\.1\.0\ 0\.0\.0\.63)(?: \(\d+ match(?:es)?\))?[ \t\r]*$)(?=[\s\S]*^\s+\d+
+          (?:permit\ ip\ any\ any)(?: \(\d+ match(?:es)?\))?[ \t\r]*$)(?![\s\S]*^\s+\d+ (?:permit\ ip\ any\ any)(?:
+          \(\d+ match(?:es)?\))?[ \t\r]*$[\s\S]*^\s+\d+ (?:deny\ ip\ 192\.168\.2\.0\ 0\.0\.0\.31\ 192\.168\.1\.0\
+          0\.0\.0\.63)(?: \(\d+ match(?:es)?\))?[ \t\r]*$)(?![\s\S]*^\s+\d+ (?:permit\ ip\ any\ any)(?: \(\d+ match(?:es)?\))?[
+          \t\r]*$[\s\S]*^\s+\d+ (?:deny\ ip\ 192\.168\.2\.32\ 0\.0\.0\.15\ 192\.168\.1\.0\ 0\.0\.0\.63)(?: \(\d+
+          match(?:es)?\))?[ \t\r]*$)(?![\s\S]*^\s+\d+ (?:deny\ ip\ any\ any|deny\ ip\ any\ any\ log)(?: \(\d+ match(?:es)?\))?[
+          \t\r]*$[\s\S]*^\s+\d+ (?!(?:deny\ ip\ any\ any|deny\ ip\ any\ any\ log)(?: \(\d+ match(?:es)?\))?[ \t\r]*$))(?![\s\S]*^\s+\d+
+          (?!(?:(?:deny\ ip\ 192\.168\.2\.0\ 0\.0\.0\.31\ 192\.168\.1\.0\ 0\.0\.0\.63)|(?:deny\ ip\ 192\.168\.2\.32\
+          0\.0\.0\.15\ 192\.168\.1\.0\ 0\.0\.0\.63)|(?:permit\ ip\ any\ any)|(?:deny\ ip\ any\ any|deny\ ip\ any\
+          any\ log))(?: \(\d+ match(?:es)?\))?[ \t\r]*$))'
         code: check
         type: check
         device: Branch
@@ -24,10 +32,19 @@ Criterions:
         - action: verify_output_regex
           action_vars:
             command: show access-lists branch_to_hq
-            expr: '(?m)^Extended IP access list branch_to_hq\s*$\s*\n\s+\d+ deny\ ip\ 192\.168\.2\.0\ 0\.0\.0\.31\
-              192\.168\.1\.0\ 0\.0\.0\.63(?: \(\d+ match(?:es)?\))?\s*$\s*\n\s+\d+ deny\ ip\ 192\.168\.2\.32\ 0\.0\.0\.15\
-              192\.168\.1\.0\ 0\.0\.0\.63(?: \(\d+ match(?:es)?\))?\s*$\s*\n\s+\d+ permit\ ip\ any\ any(?: \(\d+
-              match(?:es)?\))?\s*$(?![\s\S]*^\s+\d+ (?:permit|deny) )'
+            expr: '(?m)^Extended IP access list branch_to_hq[ \t\r]*$(?=[\s\S]*^\s+\d+ (?:deny\ ip\ 192\.168\.2\.0\
+              0\.0\.0\.31\ 192\.168\.1\.0\ 0\.0\.0\.63)(?: \(\d+ match(?:es)?\))?[ \t\r]*$)(?=[\s\S]*^\s+\d+ (?:deny\
+              ip\ 192\.168\.2\.32\ 0\.0\.0\.15\ 192\.168\.1\.0\ 0\.0\.0\.63)(?: \(\d+ match(?:es)?\))?[ \t\r]*$)(?=[\s\S]*^\s+\d+
+              (?:permit\ ip\ any\ any)(?: \(\d+ match(?:es)?\))?[ \t\r]*$)(?![\s\S]*^\s+\d+ (?:permit\ ip\ any\
+              any)(?: \(\d+ match(?:es)?\))?[ \t\r]*$[\s\S]*^\s+\d+ (?:deny\ ip\ 192\.168\.2\.0\ 0\.0\.0\.31\ 192\.168\.1\.0\
+              0\.0\.0\.63)(?: \(\d+ match(?:es)?\))?[ \t\r]*$)(?![\s\S]*^\s+\d+ (?:permit\ ip\ any\ any)(?: \(\d+
+              match(?:es)?\))?[ \t\r]*$[\s\S]*^\s+\d+ (?:deny\ ip\ 192\.168\.2\.32\ 0\.0\.0\.15\ 192\.168\.1\.0\
+              0\.0\.0\.63)(?: \(\d+ match(?:es)?\))?[ \t\r]*$)(?![\s\S]*^\s+\d+ (?:deny\ ip\ any\ any|deny\ ip\
+              any\ any\ log)(?: \(\d+ match(?:es)?\))?[ \t\r]*$[\s\S]*^\s+\d+ (?!(?:deny\ ip\ any\ any|deny\ ip\
+              any\ any\ log)(?: \(\d+ match(?:es)?\))?[ \t\r]*$))(?![\s\S]*^\s+\d+ (?!(?:(?:deny\ ip\ 192\.168\.2\.0\
+              0\.0\.0\.31\ 192\.168\.1\.0\ 0\.0\.0\.63)|(?:deny\ ip\ 192\.168\.2\.32\ 0\.0\.0\.15\ 192\.168\.1\.0\
+              0\.0\.0\.63)|(?:permit\ ip\ any\ any)|(?:deny\ ip\ any\ any|deny\ ip\ any\ any\ log))(?: \(\d+ match(?:es)?\))?[
+              \t\r]*$))'
             match: true
   - code: BRANCH.PORTS
     name: Ports
@@ -57,15 +74,22 @@ Criterions:
     aspects:
     - code: HQ.ACL.ACL-101
       name: '101'
-      description: 'Список доступа 101: 3 записей по порядку'
+      description: 'Список доступа 101: 3 записей, пересекающиеся — по порядку'
       skills:
       - Configure Extended ACL 1
       max_mark: 25
       steps:
-      - name: 'show access-lists 101: matches (?m)^Extended IP access list 101\s*$\s*\n\s+\d+ deny\ tcp\ any\ host\
-          192\.168\.1\.70\ eq\ ftp(?: \(\d+ match(?:es)?\))?\s*$\s*\n\s+\d+ deny\ icmp\ any\ 192\.168\.1\.0\ 0\.0\.0\.63(?:
-          \(\d+ match(?:es)?\))?\s*$\s*\n\s+\d+ permit\ ip\ any\ any(?: \(\d+ match(?:es)?\))?\s*$(?![\s\S]*^\s+\d+
-          (?:permit|deny) )'
+      - name: 'show access-lists 101: matches (?m)^Extended IP access list 101[ \t\r]*$(?=[\s\S]*^\s+\d+ (?:deny\
+          tcp\ any\ host\ 192\.168\.1\.70\ eq\ ftp)(?: \(\d+ match(?:es)?\))?[ \t\r]*$)(?=[\s\S]*^\s+\d+ (?:deny\
+          icmp\ any\ 192\.168\.1\.0\ 0\.0\.0\.63)(?: \(\d+ match(?:es)?\))?[ \t\r]*$)(?=[\s\S]*^\s+\d+ (?:permit\
+          ip\ any\ any)(?: \(\d+ match(?:es)?\))?[ \t\r]*$)(?![\s\S]*^\s+\d+ (?:permit\ ip\ any\ any)(?: \(\d+ match(?:es)?\))?[
+          \t\r]*$[\s\S]*^\s+\d+ (?:deny\ tcp\ any\ host\ 192\.168\.1\.70\ eq\ ftp)(?: \(\d+ match(?:es)?\))?[ \t\r]*$)(?![\s\S]*^\s+\d+
+          (?:permit\ ip\ any\ any)(?: \(\d+ match(?:es)?\))?[ \t\r]*$[\s\S]*^\s+\d+ (?:deny\ icmp\ any\ 192\.168\.1\.0\
+          0\.0\.0\.63)(?: \(\d+ match(?:es)?\))?[ \t\r]*$)(?![\s\S]*^\s+\d+ (?:deny\ ip\ any\ any|deny\ ip\ any\
+          any\ log)(?: \(\d+ match(?:es)?\))?[ \t\r]*$[\s\S]*^\s+\d+ (?!(?:deny\ ip\ any\ any|deny\ ip\ any\ any\
+          log)(?: \(\d+ match(?:es)?\))?[ \t\r]*$))(?![\s\S]*^\s+\d+ (?!(?:(?:deny\ tcp\ any\ host\ 192\.168\.1\.70\
+          eq\ ftp)|(?:deny\ icmp\ any\ 192\.168\.1\.0\ 0\.0\.0\.63)|(?:permit\ ip\ any\ any)|(?:deny\ ip\ any\ any|deny\
+          ip\ any\ any\ log))(?: \(\d+ match(?:es)?\))?[ \t\r]*$))'
         code: check
         type: check
         device: HQ
@@ -73,20 +97,33 @@ Criterions:
         - action: verify_output_regex
           action_vars:
             command: show access-lists 101
-            expr: '(?m)^Extended IP access list 101\s*$\s*\n\s+\d+ deny\ tcp\ any\ host\ 192\.168\.1\.70\ eq\ ftp(?:
-              \(\d+ match(?:es)?\))?\s*$\s*\n\s+\d+ deny\ icmp\ any\ 192\.168\.1\.0\ 0\.0\.0\.63(?: \(\d+ match(?:es)?\))?\s*$\s*\n\s+\d+
-              permit\ ip\ any\ any(?: \(\d+ match(?:es)?\))?\s*$(?![\s\S]*^\s+\d+ (?:permit|deny) )'
+            expr: '(?m)^Extended IP access list 101[ \t\r]*$(?=[\s\S]*^\s+\d+ (?:deny\ tcp\ any\ host\ 192\.168\.1\.70\
+              eq\ ftp)(?: \(\d+ match(?:es)?\))?[ \t\r]*$)(?=[\s\S]*^\s+\d+ (?:deny\ icmp\ any\ 192\.168\.1\.0\
+              0\.0\.0\.63)(?: \(\d+ match(?:es)?\))?[ \t\r]*$)(?=[\s\S]*^\s+\d+ (?:permit\ ip\ any\ any)(?: \(\d+
+              match(?:es)?\))?[ \t\r]*$)(?![\s\S]*^\s+\d+ (?:permit\ ip\ any\ any)(?: \(\d+ match(?:es)?\))?[ \t\r]*$[\s\S]*^\s+\d+
+              (?:deny\ tcp\ any\ host\ 192\.168\.1\.70\ eq\ ftp)(?: \(\d+ match(?:es)?\))?[ \t\r]*$)(?![\s\S]*^\s+\d+
+              (?:permit\ ip\ any\ any)(?: \(\d+ match(?:es)?\))?[ \t\r]*$[\s\S]*^\s+\d+ (?:deny\ icmp\ any\ 192\.168\.1\.0\
+              0\.0\.0\.63)(?: \(\d+ match(?:es)?\))?[ \t\r]*$)(?![\s\S]*^\s+\d+ (?:deny\ ip\ any\ any|deny\ ip\
+              any\ any\ log)(?: \(\d+ match(?:es)?\))?[ \t\r]*$[\s\S]*^\s+\d+ (?!(?:deny\ ip\ any\ any|deny\ ip\
+              any\ any\ log)(?: \(\d+ match(?:es)?\))?[ \t\r]*$))(?![\s\S]*^\s+\d+ (?!(?:(?:deny\ tcp\ any\ host\
+              192\.168\.1\.70\ eq\ ftp)|(?:deny\ icmp\ any\ 192\.168\.1\.0\ 0\.0\.0\.63)|(?:permit\ ip\ any\ any)|(?:deny\
+              ip\ any\ any|deny\ ip\ any\ any\ log))(?: \(\d+ match(?:es)?\))?[ \t\r]*$))'
             match: true
     - code: HQ.ACL.ACL-111
       name: '111'
-      description: 'Список доступа 111: 2 записей по порядку'
+      description: 'Список доступа 111: 2 записей, пересекающиеся — по порядку'
       skills:
       - Configure Extended ACL 2
       max_mark: 20
       steps:
-      - name: 'show access-lists 111: matches (?m)^Extended IP access list 111\s*$\s*\n\s+\d+ deny\ ip\ 192\.168\.1\.0\
-          0\.0\.0\.63\ host\ 192\.168\.2\.45(?: \(\d+ match(?:es)?\))?\s*$\s*\n\s+\d+ permit\ ip\ any\ any(?: \(\d+
-          match(?:es)?\))?\s*$(?![\s\S]*^\s+\d+ (?:permit|deny) )'
+      - name: 'show access-lists 111: matches (?m)^Extended IP access list 111[ \t\r]*$(?=[\s\S]*^\s+\d+ (?:deny\
+          ip\ 192\.168\.1\.0\ 0\.0\.0\.63\ host\ 192\.168\.2\.45)(?: \(\d+ match(?:es)?\))?[ \t\r]*$)(?=[\s\S]*^\s+\d+
+          (?:permit\ ip\ any\ any)(?: \(\d+ match(?:es)?\))?[ \t\r]*$)(?![\s\S]*^\s+\d+ (?:permit\ ip\ any\ any)(?:
+          \(\d+ match(?:es)?\))?[ \t\r]*$[\s\S]*^\s+\d+ (?:deny\ ip\ 192\.168\.1\.0\ 0\.0\.0\.63\ host\ 192\.168\.2\.45)(?:
+          \(\d+ match(?:es)?\))?[ \t\r]*$)(?![\s\S]*^\s+\d+ (?:deny\ ip\ any\ any|deny\ ip\ any\ any\ log)(?: \(\d+
+          match(?:es)?\))?[ \t\r]*$[\s\S]*^\s+\d+ (?!(?:deny\ ip\ any\ any|deny\ ip\ any\ any\ log)(?: \(\d+ match(?:es)?\))?[
+          \t\r]*$))(?![\s\S]*^\s+\d+ (?!(?:(?:deny\ ip\ 192\.168\.1\.0\ 0\.0\.0\.63\ host\ 192\.168\.2\.45)|(?:permit\
+          ip\ any\ any)|(?:deny\ ip\ any\ any|deny\ ip\ any\ any\ log))(?: \(\d+ match(?:es)?\))?[ \t\r]*$))'
         code: check
         type: check
         device: HQ
@@ -94,20 +131,27 @@ Criterions:
         - action: verify_output_regex
           action_vars:
             command: show access-lists 111
-            expr: '(?m)^Extended IP access list 111\s*$\s*\n\s+\d+ deny\ ip\ 192\.168\.1\.0\ 0\.0\.0\.63\ host\
-              192\.168\.2\.45(?: \(\d+ match(?:es)?\))?\s*$\s*\n\s+\d+ permit\ ip\ any\ any(?: \(\d+ match(?:es)?\))?\s*$(?![\s\S]*^\s+\d+
-              (?:permit|deny) )'
+            expr: '(?m)^Extended IP access list 111[ \t\r]*$(?=[\s\S]*^\s+\d+ (?:deny\ ip\ 192\.168\.1\.0\ 0\.0\.0\.63\
+              host\ 192\.168\.2\.45)(?: \(\d+ match(?:es)?\))?[ \t\r]*$)(?=[\s\S]*^\s+\d+ (?:permit\ ip\ any\ any)(?:
+              \(\d+ match(?:es)?\))?[ \t\r]*$)(?![\s\S]*^\s+\d+ (?:permit\ ip\ any\ any)(?: \(\d+ match(?:es)?\))?[
+              \t\r]*$[\s\S]*^\s+\d+ (?:deny\ ip\ 192\.168\.1\.0\ 0\.0\.0\.63\ host\ 192\.168\.2\.45)(?: \(\d+ match(?:es)?\))?[
+              \t\r]*$)(?![\s\S]*^\s+\d+ (?:deny\ ip\ any\ any|deny\ ip\ any\ any\ log)(?: \(\d+ match(?:es)?\))?[
+              \t\r]*$[\s\S]*^\s+\d+ (?!(?:deny\ ip\ any\ any|deny\ ip\ any\ any\ log)(?: \(\d+ match(?:es)?\))?[
+              \t\r]*$))(?![\s\S]*^\s+\d+ (?!(?:(?:deny\ ip\ 192\.168\.1\.0\ 0\.0\.0\.63\ host\ 192\.168\.2\.45)|(?:permit\
+              ip\ any\ any)|(?:deny\ ip\ any\ any|deny\ ip\ any\ any\ log))(?: \(\d+ match(?:es)?\))?[ \t\r]*$))'
             match: true
     - code: HQ.ACL.ACL-VTY-BLOCK
       name: vty_block
-      description: 'Список доступа vty_block: 1 записей по порядку'
+      description: 'Список доступа vty_block: 1 записей'
       skills:
       - Configure Named Standard ACL 3
       max_mark: 15
       steps:
-      - name: 'show access-lists vty_block: matches (?m)^Standard IP access list vty_block\s*$\s*\n\s+\d+ permit\
-          192\.168\.1\.64,\ wildcard\ bits\ 0\.0\.0\.7(?: \(\d+ match(?:es)?\))?\s*$(?![\s\S]*^\s+\d+ (?:permit|deny)
-          )'
+      - name: 'show access-lists vty_block: matches (?m)^Standard IP access list vty_block[ \t\r]*$(?=[\s\S]*^\s+\d+
+          (?:permit\ 192\.168\.1\.64,\ wildcard\ bits\ 0\.0\.0\.7)(?: \(\d+ match(?:es)?\))?[ \t\r]*$)(?![\s\S]*^\s+\d+
+          (?:deny\ \ \ any|deny\ \ \ any\ log)(?: \(\d+ match(?:es)?\))?[ \t\r]*$[\s\S]*^\s+\d+ (?!(?:deny\ \ \
+          any|deny\ \ \ any\ log)(?: \(\d+ match(?:es)?\))?[ \t\r]*$))(?![\s\S]*^\s+\d+ (?!(?:(?:permit\ 192\.168\.1\.64,\
+          wildcard\ bits\ 0\.0\.0\.7)|(?:deny\ \ \ any|deny\ \ \ any\ log))(?: \(\d+ match(?:es)?\))?[ \t\r]*$))'
         code: check
         type: check
         device: HQ
@@ -115,8 +159,11 @@ Criterions:
         - action: verify_output_regex
           action_vars:
             command: show access-lists vty_block
-            expr: '(?m)^Standard IP access list vty_block\s*$\s*\n\s+\d+ permit\ 192\.168\.1\.64,\ wildcard\ bits\
-              0\.0\.0\.7(?: \(\d+ match(?:es)?\))?\s*$(?![\s\S]*^\s+\d+ (?:permit|deny) )'
+            expr: '(?m)^Standard IP access list vty_block[ \t\r]*$(?=[\s\S]*^\s+\d+ (?:permit\ 192\.168\.1\.64,\
+              wildcard\ bits\ 0\.0\.0\.7)(?: \(\d+ match(?:es)?\))?[ \t\r]*$)(?![\s\S]*^\s+\d+ (?:deny\ \ \ any|deny\
+              \ \ any\ log)(?: \(\d+ match(?:es)?\))?[ \t\r]*$[\s\S]*^\s+\d+ (?!(?:deny\ \ \ any|deny\ \ \ any\
+              log)(?: \(\d+ match(?:es)?\))?[ \t\r]*$))(?![\s\S]*^\s+\d+ (?!(?:(?:permit\ 192\.168\.1\.64,\ wildcard\
+              bits\ 0\.0\.0\.7)|(?:deny\ \ \ any|deny\ \ \ any\ log))(?: \(\d+ match(?:es)?\))?[ \t\r]*$))'
             match: true
   - code: HQ.PORTS
     name: Ports
@@ -176,3 +223,321 @@ Criterions:
             command: show running-config | section ^line vty (0 1|0 2|0 3|0 4|0)$
             expr: (?m)^ access-class vty_block in\s*$
             match: true
+- code: BRANCH-PC
+  name: Branch-PC
+  subCriterions:
+  - code: BRANCH-PC.CONNECTIVITY-TESTS
+    name: Connectivity Tests
+    aspects:
+    - code: BRANCH-PC.CONNECTIVITY-TESTS.CT-0
+      name: 'Branch-PC to 192.168.1.70 : 192.168.1.70 (ICMP)'
+      description: 'Branch-PC → 192.168.1.70 (PING): проходит'
+      skills:
+      - Other
+      max_mark: 2
+      steps:
+      - name: 'show running-config interface Serial0/1/1: matches (?m)^ ip access-group branch_to_hq out\s*$'
+        code: check
+        type: check
+        device: Branch
+        action_chain:
+        - action: verify_output_regex
+          action_vars:
+            command: show running-config interface Serial0/1/1
+            expr: (?m)^ ip access-group branch_to_hq out\s*$
+            match: true
+      - name: 'show running-config interface GigabitEthernet0/0/0: matches (?m)^ ip access-group 111 in\s*$'
+        code: check
+        type: check
+        device: HQ
+        action_chain:
+        - action: verify_output_regex
+          action_vars:
+            command: show running-config interface GigabitEthernet0/0/0
+            expr: (?m)^ ip access-group 111 in\s*$
+            match: true
+      - name: 'show running-config interface Serial0/1/0: matches (?m)^ ip access-group 101 in\s*$'
+        code: check
+        type: check
+        device: HQ
+        action_chain:
+        - action: verify_output_regex
+          action_vars:
+            command: show running-config interface Serial0/1/0
+            expr: (?m)^ ip access-group 101 in\s*$
+            match: true
+      - name: 'ping -n 2 192.168.1.70: has : bytes='
+        code: check
+        type: check
+        device: Branch-PC
+        action_chain:
+        - action: verify_output
+          action_vars:
+            command: ping -n 2 192.168.1.70
+            assert_tags:
+            - ': bytes='
+            tags_are_present: true
+            retries: 3
+            retry_interval: 15
+    - code: BRANCH-PC.CONNECTIVITY-TESTS.CT-5
+      name: 'Branch-PC to 192.168.1.10 : 192.168.1.10 (ICMP)'
+      description: 'Branch-PC → 192.168.1.10 (PING): не проходит'
+      skills:
+      - Other
+      max_mark: 2
+      steps:
+      - name: 'show running-config interface Serial0/1/1: matches (?m)^ ip access-group branch_to_hq out\s*$'
+        code: check
+        type: check
+        device: Branch
+        action_chain:
+        - action: verify_output_regex
+          action_vars:
+            command: show running-config interface Serial0/1/1
+            expr: (?m)^ ip access-group branch_to_hq out\s*$
+            match: true
+      - name: 'show running-config interface GigabitEthernet0/0/0: matches (?m)^ ip access-group 111 in\s*$'
+        code: check
+        type: check
+        device: HQ
+        action_chain:
+        - action: verify_output_regex
+          action_vars:
+            command: show running-config interface GigabitEthernet0/0/0
+            expr: (?m)^ ip access-group 111 in\s*$
+            match: true
+      - name: 'show running-config interface Serial0/1/0: matches (?m)^ ip access-group 101 in\s*$'
+        code: check
+        type: check
+        device: HQ
+        action_chain:
+        - action: verify_output_regex
+          action_vars:
+            command: show running-config interface Serial0/1/0
+            expr: (?m)^ ip access-group 101 in\s*$
+            match: true
+      - name: 'ping -n 2 192.168.1.10: has not : bytes='
+        code: check
+        type: check
+        device: Branch-PC
+        action_chain:
+        - action: verify_output
+          action_vars:
+            command: ping -n 2 192.168.1.10
+            assert_tags:
+            - ': bytes='
+            tags_are_present: false
+- code: INTERNET-USER
+  name: Internet-User
+  subCriterions:
+  - code: INTERNET-USER.CONNECTIVITY-TESTS
+    name: Connectivity Tests
+    aspects:
+    - code: INTERNET-USER.CONNECTIVITY-TESTS.CT-1
+      name: 'Internet-User to 192.168.1.70 : 192.168.1.70 (ICMP)'
+      description: 'Internet-User → 192.168.1.70 (PING): проходит'
+      skills:
+      - Other
+      max_mark: 2
+      steps:
+      - name: 'show running-config interface Serial0/1/1: matches (?m)^ ip access-group branch_to_hq out\s*$'
+        code: check
+        type: check
+        device: Branch
+        action_chain:
+        - action: verify_output_regex
+          action_vars:
+            command: show running-config interface Serial0/1/1
+            expr: (?m)^ ip access-group branch_to_hq out\s*$
+            match: true
+      - name: 'show running-config interface GigabitEthernet0/0/0: matches (?m)^ ip access-group 111 in\s*$'
+        code: check
+        type: check
+        device: HQ
+        action_chain:
+        - action: verify_output_regex
+          action_vars:
+            command: show running-config interface GigabitEthernet0/0/0
+            expr: (?m)^ ip access-group 111 in\s*$
+            match: true
+      - name: 'show running-config interface Serial0/1/0: matches (?m)^ ip access-group 101 in\s*$'
+        code: check
+        type: check
+        device: HQ
+        action_chain:
+        - action: verify_output_regex
+          action_vars:
+            command: show running-config interface Serial0/1/0
+            expr: (?m)^ ip access-group 101 in\s*$
+            match: true
+      - name: 'ping -n 2 192.168.1.70: has : bytes='
+        code: check
+        type: check
+        device: Internet-User
+        action_chain:
+        - action: verify_output
+          action_vars:
+            command: ping -n 2 192.168.1.70
+            assert_tags:
+            - ': bytes='
+            tags_are_present: true
+            retries: 3
+            retry_interval: 15
+    - code: INTERNET-USER.CONNECTIVITY-TESTS.CT-3
+      name: 'Internet-User to 192.168.1.10 : 192.168.1.10 (ICMP)'
+      description: 'Internet-User → 192.168.1.10 (PING): не проходит'
+      skills:
+      - Other
+      max_mark: 2
+      steps:
+      - name: 'show running-config interface Serial0/1/1: matches (?m)^ ip access-group branch_to_hq out\s*$'
+        code: check
+        type: check
+        device: Branch
+        action_chain:
+        - action: verify_output_regex
+          action_vars:
+            command: show running-config interface Serial0/1/1
+            expr: (?m)^ ip access-group branch_to_hq out\s*$
+            match: true
+      - name: 'show running-config interface GigabitEthernet0/0/0: matches (?m)^ ip access-group 111 in\s*$'
+        code: check
+        type: check
+        device: HQ
+        action_chain:
+        - action: verify_output_regex
+          action_vars:
+            command: show running-config interface GigabitEthernet0/0/0
+            expr: (?m)^ ip access-group 111 in\s*$
+            match: true
+      - name: 'show running-config interface Serial0/1/0: matches (?m)^ ip access-group 101 in\s*$'
+        code: check
+        type: check
+        device: HQ
+        action_chain:
+        - action: verify_output_regex
+          action_vars:
+            command: show running-config interface Serial0/1/0
+            expr: (?m)^ ip access-group 101 in\s*$
+            match: true
+      - name: 'ping -n 2 192.168.1.10: has not : bytes='
+        code: check
+        type: check
+        device: Internet-User
+        action_chain:
+        - action: verify_output
+          action_vars:
+            command: ping -n 2 192.168.1.10
+            assert_tags:
+            - ': bytes='
+            tags_are_present: false
+- code: ADMIN
+  name: Admin
+  subCriterions:
+  - code: ADMIN.CONNECTIVITY-TESTS
+    name: Connectivity Tests
+    aspects:
+    - code: ADMIN.CONNECTIVITY-TESTS.CT-2
+      name: 'Admin to 203.0.113.73 : 203.0.113.73 (ICMP)'
+      description: 'Admin → 203.0.113.73 (PING): проходит'
+      skills:
+      - Other
+      max_mark: 2
+      steps:
+      - name: 'show running-config interface Serial0/1/1: matches (?m)^ ip access-group branch_to_hq out\s*$'
+        code: check
+        type: check
+        device: Branch
+        action_chain:
+        - action: verify_output_regex
+          action_vars:
+            command: show running-config interface Serial0/1/1
+            expr: (?m)^ ip access-group branch_to_hq out\s*$
+            match: true
+      - name: 'show running-config interface GigabitEthernet0/0/0: matches (?m)^ ip access-group 111 in\s*$'
+        code: check
+        type: check
+        device: HQ
+        action_chain:
+        - action: verify_output_regex
+          action_vars:
+            command: show running-config interface GigabitEthernet0/0/0
+            expr: (?m)^ ip access-group 111 in\s*$
+            match: true
+      - name: 'show running-config interface Serial0/1/0: matches (?m)^ ip access-group 101 in\s*$'
+        code: check
+        type: check
+        device: HQ
+        action_chain:
+        - action: verify_output_regex
+          action_vars:
+            command: show running-config interface Serial0/1/0
+            expr: (?m)^ ip access-group 101 in\s*$
+            match: true
+      - name: 'ping -n 2 203.0.113.73: has : bytes='
+        code: check
+        type: check
+        device: Admin
+        action_chain:
+        - action: verify_output
+          action_vars:
+            command: ping -n 2 203.0.113.73
+            assert_tags:
+            - ': bytes='
+            tags_are_present: true
+            retries: 3
+            retry_interval: 15
+- code: PC-1
+  name: PC-1
+  subCriterions:
+  - code: PC-1.CONNECTIVITY-TESTS
+    name: Connectivity Tests
+    aspects:
+    - code: PC-1.CONNECTIVITY-TESTS.CT-4
+      name: 'PC-1 to 192.168.2.45 : 192.168.2.45 (ICMP)'
+      description: 'PC-1 → 192.168.2.45 (PING): не проходит'
+      skills:
+      - Other
+      max_mark: 2
+      steps:
+      - name: 'show running-config interface Serial0/1/1: matches (?m)^ ip access-group branch_to_hq out\s*$'
+        code: check
+        type: check
+        device: Branch
+        action_chain:
+        - action: verify_output_regex
+          action_vars:
+            command: show running-config interface Serial0/1/1
+            expr: (?m)^ ip access-group branch_to_hq out\s*$
+            match: true
+      - name: 'show running-config interface GigabitEthernet0/0/0: matches (?m)^ ip access-group 111 in\s*$'
+        code: check
+        type: check
+        device: HQ
+        action_chain:
+        - action: verify_output_regex
+          action_vars:
+            command: show running-config interface GigabitEthernet0/0/0
+            expr: (?m)^ ip access-group 111 in\s*$
+            match: true
+      - name: 'show running-config interface Serial0/1/0: matches (?m)^ ip access-group 101 in\s*$'
+        code: check
+        type: check
+        device: HQ
+        action_chain:
+        - action: verify_output_regex
+          action_vars:
+            command: show running-config interface Serial0/1/0
+            expr: (?m)^ ip access-group 101 in\s*$
+            match: true
+      - name: 'ping -n 2 192.168.2.45: has not : bytes='
+        code: check
+        type: check
+        device: PC-1
+        action_chain:
+        - action: verify_output
+          action_vars:
+            command: ping -n 2 192.168.2.45
+            assert_tags:
+            - ': bytes='
+            tags_are_present: false

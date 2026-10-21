@@ -123,17 +123,16 @@ Criterions:
       - IOS Config File Management
       max_mark: 25
       steps:
-      - name: 'show startup-config: has hostname RTA-1'
+      - name: 'show startup-config: matches (?m)^ ?hostname RTA\-1\s*$'
         code: check
         type: check
         device: RTA
         action_chain:
-        - action: verify_output
+        - action: verify_output_regex
           action_vars:
             command: show startup-config
-            assert_tags:
-            - hostname RTA-1
-            tags_are_present: true
+            expr: (?m)^ ?hostname RTA\-1\s*$
+            match: true
 - code: TFTP-SERVER
   name: TFTP-Server
   subCriterions:

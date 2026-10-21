@@ -13,17 +13,16 @@ Criterions:
       - Other
       max_mark: 5
       steps:
-      - name: 'show running-config: has not no cdp run'
+      - name: 'show running-config: matches (?m)\A(?![\s\S]*^no cdp run\s*$)'
         code: check
         type: check
         device: Branch-Edge
         action_chain:
-        - action: verify_output
+        - action: verify_output_regex
           action_vars:
             command: show running-config
-            assert_tags:
-            - no cdp run
-            tags_are_present: false
+            expr: (?m)\A(?![\s\S]*^no cdp run\s*$)
+            match: true
   - code: BRANCH-EDGE.PORTS
     name: Ports
     aspects:
@@ -34,14 +33,13 @@ Criterions:
       - Other
       max_mark: 5
       steps:
-      - name: 'show running-config interface Serial0/0/1: has  no cdp enable'
+      - name: 'show running-config interface Serial0/0/1: matches (?m)^ no cdp enable\s*$'
         code: check
         type: check
         device: Branch-Edge
         action_chain:
-        - action: verify_output
+        - action: verify_output_regex
           action_vars:
             command: show running-config interface Serial0/0/1
-            assert_tags:
-            - ' no cdp enable'
-            tags_are_present: true
+            expr: (?m)^ no cdp enable\s*$
+            match: true

@@ -8,16 +8,25 @@ Criterions:
     aspects:
     - code: R1.ACL.ACL-BRANCH-OFFICE-POLICY
       name: BRANCH-OFFICE-POLICY
-      description: 'Список доступа BRANCH-OFFICE-POLICY: 4 записей по порядку'
+      description: 'Список доступа BRANCH-OFFICE-POLICY: 4 записей, пересекающиеся — по порядку'
       skills:
       - Standard Named ACL Configuration
       max_mark: 10
       steps:
-      - name: 'show access-lists BRANCH-OFFICE-POLICY: matches (?m)^Standard IP access list BRANCH\-OFFICE\-POLICY\s*$\s*\n\s+\d+
-          permit\ 192\.168\.30\.3(?: \(\d+ match(?:es)?\))?\s*$\s*\n\s+\d+ permit\ 192\.168\.40\.0,\ wildcard\ bits\
-          0\.0\.0\.255(?: \(\d+ match(?:es)?\))?\s*$\s*\n\s+\d+ permit\ 209\.165\.200\.224,\ wildcard\ bits\ 0\.0\.0\.31(?:
-          \(\d+ match(?:es)?\))?\s*$\s*\n\s+\d+ deny\ \ \ any(?: \(\d+ match(?:es)?\))?\s*$(?![\s\S]*^\s+\d+ (?:permit|deny)
-          )'
+      - name: 'show access-lists BRANCH-OFFICE-POLICY: matches (?m)^Standard IP access list BRANCH\-OFFICE\-POLICY[
+          \t\r]*$(?=[\s\S]*^\s+\d+ (?:permit\ 192\.168\.30\.3)(?: \(\d+ match(?:es)?\))?[ \t\r]*$)(?=[\s\S]*^\s+\d+
+          (?:permit\ 192\.168\.40\.0,\ wildcard\ bits\ 0\.0\.0\.255)(?: \(\d+ match(?:es)?\))?[ \t\r]*$)(?=[\s\S]*^\s+\d+
+          (?:permit\ 209\.165\.200\.224,\ wildcard\ bits\ 0\.0\.0\.31)(?: \(\d+ match(?:es)?\))?[ \t\r]*$)(?=[\s\S]*^\s+\d+
+          (?:deny\ \ \ any)(?: \(\d+ match(?:es)?\))?[ \t\r]*$)(?![\s\S]*^\s+\d+ (?:deny\ \ \ any)(?: \(\d+ match(?:es)?\))?[
+          \t\r]*$[\s\S]*^\s+\d+ (?:permit\ 192\.168\.30\.3)(?: \(\d+ match(?:es)?\))?[ \t\r]*$)(?![\s\S]*^\s+\d+
+          (?:deny\ \ \ any)(?: \(\d+ match(?:es)?\))?[ \t\r]*$[\s\S]*^\s+\d+ (?:permit\ 192\.168\.40\.0,\ wildcard\
+          bits\ 0\.0\.0\.255)(?: \(\d+ match(?:es)?\))?[ \t\r]*$)(?![\s\S]*^\s+\d+ (?:deny\ \ \ any)(?: \(\d+ match(?:es)?\))?[
+          \t\r]*$[\s\S]*^\s+\d+ (?:permit\ 209\.165\.200\.224,\ wildcard\ bits\ 0\.0\.0\.31)(?: \(\d+ match(?:es)?\))?[
+          \t\r]*$)(?![\s\S]*^\s+\d+ (?:deny\ \ \ any|deny\ \ \ any\ log)(?: \(\d+ match(?:es)?\))?[ \t\r]*$[\s\S]*^\s+\d+
+          (?!(?:deny\ \ \ any|deny\ \ \ any\ log)(?: \(\d+ match(?:es)?\))?[ \t\r]*$))(?![\s\S]*^\s+\d+ (?!(?:(?:permit\
+          192\.168\.30\.3)|(?:permit\ 192\.168\.40\.0,\ wildcard\ bits\ 0\.0\.0\.255)|(?:permit\ 209\.165\.200\.224,\
+          wildcard\ bits\ 0\.0\.0\.31)|(?:deny\ \ \ any)|(?:deny\ \ \ any|deny\ \ \ any\ log))(?: \(\d+ match(?:es)?\))?[
+          \t\r]*$))'
         code: check
         type: check
         device: R1
@@ -25,11 +34,20 @@ Criterions:
         - action: verify_output_regex
           action_vars:
             command: show access-lists BRANCH-OFFICE-POLICY
-            expr: '(?m)^Standard IP access list BRANCH\-OFFICE\-POLICY\s*$\s*\n\s+\d+ permit\ 192\.168\.30\.3(?:
-              \(\d+ match(?:es)?\))?\s*$\s*\n\s+\d+ permit\ 192\.168\.40\.0,\ wildcard\ bits\ 0\.0\.0\.255(?: \(\d+
-              match(?:es)?\))?\s*$\s*\n\s+\d+ permit\ 209\.165\.200\.224,\ wildcard\ bits\ 0\.0\.0\.31(?: \(\d+
-              match(?:es)?\))?\s*$\s*\n\s+\d+ deny\ \ \ any(?: \(\d+ match(?:es)?\))?\s*$(?![\s\S]*^\s+\d+ (?:permit|deny)
-              )'
+            expr: '(?m)^Standard IP access list BRANCH\-OFFICE\-POLICY[ \t\r]*$(?=[\s\S]*^\s+\d+ (?:permit\ 192\.168\.30\.3)(?:
+              \(\d+ match(?:es)?\))?[ \t\r]*$)(?=[\s\S]*^\s+\d+ (?:permit\ 192\.168\.40\.0,\ wildcard\ bits\ 0\.0\.0\.255)(?:
+              \(\d+ match(?:es)?\))?[ \t\r]*$)(?=[\s\S]*^\s+\d+ (?:permit\ 209\.165\.200\.224,\ wildcard\ bits\
+              0\.0\.0\.31)(?: \(\d+ match(?:es)?\))?[ \t\r]*$)(?=[\s\S]*^\s+\d+ (?:deny\ \ \ any)(?: \(\d+ match(?:es)?\))?[
+              \t\r]*$)(?![\s\S]*^\s+\d+ (?:deny\ \ \ any)(?: \(\d+ match(?:es)?\))?[ \t\r]*$[\s\S]*^\s+\d+ (?:permit\
+              192\.168\.30\.3)(?: \(\d+ match(?:es)?\))?[ \t\r]*$)(?![\s\S]*^\s+\d+ (?:deny\ \ \ any)(?: \(\d+ match(?:es)?\))?[
+              \t\r]*$[\s\S]*^\s+\d+ (?:permit\ 192\.168\.40\.0,\ wildcard\ bits\ 0\.0\.0\.255)(?: \(\d+ match(?:es)?\))?[
+              \t\r]*$)(?![\s\S]*^\s+\d+ (?:deny\ \ \ any)(?: \(\d+ match(?:es)?\))?[ \t\r]*$[\s\S]*^\s+\d+ (?:permit\
+              209\.165\.200\.224,\ wildcard\ bits\ 0\.0\.0\.31)(?: \(\d+ match(?:es)?\))?[ \t\r]*$)(?![\s\S]*^\s+\d+
+              (?:deny\ \ \ any|deny\ \ \ any\ log)(?: \(\d+ match(?:es)?\))?[ \t\r]*$[\s\S]*^\s+\d+ (?!(?:deny\
+              \ \ any|deny\ \ \ any\ log)(?: \(\d+ match(?:es)?\))?[ \t\r]*$))(?![\s\S]*^\s+\d+ (?!(?:(?:permit\
+              192\.168\.30\.3)|(?:permit\ 192\.168\.40\.0,\ wildcard\ bits\ 0\.0\.0\.255)|(?:permit\ 209\.165\.200\.224,\
+              wildcard\ bits\ 0\.0\.0\.31)|(?:deny\ \ \ any)|(?:deny\ \ \ any|deny\ \ \ any\ log))(?: \(\d+ match(?:es)?\))?[
+              \t\r]*$))'
             match: true
   - code: R1.PORTS
     name: Ports
@@ -60,15 +78,22 @@ Criterions:
     aspects:
     - code: R3.ACL.ACL-1
       name: '1'
-      description: 'Список доступа 1: 3 записей по порядку'
+      description: 'Список доступа 1: 3 записей, пересекающиеся — по порядку'
       skills:
       - Standard Numbered ACL Configuration
       max_mark: 10
       steps:
-      - name: 'show access-lists 1: matches (?m)^Standard IP access list 1\s*$\s*\n\s+\d+ permit\ 192\.168\.10\.0,\
-          wildcard\ bits\ 0\.0\.0\.255(?: \(\d+ match(?:es)?\))?\s*$\s*\n\s+\d+ permit\ 192\.168\.20\.0,\ wildcard\
-          bits\ 0\.0\.0\.255(?: \(\d+ match(?:es)?\))?\s*$\s*\n\s+\d+ deny\ \ \ any(?: \(\d+ match(?:es)?\))?\s*$(?![\s\S]*^\s+\d+
-          (?:permit|deny) )'
+      - name: 'show access-lists 1: matches (?m)^Standard IP access list 1[ \t\r]*$(?=[\s\S]*^\s+\d+ (?:permit\
+          192\.168\.10\.0,\ wildcard\ bits\ 0\.0\.0\.255)(?: \(\d+ match(?:es)?\))?[ \t\r]*$)(?=[\s\S]*^\s+\d+ (?:permit\
+          192\.168\.20\.0,\ wildcard\ bits\ 0\.0\.0\.255)(?: \(\d+ match(?:es)?\))?[ \t\r]*$)(?=[\s\S]*^\s+\d+ (?:deny\
+          \ \ any)(?: \(\d+ match(?:es)?\))?[ \t\r]*$)(?![\s\S]*^\s+\d+ (?:deny\ \ \ any)(?: \(\d+ match(?:es)?\))?[
+          \t\r]*$[\s\S]*^\s+\d+ (?:permit\ 192\.168\.10\.0,\ wildcard\ bits\ 0\.0\.0\.255)(?: \(\d+ match(?:es)?\))?[
+          \t\r]*$)(?![\s\S]*^\s+\d+ (?:deny\ \ \ any)(?: \(\d+ match(?:es)?\))?[ \t\r]*$[\s\S]*^\s+\d+ (?:permit\
+          192\.168\.20\.0,\ wildcard\ bits\ 0\.0\.0\.255)(?: \(\d+ match(?:es)?\))?[ \t\r]*$)(?![\s\S]*^\s+\d+ (?:deny\
+          \ \ any|deny\ \ \ any\ log)(?: \(\d+ match(?:es)?\))?[ \t\r]*$[\s\S]*^\s+\d+ (?!(?:deny\ \ \ any|deny\
+          \ \ any\ log)(?: \(\d+ match(?:es)?\))?[ \t\r]*$))(?![\s\S]*^\s+\d+ (?!(?:(?:permit\ 192\.168\.10\.0,\
+          wildcard\ bits\ 0\.0\.0\.255)|(?:permit\ 192\.168\.20\.0,\ wildcard\ bits\ 0\.0\.0\.255)|(?:deny\ \ \
+          any)|(?:deny\ \ \ any|deny\ \ \ any\ log))(?: \(\d+ match(?:es)?\))?[ \t\r]*$))'
         code: check
         type: check
         device: R3
@@ -76,10 +101,17 @@ Criterions:
         - action: verify_output_regex
           action_vars:
             command: show access-lists 1
-            expr: '(?m)^Standard IP access list 1\s*$\s*\n\s+\d+ permit\ 192\.168\.10\.0,\ wildcard\ bits\ 0\.0\.0\.255(?:
-              \(\d+ match(?:es)?\))?\s*$\s*\n\s+\d+ permit\ 192\.168\.20\.0,\ wildcard\ bits\ 0\.0\.0\.255(?: \(\d+
-              match(?:es)?\))?\s*$\s*\n\s+\d+ deny\ \ \ any(?: \(\d+ match(?:es)?\))?\s*$(?![\s\S]*^\s+\d+ (?:permit|deny)
-              )'
+            expr: '(?m)^Standard IP access list 1[ \t\r]*$(?=[\s\S]*^\s+\d+ (?:permit\ 192\.168\.10\.0,\ wildcard\
+              bits\ 0\.0\.0\.255)(?: \(\d+ match(?:es)?\))?[ \t\r]*$)(?=[\s\S]*^\s+\d+ (?:permit\ 192\.168\.20\.0,\
+              wildcard\ bits\ 0\.0\.0\.255)(?: \(\d+ match(?:es)?\))?[ \t\r]*$)(?=[\s\S]*^\s+\d+ (?:deny\ \ \ any)(?:
+              \(\d+ match(?:es)?\))?[ \t\r]*$)(?![\s\S]*^\s+\d+ (?:deny\ \ \ any)(?: \(\d+ match(?:es)?\))?[ \t\r]*$[\s\S]*^\s+\d+
+              (?:permit\ 192\.168\.10\.0,\ wildcard\ bits\ 0\.0\.0\.255)(?: \(\d+ match(?:es)?\))?[ \t\r]*$)(?![\s\S]*^\s+\d+
+              (?:deny\ \ \ any)(?: \(\d+ match(?:es)?\))?[ \t\r]*$[\s\S]*^\s+\d+ (?:permit\ 192\.168\.20\.0,\ wildcard\
+              bits\ 0\.0\.0\.255)(?: \(\d+ match(?:es)?\))?[ \t\r]*$)(?![\s\S]*^\s+\d+ (?:deny\ \ \ any|deny\ \
+              \ any\ log)(?: \(\d+ match(?:es)?\))?[ \t\r]*$[\s\S]*^\s+\d+ (?!(?:deny\ \ \ any|deny\ \ \ any\ log)(?:
+              \(\d+ match(?:es)?\))?[ \t\r]*$))(?![\s\S]*^\s+\d+ (?!(?:(?:permit\ 192\.168\.10\.0,\ wildcard\ bits\
+              0\.0\.0\.255)|(?:permit\ 192\.168\.20\.0,\ wildcard\ bits\ 0\.0\.0\.255)|(?:deny\ \ \ any)|(?:deny\
+              \ \ any|deny\ \ \ any\ log))(?: \(\d+ match(?:es)?\))?[ \t\r]*$))'
             match: true
   - code: R3.PORTS
     name: Ports
@@ -101,3 +133,265 @@ Criterions:
             command: show running-config interface GigabitEthernet0/0/0
             expr: (?m)^ ip access-group 1 out\s*$
             match: true
+- code: PC-A
+  name: PC-A
+  subCriterions:
+  - code: PC-A.CONNECTIVITY-TESTS
+    name: Connectivity Tests
+    aspects:
+    - code: PC-A.CONNECTIVITY-TESTS.CT-0
+      name: 'PC-A to 192.168.30.3 : 192.168.30.3 (ICMP)'
+      description: 'PC-A → 192.168.30.3 (PING): проходит'
+      skills:
+      - Other
+      max_mark: 1
+      steps:
+      - name: 'show running-config interface GigabitEthernet0/0/0: matches (?m)^ ip access-group BRANCH\-OFFICE\-POLICY
+          out\s*$'
+        code: check
+        type: check
+        device: R1
+        action_chain:
+        - action: verify_output_regex
+          action_vars:
+            command: show running-config interface GigabitEthernet0/0/0
+            expr: (?m)^ ip access-group BRANCH\-OFFICE\-POLICY out\s*$
+            match: true
+      - name: 'show running-config interface GigabitEthernet0/0/0: matches (?m)^ ip access-group 1 out\s*$'
+        code: check
+        type: check
+        device: R3
+        action_chain:
+        - action: verify_output_regex
+          action_vars:
+            command: show running-config interface GigabitEthernet0/0/0
+            expr: (?m)^ ip access-group 1 out\s*$
+            match: true
+      - name: 'ping -n 2 192.168.30.3: has : bytes='
+        code: check
+        type: check
+        device: PC-A
+        action_chain:
+        - action: verify_output
+          action_vars:
+            command: ping -n 2 192.168.30.3
+            assert_tags:
+            - ': bytes='
+            tags_are_present: true
+            retries: 3
+            retry_interval: 15
+    - code: PC-A.CONNECTIVITY-TESTS.CT-1
+      name: 'PC-A to 209.165.200.254 : 209.165.200.254 (ICMP)'
+      description: 'PC-A → 209.165.200.254 (PING): проходит'
+      skills:
+      - Other
+      max_mark: 1
+      steps:
+      - name: 'show running-config interface GigabitEthernet0/0/0: matches (?m)^ ip access-group BRANCH\-OFFICE\-POLICY
+          out\s*$'
+        code: check
+        type: check
+        device: R1
+        action_chain:
+        - action: verify_output_regex
+          action_vars:
+            command: show running-config interface GigabitEthernet0/0/0
+            expr: (?m)^ ip access-group BRANCH\-OFFICE\-POLICY out\s*$
+            match: true
+      - name: 'show running-config interface GigabitEthernet0/0/0: matches (?m)^ ip access-group 1 out\s*$'
+        code: check
+        type: check
+        device: R3
+        action_chain:
+        - action: verify_output_regex
+          action_vars:
+            command: show running-config interface GigabitEthernet0/0/0
+            expr: (?m)^ ip access-group 1 out\s*$
+            match: true
+      - name: 'ping -n 2 209.165.200.254: has : bytes='
+        code: check
+        type: check
+        device: PC-A
+        action_chain:
+        - action: verify_output
+          action_vars:
+            command: ping -n 2 209.165.200.254
+            assert_tags:
+            - ': bytes='
+            tags_are_present: true
+            retries: 1
+            retry_interval: 5
+    - code: PC-A.CONNECTIVITY-TESTS.CT-3
+      name: 'PC-A to 192.168.40.3 : 192.168.40.3 (ICMP)'
+      description: 'PC-A → 192.168.40.3 (PING): проходит'
+      skills:
+      - Other
+      max_mark: 1
+      steps:
+      - name: 'show running-config interface GigabitEthernet0/0/0: matches (?m)^ ip access-group BRANCH\-OFFICE\-POLICY
+          out\s*$'
+        code: check
+        type: check
+        device: R1
+        action_chain:
+        - action: verify_output_regex
+          action_vars:
+            command: show running-config interface GigabitEthernet0/0/0
+            expr: (?m)^ ip access-group BRANCH\-OFFICE\-POLICY out\s*$
+            match: true
+      - name: 'show running-config interface GigabitEthernet0/0/0: matches (?m)^ ip access-group 1 out\s*$'
+        code: check
+        type: check
+        device: R3
+        action_chain:
+        - action: verify_output_regex
+          action_vars:
+            command: show running-config interface GigabitEthernet0/0/0
+            expr: (?m)^ ip access-group 1 out\s*$
+            match: true
+      - name: 'ping -n 2 192.168.40.3: has : bytes='
+        code: check
+        type: check
+        device: PC-A
+        action_chain:
+        - action: verify_output
+          action_vars:
+            command: ping -n 2 192.168.40.3
+            assert_tags:
+            - ': bytes='
+            tags_are_present: true
+            retries: 1
+            retry_interval: 5
+- code: PC-C
+  name: PC-C
+  subCriterions:
+  - code: PC-C.CONNECTIVITY-TESTS
+    name: Connectivity Tests
+    aspects:
+    - code: PC-C.CONNECTIVITY-TESTS.CT-2
+      name: 'PC-C to 192.168.10.3 : 192.168.10.3 (ICMP)'
+      description: 'PC-C → 192.168.10.3 (PING): проходит'
+      skills:
+      - Other
+      max_mark: 1
+      steps:
+      - name: 'show running-config interface GigabitEthernet0/0/0: matches (?m)^ ip access-group BRANCH\-OFFICE\-POLICY
+          out\s*$'
+        code: check
+        type: check
+        device: R1
+        action_chain:
+        - action: verify_output_regex
+          action_vars:
+            command: show running-config interface GigabitEthernet0/0/0
+            expr: (?m)^ ip access-group BRANCH\-OFFICE\-POLICY out\s*$
+            match: true
+      - name: 'show running-config interface GigabitEthernet0/0/0: matches (?m)^ ip access-group 1 out\s*$'
+        code: check
+        type: check
+        device: R3
+        action_chain:
+        - action: verify_output_regex
+          action_vars:
+            command: show running-config interface GigabitEthernet0/0/0
+            expr: (?m)^ ip access-group 1 out\s*$
+            match: true
+      - name: 'ping -n 2 192.168.10.3: has : bytes='
+        code: check
+        type: check
+        device: PC-C
+        action_chain:
+        - action: verify_output
+          action_vars:
+            command: ping -n 2 192.168.10.3
+            assert_tags:
+            - ': bytes='
+            tags_are_present: true
+            retries: 3
+            retry_interval: 15
+- code: PC-D
+  name: PC-D
+  subCriterions:
+  - code: PC-D.CONNECTIVITY-TESTS
+    name: Connectivity Tests
+    aspects:
+    - code: PC-D.CONNECTIVITY-TESTS.CT-4
+      name: 'PC-D to 192.168.10.3 : 192.168.10.3 (ICMP)'
+      description: 'PC-D → 192.168.10.3 (PING): проходит'
+      skills:
+      - Other
+      max_mark: 1
+      steps:
+      - name: 'show running-config interface GigabitEthernet0/0/0: matches (?m)^ ip access-group BRANCH\-OFFICE\-POLICY
+          out\s*$'
+        code: check
+        type: check
+        device: R1
+        action_chain:
+        - action: verify_output_regex
+          action_vars:
+            command: show running-config interface GigabitEthernet0/0/0
+            expr: (?m)^ ip access-group BRANCH\-OFFICE\-POLICY out\s*$
+            match: true
+      - name: 'show running-config interface GigabitEthernet0/0/0: matches (?m)^ ip access-group 1 out\s*$'
+        code: check
+        type: check
+        device: R3
+        action_chain:
+        - action: verify_output_regex
+          action_vars:
+            command: show running-config interface GigabitEthernet0/0/0
+            expr: (?m)^ ip access-group 1 out\s*$
+            match: true
+      - name: 'ping -n 2 192.168.10.3: has : bytes='
+        code: check
+        type: check
+        device: PC-D
+        action_chain:
+        - action: verify_output
+          action_vars:
+            command: ping -n 2 192.168.10.3
+            assert_tags:
+            - ': bytes='
+            tags_are_present: true
+            retries: 3
+            retry_interval: 15
+    - code: PC-D.CONNECTIVITY-TESTS.CT-5
+      name: 'PC-D to 192.168.30.3 : 192.168.30.3 (ICMP)'
+      description: 'PC-D → 192.168.30.3 (PING): не проходит'
+      skills:
+      - Other
+      max_mark: 1
+      steps:
+      - name: 'show running-config interface GigabitEthernet0/0/0: matches (?m)^ ip access-group BRANCH\-OFFICE\-POLICY
+          out\s*$'
+        code: check
+        type: check
+        device: R1
+        action_chain:
+        - action: verify_output_regex
+          action_vars:
+            command: show running-config interface GigabitEthernet0/0/0
+            expr: (?m)^ ip access-group BRANCH\-OFFICE\-POLICY out\s*$
+            match: true
+      - name: 'show running-config interface GigabitEthernet0/0/0: matches (?m)^ ip access-group 1 out\s*$'
+        code: check
+        type: check
+        device: R3
+        action_chain:
+        - action: verify_output_regex
+          action_vars:
+            command: show running-config interface GigabitEthernet0/0/0
+            expr: (?m)^ ip access-group 1 out\s*$
+            match: true
+      - name: 'ping -n 2 192.168.30.3: has not : bytes='
+        code: check
+        type: check
+        device: PC-D
+        action_chain:
+        - action: verify_output
+          action_vars:
+            command: ping -n 2 192.168.30.3
+            assert_tags:
+            - ': bytes='
+            tags_are_present: false

@@ -60,3 +60,103 @@ Criterions:
             command: show running-config interface Serial0/0/0
             expr: (?m)^ ip nat outside\s*$
             match: true
+- code: PC1
+  name: PC1
+  subCriterions:
+  - code: PC1.CONNECTIVITY-TESTS
+    name: Connectivity Tests
+    aspects:
+    - code: PC1.CONNECTIVITY-TESTS.CT-0
+      name: 'PC1 to 64.100.50.1 : 64.100.50.1 (ICMP)'
+      description: 'PC1 → 64.100.50.1 (PING): проходит'
+      skills:
+      - Other
+      max_mark: 3
+      steps:
+      - name: 'ping -n 2 64.100.50.1: has : bytes='
+        code: check
+        type: check
+        device: PC1
+        action_chain:
+        - action: verify_output
+          action_vars:
+            command: ping -n 2 64.100.50.1
+            assert_tags:
+            - ': bytes='
+            tags_are_present: true
+            retries: 3
+            retry_interval: 15
+    - code: PC1.CONNECTIVITY-TESTS.CT-2
+      name: 'PC1 to 64.100.50.1 : http://64.100.50.1 (TCP)'
+      description: 'PC1 → http://64.100.50.1 (HTTP): проходит'
+      skills:
+      - Other
+      max_mark: 3
+      steps:
+      - name: 'browse http://64.100.50.1: ok'
+        code: check
+        type: check
+        device: PC1
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{lab_ip}:7681/api/hosts/PC1/browse
+            method: POST
+            content:
+              url: http://64.100.50.1
+            assert_code: 200
+            assert_jmespath:
+              path: status
+              value: ok
+            retries: 1
+            retry_interval: 5
+- code: L1
+  name: L1
+  subCriterions:
+  - code: L1.CONNECTIVITY-TESTS
+    name: Connectivity Tests
+    aspects:
+    - code: L1.CONNECTIVITY-TESTS.CT-1
+      name: 'L1 to 64.100.50.1 : 64.100.50.1 (ICMP)'
+      description: 'L1 → 64.100.50.1 (PING): проходит'
+      skills:
+      - Other
+      max_mark: 3
+      steps:
+      - name: 'ping -n 2 64.100.50.1: has : bytes='
+        code: check
+        type: check
+        device: L1
+        action_chain:
+        - action: verify_output
+          action_vars:
+            command: ping -n 2 64.100.50.1
+            assert_tags:
+            - ': bytes='
+            tags_are_present: true
+            retries: 3
+            retry_interval: 15
+    - code: L1.CONNECTIVITY-TESTS.CT-3
+      name: 'L1 to 64.100.50.1 : http://64.100.50.1 (TCP)'
+      description: 'L1 → http://64.100.50.1 (HTTP): проходит'
+      skills:
+      - Other
+      max_mark: 3
+      steps:
+      - name: 'browse http://64.100.50.1: ok'
+        code: check
+        type: check
+        device: L1
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{lab_ip}:7681/api/hosts/L1/browse
+            method: POST
+            content:
+              url: http://64.100.50.1
+            assert_code: 200
+            assert_jmespath:
+              path: status
+              value: ok
+            retries: 1
+            retry_interval: 5

@@ -113,17 +113,16 @@ Criterions:
       - Other
       max_mark: 1
       steps:
-      - name: 'show running-config: has banner motd'
+      - name: 'show running-config: matches (?m)^banner motd \^C\s*(?!\^C\s*$)\S[\s\S]*?\^C\s*$'
         code: check
         type: check
         device: Main
         action_chain:
-        - action: verify_output
+        - action: verify_output_regex
           action_vars:
             command: show running-config
-            assert_tags:
-            - banner motd
-            tags_are_present: true
+            expr: (?m)^banner motd \^C\s*(?!\^C\s*$)\S[\s\S]*?\^C\s*$
+            match: true
     - code: MAIN.MISC.CONFIG-REGISTER
       name: Config-Register
       description: Регистр конфигурации — 0x2102
@@ -149,17 +148,16 @@ Criterions:
       - Other
       max_mark: 1
       steps:
-      - name: 'show running-config: has enable secret 5 $1$mERr$T4NrYc.MBfbkmoOC'
+      - name: 'show running-config: matches (?m)^enable secret 5 \$1\$mERr\$T4NrYc\.MBfbkmoOC\s*$'
         code: check
         type: check
         device: Main
         action_chain:
-        - action: verify_output
+        - action: verify_output_regex
           action_vars:
             command: show running-config
-            assert_tags:
-            - enable secret 5 $1$mERr$T4NrYc.MBfbkmoOC
-            tags_are_present: true
+            expr: (?m)^enable secret 5 \$1\$mERr\$T4NrYc\.MBfbkmoOC\s*$
+            match: true
     - code: MAIN.MISC.HOSTNAME
       name: Host Name
       description: Имя устройства — Branch

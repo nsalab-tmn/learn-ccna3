@@ -13,17 +13,16 @@ Criterions:
       - Other
       max_mark: 10
       steps:
-      - name: 'show running-config: has no cdp run'
+      - name: 'show running-config: matches (?m)^no cdp run\s*$'
         code: check
         type: check
         device: Edge
         action_chain:
-        - action: verify_output
+        - action: verify_output_regex
           action_vars:
             command: show running-config
-            assert_tags:
-            - no cdp run
-            tags_are_present: true
+            expr: (?m)^no cdp run\s*$
+            match: true
   - code: EDGE.LLDP
     name: LLDP
     aspects:
@@ -54,17 +53,16 @@ Criterions:
       - LLDP Configuration
       max_mark: 10
       steps:
-      - name: 'show running-config interface GigabitEthernet0/0: has  no lldp transmit'
+      - name: 'show running-config interface GigabitEthernet0/0: matches (?m)^ no lldp transmit\s*$'
         code: check
         type: check
         device: Edge
         action_chain:
-        - action: verify_output
+        - action: verify_output_regex
           action_vars:
             command: show running-config interface GigabitEthernet0/0
-            assert_tags:
-            - ' no lldp transmit'
-            tags_are_present: true
+            expr: (?m)^ no lldp transmit\s*$
+            match: true
 - code: RBO-EDGE
   name: RBO-Edge
   subCriterions:
@@ -98,17 +96,16 @@ Criterions:
       - LLDP Configuration
       max_mark: 10
       steps:
-      - name: 'show running-config interface GigabitEthernet0/0: has  no lldp receive'
+      - name: 'show running-config interface GigabitEthernet0/0: matches (?m)^ no lldp receive\s*$'
         code: check
         type: check
         device: RBO-Edge
         action_chain:
-        - action: verify_output
+        - action: verify_output_regex
           action_vars:
             command: show running-config interface GigabitEthernet0/0
-            assert_tags:
-            - ' no lldp receive'
-            tags_are_present: true
+            expr: (?m)^ no lldp receive\s*$
+            match: true
     - code: RBO-EDGE.PORTS.G0-0-LLDP-TRANSMIT
       name: GigabitEthernet0/0.LLDP Transmit
       description: 'G0/0: LLDP transmit выключен'
@@ -116,14 +113,13 @@ Criterions:
       - LLDP Configuration
       max_mark: 10
       steps:
-      - name: 'show running-config interface GigabitEthernet0/0: has  no lldp transmit'
+      - name: 'show running-config interface GigabitEthernet0/0: matches (?m)^ no lldp transmit\s*$'
         code: check
         type: check
         device: RBO-Edge
         action_chain:
-        - action: verify_output
+        - action: verify_output_regex
           action_vars:
             command: show running-config interface GigabitEthernet0/0
-            assert_tags:
-            - ' no lldp transmit'
-            tags_are_present: true
+            expr: (?m)^ no lldp transmit\s*$
+            match: true

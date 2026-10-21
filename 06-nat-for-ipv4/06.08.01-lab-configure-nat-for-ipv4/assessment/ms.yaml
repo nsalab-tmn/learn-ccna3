@@ -8,15 +8,19 @@ Criterions:
     aspects:
     - code: R2.ACL.ACL-R2NAT
       name: R2NAT
-      description: 'Список доступа R2NAT: 3 записей по порядку'
+      description: 'Список доступа R2NAT: 3 записей, в любом порядке'
       skills:
       - ACL
       max_mark: 2
       steps:
-      - name: 'show access-lists R2NAT: matches (?m)^Standard IP access list R2NAT\s*$\s*\n\s+\d+ permit\ 192\.168\.10\.0,\
-          wildcard\ bits\ 0\.0\.0\.255(?: \(\d+ match(?:es)?\))?\s*$\s*\n\s+\d+ permit\ 192\.168\.20\.0,\ wildcard\
-          bits\ 0\.0\.0\.255(?: \(\d+ match(?:es)?\))?\s*$\s*\n\s+\d+ permit\ 192\.168\.30\.0,\ wildcard\ bits\
-          0\.0\.0\.255(?: \(\d+ match(?:es)?\))?\s*$(?![\s\S]*^\s+\d+ (?:permit|deny) )'
+      - name: 'show access-lists R2NAT: matches (?m)^Standard IP access list R2NAT[ \t\r]*$(?=[\s\S]*^\s+\d+ (?:permit\
+          192\.168\.10\.0,\ wildcard\ bits\ 0\.0\.0\.255)(?: \(\d+ match(?:es)?\))?[ \t\r]*$)(?=[\s\S]*^\s+\d+ (?:permit\
+          192\.168\.20\.0,\ wildcard\ bits\ 0\.0\.0\.255)(?: \(\d+ match(?:es)?\))?[ \t\r]*$)(?=[\s\S]*^\s+\d+ (?:permit\
+          192\.168\.30\.0,\ wildcard\ bits\ 0\.0\.0\.255)(?: \(\d+ match(?:es)?\))?[ \t\r]*$)(?![\s\S]*^\s+\d+ (?:deny\
+          \ \ any|deny\ \ \ any\ log)(?: \(\d+ match(?:es)?\))?[ \t\r]*$[\s\S]*^\s+\d+ (?!(?:deny\ \ \ any|deny\
+          \ \ any\ log)(?: \(\d+ match(?:es)?\))?[ \t\r]*$))(?![\s\S]*^\s+\d+ (?!(?:(?:permit\ 192\.168\.10\.0,\
+          wildcard\ bits\ 0\.0\.0\.255)|(?:permit\ 192\.168\.20\.0,\ wildcard\ bits\ 0\.0\.0\.255)|(?:permit\ 192\.168\.30\.0,\
+          wildcard\ bits\ 0\.0\.0\.255)|(?:deny\ \ \ any|deny\ \ \ any\ log))(?: \(\d+ match(?:es)?\))?[ \t\r]*$))'
         code: check
         type: check
         device: R2
@@ -24,10 +28,14 @@ Criterions:
         - action: verify_output_regex
           action_vars:
             command: show access-lists R2NAT
-            expr: '(?m)^Standard IP access list R2NAT\s*$\s*\n\s+\d+ permit\ 192\.168\.10\.0,\ wildcard\ bits\ 0\.0\.0\.255(?:
-              \(\d+ match(?:es)?\))?\s*$\s*\n\s+\d+ permit\ 192\.168\.20\.0,\ wildcard\ bits\ 0\.0\.0\.255(?: \(\d+
-              match(?:es)?\))?\s*$\s*\n\s+\d+ permit\ 192\.168\.30\.0,\ wildcard\ bits\ 0\.0\.0\.255(?: \(\d+ match(?:es)?\))?\s*$(?![\s\S]*^\s+\d+
-              (?:permit|deny) )'
+            expr: '(?m)^Standard IP access list R2NAT[ \t\r]*$(?=[\s\S]*^\s+\d+ (?:permit\ 192\.168\.10\.0,\ wildcard\
+              bits\ 0\.0\.0\.255)(?: \(\d+ match(?:es)?\))?[ \t\r]*$)(?=[\s\S]*^\s+\d+ (?:permit\ 192\.168\.20\.0,\
+              wildcard\ bits\ 0\.0\.0\.255)(?: \(\d+ match(?:es)?\))?[ \t\r]*$)(?=[\s\S]*^\s+\d+ (?:permit\ 192\.168\.30\.0,\
+              wildcard\ bits\ 0\.0\.0\.255)(?: \(\d+ match(?:es)?\))?[ \t\r]*$)(?![\s\S]*^\s+\d+ (?:deny\ \ \ any|deny\
+              \ \ any\ log)(?: \(\d+ match(?:es)?\))?[ \t\r]*$[\s\S]*^\s+\d+ (?!(?:deny\ \ \ any|deny\ \ \ any\
+              log)(?: \(\d+ match(?:es)?\))?[ \t\r]*$))(?![\s\S]*^\s+\d+ (?!(?:(?:permit\ 192\.168\.10\.0,\ wildcard\
+              bits\ 0\.0\.0\.255)|(?:permit\ 192\.168\.20\.0,\ wildcard\ bits\ 0\.0\.0\.255)|(?:permit\ 192\.168\.30\.0,\
+              wildcard\ bits\ 0\.0\.0\.255)|(?:deny\ \ \ any|deny\ \ \ any\ log))(?: \(\d+ match(?:es)?\))?[ \t\r]*$))'
             match: true
   - code: R2.NAT
     name: NAT
@@ -155,3 +163,81 @@ Criterions:
             command: show running-config interface Serial0/1/0
             expr: (?m)^ ip nat outside\s*$
             match: true
+- code: PC1
+  name: PC1
+  subCriterions:
+  - code: PC1.CONNECTIVITY-TESTS
+    name: Connectivity Tests
+    aspects:
+    - code: PC1.CONNECTIVITY-TESTS.CT-0
+      name: 'PC1 to 209.165.201.30 : 209.165.201.30 (ICMP)'
+      description: 'PC1 → 209.165.201.30 (PING): проходит'
+      skills:
+      - Other
+      max_mark: 1
+      steps:
+      - name: 'ping -n 2 209.165.201.30: has : bytes='
+        code: check
+        type: check
+        device: PC1
+        action_chain:
+        - action: verify_output
+          action_vars:
+            command: ping -n 2 209.165.201.30
+            assert_tags:
+            - ': bytes='
+            tags_are_present: true
+            retries: 3
+            retry_interval: 15
+- code: PC2
+  name: PC2
+  subCriterions:
+  - code: PC2.CONNECTIVITY-TESTS
+    name: Connectivity Tests
+    aspects:
+    - code: PC2.CONNECTIVITY-TESTS.CT-1
+      name: 'PC2 to 209.165.201.30 : 209.165.201.30 (ICMP)'
+      description: 'PC2 → 209.165.201.30 (PING): проходит'
+      skills:
+      - Other
+      max_mark: 1
+      steps:
+      - name: 'ping -n 2 209.165.201.30: has : bytes='
+        code: check
+        type: check
+        device: PC2
+        action_chain:
+        - action: verify_output
+          action_vars:
+            command: ping -n 2 209.165.201.30
+            assert_tags:
+            - ': bytes='
+            tags_are_present: true
+            retries: 3
+            retry_interval: 15
+- code: OUTSIDE-PC
+  name: Outside-PC
+  subCriterions:
+  - code: OUTSIDE-PC.CONNECTIVITY-TESTS
+    name: Connectivity Tests
+    aspects:
+    - code: OUTSIDE-PC.CONNECTIVITY-TESTS.CT-2
+      name: 'Outside-PC to 209.165.202.130 : 209.165.202.130 (ICMP)'
+      description: 'Outside-PC → 209.165.202.130 (PING): проходит'
+      skills:
+      - Other
+      max_mark: 1
+      steps:
+      - name: 'ping -n 2 209.165.202.130: has : bytes='
+        code: check
+        type: check
+        device: Outside-PC
+        action_chain:
+        - action: verify_output
+          action_vars:
+            command: ping -n 2 209.165.202.130
+            assert_tags:
+            - ': bytes='
+            tags_are_present: true
+            retries: 3
+            retry_interval: 15
