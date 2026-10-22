@@ -92,7 +92,7 @@
     <td>NR05</td>
     <td>Центральный пограничный маршрутизатор</td>
     <td>Здание A Rm: 137</td>
-    <td colspan="2">NSALAB NetOS Software, Version 0.1.0, flash0:nr05-netos-0.1.0.bin</td>
+    <td colspan="2">NSALAB NetOS Software, Version 0.1.0, flash:nr05-netos-0.1.0.bin</td>
   </tr>
   <tr>
     <td><b>Интерфейс</b></td>
@@ -146,7 +146,7 @@
     <td>NR02</td>
     <td>Пограничный маршрутизатор Branch-1</td>
     <td>Здание B Rm: 107</td>
-    <td colspan="2">NSALAB NetOS Software, Version 0.1.0, flash0:nr02-netos-0.1.0.bin</td>
+    <td colspan="2">NSALAB NetOS Software, Version 0.1.0, flash:nr02-netos-0.1.0.bin</td>
   </tr>
   <tr >
     <td><b>Интерфейс</b></td>
@@ -192,7 +192,7 @@
     <td>NS01</td>
     <td>Branch-1 коммутатор LAN1</td>
     <td colspan="2">192.168.77.2/24</td>
-    <td colspan="4">NSALAB NetOS Software, Version 0.1.0, flash0:ns01-netos-0.1.0.bin</td>
+    <td colspan="4">NSALAB NetOS Software, Version 0.1.0, flash:ns01-netos-0.1.0.bin</td>
     <td colspan="3">Domain: nsalab Mode: Server</td>
   </tr>
   <tr >

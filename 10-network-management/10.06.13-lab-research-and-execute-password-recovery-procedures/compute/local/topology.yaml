@@ -184,7 +184,7 @@ scenario:
 
         Branch uptime is 0 minutes
         System returned to ROM by reload
-        System image file is "flash0:nr04-netos-0.1.0.bin"
+        System image file is "flash:nr04-netos-0.1.0.bin"
 
         NSALAB NR04 (revision 1.0) with 491520K/32768K bytes of memory.
         Processor board ID NSA00000001
@@ -208,7 +208,7 @@ scenario:
 
         Branch uptime is 0 minutes
         System returned to ROM by reload
-        System image file is "flash0:nr04-netos-0.1.0.bin"
+        System image file is "flash:nr04-netos-0.1.0.bin"
 
         NSALAB NR04 (revision 1.0) with 491520K/32768K bytes of memory.
         Processor board ID NSA00000001
@@ -316,7 +316,7 @@ scenario:
 
         Branch uptime is 0 minutes
         System returned to ROM by reload
-        System image file is "flash0:nr04-netos-0.1.0.bin"
+        System image file is "flash:nr04-netos-0.1.0.bin"
 
         NSALAB NR04 (revision 1.0) with 491520K/32768K bytes of memory.
         Processor board ID NSA00000001

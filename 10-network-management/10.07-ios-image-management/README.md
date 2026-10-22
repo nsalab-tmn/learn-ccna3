@@ -54,11 +54,11 @@ R1#
 
 ```
 R1#show flash:
-System flash directory:
-File  Length   Name/status
-  1   417290496 nr02-netos-0.1.0.bin
-[417290496 bytes used, 2806261312 available, 3223551808 total]
-3147999K bytes of processor board System flash (Read/Write)
+-#- --length-- -----date/time------ path
+1    417290496 <no date>            nr02-netos-0.1.0.bin
+
+2806261312 bytes available (417290496 bytes used)
+
 R1#
 ```
 
@@ -74,7 +74,7 @@ Destination filename [nr02-netos-0.1.0.bin]?
 Writing nr02-netos-0.1.0.bin...!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 [OK - 417290496 bytes]
 
-417290496 bytes copied in 417.290 secs (1000000 bytes/sec)
+417290496 bytes copied in 50.919 secs (8195113 bytes/sec)
 R1#
 ```
 
@@ -111,11 +111,10 @@ R1#
 
 ```
 R1#show flash:
-System flash directory:
-File  Length   Name/status
-  1   417290496 nr02-netos-0.1.0.bin
-[417290496 bytes used, 2806261312 available, 3223551808 total]
-3147999K bytes of processor board System flash (Read/Write)
+-#- --length-- -----date/time------ path
+1    417290496 <no date>            nr02-netos-0.1.0.bin
+
+2806261312 bytes available (417290496 bytes used)
 
 R1#
 ```
@@ -133,7 +132,7 @@ Accessing tftp://2001:DB8:CAFE:100::99/nr02-netos-0.2.0.bin...
 Loading nr02-netos-0.2.0.bin from 2001:DB8:CAFE:100::99 (via GigabitEthernet0/0/0): !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 [OK - 34201600 bytes]
 
-34201600 bytes copied in 34.202 secs (1000000 bytes/sec)
+34201600 bytes copied in 4.173 secs (8195113 bytes/sec)
 R1#
 ```
 
@@ -170,7 +169,7 @@ Copyright (c) 2026 NSALAB
 
 R1 uptime is 1 minute
 System returned to ROM by reload
-System image file is "flash0:nr02-netos-0.2.0.bin"
+System image file is "flash:nr02-netos-0.2.0.bin"
 
 NSALAB NR02 (revision 1.0) with 1048576K/6147K bytes of memory.
 Processor board ID NSA00000001
