@@ -954,13 +954,13 @@
             "answers": [
                 {
                     "answerId": "q30-a1",
-                    "answer": "copy tftp: flash0:",
+                    "answer": "copy tftp: flash:",
                     "correct": true,
-                    "comment": "Источник tftp: задает TFTP-сервер, получатель flash0: — флеш-память маршрутизатора, а адрес узла и имя файла команда запросит после ввода."
+                    "comment": "Источник tftp: задает TFTP-сервер, получатель flash: — флеш-память маршрутизатора, а адрес узла и имя файла команда запросит после ввода."
                 },
                 {
                     "answerId": "q30-a2",
-                    "answer": "copy flash0: tftp:",
+                    "answer": "copy flash: tftp:",
                     "correct": false,
                     "comment": "Эта команда передает образ в обратном направлении, из флеш-памяти маршрутизатора на TFTP-сервер, то есть создает резервную копию."
                 },
@@ -972,7 +972,7 @@
                 },
                 {
                     "answerId": "q30-a4",
-                    "answer": "copy flash0: os-image.bin",
+                    "answer": "copy flash: os-image.bin",
                     "correct": false,
                     "comment": "Источником здесь указана флеш-память маршрутизатора, а для восстановления образ нужно взять с TFTP-сервера."
                 }
