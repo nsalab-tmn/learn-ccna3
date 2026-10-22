@@ -109,7 +109,7 @@ scenario:
 
         R2 uptime is 0 minutes
         System returned to ROM by power-on
-        System image file is "flash0:nr01-netos-0.1.0.bin"
+        System image file is "flash:nr01-netos-0.1.0.bin"
 
         NSALAB NR01 (revision 1.0) with 524288K/65536K bytes of memory.
         Processor board ID NSA00000001
@@ -153,7 +153,7 @@ scenario:
         Loading nr01-netos-0.2.0.bin from 192.168.2.254: !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
         [OK - 34201600 bytes]
 
-        34201600 bytes copied in 34.202 secs (1000000 bytes/sec)
+        34201600 bytes copied in 4.173 secs (8195113 bytes/sec)
         ```
 
         **Шаг 3.** Убедитесь, что новый образ nr01-netos-0.2.0.bin появился во флеш-памяти, с помощью команды **show flash:**.
@@ -162,8 +162,8 @@ scenario:
         R2#show flash:
         System flash directory:
         File  Length   Name/status
-          2   34201600 nr01-netos-0.2.0.bin
           1   33591768 nr01-netos-0.1.0.bin
+          2   34201600 nr01-netos-0.2.0.bin
         [67793368 bytes used, 187950632 available, 255744000 total]
         249750K bytes of processor board System flash (Read/Write)
         ```
@@ -188,7 +188,7 @@ scenario:
 
         **Примечание.** При загрузке маршрутизатор читает строки boot system из загрузочной конфигурации и загружает первый из указанных в них образов, который есть во флеш-памяти. Если таких строк нет, маршрутизатор загружает образ, с которым он поставляется. Поэтому строку boot system нужно сохранить в загрузочной конфигурации до перезагрузки.
 
-        **Шаг 7.** Перезагрузите маршрутизатор командой **reload** и на вопрос «Proceed with reload? [confirm]» нажмите Enter. Маршрутизатор загружает образ nr01-netos-0.2.0.bin (строка «Loading "flash:nr01-netos-0.2.0.bin" ... OK») и примерно через 20 секунд выводит «Press RETURN to get started!».
+        **Шаг 7.** Перезагрузите маршрутизатор командой **reload** и на вопрос «Proceed with reload? [confirm]» нажмите Enter. Маршрутизатор загружает образ nr01-netos-0.2.0.bin (строка «Loading "flash:nr01-netos-0.2.0.bin" ...», под ней ряд знаков # и «[OK]») и примерно через 20 секунд выводит «Press RETURN to get started!».
 
         ```
         R2#reload
@@ -199,17 +199,15 @@ scenario:
         System Bootstrap, Version 0.1.0, RELEASE SOFTWARE
         Copyright (c) 2026 NSALAB
 
-        Loading "flash:nr01-netos-0.2.0.bin" ... OK
+        Loading "flash:nr01-netos-0.2.0.bin" ...
+        ################################################## [OK]
 
         NSALAB NetOS Software, NR01 Software (NR01-NETOS-M), Version 0.2.0, RELEASE SOFTWARE
         Copyright (c) 2026 NSALAB
 
         Press RETURN to get started!
-
         *Mar  1 00:02:00.191: %SYS-5-RESTART: System restarted --
-
         *Mar  1 00:02:01.191: %LINK-3-UPDOWN: Interface GigabitEthernet0/0, changed state to up
-
         *Mar  1 00:02:02.191: %LINEPROTO-5-UPDOWN: Line protocol on Interface GigabitEthernet0/0, changed state to up
         ```
     - title: "Обновление образа ОС коммутатора S1"
@@ -238,7 +236,7 @@ scenario:
         Loading ns01-netos-0.2.0.bin from 192.168.2.254: !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
         [OK - 26591232 bytes]
 
-        26591232 bytes copied in 26.591 secs (1000000 bytes/sec)
+        26591232 bytes copied in 3.245 secs (8195113 bytes/sec)
         ```
 
         **Шаг 3.** Перейдите в режим глобальной конфигурации командой **configure terminal**, укажите новый образ командой **boot system flash ns01-netos-0.2.0.bin** и вернитесь в привилегированный режим EXEC командой **end**.
@@ -268,32 +266,23 @@ scenario:
         System Bootstrap, Version 0.1.0, RELEASE SOFTWARE
         Copyright (c) 2026 NSALAB
 
-        Loading "flash:ns01-netos-0.2.0.bin" ... OK
+        Loading "flash:ns01-netos-0.2.0.bin" ...
+        ################################################## [OK]
 
         NSALAB NetOS Software, NS01 Software (NS01-NETOS-M), Version 0.2.0, RELEASE SOFTWARE
         Copyright (c) 2026 NSALAB
 
         Press RETURN to get started!
-
-        *Mar  1 00:04:10.035: %LINEPROTO-5-UPDOWN: Line protocol on Interface Vlan1, changed state to up
-
-        *Mar  1 00:04:10.035: %SYS-5-RESTART: System restarted --
-
-        *Mar  1 00:04:10.035: %LINEPROTO-5-UPDOWN: Line protocol on Interface Vlan1, changed state to down
-
-        *Mar  1 00:04:11.035: %LINK-3-UPDOWN: Interface FastEthernet0/1, changed state to up
-
-        *Mar  1 00:04:11.035: %LINK-3-UPDOWN: Interface GigabitEthernet0/1, changed state to up
-
-        *Mar  1 00:04:11.035: %LINK-3-UPDOWN: Interface GigabitEthernet0/2, changed state to up
-
-        *Mar  1 00:04:12.035: %LINEPROTO-5-UPDOWN: Line protocol on Interface FastEthernet0/1, changed state to up
-
-        *Mar  1 00:04:12.035: %LINEPROTO-5-UPDOWN: Line protocol on Interface Vlan1, changed state to up
-
-        *Mar  1 00:04:12.035: %LINEPROTO-5-UPDOWN: Line protocol on Interface GigabitEthernet0/1, changed state to up
-
-        *Mar  1 00:04:12.035: %LINEPROTO-5-UPDOWN: Line protocol on Interface GigabitEthernet0/2, changed state to up
+        *Mar  1 00:00:00.000: %LINEPROTO-5-UPDOWN: Line protocol on Interface Vlan1, changed state to up
+        *Mar  1 00:00:00.000: %SYS-5-RESTART: System restarted --
+        *Mar  1 00:00:00.000: %LINEPROTO-5-UPDOWN: Line protocol on Interface Vlan1, changed state to down
+        *Mar  1 00:00:01.000: %LINK-3-UPDOWN: Interface FastEthernet0/1, changed state to up
+        *Mar  1 00:00:01.000: %LINK-3-UPDOWN: Interface GigabitEthernet0/1, changed state to up
+        *Mar  1 00:00:01.000: %LINK-3-UPDOWN: Interface GigabitEthernet0/2, changed state to up
+        *Mar  1 00:00:02.000: %LINEPROTO-5-UPDOWN: Line protocol on Interface FastEthernet0/1, changed state to up
+        *Mar  1 00:00:02.000: %LINEPROTO-5-UPDOWN: Line protocol on Interface Vlan1, changed state to up
+        *Mar  1 00:00:02.000: %LINEPROTO-5-UPDOWN: Line protocol on Interface GigabitEthernet0/1, changed state to up
+        *Mar  1 00:00:02.000: %LINEPROTO-5-UPDOWN: Line protocol on Interface GigabitEthernet0/2, changed state to up
         ```
 
         **Шаг 6.** Дождитесь, когда индикаторы всех соединений на схеме снова загорятся зеленым («Соединение активно» в условных обозначениях). Пока коммутатор загружается, индикаторы показывают «Соединение устанавливается», а после загрузки концы соединений у коммутатора S1 около 30 секунд горят оранжевым: порты проходят состояния протокола STP и еще не передают кадры. Всего от перезагрузки проходит около 50 секунд.
@@ -304,11 +293,10 @@ scenario:
         ```
         R1>enable
         R1#show flash:
-        System flash directory:
-        File  Length   Name/status
-          1   417290496 nr02-netos-0.1.0.bin
-        [417290496 bytes used, 2806261312 available, 3223551808 total]
-        3147999K bytes of processor board System flash (Read/Write)
+        -#- --length-- -----date/time------ path
+        1    417290496 <no date>            nr02-netos-0.1.0.bin
+
+        2806261312 bytes available (417290496 bytes used)
         ```
 
         **Шаг 2.** Скопируйте образ на TFTP-сервер командой **copy flash: tftp:**. На вопрос «Source filename» введите имя образа **nr02-netos-0.1.0.bin**, на вопрос «Address or name of remote host» — адрес сервера **192.168.2.254**, а на вопрос «Destination filename» нажмите Enter. При копировании на сервер команда сначала спрашивает имя файла, а затем адрес сервера.
@@ -321,7 +309,7 @@ scenario:
         Writing nr02-netos-0.1.0.bin...!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
         [OK - 417290496 bytes]
 
-        417290496 bytes copied in 417.290 secs (1000000 bytes/sec)
+        417290496 bytes copied in 50.919 secs (8195113 bytes/sec)
         ```
 
         **Шаг 3.** Откройте окно сервера TFTP-Server, на вкладке «Службы» выберите «TFTP» и убедитесь, что в таблице файлов появилась резервная копия nr02-netos-0.1.0.bin размером 398,0 МБ. В столбце «Время» у нее указано время копирования, а отметка «новый» видна в течение пяти минут после копирования.
@@ -335,9 +323,9 @@ scenario:
         NSALAB NetOS Software, NR01 Software (NR01-NETOS-M), Version 0.2.0, RELEASE SOFTWARE
         Copyright (c) 2026 NSALAB
 
-        R2 uptime is 3 minutes
+        R2 uptime is 2 minutes
         System returned to ROM by reload
-        System image file is "flash0:nr01-netos-0.2.0.bin"
+        System image file is "flash:nr01-netos-0.2.0.bin"
 
         NSALAB NR01 (revision 1.0) with 524288K/65536K bytes of memory.
         Processor board ID NSA00000001
@@ -355,9 +343,9 @@ scenario:
         NSALAB NetOS Software, NS01 Software (NS01-NETOS-M), Version 0.2.0, RELEASE SOFTWARE
         Copyright (c) 2026 NSALAB
 
-        S1 uptime is 1 minute
+        S1 uptime is 0 minutes
         System returned to ROM by reload
-        System image file is "flash0:ns01-netos-0.2.0.bin"
+        System image file is "flash:ns01-netos-0.2.0.bin"
 
         NSALAB NS01 (revision 1.0) with 65536K bytes of memory.
         Processor board ID NSA00000001
