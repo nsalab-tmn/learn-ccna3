@@ -9935,6 +9935,7 @@
     "format": "animated-svg"
    },
    "status": "pending",
+   "tracks": "animations/ccna3-vchxsdg/tracks.json",
    "provenance": {
     "youtube": "T9HlXNYJNdg"
    },
