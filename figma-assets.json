@@ -9635,10 +9635,16 @@
     "path": "01-single-area-ospfv2-concepts/01.02-ospf-packets/assets/1.2.1.svg",
     "format": "animated-svg"
    },
-   "status": "pending",
+   "status": "synced",
    "tracks": "animations/ccna3-xi3xere/tracks.json",
    "provenance": {
-    "youtube": "EKLYuwycPQM"
+    "youtube": "EKLYuwycPQM",
+    "synced": {
+     "figmaVersion": "2413683815138594987",
+     "at": "2026-10-23T22:14:23Z",
+     "sha256": "e61cf55c99cac274ffb848b69cc1d9c89811840a9c373672befe3547bf53d9d0",
+     "tracksSha256": "3755e7f471245048325a355d08e47d47cdee03aee05cdeddbc0c720af84474c9"
+    }
    },
    "notes": "[ремейк видео NetAcad «Типы пакетов OSPF» (YouTube EKLYuwycPQM, kb#327), принят оператором; кадр перенесён в поток курса 2026-10-24]"
   },
@@ -9659,10 +9665,16 @@
     "path": "01-single-area-ospfv2-concepts/01.03-ospf-operation/assets/1.3.1.svg",
     "format": "animated-svg"
    },
-   "status": "pending",
+   "status": "synced",
    "tracks": "animations/ccna3-zatlf5l/tracks.json",
    "provenance": {
-    "youtube": "yNiUGbVP2Xc"
+    "youtube": "yNiUGbVP2Xc",
+    "synced": {
+     "figmaVersion": "2413683815138594987",
+     "at": "2026-10-23T22:14:23Z",
+     "sha256": "f4a132605da5130a88a0b2f4438555a92b9a36e4fd489a774576217a8ae9ab6c",
+     "tracksSha256": "83d346111ba3b22da72a10ce0457ae6eb3761d956df19b18904dd7960195b241"
+    }
    },
    "notes": "[ремейк видео NetAcad «Принципы работы OSPF» (YouTube yNiUGbVP2Xc, kb#327), принят оператором; кадр перенесён в поток курса 2026-10-24]"
   },
@@ -9683,10 +9695,16 @@
     "path": "03-network-security-concepts/03.03-threat-actor-tools/assets/3.3.1.svg",
     "format": "animated-svg"
    },
-   "status": "pending",
+   "status": "synced",
    "tracks": "animations/ccna3-xfgks7i/tracks.json",
    "provenance": {
-    "youtube": "gDohT7qGeSs"
+    "youtube": "gDohT7qGeSs",
+    "synced": {
+     "figmaVersion": "2413683815138594987",
+     "at": "2026-10-23T22:14:23Z",
+     "sha256": "f8b8af6982f79691423b6f3a7ef953f86c0eff47262b72d05d54c4a89564c0f6",
+     "tracksSha256": "ad1f7a3e8ea813302939cc0f30fcaec44e5246aa3146c6ed871b9a1610414267"
+    }
    },
    "notes": "[ремейк видео NetAcad «Аудит открытых служб на маршрутизаторе» (YouTube gDohT7qGeSs, kb#327), принят оператором; кадр перенесён в поток курса 2026-10-24]"
   },
@@ -9707,10 +9725,16 @@
     "path": "03-network-security-concepts/03.05-common-network-attacks/assets/3.5.2.svg",
     "format": "animated-svg"
    },
-   "status": "pending",
+   "status": "synced",
    "tracks": "animations/ccna3-wmawlum/tracks.json",
    "provenance": {
-    "youtube": "s1Zb4Si9glY"
+    "youtube": "s1Zb4Si9glY",
+    "synced": {
+     "figmaVersion": "2413683815138594987",
+     "at": "2026-10-23T22:14:23Z",
+     "sha256": "898f380571670a4b0ec116f5c9ef81fbd86d1c339799fd25b1564b312317a089",
+     "tracksSha256": "95338f70df86af95b8f272ee6206476e062287e59cfbe9155769d392fbedf1c4"
+    }
    },
    "notes": "[ремейк видео NetAcad «Что видно снаружи: ICMP и службы на границе» (YouTube s1Zb4Si9glY, kb#327), принят оператором; кадр перенесён в поток курса 2026-10-24]"
   },
@@ -9731,10 +9755,16 @@
     "path": "03-network-security-concepts/03.05-common-network-attacks/assets/3.5.4.svg",
     "format": "animated-svg"
    },
-   "status": "pending",
+   "status": "synced",
    "tracks": "animations/ccna3-kqjf2v6/tracks.json",
    "provenance": {
-    "youtube": "zSvQp2erbbY"
+    "youtube": "zSvQp2erbbY",
+    "synced": {
+     "figmaVersion": "2413683815138594987",
+     "at": "2026-10-23T22:14:23Z",
+     "sha256": "4435bc1d509bf66541ff5d9ef63b5ffd9ef308395c4624a45f1fd7bae83e25eb",
+     "tracksSha256": "0ade8bfee34acbbf8c7310991a455c84cf946645ee64b9c7911eca68e60cf804"
+    }
    },
    "notes": "[ремейк видео NetAcad «Защита доступа к устройствам» (YouTube zSvQp2erbbY, kb#327), принят оператором; кадр перенесён в поток курса 2026-10-24]"
   },
@@ -9755,10 +9785,16 @@
     "path": "03-network-security-concepts/03.05-common-network-attacks/assets/3.5.8.svg",
     "format": "animated-svg"
    },
-   "status": "pending",
+   "status": "synced",
    "tracks": "animations/ccna3-mjloh3z/tracks.json",
    "provenance": {
-    "youtube": "aHUs-Q95deY"
+    "youtube": "aHUs-Q95deY",
+    "synced": {
+     "figmaVersion": "2413683815138594987",
+     "at": "2026-10-23T22:14:23Z",
+     "sha256": "4dc0aa1d2d29e59ae87b037870fc0281b445871ef5e0759fb300247404ed38c0",
+     "tracksSha256": "674e9224eb5034b09b5abc50e452f08cd84c6ff759152403cbf9639b8ce45a19"
+    }
    },
    "notes": "[ремейк видео NetAcad «Атаки «отказ в обслуживании»» (YouTube aHUs-Q95deY, kb#327), принят оператором; кадр перенесён в поток курса 2026-10-24]"
   },
@@ -9779,10 +9815,16 @@
     "path": "03-network-security-concepts/03.06-ip-vulnerabilities-and-threats/assets/3.6.1.svg",
     "format": "animated-svg"
    },
-   "status": "pending",
+   "status": "synced",
    "tracks": "animations/ccna3-b237z3n/tracks.json",
    "provenance": {
-    "youtube": "qgM_6SJwwP8"
+    "youtube": "qgM_6SJwwP8",
+    "synced": {
+     "figmaVersion": "2413683815138594987",
+     "at": "2026-10-23T22:14:23Z",
+     "sha256": "87fd9a28c9ceba8e29e1eaf0974096237b98aba674bcb979333a25ccbe51a160",
+     "tracksSha256": "86fb8ad42ea1cec253f79eaa099adeeb07dd30a77398abd81c2a7f4a8bd4f92a"
+    }
    },
    "notes": "[ремейк видео NetAcad «Фильтрация поддельных адресов на границе» (YouTube qgM_6SJwwP8, kb#327), принят оператором; кадр перенесён в поток курса 2026-10-24]"
   },
@@ -9803,10 +9845,16 @@
     "path": "03-network-security-concepts/03.06-ip-vulnerabilities-and-threats/assets/3.6.4.svg",
     "format": "animated-svg"
    },
-   "status": "pending",
+   "status": "synced",
    "tracks": "animations/ccna3-6uvfire/tracks.json",
    "provenance": {
-    "youtube": "NbmzS--sOyU"
+    "youtube": "NbmzS--sOyU",
+    "synced": {
+     "figmaVersion": "2413683815138594987",
+     "at": "2026-10-23T22:14:23Z",
+     "sha256": "16f262e81a6568a0f42d0fafa0ad99ab6a49c926a940c4e09f921c89a9824f76",
+     "tracksSha256": "b9681ebc830f69516099deeefe3cd6470086a68715860c1f7bab10a4c74476a0"
+    }
    },
    "notes": "[ремейк видео NetAcad «Отключение служб для отражения» (YouTube NbmzS--sOyU, kb#327), принят оператором; кадр перенесён в поток курса 2026-10-24]"
   },
@@ -9827,10 +9875,16 @@
     "path": "03-network-security-concepts/03.08-ip-services/assets/3.8.3.svg",
     "format": "animated-svg"
    },
-   "status": "pending",
+   "status": "synced",
    "tracks": "animations/ccna3-x7ligzd/tracks.json",
    "provenance": {
-    "youtube": "Y08C_0jFERY"
+    "youtube": "Y08C_0jFERY",
+    "synced": {
+     "figmaVersion": "2413683815138594987",
+     "at": "2026-10-23T22:14:23Z",
+     "sha256": "e7077714176c7b921d6809964cf609e6bf1f88cdbaf72381a07dbb9cfe99e244",
+     "tracksSha256": "bccddacb972e2ea28ca2b749969c18f1b5944781e8b434d1836fc96a1dd0f2c8"
+    }
    },
    "notes": "[ремейк видео NetAcad «Защита от подмены адресов на коммутаторе» (YouTube Y08C_0jFERY, kb#327), принят оператором; кадр перенесён в поток курса 2026-10-24]"
   },
@@ -9851,10 +9905,16 @@
     "path": "03-network-security-concepts/03.10-cryptography/assets/3.10.1.svg",
     "format": "animated-svg"
    },
-   "status": "pending",
+   "status": "synced",
    "tracks": "animations/ccna3-stmhia7/tracks.json",
    "provenance": {
-    "youtube": "YNfNWEeukWQ"
+    "youtube": "YNfNWEeukWQ",
+    "synced": {
+     "figmaVersion": "2413683815138594987",
+     "at": "2026-10-23T22:14:23Z",
+     "sha256": "3d6e727c8a24b6ea822c491469c93fd08f0c4ba80ba6613ef6b36623cc79305b",
+     "tracksSha256": "24cc7aaa6d88ed1b2d0aa4d9a362b0fb01f388624d6217a2d6ff940cd8ad15e5"
+    }
    },
    "notes": "[ремейк видео NetAcad «Криптография» (YouTube YNfNWEeukWQ, kb#327), принят оператором; кадр перенесён в поток курса 2026-10-24]"
   },
@@ -9875,10 +9935,16 @@
     "path": "08-vpn-and-ipsec-concepts/08.03-ipsec/assets/8.3.1.svg",
     "format": "animated-svg"
    },
-   "status": "pending",
+   "status": "synced",
    "tracks": "animations/ccna3-cavfioe/tracks.json",
    "provenance": {
-    "youtube": "kPV8JZzD5iQ"
+    "youtube": "kPV8JZzD5iQ",
+    "synced": {
+     "figmaVersion": "2413683815138594987",
+     "at": "2026-10-23T22:14:23Z",
+     "sha256": "dce86f25f0fc06256fd2c19f985cd33c6639773c455bd1d45ef6aca3d0c01e14",
+     "tracksSha256": "d7ea60a5138cd6caf0d5555584e2a506039a1956370076e1f9ab76deef4214b9"
+    }
    },
    "notes": "[ремейк видео NetAcad «Концепции IPsec» (YouTube kPV8JZzD5iQ, kb#327), принят оператором; кадр перенесён в поток курса 2026-10-24]"
   },
@@ -9899,10 +9965,16 @@
     "path": "08-vpn-and-ipsec-concepts/08.03-ipsec/assets/8.3.8.svg",
     "format": "animated-svg"
    },
-   "status": "pending",
+   "status": "synced",
    "tracks": "animations/ccna3-tkew7hn/tracks.json",
    "provenance": {
-    "youtube": "mRSTH3Daj6E"
+    "youtube": "mRSTH3Daj6E",
+    "synced": {
+     "figmaVersion": "2413683815138594987",
+     "at": "2026-10-23T22:14:23Z",
+     "sha256": "570f27825857d89c00187967e986e53b5adc215828cfe2d1e6dc6f6b7ae00ea6",
+     "tracksSha256": "a861a36bdfd002de7e9c2c6d02b1d3289e578978cac677fc75d347f5578e4290"
+    }
    },
    "notes": "[ремейк видео NetAcad «Транспортный и туннельный режимы IPsec» (YouTube mRSTH3Daj6E, kb#327), принят оператором; кадр перенесён в поток курса 2026-10-24]"
   },
@@ -9923,10 +9995,16 @@
     "path": "09-qos-concepts/09.01-network-transmission-quality/assets/9.1.1.svg",
     "format": "animated-svg"
    },
-   "status": "pending",
+   "status": "synced",
    "tracks": "animations/ccna3-hdqzgdo/tracks.json",
    "provenance": {
-    "youtube": "s_4r5MBW_Uc"
+    "youtube": "s_4r5MBW_Uc",
+    "synced": {
+     "figmaVersion": "2413683815138594987",
+     "at": "2026-10-23T22:14:23Z",
+     "sha256": "25000cd0ef73fcaef708dde6320c0e8dd80c3fb9102e39bd7d1eb58437870e36",
+     "tracksSha256": "1be7c140b0d1516fb804b9f7aa5ab7b3ac060b368702bc1ecaa69310a726905a"
+    }
    },
    "notes": "[ремейк видео NetAcad «Назначение QoS» (YouTube s_4r5MBW_Uc, kb#327), принят оператором; кадр перенесён в поток курса 2026-10-24]"
   },
@@ -9977,10 +10055,16 @@
     "path": "09-qos-concepts/09.03-queuing-algorithms/assets/9.3.1.svg",
     "format": "animated-svg"
    },
-   "status": "pending",
+   "status": "synced",
    "tracks": "animations/ccna3-pjudsmz/tracks.json",
    "provenance": {
-    "youtube": "rmxOlo93MWo"
+    "youtube": "rmxOlo93MWo",
+    "synced": {
+     "figmaVersion": "2413683815138594987",
+     "at": "2026-10-23T22:14:23Z",
+     "sha256": "0669ffddbef5cc6d0e0c9ad9db2c407788b91904966b1886d13937c2db6f04ae",
+     "tracksSha256": "c789214b6768d603361cf6115142933d00ace2312aa16c4eebbdb525c84968b8"
+    }
    },
    "notes": "[ремейк видео NetAcad «Алгоритмы QoS» (YouTube rmxOlo93MWo, kb#327), принят оператором; кадр перенесён в поток курса 2026-10-24]"
   },
@@ -10001,10 +10085,16 @@
     "path": "09-qos-concepts/09.04-qos-models/assets/9.4.1.svg",
     "format": "animated-svg"
    },
-   "status": "pending",
+   "status": "synced",
    "tracks": "animations/ccna3-joipxhc/tracks.json",
    "provenance": {
-    "youtube": "jdzgForIwzY"
+    "youtube": "jdzgForIwzY",
+    "synced": {
+     "figmaVersion": "2413683815138594987",
+     "at": "2026-10-23T22:14:23Z",
+     "sha256": "f2fcefb8de75dd3f422559bf6dff13f86dda8dfef26fc69123a507ad35962dfe",
+     "tracksSha256": "9e1a42f3ed217a2516b1b871986bfcabb2980c5f00e2f3c77cd7d3fe3aa1758e"
+    }
    },
    "notes": "[ремейк видео NetAcad «Модели QoS» (YouTube jdzgForIwzY, kb#327), принят оператором; кадр перенесён в поток курса 2026-10-24]"
   },
@@ -10025,10 +10115,16 @@
     "path": "09-qos-concepts/09.05-qos-implementation-techniques/assets/9.5.1.svg",
     "format": "animated-svg"
    },
-   "status": "pending",
+   "status": "synced",
    "tracks": "animations/ccna3-ekb7ll5/tracks.json",
    "provenance": {
-    "youtube": "vL-ZYGViSJs"
+    "youtube": "vL-ZYGViSJs",
+    "synced": {
+     "figmaVersion": "2413683815138594987",
+     "at": "2026-10-23T22:14:23Z",
+     "sha256": "2d4c6729291b0004ff4f5f6bdda34e705848a078893c69c3c8e682776c245c91",
+     "tracksSha256": "9fa083292fef5231b15328f96aea6b7c2eee49e8524814359713c527e1c7363a"
+    }
    },
    "notes": "[ремейк видео NetAcad «Методы реализации QoS» (YouTube vL-ZYGViSJs, kb#327), принят оператором; кадр перенесён в поток курса 2026-10-24]"
   },
@@ -10049,10 +10145,16 @@
     "path": "10-network-management/10.07-ios-image-management/assets/10.7.1.svg",
     "format": "animated-svg"
    },
-   "status": "pending",
+   "status": "synced",
    "tracks": "animations/ccna3-svpf5en/tracks.json",
    "provenance": {
-    "youtube": "nsmyx7XLAPo"
+    "youtube": "nsmyx7XLAPo",
+    "synced": {
+     "figmaVersion": "2413683815138594987",
+     "at": "2026-10-23T22:14:23Z",
+     "sha256": "9cf6dbb9fe5b721f241e9530563facb5ed4d570024e6c6cecf80efe97bcbaea3",
+     "tracksSha256": "e00278754e2d9eb4547118d8d37667f0a92e02b4ec60137d42b2a06b59c20173"
+    }
    },
    "notes": "[ремейк видео NetAcad «Обновление образа ОС через TFTP» (YouTube nsmyx7XLAPo, kb#327), принят оператором; кадр перенесён в поток курса 2026-10-24]"
   },
@@ -10073,10 +10175,16 @@
     "path": "11-network-design/11.01-hierarchical-networks/assets/11.1.1.svg",
     "format": "animated-svg"
    },
-   "status": "pending",
+   "status": "synced",
    "tracks": "animations/ccna3-yhooe5j/tracks.json",
    "provenance": {
-    "youtube": "bvv3U0BkiL0"
+    "youtube": "bvv3U0BkiL0",
+    "synced": {
+     "figmaVersion": "2413683815138594987",
+     "at": "2026-10-23T22:14:23Z",
+     "sha256": "dfd7e75805526e1d6eba41a14a3f106d35efd445ed043e7d8f5b2b2b3793c138",
+     "tracksSha256": "704e9f5e0dea1e28d7be43c308fc4d00d3d4db3afc659224300289ef839412e6"
+    }
    },
    "notes": "[ремейк видео NetAcad «Трёхуровневая модель» (YouTube bvv3U0BkiL0, kb#327), принят оператором; кадр перенесён в поток курса 2026-10-24]"
   },
@@ -10097,10 +10205,16 @@
     "path": "13-network-virtualization/13.01-cloud-computing/assets/13.1.1.svg",
     "format": "animated-svg"
    },
-   "status": "pending",
+   "status": "synced",
    "tracks": "animations/ccna3-6iycafa/tracks.json",
    "provenance": {
-    "youtube": "zly4n5wU-bU"
+    "youtube": "zly4n5wU-bU",
+    "synced": {
+     "figmaVersion": "2413683815138594987",
+     "at": "2026-10-23T22:14:23Z",
+     "sha256": "695f91d30f52a2149b7641d68e6d54294f7153ab941b871b8958a291517c6518",
+     "tracksSha256": "732b7073514f3cd850c7e941141d562650ec381880c3f80844a14198bfb336b3"
+    }
    },
    "notes": "[ремейк видео NetAcad «Облако и виртуализация» (YouTube zly4n5wU-bU, kb#327), принят оператором; кадр перенесён в поток курса 2026-10-24]"
   },
@@ -10121,10 +10235,16 @@
     "path": "13-network-virtualization/13.04-software-defined-networking/assets/13.4.1.svg",
     "format": "animated-svg"
    },
-   "status": "pending",
+   "status": "synced",
    "tracks": "animations/ccna3-l2xprig/tracks.json",
    "provenance": {
-    "youtube": "_ivjNF93RcE"
+    "youtube": "_ivjNF93RcE",
+    "synced": {
+     "figmaVersion": "2413683815138594987",
+     "at": "2026-10-23T22:14:23Z",
+     "sha256": "4b9d25c07bb82229a66a63e3d1e7648457db0f6b7bddf0419b9e29716eae9a39",
+     "tracksSha256": "2502a6b930ec35100010fcbafda4a4642b97ceee7f4a072d2174bff08148431b"
+    }
    },
    "notes": "[ремейк видео NetAcad «SDN и контроллеры» (YouTube _ivjNF93RcE, kb#327), принят оператором; кадр перенесён в поток курса 2026-10-24]"
   },
@@ -10145,10 +10265,16 @@
     "path": "14-network-automation/14.02-data-formats/assets/14.2.1.svg",
     "format": "animated-svg"
    },
-   "status": "pending",
+   "status": "synced",
    "tracks": "animations/ccna3-ei3wy4y/tracks.json",
    "provenance": {
-    "youtube": "2AduRqyW8Qc"
+    "youtube": "2AduRqyW8Qc",
+    "synced": {
+     "figmaVersion": "2413683815138594987",
+     "at": "2026-10-23T22:14:23Z",
+     "sha256": "a7f150751fd17360083fb2ee1666edb2086cb3e74ed5ec4b50d37e2d99320ac2",
+     "tracksSha256": "fa4cacca788d400890b6eccbb03d53749f26d365f1ff5ec92eb5c71901d55eb3"
+    }
    },
    "notes": "[ремейк видео NetAcad «Форматы данных» (YouTube 2AduRqyW8Qc, kb#327), принят оператором; кадр перенесён в поток курса 2026-10-24]"
   },
@@ -10169,10 +10295,16 @@
     "path": "14-network-automation/14.03-apis/assets/14.3.1.svg",
     "format": "animated-svg"
    },
-   "status": "pending",
+   "status": "synced",
    "tracks": "animations/ccna3-xxmhbjl/tracks.json",
    "provenance": {
-    "youtube": "jaBySHLTV-Q"
+    "youtube": "jaBySHLTV-Q",
+    "synced": {
+     "figmaVersion": "2413683815138594987",
+     "at": "2026-10-23T22:14:23Z",
+     "sha256": "643ac84a8c0479cb56dc40a33c6194c49a3fb8f4446383734f6bad0caee7a4e7",
+     "tracksSha256": "3a385a927f933a95d624d1883ff7bfdcc011fe1fa4e0dee6b56476f0f7e8f67b"
+    }
    },
    "notes": "[ремейк видео NetAcad «API: вызов и ответ» (YouTube jaBySHLTV-Q, kb#327), принят оператором; кадр перенесён в поток курса 2026-10-24]"
   },
@@ -10193,10 +10325,16 @@
     "path": "14-network-automation/14.04-rest/assets/14.4.1.svg",
     "format": "animated-svg"
    },
-   "status": "pending",
+   "status": "synced",
    "tracks": "animations/ccna3-n25eeos/tracks.json",
    "provenance": {
-    "youtube": "_sUxEZzjirg"
+    "youtube": "_sUxEZzjirg",
+    "synced": {
+     "figmaVersion": "2413683815138594987",
+     "at": "2026-10-23T22:14:23Z",
+     "sha256": "f6427ef8f40e40f589f98a9564db9f52aacfd2b9d87e8f62eb9e64ce4b840cd6",
+     "tracksSha256": "6bd0d53e5116bc5c838778639faf1014894e37de1bccb0e278a64a87cef1575a"
+    }
    },
    "notes": "[ремейк видео NetAcad «REST» (YouTube _sUxEZzjirg, kb#327), принят оператором; кадр перенесён в поток курса 2026-10-24]"
   },
@@ -10217,10 +10355,16 @@
     "path": "14-network-automation/14.05-configuration-management/assets/14.5.1.svg",
     "format": "animated-svg"
    },
-   "status": "pending",
+   "status": "synced",
    "tracks": "animations/ccna3-hhytab2/tracks.json",
    "provenance": {
-    "youtube": "-EHtbTcC_G4"
+    "youtube": "-EHtbTcC_G4",
+    "synced": {
+     "figmaVersion": "2413683815138594987",
+     "at": "2026-10-23T22:14:23Z",
+     "sha256": "359431b9247bb63f6b4715c7f9f4d6660809ba327e1256d557f2223663b7c26b",
+     "tracksSha256": "b69fc64a67f6937c92c406530edc66d546c2fa93c6aa872d964e748e8de2ceb8"
+    }
    },
    "notes": "[ремейк видео NetAcad «Инструменты управления конфигурацией» (YouTube -EHtbTcC_G4, kb#327), принят оператором; кадр перенесён в поток курса 2026-10-24]"
   },
@@ -10241,10 +10385,16 @@
     "path": "14-network-automation/14.06-ibn-and-cisco-dna-center/assets/14.6.1.svg",
     "format": "animated-svg"
    },
-   "status": "pending",
+   "status": "synced",
    "tracks": "animations/ccna3-x7oh4mv/tracks.json",
    "provenance": {
-    "youtube": "aiimnEwcfFA"
+    "youtube": "aiimnEwcfFA",
+    "synced": {
+     "figmaVersion": "2413683815138594987",
+     "at": "2026-10-23T22:14:23Z",
+     "sha256": "f04d12bdbcd242101ab8a87cc2a84624212a674806594d1509ac003beda8544d",
+     "tracksSha256": "c2e922cd386789ee907dc5e57bdba158661e1846b38015aed408d20c686c1f8a"
+    }
    },
    "notes": "[ремейк видео NetAcad «Сети на основе намерений» (YouTube aiimnEwcfFA, kb#327), принят оператором; кадр перенесён в поток курса 2026-10-24]"
   }
