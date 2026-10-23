@@ -9934,10 +9934,16 @@
     "path": "09-qos-concepts/09.02-traffic-characteristics/assets/9.2.1.svg",
     "format": "animated-svg"
    },
-   "status": "pending",
+   "status": "synced",
    "tracks": "animations/ccna3-vchxsdg/tracks.json",
    "provenance": {
-    "youtube": "T9HlXNYJNdg"
+    "youtube": "T9HlXNYJNdg",
+    "synced": {
+     "figmaVersion": "2413683815138594987",
+     "at": "2026-10-23T22:03:38Z",
+     "sha256": "b3637e46cf95502f5ee4a2e228dbdaf141b1f7c80e5c9c93118b249405f5d2ee",
+     "tracksSha256": "e1360ca9c3fda7cedaaaa769d40f91d2b40cbd62b8749006ef4df12eab27e5f6"
+    }
    },
    "notes": "[ремейк видео NetAcad «Характеристики трафика» (YouTube T9HlXNYJNdg, kb#327), принят оператором; кадр перенесён в поток курса 2026-10-24]"
   },
