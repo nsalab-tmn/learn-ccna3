@@ -3,7 +3,7 @@
 
 Просмотрите видео о криптографии.
 
-![youtube](https://www.youtube.com/watch?v=YNfNWEeukWQ)
+![](./assets/3.10.1.svg)
 
 <!-- 3.10.2 -->
 ## Защита коммуникаций

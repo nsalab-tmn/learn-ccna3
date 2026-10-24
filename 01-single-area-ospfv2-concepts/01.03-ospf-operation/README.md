@@ -3,7 +3,7 @@
 
 Нажмите «Воспроизвести» на рисунке, чтобы просмотреть видео о работе OSPF.
 
-![youtube](https://www.youtube.com/watch?v=yNiUGbVP2Xc)
+![](./assets/1.3.1.svg)
 
 <!-- 1.3.2 -->
 ## Рабочие состояния OSPF

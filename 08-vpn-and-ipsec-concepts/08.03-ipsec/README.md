@@ -5,7 +5,7 @@
 
 Посмотрите видео об IPSec.
 
-![youtube](https://www.youtube.com/watch?v=kPV8JZzD5iQ)
+![](./assets/8.3.1.svg)
 
 <!-- 8.3.2 -->
 ## IPSec технологии
@@ -182,7 +182,7 @@ DH предоставляет возможность двум партнерам
 
 Посмотрите видео о транспортном и туннельном режиме IPSec.
 
-![youtube](https://www.youtube.com/watch?v=mRSTH3Daj6E)
+![](./assets/8.3.8.svg)
 
 <!-- 8.3.9 -->
 <!-- quiz -->

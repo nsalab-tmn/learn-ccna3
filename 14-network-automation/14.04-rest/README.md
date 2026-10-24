@@ -8,7 +8,7 @@ REST — стиль веб-API поверх HTTP и HTTPS. В примере RES
 3. Команда **curl -i** отправляет запрос и выводит строку состояния, заголовки и тело ответа. GET возвращает 200 OK и список устройств, POST — 201 Created и адрес нового ресурса в заголовке Location, PATCH — 200 OK и измененную запись, DELETE — 204 No Content.
 4. Тот же GET можно отправить из программы на Python: библиотека requests собирает URI из адреса и словаря параметров, `r.status_code` содержит код состояния, а `r.json()` — данные ответа.
 
-![youtube](https://www.youtube.com/watch?v=_sUxEZzjirg)
+![](./assets/14.4.1.svg)
 
 <!-- 14.4.2 -->
 ## REST и RESTful API

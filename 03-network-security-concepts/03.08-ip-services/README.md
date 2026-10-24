@@ -57,7 +57,7 @@
 5. Та же проверка: Laptop1 на порту Fa0/1 не получает адрес, порт переходит в состояние err-disabled — это видно в выводе **show port-security interface** и **show interfaces status err-disabled**. ARP-запросы PC2, у которого статический адрес и нет привязки DHCP, DAI отбрасывает: в журнале появляется сообщение DHCP_SNOOPING_DENY, в выводе **show ip arp inspection statistics** растет счетчик DHCP Drops.
 6. Итог: port security ограничивает устройства на порту доступа, DHCP snooping и DAI пропускают только ARP-сообщения, которые соответствуют привязкам DHCP. Результат проверяют командами **show port-security interface** и **show ip arp inspection**.
 
-![youtube](https://www.youtube.com/watch?v=Y08C_0jFERY)
+![](./assets/3.8.3.svg)
 
 <!-- 3.8.4 -->
 ## Атаки DNS

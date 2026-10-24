@@ -3,7 +3,7 @@
 
 Нажмите «Воспроизвести» на рисунке, чтобы просмотреть видео о пакетах OSPF.
 
-![youtube](https://www.youtube.com/watch?v=EKLYuwycPQM)
+![](./assets/1.2.1.svg)
 
 <!-- 1.2.2 -->
 ## Типы пакетов OSPF
