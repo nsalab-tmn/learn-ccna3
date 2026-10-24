@@ -12,7 +12,7 @@
 5. Та же проверка. **show control-plane host open-ports** показывает один открытый порт — **22**. С PC-A порт 80 и Telnet отвечают **% Connection refused**, а **ssh -l admin 192.168.1.1** работает: пароль идет по сети в зашифрованном виде.
 6. Итог: лишние службы закрыты (**no ip http server**, **no ip http secure-server**), вход на vty — только **transport input ssh**. Проверка — **show control-plane host open-ports** показывает открытым только порт 22.
 
-![youtube](https://www.youtube.com/watch?v=gDohT7qGeSs)
+![](./assets/3.3.1.svg)
 
 <!-- 3.3.2 -->
 
