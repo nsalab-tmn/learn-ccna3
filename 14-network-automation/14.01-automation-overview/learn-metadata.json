@@ -12,9 +12,6 @@
     "text": {
         "$ref": "./README.md"
     },
-    "assets": {
-        "$ref": "./assets"
-    },
     "competency": {
         "produces": {
             "id": "ksa.ccna3.network-automation.automation-overview",
