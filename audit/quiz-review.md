@@ -27,7 +27,7 @@ The quizzes and exams are translations of the vendor's question banks. The de-ma
 
 1. **Mechanical pass** over all files: answer counts against `answerType` and the stem, matching keys, image paths, Packet Tracer UI strings. In CCNA3 it found 09-12-exam Q9 (a matching key 0 with no option) and final-exam Q27 (the stem says «три», two answers are marked), each with its bank twin.
 2. **Review:** seven reviewers each took a block of modules or exams and wrote findings with evidence (`README.md:line`, RFC or IEEE) and a proposed minimal fix. The CCNA1 and CCNA2 lessons went into their brief.
-3. **Verification:** a second reviewer checked every finding and confirmed every key change on their own, rewriting fixes where needed. The coordinator read every error-severity fix. Fixes were checked against the glossary (`conventions/ru-glossary.md` in the knowledge base, with the rows decided in kb#279, kb#281, kb#283 and kb#284).
+3. **Verification:** a second reviewer checked every finding and confirmed every key change on their own, rewriting fixes where needed. The coordinator read every error-severity fix. Fixes were checked against the glossary (`https://github.com/nsalab-tmn/learn-materials/blob/main/conventions/ru-glossary.md` in learn-materials, with the rows decided in kb#279, kb#281, kb#283 and kb#284).
 4. **Rebuild:** the review ran before the kb#280 tier-3 rewrites (learn-ccna3#55, #56 and their learn-ccna1 bank twins) were merged. Every finding was rebuilt on the current `origin/main`; step 7 lists the ones that no longer apply.
 5. **Fix PRs:** one per module block, so no two open PRs share a line. The bank copies live in learn-ccna1, so each exam block has a paired PR there with the same wording.
 6. **Doubtful items** are not changed in the fix PRs:
@@ -468,7 +468,7 @@ The fix PRs are listed in *Fix PRs* above. *How*, step 6, says how the doubtful 
 | final-exam | 44 | style | Key says «встроенных портов» (built-in), but port density also counts line-card ports of modular switches; the module defines it as the number of ports availabl… | #63 → «количество портов, доступных на одном коммутаторе» |
 | final-exam | 45 | style | Typo «шаблонню» in the comment (listed among known term typos). | #63 → «шаблонную маску» |
 | final-exam | 45 | error | The comment calls 0.0.255.255 an «недопустимую» (invalid) wildcard mask; it is a valid mask that is too broad, matching the whole 172.16.0.0/16 instead of the f… | #63 → «слишком широкую шаблонную маску» |
-| final-exam | 45 | style | «перевести» for NAT translation; the course uses «преобразовать / преобразование» (ru-glossary.md:188; 06-nat-for-ipv4/06.09-summary/README.md:4 «необходимо пре… | #63 → «позволяет преобразовать только четыре подсети» |
+| final-exam | 45 | style | «перевести» for NAT translation; the course uses «преобразовать / преобразование» (learn-materials `conventions/ru-glossary.md`:188; 06-nat-for-ipv4/06.09-summary/README.md:4 «необходимо пре… | #63 → «позволяет преобразовать только четыре подсети» |
 | final-exam | 46 | style | Missing space/line break after «Посмотрите на изображение.» before «Почему». | #63 → «Посмотрите на изображение. Почему» |
 | final-exam | 46 | style | English left in prose: «Serial интерфейсы» (the bank twin and the course say «последовательные интерфейсы»). | #63 → «последовательные интерфейсы находятся в разных областях» |
 | final-exam | 46 | style | Agreement error in the comment: «сеть 192.168.10.0/30 ... Он должен быть определен». | #63 → «Она должна быть определена в области 0» |
