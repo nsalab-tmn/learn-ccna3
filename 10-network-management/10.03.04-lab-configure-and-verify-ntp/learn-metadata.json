@@ -5,6 +5,7 @@
     "description": "Цель лабораторной работы: отработка навыков, необходимых для настройки и проверки работы протокола NTP.",
     "difficulty": 1,
     "duration": "PT0H30M",
+    "timeLimit": "PT30M",
     "tags": {
         "$ref": "../../material-tags.json"
     },
