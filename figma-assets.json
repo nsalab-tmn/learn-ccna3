@@ -2564,7 +2564,7 @@
      "sha256": "05eee2495ac922530b13f8cc7753d2ba20f195654d09f0a67e3d5f19954a9c0d"
     }
    },
-   "notes": "намеренный дубль экспорта (kb#318, вариант 1): тот же фрейм 5557:15193, что у ccna3-6bk5wij (final-exam/assets/7.svg); каждая папка экзамена самодостаточна — не сворачивать при дедупликации (kb#242)"
+   "notes": "намеренный дубль экспорта (kb#318, вариант 1): тот же фрейм 5557:15193, что у ccna3-6bk5wij (15-organisation-network-check/15.02-final-exam/assets/7.svg); каждая папка экзамена самодостаточна — не сворачивать при дедупликации (kb#242)"
   },
   {
    "id": "ccna3-44f2vls",
@@ -3304,7 +3304,7 @@
      "sha256": "76e59c9b30c0904249e501502998407afc2cf1bedf4385486c399ba565056f4b"
     }
    },
-   "notes": "намеренный дубль экспорта (kb#318, вариант 1): тот же фрейм 5755:166315, что у ccna3-z2os3c6 (final-exam/assets/9.svg); каждая папка экзамена самодостаточна — не сворачивать при дедупликации (kb#242)"
+   "notes": "намеренный дубль экспорта (kb#318, вариант 1): тот же фрейм 5755:166315, что у ccna3-z2os3c6 (15-organisation-network-check/15.02-final-exam/assets/9.svg); каждая папка экзамена самодостаточна — не сворачивать при дедупликации (kb#242)"
   },
   {
    "id": "ccna3-5jxw3y4",
@@ -8724,7 +8724,7 @@
     "page": "CCNA3 · 03 network-security-concepts"
    },
    "out": {
-    "path": "final-exam/assets/7.svg",
+    "path": "15-organisation-network-check/15.02-final-exam/assets/7.svg",
     "format": "svg"
    },
    "status": "synced",
@@ -8749,7 +8749,7 @@
     "page": "CCNA3 · 14 network-automation"
    },
    "out": {
-    "path": "final-exam/assets/8.svg",
+    "path": "15-organisation-network-check/15.02-final-exam/assets/8.svg",
     "format": "svg"
    },
    "status": "synced",
@@ -8773,7 +8773,7 @@
     "page": "CCNA3 · 06 nat-for-ipv4"
    },
    "out": {
-    "path": "final-exam/assets/9.svg",
+    "path": "15-organisation-network-check/15.02-final-exam/assets/9.svg",
     "format": "svg"
    },
    "status": "synced",
@@ -9580,7 +9580,7 @@
     "page": "CCNA3 · 14 network-automation"
    },
    "out": {
-    "path": "final-exam/assets/1.svg",
+    "path": "15-organisation-network-check/15.02-final-exam/assets/1.svg",
     "format": "svg"
    },
    "status": "synced",
@@ -9605,7 +9605,7 @@
     "page": "CCNA3 · 14 network-automation"
    },
    "out": {
-    "path": "final-exam/assets/5.svg",
+    "path": "15-organisation-network-check/15.02-final-exam/assets/5.svg",
     "format": "svg"
    },
    "status": "synced",
